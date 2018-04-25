@@ -1,0 +1,51 @@
+# Dependencies
+markdown:             kramdown
+highlighter:          rouge
+
+# Permalinks
+permalink:            pretty
+
+# Setup
+title:                Fredrik Averpil
+tagline:              My personal blog
+description:          My personal blog – on Python development, 3D graphics, compositing and photography.
+url:                  https://fredrikaverpil.github.io
+baseurl:
+paginate:             5
+name:                 Fredrik Averpil
+
+gems:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-gist
+
+# SEO
+twitter:
+  username:           fredrikaverpil
+  url:                https://twitter.com/fredrikaverpil
+social:
+  name:               Fredrik Averpil
+  links:
+    - https://linkedin.com/in/fredrik
+    - https://www.facebook.com/fredrik.averpil
+    - https://github.com/fredrikaverpil
+
+# Custom vars
+custom_pages:
+  feed:               /atom.xml
+github:
+    url:              https://github.com/fredrikaverpil
+    repo:             https://github.com/fredrikaverpil/fredrikaverpil.github.io
+excerpt_separator:    <!--more-->
+google_analytics:     UA-70773524-1
+hyde_version:         2.1.0
+hyde_url:             http://hyde.getpoole.com
+hyde_repo:            https://github.com/poole/hyde
+show_related_posts:   false
+force_https:          true
+
+# Comments
+comments:
+  use_disqus:         true
+  use_googleplus:     false
+  disqus_shortname:   ffredrikk

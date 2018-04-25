@@ -1,0 +1,7 @@
+<div class="message">
+  Filter by tag:
+
+  {% assign all_tags = site.data.tags %}
+  {% for tag in all_tags %}<a href="{{ site.url }}/blog/tag/{{ tag[0] }}">#{{ tag[1].name }}</a>
+  {% endfor %}
+</div>
