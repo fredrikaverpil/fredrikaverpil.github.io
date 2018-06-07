@@ -4,7 +4,7 @@ title: Distributing Python script(s) as zip file
 tags: [python, maya, nuke]
 ---
 
-A recent discussion on [3DPRO](http://3dpro.org/) sparked me to scribble down some ideas on how to somewhat painlessly distribute Python script(s) to be run in DCC applications such as Maya or Nuke as simply as possible.
+A recent discussion on [3DPRO](http://3dpro.org/) sparked me to scribble down some ideas on how to somewhat painlessly distribute a Python package to be run in DCC applications such as Maya or Nuke as simply as possible. So this is an alternative to building a wheel and mucking around with virtual environments.
 
 <!--more-->
 
@@ -46,3 +46,5 @@ from b import c
 For Maya, you can ask your users to [create a shelf button](http://help.autodesk.com/view/MAYAUL/2018/ENU/?guid=GUID-527023AE-9FB5-4D01-8D29-075B1E6C4754) with the code above (or even bundle a shelf MEL file, to be placed in e.g. `~/Documents/maya/2018/prefs/shelves`).
 
 Bonus: add a `__main__.py` to the zip file's root and you can execute it with `python a.zip`.
+
+Make sure to vendor (bundle) any dependency Python scripts your program might need. What's nice about this is then you don't have to worry about the same vendored package already being used by some other script, as your vendored version is placed under your `b` namespace, e.g. `b.vendor.Qt` if vendoring e.g. [Qt.py](https://github.com/mottosso/Qt.py). Your script would then import its vendored module like so: `from b.vendor import Qt` instead of the regular `import Qt`.
