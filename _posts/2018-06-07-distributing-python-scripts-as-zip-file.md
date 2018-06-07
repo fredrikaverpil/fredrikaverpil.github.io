@@ -47,6 +47,6 @@ For Maya, you can ask your users to [create a shelf button](http://help.autodesk
 
 Bonus: add a `__main__.py` to the zip file's root and you can execute it with `python a.zip`.
 
-Make sure to vendor (bundle) any dependency Python scripts your program might need. What's nice about vendoring is then you don't have to worry about the same vendored package (of a different version) already being used by some other script, causing a version clash. Vendor under your script's namespace, e.g. `b.vendor.Qt` when using the above examples if vendoring e.g. [Qt.py](https://github.com/mottosso/Qt.py). Your script would then import its vendored module like so: `from b.vendor import Qt` instead of the regular `import Qt`.
+Make sure to vendor (bundle) any non-standard library dependency Python scripts your program might need. What's nice about vendoring is then you don't have to worry about the same vendored package (of a different version) already being used by some other script, causing a version clash. Vendor under your script's namespace, e.g. `b.vendor.Qt` when using the above examples if vendoring e.g. [Qt.py](https://github.com/mottosso/Qt.py). Your script would then import its vendored module like so: `from b.vendor import Qt` instead of the regular `import Qt`.
 
 And if you wish to obfuscate your code a little bit, put only the `.pyc` bytecode files in the zip file. These can be decompiled, but at least that takes some effort by the user.
