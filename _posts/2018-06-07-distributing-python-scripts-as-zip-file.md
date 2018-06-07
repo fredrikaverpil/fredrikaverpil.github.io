@@ -34,10 +34,10 @@ You can ask your users to drop the zip file into their local scripts folder (e.g
 import sys
 import os
 
-zip = 'a.zip'
+zipfile = 'a.zip'
 for path in sys.path:
-    if os.path.isdir(path) and zip in os.listdir(path):
-        sys.path.append(os.path.join(path, zip))
+    if os.path.isdir(path) and zipfile in os.listdir(path):
+        sys.path.append(os.path.join(path, zipfile))
         import b
 
 from b import c
