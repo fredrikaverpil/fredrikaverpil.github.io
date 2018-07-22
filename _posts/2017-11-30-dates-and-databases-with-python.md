@@ -10,6 +10,8 @@ To me, it's a bit perplexing that all tools required to deal with this _doesn't_
 
 Here follows some personal notes on how to store and read back dates with reliability and control of the timezones and daylight savings.
 
+I would also like to include a link to [this fantastic article](https://zachholman.com/talk/utc-is-enough-for-everyone-right), written by Zack Holman. This touches on the history and complexity of managing timezones, which is not only educational but also quite funny reading.
+
 <!--more-->
 
 When reading the below code it helps to think that the `tz` abbreviation means "timezone".
