@@ -15,7 +15,8 @@ Here's how to compile PySide2 on Linux, Mac OS X and Windows.
 * [fredrikaverpil/pyside2-macos](https://github.com/fredrikaverpil/pyside2-macos)
 * [fredrikaverpil/pyside2-windows](https://github.com/fredrikaverpil/pyside2-windows)
 
-Also, official standalone wheels have been [released](http://lists.qt-project.org/pipermail/pyside/2018-March/002537.html)!
+Also, official standalone wheels have been [released](http://lists.qt-project.org/pipermail/pyside/2018-March/002537.html). PySide2 can now be installed from pypi.org: `pip install PySide2`!
+
 
 <!--more-->
 

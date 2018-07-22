@@ -13,3 +13,4 @@ pip install --index-url=http://download.qt.io/snapshots/ci/pyside/5.9/latest/ py
 ```
 
 **Update 2018-04-05**: official docs are now also online at [https://doc-snapshots.qt.io/qtforpython/](https://doc-snapshots.qt.io/qtforpython/)
+**Update 2018-07-17**: PySide2 can now be installed from pypi.org: `pip install PySide2`!

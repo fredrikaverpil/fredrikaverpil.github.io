@@ -18,6 +18,7 @@ conda install pyside2
 And. It. Frickin'. Just. Works.  
 
 **Update 2018-03-09**: The Qt Company now offers official and standalone wheels, read more [here]({{ site.baseurl }}/2018/03/09/official-pyside2-wheels/)!
+**Update 2018-07-17**: PySide2 can now be installed from pypi.org: `pip install PySide2`!
 
 <!--more-->
 
