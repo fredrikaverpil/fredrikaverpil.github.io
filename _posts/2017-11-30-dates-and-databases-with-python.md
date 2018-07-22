@@ -10,8 +10,6 @@ To me, it's a bit perplexing that all tools required to deal with this _doesn't_
 
 Here follows some personal notes on how to store and read back dates with reliability and control of the timezones and daylight savings.
 
-I would also like to include a link to [this fantastic article](https://zachholman.com/talk/utc-is-enough-for-everyone-right), written by Zack Holman. This touches on the history and complexity of managing timezones, which is not only educational but also quite funny reading.
-
 <!--more-->
 
 When reading the below code it helps to think that the `tz` abbreviation means "timezone".
@@ -87,3 +85,5 @@ In the previous code block, I'm hardcoding the `timezone` variable. You may want
 Having all this code finally assembled and condensed in a blog post like this is nice and neat, but why is this so hard to do currently, and why does this require three separate modules of which two are not included in the standard library?
 
 I guess the answer is I should shut up because I'm already spoiled with Python? ;)
+
+I would like to include a link to [this fantastic article](https://zachholman.com/talk/utc-is-enough-for-everyone-right), written by Zack Holman. This touches on the history and complexity of managing timezones, which is not only educational but also quite funny reading. For those interested, here's also the [Hacker News thread](https://news.ycombinator.com/item?id=17181046) which followed after this article was published.
