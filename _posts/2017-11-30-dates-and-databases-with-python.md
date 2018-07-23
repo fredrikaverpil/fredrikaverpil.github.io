@@ -86,4 +86,4 @@ Having all this code finally assembled and condensed in a blog post like this is
 
 I guess the answer is I should shut up because I'm already spoiled with Python? ;)
 
-I would like to include a link to [this fantastic article](https://zachholman.com/talk/utc-is-enough-for-everyone-right), written by Zack Holman. This touches on the history and complexity of managing timezones, which is not only educational but also quite funny reading. For those interested, here's also the [Hacker News thread](https://news.ycombinator.com/item?id=17181046) which followed after this article was published.
+I would like to include a link to [this fantastic article](https://zachholman.com/talk/utc-is-enough-for-everyone-right), written by Zach Holman. This touches on the history and complexity of managing timezones, which is not only educational but also quite funny reading. For those interested, here's also the [Hacker News thread](https://news.ycombinator.com/item?id=17181046) which followed after this article was published.
