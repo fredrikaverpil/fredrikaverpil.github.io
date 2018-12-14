@@ -52,6 +52,9 @@ From within the now running container "controller", you can execute e.g. `docker
 ```bash
 $ su fredrik
 
+# run 'docker ps' inside the controller container,
+# which actually does not have docker installed,
+# and instead runs 'docker ps' on the host!
 $ docker exec controller docker ps
 ```
 
