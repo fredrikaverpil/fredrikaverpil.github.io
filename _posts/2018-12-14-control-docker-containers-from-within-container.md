@@ -57,6 +57,11 @@ $ docker exec controller docker ps
 
 You can now perform any `docker` command on the host's containers but from within the running container!
 
+For more goodies on `docker.sock`, see here:
+
+- [Docker Tips : about /var/run/docker.sock](https://medium.com/lucjuggery/about-var-run-docker-sock-3bfd276e12fd)
+- [Can anyone explain docker.sock](https://stackoverflow.com/questions/35110146/can-anyone-explain-docker-sock/35110344)
+
 ## Warning
 
 Please note that this could be a security issue when in production!
