@@ -4,7 +4,7 @@ title: Cartesian product in Python
 tags: [python]
 ---
 
-A [cartesian product](https://en.wikipedia.org/wiki/Cartesian_product) is basically all combinations of given values, so for example I could have the following values:
+A [cartesian product](https://en.wikipedia.org/wiki/Cartesian_product) operation can return a set of "combinations" based on given values, so for example I could have the following values:
 
 a | b | c
 - | - | -
@@ -12,7 +12,7 @@ a | b | c
   | 2 | 2
   |   | 3
 
-I would then expect the cartesian product to be something like `a1b1c1, a1b1c2, a1b1c3, a1b2c1` and so on...
+I would then expect the cartesian product operation to return something like `a1b1c1, a1b1c2, a1b1c3, a1b2c1` and so on...
 
 Many, many times have had to solve this problem over and over in Python... it's time to jot down some notes.
 
@@ -31,11 +31,11 @@ import sys
 import itertools
 
 def cprod(dictionary):
-    """Generate cartesian product"""
+    """Generate a list of dicts of cartesian product combinations."""
 
     if sys.version_info.major > 2:
         return (dict(zip(dictionary, x)) for x in itertools.product(*dictionary.values()))
-    
+
     return (dict(itertools.izip(dictionary, x))
             for x in itertools.product(*dictionary.itervalues()))
 ```
@@ -59,7 +59,7 @@ If we wish to get the list of combinations directly, we can use the `cprod_combo
 
 ```python
 def cprod_combos(dictionary):
-    """Generate a list of cartesian product combinations"""
+    """Generate a list of cartesian product combinations."""
     combos = []
     for _dict in cprod(d):
         combo = ''
