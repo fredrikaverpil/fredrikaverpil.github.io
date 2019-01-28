@@ -88,7 +88,7 @@ PIDFile=/var/run/tractor-blade.pid
 WantedBy=multi-user.target
 ```
 
-With `LimitNPROC` and `LimitNPROC` specifed, all required files (several
+With `LimitNPROC` and `LimitNOFILE` specifed, all required files (several
 thousands) were successfully loaded and the render completed as expected.
 
 ### Keeping track of resource limits using Python
