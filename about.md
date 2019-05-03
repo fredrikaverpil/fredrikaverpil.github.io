@@ -11,7 +11,7 @@ Throughout the years I have been spending my professional life within the digita
 
 fredrik@averpil.com  
 +46-708-121275  
-[keybase.io/fredrikaverpil](https://keybase.io/fredrikaverpil)  
+[twitter.com/fredrikaverpil](https://twitter.com/fredrikaverpil)  
 [github.com/fredrikaverpil](https://github.com/fredrikaverpil)  
 [linkedin.com/in/fredrik](https://linkedin.com/in/fredrik)
 
