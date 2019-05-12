@@ -8,6 +8,8 @@ The new Windows Terminal (codenamed "Cascadia") was [revealed](https://www.youtu
 
 This is quick guide (using Visual Studio 2019) on how to get up and running with the new Terminal before it gets officially released in the Windows store.
 
+<!--more-->
+
 ### Requirements
 
 You will need Windows 10, build "1903". Get this by joining and enabling the Insiders Program. Set the "Release Preview" option and reboot. Then check for updates until you see the "1903" build downloading and installing.
