@@ -73,7 +73,7 @@ So, we can run the terminal from within Visual Studio instead (without a certifi
 
 Launch VS2019 and open the `OpenConsole.sln` solution inside the cloned git "Terminal" folder. If you are prompted by Windows, enable "Developer mode".
 
-You will be prompted to upgrade the environment. In this dialog, choose to use Windows 10 SDK 10.0.18362.0, do _not_ upgrade to v142 (meaning; keep using v141) and click "OK", leaving all the remaining boxes ticked.
+You will be prompted to upgrade the environment. In this dialog, choose to use Windows 10 SDK 10.0.18362.0, do _not_ upgrade the Platform Toolset to v142 (meaning; keep using v141) and click "OK", leaving all the remaining boxes ticked.
 
 ![]({{ site.baseurl }}/blog/assets/terminal/retarget.png)
 
