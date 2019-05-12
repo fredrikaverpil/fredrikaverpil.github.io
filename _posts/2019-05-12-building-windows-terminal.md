@@ -52,8 +52,6 @@ git clone --recurse-submodules https://github.com/microsoft/Terminal.git
 
 ### Build on command line
 
-NOTE: this will not provide a working package since a valid certificate is missing.
-
 Configure and build:
 
 ```bat
