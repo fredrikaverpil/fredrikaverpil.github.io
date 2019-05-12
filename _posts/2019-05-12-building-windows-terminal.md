@@ -87,7 +87,7 @@ You will now find the "Windows Terminal (Preview)" in the Windows Start menu. Yo
 
 ### Configure Terminal
 
-Once Terminal is running, hit `ctrl+t` to create a new tab. The settings icon will appear and you can enter the "Settings", which will launch a `profiles.json` file.
+Once Terminal is running, hit `ctrl+t` to create a new tab. The menu icon will appear and you can enter the "Settings", which will launch a `profiles.json` file.
 
 Here is how you can add WSL to the menu:
 
