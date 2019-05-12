@@ -77,7 +77,7 @@ You will be prompted to upgrade the environment. In this dialog, choose to use W
 
 ![]({{ site.baseurl }}/blog/assets/terminal/retarget.png)
 
-When the solution has been fully loaded, choose the following configuration dropdown menu values "Release", "x64", "Cascadia" and click the "Local Machine" button. This will build, deploy and launch the terminal.
+When the solution has been fully loaded, choose the following configuration dropdown menu values "Release", "x64", "CascadiaPackage" and click the "Local Machine" button. This will build, deploy and launch the terminal.
 
 ![]({{ site.baseurl }}/blog/assets/terminal/configuration.png)
 
