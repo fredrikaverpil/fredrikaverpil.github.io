@@ -22,19 +22,19 @@ Install [Chocolatey](https://chocolatey.org/) using the instructions on their we
 
 Let's install git, unless you already have it:
 
-```bash
+```bat
 choco install -y git
 ```
 
 Then install Visual Studio 2019 Community Edition, unless you already have Visual Studio 2019 installed:
 
-```bash
+```bat
 choco install -y -v visualstudio2019community
 ```
 
 A number of workloads and components are required to build. Get them by using the Visual Studio Installer GUI or via this command:
 
-```bash
+```bat
 "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installershell.exe" modify --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community" --passive --norestart --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.Universal --add Microsoft.VisualStudio.Component.Windows10SDK.18362 --add Microsoft.VisualStudio.ComponentGroup.UWP.Support --add Microsoft.Component.VC.Runtime.OSSupport --add Microsoft.VisualStudio.Component.VC.v141.x86.x64 --add Microsoft.VisualStudio.ComponentGroup.UWP.VC.v141 --add Microsoft.VisualStudio.Component.VC.v141.ATL --add Microsoft.VisualStudio.Component.VC.v141.MFC
 ```
 
@@ -56,7 +56,7 @@ NOTE: this will not provide a working package since a valid certificate is missi
 
 Configure and build:
 
-```bash
+```bat
 cd Terminal
 dep\nuget\nuget.exe restore OpenConsole.sln
 tools\razzle.cmd
