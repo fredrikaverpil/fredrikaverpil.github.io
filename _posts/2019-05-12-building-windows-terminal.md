@@ -85,6 +85,8 @@ When the solution has been fully loaded, choose the following configuration drop
 
 You will now find the "Windows Terminal (Dev Build)" in the Windows Start menu and you don't have to launch this from within VS2019 again.
 
+![]({{ site.baseurl }}/blog/assets/terminal/start-menu.png)
+
 ### Configure Terminal
 
 Once Terminal is running, hit `ctrl+t` to create a new tab. The menu icon will appear and you can enter the "Settings", which will launch a `profiles.json` file.
