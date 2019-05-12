@@ -93,10 +93,10 @@ Once Terminal is running, hit `ctrl+t` to create a new tab. The menu icon will a
 
 Here is how you can add WSL to the menu:
 
-1. Create a new session in profiles, with content copied from profiles/cmd
+1. Create a new session in `profiles`, with content copied from `profiles/cmd`
 1. Give it a new guid
-1. Give it a new name, such as WSL
-1. Specify its commandline to wsl.exe
+1. Give it a new name, such as "WSL"
+1. Specify its commandline to `wsl.exe`
 
 ```json
 {
