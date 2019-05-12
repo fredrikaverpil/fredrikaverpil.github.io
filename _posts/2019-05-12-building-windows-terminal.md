@@ -122,7 +122,6 @@ Here is how you can add WSL to the menu:
 - [Windows Terminal reveal video](https://www.youtube.com/watch?v=8gw0rXPMMPE)
 - [Windows Terminal: Building a better commandline experience...](https://www.youtube.com/watch?v=KMudkRcwjCw)
 - [What's new with the Windows command line](https://www.youtube.com/watch?v=veqs2WVou9M)
-- [The team behind the new Terminal](https://youtu.be/KMudkRcwjCw?t=3405) (YouTube link at 56:48)
 - [GitHub repository](https://github.com/microsoft/Terminal)
 - [Extensions for Terminal](https://twitter.com/richturn_ms/status/1126515079518703616)
 - [Reveal video easter egg](https://twitter.com/PengwinLinux/status/1126929652382093318)
