@@ -61,7 +61,7 @@ tools\razzle.cmd
 tools\bcz.cmd rel
 ```
 
-Fun fact: Apparantly, "razzle" and "bcz" are terms from within Microsoft, where "razzle" refers to a script which sets up your environment and "bcz" builds the project (with a clean prior to build).
+Fun fact: Apparently, "razzle" and "bcz" are terms from within Microsoft, where "razzle" refers to a script which sets up your environment and "bcz" builds the project (with a clean prior to build).
 
 This will produce `CascadiaPackage_0.0.1.0_x64.msix` inside of `src\cascadia\CascadiaPackage\AppPackages\ ...`. However, you cannot double-click this in order to install it, as it does not contain a valid certificate. I am not sure if I am completely right here, but to me it seems that the produced package is useless because of this and cannot be used to distribute or deploy the terminal.
 
