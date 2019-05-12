@@ -81,7 +81,7 @@ When the solution has been fully loaded, choose the following configuration drop
 
 ![]({{ site.baseurl }}/blog/assets/terminal/configuration.png)
 
-You will now find the "Windows Terminal (Preview)" in the Windows Start menu. You can also invoke the terminal using the `wt` command.
+You will now find the "Windows Terminal (Dev Build)" in the Windows Start menu and you don't have to launch this from within VS2019 again.
 
 ### Configure Terminal
 
