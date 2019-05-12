@@ -4,6 +4,8 @@ title: 'Building Windows Terminal'
 tags: [windows]
 ---
 
+![]({{ site.baseurl }}/blog/assets/terminal/terminal.png)
+
 The new Windows Terminal (codenamed "Cascadia") was [revealed](https://www.youtube.com/watch?v=8gw0rXPMMPE) at this year's Microsoft "Build" conference and quickly got a lot of attention, as it addresses the decades-old terminal experience in Windows.
 
 This is quick guide (using Visual Studio 2019) on how to get up and running with the new Terminal before it gets officially released in the Windows store.
