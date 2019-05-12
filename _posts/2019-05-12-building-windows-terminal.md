@@ -77,7 +77,11 @@ Launch VS2019 and open the `OpenConsole.sln` solution inside the cloned git "Ter
 
 You will be prompted to upgrade the environment. In this dialog, choose to use Windows 10 SDK 10.0.18362.0, do _not_ upgrade to v142 (meaning; keep using v141) and click "OK", leaving all the remaining boxes ticked.
 
+![]({{ site.baseurl }}/blog/assets/terminal/retarget.png)
+
 When the solution has been fully loaded, choose the following configuration dropdown menu values "Release", "x64", "Cascadia" and click the "Local Machine" button. This will build, deploy and launch the terminal.
+
+![]({{ site.baseurl }}/blog/assets/terminal/configuration.png)
 
 You will now find the "Windows Terminal (Preview)" in the Windows Start menu. You can also invoke the terminal using the `wt` command.
 
