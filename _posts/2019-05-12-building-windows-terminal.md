@@ -24,13 +24,13 @@ Install [Chocolatey](https://chocolatey.org/) using the instructions on their we
 
 Let's install git, unless you already have it:
 
-```bat
+```bash
 choco install -y git
 ```
 
 Then install Visual Studio 2019 Community Edition, unless you already have Visual Studio 2019 installed:
 
-```bat
+```bash
 choco install -y -v visualstudio2019community
 ```
 
