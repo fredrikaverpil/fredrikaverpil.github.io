@@ -8,7 +8,7 @@ tags: [windows]
 
 The new Windows Terminal (codenamed "Cascadia") was [revealed](https://www.youtube.com/watch?v=8gw0rXPMMPE) at this year's Microsoft "Build" conference and quickly received a lot of attention, as it addresses the decades-old terminal experience in Windows.
 
-This is me jotting down notes on how to get up and running with the new Terminal before it gets officially released in the Windows store, using Visual Studio 2019.
+This is me jotting down notes on how to get up and running with the new Terminal before it gets officially released in the Windows store, using Visual Studio 2019. This is all possible thanks to the fact that Microsoft is [open sourcing the new Terminal](https://github.com/microsoft/Terminal)!
 
 <!--more-->
 
