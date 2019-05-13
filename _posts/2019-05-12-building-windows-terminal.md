@@ -24,19 +24,19 @@ Install [Chocolatey](https://chocolatey.org/) using the instructions on their we
 
 Let's install git, unless you already have it:
 
-```bash
+```powershell
 choco install -y git
 ```
 
 Then install Visual Studio 2019 Community Edition, unless you already have Visual Studio 2019 installed:
 
-```bash
+```powershell
 choco install -y -v visualstudio2019community
 ```
 
 A number of workloads and components are required to build. Get them by using the Visual Studio Installer GUI or via this command:
 
-```bat
+```powershell
 "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installershell.exe" modify --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community" --passive --norestart --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.Universal --add Microsoft.VisualStudio.Component.Windows10SDK.18362 --add Microsoft.VisualStudio.ComponentGroup.UWP.Support --add Microsoft.Component.VC.Runtime.OSSupport --add Microsoft.VisualStudio.Component.VC.v141.x86.x64 --add Microsoft.VisualStudio.ComponentGroup.UWP.VC.v141 --add Microsoft.VisualStudio.Component.VC.v141.ATL --add Microsoft.VisualStudio.Component.VC.v141.MFC
 ```
 
@@ -56,7 +56,7 @@ git clone --recurse-submodules https://github.com/microsoft/Terminal.git
 
 Configure and build:
 
-```bat
+```powershell
 cd Terminal
 dep\nuget\nuget.exe restore OpenConsole.sln
 tools\razzle.cmd
@@ -87,7 +87,11 @@ Then I exported (with private key and password) to .pfx via `certlm`. Finally I 
 
 ![]({{ site.baseurl }}/blog/assets/terminal/msix-signed.png)
 
-The same issue is hit if signing with `signtool.exe sign /a /v /fd SHA256 /f "C:\MyCodeSignCustom.pfx" /p "SuperSecurePassword" "CascadiaPackage_0.0.1.0_x64.appx"`.
+The same issue is hit if signing with `signtool.exe' bundled with the MSIX Package Tool:
+
+```powershell
+signtool.exe sign /a /v /fd SHA256 /f "C:\MyCodeSignCustom.pfx" /p "SuperSecurePassword" "CascadiaPackage_0.0.1.0_x64.appx"
+```
 
 I can't figure out how to actually install/deploy or run the built terminal here. Please see the next paragraph to run the terminal from within Visual Studio instead. If anyone knows how/if you can install/execute the terminal directly after building on the commandline with `bcz.cmd`, please let me know in the comments below!
 
