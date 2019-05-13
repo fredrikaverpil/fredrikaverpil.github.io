@@ -69,9 +69,23 @@ This will produce `CascadiaPackage_0.0.1.0_x64.msix` inside of `src\cascadia\Cas
 
 ![]({{ site.baseurl }}/blog/assets/terminal/msix-location.png)
 
-However, you cannot double-click this in order to install it, as it does not contain a valid certificate. I am not sure if I am completely right here, but to me it seems that the produced package is useless because of this and cannot be used to distribute or deploy the terminal.
+However, you cannot install it, as it does not contain a valid certificate.
 
-I also can't figure out how to actually deploy or run the built terminal here. Please see the next paragraph to run the terminal from within Visual Studio instead. If anyone knows how/if you can execute the terminal directly after building on the commandline with `bcz.cmd`, please let me know in the comments below!
+![]({{ site.baseurl }}/blog/assets/terminal/msix-nosign.png)
+
+### Side note: attempting to sign CascadiaPackage
+
+I have tried to generate a .pfx certificate and then sign CascadiaPackage using the MSIX Packaging tool (as well as with its `signtool` separately) but without any luck. The command I used to generate the certificate:
+
+```powershell
+New-SelfSignedCertificate -Type Custom -Subject "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" -KeyUsage DigitalSignature -FriendlyName "WindowsTerminalDev" -CertStoreLocation "Cert:\LocalMachine\My"
+```
+
+Then I exported (with private key and password) the .pfx via `certlm`. Finally I signed the CascadiaPackage with the [MSIX Packaging tool](https://docs.microsoft.com/en-us/windows/msix/mpt-overview), but I just ended up getting this error when attempting to install the CascadiaPackage:
+
+![]({{ site.baseurl }}/blog/assets/terminal/msix-signed.png)
+
+I can't figure out how to actually deploy or run the built terminal here. Please see the next paragraph to run the terminal from within Visual Studio instead. If anyone knows how/if you can execute the terminal directly after building on the commandline with `bcz.cmd`, please let me know in the comments below!
 
 ### Running the terminal from VS2019
 
