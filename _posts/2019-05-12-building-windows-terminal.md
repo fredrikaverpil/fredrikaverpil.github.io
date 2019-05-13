@@ -65,7 +65,11 @@ tools\bcz.cmd rel
 
 Fun fact: Apparently, "razzle" and "bcz" are terms from within Microsoft, where "razzle" refers to a script which sets up your environment and "bcz" builds the project (with a clean prior to build).
 
-This will produce `CascadiaPackage_0.0.1.0_x64.msix` inside of `src\cascadia\CascadiaPackage\AppPackages\ ...`. However, you cannot double-click this in order to install it, as it does not contain a valid certificate. I am not sure if I am completely right here, but to me it seems that the produced package is useless because of this and cannot be used to distribute or deploy the terminal.
+This will produce `CascadiaPackage_0.0.1.0_x64.msix` inside of `src\cascadia\CascadiaPackage\AppPackages\ ...`.
+
+![]({{ site.baseurl }}/blog/assets/terminal/msix-location.png)
+
+However, you cannot double-click this in order to install it, as it does not contain a valid certificate. I am not sure if I am completely right here, but to me it seems that the produced package is useless because of this and cannot be used to distribute or deploy the terminal.
 
 I also can't figure out how to actually deploy or run the built terminal here. Please see the next paragraph to run the terminal from within Visual Studio instead. If anyone knows how/if you can execute the terminal directly after building on the commandline with `bcz.cmd`, please let me know in the comments below!
 
