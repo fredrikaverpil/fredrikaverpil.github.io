@@ -87,7 +87,7 @@ Then I exported (with private key and password) to .pfx via `certlm`. Finally I 
 
 ![]({{ site.baseurl }}/blog/assets/terminal/msix-signed.png)
 
-The same issue is hit if signing with `signtool.exe' bundled with the MSIX Package Tool:
+The same issue is hit if signing with `signtool.exe' (bundled with the MSIX Package Tool):
 
 ```powershell
 signtool.exe sign /a /v /fd SHA256 /f "C:\MyCodeSignCustom.pfx" /p "SuperSecurePassword" "CascadiaPackage_0.0.1.0_x64.appx"
