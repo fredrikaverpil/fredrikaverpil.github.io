@@ -69,9 +69,11 @@ This will produce `CascadiaPackage_0.0.1.0_x64.msix` inside of `src\cascadia\Cas
 
 ![]({{ site.baseurl }}/blog/assets/terminal/msix-location.png)
 
-However, you cannot install it, as it does not contain a valid certificate. Below, I will explain what I have attempted (without luck). You can skip over the next paragraph if you just want to run the terminal.
+However, you cannot install it, as it does not contain a valid certificate:
 
 ![]({{ site.baseurl }}/blog/assets/terminal/msix-nosign.png)
+
+Below, I will explain what I have attempted (without luck). You can skip over the next paragraph if you just want to run the terminal.
 
 ### Side note: attempting to sign CascadiaPackage
 
