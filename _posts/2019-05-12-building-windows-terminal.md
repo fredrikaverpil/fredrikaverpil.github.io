@@ -34,7 +34,7 @@ Then install Visual Studio 2019 Community Edition, unless you already have Visua
 choco install -y -v visualstudio2019community
 ```
 
-A number of workloads and components are required to build. Get them by using the Visual Studio Installer GUI or via this command:
+A number of workloads and components are required to build. Get them by using the Visual Studio Installer GUI or via this (administrative Powershell) command:
 
 ```powershell
 & "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installershell.exe" `
