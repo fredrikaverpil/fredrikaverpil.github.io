@@ -135,6 +135,7 @@ Here is how you can add WSL to the menu:
 
 ### Additional info
 
+- [Windows Terminal build 2019 FAQ](https://devblogs.microsoft.com/commandline/windows-terminal-build-2019-faq/)
 - [Windows Terminal reveal video](https://www.youtube.com/watch?v=8gw0rXPMMPE)
 - [Windows Terminal: Building a better commandline experience...](https://www.youtube.com/watch?v=KMudkRcwjCw)
 - [What's new with the Windows command line](https://www.youtube.com/watch?v=veqs2WVou9M)
