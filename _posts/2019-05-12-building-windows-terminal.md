@@ -37,7 +37,7 @@ choco install -y -v visualstudio2019community
 A number of workloads and components are required to build. Get them by using the Visual Studio Installer GUI or via this command:
 
 ```powershell
-"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installershell.exe" `
+& "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installershell.exe" `
     modify `
     --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community" `
     --passive --norestart `
