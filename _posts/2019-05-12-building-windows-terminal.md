@@ -20,7 +20,7 @@ You will also have to enable "Developer mode" in Windows.
 
 ### Installation steps
 
-Install [Chocolatey](https://chocolatey.org/) using the instructions on their website. Then open a new and _elevated_ shell with (e.g. right-click cmd.exe and choose "Run as administrator").
+Install [Chocolatey](https://chocolatey.org/) using the instructions on their website. Then open a new and _elevated_ Powershell console (e.g. right-click Powershell and choose "Run as administrator").
 
 Let's install git, unless you already have it:
 
@@ -37,7 +37,19 @@ choco install -y -v visualstudio2019community
 A number of workloads and components are required to build. Get them by using the Visual Studio Installer GUI or via this command:
 
 ```powershell
-"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installershell.exe" modify --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community" --passive --norestart --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.Universal --add Microsoft.VisualStudio.Component.Windows10SDK.18362 --add Microsoft.VisualStudio.ComponentGroup.UWP.Support --add Microsoft.Component.VC.Runtime.OSSupport --add Microsoft.VisualStudio.Component.VC.v141.x86.x64 --add Microsoft.VisualStudio.ComponentGroup.UWP.VC.v141 --add Microsoft.VisualStudio.Component.VC.v141.ATL --add Microsoft.VisualStudio.Component.VC.v141.MFC
+"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installershell.exe" `
+    modify `
+    --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community" `
+    --passive --norestart `
+    --add Microsoft.VisualStudio.Workload.NativeDesktop `
+    --add Microsoft.VisualStudio.Workload.Universal `
+    --add Microsoft.VisualStudio.Component.Windows10SDK.18362 `
+    --add Microsoft.VisualStudio.ComponentGroup.UWP.Support `
+    --add Microsoft.Component.VC.Runtime.OSSupport `
+    --add Microsoft.VisualStudio.Component.VC.v141.x86.x64 `
+    --add Microsoft.VisualStudio.ComponentGroup.UWP.VC.v141 `
+    --add Microsoft.VisualStudio.Component.VC.v141.ATL `
+    --add Microsoft.VisualStudio.Component.VC.v141.MFC
 ```
 
 NOTE: If you already have VS2019 installed, you may have to double-check the paths used above.
