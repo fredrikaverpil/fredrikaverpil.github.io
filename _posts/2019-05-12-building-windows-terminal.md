@@ -64,7 +64,27 @@ In a directory of your choice:
 git clone --recurse-submodules https://github.com/microsoft/Terminal.git
 ```
 
+### Build and deploy the terminal from VS2019
+
+So, we can build, deploy and run the terminal from within Visual Studio (since VS2019 adds its own developer certificate).
+
+Launch VS2019 and open the `OpenConsole.sln` solution inside the cloned git "Terminal" folder. If you are prompted by Windows, enable "Developer mode".
+
+You will be prompted to upgrade the environment. In this dialog, choose to use Windows 10 SDK 10.0.18362.0, do _not_ upgrade the Platform Toolset to v142 (meaning; keep using v141) and click "OK", leaving all the remaining boxes ticked.
+
+![]({{ site.baseurl }}/blog/assets/terminal/retarget.png)
+
+When the solution has been fully loaded, choose the following configuration dropdown menu values "Release", "x64", "CascadiaPackage" and click the "Local Machine" button. This will build, deploy and launch the terminal.
+
+![]({{ site.baseurl }}/blog/assets/terminal/configuration.png)
+
+You will now find the "Windows Terminal (Dev Build)" in the Windows Start menu and you don't have to launch this from within VS2019 again.
+
+![]({{ site.baseurl }}/blog/assets/terminal/start-menu.png)
+
 ### Build on command line
+
+**Note:** Without a certificate, you won't be able to install the built .msix package.
 
 Configure and build:
 
@@ -84,24 +104,6 @@ This will produce `CascadiaPackage_0.0.1.0_x64.msix` inside of `src\cascadia\Cas
 ![]({{ site.baseurl }}/blog/assets/terminal/msix-location.png)
 
 However, you cannot install it, as it does not contain a valid certificate.
-
-### Running the terminal from VS2019
-
-So, we can run the terminal from within Visual Studio instead (without a certificate).
-
-Launch VS2019 and open the `OpenConsole.sln` solution inside the cloned git "Terminal" folder. If you are prompted by Windows, enable "Developer mode".
-
-You will be prompted to upgrade the environment. In this dialog, choose to use Windows 10 SDK 10.0.18362.0, do _not_ upgrade the Platform Toolset to v142 (meaning; keep using v141) and click "OK", leaving all the remaining boxes ticked.
-
-![]({{ site.baseurl }}/blog/assets/terminal/retarget.png)
-
-When the solution has been fully loaded, choose the following configuration dropdown menu values "Release", "x64", "CascadiaPackage" and click the "Local Machine" button. This will build, deploy and launch the terminal.
-
-![]({{ site.baseurl }}/blog/assets/terminal/configuration.png)
-
-You will now find the "Windows Terminal (Dev Build)" in the Windows Start menu and you don't have to launch this from within VS2019 again.
-
-![]({{ site.baseurl }}/blog/assets/terminal/start-menu.png)
 
 ### Configure Terminal
 
