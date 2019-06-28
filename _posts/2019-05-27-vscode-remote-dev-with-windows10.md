@@ -35,8 +35,10 @@ I am using a CentOS 7 server.
 
 ```bash
 ssh user@server-hostname
-mkdir -p ~/.ssh && touch ~/.ssh/authorized_keys
-chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys
+mkdir -p ~/.ssh
+touch ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
 exit
 ```
 
@@ -53,7 +55,7 @@ Replace `id_rsa.pub` with your .pub file name, if you named it explicitly.
 ### Test SSH keys
 
 ```bash
-ssh@server-hostname  # should not prompt for password
+ssh user@server-hostname  # should not prompt for password
 ```
 
 ### SSH config in Windows 10

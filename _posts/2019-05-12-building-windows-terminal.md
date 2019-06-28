@@ -10,6 +10,8 @@ The new Windows Terminal (codenamed "Cascadia") was [revealed](https://www.youtu
 
 This is me jotting down notes on how to get up and running with the new Terminal before it gets officially released in the Windows store, using Visual Studio 2019. This is all possible thanks to the fact that Microsoft is [open sourcing the new Terminal](https://github.com/microsoft/Terminal)!
 
+**Update 2019-06-22:** The new Windows Terminal (pre-release) can now be [downloaded from the Windows Store](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701) and will be updated automatically as it reaches v1.0 and beyond. Read more about the release [here](https://devblogs.microsoft.com/commandline/windows-terminal-microsoft-store-preview-release/). If you build the terminal yourself, this will run side-by-side the Store-installed version.
+
 <!--more-->
 
 ### Requirements
