@@ -8,6 +8,8 @@ A boilerplate which can be used on Windows and Linux/macOS in order to asynchron
 
 <!--more-->
 
+**Update 2019-06-28:** Fixed a problem where the loop got closed prematurely, added better progress messages, tested on Python 3.7.3.
+
 ```python
 """Async and await example using subprocesses
 
