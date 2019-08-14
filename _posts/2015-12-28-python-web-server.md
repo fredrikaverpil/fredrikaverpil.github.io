@@ -5,12 +5,18 @@ tags: [python]
 ---
 
 The absolutely fastest way to get a simple web server up and running using
-Python, for development purposes.
+Python 3, for development purposes.
 
-
-```
+```bash
 cd my_web_root
-python -m SimpleHTTPServer 8080
+python -m http.server
 ```
 
-Then just access `http://your-ip:8080` to access the web server contents.
+Or if you are on Python 2.x:
+
+```bash
+cd my_web_root
+python -m SimpleHTTPServer 8000
+```
+
+Then just access `http://your-ip:8000` to access the web server contents. Hit ctrl+c to exit.
