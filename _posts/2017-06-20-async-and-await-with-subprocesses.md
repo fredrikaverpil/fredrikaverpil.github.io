@@ -8,6 +8,8 @@ A boilerplate which can be used on Windows and Linux/macOS in order to asynchron
 
 <!--more-->
 
+**Update 2019-06-28:** Fixed a problem where the loop got closed prematurely, added better progress messages, tested on Python 3.7.3.
+
 ```python
 """Async and await example using subprocesses
 
@@ -15,36 +17,43 @@ Note:
     Requires Python 3.6.
 """
 
-import os
 import sys
 import time
 import platform
 import asyncio
+from pprint import pprint
 
 
 async def run_command(*args):
-    """Run command in subprocess
-    
+    """Run command in subprocess.
+
     Example from:
         http://asyncio.readthedocs.io/en/latest/subprocess.html
     """
     # Create subprocess
     process = await asyncio.create_subprocess_exec(
-        *args,
-        # stdout must a pipe to be accessible as process.stdout
-        stdout=asyncio.subprocess.PIPE)
+        *args, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+    )
 
     # Status
-    print('Started:', args, '(pid = ' + str(process.pid) + ')')
+    print("Started: %s, pid=%s" % (args, process.pid), flush=True)
 
     # Wait for the subprocess to finish
     stdout, stderr = await process.communicate()
 
     # Progress
     if process.returncode == 0:
-        print('Done:', args, '(pid = ' + str(process.pid) + ')')
+        print(
+            "Done: %s, pid=%s, result: %s"
+            % (args, process.pid, stdout.decode().strip()),
+            flush=True,
+        )
     else:
-        print('Failed:', args, '(pid = ' + str(process.pid) + ')')
+        print(
+            "Failed: %s, pid=%s, result: %s"
+            % (args, process.pid, stderr.decode().strip()),
+            flush=True,
+        )
 
     # Result
     result = stdout.decode().strip()
@@ -54,28 +63,30 @@ async def run_command(*args):
 
 
 async def run_command_shell(command):
-    """Run command in subprocess (shell)
-    
+    """Run command in subprocess (shell).
+
     Note:
         This can be used if you wish to execute e.g. "copy"
         on Windows, which can only be executed in the shell.
     """
     # Create subprocess
     process = await asyncio.create_subprocess_shell(
-        command,
-        stdout=asyncio.subprocess.PIPE)
+        command, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+    )
 
     # Status
-    print('Started:', command, '(pid = ' + str(process.pid) + ')')
+    print("Started:", command, "(pid = " + str(process.pid) + ")", flush=True)
 
     # Wait for the subprocess to finish
     stdout, stderr = await process.communicate()
 
     # Progress
     if process.returncode == 0:
-        print('Done:', command, '(pid = ' + str(process.pid) + ')')
+        print("Done:", command, "(pid = " + str(process.pid) + ")", flush=True)
     else:
-        print('Failed:', command, '(pid = ' + str(process.pid) + ')')
+        print(
+            "Failed:", command, "(pid = " + str(process.pid) + ")", flush=True
+        )
 
     # Result
     result = stdout.decode().strip()
@@ -92,15 +103,15 @@ def make_chunks(l, n):
     """
     if sys.version_info.major == 2:
         for i in xrange(0, len(l), n):
-            yield l[i:i + n]
+            yield l[i : i + n]
     else:
         # Assume Python 3
         for i in range(0, len(l), n):
-            yield l[i:i + n]
+            yield l[i : i + n]
 
 
 def run_asyncio_commands(tasks, max_concurrent_tasks=0):
-    """Run tasks asynchronously using asyncio and return results
+    """Run tasks asynchronously using asyncio and return results.
 
     If max_concurrent_tasks are set to 0, no limit is applied.
 
@@ -109,48 +120,52 @@ def run_asyncio_commands(tasks, max_concurrent_tasks=0):
         subprocesses. Therefore ProactorEventLoop is used on Windows.
         https://docs.python.org/3/library/asyncio-eventloops.html#windows
     """
-
     all_results = []
 
     if max_concurrent_tasks == 0:
         chunks = [tasks]
+        num_chunks = len(chunks)
     else:
         chunks = make_chunks(l=tasks, n=max_concurrent_tasks)
+        num_chunks = len(list(make_chunks(l=tasks, n=max_concurrent_tasks)))
 
+    if asyncio.get_event_loop().is_closed():
+        asyncio.set_event_loop(asyncio.new_event_loop())
+    if platform.system() == "Windows":
+        asyncio.set_event_loop(asyncio.ProactorEventLoop())
+    loop = asyncio.get_event_loop()
+
+    chunk = 1
     for tasks_in_chunk in chunks:
-        if platform.system() == 'Windows':
-            loop = asyncio.ProactorEventLoop()
-            asyncio.set_event_loop(loop)
-        else:
-            loop = asyncio.get_event_loop()
-
+        print(
+            "Beginning work on chunk %s/%s" % (chunk, num_chunks), flush=True
+        )
         commands = asyncio.gather(*tasks_in_chunk)  # Unpack list using *
         results = loop.run_until_complete(commands)
         all_results += results
-        loop.close()
+        print(
+            "Completed work on chunk %s/%s" % (chunk, num_chunks), flush=True
+        )
+        chunk += 1
+
+    loop.close()
     return all_results
 
 
-if __name__ == '__main__':
-
+def main():
+    """Main program."""
     start = time.time()
 
-    if platform.system() == 'Windows':
+    if platform.system() == "Windows":
         # Commands to be executed on Windows
-        commands = [
-            ['hostname']
-        ]
+        commands = [["hostname"]]
     else:
         # Commands to be executed on Unix
-        commands = [
-            ['du', '-sh', '/var/tmp'],
-            ['hostname'],
-        ]
+        commands = [["du", "-sh", "/var/tmp"], ["hostname"]]
 
     tasks = []
     for command in commands:
         tasks.append(run_command(*command))
-    
 
     # # Shell execution example
     # tasks = [run_command_shell('copy c:/somefile d:/new_file')]
@@ -161,11 +176,17 @@ if __name__ == '__main__':
     #     for project in accessible_projects(all_projects)
     # ]
 
-    results = run_asyncio_commands(tasks, max_concurrent_tasks=20)  # At most 20 parallel tasks
-    print('Results:', results)
+    results = run_asyncio_commands(
+        tasks, max_concurrent_tasks=20
+    )  # At most 20 parallel tasks
+    print("Results:")
+    pprint(results)
 
     end = time.time()
-    rounded_end = ('{0:.4f}'.format(round(end-start,4)))
-    print('Script ran in about', str(rounded_end), 'seconds')
+    rounded_end = "{0:.4f}".format(round(end - start, 4))
+    print("Script ran in about %s seconds" % (rounded_end), flush=True)
 
+
+if __name__ == "__main__":
+    main()
 ```
