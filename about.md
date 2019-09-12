@@ -5,7 +5,7 @@ title: About
 
 ![]({{ site.url }}/blog/assets/fredrik.jpg)
 
-Throughout the years I have been spending my professional life within the digital domain of creativity; from web site design/development to 3D animation and digital visual effects for feature films. With professional experience within the field of 3D graphics since 2005, including co-founding [Filmgate](http://www.filmgate.se), I now take part in the extraordinary team of talent at [Industriromantik](http://www.industriromantik.se) as lead Python developer, in charge of the application lifecycle management. This is a multi-faceted role which involves a great deal of software architecting, programming and devops.
+Throughout the years I have been spending my professional life within the digital domain of creativity and programming; from web site design/development to 3D animation and digital visual effects for feature films. With professional experience within the field of 3D graphics since 2005, including co-founding [Filmgate](http://www.filmgate.se) and developing the pipeline at [Industriromantik](http://www.industriromantik.se), I now take part in an extraordinary team of talent at [Volvo Group](https://www.volvogroup.com) as Embedded Software Integration Engineer.
 
 ## Get in touch!
 
