@@ -5,7 +5,7 @@ title: About
 
 ![]({{ site.url }}/blog/assets/fredrik.jpg)
 
-Throughout the years I have been spending my professional life within the digital domain of creativity and programming; from web site design/development to 3D animation and digital visual effects for feature films. With professional experience within the field of 3D graphics since 2005, including co-founding [Filmgate](http://www.filmgate.se) and developing the pipeline at [Industriromantik](http://www.industriromantik.se), I now take part in an extraordinary team of talent at [Volvo Group](https://www.volvogroup.com) as Embedded Software Integration Engineer.
+Throughout the years I've been spending my professional life within the digital domain of creativity and programming; from web site design/development to 3D animation and digital visual effects for feature films. I've had professional experience within the field of 3D graphics since 2005, including co-founding [Filmgate](http://www.filmgate.se) and developing the computer graphics pipeline at [Industriromantik](http://www.industriromantik.se). Today, I take part in an extraordinary team of talent at [Volvo Group Trucks Technology](https://www.volvogroup.com) as Embedded Software Integration Engineer.
 
 ## Get in touch!
 
