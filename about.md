@@ -14,7 +14,7 @@ fredrik@averpil.com
 [twitter.com/fredrikaverpil](https://twitter.com/fredrikaverpil)  
 [github.com/fredrikaverpil](https://github.com/fredrikaverpil)  
 [linkedin.com/in/fredrik](https://linkedin.com/in/fredrik)
-
+[keybase.io/fredrikaverpil](https://keybase.io/fredrikaverpil)
 
 ## Blog info
 
