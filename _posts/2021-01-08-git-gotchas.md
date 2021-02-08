@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Git gotchas'
-tags: [Linux]
+tags: [linux, bash]
 ---
 
 Git: Generally Impossible To (remember?) ...
