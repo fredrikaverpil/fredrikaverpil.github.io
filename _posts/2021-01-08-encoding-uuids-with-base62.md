@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 'Encoding with base62'
+title: 'Encoding UUIDs with base62'
 tags: [python]
 ---
 
 ![]({{ site.baseurl }}/blog/assets/base62/base62.png)
 
-A simple and homegrown base62 implementation.
+A simple and homegrown UUID base62 encoding/decoding implementation.
 
 <!--more-->
 
