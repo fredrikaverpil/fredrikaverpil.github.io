@@ -18,7 +18,9 @@ In the very common [base64](https://en.wikipedia.org/wiki/Base64) encoding schem
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/
 ```
 
-Sometimes, the `+` and `/` characters can be undesired to be used in a string. An example could be a unique id ([UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)) to be used in a URL. So, if we remove those, we end up with 62 characters, which indeed makes out the characters used in the [base62](https://en.wikipedia.org/wiki/Base62) encoding scheme:
+Sometimes, the `+` and `/` characters can be undesired in the encoded string. An example could be a unique id ([UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)) base62-encoded, to be used in a URL.
+
+So, if we remove those two characters, we end up with 62 characters, which indeed makes out the characters used in the [base62](https://en.wikipedia.org/wiki/Base62) encoding scheme:
 
 ```text
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
