@@ -8,8 +8,8 @@ docker:
   name: Docker
 gce:
   name: GCE
-github:
-  name: Github
+git:
+  name: Git
 github-pages:
   name: Github Pages
 jekyll:

@@ -18,6 +18,8 @@ gem install bundler  # requires Ruby 2.x.x.
 cd <GITHUB_PAGES_REPO>
 echo "source 'https://rubygems.org'" > Gemfile
 echo "gem 'github-pages', group: :jekyll_plugins" >> Gemfile
+apt-get install ruby ruby-dev
+bundle config set --local path 'vendor/bundle'
 bundle install
 ```
 

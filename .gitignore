@@ -45,6 +45,8 @@ node_modules
 
 # Various
 Gemfile.lock
+.bundle
+vendor
 
 # Custom domain, managed by Github
 CNAME

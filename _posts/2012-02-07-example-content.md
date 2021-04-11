@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Example content
-tags: [github, github-pages, jekyll]
+tags: [github-pages, jekyll]
 ---
 
 <div class="message">
