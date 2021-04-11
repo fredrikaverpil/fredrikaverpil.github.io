@@ -35,13 +35,19 @@ $ git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs git branch -d
 Free text search throughout any git commit message:
 
 ```bash
-$ git log -S<regexp>
+$ git log --grep=<regexp>
 ```
 
 Find a commit based on free text search of code:
 
 ```bash
 $ git rev-list --all | xargs git grep <regexp>
+```
+
+Free text search in code:
+
+```bash
+git grep <regexp>
 ```
 
 ## Rebasing
