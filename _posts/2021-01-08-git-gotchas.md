@@ -27,27 +27,31 @@ $ git reset --hard origin/<your_branch>
 Delete all branches which have been merged (except e.g. master, main, dev):
 
 ```bash
+# Show a list of merged branches, which can be deleted
+$ git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs echo
+
+# Delete the merged branches
 $ git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs git branch -d
 ```
 
-## Search
+## Search (using super fast grep)
 
 Free text search throughout any git commit message:
 
 ```bash
-$ git log --grep=<regexp>
+$ git --no-pager log --regexp-ignore-case --grep <regexp>
 ```
 
 Find a commit based on free text search of code:
 
 ```bash
-$ git rev-list --all | xargs git grep <regexp>
+$ git rev-list --all | xargs git --no-pager grep --color=never --extended-regexp --ignore-case <regexp>
 ```
 
-Free text search in code:
+Free text search in current code:
 
 ```bash
-git grep <regexp>
+git --no-pager grep --ignore-case <regexp>
 ```
 
 ## Rebasing
