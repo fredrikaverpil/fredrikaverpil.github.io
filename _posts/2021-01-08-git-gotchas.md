@@ -74,6 +74,8 @@ Then, if the rebase conflict is still difficult to solve or maintain, I usually 
 
 #### Step 1. Interactive rebase with squash
 
+Many thanks to [Erik Thorsell](https://erikthorsell.github.io) for showing me interactive rebase!
+
 Get the commit hash of the start of the branch. There are a couple of ways to get this. You can simply git log and count your commits, or
 
 ```bash
