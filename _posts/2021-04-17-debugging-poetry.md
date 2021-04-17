@@ -10,7 +10,7 @@ How does two of my favorite technologies go together in debug mode?
 
 ## Prerequisites
 
-My developer environment is Ubuntu 20.04 via WSL2 running on Windows 10, so that's what this guide is written for. Since it's all bash, git and vscode, it should be cross-platform.
+My developer environment is Ubuntu 20.04 via WSL2 running on Windows 10, so that's what this guide is written for. Since it's all bash, git and Visual Studio Code, it should be cross-platform.
 
 ### Pyenv
 
@@ -83,13 +83,13 @@ poetry@master install
 
 ### Visual Studio Code setup
 
-Launch Visual Studio Code and open the Poetry folder. Make sure you have the Python and Pylance extensions and all other necessities for sane Python development. ;)
+Launch Visual Studio Code and open the Poetry folder. Make sure you have the Python extension and all other necessities for sane Python development. ;)
 
 Make sure you select your virtual environment as the current Python interpreter.
 
 #### Set up tasks.json
 
-Debugging in Visual Studio Code is set up via the `.vscode/launch.json` file, so let's create it:
+Debugging in Visual Studio Code is set up in the project folder's `.vscode/launch.json` file, so let's create it:
 
 ```json
 {
@@ -126,6 +126,8 @@ You can see in the above file that I have added two basic ways of executing Poet
 
 Add breakpoints, just left to the line number of the code you wish to debug in the git repo.
 
-Now, from the debug menu, you can pick between the different configurations above and execute them in the debugger. This will cause these commands to run inside the vscode debug wrapper.
+Now, from the debug menu, you can pick between the different configurations above and execute them in the debugger. This will cause these commands to run inside the Visual Studio Code debug wrapper.
+
+More on debugging in Visual Studio Code [here](https://code.visualstudio.com/docs/editor/debugging).
 
 Happy developing/debugging!
