@@ -4,7 +4,7 @@ title: 'Debugging poetry with Visual Studio Code'
 tags: [python]
 ---
 
-A guide on how to set up [Poetry](https://python-poetry.org/) using[pipx](https://github.com/pipxproject/pipx) and then develop/debug Poetry in [Visual Studio Code](https://code.visualstudio.com/).
+A guide on how to set up [Poetry](https://python-poetry.org/) using [pipx](https://github.com/pipxproject/pipx) and then develop/debug Poetry in [Visual Studio Code](https://code.visualstudio.com/).
 
 <!--more-->
 
