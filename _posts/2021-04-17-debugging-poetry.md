@@ -78,7 +78,7 @@ Then we'll install the project. Either create and activate a virtual environment
 
 ```bash
 cd poetry
-poetry install
+poetry@master install
 ```
 
 ### Visual Studio Code setup
