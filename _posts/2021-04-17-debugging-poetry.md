@@ -103,6 +103,8 @@ Then, in the activated virtual environment, install Poetry with all its dependen
 poetry@master install
 ```
 
+And yes, even if `poetry@master` uses Python 3.9.2, it will still be able to complete an installation in the Python 3.8.8 virtual environment!
+
 ### Visual Studio Code setup
 
 Launch Visual Studio Code and open the Poetry source code's `poetry` folder. Make sure you have the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and all other necessities for sane Python development. ;)
