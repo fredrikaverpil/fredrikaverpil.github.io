@@ -10,7 +10,7 @@ How does two of my favorite technologies go together in debug mode?
 
 ## Prerequisites
 
-My developer environment of choice is Ubuntu 20.04 via WSL2 running on Windows 10, so this is what this guide is written for. Since it's all bash, git and vscode, it should be cross-platform.
+My developer environment is Ubuntu 20.04 via WSL2 running on Windows 10, so that's what this guide is written for. Since it's all bash, git and vscode, it should be cross-platform.
 
 ### Pyenv
 
