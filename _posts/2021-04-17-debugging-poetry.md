@@ -4,13 +4,9 @@ title: 'Debugging poetry with Visual Studio Code'
 tags: [python]
 ---
 
-How does two of my favorite technologies go together in debug mode?
+A guide on how to set up [Poetry](https://python-poetry.org/) using[pipx](https://github.com/pipxproject/pipx) and then develop/debug Poetry in [Visual Studio Code](https://code.visualstudio.com/).
 
 <!--more-->
-
-## What's this?
-
-A short guide on how to set up Poetry using pipx and then develop/debug Poetry in Visual Studio Code.
 
 ## Prerequisites
 
@@ -109,7 +105,7 @@ poetry@master install
 
 ### Visual Studio Code setup
 
-Launch Visual Studio Code and open the Poetry source code's `poetry` folder. Make sure you have the Python extension and all other necessities for sane Python development. ;)
+Launch Visual Studio Code and open the Poetry source code's `poetry` folder. Make sure you have the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and all other necessities for sane Python development. ;)
 
 Also select your virtual environment in `.venv` as the active Python interpreter for the project.
 
