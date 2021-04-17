@@ -8,25 +8,32 @@ How does two of my favorite technologies go together in debug mode?
 
 <!--more-->
 
+## What's this?
+
+A short guide on how to set up Poetry using pipx and then develop/debug Poetry in Visual Studio Code.
+
 ## Prerequisites
 
 My developer environment is Ubuntu 20.04 via WSL2 running on Windows 10, so that's what this guide is written for. Since it's all bash, git and Visual Studio Code, it should be cross-platform.
 
 ### Pyenv
 
-I like to pick the Python interpreter version for a project using [pyenv](https://github.com/pyenv/pyenv). Installation instructions can be found [here](https://github.com/pyenv/pyenv-installer) and pyenv's prerequisites can be found in their [wiki](https://github.com/pyenv/pyenv/wiki).
+I like to pick the Python interpreter version for a system-wide installations of tools, but also for individual projects using [pyenv](https://github.com/pyenv/pyenv). Installation instructions can be found [here](https://github.com/pyenv/pyenv-installer) and pyenv's prerequisites can be found in their [wiki](https://github.com/pyenv/pyenv/wiki).
+
+Let's install Python 3.9.2 for system-wide installed tools and Python 3.8.8 for development/debugging of Poetry. The versions selected are just used to illustrate that different interpreters can be used for Poetry and the projects themselves.
 
 ```bash
-pyenv install 3.9.4  # build and install Python 3.9.4
+pyenv install 3.9.2
+pyenv install 3.8.8
 ```
 
-Try it out, once installed:
+Try it out, once installed, with e.g. Python 3.9.2:
 
 ```bash
-$ pyenv global 3.9.4  # set the 'python' command to use this new version
+$ pyenv global 3.9.2  # set the 'python' command to use this new version
 
 $ python --version
-Python 3.9.4
+Python 3.9.2
 
 $ pyenv global system  # reset back to system default
 ```
@@ -38,7 +45,7 @@ Once pyenv is installed and a Python interpreter of choice is available, I like 
 Let's install pipx into the Python interpreter version of choice:
 
 ```bash
-pyenv global 3.9.4
+pyenv global 3.9.2
 pip install --upgrade pip  # always good to be on the latest pip
 pip install pipx
 pyenv global system
@@ -62,8 +69,6 @@ pipx install --suffix=@3967 --force 'poetry @ git+https://github.com/python-poet
 
 Note that the `--force` command makes it possible to run those commands again, to "update" to the current code in either master or in the pull request.
 
-Extra: I like to keep my virtual environments in the git project folder, so I also configure Poetry with `poetry config virtualenvs.in-project: true`.
-
 ## Visual Code debug setup
 
 ### Download the Poetry source code
@@ -74,18 +79,39 @@ In order to develop and debug poetry, we first need to clone down the git repo's
 git clone https://github.com/python-poetry/poetry.git
 ```
 
-Then we'll install the project. Either create and activate a virtual environment or configure Poetry to do it for you (as mentioned in the previous section). Then install Poetry with all its dependencies into the virtual environment:
+### Set up the virtual environment
+
+In the project folder of `poetry`, we can create a `.python-version` file, read by pyenv and which will set the Python interpreter version invoked by the `python` command: 
 
 ```bash
-cd poetry
+$ cd poetry
+
+$ pyenv local 3.8.8  # creates .python-version
+
+$ python --version
+Python 3.8.8
+```
+
+Let's now create a virtual environment:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+Note: If you rather use Virtualenv, install that first with `python -m pip install virtualenv` and then create the venv with `python -m virtualenv .venv`.
+
+Then, in the activated virtual environment, install Poetry with all its dependencies using the pipx-installed `poetry@master` command:
+
+```bash
 poetry@master install
 ```
 
 ### Visual Studio Code setup
 
-Launch Visual Studio Code and open the Poetry folder. Make sure you have the Python extension and all other necessities for sane Python development. ;)
+Launch Visual Studio Code and open the Poetry source code's `poetry` folder. Make sure you have the Python extension and all other necessities for sane Python development. ;)
 
-Make sure you select your virtual environment as the current Python interpreter.
+Also select your virtual environment in `.venv` as the active Python interpreter for the project.
 
 #### Set up tasks.json
 
