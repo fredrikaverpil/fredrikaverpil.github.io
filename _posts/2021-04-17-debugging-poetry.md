@@ -109,7 +109,7 @@ And yes, even if `poetry@master` uses Python 3.9.2, it will still be able to com
 
 Launch Visual Studio Code and open the Poetry source code's `poetry` folder. Make sure you have the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and all other necessities for sane Python development. ;)
 
-Also select your virtual environment in `.venv` as the active Python interpreter for the project.
+Also select your virtual environment (`.venv`) as the active Python interpreter for the project.
 
 #### Set up tasks.json
 
