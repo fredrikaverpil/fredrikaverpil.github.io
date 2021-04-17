@@ -57,7 +57,7 @@ As a last prerequisite, I'll install pipx-install Poetry, usually from the maste
 pipx install --suffix=@master --force git+https://github.com/python-poetry/poetry.git'
 ```
 
-Sometimes I might want to install Poetry from a GitHub pull request (in this example pull request #3967) and make this version of Poetry available via the `poetry@3967` command:
+Sometimes I might want to install Poetry from a GitHub pull request (in this example pull request [#3967](https://github.com/python-poetry/poetry/pull/3967)) and make this version of Poetry available via the `poetry@3967` command:
 
 ```bash
 pipx install --suffix=@3967 --force 'poetry @ git+https://github.com/python-poetry/poetry.git@refs/pull/3967/head'
