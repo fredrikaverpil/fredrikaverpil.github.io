@@ -107,7 +107,7 @@ And yes, even if `poetry@master` uses Python 3.9.2, it will still be able to com
 
 ### Visual Studio Code setup
 
-Launch Visual Studio Code and open the Poetry source code's `poetry` folder. Make sure you have the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and all other necessities for sane Python development. ;)
+Launch Visual Studio Code and open the `poetry` project folder, containing all source code. Make sure you have the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and all other necessities for sane Python development. ;)
 
 Also select your virtual environment (`.venv`) as the active Python interpreter for the project.
 
@@ -148,7 +148,7 @@ Debugging in Visual Studio Code is set up in the project folder's `.vscode/launc
 
 You can see in the above file that I have added two basic ways of executing Poetry; `poetry install` and `poetry update`. Set up a new configuration which executes the command you wish to debug.
 
-Add breakpoints, just left to the line number of the code you wish to debug in the git repo.
+Add breakpoints, just left to the line number of the code you wish to debug in the `poetry` project folder.
 
 Now, from the debug menu, you can pick between the different configurations above and execute them in the debugger. This will cause these commands to run inside the Visual Studio Code debug wrapper.
 
