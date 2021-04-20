@@ -4,7 +4,7 @@ title: 'Debugging Poetry with Visual Studio Code'
 tags: [python]
 ---
 
-A guide on how to set up [Poetry](https://python-poetry.org/) using [Pipx](https://github.com/pipxproject/pipx) and [Pyenv](https://github.com/pyenv/pyenv), and finally develop/debug Poetry in [Visual Studio Code](https://code.visualstudio.com/).
+A guide on how to set up debugging of [Poetry](https://python-poetry.org/) in [Visual Studio Code](https://code.visualstudio.com/), using [Pipx](https://github.com/pipxproject/pipx) and [Pyenv](https://github.com/pyenv/pyenv).
 
 <!--more-->
 
@@ -12,9 +12,9 @@ A guide on how to set up [Poetry](https://python-poetry.org/) using [Pipx](https
 
 My developer environment is Ubuntu 20.04 via WSL2 running on Windows 10, so that's what this guide is written for. In order to get set for debugging, we need to install/setup a couple of tools:
 
-* Pyenv
-* Pipx
-* Poetry
+* [Pyenv](https://github.com/pyenv/pyenv) - Python version management
+* [Pipx](https://github.com/pipxproject/pipx) - install and run Python applications in isolated environments
+* [Poetry](https://github.com/python-poetry/poetry) - you should know what this is, if you are reading this ;)
 
 ### Pyenv
 
@@ -40,7 +40,7 @@ $ pyenv global system  # reset back to system default
 
 ### Pipx
 
-Once pyenv is installed and a Python interpreter of choice is available, I like to have an installation of poetry from the same branch or pull request I am about to develop/debug. This can easily be maintained using [pipx](https://github.com/pipxproject/pipx).
+Once pyenv is installed and a Python interpreter of choice is available, I like to have an installation of poetry from the same branch or pull request I am about to develop/debug. This can easily be maintained using [Pipx](https://github.com/pipxproject/pipx).
 
 Let's install pipx into the Python interpreter version of choice:
 
