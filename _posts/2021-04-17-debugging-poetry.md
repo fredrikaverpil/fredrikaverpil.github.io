@@ -121,13 +121,16 @@ $ source .venv/bin/activate
 $ poetry@master install
 ```
 
-However, the below will _not_ work, as Poetry (at least not currently) supports reading the `.python-version` file from `pyenv local`:
+However, the below will _not_ work, as Poetry (at least not currently) supports reading the `.python-version` file, created from the `pyenv local 3.8.8` command:
 
 ```bash
 # WARNING: this will NOT work!
 $ poetry config virtualenvs.in-project true
-$ poetry@master install  # requires that you ran "pyenv local" previously
+$ poetry@master install  # creates the ".venv" automatically
 $ source .venv/bin/activate
+
+$ python --version
+Python 3.9.2  # here we expected Python 3.8.8!
 ```
 
 So I would go either with `venv` or `virtualenv`. Moving on...
