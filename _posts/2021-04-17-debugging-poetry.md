@@ -121,7 +121,7 @@ $ source .venv/bin/activate
 $ poetry@master install
 ```
 
-However, the below will _not_ work, as Poetry (at least not currently) supports reading the `.python-version` file, created from the `pyenv local 3.8.8` command:
+However, the below will _not_ work, as Poetry (at least not currently) does _not_ support reading the `.python-version` file, created from the `pyenv local 3.8.8` command:
 
 ```bash
 # WARNING: this will NOT work!
