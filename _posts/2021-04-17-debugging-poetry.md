@@ -195,7 +195,7 @@ Now, in the debug menu, from the "Run and debug" section (upper left corner), yo
 ![alt text]({{ site.baseurl }}/blog/assets/poetry_debug/debug.png "Debug")
 
 Inspect objects and navigate the call stack to the left and use the navigation in the top center to continue, step over/into/out of, restart or stop.
-You can also use view the terminal or use the debug console at the bottom. Keep track of your breakpoints in the lower left corner section "Breakpoints".
+You can also view the terminal or use the debug console at the bottom. Keep track of your breakpoints in the lower left corner section "Breakpoints".
 
 More on debugging in Visual Studio Code [here](https://code.visualstudio.com/docs/editor/debugging).
 
