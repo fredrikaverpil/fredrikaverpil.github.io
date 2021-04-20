@@ -1,26 +1,30 @@
 ---
 layout: post
-title: 'Debugging poetry with Visual Studio Code'
+title: 'Debugging Poetry with Visual Studio Code'
 tags: [python]
 ---
 
-A guide on how to set up [Poetry](https://python-poetry.org/) using [pipx](https://github.com/pipxproject/pipx) and then develop/debug Poetry in [Visual Studio Code](https://code.visualstudio.com/).
+A guide on how to set up [Poetry](https://python-poetry.org/) using [Pipx](https://github.com/pipxproject/pipx) and [Pyenv](https://github.com/pyenv/pyenv), and finally develop/debug Poetry in [Visual Studio Code](https://code.visualstudio.com/).
 
 <!--more-->
 
 ## Prerequisites
 
-My developer environment is Ubuntu 20.04 via WSL2 running on Windows 10, so that's what this guide is written for. Since it's all bash, git and Visual Studio Code, it should be cross-platform.
+My developer environment is Ubuntu 20.04 via WSL2 running on Windows 10, so that's what this guide is written for. In order to get set for debugging, we need to install/setup a couple of tools:
+
+* Pyenv
+* Pipx
+* Poetry
 
 ### Pyenv
 
-I like to pick the Python interpreter version for a system-wide installations of tools, but also for individual projects using [pyenv](https://github.com/pyenv/pyenv). Installation instructions can be found [here](https://github.com/pyenv/pyenv-installer) and pyenv's prerequisites can be found in their [wiki](https://github.com/pyenv/pyenv/wiki).
+I like to pick the Python interpreter version for a system-wide installations of tools, but also for individual projects using [Pyenv](https://github.com/pyenv/pyenv). Installation instructions can be found [here](https://github.com/pyenv/pyenv-installer) and pyenv's prerequisites can be found in their [wiki](https://github.com/pyenv/pyenv/wiki).
 
 Let's install Python 3.9.2 for system-wide installed tools and Python 3.8.8 for development/debugging of Poetry. The versions selected are just used to illustrate that different interpreters can be used for Poetry and the projects themselves.
 
 ```bash
-pyenv install 3.9.2
-pyenv install 3.8.8
+$ pyenv install 3.9.2
+$ pyenv install 3.8.8
 ```
 
 Try it out, once installed, with e.g. Python 3.9.2:
@@ -41,38 +45,46 @@ Once pyenv is installed and a Python interpreter of choice is available, I like 
 Let's install pipx into the Python interpreter version of choice:
 
 ```bash
-pyenv global 3.9.2
-pip install --upgrade pip  # always good to be on the latest pip
-pip install pipx
-pyenv global system
+$ pyenv global 3.9.2
+$ pip install --upgrade pip  # always good to be on the latest pip
+$ pip install pipx
+$ pyenv global system
 ```
 
 Make sure to follow the pipx installation instructions and add `~/.local/bin` to `$PATH`, for example.
 
 ### Poetry
 
-As a last prerequisite, I'll install pipx-install Poetry, usually from the master branch and make it available via the `poetry@master` command:
+As a last prerequisite, I'll install a "generic" Poetry version via pipx. This is so that we can bootstrap Poetry's own development installation.
+
+When debugging in Poetry's `master` branch, I'll install Poetry from the latest commit in `master`. I also like to install Poetry using a pipx-suffix. In this case I'll use the suffix `@master` and make the Poetry executable available as `poetry@master`.
 
 ```bash
-pipx install --suffix=@master --force git+https://github.com/python-poetry/poetry.git'
+$ pipx install --suffix=@master --force git+https://github.com/python-poetry/poetry.git'
 ```
 
 Sometimes I might want to install Poetry from a GitHub pull request (in this example pull request [#3967](https://github.com/python-poetry/poetry/pull/3967)) and make this version of Poetry available via the `poetry@3967` command:
 
 ```bash
-pipx install --suffix=@3967 --force 'poetry @ git+https://github.com/python-poetry/poetry.git@refs/pull/3967/head'
+$ pipx install --suffix=@3967 --force 'poetry @ git+https://github.com/python-poetry/poetry.git@refs/pull/3967/head'
 ```
 
 Note that the `--force` command makes it possible to run those commands again, to "update" to the current code in either master or in the pull request.
 
-## Visual Code debug setup
+## Visual Studio Code debug setup
+
+This consists of a few steps:
+
+* Download the Poetry source code
+* Set up the virtual environment
+* Visual Studio Code setup
 
 ### Download the Poetry source code
 
 In order to develop and debug poetry, we first need to clone down the git repo's source code:
 
 ```bash
-git clone https://github.com/python-poetry/poetry.git
+$ git clone https://github.com/python-poetry/poetry.git
 ```
 
 ### Set up the virtual environment
@@ -88,22 +100,36 @@ $ python --version
 Python 3.8.8
 ```
 
-Let's now create a virtual environment:
+Let's now create a virtual environment and install the Poetry development environment. This can be done in several ways:
+
+#### Venv
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
+$ python -m venv .venv
+$ source .venv/bin/activate
+$ poetry@master install
 ```
 
-Note: If you rather use Virtualenv, install that first with `python -m pip install virtualenv` and then create the venv with `python -m virtualenv .venv`.
-
-Then, in the activated virtual environment, install Poetry with all its dependencies using the pipx-installed `poetry@master` command:
+#### Virtualenv
 
 ```bash
-poetry@master install
+$ pip install virtualenv
+$ virtualenv .venv
+$ source .venv/bin/activate
+$ poetry@master install
+```
+
+#### Poetry
+
+```bash
+$ poetry config virtualenvs.in-project true
+$ poetry@master install  # requires that you ran "pyenv local" previously
+$ source .venv/bin/activate
 ```
 
 And yes, even if `poetry@master` uses Python 3.9.2, it will still be able to complete an installation in the Python 3.8.8 virtual environment!
+
+Now you have the `poetry` command at your disposal, as well as `python -m poetry`, provided by the development installation. The latter is what we are going to use when debugging!
 
 ### Visual Studio Code setup
 
@@ -147,6 +173,8 @@ Debugging in Visual Studio Code is set up in the project folder's `.vscode/launc
 ```
 
 You can see in the above file that I have added two basic ways of executing Poetry; `poetry install` and `poetry update`. Set up a new configuration which executes the command you wish to debug.
+
+Note that we no longer use e.g. `poetry@master`. This was only meant to bootstrap the development environment and make the `poetry` command available in the virtual environment.
 
 Add breakpoints, just left to the line number of the code you wish to debug in the `poetry` project folder.
 
