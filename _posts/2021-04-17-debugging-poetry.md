@@ -100,17 +100,19 @@ $ python --version
 Python 3.8.8
 ```
 
-Let's now create a virtual environment and install the Poetry development environment. This can be done in several ways:
+Always make sure you're up to date with pip:
 
-#### Venv
+```bash
+pip install --upgrade pip
+```
+
+Let's now create a virtual environment and install the Poetry development environment. This can be done in several ways:
 
 ```bash
 $ python -m venv .venv
 $ source .venv/bin/activate
 $ poetry@master install
 ```
-
-#### Virtualenv
 
 ```bash
 $ pip install virtualenv
@@ -119,15 +121,18 @@ $ source .venv/bin/activate
 $ poetry@master install
 ```
 
-#### Poetry
+However, the below will _not_ work, as Poetry (at least not currently) supports reading the `.python-version` file from `pyenv local`:
 
 ```bash
+# WARNING: this will NOT work!
 $ poetry config virtualenvs.in-project true
 $ poetry@master install  # requires that you ran "pyenv local" previously
 $ source .venv/bin/activate
 ```
 
-And yes, even if `poetry@master` uses Python 3.9.2, it will still be able to complete an installation in the Python 3.8.8 virtual environment!
+So I would go either with `venv` or `virtualenv`. Moving on...
+
+Even if `poetry@master` uses Python 3.9.2, it will still be able to complete an installation in the Python 3.8.8 virtual environment!
 
 Now you have the `poetry` command at your disposal, as well as `python -m poetry`, provided by the development installation. The latter is what we are going to use when debugging!
 
