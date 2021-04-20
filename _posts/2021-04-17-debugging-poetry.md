@@ -4,6 +4,8 @@ title: 'Debugging Poetry with Visual Studio Code'
 tags: [python]
 ---
 
+![alt text]({{ site.baseurl }}/blog/assets/poetry_debug/debug.png "Debug")
+
 A guide on how to set up debugging of [Poetry](https://python-poetry.org/) in [Visual Studio Code](https://code.visualstudio.com/), using [Pipx](https://github.com/pipxproject/pipx) and [Pyenv](https://github.com/pyenv/pyenv).
 
 <!--more-->
@@ -180,13 +182,20 @@ Debugging in Visual Studio Code is set up in the project folder's `.vscode/launc
 }
 ```
 
-You can see in the above file that I have added two basic ways of executing Poetry; `poetry install` and `poetry update`. Set up a new configuration which executes the command you wish to debug.
+You can see in the above file that I have added two basic examples of executing Poetry; `poetry install` and `poetry update`. The way this works is that Visual Studio Code will wrap e.g. the `python -m poetry install -vvv` command in its debugger. 
 
 Note that we no longer use e.g. `poetry@master`. This was only meant to bootstrap the development environment and make the `poetry` command available in the virtual environment.
 
-Add breakpoints, just left to the line number of the code you wish to debug in the `poetry` project folder.
+#### Set breakpoints and run
 
-Now, from the debug menu, you can pick between the different configurations above and execute them in the debugger. This will cause these commands to run inside the Visual Studio Code debug wrapper.
+Add breakpoints by clicking just left to the line number of the code you wish to debug.
+
+Now, in the debug menu, from the "Run and debug" section (upper left corner), you can pick between the different configurations (from the `.vscode/launch.json`) and execute them (click the green "play" button). Visual Studio Code's debugger wrapper will now execute the command and stop the execution on your breakpoints.
+
+![alt text]({{ site.baseurl }}/blog/assets/poetry_debug/debug.png "Debug")
+
+Inspect objects and navigate the call stack to the left and use the navigation in the top center to continue, step over/into/out of, restart or stop.
+You can also use view the terminal or use the debug console at the bottom. Keep track of your breakpoints in the lower left corner section "Breakpoints".
 
 More on debugging in Visual Studio Code [here](https://code.visualstudio.com/docs/editor/debugging).
 
