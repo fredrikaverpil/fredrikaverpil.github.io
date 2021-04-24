@@ -19,6 +19,10 @@ This guide outlines a solution I've found, which works great for me, where I can
 * A domain registered with a registrar where you can set up email addresses with forwarding.
 * An Office365 account
 
+## Pros over HEY mail's official send using SMTP feature
+
+* You can use a forwarding address for which you do not have an SMTP server
+
 ## Pros over HEY mail's official custom domains feature
 
 * Keep your `<username>@hey.com` address and all mail you already have in HEY
