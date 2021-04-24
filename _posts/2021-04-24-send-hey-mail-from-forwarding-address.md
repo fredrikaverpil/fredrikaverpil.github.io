@@ -17,7 +17,7 @@ This guide outlines a solution I've found, which works great for me, where I can
 ## What you'll need
 
 * A domain registered with a registrar where you can set up email addresses with forwarding.
-* An Office365 account
+* An [Microsoft/Office365/Outlook](http://outlook.live.com/) account
 
 ## Pros over HEY mail's official send using SMTP feature
 
