@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Send HEY mail with forwarding address using Office365 SMTP'
-tags: [python]
+tags: [workflow]
 ---
 
 [HEY mail](https://hey.com/) announced a while back you can [send emails from external email addresses using SMTP](https://hey.com/features/send-as/). Just the other day, they now finally also announced that [their take on custom domains](https://hey.com/domains/).
