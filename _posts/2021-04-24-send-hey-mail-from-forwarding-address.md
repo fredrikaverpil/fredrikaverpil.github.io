@@ -32,7 +32,7 @@ This guide outlines a solution I've found, which works great for me, where I can
 
 1. In your domain registrar's website, setup your desired email address `<username>@yourdomain.com` and forward it to your `<username>@hey.com`
 1. In your Microsoft account, set up `<username>@yourdomain.com` as ["Microsoft Account Alias"](https://account.live.com/AddAssocId)
-1. Once this has been done, verify that you can send email using `<username>@yourdomain.com`, from the web UI at https://outlook.live.com/
+1. Once this has been done, verify that you can send email using `<username>@yourdomain.com`, from the web UI at [outlook.live.com](https://outlook.live.com/)
 1. In your Microsoft account, set up an ["App password"](https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944).
 1. In HEY mail's account settings, go to "Forwarding & SMTP setup" and add `<username>@yourdomain.com`. Also add SMTP details, and use the ones from Office365 (you can find these details under the "Sync email" mail setting):
     * Outgoing (SMTP) server: `smtp.office365.com`
