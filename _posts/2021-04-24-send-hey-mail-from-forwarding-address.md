@@ -19,7 +19,7 @@ This guide outlines a solution I've found, which works great for me, where I can
 * A domain registered with a registrar where you can set up email addresses with forwarding.
 * An [Microsoft/Office365/Outlook](http://outlook.live.com/) account
 
-## Pros over HEY mail's official send using SMTP feature
+## Pros over setting up MX records on your DNS
 
 * You can use forwarding addresses for which you do not have MX records set up
 
