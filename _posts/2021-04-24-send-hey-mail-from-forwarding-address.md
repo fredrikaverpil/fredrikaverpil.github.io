@@ -6,11 +6,11 @@ tags: [workflow]
 
 [HEY mail](https://hey.com/) announced a while back you can [send emails from external email addresses using SMTP](https://hey.com/features/send-as/). Just the other day, they now finally also announced that [their take on custom domains](https://hey.com/domains/).
 
-I've been waiting to hook up my existing HEY mail address with my custom domain so that I don't have to read emails in HEY but compose/reply in GMail (where my custom domain works fine).
+I've been waiting to hook up my existing HEY mail address with my custom domain's forwarding addresses, so that I don't have to set up MX records for email on my custom domain's DNS.
 
-In my case, I was hoping for something more similar to what GMail's offering is like, where you can choose to send email from other email addresses which you can receive email from (e.g. forwarding addresses).
+In my case, I was hoping for something more similar to what GMail's offering is like, where you can choose to send email from any other email addresses which you can receive email from (e.g. forwarding addresses, registered directly in your domain registrar's DNS settings).
 
-This guide outlines a solution I've found, which works great for me, where I can now finally send email from a custom domain forward address, using the [Office365 SMTP](https://docs.microsoft.com/en-us/exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365).
+This guide outlines a solution I've found, which works great for me, where I can now finally send HEY email from a custom domain forward address, using the [Office365 SMTP](https://docs.microsoft.com/en-us/exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365).
 
 <!--more-->
 
@@ -21,7 +21,7 @@ This guide outlines a solution I've found, which works great for me, where I can
 
 ## Pros over HEY mail's official send using SMTP feature
 
-* You can use a forwarding address for which you do not have an SMTP server
+* You can use forwarding addresses for which you do not have MX records set up
 
 ## Pros over HEY mail's official custom domains feature
 
