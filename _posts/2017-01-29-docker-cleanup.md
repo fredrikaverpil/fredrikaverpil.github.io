@@ -13,10 +13,18 @@ docker rm -v $(docker ps -a -q)
 
 # Remove images
 docker rmi -f $(docker images -q)
+
+# Remove unused images
+docker system prune --all
 ```
 
-Update:
+Combine filters, `'xargs` etc:
 
 ```bash
-docker system prune --all
+# Stop all containers of a certain name
+docker stop $(docker ps -q --filter name=mycontainer)
+
+# Run containers based on folder/file names (use '%' where you want to insert the value corresponding to the file/folder name)
+touch c1 c2 c3
+ls | xargs -I % docker run --rm --name % hello-world:latest
 ```
