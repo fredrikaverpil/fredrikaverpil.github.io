@@ -9,8 +9,7 @@ Throughout the years I've been spending my professional life within the digital 
 
 ## Get in touch!
 
-fredrik@averpil.com  
-+46-708-121275  
+fredrik@averpil.com
 [twitter.com/fredrikaverpil](https://twitter.com/fredrikaverpil)  
 [github.com/fredrikaverpil](https://github.com/fredrikaverpil)  
 [linkedin.com/in/fredrik](https://linkedin.com/in/fredrik)
