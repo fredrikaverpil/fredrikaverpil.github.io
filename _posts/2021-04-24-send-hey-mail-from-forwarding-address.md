@@ -14,6 +14,20 @@ This guide outlines a solution I've found, which works great for me, where I can
 
 <!--more-->
 
+## Update 2021-09-25
+
+I've realized this is not a great workaround for using Hey's custom domains. The reason is that when emails are sent using the Microsoft 365 SMTP server, the sender address does not match that of the SMTP server.
+
+This results in the "via outlook.com" notice in e.g. Gmail:
+
+![]({{ site.baseurl }}/blog/assets/hey/outlook_smtp.png)
+
+It was recently brought to my attention that my emails often end up in the spam folder for recipients who does not already have me in their address book. And I think this may be because of the sender address not matching my domain name.
+
+Therefore I am moving away from using Hey with Microsoft's SMTP server and the setup outlined in this blog post.
+
+With this warning in mind, you are welcome to continue reading this post although I no longer recommend this setup.
+
 ## What you'll need
 
 * A domain registered with a registrar where you can set up email addresses with forwarding.
@@ -21,7 +35,7 @@ This guide outlines a solution I've found, which works great for me, where I can
 
 ## Pros over setting up MX records on your DNS
 
-* You can use forwarding addresses for which you do not have MX records set up
+* You can set up forwarding addresses in the DNS settings at your domain registrar (MAILFW rules).
 
 ## Pros over HEY mail's official custom domains feature
 
