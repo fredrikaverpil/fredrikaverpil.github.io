@@ -5,13 +5,9 @@ title: About
 
 ![]({{ site.url }}/blog/assets/fredrik.jpg)
 
-Throughout the years I've been spending my professional life within the digital domain of creativity and programming; from web site design/development to 3D animation and digital visual effects for feature films. I've had professional experience within the field of 3D graphics since 2005, including co-founding [Filmgate](http://www.filmgate.se) and developing the computer graphics pipeline at [Industriromantik](http://www.industriromantik.se). Today, I take part in an extraordinary team of talent at [Ericsson](https://www.ericsson.com) in the role of Design Architect. Here, besides development predominantly in Python, I get to work with cloud native technologies such as OpenStack, Docker, Kubernetes, Helm and Spinnaker.
+I am a passionate, enthusiastic and professional Python developer (since 2012), continuously striving to evolve with Python as the primary language of choice.
 
-## Get in touch!
-
-[twitter.com/fredrikaverpil](https://twitter.com/fredrikaverpil)  
-[github.com/fredrikaverpil](https://github.com/fredrikaverpil)  
-[linkedin.com/in/fredrik](https://linkedin.com/in/fredrik)
+You can learn more about me or get in touch over at [LinkedIn](https://www.linkedin.com/in/fredrik/), [GitHub](https://github.com/fredrikaverpil) or [Twitter](https://twitter.com/fredrikaverpil).
 
 ## Blog info
 
