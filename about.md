@@ -5,7 +5,9 @@ title: About
 
 ![]({{ site.url }}/blog/assets/fredrik.jpg)
 
-I am a passionate, enthusiastic and professional Python developer (since 2012), continuously striving to evolve with Python as the primary language of choice.
+I am a passionate, enthusiastic and professional software developer (since 2012), continuously striving to evolve with Python as the primary language of choice — and preferably building scalable and reliable solutions in public cloud environments such as GCP, AWS or Azure. 
+
+I advocate continuous development, automated testing, clean code and the use of common design patterns so as to maintain as high code quality as possible. I am deeply invested in the open source community and love collaborating and contributing!
 
 You can learn more about me or get in touch over at [LinkedIn](https://www.linkedin.com/in/fredrik/), [GitHub](https://github.com/fredrikaverpil) or [Twitter](https://twitter.com/fredrikaverpil).
 
