@@ -19,8 +19,6 @@ You can very easily make Poetry available system-wide, by just following the [in
 ```bash
 $ brew install pipx
 $ pipx install poetry
-
-$ poetry --version
 ```
 
 ### Linux (apt)
@@ -28,8 +26,6 @@ $ poetry --version
 ```bash
 $ apt install pipx
 $ pipx install poetry
-
-$ poetry --version
 ```
 
 ### Windows
@@ -38,7 +34,7 @@ Yeah, sorry Windows users. No easy setup here that I am aware of, unfortunately.
 
 ## Custom system-wide install
 
-In the easy system-wide installation examples above, you don't really control the version of pipx or the underlying Python interpreter version, if that's important to you. To solve that, we can use [pyenv](https://github.com/pyenv/pyenv) to manage Python interpeter installations:
+In the easy system-wide installation examples above, you don't really control the version of pipx or the underlying Python interpreter version. If that's important to you, you can use e.g. [pyenv](https://github.com/pyenv/pyenv) to manage Python interpeter installations:
 
 ```bash
 $ pyenv install 3.10.0  # install CPython 3.10.0 into ~/.pyenv/versions/3.10.0
@@ -49,6 +45,8 @@ $ pyenv global system  # stop making 'python' and 'pip' point use CPython 3.10.0
 
 $ pipx --version
 ```
+
+Now you can more easily install exactly the version of pipx you desire, and the version of Python you want to use.
 
 You can read more about what each pyenv command does in the pyenv documentation. You'll also have to add some paths to your `$PATH` (as part of installing pyenv and pipx) for this to work.
 
