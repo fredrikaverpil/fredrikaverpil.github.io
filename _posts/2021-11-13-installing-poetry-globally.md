@@ -52,7 +52,7 @@ You can read more about what each pyenv command does in the pyenv documentation.
 
 ## In-development Poetry builds
 
-Using pipx, we can install Poetry from git in different ways. Pipx also has a nice "suffix" feature, which we can use to differentiate the different installations.
+Using pipx, we can install Poetry from git repo. Pipx also has a nice "suffix" feature, which can be used to differentiate the different installations.
 
 ```bash
 # Install from master branch as poetry@master
