@@ -4,13 +4,13 @@ title: "Installing Poetry system-wide"
 tags: [python]
 ---
 
-When I recently got some feedback (thank you [@simmel](https://github.com/simmel), much appreciated!) on a previous post on [debugging Poetry in vscode]({{ site.baseurl }}/2021/04/17/debugging-poetry/), I realized that post has very convoluted instructions on how to install Poetry system-wide.
+I recently got some feedback (thank you [@simmel](https://github.com/simmel), much appreciated!) on a previous post on [debugging Poetry in vscode]({{ site.baseurl }}/2021/04/17/debugging-poetry/). I then realized it was a bit hard to follow if all you wanted to do was to install Poetry globally, with some added control from the [default installation method](https://python-poetry.org/docs/#installation).
 
 This post aims to focus on this and cover the different system-wide installation alternatives that I am aware of.
 
 <!--more-->
 
-## Easy system-wide install
+## System-wide install with pipx
 
 You can very easily make Poetry available system-wide, by just following the [installation docs](https://python-poetry.org/docs/#installation). However, this makes it a bit harder to e.g. install in-development builds of Poetry. By leveraging [pipx](https://github.com/pypa/pipx), this can be solved:
 
@@ -25,24 +25,6 @@ $ pipx install poetry
 ```
 
 Yeah, sorry Windows users. No easy setup here that I am aware of, unfortunately. The only reasonable package manager for Windows is [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/), in my opinion, and that has no pipx or poetry package.
-
-## Custom system-wide install
-
-In the easy system-wide installation examples above, you don't really control the version of pipx or the underlying Python interpreter version. If that's important to you, you can use e.g. [pyenv](https://github.com/pyenv/pyenv) to manage Python interpeter installations:
-
-```bash
-$ pyenv install 3.10.0  # install CPython 3.10.0 into ~/.pyenv/versions/3.10.0
-$ pyenv global 3.10.0  # make 'python' and 'pip' use CPython 3.10.0
-$ pip install pipx  # install pipx into the 3.10.0 installation
-$ pipx install poetry  # install poetry in ~/.local/pipx/venvs/poetry and its binary in ~/.local/bin/poetry
-$ pyenv global system  # stop making 'python' and 'pip' point use CPython 3.10.0 and revert it back to system-default
-
-$ pipx --version
-```
-
-Now you can more easily install exactly the version of pipx you desire, and the version of Python you want to use.
-
-You can read more about what each pyenv command does in the pyenv documentation. You'll also have to add some paths to your `$PATH` (as part of installing pyenv and pipx) for this to work.
 
 ## In-development Poetry builds
 
@@ -81,6 +63,24 @@ apps are exposed on your $PATH at ~/.local/bin
    package poetry 1.2.0a2 (poetry@master), Python 3.10.0
     - poetry@master
 ```
+
+## Bonus: use pyenv to control the Python interpreter used by pipx and poetry
+
+In the examples above, you don't really control the underlying Python interpreter version. If that's important to you, you can use e.g. [pyenv](https://github.com/pyenv/pyenv) to manage Python interpeter installations:
+
+```bash
+$ pyenv install 3.10.0  # install CPython 3.10.0 into ~/.pyenv/versions/3.10.0
+$ pyenv global 3.10.0  # make 'python' and 'pip' use CPython 3.10.0
+$ pip install pipx  # install pipx into the 3.10.0 installation
+$ pipx install poetry  # install poetry in ~/.local/pipx/venvs/poetry and its binary in ~/.local/bin/poetry
+$ pyenv global system  # stop making 'python' and 'pip' point use CPython 3.10.0 and revert it back to system-default
+
+$ pipx --version
+```
+
+Now you can more easily install exactly the version of pipx you desire, and the version of Python you want to use.
+
+You can read more about what each pyenv command does in the pyenv documentation. You'll also have to add some paths to your `$PATH` (as part of installing pyenv and pipx) for this to work.
 
 ## Thoughts and comments?
 
