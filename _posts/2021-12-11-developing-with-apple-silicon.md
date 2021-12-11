@@ -163,6 +163,8 @@ $ npm root -g
   - macos: arm64, x86_64
   - linux: aarch64, ?
 - python -c "import platform; print(platform.processor())"
+  - macos: arm, i386
+  - linux: ?, ?
 
 ## Working with containers
 
