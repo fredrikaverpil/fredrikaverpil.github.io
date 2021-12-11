@@ -22,14 +22,14 @@ WIP notes:
 ### Homebrew
 
 ```bash
-# Install Homebrew for ARM
+# Install Homebrew for Apple Silicon
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Install Homebrew for Intel
 arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-After completing the installation, the `brew` command will be available, which will install native ARM software. We can create a new `brew86` command which will install Rosetta 2-emulated software. You might be able create an alias:
+After completing the installation, the `brew` command will be available, which will install native Apple Silicon software. We can create a new `brew86` command which will install Rosetta 2-emulated software. You might be able create an alias:
 
 ```bash
 alias brew86='arch -x86_64 /usr/local/bin/brew "$@"'
@@ -120,15 +120,15 @@ NVM_DIR=$HOME/.nvm_x86 brew86 install nvm
 
 This will result in two directories in the home folder:
 
-- `~/.nvm` # ARM
-- `~/.nvm_x86` # Intel
+- `~/.nvm` - Apple Silicon
+- `~/.nvm_x86` - Intel
 
-Here, I would've liked to differentiate using `npm` and `npm86`. But I haven't found any way to achieve this. Therefore I am running `nvm` like this, depending on whether you want nvm/npm/node for either ARM or Intel:
+Here, I would've liked to differentiate using `npm` and `npm86`. But I figured out a way to achieve this. Therefore I am running `nvm` like this, depending on whether you want nvm/npm/node for either ARM or Intel:
 
-- `nvm` in the default Terminal
-- `NVM_DIR=$HOME/.nvm_x86 nvm` in the Rosetta 2 Terminal
+- `nvm` in the default terminal
+- `NVM_DIR=$HOME/.nvm_x86 nvm` in the Rosetta 2 terminal
 
-Then I can install node and use npm like so:
+Then I can install node and use npm from the respective terminal:
 
 ```bash
 # ARM, executed from the native Terminal
@@ -154,10 +154,26 @@ $ npm root -g
 ~/.nvm_x86/versions/node/v14.18.1/lib/node_modules
 ```
 
+## Detecting running under Apple Silicon (or ARM in general)
+
+- uname -p
+  - macos: arm, i386
+  - linux: ?, ?
+- uname -m
+  - macos: arm64, x86_64
+  - linux: aarch64, ?
+- python -c "import platform; print(platform.processor())"
+
 ## Working with containers
 
-docker build --platform linux/amd64 ...
+## If-conditions
 
-### Detecting running under aarch64
+```Dockerfile
+RUN if [ "$(uname -m)" = "aarch64" ]; then \
+        apt-get update && apt-get install -y build-essential python-dev python3-dev ; \
+    fi
+```
 
 ### Defining the platform
+
+docker build --platform linux/amd64 ...
