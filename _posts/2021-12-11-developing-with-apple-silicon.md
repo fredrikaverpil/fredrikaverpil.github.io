@@ -4,7 +4,7 @@ title: "Developing with Apple Silicon"
 tags: [macos]
 ---
 
-In software development, certain software were not designed to run on the ARM-based Apple Silicon. Thankfully, there are pretty nice workarounds. This blog post aims to serve as a notebook from my own issues and the solutions to them.
+In software development, certain software were not designed to run on the ARM-based Apple Silicon. Thankfully, there are pretty nice workarounds. Like for the rest of this blog, this post aims to serve as a personal notebook and so I can more easily share my findings.
 
 <!--more-->
 
@@ -22,14 +22,14 @@ WIP notes:
 ### Homebrew
 
 ```bash
-# Install Homebrew for Apple Silicon
+# Install Homebrew for ARM
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Install Homebrew for Intel
 arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-After completing the installation, the `brew` command will be available, which will install native Apple Silicon software. We can create a new `brew86` command which will install Rosetta 2-emulated software. You might be able create an alias:
+After completing the installation, the `brew` command will be available, which will install native ARM software. We can create a new `brew86` command which will install Rosetta 2-emulated software. You might be able create an alias:
 
 ```bash
 alias brew86='arch -x86_64 /usr/local/bin/brew "$@"'
@@ -86,7 +86,7 @@ $ ~/.pyenv/versions/3.10.1_x86/bin/python -c "import platform; print(platform.pr
 i386
 ```
 
-You can now use pyenv as you usually do with `pyenv local` or `pyenv global`, e.g:
+You can now use pyenv as you usually do with `pyenv local` or `pyenv global`. There's only need for `pyenv86` when installing new versions. Examples:
 
 ```bash
 cd my_arm_project
@@ -104,13 +104,55 @@ source .venv/bin/activate
 
 I usually create "x86" virtual environments, to be used in vscode, for some projects which needs to install software that has no ARM-release yet. This has worked out great so far. I can't really see any performance penalty either.
 
-### Node
+### Node (nvm, npm)
 
-#### NVM
+I haven't found a great workflow here, unfortunately. Using nvm/npm relies on using either the default Terminal or the duplicated Rosetta 2 Terminal.
 
-### NPM
+First, let's install nvm for the respective architectures via Homebrew:
 
-npm root -g
+```bash
+# ARM
+brew install nvm
+
+# Intel
+NVM_DIR=$HOME/.nvm_x86 brew86 install nvm
+```
+
+This will result in two directories in the home folder:
+
+- `~/.nvm` # ARM
+- `~/.nvm_x86` # Intel
+
+Here, I would've liked to differentiate using `npm` and `npm86`. But I haven't found any way to achieve this. Therefore I am running `nvm` like this, depending on whether you want nvm/npm/node for either ARM or Intel:
+
+- `nvm` in the default Terminal
+- `NVM_DIR=$HOME/.nvm_x86 nvm` in the Rosetta 2 Terminal
+
+Then I can install node and use npm like so:
+
+```bash
+# ARM, executed from the native Terminal
+nvm install 14
+nvm use 14
+npm install
+
+# Intel, must be executed from the Rosetta 2 Terminal (!)
+NVM_DIR=$HOME/.nvm_x86 nvm install 14
+NVM_DIR=$HOME/.nvm_x86 nvm use 14
+npm install
+```
+
+You can verify which architecture was used for a certain existing installation (using any of the terminals):
+
+```bash
+$ cd my_arm_project
+$ npm root -g
+~/.nvm/versions/node/v14.18.1/lib/node_modules
+
+$ cd my_intel_project
+$ npm root -g
+~/.nvm_x86/versions/node/v14.18.1/lib/node_modules
+```
 
 ## Working with containers
 
