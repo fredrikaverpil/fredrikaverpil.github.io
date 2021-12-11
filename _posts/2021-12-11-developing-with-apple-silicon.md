@@ -157,14 +157,14 @@ $ npm root -g
 ## Detecting running under Apple Silicon (or ARM in general)
 
 - uname -p
-  - macos: arm, i386
-  - linux: ?, ?
+  - macos m1: arm, i386
+  - linux intel: ?, x86_64
 - uname -m
-  - macos: arm64, x86_64
-  - linux: aarch64, ?
+  - macos m1: arm64, x86_64
+  - linux intel: aarch64, ?
 - python -c "import platform; print(platform.processor())"
-  - macos: arm, i386
-  - linux: ?, ?
+  - macos m1: arm, i386
+  - linux intel: ?, x86_64
 
 ## Working with containers
 
