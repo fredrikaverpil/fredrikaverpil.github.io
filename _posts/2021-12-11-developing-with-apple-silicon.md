@@ -166,6 +166,13 @@ $ npm root -g
   - macos m1: arm, i386
   - linux intel: ?, x86_64
 
+## vscode
+
+Set up custom Rosetta terminal:
+
+- Custom icon
+- arch -x86_64 zsh
+
 ## Working with containers
 
 ## If-conditions
@@ -179,3 +186,4 @@ RUN if [ "$(uname -m)" = "aarch64" ]; then \
 ### Defining the platform
 
 docker build --platform linux/amd64 ...
+
