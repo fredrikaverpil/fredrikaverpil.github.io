@@ -201,14 +201,33 @@ This is my set up in vscode, so I can quickly create terminal tabs for either a 
 
 ## Working with containers
 
-## If-conditions
+### Build from source
+
+A pre-built binary or wheel for ARM may not exist when installing via e.g. `npm` or `pip`. You can try to install all the necessary build tools and instead try having the software built from source. This will result in staying native without any emulation. Example:
 
 ```Dockerfile
+FROM node:14-buster-slim
+
+# Install sqlite3 and build tools, so to build from source during
+# "npm install", since no precompiled build for ARM is yet available
 RUN if [ "$(uname -m)" = "aarch64" ]; then \
-        apt-get update && apt-get install -y build-essential python-dev python3-dev ; \
+    apt-get update && apt-get install -y \
+        apt-transport-https ca-certificates sqlite3 \
+        build-essential python-dev python3-dev \
+        ; \
     fi
+
+RUN npm install sqlite3
 ```
 
-### Defining the platform
+### Define the platform
 
+If the software in question simply was not written to be compiled on ARM at all, you can instead leverage Docker's `--platform` argument, which will build the container as if you were on a Linux system:
+
+```bash
 docker build --platform linux/amd64 ...
+```
+
+### Target multiple platforms
+
+Using Docker's [buildx](https://docs.docker.com/buildx/working-with-buildx/), you can build images which target multiple platforms.
