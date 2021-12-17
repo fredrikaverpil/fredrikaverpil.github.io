@@ -4,18 +4,19 @@ title: "Developing with Apple Silicon"
 tags: [macos]
 ---
 
-In software development, certain software were not designed to run on the ARM-based Apple Silicon. Thankfully, there are pretty nice workarounds. Like for the rest of this blog, this post aims to serve as a personal notebook and so I can more easily share my findings.
+In software development, certain software were not designed to run on the ARM-based Apple Silicon. Thankfully, there are workarounds. Like for the rest of this blog, this post aims to serve as a personal notebook and also for sharing this knowledge.
 
 <!--more-->
 
 ## Apple Silicon vs Intel in the Terminal
 
-WIP notes:
+MacOS ships with the Terminal.app. This runs native on Apple Silicon but allows for a customization where it would run under Rosetta 2.
 
-- softwareupdate --install-rosetta
-- Duplicate, rename to "Terminal Rosetta" and tick "Open using Rosetta". Or, from the native Apple Silicon Terminal app, run `arch -x86_64 <command>`
-- All commands in this post are executed in the normal Apple Silicon Terminal.
-- In this guide, you can look at my shell/sourcing.sh to see how I have set up the different tools...
+I have duplicated this application and renamed the duplicate into "Terminal Rosetta". Then I've ticked the "Open using Rosetta" checkbox after having hit <keyb>Cmd</keyb>+<keyb>i</keyb> on the icon. This gives me two Terminal applications. One to run native applications in and one for Intel emulation.
+
+All commands in this guide has been executed in the default and native Terminal app, unless stated otherwise.
+
+When reading this guide, it might be helpful to also be aware of my [dotfiles](https://github.com/fredrikaverpil/dotfiles) setup, and in particular the [`sourcing.sh` script](https://github.com/fredrikaverpil/dotfiles/blob/main/shell/sourcing.sh) which gets sourced by my shell.
 
 ## Installing two variants of certain software
 
@@ -46,9 +47,9 @@ Then I install all software using `brew` for Apple Silicon. But in case of issue
 
 ### Python (pyenv)
 
-I prefer managing Python versions via pyenv. Because some package won't install on Apple Silicon, I need to be able to install the Intel-verison of Python for some projects.
+I prefer managing Python versions via [pyenv](https://github.com/pyenv/pyenv). Because some package won't install on Apple Silicon, I need to be able to install the Intel-verison of Python for some projects.
 
-Pyenv itself can be installed for Apple Silicon only, but we'll need `pyenv-alias` to accomodate for Intel versions:
+Pyenv itself can be installed for Apple Silicon only, but we'll need `pyenv-alias` to accomodate for Intel versions of the Python interpreter:
 
 ```bash
 curl -s -S -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
