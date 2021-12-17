@@ -170,15 +170,13 @@ $ npm root -g
 
 ## Detecting running under Apple Silicon (or ARM in general)
 
-- uname -p
-  - macos m1: arm, i386
-  - linux intel: ?, x86_64
-- uname -m
-  - macos m1: arm64, x86_64
-  - linux intel: aarch64, ?
-- python -c "import platform; print(platform.processor())"
-  - macos m1: arm, i386
-  - linux intel: ?, x86_64
+You can check in your shell or in e.g. Python which architecture is currently in use:
+
+| Command                                                     | Apple Silicon | macOS Intel (Rosetta) | Linux ARM | Linux Intel |
+| ----------------------------------------------------------- | ------------- | --------------------- | --------- | ----------- |
+| `uname -m`                                                  | arm64         | x86_64                | aarch64   | x86_64      |
+| `uname -p`                                                  | arm           | i386                  | ?         | x86_64      |
+| `python3 -c "import platform; print(platform.processor())"` | arm           | i386                  | ?         | x86_64      |
 
 ## vscode
 
