@@ -10,9 +10,17 @@ In software development, certain software were not designed to run on the ARM-ba
 
 ## Apple Silicon vs Intel in the Terminal
 
-MacOS ships with the Terminal.app. This runs native on Apple Silicon but allows for a customization where it would run under Rosetta 2.
+MacOS ships with `Terminal.app`. This runs native on Apple Silicon but allows for a customization where it would run under Rosetta 2.
 
-I have duplicated this application and renamed the duplicate into "Terminal Rosetta". Then I've ticked the "Open using Rosetta" checkbox after having hit <keyb>Cmd</keyb>+<keyb>i</keyb> on the icon. This gives me two Terminal applications. One to run native applications in and one for Intel emulation.
+This requires installing Rosetta 2:
+
+```bash
+/usr/sbin/softwareupdate --install-rosetta
+```
+
+I have duplicated the Terminal application and renamed the duplicate into "Terminal Rosetta". Then I've ticked the "Open using Rosetta" checkbox after having hit <kbd>Cmd</kbd>+<kbd>i</kbd> on the icon. This gives me two Terminal applications. One to run native applications in and one for Intel emulation.
+
+One can also execute commands from the native terminal which are to be emulated by Rosetta by executing `arch -x86_64 <command>`.
 
 All commands in this guide has been executed in the default and native Terminal app, unless stated otherwise.
 
