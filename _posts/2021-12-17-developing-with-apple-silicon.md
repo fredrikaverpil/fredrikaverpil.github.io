@@ -81,8 +81,7 @@ Then let's install the same Python version, but for Intel. To prevent a clash wi
 
 ```bash
 brew86 install openssl readline sqlite3 xz zlib # required to build python
-VERSION_ALIAS="3.10.1_x86" \
-    pyenv86 install 3.10.1
+VERSION_ALIAS="3.10.1_x86" pyenv86 install 3.10.1
 ```
 
 You can use this crude check to verify that each respective version works as intended:
