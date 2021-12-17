@@ -172,18 +172,32 @@ $ npm root -g
 
 You can check in your shell or in e.g. Python which architecture is currently in use:
 
-| Command                                                     | Apple Silicon | macOS Intel (Rosetta) | Linux ARM | Linux Intel |
-| ----------------------------------------------------------- | ------------- | --------------------- | --------- | ----------- |
-| `uname -m`                                                  | arm64         | x86_64                | aarch64   | x86_64      |
-| `uname -p`                                                  | arm           | i386                  | ?         | x86_64      |
-| `python3 -c "import platform; print(platform.processor())"` | arm           | i386                  | ?         | x86_64      |
+| Command                                                     | Apple Silicon | macOS Intel (Rosetta 2) | Linux ARM | Linux Intel |
+| ----------------------------------------------------------- | ------------- | ----------------------- | --------- | ----------- |
+| `uname -m`                                                  | arm64         | x86_64                  | aarch64   | x86_64      |
+| `uname -p`                                                  | arm           | i386                    | ?         | x86_64      |
+| `python3 -c "import platform; print(platform.processor())"` | arm           | i386                    | ?         | x86_64      |
 
 ## vscode
 
-Set up custom Rosetta terminal:
+This is my set up in vscode, so I can quickly create terminal tabs for either a native or Rosetta 2 experience:
 
-- Custom icon
-- arch -x86_64 zsh
+```json
+{
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "zsh",
+      "color": "terminal.ansiGreen"
+    },
+    "zsh-rosetta": {
+      "path": "arch",
+      "color": "terminal.ansiRed",
+      "args": ["-x86_64", "zsh"]
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "zsh"
+}
+```
 
 ## Working with containers
 
