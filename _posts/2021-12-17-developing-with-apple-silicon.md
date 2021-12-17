@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Developing with Apple Silicon"
-tags: [macos]
+tags: [osx]
 ---
 
 In software development, certain software were not designed to run on the ARM-based Apple Silicon. Thankfully, there are workarounds. Like for the rest of this blog, this post aims to serve as a personal notebook and also for sharing this knowledge.
