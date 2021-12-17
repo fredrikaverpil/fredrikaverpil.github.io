@@ -123,7 +123,21 @@ This will result in two directories in the home folder:
 - `~/.nvm` - Apple Silicon
 - `~/.nvm_x86` - Intel
 
-Here, I would've liked to differentiate using `npm` and `npm86`. But I figured out a way to achieve this. Therefore I am running `nvm` like this, depending on whether you want nvm/npm/node for either ARM or Intel:
+As part of the nvm installation, you need to source the `nvm.sh` in your `.bashrc` or `.zshrc`. Here's a snippet from my dotfiles, which will load the right one, depending on which terminal app (native vs Rosetta) you use:
+
+```bash
+# Node version manager
+if [ `uname -m | grep arm64` ] && [ -d /opt/homebrew/opt/nvm ]; then
+    # brew-installed nvm, macOS arm64
+    [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+    [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+elif [ `uname -m | grep x86_64` ] && [ -d /usr/local/opt/nvm ]; then
+    # brew-installed nvm, macOS x86_64
+    [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+    [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+```
+
+Ideally, I would've liked to differentiate the two variants of nvm using executables `nvm` and `nvm86`. But I haven't figured out a way to achieve this. Therefore I am running `nvm` like this, depending on whether you want nvm/npm/node for either ARM or Intel:
 
 - `nvm` in the default terminal
 - `NVM_DIR=$HOME/.nvm_x86 nvm` in the Rosetta 2 terminal
@@ -186,4 +200,3 @@ RUN if [ "$(uname -m)" = "aarch64" ]; then \
 ### Defining the platform
 
 docker build --platform linux/amd64 ...
-
