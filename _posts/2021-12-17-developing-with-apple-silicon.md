@@ -184,8 +184,9 @@ You can check in your shell or in e.g. Python which architecture is currently in
 | ----------------------------------------------------------- | ------------------- | ----------------------- | --------- | ----------- |
 | `uname -m`                                                  | arm64               | x86_64                  | aarch64   | x86_64      |
 | `uname -p`                                                  | arm                 | i386                    | aarch64   | x86_64      |
-| `python3 -c "import platform; print(platform.processor())"` | arm                 | i386                    | aarch64   | x86_64      |
 | `arch`                                                      | arm64               | i386                    | N/A       | N/A         |
+| `python3 -c "import platform; print(platform.processor())"` | arm                 | i386                    | aarch64   | x86_64      |
+| `node -p process.arch`                                      | arm64               | x64                     | ?         | ?           |
 
 ## vscode
 
