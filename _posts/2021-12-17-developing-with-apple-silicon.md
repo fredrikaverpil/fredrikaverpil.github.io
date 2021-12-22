@@ -180,12 +180,12 @@ $ npm root -g
 
 You can check in your shell or in e.g. Python which architecture is currently in use:
 
-| Command                                                     | Apple Silicon | macOS Intel (Rosetta 2) | Linux ARM | Linux Intel |
-| ----------------------------------------------------------- | ------------- | ----------------------- | --------- | ----------- |
-| `uname -m`                                                  | arm64         | x86_64                  | aarch64   | x86_64      |
-| `uname -p`                                                  | arm           | i386                    | aarch64   | x86_64      |
-| `python3 -c "import platform; print(platform.processor())"` | arm           | i386                    | aarch64   | x86_64      |
-| `arch`                                                      | arm64         | i386                    | N/A       | N/A         |
+| Command                                                     | macOS Apple Silicon | macOS Intel (Rosetta 2) | Linux ARM | Linux Intel |
+| ----------------------------------------------------------- | ------------------- | ----------------------- | --------- | ----------- |
+| `uname -m`                                                  | arm64               | x86_64                  | aarch64   | x86_64      |
+| `uname -p`                                                  | arm                 | i386                    | aarch64   | x86_64      |
+| `python3 -c "import platform; print(platform.processor())"` | arm                 | i386                    | aarch64   | x86_64      |
+| `arch`                                                      | arm64               | i386                    | N/A       | N/A         |
 
 ## vscode
 
