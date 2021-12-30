@@ -75,7 +75,7 @@ Then I install all software using `brew` for Apple Silicon. But in case of issue
 
 ### <a name="pyenv"></a> Python (pyenv)
 
-I prefer managing Python versions via [pyenv](https://github.com/pyenv/pyenv). Because some package won't install on Apple Silicon, I need to be able to install the Intel-verison of Python for some projects.
+I prefer managing Python versions via [pyenv](https://github.com/pyenv/pyenv). Because some packages won't install on Apple Silicon, I need to be able to install the Intel-verison of Python for some projects.
 
 Pyenv itself can be installed for Apple Silicon only, but we'll need `pyenv-alias` to accomodate for Intel versions of Python interpreter installations:
 
@@ -155,7 +155,7 @@ Here I don't have any suggestions/examples for aliases, but instead I've gone al
 - `node86`
 - `npm86`
 
-And once those are all on `$PATH`, you can use `nvm`, `node` and `npm` for native installations and `nvm86`, `node86` and `npm86` for Intel installations.
+And once those are all on `$PATH`, you can use commands `nvm`, `node` and `npm` for native installations and `nvm86`, `node86` and `npm86` for Intel installations.
 
 ## <a name="detection"></a> Detecting running under Apple Silicon (or ARM in general)
 
