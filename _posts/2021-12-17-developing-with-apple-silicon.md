@@ -49,7 +49,7 @@ This describes how to install the native `app` and the Intel `app86` counterpart
 
 This can be achieved by creating shell aliases but also shims for the Intel variants. I prefer the shell script shim approach, and I have mine publicly available in the [shell/bin](https://github.com/fredrikaverpil/dotfiles/blob/main/shell/bin/) location of my dotfiles.
 
-If you go for the shim approach, make sure you make your shims available on `$PATH`.
+If you go for the shim approach, make sure you make your shims executable and available on `$PATH`.
 
 Feel free to copy and/or contribute with your improvements!
 
