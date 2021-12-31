@@ -17,7 +17,7 @@ In software development, certain software were not designed to run on the ARM-ba
   - [Node (nvm, npm)](#nvm)
 - [Detecting running under Apple Silicon (or ARM in general)](#detection)
 - [Visual Studio Code terminals](#vscode)
-- [Working with containers](#containers)
+- [Docker containers](#containers)
   - [Build from source](#containers-source)
   - [Define the platform](#containers-platform)
   - [Target multiple platforms with buildx](#containers-buildx)
@@ -236,11 +236,23 @@ This is my set up in vscode, so I can quickly create terminal tabs for either a 
 }
 ```
 
-## <a name="containers"></a> Working with containers
+## <a name="containers"></a> Docker containers
+
+I've come across a few cases where I e.g. haven't been able to build a Docker image which was not compiled for ARM. Thankfully, there are workarounds for this too.
 
 ### <a name="containers-source"></a> Build from source
 
-A pre-built binary or wheel for ARM may not exist when installing via e.g. `npm` or `pip`. You can try to install all the necessary build tools and instead try having the software built from source. This will result in staying native without any emulation. Example:
+A pre-built binary or wheel for ARM may not exist when installing via e.g. `npm` or `pip`. You can try to install all the necessary build tools and instead try having the software built from source. This will result in staying native without any emulation.
+
+As an example, this will fail as of writing this blog post on my M1 mac:
+
+```Dockerfile
+FROM node:14-buster-slim
+
+RUN npm install sqlite3
+```
+
+...and this will work fine, as [sqlite3](https://www.npmjs.com/package/sqlite3) will build from source:
 
 ```Dockerfile
 FROM node:14-buster-slim
@@ -259,12 +271,13 @@ RUN npm install sqlite3
 
 ### <a name="containers-platform"></a> Define the platform
 
-If the software in question simply was not written to be compiled on ARM at all, you can instead leverage Docker's `--platform` argument, which will run/build the container as if you were on a Linux system:
+If the software in question simply was not written to be compiled on ARM at all, you can instead leverage Docker's `--platform` argument, which will build the container as if you were on a Linux system:
 
 ```bash
-docker run --platform linux/amd64 ...
 docker build --platform linux/amd64 ...
 ```
+
+Please note that the `--platform` argument is also available for `docker run`.
 
 ### <a name="containers-buildx"></a> Target multiple platforms with buildx
 
