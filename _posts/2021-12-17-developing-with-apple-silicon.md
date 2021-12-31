@@ -259,9 +259,10 @@ RUN npm install sqlite3
 
 ### <a name="containers-platform"></a> Define the platform
 
-If the software in question simply was not written to be compiled on ARM at all, you can instead leverage Docker's `--platform` argument, which will build the container as if you were on a Linux system:
+If the software in question simply was not written to be compiled on ARM at all, you can instead leverage Docker's `--platform` argument, which will run/build the container as if you were on a Linux system:
 
 ```bash
+docker run --platform linux/amd64 ...
 docker build --platform linux/amd64 ...
 ```
 
