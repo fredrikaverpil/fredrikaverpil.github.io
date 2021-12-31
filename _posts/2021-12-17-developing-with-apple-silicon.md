@@ -47,7 +47,7 @@ Note: all commands in this guide has been executed in the default and native Ter
 
 This describes how to install the native `app` and the Intel `app86` counterpart of certain software. As an example, I have `brew` and `brew86` set up like this.
 
-This can be achieved by creating shell aliases but also shims for the Intel variants. I prefer the shell script shim approach, and I have mine publicly available in the [shell/bin](https://github.com/fredrikaverpil/dotfiles/blob/main/shell/bin/) location of my dotfiles.
+This can be achieved by creating shell aliases but also small shell "shim" scripts for the Intel variants. I prefer the shell script shim approach, and I have mine publicly available in the [shell/bin](https://github.com/fredrikaverpil/dotfiles/blob/main/shell/bin/) location of my dotfiles.
 
 If you go for the shim approach, make sure you make your shims executable and available on `$PATH`.
 
@@ -150,10 +150,12 @@ Here I don't have any suggestions/examples for aliases, but instead I've gone al
 - `nvm`
 - `node`
 - `npm`
+- `npx`
 - `nvm86_shim`
 - `nvm86`
 - `node86`
 - `npm86`
+- `npx86`
 
 And once those are all on `$PATH`, you can use commands `nvm`, `node` and `npm` for native installations and `nvm86`, `node86` and `npm86` for Intel installations.
 
