@@ -157,7 +157,7 @@ brew install nvm
 NVM_DIR=$HOME/.nvm_x86 brew86 install nvm
 ```
 
-But instead of following the recommended installation instructions for bash completion and sourcing of `vnm.sh`, we'll take a different approach...
+But instead of following the recommended installation instructions for bash completion and sourcing of `nvm.sh`, we'll take a different approach...
 
 The bash completion can be added to e.g. your `.zshrc`, `.bashrc` or similar, and since this will work the same for both native and Intel, we can pick the native installation for this:
 
