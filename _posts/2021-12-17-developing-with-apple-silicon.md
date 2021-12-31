@@ -42,6 +42,8 @@ This enables the ability to run terminal commands using the Rosetta 2 Intel emul
 arch -x86_64 <command>
 ```
 
+You can read more in Apple's [official docs](https://support.apple.com/en-us/HT211861).
+
 ## <a name="terminals"></a> Two terminals; one native and one for Intel emulation
 
 I have duplicated my Terminal application of choice (<kbd>Cmd</kbd>+<kbd>d</kbd>) and renamed the duplicate "Terminal Rosetta". Then I've ticked the "Open using Rosetta" checkbox after having hit <kbd>Cmd</kbd>+<kbd>i</kbd> on its icon. This gives me one Terminal to run for native applications and one for Intel emulation.
