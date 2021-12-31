@@ -8,6 +8,7 @@ In software development, certain software were not designed to run on the ARM-ba
 
 <!--more-->
 
+- [Foreword](#foreword)
 - [Rosetta 2](#rosetta2)
 - [Two terminals; one native and one for Intel emulation](#terminals)
 - [Installing two variants of certain software](#variants)
@@ -21,9 +22,15 @@ In software development, certain software were not designed to run on the ARM-ba
   - [Define the platform](#containers-platform)
   - [Target multiple platforms with buildx](#containers-buildx)
 
+## <a name="foreword"></a> Foreword
+
+When I started looking into solutions to my M1 challenges, a huge chunk was solved when I had read [Ekaterina Nikonova](https://twitter.com/EVNikonova)'s excellent blog post on [Python virtual environments with pyenv on Apple Silicon](http://sixty-north.com/blog/pyenv-apple-silicon.html).
+
+This blog post is heavily influenced by her approach of setting up the `app` and `app86` versions for apps which might need both native and emulated treatment.
+
 ## <a name="rosetta2"></a> Rosetta 2
 
-To emulate Intel, first install Rosetta 2:
+To be able to emulate Intel on M1 macs, first install Rosetta 2:
 
 ```bash
 /usr/sbin/softwareupdate --install-rosetta
@@ -41,19 +48,23 @@ I have duplicated my Terminal application of choice (<kbd>Cmd</kbd>+<kbd>d</kbd>
 
 ![]({{ site.url }}/blog/assets/applesilicon/terminals.png)
 
+This is not how I usually work, as I prefer to set up commands which can run in the native terminal and perform emulation. But I figured, I'd mention this anyways.
+
 Note: all commands in this guide has been executed in the default and native Terminal app, unless stated otherwise.
 
 ## <a name="variants"></a> Installing two variants of certain software
 
-This describes how to install the native `app` and the Intel `app86` counterpart of certain software. As an example, I have `brew` and `brew86` set up like this.
+This describes how to install the native `app` and the Intel `app86` counterpart of certain software. As an example, I have `brew` and `brew86` set up, just like described in [Ekaterina](https://twitter.com/EVNikonova)'s [post](http://sixty-north.com/blog/pyenv-apple-silicon.html).
 
 This can be achieved by creating shell aliases but also small shell "shim" scripts for the Intel variants. I prefer the shell script shim approach, and I have mine publicly available in the [shell/bin](https://github.com/fredrikaverpil/dotfiles/blob/main/shell/bin/) location of my dotfiles.
 
-If you go for the shim approach, make sure you make your shims executable and available on `$PATH`.
+If you go for the shell script shim approach, make sure you make your shims executable and available on `$PATH`.
 
 Feel free to copy and/or contribute with your improvements!
 
 ### <a name="homebrew"></a> Homebrew
+
+Begin by installing native and Intel version of Homebrew:
 
 ```bash
 # Install Homebrew for Apple Silicon
@@ -144,20 +155,51 @@ brew install nvm
 NVM_DIR=$HOME/.nvm_x86 brew86 install nvm
 ```
 
-Here I don't have any suggestions/examples for aliases, but instead I've gone all in on [shell script shims](https://github.com/fredrikaverpil/dotfiles/blob/main/shell/bin/), because of the way how `nvm.sh` must be sourced prior to using `nvm`, `node` and `npm`. From my shims, you will need:
+But instead of following the recommended installation instructions for bash completion and sourcing of `vnm.sh`, we'll take a different approach...
+
+The bash completion can be added to e.g. your `.zshrc`, `.bashrc` or similar, and since this will work the same for both native and Intel, we can pick the native installation for this:
+
+```bash
+if [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ]; then
+  . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
+fi
+```
+
+But for the part where you normally add sourcing of the `nvm.sh` script to e.g. `.zshrc` or `.bashrc`, shims will be setup instead.
+
+First, we set up two main shims:
 
 - `nvm_shim`
+- `nvm86_shim`
+
+Then we set up the rest of the command shims, which will call the main ones:
+
 - `nvm`
 - `node`
 - `npm`
 - `npx`
-- `nvm86_shim`
 - `nvm86`
 - `node86`
 - `npm86`
 - `npx86`
 
-And once those are all on `$PATH`, you can use commands `nvm`, `node` and `npm` for native installations and `nvm86`, `node86` and `npm86` for Intel installations.
+You can find the contents for these shims in the [shell/bin](https://github.com/fredrikaverpil/dotfiles/blob/main/shell/bin/) folder of my dotfiles.
+
+Once those are all on `$PATH`, you can use the command shims for native installations Intel installations. Example:
+
+```bash
+# Native
+nvm install 14
+nvm use 14
+npm init
+npm install express
+
+# Intel
+nvm86 install 14
+nvm86 use 14
+npm86 init
+npm86 install express
+```
 
 ## <a name="detection"></a> Detecting running under Apple Silicon (or ARM in general)
 
