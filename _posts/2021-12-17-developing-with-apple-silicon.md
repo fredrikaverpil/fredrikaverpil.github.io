@@ -107,7 +107,7 @@ pyenv install 3.10.1
 Then we create another alias (or [shim](https://github.com/fredrikaverpil/dotfiles/blob/main/shell/bin/pyenv86)) to make `pyenv86` available:
 
 ```bash
-alias pyenv86='CFLAGS="-I$(brew86 --prefix openssl)/include" LDFLAGS="-L$(brew86 --prefix openssl)/lib" arch -x86_64 pyenv "$@"'
+alias pyenv86='CFLAGS="-I$(brew86 --prefix openssl)/include" LDFLAGS="-L$(brew86 --prefix openssl)/lib" arch -x86_64 pyenv'
 ```
 
 Then let's install the same Python version, but for Intel. To prevent a clash with the already intalled `3.10.1`, we'll install it using `pyenv-alias` as `3.10.1_x86`:
@@ -147,61 +147,35 @@ I usually create "x86" virtual environments, to be used in vscode, for some proj
 
 ### <a name="nvm"></a> Node (nvm, npm)
 
-First, let's install nvm for the respective architectures via Homebrew:
+First, let's install nvm. I prefer to install via brew, but you can also use the install script, described in the [official docs](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 ```bash
-# ARM
 brew install nvm
-
-# Intel
-NVM_DIR=$HOME/.nvm_x86 brew86 install nvm
 ```
 
-But instead of following the recommended installation instructions for bash completion and sourcing of `nvm.sh`, we'll take a different approach...
-
-The bash completion can be added to e.g. your `.zshrc`, `.bashrc` or similar, and since this will work the same for both native and Intel, we can pick the native installation for this:
+Then add sourcing and environment variables to your `.bashrc`, `.zshrc` or similar:
 
 ```bash
-if [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ]; then
-  . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
+if [ "$(uname -m)" = "arm64" ]; then
+    export NVM_DIR="$HOME/.nvm"
+elif [ "$(uname -m)" = "x86_64" ]; then
+    export NVM_DIR="$HOME/.nvm_x86"
 fi
+
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 ```
 
-But for the part where you normally add sourcing of the `nvm.sh` script to e.g. `.zshrc` or `.bashrc`, shims will be setup instead.
-
-First, we set up two main shims:
-
-- `nvm_shim`
-- `nvm86_shim`
-
-Then we set up the rest of the command shims, which will call the main ones:
-
-- `nvm`
-- `node`
-- `npm`
-- `npx`
-- `nvm86`
-- `node86`
-- `npm86`
-- `npx86`
-
-You can find the contents for these shims in the [shell/bin](https://github.com/fredrikaverpil/dotfiles/blob/main/shell/bin/) folder of my dotfiles.
-
-Once those are all on `$PATH`, you can use the command shims for native installations Intel installations. Example:
+You can now use all nvm/node/npm commands as expected for native Apple Silicon. If you hit a certain project/package where there is no ARM support, you can drop to a Rosetta-emulated shell, and run all commands from there instead, e.g.:
 
 ```bash
-# Native
-nvm install 14
-nvm use 14
-npm init
-npm install express
-
-# Intel
-nvm86 install 14
-nvm86 use 14
-npm86 init
-npm86 install express
+arch -x86_64 /bin/zsh
+cd problematic-project
+nvm use
+npm install
 ```
+
+You can always check if you are in native terminal or in the emulated one using the `arch` command. You can also check with `nvm which`, which Node version is active.
 
 ## <a name="detection"></a> Detecting running under Apple Silicon (or ARM in general)
 
