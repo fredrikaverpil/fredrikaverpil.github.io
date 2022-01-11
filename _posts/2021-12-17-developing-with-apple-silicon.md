@@ -79,7 +79,7 @@ arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebr
 After completing the installation, the `brew` command will be available which will install native Apple Silicon software. We can create a new `brew86` command which will install Rosetta 2-emulated Intel-compiled software. You might be able create an alias:
 
 ```bash
-alias brew86='arch -x86_64 /usr/local/bin/brew "$@"'
+alias brew86='arch -x86_64 /usr/local/bin/brew'
 ```
 
 But, like I mentioned previously, I prefer the shim approach. See my `brew86` shim [here](https://github.com/fredrikaverpil/dotfiles/blob/main/shell/bin/brew86).
@@ -95,6 +95,16 @@ Pyenv itself can be installed for Apple Silicon only, but we'll need `pyenv-alia
 ```bash
 curl -s -S -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
 git clone https://github.com/s1341/pyenv-alias.git ~/.pyenv/plugins/pyenv-alias
+```
+
+At the time of writing this, and ccording to the installation, one must add a couple of things to their `~/.bashrc`, `~/.zshrc` or similar, so to make the `pyenv` command fly and have it intercept the `python` command:
+
+```bash
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
 ```
 
 After having completed the pyenv installation, we can go ahead and install Python for Apple Silicon first:
@@ -136,7 +146,6 @@ python -m venv .venv
 source .venv/bin/activate
 
 # or for Intel...
-
 cd my_intel_project
 pyenv local 3.10.0_x86
 python -m venv .venv
@@ -252,6 +261,17 @@ docker build --platform linux/amd64 ...
 ```
 
 Please note that the `--platform` argument is also available for `docker run`.
+
+The `platform` key can also be added to a service in docker compose:
+
+```yaml
+version: "3"
+services:
+  myapp:
+    build: .
+    image: myapp
+    platform: linux/amd64
+```
 
 ### <a name="containers-buildx"></a> Target multiple platforms with buildx
 
