@@ -10,6 +10,14 @@ Anyways, some handy git tricks in this post.
 
 <!--more-->
 
+## Undoing, reverting
+
+If you all of a sudden want to revert back to where you were at 10 minutes ago, given you have made commits along the way:
+
+```bash
+git reset --hard master@{"10 minutes ago"}
+```
+
 ## Branch management
 
 When you've accidentaly screwed up your local `master`, make it good again by resetting it into whatever is in `origin/master`:
