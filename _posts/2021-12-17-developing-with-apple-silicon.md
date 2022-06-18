@@ -28,6 +28,15 @@ When I started looking into solutions to my M1 challenges, a huge chunk was solv
 
 This blog post is heavily influenced by her approach of setting up the `app` and `app86` versions for apps which might need both native and emulated treatment.
 
+```bash
+# install via poetry
+poetry install
+
+# re-install grpcio by building from source
+pip install --no-binary :all: grpcio --ignore-installed
+pip install --no-binary :all: grpcio-tools --ignore-installed
+```
+
 ## <a name="rosetta2"></a> Rosetta 2
 
 To be able to emulate Intel on M1 macs, first install Rosetta 2:
