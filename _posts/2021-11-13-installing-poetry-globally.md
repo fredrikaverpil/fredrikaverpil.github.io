@@ -37,6 +37,9 @@ $ pipx install --suffix=@master --force git+https://github.com/python-poetry/poe
 # Install from develop branch as poetry@develop
 $ pipx install --suffix=@develop --force git+https://github.com/python-poetry/poetry.git@develop
 
+# Install from release/tag 1.2.0rc1
+$ pipx install --suffix=@1.2.0rc1 --force git+https://github.com/python-poetry/poetry.git#1.2.0rc1
+
 # Install from PR #3967 as poetry@3967
 $ pipx install --suffix=@3967 --force git+https://github.com/python-poetry/poetry.git@refs/pull/3967/head
 
