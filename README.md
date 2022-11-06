@@ -20,7 +20,7 @@ echo "source 'https://rubygems.org'" > Gemfile
 echo "gem 'github-pages', group: :jekyll_plugins" >> Gemfile
 apt-get install ruby ruby-dev
 bundle config set --local path 'vendor/bundle'
-bundle install
+bundle install --path vendor/bundle
 ```
 
 ### Serve website
