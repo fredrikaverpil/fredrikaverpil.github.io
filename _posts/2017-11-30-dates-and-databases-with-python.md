@@ -79,6 +79,11 @@ In the previous code block, I'm hardcoding the `timezone` variable. You may want
 2017-11-30 09:01:19.676817+01:00
 ```
 
+### Warning: datetime's timedelta does not consider DST
+
+This was added on 2022-11-06.
+
+When using `datetime.timedelta` to add or subtract time, it does not consider daylight savings. I created a gist [here](https://gist.github.com/fredrikaverpil/0cde09c624824ebafe0cb94a6cca9e1e) to illustrate the problem.
 
 ### Closing comments
 
