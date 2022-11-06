@@ -6,19 +6,22 @@ This is the source code of [my personal blog](https://fredrikaverpil.github.io),
 
 Full instructions [here](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/#step-1-create-a-local-repository-for-your-jekyll-site).
 
-### Install bundler
+### Install
+
+```bash
+# Linux
+apt-get install ruby ruby-dev
+
+# macOS
+brew install ruby
+```
 
 ```bash
 gem install bundler  # requires Ruby 2.x.x.
 ```
 
-### Set up Gemfile and install
-
 ```bash
-cd <GITHUB_PAGES_REPO>
-echo "source 'https://rubygems.org'" > Gemfile
-echo "gem 'github-pages', group: :jekyll_plugins" >> Gemfile
-apt-get install ruby ruby-dev
+# Install dependencies
 bundle config set --local path 'vendor/bundle'
 bundle install --path vendor/bundle
 ```
@@ -26,7 +29,7 @@ bundle install --path vendor/bundle
 ### Serve website
 
 ```bash
-bundle exec jekyll serve
+bundle exec jekyll serve --watch
 ```
 
 ### Visit website
