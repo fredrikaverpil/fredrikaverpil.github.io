@@ -1,0 +1,59 @@
+baseURL: "https://fredrikaverpil.github.io"
+languageCode: en-us
+title: Fredrik Averpil
+theme: PaperMod
+frontmatter:
+  date:
+    - date
+    - created
+  lastmod:
+    - updated
+    - ":fileModTime"
+menu:
+  main:
+    - name: about me
+      url: /about/
+    - name: cheat-sheets
+      url: /cheat-sheets/
+    - name: blog
+      url: /blog/
+    - name: search
+      url: /search/
+params:
+  defaultTheme: dark
+  disableThemeToggle: false
+  profileMode:
+    enabled: true
+    # title: "Hey there 👋" # optional default will be site title
+    subtitle: "Software engineer ❤️ [Python](http://python.org/)"
+    imageUrl: "memoji.png" # optional
+    # imageTitle: "<title of image as alt>" # optional
+    imageWidth: 120 # custom size
+    imageHeight: 120 # custom size
+    # buttons:
+    #   - name: Archive
+    #     url: "/archive"
+    #   - name: Github
+    #     url: "https://github.com/"
+  socialIcons: # optional
+    - name: "GitHub"
+      url: "https://github.com/fredrikaverpil"
+    - name: "Mastodon"
+      url: "https://fosstodon.org/web/@fredrikaverpil"
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/fredrik/"
+    - name: "RSS"
+      url: "index.xml"
+  # ShowToc: true
+  # TocOpen: true
+  editPost:
+    URL: "https://github.com/fredrikaverpil/fredrikaverpil.github.io/tree/main/obsidian/"
+    Text: "Suggest Changes"
+    appendFilePath: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
