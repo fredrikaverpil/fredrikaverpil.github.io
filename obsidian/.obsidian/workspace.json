@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/posts/2022-11-13.md",
+                "file": "blog/2022-11-13.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/posts/2022-11-13.md",
+                "file": "blog/2022-11-13.md",
                 "mode": "source",
                 "source": false
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/posts/2022-11-13.md",
+                "file": "blog/2022-11-13.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/posts/2022-11-13.md",
+                "file": "blog/2022-11-13.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/posts/2022-11-13.md"
+                "file": "blog/2022-11-13.md"
               }
             }
           },
@@ -200,7 +200,7 @@
   "active": "54d19d115e322ad1",
   "lastOpenFiles": [
     "blog/templates/post.md",
-    "blog/posts/2022-11-13.md",
+    "blog/2022-11-13.md",
     "cheat-sheets/tech/boto3.md",
     "blog/2022-11-12.md",
     "blog/te.md",
