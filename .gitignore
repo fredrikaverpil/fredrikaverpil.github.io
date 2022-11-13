@@ -58,3 +58,4 @@ hugo/layouts
 hugo/public
 hugo/resources
 hugo/static
+hugo/.hugo_build.lock
