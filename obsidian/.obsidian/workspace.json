@@ -1,0 +1,213 @@
+{
+  "main": {
+    "id": "ab0c305cb0cf0543",
+    "type": "split",
+    "children": [
+      {
+        "id": "ed95157aa9b1087b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f3879c96dab60bf4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cheat-sheets/tech/git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6abebdaccc2fee3c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cheat-sheets/tech/boto3.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "31ade8a13e7ca122",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/posts/2022-11-13.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "54d19d115e322ad1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/posts/2022-11-13.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "76860d829128c302",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ead83102ad5470cf",
+    "type": "split",
+    "children": [
+      {
+        "id": "f01a80e45c57389f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e9edd0f7b2d1a082",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "38c112d6c34f23e5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3fb329251a5c9ef0",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 215.5
+  },
+  "right": {
+    "id": "8149a2e54b8b37f8",
+    "type": "split",
+    "children": [
+      {
+        "id": "489c2eb1f0945ae4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "70868a2036497910",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "blog/posts/2022-11-13.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1d27af86f16f9cda",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "blog/posts/2022-11-13.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e54ea1feee1b4b30",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "3f5adcdb2b635919",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "blog/posts/2022-11-13.md"
+              }
+            }
+          },
+          {
+            "id": "baf19f0901e7bd61",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "4f23f011e4340356",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 340.5
+  },
+  "active": "54d19d115e322ad1",
+  "lastOpenFiles": [
+    "blog/templates/post.md",
+    "blog/posts/2022-11-13.md",
+    "cheat-sheets/tech/boto3.md",
+    "blog/2022-11-12.md",
+    "blog/te.md",
+    "2022-11-12.md",
+    "Untitled.md",
+    "tech/Untitled.md",
+    "cheat-sheets/tech/jupyter.md",
+    "cheat-sheets/tech/kubernetes.md"
+  ]
+}
