@@ -1,5 +1,6 @@
 import argparse
 import re
+import shutil
 import sys
 from pathlib import Path
 
@@ -80,6 +81,7 @@ def gather(obsidian_vault: Path) -> list[ObsidianPage]:
 def rm_tree(pth: Path):
     if not pth.exists():
         return
+    logger.info(f"Cleaning up (removing) {pth}")
     pth = Path(pth)
     for child in pth.glob("*"):
         if child.is_file():
@@ -102,6 +104,13 @@ def write(src: Path, dst: Path, obsidian_pages: list[ObsidianPage]):
             logger.info(f"Wrote {target}")
 
 
+def copy_static_files(src: Path, dst: Path):
+    rm_tree(dst)
+    logger.info(f"Copying static files into {dst}...")
+    shutil.copytree(src=src, dst=dst)
+    logger.info("Done copying static files.")
+
+
 def main():
     args = parse_args()
     obsidian_pages = gather(args.obsidian_vault)
@@ -110,6 +119,10 @@ def main():
     write(
         src=args.obsidian_vault, dst=args.hugo_contents, obsidian_pages=obsidian_pages
     )
+    copy_static_files(
+        src=args.obsidian_vault / "static/", dst=args.hugo_contents.parent / "static"
+    )
+    logger.info("Done.")
 
 
 if __name__ == "__main__":

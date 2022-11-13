@@ -5,7 +5,7 @@ updated: 2022-11-13
 draft: false
 ---
 
-![Profile photo](/about/fredrik.jpg)
+![Profile photo][/static/fredrik.jpg]
 
 I am a passionate, enthusiastic and professional software developer (since 2012), continuously striving to evolve with Python as the primary language of choice — and preferably building scalable and reliable solutions in public cloud environments such as GCP, AWS or Azure.
 
