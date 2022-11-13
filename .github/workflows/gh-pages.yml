@@ -25,7 +25,20 @@ jobs:
         run: git clone https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
         working-directory: ./hugo
 
-      - name: Build
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          cache: "pip"
+
+      - name: Install Python requirements
+        run: pip install -r requirements.txt
+
+      - name: Create hugo/contents folder
+
+      - name: Convert Obsidian to Hugo
+        run: python -m obsidian_to_hugo --obsidian-vault-dir ./obsidian --hugo-content-dir ./hugo/content
+
+      - name: Build static Hugo site
         run: hugo --minify
         working-directory: ./hugo
 
