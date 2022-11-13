@@ -19,6 +19,18 @@ git clone https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
 echo theme = \"ananke\" >> config.toml
 ```
 
+Now update `.gitignore` with the following, so git won't track generated files:
+
+```
+# Hugo
+hugo/archetypes
+hugo/data
+hugo/layouts
+hugo/public
+hugo/resources
+hugo/static
+```
+
 ```bash
 cd hugo
 
@@ -31,7 +43,6 @@ hugo
 # build static pages (include drafts)
 hugo -D
 ```
-
 
 ## Hugo installation
 

@@ -50,3 +50,11 @@ vendor
 
 # Custom domain, managed by Github
 CNAME
+
+# Hugo
+hugo/archetypes
+hugo/data
+hugo/layouts
+hugo/public
+hugo/resources
+hugo/static
