@@ -22,7 +22,7 @@ jobs:
           # extended: true
 
       - name: Get theme (temporary during WIP)
-        run: git clone https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+        run: git clone https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
         working-directory: ./hugo
 
       - name: Setup Python
@@ -33,7 +33,7 @@ jobs:
       - name: Install Python requirements
         run: pip install -r requirements.txt
 
-      - name: Create hugo/contents folder
+      - run: mkdir hugo/content
 
       - name: Convert Obsidian to Hugo
         run: python -m obsidian_to_hugo --obsidian-vault-dir ./obsidian --hugo-content-dir ./hugo/content
