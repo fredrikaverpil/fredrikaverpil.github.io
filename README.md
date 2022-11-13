@@ -43,11 +43,3 @@ hugo
 # build static pages (include drafts)
 hugo -D
 ```
-
-## Hugo installation
-
-- Instructions: https://gohugo.io/installation
-
-```bash
-brew install hugo
-```
