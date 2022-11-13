@@ -36,7 +36,7 @@ jobs:
       - run: mkdir hugo/content
 
       - name: Convert Obsidian to Hugo
-        run: python -m obsidian_to_hugo --obsidian-vault-dir ./obsidian --hugo-content-dir ./hugo/content
+        run: python export.py
 
       - name: Build static Hugo site
         run: hugo --minify
