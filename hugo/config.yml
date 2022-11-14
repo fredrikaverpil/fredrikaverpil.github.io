@@ -1,7 +1,7 @@
 baseURL: "https://fredrikaverpil.github.io"
 languageCode: en-us
 title: Fredrik Averpil
-theme: PaperModX
+theme: PaperMod
 frontmatter:
   date:
     - date
@@ -48,7 +48,6 @@ params:
       url: "index.xml"
   # ShowToc: true
   # TocOpen: true
-  TocSide: "right"
   editPost:
     URL: "https://github.com/fredrikaverpil/fredrikaverpil.github.io/tree/main/obsidian/"
     Text: "Suggest Changes"
@@ -56,7 +55,9 @@ params:
   ShowPostNavLinks: true
 
   # PaperModX
+  TocSide: "right"
   ShowCodeCopyButtons: true
+
 outputs:
   home:
     - HTML
