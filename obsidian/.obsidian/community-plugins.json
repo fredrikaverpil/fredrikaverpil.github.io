@@ -1,5 +1,7 @@
 [
   "table-editor-obsidian",
   "obsidian-jupyter",
-  "obsidian-gist"
+  "obsidian-gist",
+  "templater-obsidian",
+  "update-time-on-edit"
 ]
