@@ -1,7 +1,7 @@
 baseURL: "https://fredrikaverpil.github.io"
 languageCode: en-us
 title: Fredrik Averpil
-theme: PaperMod
+theme: PaperModX
 frontmatter:
   date:
     - date
@@ -11,14 +11,16 @@ frontmatter:
     - ":fileModTime"
 menu:
   main:
-    - name: about me
-      url: /about/
     - name: cheat-sheets
       url: /cheat-sheets/
     - name: blog
       url: /blog/
+    - name: tags
+      url: /tags/
     - name: search
       url: /search/
+taxonomies:
+  tag: tags
 params:
   defaultTheme: dark
   disableThemeToggle: false
@@ -26,7 +28,7 @@ params:
     enabled: true
     # title: "Hey there 👋" # optional default will be site title
     subtitle: "Software engineer ❤️ [Python](http://python.org/)"
-    imageUrl: "memoji.png" # optional
+    imageUrl: "static/memoji.png" # optional
     # imageTitle: "<title of image as alt>" # optional
     imageWidth: 120 # custom size
     imageHeight: 120 # custom size
@@ -46,18 +48,20 @@ params:
       url: "index.xml"
   # ShowToc: true
   # TocOpen: true
+  TocSide: "right"
   editPost:
     URL: "https://github.com/fredrikaverpil/fredrikaverpil.github.io/tree/main/obsidian/"
     Text: "Suggest Changes"
     appendFilePath: true
   ShowPostNavLinks: true
+
+  # PaperModX
   ShowCodeCopyButtons: true
 outputs:
   home:
     - HTML
     - RSS
     - JSON
-
 module:
   mounts:
     - source: "static"
