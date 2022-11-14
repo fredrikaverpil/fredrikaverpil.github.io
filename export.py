@@ -74,6 +74,8 @@ def gather(obsidian_vault: Path) -> list[ObsidianPage]:
     for filepath in filepaths:
         with open(filepath, "r") as f:
             post = frontmatter.loads(f.read())
+            if post.metadata.get("draft", False):
+                continue
             obsidian_pages.append(ObsidianPage(filepath=filepath, post=post))
     return obsidian_pages
 
