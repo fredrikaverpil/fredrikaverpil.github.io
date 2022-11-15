@@ -60,3 +60,6 @@ hugo/public
 hugo/resources
 hugo/static
 hugo/.hugo_build.lock
+
+# Obsidian
+obsidian/.obsidian/workspace.json
