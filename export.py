@@ -7,6 +7,7 @@ from pathlib import Path
 import frontmatter
 from loguru import logger
 from obsidian_to_hugo.wiki_links_processor import replace_wiki_links
+from yaml.scanner import ScannerError
 
 
 class ObsidianPage:
@@ -73,7 +74,11 @@ def gather(obsidian_vault: Path) -> list[ObsidianPage]:
 
     for filepath in filepaths:
         with open(filepath, "r") as f:
-            post = frontmatter.loads(f.read())
+            try:
+                post = frontmatter.loads(f.read())
+            except ScannerError as err:
+                logger.error(f"Error parsing frontmatter in {filepath}")
+                continue
             if post.metadata.get("draft", False):
                 continue
             obsidian_pages.append(ObsidianPage(filepath=filepath, post=post))
