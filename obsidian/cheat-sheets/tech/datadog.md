@@ -1,11 +1,31 @@
-# 🐶 datadog
+---
+title: 🐶 Datadog
+tags: [monitoring]
+draft: false
+summary: "Notes on monitoring with Datadog."
+
+# PaperMod
+ShowToc: false
+TocOpen: true
+
+updated: 2022-11-16T00:53:28+01:00
+created: 2022-11-14T20:42:48+01:00
+---
+
+## Custom span
+
+If there is no incoming request, a custom span can be created.
 
 ```python
 from contextlib import contextmanager
+from types import TracebackType
+from typing import TypeAlias, Union
 
 import ddtrace
+from ddtrace import tracer
 
-from logalot.lib.types import OptExcInfo
+ExcInfo: TypeAlias = tuple[type[BaseException], BaseException, TracebackType]
+OptExcInfo: TypeAlias = Union[ExcInfo, tuple[None, None, None]]
 
 
 class DatadogSpan:
@@ -13,8 +33,8 @@ class DatadogSpan:
 
     def __init__(
         self,
-        name: str = "logalot.custom_trace",
-        resource: str = "logalot",
+        name: str = "custom_trace",
+        resource: str = "custom_resource",
     ):
         self.name = name
         self.resource = resource
@@ -28,6 +48,17 @@ class DatadogSpan:
         else:
             with ddtrace.tracer.trace(name=self.name, resource=self.resource) as span:
                 yield span
+
+
+def configure_excepthooks():
+	sys.excepthook = custom_excepthook
+	sys.unraisablehook = custom_excepthook
+
+
+def custom_excepthook(exc_type, exc_value, exc_traceback):
+	error = (exc_type, exc_value, exc_traceback)  # could also use sys.exc_info()
+	with DatadogSpan().span() as span:
+		tag_span_with_exception_info(span=span, exc_info=error)
 
 
 def tag_span(span: ddtrace.span.Span, data: dict) -> dict[str, str]:
@@ -53,4 +84,20 @@ def tag_span_with_exception_info(span: ddtrace.span.Span, exc_info: OptExcInfo) 
         exc_val=exc_value,
         exc_tb=exc_traceback,
     )
+
+
+@tracer.wrap(
+	service="example-service",
+	resource="example-resource",
+)
+def main():
+	configure_excepthooks()
+    # run cronjob or similar...
+    pass
+
+
+if __name __ == "__main__":
+    sys.exit(main())
+
 ```
+

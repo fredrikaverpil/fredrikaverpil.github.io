@@ -1,23 +1,38 @@
-# 🎱 kubernetes
+---
+title: 🎱 Kubernetes
+tags: [kubernetes]
+draft: false
+summary: "Notes to self, snippets etc."
+
+# PaperMod
+ShowToc: true
+TocOpen: true
+
+updated: 2022-11-16T00:41:00+01:00
+created: 2022-11-14T20:42:48+01:00
+---
+
 ## Pod
-Enter pod
+
+Enter pod:
+
 ```bash
 POD=name-of-pod
 kubectl exec --stdin --tty $POD -- /bin/bash
 ```
-## Trouble shooting
+
+## Troubleshooting
+
 ```bash
 kubectl describe deploy $DEPLOYMENT
-
 kubectl get deploy $DEPLOYMENT
-
 kubectl get pod $POD
 ```
 
 ## Sorting
+
 ```bash
 kubectl get pods --sort-by=.metadata.creationTimestamp
-
 kubectl get pods -lapp=$POD --sort-by=.metadata.creationTimestamp
 ```
 
@@ -28,6 +43,7 @@ kubectl get cj
 ```
 
 ### Manual run
+
 ```bash
 $ kubectl get cj | grep <my-name>
 
@@ -37,7 +53,6 @@ some-cronjob-name                           10 * * * *     False     1        10
 ```bash
 $ kubectl create job --from=cronjob/some-cronjob-name fredrik-manual-test-1
 ```
-
 
 ### Suspension of cronjob
 
