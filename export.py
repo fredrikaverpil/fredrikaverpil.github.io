@@ -80,6 +80,7 @@ def gather(obsidian_vault: Path) -> list[ObsidianPage]:
                 logger.error(f"Error parsing frontmatter in {filepath}")
                 continue
             if post.metadata.get("draft", False):
+                logger.warning(f"Skipping draft: {filepath}")
                 continue
             obsidian_pages.append(ObsidianPage(filepath=filepath, post=post))
     return obsidian_pages
@@ -88,7 +89,7 @@ def gather(obsidian_vault: Path) -> list[ObsidianPage]:
 def rm_tree(pth: Path):
     if not pth.exists():
         return
-    logger.info(f"Cleaning up (removing) {pth}")
+    logger.debug(f"Cleaning up (removing) {pth}")
     pth = Path(pth)
     for child in pth.glob("*"):
         if child.is_file():
@@ -108,7 +109,7 @@ def write(src: Path, dst: Path, obsidian_pages: list[ObsidianPage]):
         target.parent.mkdir(parents=True, exist_ok=True)
         with open(target, "w") as f:
             f.write(frontmatter.dumps(obsidian_page.post))
-            logger.info(f"Wrote {target}")
+            logger.debug(f"Wrote {target}")
 
 
 def copy_static_files(src: Path, dst: Path):
