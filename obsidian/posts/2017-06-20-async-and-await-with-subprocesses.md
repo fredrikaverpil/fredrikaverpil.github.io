@@ -2,19 +2,17 @@
 title: Async and await with subprocesses
 draft: true
 tags: [python]
-draft: true
+draft: false
 
 # PaperMod
 ShowToc: false
 TocOpen: false
 
-created: 2022-11-15T17:29:41+01:00
-updated: 2022-11-15T17:29:41+01:00
+created: 2022-11-16T23:10:56+01:00
+updated: 2022-11-16T23:10:56+01:00
 ---
 
 A boilerplate which can be used on Windows and Linux/macOS in order to asynchronously run subprocesses. This requres Python 3.6.
-
-
 
 **Update 2019-06-28:** Fixed a problem where the loop got closed prematurely, added better progress messages, tested on Python 3.7.3.
 
@@ -25,10 +23,10 @@ Note:
     Requires Python 3.6.
 """
 
+import asyncio
+import platform
 import sys
 import time
-import platform
-import asyncio
 from pprint import pprint
 
 
@@ -92,9 +90,7 @@ async def run_command_shell(command):
     if process.returncode == 0:
         print("Done:", command, "(pid = " + str(process.pid) + ")", flush=True)
     else:
-        print(
-            "Failed:", command, "(pid = " + str(process.pid) + ")", flush=True
-        )
+        print("Failed:", command, "(pid = " + str(process.pid) + ")", flush=True)
 
     # Result
     result = stdout.decode().strip()
@@ -145,15 +141,11 @@ def run_asyncio_commands(tasks, max_concurrent_tasks=0):
 
     chunk = 1
     for tasks_in_chunk in chunks:
-        print(
-            "Beginning work on chunk %s/%s" % (chunk, num_chunks), flush=True
-        )
+        print("Beginning work on chunk %s/%s" % (chunk, num_chunks), flush=True)
         commands = asyncio.gather(*tasks_in_chunk)  # Unpack list using *
         results = loop.run_until_complete(commands)
         all_results += results
-        print(
-            "Completed work on chunk %s/%s" % (chunk, num_chunks), flush=True
-        )
+        print("Completed work on chunk %s/%s" % (chunk, num_chunks), flush=True)
         chunk += 1
 
     loop.close()
@@ -166,10 +158,15 @@ def main():
 
     if platform.system() == "Windows":
         # Commands to be executed on Windows
-        commands = [["hostname"]]
+        commands = [
+            ["hostname"],
+        ]
     else:
         # Commands to be executed on Unix
-        commands = [["du", "-sh", "/var/tmp"], ["hostname"]]
+        commands = [
+            ["du", "-sh", "/var/tmp"],
+            ["hostname"],
+        ]
 
     tasks = []
     for command in commands:
