@@ -1,14 +1,14 @@
 ---
 title: Obsidian, Hugo an GitHub pages
 tags: [github-pages, hugo, python]
-draft: false
+draft: true
 summary: This is my journey to manage my personal website in Obsidian, export it into Hugo and publish onto GitHub pages.
 
 # PaperMod
 ShowToc: true
 TocOpen: true
 
-updated: 2022-11-16T08:59:24+01:00
+updated: 2022-11-16T22:57:55+01:00
 created: 2022-11-13T01:00:00+01:00
 ---
 
@@ -24,8 +24,7 @@ created: 2022-11-13T01:00:00+01:00
 - [x] Ability to embed gists, but using custom CSS to make them look more integrated.
 - [ ] [Custom GitHub Gists](https://codersblock.com/blog/customizing-github-gists/).
 - [ ] Simple analytics
-	- [ ] [umami](https://umami.is/docs/getting-started)
-	- [ ] [plausible](https://github.com/plausible/analytics)
+	- [x] [umami](https://umami.is/docs/getting-started)
 - [x] Search (might make tags unnecessary).
 - [x] Tags.
 - [ ] [Callouts](https://help.obsidian.md/How+to/Use+callouts).
@@ -48,6 +47,8 @@ created: 2022-11-13T01:00:00+01:00
 	- [ ] Shortcode for YouTube.
 	- [ ] Shortcode for Vimeo.
 - [ ] Add git submodule for theme.
+- [ ] Add link to old disqus comments for some pages?
+- [x] Insert frontmatter template on creation of page: [Insert front matter template automatically at file creation time - Resolved help - Obsidian Forum](https://forum.obsidian.md/t/insert-front-matter-template-automatically-at-file-creation-time/35351)
 
 ## Links
 
