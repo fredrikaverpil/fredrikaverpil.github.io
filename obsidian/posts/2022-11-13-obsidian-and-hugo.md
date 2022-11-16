@@ -8,7 +8,7 @@ summary: This is my journey to manage my personal website in Obsidian, export it
 ShowToc: true
 TocOpen: true
 
-updated: 2022-11-16T08:35:45+01:00
+updated: 2022-11-16T08:50:35+01:00
 created: 2022-11-13T01:00:00+01:00
 ---
 
@@ -47,6 +47,11 @@ created: 2022-11-13T01:00:00+01:00
 	- [ ] Skip export if draft=true
 	- [ ] Shortcode for YouTube.
 	- [ ] Shortcode for Vimeo.
+- [ ] Add git submodule for theme.
+
+## Links
+
+- [Variables | Front Matter | PaperMod (adityatelange.github.io)](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-variables/)
 
 ## Testing grounds
 
