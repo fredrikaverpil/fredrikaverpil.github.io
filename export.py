@@ -64,8 +64,31 @@ def parse_args():
         default=Path("hugo/content"),
         help="Hugo contents folder",
     )
+    parser.add_argument(
+        "--log-level",
+        type=str,
+        default="INFO",
+        help="Log level. One of: DEBUG, INFO, WARNING, ERROR, CRITICAL",
+    )
+    parser.add_argument(
+        "--copy-static-files",
+        type=bool,
+        default=True,
+        help="Copy static files from Obsidian vault to Hugo static folder",
+    )
+    # parser.add_argument(
+    #     "--refresh-dev-server",
+    #     type=bool,
+    #     default=True,
+    #     help="This touches hugo's config file to refresh the dev server",
+    # )
 
     return parser.parse_args()
+
+
+def set_log_level(level: str) -> None:
+    logger.remove()
+    logger.add(sink=sys.stderr, level=level)
 
 
 def gather(obsidian_vault: Path) -> list[ObsidianPage]:
@@ -119,17 +142,30 @@ def copy_static_files(src: Path, dst: Path):
     logger.info("Done copying static files.")
 
 
+# def refresh_dev_server(refresh: bool) -> None:
+#     if refresh:
+#         logger.info("Refreshing dev server")
+#         configs = Path(".").glob("hugo/config.*")
+#         for config in configs:
+#             config.touch()
+
+
 def main():
     args = parse_args()
+    set_log_level(level=args.log_level)
     obsidian_pages = gather(args.obsidian_vault)
     for obsidian_page in obsidian_pages:
         obsidian_page.process()
     write(
         src=args.obsidian_vault, dst=args.hugo_contents, obsidian_pages=obsidian_pages
     )
-    copy_static_files(
-        src=args.obsidian_vault / "static/", dst=args.hugo_contents.parent / "static"
-    )
+    if args.copy_static_files:
+        copy_static_files(
+            src=args.obsidian_vault / "static/",
+            dst=args.hugo_contents.parent / "static",
+        )
+    # refresh_dev_server(refresh=args.refresh_dev_server)
+
     logger.info("Done.")
 
 
