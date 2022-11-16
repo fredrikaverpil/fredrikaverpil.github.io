@@ -11,14 +11,21 @@ frontmatter:
     - ":fileModTime"
 menu:
   main:
+    - name: about
+      url: /
+      weight: 1
+    - name: blog
+      url: /posts/
+      weight: 2
     - name: cheat-sheets
       url: /cheat-sheets/
-    - name: blog
-      url: /blog/
-    - name: tags
-      url: /tags/
+      weight: 3
     - name: search
       url: /search/
+      weight: 4
+    - name: tags
+      url: /tags/
+      weight: 5
 taxonomies:
   tag: tags
 params:
