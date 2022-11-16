@@ -62,6 +62,9 @@ params:
   ShowPostNavLinks: true
   ShowReadingTime: true
 
+assets:
+  favicon: "/static/favicon.ico"
+
   # PaperModX
   TocSide: "right"
   ShowCodeCopyButtons: true
