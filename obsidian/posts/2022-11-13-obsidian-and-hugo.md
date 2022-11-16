@@ -1,14 +1,14 @@
 ---
 title: Obsidian, Hugo an GitHub pages
-tags: [githubpages, hugo, python]
-draft: true
+tags: [github-pages, hugo, python]
+draft: false
 summary: This is my journey to manage my personal website in Obsidian, export it into Hugo and publish onto GitHub pages.
 
 # PaperMod
 ShowToc: true
 TocOpen: true
 
-updated: 2022-11-15T23:33:02+01:00
+updated: 2022-11-16T08:35:45+01:00
 created: 2022-11-13T01:00:00+01:00
 ---
 

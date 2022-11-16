@@ -12,7 +12,7 @@ ShowToc: true
 TocOpen: true
 
 created: 2021-04-17T02:00:00+02:00
-updated: 2022-11-15T22:28:09+01:00
+updated: 2022-11-16T08:35:49+01:00
 ---
 
 A guide on how to set up debugging of [Poetry](https://python-poetry.org/) in [Visual Studio Code](https://code.visualstudio.com/), using [Pipx](https://github.com/pipxproject/pipx) and [Pyenv](https://github.com/pyenv/pyenv).
