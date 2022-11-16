@@ -106,9 +106,9 @@ $ psql -d newdb -f dump.sql
 
 -- Look up JSONBinaryField value.
 
-SELECT * from conversation c
+SELECT * from chat c
 	WHERE c.state = 'purged' AND c.id IN (
-		SELECT m.conversation_id FROM purgedmessage m
+		SELECT m.chat_id FROM message m
 			WHERE (
 				m.type = 'state'
 				AND m.data @> '{"state": "archived"}'::jsonb
@@ -121,11 +121,11 @@ SELECT * from conversation c
 -- Count records where JSONBinaryField equals value.
 -- WARNING, this can be very heavy on e.g. CPU on staging!
 
-SELECT count(pm.conversation_id)
-FROM purgedmessage pm
-WHERE pm.created >= '2022-02-01'
-	AND pm.type = 'state'
-	AND pm.data = -> 'state' - '"archived"';
+SELECT count(m.chat_id)
+FROM message m
+WHERE m.created >= '2022-02-01'
+	AND m.type = 'state'
+	AND m.data = -> 'state' - '"archived"';
 ```
 
 ```sql
@@ -156,7 +156,7 @@ LIMIT 1;
 SELECT
 	m.id
 FROM
-	purgedmessage m
+	message m
 WHERE
 	m. "type" = 'button'
 	AND(m. "data"::json ->> 'title' != ''

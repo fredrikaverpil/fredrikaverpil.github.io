@@ -8,7 +8,7 @@ summary: "Notes to self, snippets etc."
 ShowToc: true
 TocOpen: true
 
-updated: 2022-11-16T00:41:00+01:00
+updated: 2022-11-16T09:01:03+01:00
 created: 2022-11-14T20:42:48+01:00
 ---
 
@@ -59,5 +59,5 @@ $ kubectl create job --from=cronjob/some-cronjob-name fredrik-manual-test-1
 Suspension was done but when we wanted to resume it, it didn’t work. Turns out we had to remove the old one and re-deploy (for every cluster).
 
 ```bash
-kubectl delete cj/conversations-purge
+kubectl delete cj/some-cronjob-name
 ```
