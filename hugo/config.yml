@@ -53,21 +53,21 @@ params:
       url: "https://www.linkedin.com/in/fredrik/"
     - name: "RSS"
       url: "index.xml"
-  # ShowToc: true
-  # TocOpen: true
+
   editPost:
     URL: "https://github.com/fredrikaverpil/fredrikaverpil.github.io/tree/main/obsidian/"
     Text: "Suggest Changes"
     appendFilePath: true
   ShowPostNavLinks: true
   ShowReadingTime: true
-
-assets:
-  favicon: "/static/favicon.ico"
+  ShowCodeCopyButtons: true
 
   # PaperModX
   TocSide: "right"
-  ShowCodeCopyButtons: true
+
+assets:
+  favicon: "/static/favicon.ico"
+  # theme_color: "#24242e"
 
 outputs:
   home:
