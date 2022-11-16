@@ -53,6 +53,7 @@ params:
     Text: "Suggest Changes"
     appendFilePath: true
   ShowPostNavLinks: true
+  ShowReadingTime: true
 
   # PaperModX
   TocSide: "right"
