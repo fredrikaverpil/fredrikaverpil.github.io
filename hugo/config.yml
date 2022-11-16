@@ -17,9 +17,9 @@ menu:
     - name: blog
       url: /posts/
       weight: 2
-    # - name: cheat-sheets
-    #   url: /cheat-sheets/
-    #   weight: 3
+    - name: cheat-sheets
+      url: /cheat-sheets/
+      weight: 3
     - name: search
       url: /search/
       weight: 4
