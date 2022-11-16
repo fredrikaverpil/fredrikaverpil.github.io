@@ -55,7 +55,6 @@ CNAME
 hugo/archetypes
 hugo/content
 hugo/data
-hugo/layouts
 hugo/public
 hugo/resources
 hugo/static
