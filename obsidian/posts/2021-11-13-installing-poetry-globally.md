@@ -7,8 +7,7 @@ draft: false
 ShowToc: true
 TocOpen: true
 
-created: 2021-11-13T02:00:00+01:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2021-11-13T02:00:00+01:00
 ---
 
 I recently got some feedback (thank you [@simmel](https://github.com/simmel), much appreciated!) on a previous post on [[2021-04-17-debugging-poetry]]. I then realized it was a bit hard to follow if all you wanted to do was to install Poetry globally, with some added control from the [default installation method](https://python-poetry.org/docs/#installation).

@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2014-10-06T02:00:12+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2014-10-06T02:00:12+02:00
 ---
 
 An easy way to get going with PySide in Maya (or Nuke for that matter) without the hassle of dealing with the shiboken/sip layer.

@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2016-09-12T03:00:12+02:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2016-09-12T03:00:12+02:00
 ---
 
 A quick way to enter an interactive docker container:

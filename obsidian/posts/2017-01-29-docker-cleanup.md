@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2017-01-29T02:00:12+01:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2017-01-29T02:00:12+01:00
 ---
 
 Quick and easy way to remove all containers (and their volumes) as well as all images:

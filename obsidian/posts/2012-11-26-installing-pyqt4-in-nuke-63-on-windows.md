@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2012-11-26T01:00:12+01:00
-updated: 2022-11-15T22:47:07+01:00
+date: 2012-11-26T01:00:12+01:00
 ---
 
 A few steps to get PyQt working inside of Nuke 6.3 (Windows only for now).

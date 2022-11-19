@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2013-02-01T01:00:12+01:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2013-02-01T01:00:12+01:00
 ---
 
 Recently we ended up with a Maya scene with locked, read-only, nodes which prohibited us from deleting them from the scene. This usually happens to nodes having been part of a locked reference which has been imported into the scene. In our case, we had no access to the original referenced file, so we had to unlock these nodes from being read-only.

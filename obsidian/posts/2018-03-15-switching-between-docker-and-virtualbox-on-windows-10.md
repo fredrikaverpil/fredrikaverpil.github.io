@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2018-03-15T02:00:12+01:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2018-03-15T02:00:12+01:00
 ---
 
 As outlined [here](https://stackoverflow.com/a/40261418/2448495), Docker for Windows requires Hyper-V. This needs to be disabled before you can run VirtualBox.

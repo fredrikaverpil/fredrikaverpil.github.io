@@ -8,8 +8,8 @@ summary: This is my journey to manage my personal website in Obsidian, export it
 ShowToc: true
 TocOpen: true
 
-updated: 2022-11-16T22:57:55+01:00
-created: 2022-11-13T01:00:00+01:00
+updated: 2022-11-16T23:22:21+01:00
+date: 2022-11-13T01:00:00+01:00
 ---
 
 

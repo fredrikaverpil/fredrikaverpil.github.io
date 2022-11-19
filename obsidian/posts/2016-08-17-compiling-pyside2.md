@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2016-08-17T02:00:12+02:00
-updated: 2022-11-15T22:49:36+01:00
+date: 2016-08-17T02:00:12+02:00
 ---
 
 Here's how to compile PySide2 on Linux, Mac OS X and Windows.

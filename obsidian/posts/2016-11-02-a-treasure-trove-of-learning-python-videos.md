@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2016-11-02T02:00:12+01:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2016-11-02T02:00:12+01:00
 ---
 
 Here's a fantastic resource for anyone who wish they could learn from a Python

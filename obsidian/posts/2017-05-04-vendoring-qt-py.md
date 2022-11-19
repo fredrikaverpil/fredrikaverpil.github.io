@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2017-05-04T02:00:12+02:00
-updated: 2022-11-15T22:29:16+01:00
+date: 2017-05-04T02:00:12+02:00
 ---
 
 How do you know a user doesn't have the wrong version of [Qt.py](https://github.com/mottosso/Qt.py) when running your application?  

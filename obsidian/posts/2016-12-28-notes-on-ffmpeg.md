@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2016-12-28T02:00:12+01:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2016-12-28T02:00:12+01:00
 ---
 
 Quick note on how to install ffmpeg (using Homebrew) and various mp4 conversion commands on Unix.

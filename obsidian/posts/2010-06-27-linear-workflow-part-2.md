@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2010-06-27T02:00:00+02:00
-updated: 2022-11-15T23:04:17+01:00
+date: 2010-06-27T02:00:00+02:00
 ---
 
 This is how I would deal with the linear workflow (including non-linear preview) between Maya 2010 and Nuke 6.0v6.

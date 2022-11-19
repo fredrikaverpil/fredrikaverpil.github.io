@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2018-06-25T02:00:12+02:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2018-06-25T02:00:12+02:00
 ---
 
 Recursively replace all gizmos in Nuke script with a group. The only exception is the `Cryptomatte` nodes, which will be maintained as gizmos.

@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2005-03-15T01:00:00+01:00
-updated: 2022-11-15T23:03:24+01:00
+date: 2005-03-15T01:00:00+01:00
 ---
 
 Utilizing the Z channel (depth information) of Maya’s IFF files in Shake is a bit tricky because of the way Maya stores depth information… here’s a quick tutorial to get you started.

@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2012-08-09T02:00:12+02:00
-updated: 2022-11-15T22:58:04+01:00
+date: 2012-08-09T02:00:12+02:00
 ---
 
 Some people have asked whether the “Preview Depth of Field” function is different from the regular LCD/EVF view or not (which it is), why the histogram is acting up (which it sometimes can do) and I’ve also seen questions regarding why exposure lock (AE-L) mapped to the AFL/AEL-button does not seem to be happening when pressing the AFL/AEL-button. Here’s an attempt to try and explain why this is so.

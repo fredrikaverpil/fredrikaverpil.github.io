@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2016-01-03T02:00:12+01:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2016-01-03T02:00:12+01:00
 ---
 
 I've recently started taking a look at [Chocolatey](https://chocolatey.org) –

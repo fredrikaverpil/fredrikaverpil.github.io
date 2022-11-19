@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2016-07-31T03:00:12+02:00
-updated: 2022-11-15T22:50:02+01:00
+date: 2016-07-31T03:00:12+02:00
 ---
 
 A quick guide on how to run containers requiring a GUI with Docker for Mac and XQuartz.

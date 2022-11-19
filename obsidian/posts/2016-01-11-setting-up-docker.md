@@ -7,8 +7,7 @@ draft: true
 ShowToc: false
 TocOpen: false
 
-created: 2016-01-11T02:00:12+01:00
-updated: 2022-11-15T23:12:02+01:00
+date: 2016-01-11T02:00:12+01:00
 ---
 
 Getting started with Docker...

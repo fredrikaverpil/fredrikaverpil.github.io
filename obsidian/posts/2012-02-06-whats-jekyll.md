@@ -8,8 +8,7 @@ draft: true
 ShowToc: false
 TocOpen: false
 
-created: 2012-02-06T01:00:12+01:00
-updated: 2022-11-15T22:59:10+01:00
+date: 2012-02-06T01:00:12+01:00
 ---
 
 [Jekyll](http://jekyllrb.com) is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From [the project's readme](https://github.com/mojombo/jekyll/blob/master/README.markdown):

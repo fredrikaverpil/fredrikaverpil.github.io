@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2010-10-16T02:00:12+02:00
-updated: 2022-11-15T22:51:55+01:00
+date: 2010-10-16T02:00:12+02:00
 ---
 
 

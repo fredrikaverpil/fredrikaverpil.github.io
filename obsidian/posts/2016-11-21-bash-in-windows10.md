@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2016-11-21T02:00:12+01:00
-updated: 2022-11-15T22:29:16+01:00
+date: 2016-11-21T02:00:12+01:00
 ---
 
 This is a quick intro to – and some personal notes on working with – Bash in Windows 10 (Anniversary Update or Insider build requred). This will be updated on a sporadic basis.

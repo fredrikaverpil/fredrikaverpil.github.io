@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2015-05-01T02:00:12+02:00
-updated: 2022-11-15T22:53:01+01:00
+date: 2015-05-01T02:00:12+02:00
 ---
 
 [Guest blogging](https://cloudplatform.googleblog.com/2015/05/3D-imagery-rendering-in-the-cloud-with-Industriromantik-and-Compute-Engine.html) for Google!

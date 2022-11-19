@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2016-07-25T02:00:12+02:00
-updated: 2022-11-15T22:50:51+01:00
+date: 2016-07-25T02:00:12+02:00
 ---
 
 [Maya 2017](http://www.autodesk.com/products/maya/overview) was released today and with it comes a big change; PySide (and PyQt4) no longer works with Maya.

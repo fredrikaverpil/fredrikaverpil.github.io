@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2014-06-05T02:00:12+02:00
-updated: 2022-11-15T22:29:16+01:00
+date: 2014-06-05T02:00:12+02:00
 ---
 
 This was a real PITA to get working. After having installed Visual C++ 2008 Express, I tried to build both [psutil](https://code.google.com/archive/p/psutil/) and [MySQLdb](http://sourceforge.net/projects/mysql-python/) using setuptools and/or pip. Both resulted in various errors…

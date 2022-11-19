@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2015-05-06T02:00:12+02:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2015-05-06T02:00:12+02:00
 ---
 
 In Linux, you can kill all processes by name (or by username etc) using something like this:

@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2010-05-27T02:00:00+02:00
-updated: 2022-11-15T23:04:10+01:00
+date: 2010-05-27T02:00:00+02:00
 ---
 
 There seems to be a general confusion on linear workflows and how 3D/compositing packages work, what sRGB/gamma 2.2 is for and why it’s a good idea to render images in linear data throughout the pipeline. This is my take on a linear workflow with Maya and Nuke as well as a bit of history on the subject.

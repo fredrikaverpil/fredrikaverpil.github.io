@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2017-06-30T02:00:12+02:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2017-06-30T02:00:12+02:00
 ---
 
 I've received questions lately on the issues that people are having while attempting to build PySide2 on Windows, macOS and Linux. Instead of building PySide2, there's actually a workaround which works just as well for some people...

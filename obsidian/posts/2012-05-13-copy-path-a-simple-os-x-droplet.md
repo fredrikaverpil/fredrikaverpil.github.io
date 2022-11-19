@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2012-05-13T02:00:12+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2012-05-13T02:00:12+02:00
 ---
 
 Drop any file(s) or folder(s) onto this app and its path(s) will be put in the clipboard, ready for pasting (cmd+v). Place the app in the dock for easy access.

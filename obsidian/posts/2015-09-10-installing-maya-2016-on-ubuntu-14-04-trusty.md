@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2015-09-10T02:00:12+02:00
-updated: 2022-11-15T22:52:32+01:00
+date: 2015-09-10T02:00:12+02:00
 ---
 
 It took some trial and error to successfully install and license Maya 2016 in Ubuntu 14.04, and here’s how I did it.

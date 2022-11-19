@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2005-05-09T02:00:00+02:00
-updated: 2022-11-15T23:03:35+01:00
+date: 2005-05-09T02:00:00+02:00
 ---
 
 A MEL script that hooks your particle system up with a camera automatically, resulting in a z-depth/focus depth/height/age/etc shader, that can be used to render images meant to serve as an aid during compositing. This way you can e.g. render out hardware particles’ depth channel with motion blur.

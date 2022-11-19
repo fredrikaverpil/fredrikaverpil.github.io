@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2017-02-02T02:00:12+01:00
-updated: 2022-11-15T22:48:59+01:00
+date: 2017-02-02T02:00:12+01:00
 ---
 
 This is my [Visual Studio Code](https://code.visualstudio.com) (vscode) setup, with ambitions to create a custom Python IDE.

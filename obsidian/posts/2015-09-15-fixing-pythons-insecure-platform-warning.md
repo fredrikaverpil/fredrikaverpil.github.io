@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2015-09-15T02:00:12+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2015-09-15T02:00:12+02:00
 ---
 
 Here’s how to fix that nagging InsecurePlatformWarning warning in Python.

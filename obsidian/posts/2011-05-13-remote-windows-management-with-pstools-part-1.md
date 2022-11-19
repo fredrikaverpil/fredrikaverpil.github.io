@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2011-05-13T02:00:12+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2011-05-13T02:00:12+02:00
 ---
 
 One of the advantages of running Linux on render farm machines is the possibility to remotely manage them using the command line. However if you are running the farm on Windows, this is a whole different kind of story.

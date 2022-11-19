@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2018-12-14T02:00:12+01:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2018-12-14T02:00:12+01:00
 ---
 
 This is a short note on how to make a container access and control another container on the same host. The trick is to have the "controller" container map the host's `docker.sock` into the container.

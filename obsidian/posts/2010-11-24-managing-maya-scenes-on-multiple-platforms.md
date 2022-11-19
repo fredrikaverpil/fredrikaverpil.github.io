@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2010-11-24T01:00:00+01:00
-updated: 2022-11-15T23:04:27+01:00
+date: 2010-11-24T01:00:00+01:00
 ---
 
 Ever found yourself trying to open a complex Maya scene with nested references on a Windows/Linux network using your Macbook (or any of the other OS combos)?

@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2010-05-27T02:00:00+02:00
-updated: 2022-11-15T23:04:04+01:00
+date: 2010-05-27T02:00:00+02:00
 ---
 
 Mental images and/or Autodesk has intentionally not made Iray available in the latest release of Autodesk Maya; version 2011. But there is a workaround...

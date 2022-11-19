@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2018-06-06T02:00:12+02:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2018-06-06T02:00:12+02:00
 ---
 
 The [official docs on setting up an incoming webhook](https://developers.google.com/hangouts/chat/quickstart/incoming-bot-python) uses the third-party [httplib2](https://github.com/httplib2/httplib2), which is not part of the Python 3.6 standard library. Here's a quick snippet using only the standard library instead:

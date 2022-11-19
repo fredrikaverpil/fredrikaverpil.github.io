@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2019-02-04T02:00:12+01:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2019-02-04T02:00:12+01:00
 ---
 
 In [episode 196 of the (Python) Podcast.__init__](https://www.pythonpodcast.com/software-licenses-for-developers-episode-196/) a very commonly discussed topic among open source programmers is covered, which I wanted to share here.

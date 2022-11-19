@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2016-03-07T02:00:12+01:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2016-03-07T02:00:12+01:00
 ---
 
 On Windows 10, Swedish keyboard. When I hit `AltGr` (right `Alt` button) and `+` (which is supposed to give me `\`), I get nothing in [Atom](https://atom.io).

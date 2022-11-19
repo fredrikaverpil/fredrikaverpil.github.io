@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2016-07-25T02:00:12+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2016-07-25T02:00:12+02:00
 ---
 
 [Qt.py](https://github.com/mottosso/Qt.py) can be installed in many ways, depending on your needs. This post aims to outline some common approaches:

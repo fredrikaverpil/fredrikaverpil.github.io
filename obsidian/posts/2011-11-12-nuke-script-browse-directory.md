@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2011-11-12T01:00:12+01:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2011-11-12T01:00:12+01:00
 ---
 
 Launch the source directory of the selected Read or Write node.

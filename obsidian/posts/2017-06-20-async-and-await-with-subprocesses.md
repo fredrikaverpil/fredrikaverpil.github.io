@@ -8,8 +8,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2017-06-20
-updated: 2022-11-16T23:22:33+01:00
+date: 2017-06-20
 ---
 
 A boilerplate which can be used on Windows and Linux/macOS in order to asynchronously run subprocesses. This requres Python 3.6.

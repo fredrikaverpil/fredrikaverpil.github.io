@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2016-03-11T02:00:12+01:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2016-03-11T02:00:12+01:00
 ---
 
 Don't use `yum install python-psutil` as this will give you a super old

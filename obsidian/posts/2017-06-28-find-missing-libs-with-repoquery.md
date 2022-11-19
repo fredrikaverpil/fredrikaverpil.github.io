@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2017-06-28T02:00:12+02:00
-updated: 2022-11-15T22:29:16+01:00
+date: 2017-06-28T02:00:12+02:00
 ---
 
 Not sure how I didn't learn about this until today. Anyways, if you end up with missing libs on CentOS/RedHat, use [repoquery](http://yum.baseurl.org/wiki/RepoQuery) to find missing libs.

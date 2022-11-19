@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2018-06-07T02:00:12+02:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2018-06-07T02:00:12+02:00
 ---
 
 A recent discussion on [3DPRO](http://3dpro.org/) sparked me to scribble down some ideas on how to somewhat painlessly distribute a Python package to be run in DCC applications such as Maya or Nuke as simply as possible. So this is an alternative to building a wheel and mucking around with virtual environments.

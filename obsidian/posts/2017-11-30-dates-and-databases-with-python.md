@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2017-11-30T02:00:12+01:00
-updated: 2022-11-15T22:28:24+01:00
+date: 2017-11-30T02:00:12+01:00
 ---
 
 It's a bit tricky to deal with dates, timezones and daylight savings when you need to store dates in e.g. a database for later reading.

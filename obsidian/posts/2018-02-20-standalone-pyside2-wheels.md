@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2018-02-20T02:00:12+01:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2018-02-20T02:00:12+01:00
 ---
 
 The Qt Company has yet to release official, standalone and pip-installable PySide2 wheels. However, since they made it possible to build standalone wheels successfully, I'm now building such unofficial, standalone wheels here using free CI services (thanks [Travis](https://travis-ci.org/) and [AppVeyor](https://www.appveyor.com/)!):

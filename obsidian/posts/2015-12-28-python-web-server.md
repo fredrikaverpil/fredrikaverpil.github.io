@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2015-12-28T02:00:12+01:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2015-12-28T02:00:12+01:00
 ---
 
 The absolutely fastest way to get a simple web server up and running using

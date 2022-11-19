@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2012-06-12T02:00:12+02:00
-updated: 2022-11-15T22:58:54+01:00
+date: 2012-06-12T02:00:12+02:00
 ---
 
 Simply put: the best camera I’ve ever owned.

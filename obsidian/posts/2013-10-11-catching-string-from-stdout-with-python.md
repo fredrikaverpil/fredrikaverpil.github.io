@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2013-10-11T02:00:12+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2013-10-11T02:00:12+02:00
 ---
 
 Using a Python “wrapper” script you can catch the output of an executing application, which is very useful when you want to perform certain tasks depending on what is being printed to stdout by the application.

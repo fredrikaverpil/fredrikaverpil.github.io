@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2012-02-16T01:00:12+01:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2012-02-16T01:00:12+01:00
 ---
 
 Running V-Ray for Maya in a production environment has its quirks. I have collected some bits and pieces off the [Chaos Group forum](http://www.chaosgroup.com/forums/vbulletin/showthread.php?51035-maintaining-Vray-builds-with-workstations-and-the-render-frarm/) and assembled it all here.

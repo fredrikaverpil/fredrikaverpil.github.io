@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2013-07-15T02:00:12+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2013-07-15T02:00:12+02:00
 ---
 
 This is a step by step to set you up with sending selected MEL/Python code snippets or whole scripts from [Sublime Text](http://www.sublimetext.com) to Maya using Justin Israel’s [MayaSublime](https://github.com/justinfx/MayaSublime) package.

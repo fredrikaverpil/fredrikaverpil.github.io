@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2012-02-02T01:00:12+01:00
-updated: 2022-11-15T22:59:28+01:00
+date: 2012-02-02T01:00:12+01:00
 ---
 
 Some facts about the camera which are easy to forget as well some notes to self.

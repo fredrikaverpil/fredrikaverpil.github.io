@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2012-02-21T01:00:12+01:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2012-02-21T01:00:12+01:00
 ---
 
 Out of the box, V-Ray for Maya does not render Z-depth the same way Nuke does. Here’s a quick fix for that (not applicable for most DOF plugins).

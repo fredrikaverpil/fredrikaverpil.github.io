@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2013-03-08T01:00:12+01:00
-updated: 2022-11-15T22:54:25+01:00
+date: 2013-03-08T01:00:12+01:00
 ---
 
 Having used the previous model, the X100, I will primarily focus on the

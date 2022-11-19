@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2015-05-19T02:00:12+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2015-05-19T02:00:12+02:00
 ---
 
 There is a two-week delay before gsutil gets updated with the latest and greatest. If you want to try the new stuff out, pip install the SDK!

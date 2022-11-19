@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2014-11-28T01:00:12+01:00
-updated: 2022-11-15T22:29:16+01:00
+date: 2014-11-28T01:00:12+01:00
 ---
 
 When installing [Fabric](http://www.fabfile.org) on CentOS 6.6 using [pip](https://pypi.python.org/pypi), it seems [a bug](https://github.com/fabric/fabric/issues/1105) is being hit.

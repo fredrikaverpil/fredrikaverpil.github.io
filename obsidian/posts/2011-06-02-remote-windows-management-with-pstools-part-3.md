@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2011-06-02T02:00:12+02:00
-updated: 2022-11-15T22:34:30+01:00
+date: 2011-06-02T02:00:12+02:00
 ---
 
 In this third article on PsTools I talk about how to control V-Ray DR slaves remotely with the PsTools suite.

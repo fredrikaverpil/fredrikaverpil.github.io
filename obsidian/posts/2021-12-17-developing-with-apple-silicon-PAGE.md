@@ -8,8 +8,7 @@ summary: Workarounds to install and run the Intel version of sofware that will n
 ShowToc: true
 TocOpen: true
 
-created: 2021-12-17T02:00:00+01:00
-updated: 2022-11-15T23:27:00+01:00
+date: 2021-12-17T02:00:00+01:00
 ---
 
 ## <a name="foreword"></a> Foreword

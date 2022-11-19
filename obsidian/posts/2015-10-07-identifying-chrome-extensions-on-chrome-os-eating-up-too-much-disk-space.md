@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2015-10-07T02:00:12+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2015-10-07T02:00:12+02:00
 ---
 
 I just recently realized I had only 300 MB of free disk space on my Chromebook, when I should have about 8 GB of free disk space. After some investigation, I found that one of my extensions where not deleting its previous versions when it got updated. Here’s how you can detect and fix such an issue.

@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2016-07-25T02:00:12+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2016-07-25T02:00:12+02:00
 ---
 
 This post aims to give an introduction to the [Qt.py](https://github.com/mottosso/Qt.py) project and how to get set up with it for PySide/PyQt4 and PySide2/PyQt5 development.

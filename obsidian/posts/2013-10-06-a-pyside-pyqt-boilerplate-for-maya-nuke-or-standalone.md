@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2013-10-06T02:00:12+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2013-10-06T02:00:12+02:00
 ---
 
 Ever wanted to be able to run the same user interface in Maya, Nuke as well as completely standalone (with or without app-specific modifications) and on any platform, using PySide and/or PyQt?

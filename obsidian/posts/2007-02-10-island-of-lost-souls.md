@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2007-02-10T01:00:00+01:00
-updated: 2022-11-15T23:03:46+01:00
+date: 2007-02-10T01:00:00+01:00
 ---
 
 [Filmgate](http://www.filmgate.se) were offered the opportunity by Ghost A/S to work, as sub-contractors, on this exciting Zentropa production which at the time was the largest visual effects movie to be made in Scandinavia.

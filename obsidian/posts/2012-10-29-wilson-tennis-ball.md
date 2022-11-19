@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2012-10-29T01:00:12+01:00
-updated: 2022-11-15T22:57:30+01:00
+date: 2012-10-29T01:00:12+01:00
 ---
 
 A personal weekend project. Everything created from scratch in 3D and completed within the same day (that rarely happens these days...). It feels good to be back! :)

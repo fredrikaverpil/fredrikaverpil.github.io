@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2014-11-07T01:00:12+01:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2014-11-07T01:00:12+01:00
 ---
 
 Quick and dirty way to just create a 10GB temp file for testing e.g. network transfer speeds.

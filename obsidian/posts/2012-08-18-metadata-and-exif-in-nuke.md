@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2012-08-18T02:00:12+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2012-08-18T02:00:12+02:00
 ---
 
 In [The Foundry’s Nuke](http://www.thefoundry.co.uk/products/nuke/), accessing the metadata of an image sequence’s Read node can be done via the ViewMetaData node. But if you wish to extract values out of the metadata and e.g. burn the timestamp for each frame into a render, it is actually easier to just do some python scripting.

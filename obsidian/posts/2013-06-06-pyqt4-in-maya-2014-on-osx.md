@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2013-06-06T02:00:12+02:00
-updated: 2022-11-15T22:29:16+01:00
+date: 2013-06-06T02:00:12+02:00
 ---
 
 There are some official Autodesk [instructions](http://around-the-corner.typepad.com/adn/2013/04/building-sip-and-pyqt-for-maya-2014.html) floating around on how to get PyQt4 support in of Maya 2014, but I found them a bit unclear and hard to follow. I also found an error (although minor)… so I’ve typed down my own little step-by-step reminder below, based off that.

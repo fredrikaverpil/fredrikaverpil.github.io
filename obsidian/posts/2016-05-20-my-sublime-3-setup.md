@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2016-05-20T03:00:12+02:00
-updated: 2022-11-15T22:51:15+01:00
+date: 2016-05-20T03:00:12+02:00
 ---
 
 This is my [Sublime Text 3](https://www.sublimetext.com) setup, with ambitions to create a custom Python IDE.

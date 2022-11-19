@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2011-05-15T02:00:12+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2011-05-15T02:00:12+02:00
 ---
 
 In this second part of managing Windows machines using the PsTools suite, we will look at how to automate processes involving interacting with a server.

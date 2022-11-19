@@ -8,8 +8,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2019-05-27T02:00:12+02:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2019-05-27T02:00:12+02:00
 ---
 
 ## Remote development over SSH

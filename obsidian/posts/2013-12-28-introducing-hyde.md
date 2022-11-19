@@ -8,8 +8,7 @@ draft: true
 ShowToc: false
 TocOpen: false
 
-created: 2013-12-28T01:00:12+01:00
-updated: 2022-11-15T23:15:16+01:00
+date: 2013-12-28T01:00:12+01:00
 ---
 
 Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.

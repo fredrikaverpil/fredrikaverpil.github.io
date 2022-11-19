@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2016-04-27T02:00:12+02:00
-updated: 2022-11-15T22:29:16+01:00
+date: 2016-04-27T02:00:12+02:00
 ---
 
 We made the move to CentOS 7 and I switched out all init.d scripts with

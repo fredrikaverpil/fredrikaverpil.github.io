@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2013-05-29T02:00:12+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2013-05-29T02:00:12+02:00
 ---
 
 ### Fujifilm X100S feedback

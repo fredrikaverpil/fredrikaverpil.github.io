@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2017-11-16T02:00:12+01:00
-updated: 2022-11-15T22:29:16+01:00
+date: 2017-11-16T02:00:12+01:00
 ---
 
 A very [annoying bug](https://forums.autodesk.com/t5/maya-forum/maya-2018-error-opening-large-mb-files-over-2gb/td-p/7466095) came to light in mid-October which makes Maya 2018 binary scene files (*.mb) unreadable if they are larger than ~2 GB in size.

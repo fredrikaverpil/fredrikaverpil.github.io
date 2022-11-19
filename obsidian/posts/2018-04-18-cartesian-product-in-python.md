@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2018-04-18T02:00:12+02:00
-updated: 2022-11-15T17:29:41+01:00
+date: 2018-04-18T02:00:12+02:00
 ---
 
 A [cartesian product](https://en.wikipedia.org/wiki/Cartesian_product) operation can return a set of "combinations" based on given values, so for example I could have the following values:

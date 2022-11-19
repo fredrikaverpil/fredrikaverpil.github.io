@@ -7,8 +7,7 @@ draft: true
 ShowToc: false
 TocOpen: false
 
-created: 2016-05-29T02:00:12+02:00
-updated: 2022-11-15T23:11:08+01:00
+date: 2016-05-29T02:00:12+02:00
 ---
 
 https://www.python.org/dev/peps/

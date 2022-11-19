@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2012-08-04T02:00:12+02:00
-updated: 2022-11-15T22:58:21+01:00
+date: 2012-08-04T02:00:12+02:00
 ---
 
 – Why film simulations are not disabled when shooting RAW?

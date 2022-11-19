@@ -12,8 +12,7 @@ cover:
 ShowToc: false
 TocOpen: false
 
-created: 2012-12-12T01:00:12+01:00
-updated: 2022-11-15T22:57:01+01:00
+date: 2012-12-12T01:00:12+01:00
 ---
 
 1. Create a camera and place it where your objects resides which the HDR dome should affect.

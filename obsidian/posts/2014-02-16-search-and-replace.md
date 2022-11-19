@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2014-02-16T01:00:12+01:00
-updated: 2022-11-15T22:29:16+01:00
+date: 2014-02-16T01:00:12+01:00
 ---
 
 A very simple and quite rudimental search and replace script with a UI. It will only search and replace _contents_ of files and not the filenames.

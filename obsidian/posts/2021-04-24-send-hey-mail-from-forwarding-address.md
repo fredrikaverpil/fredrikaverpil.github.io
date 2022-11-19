@@ -7,8 +7,7 @@ draft: true
 ShowToc: true
 TocOpen: true
 
-created: 2021-04-24T02:00:00+02:00
-updated: 2022-11-15T22:29:16+01:00
+date: 2021-04-24T02:00:00+02:00
 ---
 
 [HEY mail](https://hey.com/) announced a while back you can [send emails from external email addresses using SMTP](https://hey.com/features/send-as/). Just the other day, they now finally also announced that [their take on custom domains](https://hey.com/domains/).

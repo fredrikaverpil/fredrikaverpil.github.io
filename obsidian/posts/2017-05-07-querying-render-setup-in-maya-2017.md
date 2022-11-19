@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2017-05-07T02:00:12+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2017-05-07T02:00:12+02:00
 ---
 
 It seems Autodesk did not create a Render Setup documentation. This is me collecting code snippets and exploring Python functions.

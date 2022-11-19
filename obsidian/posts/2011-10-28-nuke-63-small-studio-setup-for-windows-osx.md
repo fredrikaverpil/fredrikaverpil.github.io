@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2011-10-28T21:58:04+02:00
-updated: 2022-11-15T22:29:17+01:00
+date: 2011-10-28T21:58:04+02:00
 ---
 
 This is a quick guide to setting Nuke 6.3 up with a custom menu and make it work more seamlessly across operating systems.

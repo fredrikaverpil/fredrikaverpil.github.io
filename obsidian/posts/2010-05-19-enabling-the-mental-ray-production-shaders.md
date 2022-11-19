@@ -7,8 +7,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 
-created: 2010-05-19T02:00:00+02:00
-updated: 2022-11-15T23:04:00+01:00
+date: 2010-05-19T02:00:00+02:00
 ---
 
 The production shader library contains a set of shaders aimed at production
