@@ -8,8 +8,8 @@ summary: "The stackable PR CLI tool."
 ShowToc: false
 TocOpen: true
 
-updated: 2022-11-16T00:14:16+01:00
 created: 2022-11-14T20:42:48+01:00
+
 ---
 
 The full list is available in the official [Graphite Documentation](https://docs.graphite.dev/guides/graphite-cli/command-shortcuts).
@@ -19,7 +19,7 @@ The full list is available in the official [Graphite Documentation](https://docs
 | ------------------------ | --------------- |
 | `gt log`                 | `gt l`          |
 | `gt log short`           | `gt ls`         |
-| `gt branch track`        | `gt btr`         | 
+| `gt branch track`        | `gt btr`        |
 | `gt branch checkout`     | `gt bco`        |
 | `gt branch up [steps]`   | `gt bu [steps]` |
 | `gt branch down [steps]` | `gt bd [steps]` |
@@ -32,7 +32,7 @@ The full list is available in the official [Graphite Documentation](https://docs
 | `gt repo sync`           | `gt rs`         |
 
 ## Rebasing
-| command           | shortcut |
-| ----------------- | -------- |
-|  `gt upstack restack`                 |    `gt usr`      |
-| `gt upstack onto` | `gt uso` |
+| command              | shortcut |
+| -------------------- | -------- |
+| `gt upstack restack` | `gt usr` |
+| `gt upstack onto`    | `gt uso` |

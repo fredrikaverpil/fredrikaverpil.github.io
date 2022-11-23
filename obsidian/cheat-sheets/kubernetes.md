@@ -8,8 +8,8 @@ summary: "Notes to self, snippets etc."
 ShowToc: true
 TocOpen: true
 
-updated: 2022-11-16T09:01:03+01:00
 created: 2022-11-14T20:42:48+01:00
+
 ---
 
 ## Pod

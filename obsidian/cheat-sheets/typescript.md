@@ -8,8 +8,8 @@ summary: "Typescript is 😖"
 ShowToc: true
 TocOpen: true
 
-updated: 2022-11-16T00:18:03+01:00
 created: 2022-11-14T20:42:48+01:00
+
 ---
 
 ## General notes
@@ -81,3 +81,6 @@ const myString: string = JSON.stringify(myObject)
 const invalidStringifiedObj: string = "foo"
 const default_to_empty_obj = JSON.parse(invalidStringifiedObj | {})
 ```
+
+### Promises
+

@@ -8,8 +8,8 @@ summary: "Notes on monitoring with Datadog."
 ShowToc: false
 TocOpen: true
 
-updated: 2022-11-16T00:53:28+01:00
 created: 2022-11-14T20:42:48+01:00
+
 ---
 
 ## Custom span
