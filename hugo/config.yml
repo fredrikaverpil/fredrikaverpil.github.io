@@ -2,12 +2,17 @@ baseURL: "https://fredrikaverpil.github.io"
 languageCode: en-us
 title: Fredrik Averpil
 theme: PaperMod
+enableGitInfo: true
+
 frontmatter:
   date:
     - date
     - created
   lastmod:
+    - lastmod
     - updated
+    - ":git"
+    - date
     - ":fileModTime"
 menu:
   main:
