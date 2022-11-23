@@ -35,11 +35,6 @@ taxonomies:
   tag: tags
 markup:
   highlight:
-    anchorLineNos: false
-    codeFences: true
-    # guessSyntax: true
-    lineNos: true # messes up background color
-    # noClasses: false
     style: dracula
 params:
   defaultTheme: dark
