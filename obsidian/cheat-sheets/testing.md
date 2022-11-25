@@ -8,8 +8,7 @@ summary: "Nice things I've picked up along the way."
 ShowToc: false
 TocOpen: false
 
-created: 2022-11-14T20:42:48+01:00
-
+date: 2022-11-25T20:09:32+01:00
 ---
 
 ## Test-driven development

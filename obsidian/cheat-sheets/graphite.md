@@ -8,9 +8,14 @@ summary: "The stackable PR CLI tool."
 ShowToc: false
 TocOpen: true
 
-created: 2022-11-14T20:42:48+01:00
-
+date: 2022-11-25T20:09:32+01:00
 ---
+
+## Rebase and update stack
+
+```bash
+gt rs -fr && gt ss
+```
 
 The full list is available in the official [Graphite Documentation](https://docs.graphite.dev/guides/graphite-cli/command-shortcuts).
 

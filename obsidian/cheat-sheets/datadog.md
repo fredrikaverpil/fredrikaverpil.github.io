@@ -8,8 +8,7 @@ summary: "Notes on monitoring with Datadog."
 ShowToc: false
 TocOpen: true
 
-created: 2022-11-14T20:42:48+01:00
-
+date: 2022-11-25T20:09:32+01:00
 ---
 
 ## Custom span
@@ -91,7 +90,7 @@ def tag_span_with_exception_info(span: ddtrace.span.Span, exc_info: OptExcInfo) 
 	resource="example-resource",
 )
 def main():
-	configure_excepthooks()
+	configure_excepthooks()  # report APM error on unexpected exception
     # run cronjob or similar...
     pass
 

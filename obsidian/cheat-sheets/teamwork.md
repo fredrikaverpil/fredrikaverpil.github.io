@@ -8,8 +8,7 @@ summary: ""
 ShowToc: true
 TocOpen: true
 
-created: 2022-11-14T20:42:48+01:00
-
+date: 2022-11-25T20:09:32+01:00
 ---
 
 ## Specialists vs generalists

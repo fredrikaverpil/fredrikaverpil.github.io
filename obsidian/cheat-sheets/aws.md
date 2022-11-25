@@ -8,8 +8,7 @@ summary: "AWS snippets, gotchas etc."
 ShowToc: false
 TocOpen: true
 
-created: 2022-11-14T20:42:48+01:00
-
+date: 2022-11-25T20:10:14+01:00
 ---
 
 ## S3
