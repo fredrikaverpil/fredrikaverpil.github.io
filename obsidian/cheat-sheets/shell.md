@@ -6,9 +6,9 @@ summary: "Notes to self, snippets etc."
 
 # PaperMod
 ShowToc: false
-TocOpen: true
+TocOpen: false
 
-date: 2022-11-25T20:09:32+01:00
+date: 2022-11-27T13:42:55+01:00
 ---
 
 ## Load variables from .env file into current environment

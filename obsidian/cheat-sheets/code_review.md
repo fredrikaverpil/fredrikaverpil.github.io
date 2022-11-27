@@ -5,10 +5,10 @@ draft: false
 summary: "Good practices during code review."
 
 # PaperMod
-ShowToc: true
-TocOpen: true
+ShowToc: false
+TocOpen: false
 
-date: 2022-11-25T20:09:32+01:00
+date: 2022-11-27T13:42:27+01:00
 ---
 
 ## Assert using previous production code

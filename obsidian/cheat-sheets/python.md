@@ -5,10 +5,10 @@ draft: false
 summary: "Notes to self, snippets etc."
 
 # PaperMod
-ShowToc: false
+ShowToc: true
 TocOpen: true
 
-date: 2022-11-25T20:09:32+01:00
+date: 2022-11-27T14:17:09+01:00
 ---
 
 ## Exceptions
@@ -42,8 +42,8 @@ from functools import lru_cache
 import random
 
 
-@lru_cache(maxsize=128)
-def my_func(ttl_hash: int | None = None) -> MetadataClient:
+@lru_cache(maxsize=2)
+def my_func(ttl_hash: int | None = None) -> int:
 	return random.randint(0, 10)
 
 
