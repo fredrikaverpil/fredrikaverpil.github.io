@@ -62,7 +62,7 @@ params:
     - name: "LinkedIn"
       url: "https://www.linkedin.com/in/fredrik/"
     - name: "RSS"
-      url: "index.xml"
+      url: "posts/index.xml"
 
   editPost:
     URL: "https://github.com/fredrikaverpil/fredrikaverpil.github.io/tree/main/obsidian/"
