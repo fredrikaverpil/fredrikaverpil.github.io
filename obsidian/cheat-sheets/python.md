@@ -8,7 +8,7 @@ summary: "Notes to self, snippets etc."
 ShowToc: true
 TocOpen: true
 
-date: 2022-11-27T14:17:09+01:00
+date: 2022-11-28T13:04:17+01:00
 ---
 
 ## Exceptions
@@ -108,4 +108,56 @@ You may want to run your tests in both UTC and e.g. your local timezone:
 TZ=Europe/Stockholm pytest
 TZ=UTC pytest
 ```
+
+## Pattern matching gotchas
+
+Like with ifs and switches, you only match against one case. "Optional remainders" can also be used:
+
+```jupyter
+my_dict = {"fruit": "apple", "digit": 1}
+
+match my_dict:
+    case {"fruit": "apple", **remainder_kwargs}:
+        print("Found apple in match 1")  # will be found
+    case {"digit": 1, **remainder_kwargs}:
+	    print("Found digit in match 1")  # will not be found as we already found the apple.
+
+match my_dict:
+    case {"digit": 1, **remainder_kwargs}:
+        print("Found digit in match 2")  # will be found
+    case {"fruit": "apple", **remainder_kwargs}:
+        print("Found apple in match 2")  # will not be found as we already found the digit.
+
+```
+
+
+### Don't pattern-match on iterables
+
+Ordering matters when pattern matching on iterables, so it's probably not a great idea to do this, generally. You also cannot specify the "optional remainders" both before AND after an item in the list, so there is no way to identify one single item in a list reliably using pattern matching:
+
+```jupyter
+my_list = ["apple", "orange"]
+
+match my_list:
+    case ["apple", _]:
+        print("Found the apple first in the list")  # will find the apple
+
+match my_list:
+    case ["orange", _]:
+        print("Found the orange first in the list")  # will NOT be found
+
+match my_list:
+    case [x, "apple", y]:
+        print("Found the apple with non-optionals") # will NOT find the apple
+    case [x, "orange", *y]:
+        print("Found the orange with multiple optionals") # will find the orange
+        
+```
+
+```python
+match my_list:
+    case [*x, "orange", *y]:  # syntax error
+        print("Found the orange with multiple optionals before AND after")
+```
+
 
