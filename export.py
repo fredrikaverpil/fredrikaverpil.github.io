@@ -18,6 +18,7 @@ class ObsidianPage:
     def process(self):
         self.gist()
         self.post.content = replace_wiki_links(self.post.content)
+        self.jupyter()
 
     def gist(self):
         """Convert gist into a shortcode.
@@ -46,6 +47,9 @@ class ObsidianPage:
 
                 self.post.content = self.post.content.replace(code_block, shortcode)
                 logger.info(f"Replaced gist in {self.filepath}")
+
+    def jupyter(self):
+        self.post.content = self.post.content.replace("```jupyter", "```python")
 
 
 def parse_args():
