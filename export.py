@@ -127,16 +127,19 @@ def rm_tree(pth: Path):
 
 
 def write(src: Path, dst: Path, obsidian_pages: list[ObsidianPage]):
+    logger.info(f"Copying {len(obsidian_pages)} markdown files from {src} to {dst}...")
     rm_tree(dst)
-
+    file_counter = 0
     for obsidian_page in obsidian_pages:
-        target = Path(
-            str(obsidian_page.filepath.absolute()).replace(str(src), str(dst))
-        )
+        target = dst / obsidian_page.filepath.relative_to(src)
+
         target.parent.mkdir(parents=True, exist_ok=True)
+
         with open(target, "w") as f:
             f.write(frontmatter.dumps(obsidian_page.post))
-            logger.debug(f"Wrote {target}")
+            file_counter += 1
+
+    logger.info(f"Done copying {file_counter} markdown files.")
 
 
 def copy_static_files(src: Path, dst: Path):
