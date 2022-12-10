@@ -15,7 +15,7 @@ hugo new posts/my-first-post.md
 ```bash
 # test
 cd hugo
-git clone https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+git clone https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
 echo theme = \"ananke\" >> config.toml
 ```
 
