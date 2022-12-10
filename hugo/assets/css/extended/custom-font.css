@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/static/Mona-Sans.woff2") format("woff2 supports variations"),
+    url("/static/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css);
+
+html {
+  font-family: "Mona Sans";
+  font-size: 1rem;
+}
+
+body {
+    font-family: "Mona Sans";
+    font-size: 1rem;
+}
+
+code {
+  font-family: "Fira Code";
+}
