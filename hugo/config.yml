@@ -72,6 +72,8 @@ params:
   ShowReadingTime: true
   ShowCodeCopyButtons: true
 
+  comments: true
+
   # PaperModX
   TocSide: "right"
 
