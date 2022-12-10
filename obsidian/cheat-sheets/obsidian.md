@@ -11,6 +11,8 @@ TocOpen: true
 date: 2022-11-25T20:09:32+01:00
 ---
 
+## Other published Obsidian vaults
+
 - https://github.com/xcad2k/cheat-sheets
 
 ## Callouts
