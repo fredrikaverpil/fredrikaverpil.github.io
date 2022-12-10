@@ -53,7 +53,7 @@ The fluorescent shot and the tungsten shot were both taken in a dark room with e
 ### Presets
 
 
-[![](/static/x100s/presets.jpg)](https://www.flickr.com/photos/fredrik/9051954579/)  
+[![](fredrikaverpil.github.io/obsidian/static/x100s/presets.jpg)](https://www.flickr.com/photos/fredrik/9051954579/)  
 *Presets comparison. Click image for larger version.*
 
 

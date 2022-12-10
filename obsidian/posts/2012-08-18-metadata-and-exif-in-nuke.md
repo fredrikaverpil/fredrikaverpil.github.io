@@ -20,7 +20,7 @@ In the example below, I am using JPEG footage from a GoPro HD Hero2 but this tec
 
 First, check the name of the metadata you wish to extract. This can be done via the ViewMetaData node.
 
-![](/static/nuke_metadata/metadata_viewmetadatanode.png)
+![](fredrikaverpil.github.io/obsidian/static/nuke_metadata/metadata_viewmetadatanode.png)
 *In this case, I am looking for the image’s date and time values.*
 
 ## Extracting the metadata using Python
@@ -33,7 +33,7 @@ In my case I am going to attach a Text node directly to the Read node and type t
 Current time: [python {nuke.thisNode().metadata()['exif/0/DateTime']}]
 ```
 
-![](/static/nuke_metadata/metadata_textnode.png)
+![](fredrikaverpil.github.io/obsidian/static/nuke_metadata/metadata_textnode.png)
 *This would cause the resulting render to say “Current time: 2012:08:10 15:51:13” for this frame.*
 
 ## Defining a Read node to extract metadata from

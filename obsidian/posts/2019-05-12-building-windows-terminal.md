@@ -81,15 +81,15 @@ Launch VS2019 and open the `OpenConsole.sln` solution inside the cloned git "Ter
 
 You will be prompted to upgrade the environment. In this dialog, choose to use Windows 10 SDK 10.0.18362.0, do _not_ upgrade the Platform Toolset to v142 (meaning; keep using v141) and click "OK", leaving all the remaining boxes ticked.
 
-![](/static/terminal/retarget.png)
+![](fredrikaverpil.github.io/obsidian/static/terminal/retarget.png)
 
 When the solution has been fully loaded, choose the following configuration dropdown menu values "Release", "x64", "CascadiaPackage" and click the "Local Machine" button. This will build, deploy and launch the terminal.
 
-![](/static/terminal/configuration.png)
+![](fredrikaverpil.github.io/obsidian/static/terminal/configuration.png)
 
 You will now find the "Windows Terminal (Dev Build)" in the Windows Start menu and you don't have to launch this from within VS2019 again.
 
-![](/static/terminal/start-menu.png)
+![](fredrikaverpil.github.io/obsidian/static/terminal/start-menu.png)
 
 ### Build on command line
 
@@ -110,7 +110,7 @@ For more details on these commands, see the [tools/README.md](https://github.com
 
 This will produce `CascadiaPackage_0.0.1.0_x64.msix` inside of `src\cascadia\CascadiaPackage\AppPackages\ ...`.
 
-![](/static/terminal/msix-location.png)
+![](fredrikaverpil.github.io/obsidian/static/terminal/msix-location.png)
 
 However, you cannot install it, as it does not contain a valid certificate.
 

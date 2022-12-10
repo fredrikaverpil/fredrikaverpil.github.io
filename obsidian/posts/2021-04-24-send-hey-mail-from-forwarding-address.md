@@ -26,7 +26,7 @@ I've realized this is not a great workaround for using Hey's custom domains. The
 
 This results in the "via outlook.com" notice in e.g. Gmail:
 
-![](/static/hey/outlook_smtp.png)
+![](fredrikaverpil.github.io/obsidian/static/hey/outlook_smtp.png)
 
 It was recently brought to my attention that my emails often end up in the spam folder for recipients who does not already have me in their address book. And I think this may be because of the sender address not matching my domain name.
 

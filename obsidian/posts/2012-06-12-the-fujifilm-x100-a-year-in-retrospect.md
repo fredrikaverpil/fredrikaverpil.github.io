@@ -29,7 +29,7 @@ I am sure a lot of people have found their compromise between image quality and 
 
 I remember longing for the X100 before it was even released as I vacuumed forums and YouTube reviews that appeared around the Internet. I read everything that I could come by and I remember thinking that this could be what I had been waiting for. It came in this really refreshing and relatively small form factor – and hey, it actually sported a near-full frame sensor!
 
-![Haga Nygata](/static/x100/x100_review_02.jpg)
+![Haga Nygata](fredrikaverpil.github.io/obsidian/static/x100/x100_review_02.jpg)
 *X100 23mm, f/4.0, 1/1900, ISO 200.*
 
 There was just one drawback as I saw it: it came with a fixed prime lens.
@@ -40,7 +40,7 @@ So the camera arrived and I spent a whole evening just reading through the manua
 
 I instinctively set it to shoot RAW only and started carrying the camera with me everywhere I went. The image quality was just stunning. It matched the image quality and surpassed that of consumer DSLRs in many cases. I truly felt this was an awesome camera. But a lot of shots were out of focus when I brought them (RAW files) into post production. How come?
 
-![Hot summer afternoon](/static/x100/x100_review_03.jpg)
+![Hot summer afternoon](fredrikaverpil.github.io/obsidian/static/x100/x100_review_03.jpg)
 *X100 23mm, f/2.0, 1/340, ISO 1000.*
 
 ## Focus & speed
@@ -51,7 +51,7 @@ I even tried to “prepare” the camera for the most common situations. So I se
 
 Fortunately, all of this changed in the first quarter of 2012, somewhere between firmware 1.13 and 1.21 (as it is a pretty much undocumented enhancement). Auto focus became both faster and more reliable. Some say it is like a different camera, and I would agree. Now I mostly have the camera set to AF-S and just shoot. In very dim-lit situations I use the AF-C as this seem to be better at locking focus during those circumstances. Big kudos to Fujifilm for bringing this update to existing owners, and not saving this for upcoming camera models of the X100. I hardly get any missed shots with the current firmware (as of writing this with version 1.30), although it is not as fast as a DSLR of course.
 
-![Work lunch](/static/x100/x100_review_04.jpg)
+![Work lunch](fredrikaverpil.github.io/obsidian/static/x100/x100_review_04.jpg)
 *X100 23mm, f/4.0, 1/125, ISO 1600.*
 
 ## RAW vs JPEG
@@ -64,7 +64,7 @@ Edit: Having said this, this is comparing RAW to JPG and the JPG quality is abso
 
 But what is worth mentioning and often forgotten feature of the X100 is the built-in RAW developer. You can always select a RAW file and develop it into JPG using other settings, tweaking shadows, highlights, sharpness and film simulation. This is often enough in order to produce a great looking JPG without the need of bringing it into the computer. Oh how I would love to see this as a piece of standalone software (or plugin) rather than having to develop photos one by one in-camera.
 
-![Sardinia berries](/static/x100/x100_review_05.jpg)
+![Sardinia berries](fredrikaverpil.github.io/obsidian/static/x100/x100_review_05.jpg)
 *X100 23mm, f/5.6, 1/450, ISO 500.*
 
 ## Features worth mentioning
@@ -75,7 +75,7 @@ It feels like the X100 is equipped with the world’s fastest fill flash as it s
 
 Unfortunately, the video mode is quite disappointing. For some reason it is not possible to manually change focus during recording using the MF ring or the AFL button. I don’t know how one would shoot video without this feature unless you shoot static objects and refer from moving either the object or the camera. Hand held videos look super shaky even when you try to hold it still (probably because there is no image stabilization). I’d also say that the video compression is set way too high (meaning bad quality) for this type of camera. Nuff said.
 
-![Victoriapassagen](/static/x100/x100_review_06.jpg)
+![Victoriapassagen](fredrikaverpil.github.io/obsidian/static/x100/x100_review_06.jpg)
 *X100 23mm, f/4.0, 1/125, ISO 500.*
 
 ## A fixed prime
@@ -86,7 +86,7 @@ Some photographers say it makes you actually think, makes you plan your shot and
 
 And so Fujifilm just recently released [a wide conversion lens](http://fujifilm-x.com/accessories/en/lens-accessories/conversionlens/wcl-x100/). Doh. Even though highly unlikely, I’m still keeping my fingers crossed for a telephoto conversion as I know I’d make good use of one.
 
-![Paris](/static/x100/x100_review_07.jpg)
+![Paris](fredrikaverpil.github.io/obsidian/static/x100/x100_review_07.jpg)
 *X100 23mm, f/4.0, 1/210, ISO 200.*
 
 ## The looks
@@ -105,7 +105,7 @@ After having used the camera for about a year, [lug wear from the triangle ring 
 
 I’ve noticed quite a lot of X100 owners have moved onto the X-Pro1. I’m actually not a huge fan of it, though I reckon the image quality is better than that of the X100. It’s the portability vs image quality of the X100 that got my attention and it’s still undefeated on that note when taking price into account as well.
 
-![Tweed party](/static/x100/x100_review_08.jpg)
+![Tweed party](fredrikaverpil.github.io/obsidian/static/x100/x100_review_08.jpg)
 *X100 23mm, f/5.6, 1/200, ISO 400.*
 
 ## Conclusion

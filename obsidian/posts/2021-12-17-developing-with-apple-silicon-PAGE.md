@@ -39,7 +39,7 @@ You can read more in Apple's [official docs](https://support.apple.com/en-us/HT2
 
 I have duplicated my Terminal application of choice (<kbd>Cmd</kbd>+<kbd>d</kbd>) and renamed the duplicate "Terminal Rosetta". Then I've ticked the "Open using Rosetta" checkbox after having hit <kbd>Cmd</kbd>+<kbd>i</kbd> on its icon. This gives me one Terminal to run for native applications and one for Intel emulation.
 
-![Finder window with app icons](/static/applesilicon/terminals.png)
+![Finder window with app icons](fredrikaverpil.github.io/obsidian/static/applesilicon/terminals.png)
 
 This is not how I usually work, as I prefer to set up commands which can run in the native terminal and perform emulation. But I figured, I'd mention this anyways.
 

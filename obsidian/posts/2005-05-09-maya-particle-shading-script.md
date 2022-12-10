@@ -20,23 +20,23 @@ Except being able to render the particles in the hardware batch renderer or hard
 
 For those of you who need custom tailored shading, I’ll try and explain how you can set up your own particle shading in the tutorial below. A couple of example scenes are available for download below:
 
-- [particleHWShader_1_1.mel](/static/maya_particle_shading_script/particleHWShader_1_1.mel) - MEL script (also available at Creative Crash)
-- [example_depth.ma](/static/maya_particle_shading_script/example_depth.ma) - Maya 5.0 ASCII
-- [example_depthAndHeight.ma](/static/maya_particle_shading_script/example_depthAndHeight.ma) - Maya 5.0 ASCII
+- [particleHWShader_1_1.mel](fredrikaverpil.github.io/obsidian/static/maya_particle_shading_script/particleHWShader_1_1.mel) - MEL script (also available at Creative Crash)
+- [example_depth.ma](fredrikaverpil.github.io/obsidian/static/maya_particle_shading_script/example_depth.ma) - Maya 5.0 ASCII
+- [example_depthAndHeight.ma](fredrikaverpil.github.io/obsidian/static/maya_particle_shading_script/example_depthAndHeight.ma) - Maya 5.0 ASCII
 
 ## Tutorial, part 1: Depth shader
 
-![](/static/maya_particle_shading_script/2_1.gif)
+![](fredrikaverpil.github.io/obsidian/static/maya_particle_shading_script/2_1.gif)
 
 Okay, so you want to do some particle shading. First, create some particles and maybe add some fields to them to spice it up. Also create a regular camera. In my script below I assume that the name of the particles is “particle1” and the name of the camera is “camera1”.
 
-![](/static/maya_particle_shading_script/2_2.gif)
+![](fredrikaverpil.github.io/obsidian/static/maya_particle_shading_script/2_2.gif)
 
 Let’s start by making our own particle depth shader.
 
 Open up the particleShape1 in the attribute editor and scroll down to the per particle (array) attributes. Under the “add dynamic attributes” section, hit the “general” button. Here type distanceToCamPP into the attribute name field. Then tick the “per particle (array)” option under attribute type. Hit “OK”. Now, under the “add dynamic attributes” section, hit the “color” button and choose “add per particle attribute”. You should now have two new attributes under the particleShape’s per particle (array) attributes list in the attribute editor: distanceToCamPP and rgbPP.
 
-![](/static/maya_particle_shading_script/2_3.gif)
+![](fredrikaverpil.github.io/obsidian/static/maya_particle_shading_script/2_3.gif)
 
 Right-click in the textfield next to rgbPP in the attribute editor and choose “runtime after dynamics expression” (or in Maya 5.0, choose “runtime expression”). Type the following into the textbox:
 
@@ -63,7 +63,7 @@ particleShape1.rgbPP = <>;
 
 …and hit the “create” button!
 
-![](/static/maya_particle_shading_script/2_4.gif)
+![](fredrikaverpil.github.io/obsidian/static/maya_particle_shading_script/2_4.gif)
 
 Now let’s make the camera’s clipping plane visible. Select camera1 and enable clipping planes (found in the “camera/ligth manipulator” menu under the “display” dropdown). Still having the camera1 selected, fire up the attribute editor and set the far clipping plane to a fairly low value, so that it ends just beyond the furthest particle (depth-wise). If you hit play and let your particles emit, you should be able to see their color ranging from black to white. It is completely black at the camera’s near clipping plane and completely white at the camera’s far clipping plane.
 
@@ -72,13 +72,13 @@ Cool, you just made your own particle depth shader!
 
 ## Tutorial, part 2: Combined particle depth and height shader
 
-![](/static/maya_particle_shading_script/2_5.gif)
+![](fredrikaverpil.github.io/obsidian/static/maya_particle_shading_script/2_5.gif)
 
 The script that Björn and I have written asks you about what you want rendered in each of the RGB channels and then hooks your particle system up accordingly with a camera of choice. This is what we are going to take a look at next!
 
 Oh and by the way, if you were wondering, the expressions in our MEL script is much more optimized for performance and could be harder to grasp if you are learning to write your own expressions.
 
-![](/static/maya_particle_shading_script/2_6.gif)
+![](fredrikaverpil.github.io/obsidian/static/maya_particle_shading_script/2_6.gif)
 
 Let’s put the depth information and height information into the rg channels (we’ll leave the b channel empty). This way we can access both the depth image and the height image from within the same file in our favourite compositing application.
 

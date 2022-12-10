@@ -198,7 +198,7 @@ Add breakpoints by clicking just left to the line number of the code you wish to
 
 Now, in the debug menu, from the "Run and debug" section (upper left corner), you can pick between the different configurations (from the `.vscode/launch.json`) and execute them (click the green "play" button). Visual Studio Code's debugger wrapper will now execute the command and stop the execution on your breakpoints.
 
-![alt text](/static/poetry_debug/debug.png "Debug")
+![alt text](fredrikaverpil.github.io/obsidian/static/poetry_debug/debug.png "Debug")
 
 Inspect objects and navigate the call stack to the left and use the navigation in the top center to continue, step over/into/out of, restart or stop.
 You can also view the terminal or use the debug console at the bottom. Keep track of your breakpoints in the lower left corner section "Breakpoints".

@@ -22,7 +22,7 @@ date: 2012-12-12T01:00:12+01:00
 
 ## Sample scene
 
-Example Maya scene provided [here](/static/vray/spherical_hdr_gen_maya.ma) (save as); a simple cube environment, an area light and a camera.
+Example Maya scene provided [here](fredrikaverpil.github.io/obsidian/static/vray/spherical_hdr_gen_maya.ma) (save as); a simple cube environment, an area light and a camera.
 
-![](/static/vray/vray_spherical_hdr_02.png)
+![](fredrikaverpil.github.io/obsidian/static/vray/vray_spherical_hdr_02.png)
 *Sample Maya scene.*

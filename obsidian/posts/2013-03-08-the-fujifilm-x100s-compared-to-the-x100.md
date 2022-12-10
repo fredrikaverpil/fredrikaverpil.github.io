@@ -44,8 +44,8 @@ looking for the more hands-on experience related changes, read on…
 * The minimum distance to an object which the AF while lock focus on is even smaller than on the X100 (50 cm vs 80 cm in OVF, 21 cm vs 40 cm in EVF) and it is very noticeable when shooting objects in motion such as pets, kids and the girlfriend – who tends to lunge at you sometimes when you are trying to take their picture...
 
 
-![](/static/x100s/x100s_review_001.jpg)
-*X100S 23mm, f/5.6, 1/950, ISO 200. [RAW file download](/static/x100s/raw/DSCF0613.RAF).*
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_001.jpg)
+*X100S 23mm, f/5.6, 1/950, ISO 200. [RAW file download](fredrikaverpil.github.io/obsidian/static/x100s/raw/DSCF0613.RAF).*
 
 
 ### Manual focusing and the MF ring
@@ -57,8 +57,8 @@ looking for the more hands-on experience related changes, read on…
 For some reason manual focusing does not work at all when shooting with the advanced filters. If the camera is set to MF, it will still behave as if it was set to AF-S.
 
 
-![](/static/x100s/x100s_review_002.jpg)
-*X100S 23mm, f/5.6, 1/100, ISO 3200. [RAW file download](/static/x100s/raw/DSCF0414.RAF).*
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_002.jpg)
+*X100S 23mm, f/5.6, 1/100, ISO 3200. [RAW file download](fredrikaverpil.github.io/obsidian/static/x100s/raw/DSCF0414.RAF).*
 
 
 ### Hybrid viewfinder
@@ -70,8 +70,8 @@ For some reason manual focusing does not work at all when shooting with the adva
 * There is a new layout to the overlay information/graphics in the optical viewfinder (OVF) and the EVF. For the better in my opinion, leaving less icons or information in frame but rather up on top or to the sides.
 
 
-![](/static/x100s/x100s_review_003.jpg)
-*X100S 23mm, f/4, 1/125, ISO 200. [RAW file download](/static/x100s/raw/DSCF0359.RAF).*
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_003.jpg)
+*X100S 23mm, f/4, 1/125, ISO 200. [RAW file download](fredrikaverpil.github.io/obsidian/static/x100s/raw/DSCF0359.RAF).*
 
 
 ### Menus and buttons in general
@@ -84,7 +84,7 @@ For some reason manual focusing does not work at all when shooting with the adva
 * Hitting the “AE” button will bring up the photometry selection menu (Multi, Spot, Average) and this does no longer require you to press and hold the “AE” button.
 
 
-![](/static/x100s/x100s_review_004.jpg)
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_004.jpg)
 *X100S 23mm, f/2.0, 1/400, ISO 200.*
 
 
@@ -100,7 +100,7 @@ To summarise the above, “Basic” seems to reflect whatever state the camera i
 On top of that little source of possible confusion, the Q button menu’s “Basic” mode does not remember the Auto ISO setting when scrolling through C1/C2/C3/Basic while in the Q button menu. Instead it inherits values from custom profiles C1 or C3 (depending on which way you scroll through the three custom profiles). This, I would say has to be a clear-cut bug, and which I hope Fujifilm will address in an upcoming firmware update. Update April 22nd, 2014: This bug was fixed with firmware update 1.20.
 
 
-![](/static/x100s/x100s_review_005.jpg)
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_005.jpg)
 *X100S 23mm, f/4.0, 1/480, ISO 400.*
 
 
@@ -112,7 +112,7 @@ On top of that little source of possible confusion, the Q button menu’s “Bas
 * The Q button is sunken into to the body, making it easier to identify while looking through the view finder than its former equivalent on the X100.
 
 
-![](/static/x100s/x100s_review_006.jpg)
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_006.jpg)
 *X100S 23mm, f/4.0, 1/950, ISO 800.*
 
 
@@ -133,7 +133,7 @@ The video capabilities of the X100S is a big step up from the X100, but it is no
 * Movies shot in 60 fps looks unnatural when played back. I also don’t like the 48 fps movies in the cinema, for your reference…
 
 
-![](/static/x100s/x100s_review_007.jpg)
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_007.jpg)
 *X100S 23mm, f/8.0, 1/500, ISO 200.*
 
 
@@ -147,8 +147,8 @@ The video capabilities of the X100S is a big step up from the X100, but it is no
 I would recommend all JPEG shooters to start out by shooting F+RAW of RAW and try different JPEG developing settings with the built-in RAW converter. This is the only way you will be able to find those magic JPEG settings you are looking for as they are not at all the same as on the X100.
 
 
-![](/static/x100s/x100s_review_008.jpg)
-*X100S 23mm, f/4, 1/60, ISO 6400. [RAW file download](/static/x100s/raw/DSCF0473.RAF).*
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_008.jpg)
+*X100S 23mm, f/4, 1/60, ISO 6400. [RAW file download](fredrikaverpil.github.io/obsidian/static/x100s/raw/DSCF0473.RAF).*
 
 
 ### ISO
@@ -161,8 +161,8 @@ I would recommend all JPEG shooters to start out by shooting F+RAW of RAW and tr
 Check out the photo below. Is that pretty darn good for being ISO 6400 or what? It’s actually usable where ISO 3200 on the X100 was completely unusable (in my humble opinion and for my purposes, that is).
 
 
-![](/static/x100s/x100s_review_009.jpg)
-*X100S 23mm, f/5.6, 1/125, ISO 6400. [RAW file download](/static/x100s/raw/DSCF0481.RAF).*
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_009.jpg)
+*X100S 23mm, f/5.6, 1/125, ISO 6400. [RAW file download](fredrikaverpil.github.io/obsidian/static/x100s/raw/DSCF0481.RAF).*
 
 
 ### White balance
@@ -170,7 +170,7 @@ Check out the photo below. Is that pretty darn good for being ISO 6400 or what? 
 * After having set the white balance, you can now fine-tune it in a two-dimensional grid by shifting cyan, blue, red and yellow.
 
 
-![](/static/x100s/x100s_review_010.jpg)
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_010.jpg)
 *X100S 23mm, f/2.0, 1/340, ISO 200.*
 
 
@@ -181,7 +181,7 @@ Check out the photo below. Is that pretty darn good for being ISO 6400 or what? 
 * With the X100, sometimes shots would come out a tiny bit overexposed (I’m not talking SAB). This is something that I do not experience with the X100S.
 
 
-![](/static/x100s/x100s_review_011.jpg)
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_011.jpg)
 *X100S 23mm, f/2.8, 1/350, ISO 200.*
 
 
@@ -192,7 +192,7 @@ Check out the photo below. Is that pretty darn good for being ISO 6400 or what? 
 * You can now use the ND filter in Motion Panorama mode.
 
 
-![](/static/x100s/x100s_review_012.jpg)
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_012.jpg)
 *X100S 23mm, f/5.6, 1/125, ISO 250.*
 
 
@@ -203,8 +203,8 @@ I  managed to squeeze out 406 photos over several days during “normal travelli
 When you see two (out of three) bars, change the battery, just like on the X100.
 
 
-![](/static/x100s/x100s_review_013.jpg)
-*X100S 23mm, f/4, 1/550, ISO 200 [RAW file download](/static/x100s/raw/DSCF0638.RAF).*
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_013.jpg)
+*X100S 23mm, f/4, 1/550, ISO 200 [RAW file download](fredrikaverpil.github.io/obsidian/static/x100s/raw/DSCF0638.RAF).*
 
 
 ### Raw & X-Trans
@@ -231,8 +231,8 @@ The following is related to working with Lightroom 4.4 rather than the actual RA
 Here’s a crazy idea. Since Fujifilm obviously are the only ones who really know how the .RAF RAW file should be converted into JPEG (see my JPEG notes), why don’t you (Fujifilm) enable 16-bit TIF export in the in-camera RAW converter? The reason for me saying this is not because I’m unhappy with the RAW files, it’s just that when I watch the JPEG and RAW side by side, the JPEGs just look so amazing. To me, it’s just sometimes virtually impossible to edit a RAW file to mimic local areas or features of a JPEG. But if bringing the JPEG into post production, I can’t utilize the full 14-bits of color depth.
 
 
-![](/static/x100s/x100s_review_014.jpg)
-*X100S 23mm, f/5.6, 1/125, ISO 3200. [RAW file download](/static/x100s/raw/DSCF0449.RAF).*
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_014.jpg)
+*X100S 23mm, f/5.6, 1/125, ISO 3200. [RAW file download](fredrikaverpil.github.io/obsidian/static/x100s/raw/DSCF0449.RAF).*
 
 
 ### Other things worth mentioning
@@ -247,7 +247,7 @@ Here’s a crazy idea. Since Fujifilm obviously are the only ones who really kno
 * The X100 was somewhat difficult to handle with gloves (gloves are nice to have in the winter time here in Sweden), but the X100S now has the raised menu button and this is no longer an issue.
 
 
-![](/static/x100s/x100s_review_015.jpg)
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_015.jpg)
 *X100S 23mm, f/2.8, 1/1250, ISO 200.*
 
 
@@ -302,7 +302,7 @@ The rest of the values are all at their defaults.
 * Power management, high performance: on.
 
 
-![](/static/x100s/x100s_review_016.jpg)
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_016.jpg)
 *X100S 23mm, f/4.0, 1/125, ISO 800.*
 
 
@@ -325,7 +325,7 @@ In short, if the X100S doesn’t receive the gold award over at DPReview, it has
 <strong>Update July 30<sup>th</sup>, 2013:</strong> DPReview has finally released their X100S review – and gave it a 81% score along with the gold award.
 
 
-![](/static/x100s/x100s_review_017.jpg)
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_017.jpg)
 *X100S 23mm, f/2.0, 1/60, ISO 400.*
 
 
@@ -336,7 +336,7 @@ Ah yes. It’s not a proper Fuji X camera release without a firmware wish list. 
 Please remember that Fujifilm did not really add that much new features on the X100 via firmware updates. Instead, they tweaked existing functionality. Also, when you go back and look at what they actually fixed, that’s not much either. So, use your votes wisely.
 
 
-![](/static/x100s/x100s_review_018.jpg)
+![](fredrikaverpil.github.io/obsidian/static/x100s/x100s_review_018.jpg)
 *X100S 23mm, f/2.0, 1/420, ISO 200.*
 
 

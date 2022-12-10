@@ -27,8 +27,8 @@ People’s faces being smoothened out like my hand (below) totally ruins the sho
 A forum thread discussing the issue can be found [here](http://www.fujix-forum.com/threads/whats-your-jpeg-settings-for-iso-6400-avoiding-smoothening.9278/) and example below with JPEG as well as corresponding RAF.
 
 
-![](/static/x100s/skin_smoothening/DSCF4008.JPG)
-*X100S, ISO 6400, NR -2. [JPEG download](/static/x100s/skin_smoothening/DSCF4008.JPG) & [RAF download](/static/x100s/skin_smoothening/DSCF4008.RAF).*
+![](fredrikaverpil.github.io/obsidian/static/x100s/skin_smoothening/DSCF4008.JPG)
+*X100S, ISO 6400, NR -2. [JPEG download](fredrikaverpil.github.io/obsidian/static/x100s/skin_smoothening/DSCF4008.JPG) & [RAF download](fredrikaverpil.github.io/obsidian/static/x100s/skin_smoothening/DSCF4008.RAF).*
 
-![](/static/x100s/skin_smoothening/DSCF4009.JPG)
-*X100S, ISO 1600, NR -2. [JPEG download](/static/x100s/skin_smoothening/DSCF4009.JPG) & [RAF download](/static/x100s/skin_smoothening/DSCF4009.RAF).*
+![](fredrikaverpil.github.io/obsidian/static/x100s/skin_smoothening/DSCF4009.JPG)
+*X100S, ISO 1600, NR -2. [JPEG download](fredrikaverpil.github.io/obsidian/static/x100s/skin_smoothening/DSCF4009.JPG) & [RAF download](fredrikaverpil.github.io/obsidian/static/x100s/skin_smoothening/DSCF4009.RAF).*
