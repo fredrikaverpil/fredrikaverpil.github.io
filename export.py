@@ -15,10 +15,33 @@ class ObsidianPage:
         self.filepath = filepath
         self.post = post
 
-    def process(self):
+    def process(self, args: argparse.Namespace):
         self.gist()
+        self.post.content = self.replace_static_vault_links(
+            self.post.content,
+            src_uri=args.obsidian_vault_static_uri,
+            dst_uri=args.hugo_static_uri,
+        )
         self.post.content = replace_wiki_links(self.post.content)
         self.jupyter()
+
+    def replace_static_vault_links(
+        self, content: str, src_uri: str, dst_uri: str
+    ) -> str:
+        """Replace Obsidian vault static links to Hugo static links."""
+
+        pattern = r"\[(.*)\]\((.*)\)"
+        match = re.finditer(pattern, self.post.content)
+        if match:
+            for group in match:
+                link_text = group[1]
+                link = group[2]
+
+                updated_link = link.replace(src_uri, dst_uri)
+                content = content.replace(
+                    f"[{link_text}]({link})", f"[{link_text}]({updated_link})"
+                )
+        return content
 
     def gist(self):
         """Convert gist into a shortcode.
@@ -80,12 +103,18 @@ def parse_args():
         default=True,
         help="Copy static files from Obsidian vault to Hugo static folder",
     )
-    # parser.add_argument(
-    #     "--refresh-dev-server",
-    #     type=bool,
-    #     default=True,
-    #     help="This touches hugo's config file to refresh the dev server",
-    # )
+    parser.add_argument(
+        "--obsidian-vault-static-uri",
+        type=str,
+        default="fredrikaverpil.github.io/obsidian/static",
+        help="Obsidian vault's static folder URI",
+    )
+    parser.add_argument(
+        "--hugo-static-uri",
+        type=str,
+        default="/static",
+        help="Hugo's static folder URI",
+    )
 
     return parser.parse_args()
 
@@ -104,7 +133,7 @@ def gather(obsidian_vault: Path) -> list[ObsidianPage]:
             try:
                 post = frontmatter.loads(f.read())
             except ScannerError as err:
-                logger.error(f"Error parsing frontmatter in {filepath}")
+                logger.error(f"Error parsing frontmatter in {filepath}: {err}")
                 continue
             if post.metadata.get("draft", False):
                 logger.warning(f"Skipping draft: {filepath}")
@@ -149,20 +178,12 @@ def copy_static_files(src: Path, dst: Path):
     logger.info("Done copying static files.")
 
 
-# def refresh_dev_server(refresh: bool) -> None:
-#     if refresh:
-#         logger.info("Refreshing dev server")
-#         configs = Path(".").glob("hugo/config.*")
-#         for config in configs:
-#             config.touch()
-
-
 def main():
     args = parse_args()
     set_log_level(level=args.log_level)
     obsidian_pages = gather(args.obsidian_vault)
     for obsidian_page in obsidian_pages:
-        obsidian_page.process()
+        obsidian_page.process(args)
     write(
         src=args.obsidian_vault, dst=args.hugo_contents, obsidian_pages=obsidian_pages
     )
@@ -171,7 +192,6 @@ def main():
             src=args.obsidian_vault / "static/",
             dst=args.hugo_contents.parent / "static",
         )
-    # refresh_dev_server(refresh=args.refresh_dev_server)
 
     logger.info("Done.")
 
