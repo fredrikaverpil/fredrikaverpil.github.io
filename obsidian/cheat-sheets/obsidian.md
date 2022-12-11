@@ -17,6 +17,8 @@ date: 2022-12-11T12:18:00+01:00
 
 ## Hugo blog features
 
+During the move from Jekyll onto Hugo and Papermod, I wanted to make some customizations.
+
 ### MVP / wish list
 
 - Site structure:
@@ -25,11 +27,12 @@ date: 2022-12-11T12:18:00+01:00
 	- [x] An "about me"-page, managed via Obsidian.
 	- [x] Figure out static/images folder/files location.
 - [x] Ability to embed gists, but using custom CSS to make them look more integrated.
-- [ ] [Custom GitHub Gists](https://codersblock.com/blog/customizing-github-gists/).
+- [x] Fonts
+	- [x] Mona Sans font: [Mona Sans & Hubot Sans (github.com)](https://github.com/mona-sans)
+	- [x] Fira Code for code blocks
 - [x] Simple analytics: [umami](https://umami.is/docs/getting-started): [Dashboard | Umami Cloud](https://cloud.umami.is/websites)
 - [x] Search (might make tags unnecessary).
 - [x] Tags.
-- [ ] [Callouts](https://help.obsidian.md/How+to/Use+callouts).
 - [ ] [Mermaid)](https://hugo-book-demo.netlify.app/docs/shortcodes/mermaid/) charts?
 - [ ] Favicon
 - [x] Code blocks with syntax highlighting.
@@ -46,14 +49,19 @@ date: 2022-12-11T12:18:00+01:00
 	- [x] Skip export if draft=true
 	- [ ] Shortcode for YouTube.
 	- [ ] Shortcode for Vimeo.
-- [ ] Add git submodule for theme.
+	- [ ] [Callouts](https://help.obsidian.md/How+to/Use+callouts).
+- [ ] CSS:
+	- [ ] [Detect light/dark theme and update code blocks](https://discourse.gohugo.io/t/different-syntax-highlighting-styles-for-light-and-dark-theme/38448)
+	- [ ] [Custom GitHub Gists](https://codersblock.com/blog/customizing-github-gists/)
+	- [ ] [Tweak theme colors](https://github.com/adityatelange/hugo-PaperMod/discussions/645)
+- [ ] Add git submodule for theme (need to decide on theme!)
 - [ ] Add link to old disqus comments for some pages?
 - [ ] Insert frontmatter template on creation of page: [Insert front matter template automatically at file creation time - Resolved help - Obsidian Forum](https://forum.obsidian.md/t/insert-front-matter-template-automatically-at-file-creation-time/35351)
 - [ ] Page template (to add frontmatter automatically): Templater community plugin.
 
 ### Fine-tuning / other stuff
 
-- [ ] [Obsidian2Hugo exporter in go - Today I Learned (task2.net)](https://task2.net/posts/2022-01-10-obsidian2hugo-exporter/2022-01-10-obsidian2hugo-exporter/)
+- [ ] [Obsidian2Hugo](https://task2.net/posts/2022-01-10-obsidian2hugo-exporter/2022-01-10-obsidian2hugo-exporter/)
 
 
 ## Links
@@ -116,4 +124,4 @@ Plain link: [Format your notes - Obsidian Help](https://help.obsidian.md/How+to/
 
 Image:
 
-![Image description][fredrikaverpil.github.io/obsidian/static/memoji.png]
+![My memoji](fredrikaverpil.github.io/obsidian/static/memoji.png)
