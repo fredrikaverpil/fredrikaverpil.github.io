@@ -58,6 +58,7 @@ hugo/data
 hugo/public
 hugo/resources
 hugo/static
+hugo/themes
 hugo/.hugo_build.lock
 
 # Obsidian
