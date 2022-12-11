@@ -30,17 +30,27 @@ class ObsidianPage:
     ) -> str:
         """Replace Obsidian vault static links to Hugo static links."""
 
-        pattern = r"\[(.*)\]\((.*)\)"
-        match = re.finditer(pattern, self.post.content)
-        if match:
-            for group in match:
-                link_text = group[1]
-                link = group[2]
+        markdown_link = r"\[(.*)\]\((.*)\)"
+        markdown_image = r"\!\[(.*)\]\((.*)\)"
+        patterns = [markdown_link, markdown_image]
 
-                updated_link = link.replace(src_uri, dst_uri)
-                content = content.replace(
-                    f"[{link_text}]({link})", f"[{link_text}]({updated_link})"
-                )
+        for pattern in patterns:
+            match = re.finditer(pattern, self.post.content)
+            if match:
+                for group in match:
+                    link_text = group[1]
+                    link = group[2]
+
+                    updated_link = link.replace(src_uri, dst_uri)
+
+                    if pattern == markdown_link:
+                        content = content.replace(
+                            f"[{link_text}]({link})", f"[{link_text}]({updated_link})"
+                        )
+                    elif pattern == markdown_image:
+                        content = content.replace(
+                            f"![{link_text}]({link})", f"[{link_text}]({updated_link})"
+                        )
         return content
 
     def gist(self):
