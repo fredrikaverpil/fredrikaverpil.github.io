@@ -6,8 +6,9 @@ summary: Workarounds to install and run the Intel version of sofware that will n
 
 cover:
   image: "/static/applesilicon/apple_arm.png"
-  alt: ""
-  caption: "Prompt: apple logo, female anime character centered, cybernetic arms, holding apple logo, glitch art, glitchcore, organic, forest druid, dark souls boss, cyber punk, hellscape, portrait, one female anime character, robot, masterpiece, intricate, highly detailed, sharp, by james mccarthy, glowing blue lush seascape bioluminescent, by beeple and johfra bosschart, combination in the style ayami kojima, highly detailed, painting, 3d render beeple, unreal engine render"
+  alt: "Prompt: apple logo, female anime character centered, cybernetic arms, holding apple logo, glitch art, glitchcore, organic, forest druid, dark souls boss, cyber punk, hellscape, portrait, one female anime character, robot, masterpiece, intricate, highly detailed, sharp, by james mccarthy, glowing blue lush seascape bioluminescent, by beeple and johfra bosschart, combination in the style ayami kojima, highly detailed, painting, 3d render beeple, unreal engine render"
+  # caption: ""
+
 # PaperMod
 ShowToc: true
 TocOpen: true
