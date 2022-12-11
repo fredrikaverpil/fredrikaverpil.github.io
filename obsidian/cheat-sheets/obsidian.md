@@ -2,18 +2,103 @@
 title: 🌂 Obsidian
 tags: [obsidian]
 draft: true
-summary: ""
+summary: "This is my journey to manage my personal website in Obsidian, export it into Hugo and publish onto GitHub pages."
 
 # PaperMod
-ShowToc: false
+ShowToc: true
 TocOpen: true
 
-date: 2022-11-25T20:09:32+01:00
+date: 2022-12-11T12:18:00+01:00
 ---
 
 ## Other published Obsidian vaults
 
 - https://github.com/xcad2k/cheat-sheets
+
+## Hugo blog features
+
+### MVP / wish list
+
+- Site structure:
+	- [x] Blog entries, managed via Obsidian.
+	- [x] Tech notes / cheat-sheets, managed via Obsidian.
+	- [x] An "about me"-page, managed via Obsidian.
+	- [x] Figure out static/images folder/files location.
+- [x] Ability to embed gists, but using custom CSS to make them look more integrated.
+- [ ] [Custom GitHub Gists](https://codersblock.com/blog/customizing-github-gists/).
+- [x] Simple analytics: [umami](https://umami.is/docs/getting-started): [Dashboard | Umami Cloud](https://cloud.umami.is/websites)
+- [x] Search (might make tags unnecessary).
+- [x] Tags.
+- [ ] [Callouts](https://help.obsidian.md/How+to/Use+callouts).
+- [ ] [Mermaid)](https://hugo-book-demo.netlify.app/docs/shortcodes/mermaid/) charts?
+- [ ] Favicon
+- [x] Code blocks with syntax highlighting.
+- Ability to somehow showcase .ipynb (Jupyter notebooks).
+	- [x] .ipynb gists.
+	- [ ] Interactive execution (pyscript?)
+- [x] GitHub-powered commenting system.
+	- [x] [utterances](https://utteranc.es/)
+- [x] Use a popular static site generator (markdown) offering a wide range of themes I can select from.
+- [x] Use a CLI tool to export from Obsidian to this static site generator's expected format.
+- [x] Use GHA to automatically perform the export/convert and publishing onto my personal GitHub pages website.
+- [x] Don't copy drafts.
+- [ ] export.py:
+	- [x] Skip export if draft=true
+	- [ ] Shortcode for YouTube.
+	- [ ] Shortcode for Vimeo.
+- [ ] Add git submodule for theme.
+- [ ] Add link to old disqus comments for some pages?
+- [ ] Insert frontmatter template on creation of page: [Insert front matter template automatically at file creation time - Resolved help - Obsidian Forum](https://forum.obsidian.md/t/insert-front-matter-template-automatically-at-file-creation-time/35351)
+- [ ] Page template (to add frontmatter automatically): Templater community plugin.
+
+### Fine-tuning / other stuff
+
+- [ ] [Obsidian2Hugo exporter in go - Today I Learned (task2.net)](https://task2.net/posts/2022-01-10-obsidian2hugo-exporter/2022-01-10-obsidian2hugo-exporter/)
+
+
+## Links
+
+- [Variables | Front Matter | PaperMod (adityatelange.github.io)](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-variables/)
+
+## Testing grounds
+
+### Code block: python
+
+```python
+import platform
+print(platform.processor())
+```
+
+### Code block: jupyter
+
+```jupyter
+import this
+```
+
+```jupyter
+import sys
+
+sys.version
+```
+
+### Embed gist
+
+#### Jupyter notebook
+
+```gist
+fredrikaverpil/f225cdd92c9c253c8851316e4ef99a9a
+```
+
+#### Python script
+
+```gist
+fredrikaverpil/0cde09c624824ebafe0cb94a6cca9e1e#normalize_timedelta.py
+```
+
+
+## Blockquotes
+
+> Human beings face ever more complex and urgent problems, and their effectiveness in dealing with these problems is a matter that is critical to the stability and continued progress of society. \- Doug Engelbart, 1961
 
 ## Callouts
 
@@ -23,3 +108,12 @@ Here's a callout block. Supports markdown, images etc.
 > print("including code blocks")
 > ``` 
 
+## Markdown
+
+I'm disabling wikilinks and will use regular markdown links throughout.
+
+Plain link: [Format your notes - Obsidian Help](https://help.obsidian.md/How+to/Format+your+notes)
+
+Image:
+
+![Image description][fredrikaverpil.github.io/obsidian/static/memoji.png]
