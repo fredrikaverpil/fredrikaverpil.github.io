@@ -77,10 +77,6 @@ params:
   # PaperModX
   TocSide: "right"
 
-assets:
-  favicon: "/static/favicon.ico"
-  # theme_color: "#24242e"
-
 outputs:
   home:
     - HTML
