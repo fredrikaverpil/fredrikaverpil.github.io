@@ -65,9 +65,7 @@ console.log(y(2,2))
 
 ### Type casting
 
-```ts
-// as and <> works as casting operators
-```
+`as` and `<>` works as as casting operators.
 
 ### JSON parsing
 

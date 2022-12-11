@@ -24,7 +24,7 @@ date: 2022-11-13T01:00:00+01:00
 - [x] Ability to embed gists, but using custom CSS to make them look more integrated.
 - [ ] [Custom GitHub Gists](https://codersblock.com/blog/customizing-github-gists/).
 - [ ] Simple analytics
-	- [x] [umami](https://umami.is/docs/getting-started)
+	- [x] [umami](https://umami.is/docs/getting-started): [Dashboard | Umami Cloud](https://cloud.umami.is/websites)
 - [x] Search (might make tags unnecessary).
 - [x] Tags.
 - [ ] [Callouts](https://help.obsidian.md/How+to/Use+callouts).
@@ -33,8 +33,8 @@ date: 2022-11-13T01:00:00+01:00
 - Ability to somehow showcase .ipynb (Jupyter notebooks).
 	- [x] Could use .ipynb gists.
 	- [ ] Could run pyscript to make it interactive.
-- [ ] GitHub-powered commenting system.
-	- [ ] [utterances](https://utteranc.es/)
+- [x] GitHub-powered commenting system.
+	- [x] [utterances](https://utteranc.es/)
 - [x] Use a popular static site generator (markdown) offering a wide range of themes I can select from.
 - [x] Use a CLI tool to export from Obsidian to this static site generator's expected format.
 - [x] Use GHA to automatically perform the export/convert and publishing onto my personal GitHub pages website.
@@ -43,7 +43,7 @@ date: 2022-11-13T01:00:00+01:00
 - [x] Page template (to add frontmatter automatically): Templater community plugin.
 - [x] Don't copy drafts.
 - [ ] export.py:
-	- [ ] Skip export if draft=true
+	- [x] Skip export if draft=true
 	- [ ] Shortcode for YouTube.
 	- [ ] Shortcode for Vimeo.
 - [ ] Add git submodule for theme.
