@@ -216,3 +216,9 @@ Sort out any conflicts with `git rebase --continue` or `git rebase --skip`, like
 Then finally, when the rebase is completed, add the file changes back in which were to complicated to solve previously with e.g. `git add <file>` and finally a `git commit --amend` if you want to amend the final changes to the previous commit.
 
 To push the final result, you must perform a `git push --force` since you have changed the conents of your branch to such an extent that you effectively are looking at a brand new branch (but with the same name as before).
+
+## Git absorb
+
+`git absorb` will automatically identify which commits are safe to modify, and which staged changes belong to each of those commits. It will then write `fixup!` commits for each of those changes.
+
+[tummychow/git-absorb: git commit --fixup, but automatic (github.com)](https://github.com/tummychow/git-absorb)

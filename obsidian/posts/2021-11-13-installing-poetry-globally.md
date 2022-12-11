@@ -20,12 +20,12 @@ You can very easily make Poetry available system-wide, by just following the [in
 
 ```bash
 # macOS
-$ brew install pipx
-$ pipx install poetry
+brew install pipx
+pipx install poetry
 
 # Linux (apt-get)
-$ apt install pipx
-$ pipx install poetry
+apt install pipx
+pipx install poetry
 ```
 
 Yeah, sorry Windows users. No easy setup here that I am aware of, unfortunately. The only reasonable package manager for Windows is [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/), in my opinion, and that has no pipx or poetry package.
