@@ -68,7 +68,8 @@ params:
     URL: "https://github.com/fredrikaverpil/fredrikaverpil.github.io/tree/main/obsidian/"
     Text: "Suggest Changes"
     appendFilePath: true
-  ShowPostNavLinks: true
+
+  # ShowPostNavLinks: true
   ShowReadingTime: true
   ShowCodeCopyButtons: true
 
