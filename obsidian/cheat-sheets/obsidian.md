@@ -1,7 +1,7 @@
 ---
 title: 🌂 Obsidian
 tags: [obsidian]
-draft: true
+draft: false
 summary: "This is my journey to manage my personal website in Obsidian, export it into Hugo and publish onto GitHub pages."
 
 # PaperMod
