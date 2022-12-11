@@ -1,5 +1,5 @@
 ---
-title: 🌂 Obsidian
+title: 🌂 Obsidian to Hugo
 tags: [obsidian]
 draft: false
 summary: "This is my journey to manage my personal website in Obsidian, export it into Hugo and publish onto GitHub pages."
@@ -15,9 +15,9 @@ date: 2022-12-11T12:18:00+01:00
 
 - https://github.com/xcad2k/cheat-sheets
 
-## Hugo blog features
+## Obsidian to Hugo
 
-During the move from Jekyll onto Hugo and Papermod, I wanted to make some customizations.
+During the move of my blog from Jekyll onto Hugo and Papermod, I wanted to make some customizations and manage my blog and cheat-sheets from within Obsidian.
 
 ### MVP / wish list
 
@@ -77,7 +77,9 @@ import platform
 print(platform.processor())
 ```
 
-### Code block: jupyter
+### Code block: jupyter (not interactive yet)
+
+Uses the obsidian-jupyter plugin.
 
 ```jupyter
 import this
@@ -89,7 +91,7 @@ import sys
 sys.version
 ```
 
-### Embed gist
+### Embed gist (not themed properly yet)
 
 #### Jupyter notebook
 
@@ -108,7 +110,7 @@ fredrikaverpil/0cde09c624824ebafe0cb94a6cca9e1e#normalize_timedelta.py
 
 > Human beings face ever more complex and urgent problems, and their effectiveness in dealing with these problems is a matter that is critical to the stability and continued progress of society. \- Doug Engelbart, 1961
 
-## Callouts
+## Callouts (does not work yet)
 
 > [!INFO]
 Here's a callout block. Supports markdown, images etc. 

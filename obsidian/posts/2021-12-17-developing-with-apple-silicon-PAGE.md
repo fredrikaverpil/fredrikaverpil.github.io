@@ -4,6 +4,10 @@ tags: [osx]
 draft: false
 summary: Workarounds to install and run the Intel version of sofware that will not run natively under the ARM architecture.
 
+cover:
+  image: "/static/applesilicon/apple_arm.png"
+  alt: ""
+
 # PaperMod
 ShowToc: true
 TocOpen: true
