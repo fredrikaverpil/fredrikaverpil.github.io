@@ -45,6 +45,10 @@ query = sql.SQL("select {fields} from {table}").format(
 
 Source: [https://gist.github.com/rgreenjr/3637525](https://gist.github.com/rgreenjr/3637525)
 
+```gist
+rgreenjr/3637525
+```
+
 ```sql
 -- show running queries (pre 9.2)
 SELECT procpid, age(clock_timestamp(), query_start), usename, current_query 
@@ -58,10 +62,10 @@ FROM pg_stat_activity
 WHERE query != '<IDLE>' AND query NOT ILIKE '%pg_stat_activity%' 
 ORDER BY query_start desc;
 
--- kill running query, in a nice way (like ctrl+c)
+-- kill running query
 SELECT pg_cancel_backend(procpid);
 
--- kill idle query, forcefully (like kill -9)
+-- kill idle query
 SELECT pg_terminate_backend(procpid);
 
 -- vacuum command
@@ -97,7 +101,6 @@ $ pg_dump -U username -h hostname databasename > dump.sql
 -- Import dump into existing database
 $ psql -d newdb -f dump.sql
 ```
-
 
 
 ### Misc

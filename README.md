@@ -1,6 +1,6 @@
 # fredrikaverpil.github.io
 
-## WIP Log
+## WIP setup
 
 ```bash
 brew install hugo
@@ -16,7 +16,7 @@ hugo new posts/my-first-post.md
 # test
 cd hugo
 git clone https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
-echo theme = \"ananke\" >> config.toml
+echo theme = \"PaperMod\" >> config.toml
 ```
 
 Now update `.gitignore` with the following, so git won't track generated files:
