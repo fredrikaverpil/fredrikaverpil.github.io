@@ -69,6 +69,18 @@ ExcInfo: TypeAlias = tuple[type[BaseException], BaseException, TracebackType]
 OptExcInfo: TypeAlias = Union[ExcInfo, tuple[None, None, None]]
 ```
 
+```python
+from typing import TypeAlias
+
+JsonType: TypeAlias = (
+
+None | bool | int | float | str | list["JsonType"] | dict[str, "JsonType"]
+
+)
+
+CommonJsonType: TypeAlias = dict[str, "JsonType"]
+```
+
 ## Pyproject.toml
 
 ### Using hatchling + pip-tools to pin production dependencies
