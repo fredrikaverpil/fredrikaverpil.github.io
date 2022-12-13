@@ -35,10 +35,10 @@ taxonomies:
   tag: tags
 markup:
   highlight:
-    style: dracula
+    noclasses: false
 params:
-  defaultTheme: dark
-  disableThemeToggle: false
+  defaultTheme: auto
+  disableThemeToggle: true
   assets:
     disableHLJS: true # enables markup.highlight..
   profileMode:
@@ -75,14 +75,12 @@ params:
 
   comments: true
 
-  # PaperModX
-  TocSide: "right"
-
 outputs:
   home:
     - HTML
     - RSS
     - JSON
+
 module:
   mounts:
     - source: "static"
