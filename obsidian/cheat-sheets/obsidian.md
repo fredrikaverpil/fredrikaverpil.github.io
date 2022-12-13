@@ -52,7 +52,7 @@ During the move of my blog from Jekyll onto Hugo and Papermod, I wanted to make 
 	- [ ] [Callouts](https://help.obsidian.md/How+to/Use+callouts).
 - [ ] CSS:
 	- [ ] [Detect light/dark theme and update code blocks](https://discourse.gohugo.io/t/different-syntax-highlighting-styles-for-light-and-dark-theme/38448)
-	- [ ] [Custom GitHub Gists](https://codersblock.com/blog/customizing-github-gists/)
+	- [ ] [Custom GitHub Gist syntax highlighting](https://codersblock.com/blog/customizing-github-gists/)
 	- [ ] [Tweak theme colors](https://github.com/adityatelange/hugo-PaperMod/discussions/645)
 - [ ] Add git submodule for theme (need to decide on theme!)
 - [ ] Add link to old disqus comments for some pages?
