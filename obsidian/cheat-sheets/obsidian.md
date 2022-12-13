@@ -51,9 +51,12 @@ During the move of my blog from Jekyll onto Hugo and Papermod, I wanted to make 
 	- [ ] Shortcode for Vimeo.
 	- [ ] [Callouts](https://help.obsidian.md/How+to/Use+callouts).
 - [ ] CSS:
-	- [ ] [Detect light/dark theme and update code blocks](https://discourse.gohugo.io/t/different-syntax-highlighting-styles-for-light-and-dark-theme/38448)
-	- [ ] [Custom GitHub Gist syntax highlighting](https://codersblock.com/blog/customizing-github-gists/) and [Brian Wigginton - Hugo Chroma Syntax Highlighting Dark/Light Mode (bwiggs.com)](https://bwiggs.com/posts/2021-08-03-hugo-syntax-highlight-dark-light/)
-	- [ ] [Tweak theme colors](https://github.com/adityatelange/hugo-PaperMod/discussions/645)
+	- [x] [Detect light/dark theme and update code blocks](https://discourse.gohugo.io/t/different-syntax-highlighting-styles-for-light-and-dark-theme/38448)
+	- [x] [Custom GitHub Gist syntax highlighting](https://codersblock.com/blog/customizing-github-gists/) 
+	- [x] [Brian Wigginton - Hugo Chroma Syntax Highlighting Dark/Light Mode (bwiggs.com)](https://bwiggs.com/posts/2021-08-03-hugo-syntax-highlight-dark-light/)
+	- [ ] [Tweak theme colors](https://github.com/adityatelange/hugo-PaperMod/discussions/645
+	- [ ] Style comments
+	- [ ] Style gists
 - [ ] Add git submodule for theme (need to decide on theme!)
 - [ ] Add link to old disqus comments for some pages?
 - [ ] Insert frontmatter template on creation of page: [Insert front matter template automatically at file creation time - Resolved help - Obsidian Forum](https://forum.obsidian.md/t/insert-front-matter-template-automatically-at-file-creation-time/35351)
