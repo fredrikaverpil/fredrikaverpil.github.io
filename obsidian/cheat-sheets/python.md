@@ -73,12 +73,9 @@ OptExcInfo: TypeAlias = Union[ExcInfo, tuple[None, None, None]]
 from typing import TypeAlias
 
 JsonType: TypeAlias = (
-
-None | bool | int | float | str | list["JsonType"] | dict[str, "JsonType"]
-
+	None | bool | int | float | str | list["JsonType"] | dict[str, "JsonType"]
 )
-
-CommonJsonType: TypeAlias = dict[str, "JsonType"]
+JsonDict: TypeAlias = dict[str, "JsonType"]
 ```
 
 ## Pyproject.toml
