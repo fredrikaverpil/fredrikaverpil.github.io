@@ -35,6 +35,12 @@ kubectl get pods --sort-by=.metadata.creationTimestamp
 kubectl get pods -lapp=$POD --sort-by=.metadata.creationTimestamp
 ```
 
+## Scale down no of replicas
+
+```bash
+kubectl scale --replicas=1 deployments/<my-microservice>
+```
+
 ## Cron jobs
 
 ```bash
