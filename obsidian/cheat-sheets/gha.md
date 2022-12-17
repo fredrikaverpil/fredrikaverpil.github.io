@@ -13,7 +13,7 @@ date: 2022-12-17T14:09:32+01:00
 
 ## Poetry via Pipx
 
-When using [actions/setup-python](https://github.com/actions/setup-python) and Poetry, you can use pipx to install Poetry. Make sure to then tell pipx which Python version to use:
+When using [actions/setup-python](https://github.com/actions/setup-python) and Poetry, you can use [pipx)](https://github.com/pypa/pipx) to install [Poetry](https://github.com/python-poetry/poetry). Make sure to then tell pipx which Python version to use:
 
 ```yaml
 - uses: actions/setup-python@v4
@@ -33,8 +33,6 @@ When using a cache, you can use the `${{ steps.cpython_setup.outputs.python-vers
     SEGMENT_DOWNLOAD_TIMEOUT_MIN: "15"
   with:
     path: |
-      ~/.cache/pypoetry
-      ~/.cache/pypoetry
       ~/.cache/pypoetry
     key: poetry-${{ runner.os }}-${{ runner.arch }}-py-${{ steps.cpython_setup.outputs.python-version }}-${{ hashFiles('poetry.lock') }}
 ```

@@ -18,6 +18,10 @@ date: 2022-11-25T20:09:32+01:00
 -   Run both the main query and the rollback query in staging first
 -   Run the queries with a transaction without commit first, to see that it completes without errors (`BEGIN;` without `COMMIT;`)
 
+## Repo with various ORM / raw SQL queries
+
+[fredrikaverpil/postgres-playground: A personal PostgreSQL playground (github.com)](https://github.com/fredrikaverpil/postgres-playground)
+
 ## Run in transaction
 
 ```sql
