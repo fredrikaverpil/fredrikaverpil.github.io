@@ -1,9 +1,5 @@
 {{- define "main" }}
 
-{{- if (and site.Params.profileMode.enabled .IsHome) }}
-{{- partial "index_profile.html" . }}
-{{- else }} {{/* if not profileMode */}}
-
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
@@ -36,37 +32,21 @@
 </div>
 {{- end }}
 
-{{- $pages := union .RegularPages .Sections }}
-{{- $pages = (where .Data.Pages.ByLastmod "Section" "!=" "") }}
+{{- $cheatPages := where .Pages "Section" "cheat-sheets" }}
+{{- $cheatPages := sort $cheatPages "File.Path" }}
 
-{{- if .IsHome }}
-{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
+{{- range $cheatPage := $cheatPages }}
+  {{- $class := "post-entry" }}
+
+  <article class="{{ $class }}">
+    <header class="entry-header"></header>
+      <h4>
+        {{- .Title }}
+      </h4>
+    </header>
+    <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+  </article>
 {{- end }}
 
-{{- partial "home_info.html" . }}
-
-
-{{- $term := .Data.Term }}
-{{- range $index, $page := $pages }}
-
-{{- $class := "post-entry" }}
-
-{{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
-{{- $class = "post-entry tag-entry" }}
-
-
-<article class="{{ $class }}">
-    <h4>
-      {{- .Title }}
-      {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
-    </h4>
-  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
-</article>
-{{- end }}
-
-
-
-{{- end }}{{/* end profileMode */}}
 
 {{- end }}{{- /* end main */ -}}
