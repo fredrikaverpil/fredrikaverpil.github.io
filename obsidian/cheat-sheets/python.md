@@ -8,7 +8,7 @@ summary: "Notes to self, snippets etc."
 ShowToc: true
 TocOpen: true
 
-date: 2022-11-28T13:04:17+01:00
+date: 2022-12-17T21:41:51+01:00
 ---
 
 ## Exceptions

@@ -8,7 +8,7 @@ summary: Notes and gotchas around git.
 ShowToc: true
 TocOpen: true
 
-date: 2022-11-25T20:09:32+01:00
+date: 2022-12-17T21:42:11+01:00
 ---
 
 ## Git bisect

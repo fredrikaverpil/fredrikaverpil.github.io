@@ -8,7 +8,7 @@ summary: "Notes to self, snippets etc."
 ShowToc: false
 TocOpen: false
 
-date: 2022-11-27T13:42:55+01:00
+date: 2022-12-17T21:41:49+01:00
 ---
 
 ## Load variables from .env file into current environment

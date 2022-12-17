@@ -8,18 +8,28 @@ summary: "The stackable PR CLI tool."
 ShowToc: false
 TocOpen: true
 
-date: 2022-11-25T20:09:32+01:00
+date: 2022-12-17T22:19:42+01:00
 ---
 
-## Rebase and update stack
+## Combos
+
+### Pull down default branch, remove merged branches
 
 ```bash
-gt rs -fr && gt ss
+gt repo sync -fr
 ```
+
+Add `gt ss` to restack all current stacks onto the newly pulled down default branch:
+
+```bash
+gt repo sync -fr && gt ss
+```
+
+
+## Shortcuts
 
 The full list is available in the official [Graphite Documentation](https://docs.graphite.dev/guides/graphite-cli/command-shortcuts).
 
-## Basic commands
 | command                  | shortcut        |
 | ------------------------ | --------------- |
 | `gt log`                 | `gt l`          |
@@ -37,7 +47,10 @@ The full list is available in the official [Graphite Documentation](https://docs
 | `gt repo sync`           | `gt rs`         |
 
 ## Rebasing
+
 | command              | shortcut |
 | -------------------- | -------- |
 | `gt upstack restack` | `gt usr` |
 | `gt upstack onto`    | `gt uso` |
+| `gt upstack onto`    | `gt uso` |
+

@@ -8,7 +8,7 @@ summary: "Typescript is 😖"
 ShowToc: true
 TocOpen: true
 
-date: 2022-11-27T14:17:09+01:00
+date: 2022-12-17T21:41:33+01:00
 ---
 
 ## General notes

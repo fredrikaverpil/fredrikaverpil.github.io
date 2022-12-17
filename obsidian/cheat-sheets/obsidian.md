@@ -1,16 +1,16 @@
 ---
 title: 🌂 Obsidian to Hugo
 tags: [obsidian]
-draft: false
+draft: true
 summary: "This is my journey to manage my personal website in Obsidian, export it into Hugo and publish onto GitHub pages."
 
 # PaperMod
 ShowToc: true
 TocOpen: true
 
-date: 2022-12-11T12:18:00+01:00
-updated: 2022-12-17T20:23:15+01:00
+date: 2022-12-17T22:10:26+01:00
 ---
+
 
 ## Other published Obsidian vaults
 
