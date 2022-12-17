@@ -8,7 +8,8 @@ summary: "Notes, snippets etc."
 ShowToc: false
 TocOpen: true
 
-date: 2022-12-17T14:09:32+01:00
+updated: 2022-12-17T18:09:02+01:00
+date: 2022-12-17T18:01:37+01:00
 ---
 
 ## Single quotes
@@ -27,9 +28,9 @@ Example:
 
 ```yaml
 steps:
-      - name: stuff
-        env:
-          PR_NUMBER_OR_MASTER: ${{ github.event.number == 0 && 'master' ||  format('pr-{0}', github.event.number)  }}
+- name: stuff
+  	env:
+	  PR_NUMBER_OR_MASTER: ${{ github.event.number == 0 && 'master' ||  format('pr-{0}', github.event.number)  }}
 ```
 
 ## Pipx via actions/setup-python
