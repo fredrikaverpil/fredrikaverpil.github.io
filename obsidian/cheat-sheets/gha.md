@@ -29,8 +29,8 @@ Example:
 ```yaml
 steps:
 - name: stuff
-  	env:
-	  PR_NUMBER_OR_MASTER: ${{ github.event.number == 0 && 'master' ||  format('pr-{0}', github.event.number)  }}
+env:
+  PR_NUMBER_OR_MASTER: ${{ github.event.number == 0 && 'master' ||  format('pr-{0}', github.event.number)  }}
 ```
 
 ## Pipx via actions/setup-python
@@ -40,6 +40,7 @@ When using [actions/setup-python](https://github.com/actions/setup-python) and [
 To fix this, you can pass the `--python` argument to pipx:
 
 ```yaml
+steps:
 - uses: actions/setup-python@v4
   id: cpython_setup
   with:
@@ -53,6 +54,7 @@ To fix this, you can pass the `--python` argument to pipx:
 When using actions/cache, you can use the `${{ steps.cpython_setup.outputs.python-version }}` as part of the cache key:
 
 ```yaml
+steps:
 - uses: actions/setup-python@v4
   id: cpython_setup
   with:
