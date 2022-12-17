@@ -28,7 +28,7 @@ Example:
 ```yaml
 steps:
 - name: stuff
-env:
+  env:
   PR_NUMBER_OR_MASTER: ${{ github.event.number == 0 && 'master' ||  format('pr-{0}', github.event.number)  }}
 ```
 

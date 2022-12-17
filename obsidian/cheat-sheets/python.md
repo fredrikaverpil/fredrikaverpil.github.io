@@ -17,9 +17,9 @@ date: 2022-12-17T21:41:51+01:00
 
 ```python
 class MyError(Exception):
-	def __init__(self, message: str | None = None) -> None:
-		self.message = message
-		super().__init__(self.message)
+    def __init__(self, message: str | None = None) -> None:
+        self.message = message
+        super().__init__(self.message)
 ```
 
 
@@ -27,7 +27,7 @@ class MyError(Exception):
 
 ```python
 def exception_was_raised():
-	return None not in sys.exc_info()
+    return None not in sys.exc_info()
 ```
 
 ### Exception hooks
