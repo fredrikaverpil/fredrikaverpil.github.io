@@ -9,7 +9,7 @@ ShowToc: true
 TocOpen: true
 
 date: 2022-12-11T12:18:00+01:00
-updated: 2022-12-17T18:10:13+01:00
+updated: 2022-12-17T20:23:15+01:00
 ---
 
 ## Other published Obsidian vaults
@@ -62,7 +62,9 @@ During the move of my blog from Jekyll onto Hugo and Papermod, I wanted to make 
 - [ ] Add link to old disqus comments for some pages?
 - [ ] Insert frontmatter template on creation of page: [Insert front matter template automatically at file creation time - Resolved help - Obsidian Forum](https://forum.obsidian.md/t/insert-front-matter-template-automatically-at-file-creation-time/35351)
 - [ ] Page template (to add frontmatter automatically): Templater community plugin.
-- [ ] Use `lastMod` for the cheat-sheets: [Use Lastmod with PaperMod | Jackson Lucky](https://www.jacksonlucky.net/posts/use-lastmod-with-papermod/)
+- [ ] Use `lastMod` for the cheat-sheets:
+	- [ ] [Use Lastmod with PaperMod | Jackson Lucky](https://www.jacksonlucky.net/posts/use-lastmod-with-papermod/)
+	- [ ] [Sorting pages by last modified date in Hugo (echorand.me)](https://echorand.me/posts/hugo-reverse-sort-modified/)
 
 ### Fine-tuning / other stuff
 
