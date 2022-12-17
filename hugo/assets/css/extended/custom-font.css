@@ -6,7 +6,7 @@
   font-stretch: 75% 125%;
 }
 
-@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css);
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@6/distr/fira_code.css);
 
 html {
   font-family: "Mona Sans";
