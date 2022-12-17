@@ -38,6 +38,7 @@ kubectl get pods -lapp=$POD --sort-by=.metadata.creationTimestamp
 ## Scale down no of replicas
 
 ```bash
+kubectl get deployments
 kubectl scale --replicas=1 deployments/<my-microservice>
 ```
 
