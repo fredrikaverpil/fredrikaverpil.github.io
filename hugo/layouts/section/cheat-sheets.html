@@ -37,6 +37,7 @@
 {{- end }}
 
 {{- $pages := union .RegularPages .Sections }}
+{{- $pages = (where .Data.Pages.ByLastmod "Section" "!=" "") }}
 
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
