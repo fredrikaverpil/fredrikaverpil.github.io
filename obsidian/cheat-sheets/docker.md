@@ -32,7 +32,7 @@ ssh-add -L
 Define a `RUN` command in `Dockerfile` which should have access to your SSH keys:
 
 ```Dockerfile
-RUN RUN --mount=type=ssh <COMMAND>
+RUN --mount=type=ssh <COMMAND>
 ```
 
 Build:

@@ -65,6 +65,7 @@ During the move of my blog from Jekyll onto Hugo and Papermod, I wanted to make 
 - [ ] Use `lastMod` for the cheat-sheets:
 	- [ ] [Use Lastmod with PaperMod | Jackson Lucky](https://www.jacksonlucky.net/posts/use-lastmod-with-papermod/)
 	- [ ] [Sorting pages by last modified date in Hugo (echorand.me)](https://echorand.me/posts/hugo-reverse-sort-modified/)
+- [x] Store Vault in iCloud, clone the github-io repo in, use "Obsidian git" plugin to manage uploads via "Create backup".
 
 ### Fine-tuning / other stuff
 
