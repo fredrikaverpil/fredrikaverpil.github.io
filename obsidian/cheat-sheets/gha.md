@@ -8,7 +8,7 @@ summary: "Notes, snippets etc."
 ShowToc: false
 TocOpen: true
 
-date: 2022-12-17T21:42:14+01:00
+date: 2022-12-17T23:28:21+01:00
 ---
 
 ## Single quotes
