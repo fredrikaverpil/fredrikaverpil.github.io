@@ -71,3 +71,19 @@ steps:
 ```
 
 The cache key can be extended with e.g. Poetry's dependency groups.
+
+## Python shell
+
+Python code can be written inline of a step, with the `shell: python` directive.
+
+```yaml
+steps:
+  - name: Pick environment to run
+    run: |
+      import os; import platform; import sys; from pathlib import Path
+      env = f'TOXENV=py{"" if platform.python_implementation() == "CPython" else "py"}3{sys.version_info.minor}'
+      print(f"Picked: {env} for {sys.version} based of {sys.executable}")
+      with Path(os.environ["GITHUB_ENV"]).open("ta") as file_handler:
+        file_handler.write(env)
+    shell: python
+```
