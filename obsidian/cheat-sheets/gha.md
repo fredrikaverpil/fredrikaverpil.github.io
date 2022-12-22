@@ -86,4 +86,4 @@ steps:
 ```
 
 
-See the [`jobs.<job_id>.steps[*].shell`  docs]([Workflow syntax for GitHub Actions - GitHub Docs](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell)) for additional shells that are supported.
+See the [`jobs.<job_id>.steps[*].shell`  docs](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell) for additional shells that are supported.
