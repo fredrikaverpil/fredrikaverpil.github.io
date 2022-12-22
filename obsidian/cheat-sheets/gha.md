@@ -1,6 +1,6 @@
 ---
 title: 🎸 GitHub Actions
-tags: [github-actions]
+tags: [github-actions, python]
 draft: false
 summary: "Notes, snippets etc."
 
@@ -87,3 +87,51 @@ steps:
 
 
 See the [`jobs.<job_id>.steps[*].shell`  docs](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell) for additional shells that are supported.
+
+## Test coverage comment in PR
+
+Here's a a super nice way to add a PR commit about the changed files' test coverage, powered by [romeovs/lcov-reporter-action](https://github.com/romeovs/lcov-reporter-action).
+
+```yaml
+steps:
+  - name: run tests wrapped by coverage
+    run: coverage run -m pytest
+
+  - name: export coverage to lcov format
+    run: coverage lcov
+
+  - uses: romeovs/lcov-reporter-action@2a28ec3e25fb7eae9cb537e9141603486f810d1a
+    # The reason for using a hash rather than a version/tag, is the project
+    # failed in publishing this: https://github.com/romeovs/lcov-reporter-action/issues/47
+    with:
+      lcov-file: ./coverage/coverage.lcov
+      filter-changed-files: true
+      delete-old-comments: true
+```
+
+Configure pytest and coverage in `pyproject.toml`:
+
+```toml
+[tool.coverage.run]
+omit = ["tests/migrations/*"]
+source = ["src/mypkg"]
+
+[tool.coverage.report]
+exclude_lines =[
+  "pragma: nocover",
+  "if TYPE_CHECKING",
+  "@overload",
+]
+skip_covered = true
+
+[tool.coverage.html]
+directory = "coverage/html"
+
+[tool.coverage.lcov]
+output = "coverage/coverage.lcov"
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+addopts = "-rxXs --color=yes"
+
+```
