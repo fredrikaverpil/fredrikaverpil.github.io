@@ -107,6 +107,15 @@ steps:
       lcov-file: ./coverage/coverage.lcov
       filter-changed-files: true
       delete-old-comments: true
+
+  - name: export coverage to lcov format
+    run: coverage html
+
+  - name: Archive code coverage results
+    uses: actions/upload-artifact@v3
+    with:
+      name: code-coverage-report
+      path: coverage/html
 ```
 
 Configure pytest and coverage in `pyproject.toml`:
