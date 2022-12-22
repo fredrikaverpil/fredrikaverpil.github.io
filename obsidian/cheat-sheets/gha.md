@@ -5,7 +5,7 @@ draft: false
 summary: "Notes, snippets etc."
 
 # PaperMod
-ShowToc: false
+ShowToc: true
 TocOpen: true
 
 date: 2022-12-17T23:28:21+01:00
