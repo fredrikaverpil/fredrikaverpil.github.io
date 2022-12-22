@@ -78,12 +78,12 @@ Python code can be written inline of a step, with the `shell: python` directive.
 
 ```yaml
 steps:
-  - name: Pick environment to run
+  - name: Display the path
     run: |
-      import os; import platform; import sys; from pathlib import Path
-      env = f'TOXENV=py{"" if platform.python_implementation() == "CPython" else "py"}3{sys.version_info.minor}'
-      print(f"Picked: {env} for {sys.version} based of {sys.executable}")
-      with Path(os.environ["GITHUB_ENV"]).open("ta") as file_handler:
-        file_handler.write(env)
+      import os
+      print(os.environ['PATH'])
     shell: python
 ```
+
+
+See the [`jobs.<job_id>.steps[*].shell`  docs]([Workflow syntax for GitHub Actions - GitHub Docs](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell)) for additional shells that are supported.
