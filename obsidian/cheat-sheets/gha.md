@@ -91,6 +91,7 @@ See the [`jobs.<job_id>.steps[*].shell`  docs](https://docs.github.com/en/action
 ## Test coverage comment in PR
 
 Here's one way to add a PR commit about the changed files' test coverage, powered by [romeovs/lcov-reporter-action](https://github.com/romeovs/lcov-reporter-action).
+
 ⚠️ Unfortunately, it will generate a GitHub notification for each comment posted. I'd like to explore how to avoid this...
 
 ```yaml
