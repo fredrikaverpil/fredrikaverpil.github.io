@@ -50,7 +50,9 @@ steps:
 
 ## Python package caching
 
-When using actions/cache, you can use the `${{ steps.cpython_setup.outputs.python-version }}` as part of the cache key:
+The `actions/setup-python` action has built in caching, which you should likely use unless you have specific needs like support for dependency groups. For the latter use case, you can look to `actions/cache`.
+
+When using `actions/cache`, you can use the `${{ steps.<python setup step id>.outputs.python-version }}` as part of the cache key:
 
 ```yaml
 steps:
