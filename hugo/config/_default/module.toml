@@ -1,0 +1,7 @@
+# [[mounts]]
+# source = "static"
+# target = "static/static"
+
+# [[mounts]]
+# source = "favicon.ico"
+# target = "static/favicon.ico"

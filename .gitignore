@@ -60,6 +60,7 @@ hugo/resources
 hugo/static
 hugo/themes
 hugo/.hugo_build.lock
+hugo/assets/img
 
 # Obsidian
 obsidian/.obsidian/workspace.json

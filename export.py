@@ -116,13 +116,13 @@ def parse_args():
     parser.add_argument(
         "--obsidian-vault-static-uri",
         type=str,
-        default="fredrikaverpil.github.io/obsidian/static",
+        default="fredrikaverpil.github.io/obsidian/assets",
         help="Obsidian vault's static folder URI",
     )
     parser.add_argument(
         "--hugo-static-uri",
         type=str,
-        default="/static",
+        default="",
         help="Hugo's static folder URI",
     )
 
@@ -199,8 +199,8 @@ def main():
     )
     if args.copy_static_files:
         copy_static_files(
-            src=args.obsidian_vault / "static/",
-            dst=args.hugo_contents.parent / "static",
+            src=args.obsidian_vault / "assets/",
+            dst=args.hugo_contents.parent / "assets",
         )
 
     logger.info("Done.")
