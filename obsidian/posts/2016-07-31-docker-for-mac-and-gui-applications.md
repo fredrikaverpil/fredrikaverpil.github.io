@@ -55,7 +55,7 @@ open -a XQuartz
 
 In the XQuartz preferences, go to the "Security" tab and make sure you've got "Allow connections from network clients" ticked:
 
-![](fredrikaverpil.github.io/obsidian/static/docker/xquartz_preferences.png)
+![](fredrikaverpil.github.io/obsidian/assets/img/docker/xquartz_preferences.png)
 
 Again, in e.g. bash, run `xhost` and allow connections from your local machine:
 
