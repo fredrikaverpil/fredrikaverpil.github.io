@@ -2,11 +2,9 @@
 title: 🧪 Testing
 tags: [workflow, testing]
 draft: false
-summary: "Nice things I've picked up along the way."
 
-# PaperMod
-ShowToc: false
-TocOpen: false
+showSummary: false
+showComments: false
 
 date: 2022-12-17T21:41:38+01:00
 ---

@@ -2,11 +2,9 @@
 title: 🌺 AWS
 tags: [aws, s3]
 draft: true
-summary: "AWS snippets, gotchas etc."
 
-# PaperMod
-ShowToc: false
-TocOpen: true
+showSummary: false
+showComments: false
 
 updated: 2022-12-17T20:40:30+01:00
 date: 2022-12-17T21:42:25+01:00

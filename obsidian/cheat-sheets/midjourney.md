@@ -2,11 +2,9 @@
 title: 🧬 Midjourney
 tags: [ai]
 draft: true
-summary: ""
 
-# PaperMod
-ShowToc: false
-TocOpen: false
+showSummary: false
+showComments: false
 
 date: 2022-12-17T21:41:55+01:00
 ---

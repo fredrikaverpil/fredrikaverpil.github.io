@@ -2,11 +2,9 @@
 title: 🎱 Kubernetes
 tags: [kubernetes]
 draft: false
-summary: "Notes to self, snippets etc."
 
-# PaperMod
-ShowToc: true
-TocOpen: true
+showSummary: false
+showComments: false
 
 date: 2022-12-17T21:41:58+01:00
 ---

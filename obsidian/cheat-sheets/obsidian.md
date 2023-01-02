@@ -2,11 +2,9 @@
 title: 🌂 Obsidian to Hugo
 tags: [obsidian]
 draft: true
-summary: "This is my journey to manage my personal website in Obsidian, export it into Hugo and publish onto GitHub pages."
 
-# PaperMod
-ShowToc: true
-TocOpen: true
+showSummary: false
+showComments: false
 
 date: 2022-12-17T22:10:26+01:00
 ---
@@ -66,6 +64,9 @@ During the move of my blog from Jekyll onto Hugo and Papermod, I wanted to make 
 	- [ ] [Use Lastmod with PaperMod | Jackson Lucky](https://www.jacksonlucky.net/posts/use-lastmod-with-papermod/)
 	- [ ] [Sorting pages by last modified date in Hugo (echorand.me)](https://echorand.me/posts/hugo-reverse-sort-modified/)
 - [x] Store Vault in iCloud, clone the github-io repo in, use "Obsidian git" plugin to manage uploads via "Create backup".
+- [x] Set link plugin to...
+	- [x] Use static paths for new files
+	- [x] Use markdown (not wikilinks)
 
 ### Fine-tuning / other stuff
 
@@ -134,4 +135,4 @@ Plain link: [Format your notes - Obsidian Help](https://help.obsidian.md/How+to/
 
 Image:
 
-![My memoji](fredrikaverpil.github.io/obsidian/static/memoji.png)
+![My memoji](fredrikaverpil.github.io/obsidian/assets/img/memoji.png)

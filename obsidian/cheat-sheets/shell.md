@@ -2,11 +2,9 @@
 title: 🐚 Shell
 tags: [shell]
 draft: false
-summary: "Notes to self, snippets etc."
 
-# PaperMod
-ShowToc: false
-TocOpen: false
+showSummary: false
+showComments: false
 
 date: 2022-12-17T21:41:49+01:00
 ---

@@ -2,11 +2,9 @@
 title: 🐶 Datadog
 tags: [monitoring]
 draft: false
-summary: "Notes on monitoring with Datadog."
 
-# PaperMod
-ShowToc: false
-TocOpen: true
+showSummary: false
+showComments: false
 
 date: 2022-12-17T21:42:17+01:00
 ---

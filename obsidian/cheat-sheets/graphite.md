@@ -2,11 +2,9 @@
 title: 🍇 Graphite
 tags: [git, graphite, workflow]
 draft: false
-summary: "The stackable PR CLI tool."
 
-# PaperMod
-ShowToc: false
-TocOpen: true
+showSummary: false
+showComments: false
 
 date: 2022-12-17T22:28:28+01:00
 ---

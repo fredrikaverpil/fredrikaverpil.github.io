@@ -2,11 +2,9 @@
 title: 🎃 Typescript
 tags: [typescript]
 draft: false
-summary: "Typescript is 😖"
 
-# PaperMod
-ShowToc: true
-TocOpen: true
+showSummary: false
+showComments: false
 
 date: 2022-12-17T21:41:33+01:00
 ---

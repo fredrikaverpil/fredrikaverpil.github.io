@@ -2,11 +2,9 @@
 title: 🔎 Code review
 tags: [workflow]
 draft: false
-summary: "Good practices during code review."
 
-# PaperMod
-ShowToc: false
-TocOpen: false
+showSummary: false
+showComments: false
 
 updated: 2022-12-17T20:40:27+01:00
 date: 2022-12-17T21:42:21+01:00

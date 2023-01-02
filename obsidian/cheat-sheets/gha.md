@@ -2,11 +2,9 @@
 title: 🎸 GitHub Actions
 tags: [github-actions, python]
 draft: false
-summary: "Notes, snippets etc."
 
-# PaperMod
-ShowToc: true
-TocOpen: true
+showSummary: false
+showComments: false
 
 date: 2022-12-17T23:28:21+01:00
 ---

@@ -2,11 +2,9 @@
 title: 🧑‍🔬 Teamwork
 tags: [teamwork]
 draft: true
-summary: ""
 
-# PaperMod
-ShowToc: true
-TocOpen: true
+showSummary: false
+showComments: false
 
 date: 2022-12-17T21:41:42+01:00
 ---

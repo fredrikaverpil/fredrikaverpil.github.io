@@ -2,11 +2,9 @@
 title: 🐳 Docker
 tags: [docker]
 draft: false
-summary: "Notes to self, snippets etc."
 
-# PaperMod
-ShowToc: false
-TocOpen: true
+showSummary: false
+showComments: false
 
 date: 2022-12-18T01:49:16+01:00
 ---

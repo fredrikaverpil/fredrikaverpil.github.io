@@ -2,11 +2,9 @@
 title: 💫 Git
 tags: [git]
 draft: false
-summary: Notes and gotchas around git.
 
-# PaperMod
-ShowToc: true
-TocOpen: true
+showSummary: false
+showComments: false
 
 date: 2022-12-17T21:42:11+01:00
 ---

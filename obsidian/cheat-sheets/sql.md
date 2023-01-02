@@ -2,11 +2,9 @@
 title: 🪶 SQL
 tags: [sql]
 draft: false
-summary: "Safety first!"
 
-# PaperMod
-ShowToc: true
-TocOpen: true
+showSummary: false
+showComments: false
 
 date: 2022-12-17T21:41:46+01:00
 ---
