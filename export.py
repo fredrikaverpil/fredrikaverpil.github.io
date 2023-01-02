@@ -139,7 +139,7 @@ def gather(obsidian_vault: Path) -> list[ObsidianPage]:
     obsidian_pages = []
 
     for filepath in filepaths:
-        with open(filepath, "r") as f:
+        with open(filepath) as f:
             try:
                 post = frontmatter.loads(f.read())
             except ScannerError as err:
@@ -199,8 +199,8 @@ def main():
     )
     if args.copy_static_files:
         copy_static_files(
-            src=args.obsidian_vault / "assets/",
-            dst=args.hugo_contents.parent / "assets",
+            src=args.obsidian_vault / "assets/img",
+            dst=args.hugo_contents.parent / "assets/img",
         )
 
     logger.info("Done.")
