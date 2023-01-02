@@ -15,7 +15,7 @@ enableCodeCopy = true
 # mainSections = ["section1", "section2"]
 # robots = ""
 
-# disableImageOptimization = false
+disableImageOptimization = true
 
 # defaultBackgroundImage = "IMAGE.jpg" # used as default for background images 
 
@@ -27,7 +27,7 @@ enableCodeCopy = true
   showCopyright = true
   showThemeAttribution = false
   showAppearanceSwitcher = false
-  showScrollToTop = true
+  showScrollToTop = false
 
 [homepage]
   layout = "profile" # valid options: page, profile, hero, card, background, custom
@@ -48,20 +48,20 @@ enableCodeCopy = true
   showAuthor = true
   showHero = true
   heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
-  layoutBackgroundBlur = false # only used when heroStyle equals background or thumbAndBackground
+  layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = false
   showDraftLabel = true
   showEdit = true
   editURL = "https://github.com/fredrikaverpil/fredrikaverpil.github.io/hugo/content"
   editAppendPath = true
-  seriesOpened = false
+  seriesOpened = true
   showHeadingAnchors = true
-  showPagination = true
+  showPagination = false
   invertPagination = false
   showReadingTime = true
   showTableOfContents = true
-  showTaxonomies = false
+  showTaxonomies = true
   showAuthorsBadges = false
   showWordCount = true
   showSummary = true
@@ -70,17 +70,17 @@ enableCodeCopy = true
   showComments = true
 
 [list]
-  #showHero = true
+  # showHero = true
   #heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   #layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   #layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = false
-  showSummary = false
+  showSummary = true
   #showViews = true
   #showLikes = true
   showTableOfContents = false
   showCards = false
-  groupByYear = true
+  groupByYear = false
   cardView = false
   cardViewScreenWidth = false
 
@@ -95,7 +95,7 @@ enableCodeCopy = true
   #showViews = false
   #showLikes = false
   #showTableOfContents = true
-  #cardView = false
+  cardView = true
 
 [term]
   #showHero = true
