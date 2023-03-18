@@ -1,14 +1,6 @@
 ---
 ShowToc: true
 TocOpen: true
-cover:
-  alt: 'Prompt: apple logo, female anime character centered, cybernetic arms, holding
-    apple logo, glitch art, glitchcore, organic, forest druid, dark souls boss, cyber
-    punk, hellscape, portrait, one female anime character, robot, masterpiece, intricate,
-    highly detailed, sharp, by james mccarthy, glowing blue lush seascape bioluminescent,
-    by beeple and johfra bosschart, combination in the style ayami kojima, highly
-    detailed, painting, 3d render beeple, unreal engine render'
-  image: /static/applesilicon/midjourney_apple_silicon.jpg
 date: 2021-12-17 02:00:00+01:00
 draft: false
 summary: Workarounds to install and run the Intel version of sofware that will not
