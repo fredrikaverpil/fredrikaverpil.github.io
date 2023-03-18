@@ -57,3 +57,6 @@ hugo/.hugo_build.lock
 
 # Obsidian
 obsidian/.obsidian/workspace.json
+
+# mkdocs-material
+site
