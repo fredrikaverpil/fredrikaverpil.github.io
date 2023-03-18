@@ -1,3 +1,0 @@
-python-frontmatter
-obsidian-to-hugo==0.2.*
-loguru
