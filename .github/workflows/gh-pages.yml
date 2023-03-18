@@ -36,19 +36,6 @@ jobs:
         run: git clone https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
         working-directory: ./hugo
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          cache: "pip"
-
-      - name: Install Python requirements
-        run: pip install -r requirements.txt
-
-      - run: mkdir hugo/content
-
-      - name: Convert Obsidian to Hugo
-        run: python export.py
-
       - name: Build static Hugo site
         run: hugo --minify
         working-directory: ./hugo
