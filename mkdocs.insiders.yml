@@ -1,0 +1,46 @@
+INHERIT: mkdocs.yml
+
+plugins:
+  - search # must be re-added when plugins are specified
+  - meta # must be defined before the "blog" plugin
+  - blog:
+      # https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#adding-pages
+      blog_dir: . # override default blog dir
+      blog_toc: true
+      post_date_format: long
+      post_url_date_format: yyyy-MM-dd # hugo compatible
+      post_url_format: "posts/{date}-{slug}" # hugo compatible
+      post_readtime: true
+      archive: true
+      authors: true
+      authors_file: .authors.yml
+  # - tags
+  # - social
+  # - privacy:
+  #     external_assets_dir: assets/external
+
+theme:
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: pink
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: pink
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference

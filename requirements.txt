@@ -1,0 +1,3 @@
+# https://squidfunk.github.io/mkdocs-material/insiders/getting-started/#mkdocsyml
+mkdocs-material-insiders @ git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+mkdocs-rss-plugin
