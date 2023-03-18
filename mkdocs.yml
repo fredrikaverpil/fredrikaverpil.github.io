@@ -43,7 +43,12 @@ markdown_extensions:
 
 theme:
   name: material
+  icon:
+    logo: bootstrap/terminal-fill
   # font: false # prevent google fonts from loading
+  font:
+    text: JetBrains Mono
+    code: JetBrains Mono
   favicon: static/favicon.ico
   features:
     - toc.follow
@@ -51,8 +56,9 @@ theme:
     - content.code.copy
     - content.code.annotate
   custom_dir: mkdocs/overrides
-# extra_css:
-#   - stylesheets/extra.css
+
+extra_css:
+  - stylesheets/extra.css
 
 extra:
   generator: false # remove "Made with Material for MkDocs" from footer
