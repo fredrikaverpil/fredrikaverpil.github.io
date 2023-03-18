@@ -38,7 +38,9 @@ with open('README.md', 'r') as f:
 
 ## Gist
 
+<!-- 
 <script src="https://gist.github.com/bstrand/e4da9e9ecdd7b53da6550c29a4f4b355.js"></script>
+-->
 
 ## Youtube
 
