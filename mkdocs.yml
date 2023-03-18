@@ -63,6 +63,7 @@ extra_css:
 extra:
   generator: false # remove "Made with Material for MkDocs" from footer
   social:
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=fontawesome#social-links
     - icon: fontawesome/brands/github
       link: https://github.com/fredrikaverpil
     - icon: fontawesome/brands/mastodon
@@ -71,6 +72,8 @@ extra:
       link: https://twitter.com/fredrikaverpil
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/fredrik
+    - icon: fontawesome/solid/square-rss
+      link: https://fredrikaverpil.github.io/sitemap.xml
 
 nav:
   - Blog:

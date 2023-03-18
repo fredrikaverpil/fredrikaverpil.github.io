@@ -14,6 +14,15 @@ plugins:
       archive: true
       authors: true
       authors_file: .authors.yml
+  - rss:
+      # mkdocs-material-insiders
+      match_path: posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+
   # - tags
   # - social
   # - privacy:
