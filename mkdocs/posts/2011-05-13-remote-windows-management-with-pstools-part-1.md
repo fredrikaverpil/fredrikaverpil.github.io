@@ -10,7 +10,7 @@ tags:
 
 One of the advantages of running Linux on render farm machines is the possibility to remotely manage them using the command line. However if you are running the farm on Windows, this is a whole different kind of story.
 
-<!--more -->
+<!-- more -->
 
 By using Mark Russinovich’s [PsTools](http://technet.microsoft.com/en-us/sysinternals/bb896649) it is possible to remotely manage render farm machines running on Windows with otherwise quite daunting tasks and without very little (if any) programming experience. You can use the suite of tools to easily restart machines, silently install software, manage services and environment variables or even distribute files onto remote machines on your network. The only prerequisite is that you are running Windows on both the managing machine as well as on the target machine and that both computers are residing on the same local network. Perfect for a small VFX shop without an elaborate IT department.
 
