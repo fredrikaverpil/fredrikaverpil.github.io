@@ -6,13 +6,6 @@ repo_name: fredrikaverpil.github.io
 
 plugins:
   - search # must be re-added when plugins are specified
-  - rss:
-      match_path: posts/.*
-      date_from_meta:
-        as_creation: date
-      categories:
-        - categories
-        - tags
   - meta
 
 markdown_extensions:
