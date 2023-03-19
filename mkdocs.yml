@@ -71,13 +71,3 @@ extra:
 nav:
   - Blog:
       - index.md
-  - Cheat-sheets:
-      - cheat-sheets/datadog.md
-      - cheat-sheets/docker.md
-      - cheat-sheets/gha.md
-      - cheat-sheets/git.md
-      - cheat-sheets/graphite.md
-      - cheat-sheets/kubernetes.md
-      - cheat-sheets/python.md
-      - cheat-sheets/shell.md
-      - cheat-sheets/sql.md
