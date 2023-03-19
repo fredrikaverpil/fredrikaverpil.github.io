@@ -1,10 +1,10 @@
-/* @font-face {
+@font-face {
   font-family: "Mona Sans";
   src: url("/static/Mona-Sans.woff2") format("woff2 supports variations"),
     url("/static/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200 900;
   font-stretch: 75% 125%;
-} */
+}
 
 /* https://cdn.jsdelivr.net/gh/tonsky/FiraCode@6.2/ */
 /*
@@ -27,10 +27,10 @@ code {
 }
 */
 
-/* :root {
+:root {
   --md-text-font: "Mona Sans";
   --md-code-font: "JetBrains Mono";
-} */
+}
 
 /* Light mode */
 /* [data-md-color-scheme="default"] {
