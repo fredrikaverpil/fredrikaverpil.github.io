@@ -7,8 +7,6 @@ repo_name: fredrikaverpil.github.io
 plugins:
   - search # must be re-added when plugins are specified
   - meta
-  - tags:
-      tags_file: blog/tags.md
 
 markdown_extensions:
   # Admonitions
@@ -73,4 +71,3 @@ extra:
 nav:
   - Blog:
       - index.md
-# https://fredrikaverpil.github.io/posts/2021-12-17-developing-with-apple-silicon-page/
