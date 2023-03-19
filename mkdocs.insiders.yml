@@ -8,8 +8,7 @@ plugins:
       blog_dir: . # override default blog dir
       blog_toc: true
       post_date_format: long
-      post_url_date_format: yyyy-MM-dd # hugo compatible
-      post_url_format: "posts/{date}-{slug}" # hugo compatible
+      post_url_format: "posts/{file}" # hugo compatible
       post_readtime: true
       archive: true
       authors: true
