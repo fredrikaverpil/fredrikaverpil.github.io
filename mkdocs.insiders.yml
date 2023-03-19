@@ -3,6 +3,8 @@ INHERIT: mkdocs.yml
 plugins:
   - search # must be re-added when plugins are specified
   - meta # must be defined before the "blog" plugin
+  - tags: # must be defined before the "blog" plugin
+      tags_file: blog/tags.md
   - blog:
       # https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#adding-pages
       blog_dir: . # override default blog dir

@@ -7,6 +7,8 @@ repo_name: fredrikaverpil.github.io
 plugins:
   - search # must be re-added when plugins are specified
   - meta
+  - tags:
+      tags_file: blog/tags.md
 
 markdown_extensions:
   # Admonitions
