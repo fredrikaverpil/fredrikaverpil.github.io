@@ -39,9 +39,9 @@ theme:
   icon:
     logo: bootstrap/terminal-fill
   # font: false # prevent google fonts from loading
-  font:
-    # text: JetBrains Mono
-    code: JetBrains Mono
+  # font:
+  # text: JetBrains Mono
+  # code: JetBrains Mono
   favicon: static/favicon.ico
   features:
     - toc.follow
