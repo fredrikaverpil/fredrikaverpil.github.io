@@ -13,6 +13,6 @@ updates:
 registries:
   mkdocs-material-insiders:
     type: git
-    url: https://github.com/squidfunk/mkdocs-material-insiders
+    url: https://github.com
     username: x-access-token
     password: ${{ secrets.MKDOCS_MATERIAL_INSIDERS }}
