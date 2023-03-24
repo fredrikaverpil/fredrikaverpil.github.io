@@ -2,7 +2,22 @@
 
 ## 🚀 Quick start
 
+
+### 📦 Install dependencies
+
 ```bash
-pip install -r requirements.txt  # requires access to private repo
+# for social cards, see
+# https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards
+brew install cairo freetype libffi libjpeg libpng zlib
+```
+
+```bash
+# requires access to private repo
+pip install -r requirements.txt
+```
+
+### 🍽️ Serve locally
+
+```bash
 mkdocs serve --config-file mkdocs.insiders.yml --dirtyreload
 ```
