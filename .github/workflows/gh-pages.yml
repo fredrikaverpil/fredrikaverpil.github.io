@@ -30,7 +30,7 @@ jobs:
           cache: pip
           python-version-file: .python-version
 
-      - run: pip install -r requirements.txt
+      - run: pip install  git+https://${{ secrets.MKDOCS_MATERIAL_INSIDERS }}@github.com/squidfunk/mkdocs-material-insiders.git
       - run: mkdocs build
 
       - name: Setup Pages
