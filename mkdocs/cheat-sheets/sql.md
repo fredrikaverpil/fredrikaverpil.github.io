@@ -1,5 +1,6 @@
 ---
 date: 2022-12-17
+draft: true
 tags:
 - sql
 title: "\U0001FAB6 SQL"
