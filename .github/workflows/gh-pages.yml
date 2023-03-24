@@ -36,9 +36,11 @@ jobs:
       - uses: actions/cache@v3
         with:
           key: ${{ github.ref }}
-          path: .cache
+          path: |
+            ~/.cache/pip
+            .cache
 
-      - run: pip install \
+      - run: pip install --upgrade \
           git+https://${{ secrets.MKDOCS_MATERIAL_INSIDERS }}@github.com/squidfunk/mkdocs-material-insiders.git \
           mkdocs-rss-plugin \
           pillow cairosvg # for social cards
