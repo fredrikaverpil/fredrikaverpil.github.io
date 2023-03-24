@@ -31,7 +31,7 @@ jobs:
           python-version-file: .python-version
 
       - run: pip install git+https://${{ secrets.MKDOCS_MATERIAL_INSIDERS }}@github.com/squidfunk/mkdocs-material-insiders.git
-      - run: mkdocs build
+      - run: mkdocs build --config-file mkdocs.insiders.yml
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
