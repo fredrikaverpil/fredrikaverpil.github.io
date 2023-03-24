@@ -3,7 +3,7 @@ date: 2022-12-17
 draft: true
 tags:
 - shell
-title: "\U0001F41A Shell"
+title: Shell
 ---
 
 # Shell
