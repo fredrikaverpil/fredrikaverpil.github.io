@@ -1,13 +1,8 @@
 # fredrikaverpil.github.io
 
-## Build
+## 🚀 Quick start
 
 ```bash
-mkdocs build --config-file mkdocs.insiders.yml
-```
-
-## Serve
-
-```bash
-mkdocs serve --config-file mkdocs.insiders.yml
+pip install -r requirements.txt  # requires access to private repo
+mkdocs serve --config-file mkdocs.insiders.yml --dirtyreload
 ```
