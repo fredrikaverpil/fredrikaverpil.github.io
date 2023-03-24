@@ -7,3 +7,10 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+
+registries:
+  github:
+    type: git
+    url: https://github.com/squidfunk/mkdocs-material-insiders
+    username: x-access-token
+    password: ${{ secrets.MKDOCS_MATERIAL_INSIDERS }}
