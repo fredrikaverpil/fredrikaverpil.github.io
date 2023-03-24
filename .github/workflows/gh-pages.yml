@@ -30,7 +30,7 @@ jobs:
           cache: pip
           python-version-file: .python-version
 
-      - run: pip install  git+https://${{ secrets.MKDOCS_MATERIAL_INSIDERS }}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install git+https://${{ secrets.MKDOCS_MATERIAL_INSIDERS }}@github.com/squidfunk/mkdocs-material-insiders.git
       - run: mkdocs build
 
       - name: Setup Pages
@@ -39,7 +39,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: "site"
+          path: "./site"
 
       - name: Deploy to GitHub Pages
         id: deployment
