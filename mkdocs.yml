@@ -1,6 +1,7 @@
 docs_dir: mkdocs
 site_dir: site
 site_name: Fredrik Averpil
+site_url: https://fredrikaverpil.github.io
 # repo_url: https://github.com/fredrikaverpil/fredrikaverpil.github.io
 repo_name: fredrikaverpil.github.io
 
