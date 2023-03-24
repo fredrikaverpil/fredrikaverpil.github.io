@@ -5,11 +5,7 @@ site_url: https://fredrikaverpil.github.io
 # repo_url: https://github.com/fredrikaverpil/fredrikaverpil.github.io
 repo_name: fredrikaverpil.github.io
 
-plugins:
-  - search # must be re-added when plugins are specified
-  - meta
-  - social:
-      cards: true
+# see mkdocs.insiders.yml for plugins setup
 
 markdown_extensions:
   # Admonitions
@@ -40,7 +36,8 @@ markdown_extensions:
 theme:
   name: material
   icon:
-    logo: bootstrap/terminal-fill
+    # logo: bootstrap/terminal-fill  # does not work with social cards
+    logo: "material/console"
   # font: false # prevent google fonts from loading
   # font:
   # text: JetBrains Mono
