@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - main # Set a branch to deploy
-  pull_request:
+  workflow_dispatch:
+  pull_request: # temporary
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -22,23 +23,15 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
         with:
-          submodules: true # Fetch Hugo themes (true OR recursive)
-          # fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+          python-version: 3.11
+          cache: pip
+          python-version-file: .python-version
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: "latest"
-          # extended: true
-
-      - name: Get theme (temporary during WIP)
-        run: git clone https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
-        working-directory: ./hugo
-
-      - name: Build static Hugo site
-        run: hugo --minify
-        working-directory: ./hugo
+      - run: pip install -r requirements.txt
+      - run: mkdocs build
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
@@ -46,7 +39,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: "./hugo/public"
+          path: "site"
 
       - name: Deploy to GitHub Pages
         id: deployment
