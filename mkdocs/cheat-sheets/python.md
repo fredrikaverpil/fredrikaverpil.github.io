@@ -28,7 +28,7 @@ def exception_was_raised():
 
 ### Exception hooks
 
-See [datadog]({{< ref "datadog" >}}) for some examples.
+See [datadog](datadog.md) for some examples.
 
 ## Caching with TTL
 

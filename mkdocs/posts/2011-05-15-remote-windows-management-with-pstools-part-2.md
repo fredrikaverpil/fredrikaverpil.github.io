@@ -122,7 +122,7 @@ The `hello.bat` is being launched on all remote machines defined in manage_farm.
 
 ## Step 4: Solving problems
 
-You will most likely stumble upon issues when setting all of this up. Check out part 1 ([2011-05-13-remote-windows-management-with-pstools-part-1]({{< ref "2011-05-13-remote-windows-management-with-pstools-part-1" >}})) of this article series to troubleshoot PsTools itself if you cannot get PsExec to connect to a remote machine.
+You will most likely stumble upon issues when setting all of this up. Check out [part 1](2011-05-13-remote-windows-management-with-pstools-part-1.md) of this article series to troubleshoot PsTools itself if you cannot get PsExec to connect to a remote machine.
 
 If, for some reason, you have issues with launching a certain task, you can remove the flag `-d` from any PsExec-related line in `manage_farm.bat` and it will not release the process but instead hold it until completed and show you what is spewed out on the command line. That same data is also written to the `manage_farm.bat` log file.
 
@@ -285,4 +285,4 @@ The syntax of `vrlclient.xml` is as follows (change IP addresses to make this fi
 </VRLClient>
 ```
 
-Keep reading part 3 ([2011-06-02-remote-windows-management-with-pstools-part-3]({{< ref "2011-06-02-remote-windows-management-with-pstools-part-3" >}})) for more info on how to control remote V-Ray slaves using PsTools.
+Keep reading [part 3](2011-06-02-remote-windows-management-with-pstools-part-3.md) for more info on how to control remote V-Ray slaves using PsTools.

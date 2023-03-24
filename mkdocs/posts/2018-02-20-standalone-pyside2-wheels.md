@@ -15,7 +15,7 @@ The Qt Company has yet to release official, standalone and pip-installable PySid
 - [fredrikaverpil/pyside2-macos](https://github.com/fredrikaverpil/pyside2-macos)
 - [fredrikaverpil/pyside2-linux](https://github.com/fredrikaverpil/pyside2-linux)
 
-**Update 2018-03-09**: The Qt Company now offers official and standalone wheels, read more here: [2018-03-09-official-pyside2-wheels]({{< ref "2018-03-09-official-pyside2-wheels" >}})
+**Update 2018-03-09**: The Qt Company now offers official and standalone wheels, read more [here](2018-03-09-official-pyside2-wheels.md).  
 **Update 2018-07-17**: PySide2 can now be installed from pypi.org: `pip install PySide2`!
 
 

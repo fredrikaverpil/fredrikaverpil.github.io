@@ -11,7 +11,7 @@ Written in Python, with Nuke 6.9 in mind, generate a Read node from the selected
 
 <!-- move -->
 
-Howdy! There's a newer version of this script here: [2016-05-23-nuke-script-read-node-from-write-node]({{< ref "2016-05-23-nuke-script-read-node-from-write-node" >}})
+Howdy! There's a newer version of this script [here](2016-05-23-nuke-script-read-node-from-write-node.md).
 
 The script will attempt to load an image sequence or a single file (such as a movie file), based off the selected Write node. If the first and last frame can not be determined, it will fall back to the project settings’ frame range and throw a warning.
 
@@ -34,7 +34,7 @@ Download: [readFromWrite.py](https://raw.github.com/fredrikaverpil/nuke/master/s
 - v1.1: Support for filenamefilter callback
 - v1.0: Initial release
 
-Place the Python script in the /scripts dir inside your `NUKE_PATH` (see my previous post [2011-10-28-nuke-63-small-studio-setup-for-windows-osx]({{< ref "2011-10-28-nuke-63-small-studio-setup-for-windows-osx" >}}) on setting this up). Add the following to your `menu.py`:
+Place the Python script in the /scripts dir inside your `NUKE_PATH` (see my previous post [here](2011-10-28-nuke-63-small-studio-setup-for-windows-osx.md) on setting this up). Add the following to your `menu.py`:
 
 ```python
 import readFromWrite

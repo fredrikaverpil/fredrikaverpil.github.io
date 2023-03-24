@@ -105,12 +105,12 @@ I’ve noticed quite a lot of X100 owners have moved onto the X-Pro1. I’m actu
 
 The X100 has many [quirks](http://www.fujix-forum.com/index.php?/topic/4097-x100-firmware-bugsquirks-overview/), and there are lots of software improvements I hope Fujifilm will address. Despite this, the X100 is hands down the best camera I’ve owned for taking with me everywhere I go – be it work, vacation or just a walk.
 
-Check out my X100 data page at [2012-02-02-fujifilm-x100-settings-and-notes]({{< ref "2012-02-02-fujifilm-x100-settings-and-notes" >}}) for more info on details regarding the software settings.
+Check out my [X100 data page](2012-02-02-fujifilm-x100-settings-and-notes.md) for more info on details regarding the software settings.
 
 ## Other X100 resources
 
 Make sure to check out some of my other X100 articles:
 
-- Fujifilm Finepix X100 – settings: [2012-02-02-fujifilm-x100-settings-and-notes]({{< ref "2012-02-02-fujifilm-x100-settings-and-notes" >}})
-- Fujifilm Finepix X100 – RAW and film simulation: [2012-08-04-fujifilm-finepix-x100-raw-and-film-simulation]({{< ref "2012-08-04-fujifilm-finepix-x100-raw-and-film-simulation" >}})
-- Fujifilm Finepix X100 – LCD/EVF observations: [2012-08-09-fujifilm-finepix-x100-lcd-evf-observations]({{< ref "2012-08-09-fujifilm-finepix-x100-lcd-evf-observations" >}})
+- [Fujifilm Finepix X100 – settings](2012-02-02-fujifilm-x100-settings-and-notes.md)
+- [Fujifilm Finepix X100 – RAW and film simulation](2012-08-04-fujifilm-finepix-x100-raw-and-film-simulation.md)
+- [Fujifilm Finepix X100 – LCD/EVF observations](2012-08-09-fujifilm-finepix-x100-lcd-evf-observations.md)

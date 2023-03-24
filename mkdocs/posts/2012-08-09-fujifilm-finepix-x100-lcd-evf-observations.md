@@ -48,6 +48,6 @@ Do note that in manual focusing mode (MF) the AFL/AEL-button serves as a single 
 
 Make sure to check out some of my other X100 articles:
 
-- Fujifilm Finepix X100 – settings: [2012-02-02-fujifilm-x100-settings-and-notes]({{< ref "2012-02-02-fujifilm-x100-settings-and-notes" >}})
-- Fujifilm Finepix X100 – a year in retrospect: [2012-06-12-the-fujifilm-x100-a-year-in-retrospect]({{< ref "2012-06-12-the-fujifilm-x100-a-year-in-retrospect" >}})
-- Fujifilm Finepix X100 – RAW and film simulation: [2012-08-04-fujifilm-finepix-x100-raw-and-film-simulation]({{< ref "2012-08-04-fujifilm-finepix-x100-raw-and-film-simulation" >}})
+- [Fujifilm Finepix X100 – settings](2012-02-02-fujifilm-x100-settings-and-notes.md)
+- [Fujifilm Finepix X100 – a year in retrospect](2012-06-12-the-fujifilm-x100-a-year-in-retrospect.md)
+- [Fujifilm Finepix X100 – RAW and film simulation](2012-08-04-fujifilm-finepix-x100-raw-and-film-simulation.md)
