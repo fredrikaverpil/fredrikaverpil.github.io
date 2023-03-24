@@ -24,8 +24,8 @@ If you want to read it all through yourself, start here: [https://wiki.qt.io/Ger
 
 The PySide2 git repository can be accessed through both these websites:
 
-- [http://code.qt.io/cgit/pyside/pyside-setup.git/](code.qt.io)
-- [https://codereview.qt-project.org/gitweb?p=pyside%2Fpyside-setup.git;a=summary](codereview.qt-project.org)
+- http://code.qt.io/cgit/pyside/pyside-setup.git/
+- https://codereview.qt-project.org/gitweb?p=pyside%2Fpyside-setup.git;a=summary
 
 However, the `codereview` one [should only be used for gerrit-access, and not for e.g. git cloning](https://gitter.im/PySide/pyside2?at=59a01d95614889d475869e8e).
 

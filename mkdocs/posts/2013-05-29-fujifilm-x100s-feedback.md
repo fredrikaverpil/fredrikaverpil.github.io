@@ -22,7 +22,7 @@ A forum thread discussing the issue can be found [here](http://www.fujix-forum.c
 
 
 ![](/static/x100s/skin_smoothening/DSCF4008.JPG)
-*X100S, ISO 6400, NR -2. [JPEG download](fredrikaverpil.github.io/obsidian/static/x100s/skin_smoothening/DSCF4008.JPG) & [RAF download](/static/x100s/skin_smoothening/DSCF4008.RAF).*
+*X100S, ISO 6400, NR -2. [JPEG download](/static/x100s/skin_smoothening/DSCF4008.JPG) & [RAF download](/static/x100s/skin_smoothening/DSCF4008.RAF).*
 
 ![](/static/x100s/skin_smoothening/DSCF4009.JPG)
-*X100S, ISO 1600, NR -2. [JPEG download](fredrikaverpil.github.io/obsidian/static/x100s/skin_smoothening/DSCF4009.JPG) & [RAF download](/static/x100s/skin_smoothening/DSCF4009.RAF).*
+*X100S, ISO 1600, NR -2. [JPEG download](/static/x100s/skin_smoothening/DSCF4009.JPG) & [RAF download](/static/x100s/skin_smoothening/DSCF4009.RAF).*

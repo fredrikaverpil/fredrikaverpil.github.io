@@ -6,7 +6,7 @@ tags:
 
 # Installing Poetry system-wide
 
-I recently got some feedback (thank you [@simmel](https://github.com/simmel), much appreciated!) on a previous post on [2021-04-17-debugging-poetry]({{< ref "2021-04-17-debugging-poetry" >}}). I then realized it was a bit hard to follow if all you wanted to do was to install Poetry globally, with some added control from the [default installation method](https://python-poetry.org/docs/#installation).
+I recently got some feedback (thank you [@simmel](https://github.com/simmel), much appreciated!) on a previous post on [debugging Poetry](2021-04-17-debugging-poetry.md). I then realized it was a bit hard to follow if all you wanted to do was to install Poetry globally, with some added control from the [default installation method](https://python-poetry.org/docs/#installation).
 
 This post aims to focus on this and cover the different system-wide installation alternatives that I am aware of.
 
@@ -16,15 +16,17 @@ This post aims to focus on this and cover the different system-wide installation
 
 You can very easily make Poetry available system-wide, by just following the [installation docs](https://python-poetry.org/docs/#installation). However, this makes it a bit harder to e.g. install in-development builds of Poetry. By leveraging [pipx](https://github.com/pypa/pipx), this can be solved:
 
-```bash
-# macOS
-brew install pipx
-pipx install poetry
+!!! tip "Install Poetry with pipx"
 
-# Linux (apt-get)
-apt install pipx
-pipx install poetry
-```
+    ```bash
+    # macOS
+    brew install pipx
+    pipx install poetry
+
+    # Linux (apt-get)
+    apt install pipx
+    pipx install poetry
+    ```
 
 Yeah, sorry Windows users. No easy setup here that I am aware of, unfortunately. The only reasonable package manager for Windows is [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/), in my opinion, and that has no pipx or poetry package.
 

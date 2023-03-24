@@ -113,4 +113,4 @@ else:
 
 There are also a set of rules which would help you during development. Please have a look at the project's [README](https://github.com/mottosso/Qt.py#rules) for more details.
 
-In case you're interested in reading more on Qt.py, check out my guide here: [2016-07-25-developing-with-qt-py]({{< ref "2016-07-25-developing-with-qt-py" >}}).
+In case you're interested in reading more on Qt.py, check out my guide [here](2016-07-25-developing-with-qt-py.md).

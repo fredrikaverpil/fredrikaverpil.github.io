@@ -12,7 +12,7 @@ tags:
 
 ### Background
 
-Ever since I replaced my trusty old X100, see [2012-06-12-the-fujifilm-x100-a-year-in-retrospect]({{< ref "2012-06-12-the-fujifilm-x100-a-year-in-retrospect" >}}), with its newer incarnation, the X100S (see [2013-03-08-the-fujifilm-x100s-compared-to-the-x100]({{< ref "2013-03-08-the-fujifilm-x100s-compared-to-the-x100" >}})), I have been struggling with color rendition in Lightroom, which is my weapon of choice when editing RAW files.
+Ever since I replaced my trusty old X100 (see my review [here](2012-06-12-the-fujifilm-x100-a-year-in-retrospect.md)) with its newer incarnation, the X100S (see ,my review [here](2013-03-08-the-fujifilm-x100s-compared-to-the-x100.md)), I have been struggling with color rendition in Lightroom, which is my weapon of choice when editing RAW files.
 
 <strong>Update 8<sup>th</sup> April, 2014:</strong> Adobe today released Adobe Camera RAW 8.4 which includes huge improvements on color rendition in Lightroom 5.4 and Photoshop CC (version 14.2.1). This more or less renders my camera profiles obsolete. But do read on if you like…
 

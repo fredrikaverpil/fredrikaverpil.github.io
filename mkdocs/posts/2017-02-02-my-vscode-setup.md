@@ -15,7 +15,7 @@ This is my [Visual Studio Code](https://code.visualstudio.com) (vscode) setup, w
 
 <!-- more -->
 
-I previously posted about my Sublime Text 3 (ST3) setup in [2016-05-20-my-sublime-3-setup]({{< ref "2016-05-20-my-sublime-3-setup" >}}), but I've fully moved on to use vscode instead so I figured I'd share this new setup.
+I previously posted about my [Sublime Text 3 (ST3) setup](2016-05-20-my-sublime-3-setup.md), but I've fully moved on to use vscode instead so I figured I'd share this new setup.
 
 
 

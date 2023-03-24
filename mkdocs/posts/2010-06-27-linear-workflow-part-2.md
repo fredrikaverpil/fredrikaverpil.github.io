@@ -12,7 +12,7 @@ This is how I would deal with the linear workflow (including non-linear preview)
 
 <!-- more -->
 
-If you are new to linear workflows and do not really understand what this is for, please read the Linear Workflow, part 1 [2010-05-27-linear-workflow-part-1]({{< ref "2010-05-27-linear-workflow-part-1" >}}) article before continuing.
+If you are new to linear workflows and do not really understand what this is for, please read the Linear Workflow, [part 1](2010-05-27-linear-workflow-part-1.md)article before continuing.
 
 ## Default render, no gamma correction
 

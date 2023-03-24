@@ -45,7 +45,7 @@ query = sql.SQL("select {fields} from {table}").format(
 
 Source: [https://gist.github.com/rgreenjr/3637525](https://gist.github.com/rgreenjr/3637525)
 
-{{< gist rgreenjr 3637525 >}}
+<script src="https://gist.github.com/rgreenjr/3637525.js"></script>
 
 ```sql
 -- show running queries (pre 9.2)

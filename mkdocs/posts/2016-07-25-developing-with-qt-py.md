@@ -74,7 +74,7 @@ else:
     print('No Qt binding available.')
 ```
 
-For more information on how to make your old PySide/PyQt4 scripts work with Qt.py, please have a look at one of my previous posts: [2016-07-25-dealing-with-maya-2017-and-pyside2]({{< ref "2016-07-25-dealing-with-maya-2017-and-pyside2" >}}).
+For more information on how to make your old PySide/PyQt4 scripts work with Qt.py, please have a look at one of my [previous posts](2016-07-25-dealing-with-maya-2017-and-pyside2.md).
 
 Qt.py was created and is maintained by Marcus Ottosson and myself. At the time of writing this, Qt.py is being used at [Disney Animation](http://www.disneyanimation.com), [Framestore](https://www.framestore.com), [Industriromantik](http://www.industriromantik.se) (where I work) and [Weta Digital](https://www.wetafx.co.nz).
 
@@ -97,7 +97,7 @@ The tricky part is to make sure your script can find Qt.py. There are many alter
 1. Download this [`Qt.py` file](https://raw.githubusercontent.com/mottosso/Qt.py/master/Qt.py) and save it into a folder.
 2. Add the folder path to the `PYTHONPATH` environment variable.
 
-I've also outlined a few advanced (and often better) approaches on how to get Qt.py installed based on different needs in this post: [2016-07-25-installing-qt-py-advanced-methods]({{< ref "2016-07-25-installing-qt-py-advanced-methods" >}}).
+I've also outlined a few advanced (and often better) approaches on how to get Qt.py installed based on different needs in [this post](2016-07-25-installing-qt-py-advanced-methods.md).
 
 
 ## Caveats

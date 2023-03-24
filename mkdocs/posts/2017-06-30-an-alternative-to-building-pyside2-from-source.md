@@ -20,8 +20,7 @@ conda config --add channels conda-forge
 conda install pyside2
 ```
 
-**Update 2018-03-09**: The Qt Company now offers official and standalone wheels, read more here: [2018-03-09-official-pyside2-wheels]({{< ref "2018-03-09-official-pyside2-wheels" >}}).
-
+**Update 2018-03-09**: The Qt Company now offers official and standalone wheels, read more [here](2018-02-20-standalone-pyside2-wheels.md).
 
 ### A formal request to provide official PySide2 wheels
 
