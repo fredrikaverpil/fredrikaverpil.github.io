@@ -5,6 +5,8 @@ plugins:
   - meta # must be defined before the "blog" plugin
   - tags: # must be defined before the "blog" plugin
       tags_file: tags.md
+  - social:
+      cards: true
   - blog:
       # https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#adding-pages
       blog_dir: . # override default blog dir
