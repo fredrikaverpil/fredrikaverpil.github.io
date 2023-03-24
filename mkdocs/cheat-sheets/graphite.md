@@ -3,7 +3,7 @@ date: 2022-12-17
 draft: true
 tags:
 - git
-title: "\U0001F347 Graphite"
+title: Graphite
 ---
 
 # Graphite

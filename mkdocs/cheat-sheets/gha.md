@@ -4,7 +4,7 @@ draft: true
 tags:
 - github-actions
 - python
-title: "\U0001F3B8 GitHub Actions"
+title: GitHub Actions
 ---
 
 # GitHub Actions

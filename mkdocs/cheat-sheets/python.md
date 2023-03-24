@@ -3,7 +3,7 @@ date: 2022-12-17
 draft: true
 tags:
 - python
-title: "\U0001F40D Python"
+title: Python
 ---
 
 # Python

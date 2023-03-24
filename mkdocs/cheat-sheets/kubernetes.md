@@ -3,7 +3,7 @@ date: 2022-12-17
 draft: true
 tags:
 - kubernetes
-title: "\U0001F3B1 Kubernetes"
+title: Kubernetes
 ---
 
 # Kubernetes

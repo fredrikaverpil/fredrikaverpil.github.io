@@ -3,7 +3,7 @@ date: 2022-12-18
 draft: true
 tags:
 - docker
-title: "\U0001F433 Docker"
+title: Docker
 ---
 
 # Docker
