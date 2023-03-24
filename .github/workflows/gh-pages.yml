@@ -23,15 +23,24 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      # for social cards
+      - run: apt-get install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev
+
       - uses: actions/setup-python@v4
         with:
           python-version: 3.11
-          cache: pip
           python-version-file: .python-version
+
+      - uses: actions/cache@v3
+        with:
+          key: ${{ github.ref }}
+          path: .cache
 
       - run: pip install \
           git+https://${{ secrets.MKDOCS_MATERIAL_INSIDERS }}@github.com/squidfunk/mkdocs-material-insiders.git \
-          mkdocs-rss-plugin
+          mkdocs-rss-plugin \
+          pillow cairosvg # for social cards
+
       - run: mkdocs build --config-file mkdocs.insiders.yml
 
       - name: Setup Pages
