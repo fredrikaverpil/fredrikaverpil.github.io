@@ -5,11 +5,13 @@ updates:
     # Workflow files stored in the
     # default location of `.github/workflows`
     directory: "/"
+    registries:
+      - mkdocs-material-insiders
     schedule:
       interval: "weekly"
 
 registries:
-  github:
+  mkdocs-material-insiders:
     type: git
     url: https://github.com/squidfunk/mkdocs-material-insiders
     username: x-access-token
