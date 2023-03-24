@@ -24,8 +24,6 @@ plugins:
         - categories
         - tags
 
-  # - tags
-  # - social
   # - privacy:
   #     external_assets_dir: assets/external
 

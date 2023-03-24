@@ -8,6 +8,8 @@ repo_name: fredrikaverpil.github.io
 plugins:
   - search # must be re-added when plugins are specified
   - meta
+  - social:
+      cards: true
 
 markdown_extensions:
   # Admonitions
