@@ -16,6 +16,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.inlinehilite
+  - pymdownx.magiclink
   - pymdownx.snippets:
       url_download: true
       check_paths: true
