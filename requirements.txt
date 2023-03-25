@@ -1,7 +1,4 @@
-# https://squidfunk.github.io/mkdocs-material/insiders/getting-started/#mkdocsyml
 mkdocs-material-insiders @ git+https://${MKDOCS_MATERIAL_INSIDERS}@github.com/squidfunk/mkdocs-material-insiders.git
 mkdocs-rss-plugin
-
-# social cards: https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/
 pillow
 cairosvg
