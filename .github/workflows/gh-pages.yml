@@ -43,6 +43,7 @@ jobs:
       - run: pip install --upgrade \
           git+https://${{ secrets.MKDOCS_MATERIAL_INSIDERS }}@github.com/squidfunk/mkdocs-material-insiders.git \
           mkdocs-rss-plugin \
+          mkdocs-redirects \
           pillow cairosvg # for social cards
 
       - run: mkdocs build --config-file mkdocs.insiders.yml
