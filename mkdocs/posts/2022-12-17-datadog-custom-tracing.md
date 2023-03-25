@@ -14,6 +14,8 @@ If there is no incoming request, such as if a cronjob is running, then Datadog w
 
 To solve this, you can use the ddtrace-py library and create a custom trace/span whenever tag and tag a span with exception information. This will effectively make it possible to track errors in APM error tracking.
 
+<!-- more -->
+
 !!! example "Custom trace/span example"
 
     ```python
