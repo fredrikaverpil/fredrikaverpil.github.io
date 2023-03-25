@@ -16,8 +16,6 @@ If there is no incoming request, a custom span can be created. This can be usefu
 
 !!! example "Custom span example"
 
-    
-
     ```python
     --8<-- "mkdocs/static/datadog/custom_span.py"
     ```
