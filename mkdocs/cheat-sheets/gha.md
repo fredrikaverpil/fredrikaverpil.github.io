@@ -5,6 +5,7 @@ tags:
 - github-actions
 - python
 title: GitHub Actions
+icon: simple/githubactions
 ---
 
 # GitHub Actions
