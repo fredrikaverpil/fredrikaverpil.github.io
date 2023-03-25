@@ -16,4 +16,4 @@ jobs:
           python-version-file: .python-version
 
       - run: pip install ruff
-      - run: ruff .
+      - run: ruff --select=ALL .
