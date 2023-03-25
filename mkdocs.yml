@@ -56,7 +56,7 @@ extra_css:
   - stylesheets/extra.css
 
 extra:
-  generator: false # remove "Made with Material for MkDocs" from footer
+  generator: true # "Made with Material for MkDocs" from footer
   social:
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=fontawesome#social-links
     - icon: fontawesome/brands/github
