@@ -1,7 +1,7 @@
 ---
 date: 2021-12-17
 tags:
-- osx
+- macos
 ---
 
 # Developing with Apple Silicon
