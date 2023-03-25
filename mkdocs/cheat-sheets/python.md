@@ -30,7 +30,17 @@ def exception_was_raised():
 
 ### Exception hooks
 
-See [datadog](datadog.md) for some examples.
+You can register [custom exception hooks](https://docs.python.org/3/library/sys.html#sys.excepthook), which can run code whenever an exception is raised, and just before the script will exit.
+
+```python
+import sys
+
+def custom_excepthook():
+    print("oops")
+
+sys.excepthook = custom_excepthook
+sys.unraisablehook = custom_excepthook
+```
 
 ## Caching with TTL
 
