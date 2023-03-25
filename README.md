@@ -21,3 +21,8 @@ pip install -r requirements.txt
 ```bash
 mkdocs serve --config-file mkdocs.insiders.yml --dirtyreload
 ```
+
+### ✨ Useful stuff
+
+- https://squidfunk.github.io/mkdocs-material/reference/
+- https://facelessuser.github.io/pymdown-extensions/
