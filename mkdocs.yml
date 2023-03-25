@@ -48,6 +48,8 @@ theme:
     - search.highlight
     - content.code.copy
     - content.code.annotate
+    - navigation.tabs
+    - navigation.sections
   custom_dir: mkdocs/overrides
 
 extra_css:
