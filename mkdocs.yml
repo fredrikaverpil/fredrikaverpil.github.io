@@ -69,7 +69,7 @@ extra:
 
 nav:
   - Blog:
-      - index.md
+      - blog/index.md
       - tags.md
   - Cheat sheets:
       - cheat-sheets/gha.md
