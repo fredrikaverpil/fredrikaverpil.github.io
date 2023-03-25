@@ -16,6 +16,7 @@ plugins:
       post_date_format: long
       post_readtime: true
       archive: true
+      categories: false
       authors: true
       authors_file: .authors.yml
   - rss:
