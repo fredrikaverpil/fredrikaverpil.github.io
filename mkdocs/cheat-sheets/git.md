@@ -4,64 +4,95 @@ draft: true
 tags:
 - git
 title: Git
+icon: simple/git
 ---
 
 # Git
 
-## Git bisect
+## Sane `git pull` configuration
 
-1.  Have a failing test
-2.  `git bisect start`
-3.  `git bisect bad`
-4.  Run test again
+I like to avoid getting local merge commits on `git pull`. Therefore I've add the following to my `~/.gitconfig`:
 
-    1.  If OK, run  `git bisect good`
-    2.  if test is still failing, run `git bisect bad`
+```bash
+[pull]
+    ff = only
+```
+
+This will cause `git pull` to only do a fast-forward merge, which is what I want 99% of the time.
+
+!!! note "My full git config"
+
+    My `.gitconfig` is available in my dotfiles repo, [here](https://github.com/fredrikaverpil/dotfiles/blob/main/gitconfig).
 
 ## Undoing, reverting
 
-If you all of a sudden want to revert back to where you were at 10 minutes ago, given you have made commits along the way:
+If you want to revert back to where you were at 10 minutes ago, given you have made commits along the way:
 
 ```bash
-git reset --hard master@{"10 minutes ago"}
+git reset --hard main@{"10 minutes ago"}
 ```
 
-## Branch management
-
-When you've accidentaly screwed up your local `master`, make it good again by resetting it into whatever is in `origin/master`:
+When you've accidentaly screwed up your local `main` branch, make it good again by resetting it into whatever is in `origin/main`:
 
 ```bash
-$ git checkout -B master origin/master && git pull
+git checkout -B main origin/main
+git pull
 ```
 
 Or reset your current branch to the one in origin:
 
 ```bash
-$ git reset --hard origin/<your_branch>
+git reset --hard origin/main
 ```
+
+!!! tip "git-reset script"
+
+    I have a shim script available on `$PATH` which I run quite often (see my :simple-github: [dotfiles](https://github.com/fredrikaverpil/dotfiles/blob/main/shell/bin/git-reset)) instead of running `git fetch`, `git reset` or `git pull`, just to reset everything for the branch I'm currently on.
+
+    ```python
+    --8<-- "https://raw.githubusercontent.com/fredrikaverpil/dotfiles/main/shell/bin/git-reset"
+    ```
+
+
+## Branch management
 
 Delete all branches which have been merged (except e.g. master, main, dev):
 
 ```bash
 # Show a list of merged branches, which can be deleted
-$ git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs echo
+git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs echo
 
 # Delete the merged branches
-$ git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs git branch -d
+git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs git branch -d
 ```
+
+## Git bisect
+
+Use bisect when you want to find the commit that introduced a bug. Official docs [here](https://git-scm.com/docs/git-bisect).
+
+!!! tip "git bisect quickstart"
+
+    1.  Run a test and make sure it is indicating the bug is present (via e.g. failure).
+    2.  Run `git bisect start` to begin bisecting.
+    3.  Run `git bisect bad` to mark the current commit as "bad". 
+    4.  Run test again
+
+        1.  If the bug is not present, run  `git bisect good`.
+        2.  If the bug is still present, run `git bisect bad`.
+
 
 ## Search (using super fast grep)
 
 Free text search throughout any git commit message:
 
 ```bash
-$ git --no-pager log --regexp-ignore-case --grep <regexp>
+git --no-pager log --regexp-ignore-case --grep <regexp>
 ```
 
 Find a commit based on free text search of code:
 
 ```bash
-$ git rev-list --all | xargs git --no-pager grep --color=never --extended-regexp --ignore-case <regexp>
+git rev-list --all | xargs git --no-pager grep --color=never --extended-regexp --ignore-case <regexp>
 ```
 
 Free text search in current code:
@@ -77,7 +108,7 @@ git --no-pager grep --ignore-case <regexp>
 Rebase that for some reason works more often than `git rebase`:
 
 ```bash
-$ git pull --rebase origin master
+git pull --rebase origin master
 ```
 
 The `git pull` is a shorthand for `git fetch` and `git merge`. The above command instead does a `git fetch` followed by a `git rebase`.
@@ -109,7 +140,7 @@ $ git log --graph --decorate --pretty=oneline --abbrev-commit
 In the example above, the start of the branch is the commit with hash `fc7be40` and there were a total of 4 commits made since branching off. We can then squash the commits either by defining the commit sha where we branched off:
 
 ```bash
-$ git rebase -i fc7be40
+git rebase -i fc7be40
 ```
 
 Your editor of choice (defined in `~/.gitconfig`) should open a `git-rebase-todo` file and you should see something like this:
@@ -183,13 +214,13 @@ If you for some reason still have a very complex conflict to solve, you can comp
 Begin by resetting the branch to sit at where you originally started your branch, but keep all your changes as staged files. Taking the previous example, I will reset to `fc7be40 (origin/master, origin/HEAD, master) Update about.md`:
 
 ```bash
-$ git reset --soft fc7be40
+git reset --soft fc7be40
 ```
 
 Now you can carefully unstage the changes which are giving you a hard time. In my case I will take [Poetry's](https://python-poetry.org/docs/basic-usage/#installing-with-poetrylock) lockfile (`poetry.lock`) as an example:
 
 ```bash
-$ git reset HEAD poetry.lock
+git reset HEAD poetry.lock
 ```
 
 Repeat this for all files you wish to unstage from your commit.
@@ -197,7 +228,7 @@ Repeat this for all files you wish to unstage from your commit.
 I will then re-create my original commit from all the files which are _staged_:
 
 ```bash
-$ git commit -m "Create post"
+git commit -m "Create post"
 ```
 
 #### Step 3. Perform the rebase
@@ -205,7 +236,7 @@ $ git commit -m "Create post"
 Now, the rebase is hopefully a lot easier to manage:
 
 ```bash
-$ git rebase master
+git rebase master
 ```
 
 Sort out any conflicts with `git rebase --continue` or `git rebase --skip`, like usual...

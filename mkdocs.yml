@@ -16,7 +16,9 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      url_download: true
+      check_paths: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
