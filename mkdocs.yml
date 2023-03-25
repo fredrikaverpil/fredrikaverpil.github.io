@@ -8,8 +8,6 @@ repo_name: fredrikaverpil.github.io
 # see mkdocs.insiders.yml for plugins setup
 
 markdown_extensions:
-  # Admonitions
-  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
   - admonition
   - footnotes
   - tables
@@ -33,12 +31,7 @@ markdown_extensions:
 theme:
   name: material
   icon:
-    # logo: bootstrap/terminal-fill  # does not work with social cards
     logo: "material/console"
-  # font: false # prevent google fonts from loading
-  # font:
-  # text: JetBrains Mono
-  # code: JetBrains Mono
   favicon: static/favicon.ico
   features:
     - toc.follow
@@ -53,9 +46,7 @@ extra_css:
   - stylesheets/extra.css
 
 extra:
-  generator: true # "Made with Material for MkDocs" from footer
   social:
-    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=fontawesome#social-links
     - icon: fontawesome/brands/github
       link: https://github.com/fredrikaverpil
     - icon: fontawesome/brands/mastodon

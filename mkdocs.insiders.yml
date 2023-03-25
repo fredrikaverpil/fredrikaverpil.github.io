@@ -8,7 +8,7 @@ plugins:
   - social:
       cards: true
   - blog:
-      # https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#adding-pages
+      # requires mkdocs-material-insiders
       blog_toc: true
       post_date_format: long
       post_readtime: true
@@ -16,18 +16,18 @@ plugins:
       authors: true
       authors_file: .authors.yml
   - rss:
-      # mkdocs-material-insiders
+      # requires mkdocs-material-insiders
+      match_path: blog/posts/.*
       date_from_meta:
         as_creation: date
       categories:
         - categories
         - tags
 
-  # - privacy:
-  #     external_assets_dir: assets/external
-
 theme:
   palette:
+    # requires mkdocs-material-insiders
+
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
