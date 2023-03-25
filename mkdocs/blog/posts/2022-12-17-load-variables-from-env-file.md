@@ -9,7 +9,7 @@ tags:
 
 Load an .env file into the environment prior to running something which requires the environment variables:
 
-!!! note "`.env` file"
+!!! note "Contents of the `.env` file"
 
     ```env
     MY_SUPER_SECRET_TOKEN="foo"
