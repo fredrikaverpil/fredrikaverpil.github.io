@@ -9,17 +9,14 @@ plugins:
       cards: true
   - blog:
       # https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#adding-pages
-      blog_dir: . # override default blog dir
       blog_toc: true
       post_date_format: long
-      post_url_format: "posts/{file}" # hugo compatible
       post_readtime: true
       archive: true
       authors: true
       authors_file: .authors.yml
   - rss:
       # mkdocs-material-insiders
-      match_path: posts/.*
       date_from_meta:
         as_creation: date
       categories:
