@@ -6,7 +6,7 @@ length = len(s)
 rows = 200
 counter = 1
 lines = []
-for row in range(rows):
+for _row in range(rows):
     line = s[counter:] + s*10  + "\n"
     lines.append(line)
     counter += 1
