@@ -71,5 +71,6 @@ extra:
 nav:
   - Blog:
       - index.md
+      - tags.md
   - Cheat sheets:
       - cheat-sheets/gha.md
