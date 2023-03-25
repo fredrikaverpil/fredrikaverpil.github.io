@@ -72,7 +72,6 @@ nav:
       - index.md
       - tags.md
   - Cheat sheets:
-      - cheat-sheets/datadog.md
       - cheat-sheets/gha.md
       - cheat-sheets/git.md
   - About me: about/index.md
