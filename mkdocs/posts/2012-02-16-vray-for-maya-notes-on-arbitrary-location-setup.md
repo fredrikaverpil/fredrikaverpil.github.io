@@ -4,7 +4,7 @@ tags:
 - vray
 - python
 - windows
-- osx
+- macos
 ---
 
 # V-Ray for Maya

@@ -1,7 +1,7 @@
 ---
 date: 2016-12-28
 tags:
-- osx
+- macos
 - video
 ---
 

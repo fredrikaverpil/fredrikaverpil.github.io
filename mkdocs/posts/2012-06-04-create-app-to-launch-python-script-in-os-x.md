@@ -3,7 +3,7 @@ date: 2012-06-04
 tags:
 - applescript
 - python
-- osx
+- macos
 ---
 
 # Create .app to launch Python script in Mac OS X

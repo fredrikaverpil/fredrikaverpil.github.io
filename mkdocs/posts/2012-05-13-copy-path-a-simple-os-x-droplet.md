@@ -3,7 +3,7 @@
 date: 2012-05-13
 tags:
 - applescript
-- osx
+- macos
 ---
 
 # Copypath – a simple OS X droplet

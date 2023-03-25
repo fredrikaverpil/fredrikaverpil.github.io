@@ -1,7 +1,7 @@
 ---
 date: 2015-11-25
 tags:
-- osx
+- macos
 - python
 - pyqt
 ---

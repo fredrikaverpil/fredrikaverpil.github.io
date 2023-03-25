@@ -2,7 +2,7 @@
 date: 2017-02-02
 tags:
 - python
-- osx
+- macos
 - windows
 - linux
 ---
