@@ -1,9 +1,10 @@
 ---
 date: 2022-12-17
-draft: true
+draft: false
 tags:
 - python
 title: Python
+icon: simple/python
 ---
 
 # Python
