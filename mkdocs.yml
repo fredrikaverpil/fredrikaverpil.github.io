@@ -76,3 +76,4 @@ nav:
       - tags.md
   - Cheat sheets:
       - cheat-sheets/gha.md
+      - cheat-sheets/python.md
