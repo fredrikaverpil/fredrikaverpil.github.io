@@ -19,15 +19,11 @@ plugins:
       authors: true
       authors_file: .authors.yml
   - rss:
-      # mkdocs-material-insiders
       date_from_meta:
         as_creation: date
       categories:
         - categories
         - tags
-
-  # - privacy:
-  #     external_assets_dir: assets/external
 
 theme:
   palette:
