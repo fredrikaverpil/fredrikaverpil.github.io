@@ -11,27 +11,21 @@ markdown_extensions:
   # Admonitions
   # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
   - admonition
+  - footnotes
+  - tables
   - pymdownx.details
   - pymdownx.superfences
-
-  # Code block syntax highlighting
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-
   # Emojis
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-
-  # Other
-  - footnotes
-  - tables
 
 theme:
   name: material
@@ -75,5 +69,6 @@ nav:
       - index.md
       - tags.md
   - Cheat sheets:
+      - cheat-sheets/datadog.md
       - cheat-sheets/gha.md
-      - cheat-sheets/python.md
+      - cheat-sheets/git.md
