@@ -1,6 +1,9 @@
 INHERIT: mkdocs.yml
 
 plugins:
+  - redirects:
+      redirect_maps:
+        "index.md": "blog/index.md"
   - search # must be re-added when plugins are specified
   - meta # must be defined before the "blog" plugin
   - tags: # must be defined before the "blog" plugin
