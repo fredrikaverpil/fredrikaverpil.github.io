@@ -8,7 +8,7 @@ I am a passionate, enthusiastic and professional software developer, continuousl
 
 I advocate continuous development, automated testing, clean code and the use of common design patterns so as to maintain as high code quality as possible. I am deeply invested in the open source community and love collaborating and contributing.
 
-This my personal blog, where I write about software development, Python, open source, and other stuff I love tinkering with! :smiling_face_with_3_hearts:
+This my personal blog, where I scribble down notes on software development (mostly :material-language-python:), open source, and other stuff I love tinkering with! :smiling_face_with_3_hearts:
 
 Get in touch: [:material-github:](https://github.com/fredrikaverpil)
 [:material-mastodon:](https://fosstodon.org/@fredrikaverpil)
