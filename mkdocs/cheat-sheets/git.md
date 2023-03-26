@@ -103,6 +103,23 @@ git --no-pager grep --ignore-case <regexp>
 
 ## Rebasing
 
+### Auto-stash
+
+When rebasing and having a dirty workspace (uncommited file changes), you may want to stash before the rebase and restore the stash afterwards:
+
+```bash
+git stash save
+git rebase origin/main
+git stash pop
+```
+
+To automate this behavior, you can set git to "autostash", by setting the following in your `.gitconfig`, and all you have to do is `git rebase origin/main`:
+
+```bash
+[rebase]
+	autostash = true
+```
+
 ### Interactive rebase
 
 When I have a complex rebase conflict to solve, I like to squash all commits I've added in my private branch into one single commit. This makes it easier to deal with solving the conflict, in comparison with having to solve it for multiple commits.
