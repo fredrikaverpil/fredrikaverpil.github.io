@@ -1,7 +1,6 @@
 ---
 date: 2012-06-04
 tags:
-- applescript
 - python
 - macos
 ---
