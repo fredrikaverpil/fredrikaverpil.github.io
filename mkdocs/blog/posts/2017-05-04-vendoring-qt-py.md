@@ -2,7 +2,7 @@
 date: 2017-05-04
 tags:
 - python
-- qtpy
+- qt.py
 - pyside
 - pyqt
 ---

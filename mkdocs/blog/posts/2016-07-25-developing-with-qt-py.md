@@ -4,7 +4,7 @@ tags:
 - python
 - maya
 - nuke
-- qtpy
+- qt.py
 - pyside
 - pyqt
 ---
