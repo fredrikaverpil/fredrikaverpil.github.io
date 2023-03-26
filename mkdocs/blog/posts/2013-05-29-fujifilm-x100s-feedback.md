@@ -4,13 +4,13 @@ tags:
 - photography
 ---
 
-### Fujifilm X100S feedback
+# Fujifilm X100S feedback
 
 The information in this blog post was [originally sent to @fujiguys](https://twitter.com/fujiguys/status/339794906274988034), who in turn would forward it to Tokyo.
 
 <!-- more -->
 
-##### Excessive skin tone smoothening at ISO 6400
+## Excessive skin tone smoothening at ISO 6400
 
 Images shot at high ISO values, such as ISO 6400, exhibit excessive smoothening, especially visible in skin tones. As the RAF does not exhibit this at all it must be possible for the camera to develop a much less smoothened JPEG?
 
