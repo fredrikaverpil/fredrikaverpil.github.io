@@ -1,6 +1,12 @@
-<script
-  async
-  defer
-  src="https://analytics.umami.is/script.js"
-  data-website-id="c9c97df3-bc05-4b29-8caa-fcf03a05710f"
-></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    location$.subscribe(function(url) {
+      var umamiScript = document.createElement('script');
+      umamiScript.async = true;
+      umamiScript.defer = true;
+      umamiScript.src = "https://analytics.umami.is/script.js";
+      umamiScript.setAttribute('data-website-id', 'c9c97df3-bc05-4b29-8caa-fcf03a05710f');
+      document.head.appendChild(umamiScript);
+    })
+  })
+</script>
