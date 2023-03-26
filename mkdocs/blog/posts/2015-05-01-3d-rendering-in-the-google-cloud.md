@@ -1,7 +1,7 @@
 ---
 date: 2015-05-01
 tags:
-- gce
+- google-cloud
 - python
 - bash
 - linux
