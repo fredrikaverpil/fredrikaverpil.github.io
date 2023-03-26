@@ -12,7 +12,7 @@ When using [:simple-datadog: Datadog](https://datadog.com) for monitoring, Datad
 
 If there is no incoming request, such as if a cronjob is running, then Datadog will not record a trace and you might not be alerted by an error.
 
-To solve this, you can use the ddtrace-py library and create a custom trace/span whenever tag and tag a span with exception information. This will effectively make it possible to track errors in APM error tracking.
+To solve this, you can use the [ddtrace-py](https://github.com/DataDog/dd-trace-py) library and create a custom trace/span whenever tag and tag a span with exception information. This will effectively make it possible to track errors in APM error tracking.
 
 <!-- more -->
 
