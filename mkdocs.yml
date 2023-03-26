@@ -57,6 +57,8 @@ extra:
       link: https://linkedin.com/in/fredrik
     - icon: fontawesome/solid/square-rss
       link: sitemap.xml
+  analytics:
+    provider: umami
 
 nav:
   - Blog:
