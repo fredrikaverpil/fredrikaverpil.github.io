@@ -83,19 +83,19 @@ Use bisect when you want to find the commit that introduced a bug. Official docs
 
 ## Search (using super fast grep)
 
-Free text search throughout any git commit message:
+Use `git log` to perform free text search throughout any git commit message:
 
 ```bash
 git --no-pager log --regexp-ignore-case --grep <regexp>
 ```
 
-Find a commit based on free text search of code:
+Use `git rev-list` to find a commit based on free text search of source code:
 
 ```bash
 git rev-list --all | xargs git --no-pager grep --color=never --extended-regexp --ignore-case <regexp>
 ```
 
-Free text search in current code:
+Use `git grep` to perform free text search in current source code:
 
 ```bash
 git --no-pager grep --ignore-case <regexp>
