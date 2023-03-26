@@ -11,18 +11,19 @@ icon: simple/git
 
 ## Sane `git pull` configuration
 
-The `git pull` is a shorthand for `git fetch` and `git merge`. I like to avoid getting local merge commits on `git pull`. Therefore I've add the following to my `~/.gitconfig`:
+The `git pull` is a shorthand for `git fetch` followed by `git merge`. I like to avoid getting local merge commits on `git pull`. Therefore I've add the following to my `~/.gitconfig`:
 
 ```bash
 [pull]
     ff = only
 ```
 
-This will cause `git pull` to only do a fast-forward merge, which is what I want 99% of the time.
+This will cause `git pull` to only do a fast-forward merge, which is what I want 99% of the time. It's the same as running `git pull --ff-only`.
 
 !!! note "My full git config"
 
     My `.gitconfig` is available in my dotfiles repo, [here](https://github.com/fredrikaverpil/dotfiles/blob/main/gitconfig).
+
 
 ## Undoing, reverting
 
@@ -113,7 +114,7 @@ git rebase origin/main
 git stash pop
 ```
 
-To automate this behavior, you can set git to "autostash", by setting the following in your `.gitconfig`, and all you have to do is `git rebase origin/main`:
+To automate this behavior, you can set git to "autostash", by setting the following in your `~/.gitconfig`, and all you have to do is `git rebase origin/main`:
 
 ```bash
 [rebase]
