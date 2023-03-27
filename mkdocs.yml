@@ -56,7 +56,7 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/fredrik
     - icon: fontawesome/solid/square-rss
-      link: sitemap.xml
+      link: /sitemap.xml
   analytics:
     provider: umami
 
