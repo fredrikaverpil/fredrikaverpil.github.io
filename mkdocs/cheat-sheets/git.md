@@ -11,7 +11,7 @@ icon: simple/git
 
 ## Sane `git pull` configuration
 
-The `git pull` is a shorthand for `git fetch` followed by `git merge`. I like to avoid getting local merge commits on `git pull`. Therefore I've add the following to my `~/.gitconfig`:
+The `git pull` command is a shorthand for `git fetch` followed by `git merge`. I like to avoid getting local merge commits on `git pull`. Therefore I've add the following to my `~/.gitconfig`:
 
 ```bash
 [pull]
@@ -20,9 +20,40 @@ The `git pull` is a shorthand for `git fetch` followed by `git merge`. I like to
 
 This will cause `git pull` to only do a fast-forward merge, which is what I want 99% of the time. It's the same as running `git pull --ff-only`.
 
+
+!!! tip "Combine this with autostash and `--rebase`"
+
+    After having enabled "fast forward-only", you might see this error:
+    
+    ```bash
+    $ git pull
+    fatal: Not possible to fast-forward, aborting.
+    ```
+
+    If you also set up [autostash](#auto-stash), you can fix this easily with `--rebase`:
+
+    ```bash
+    $ git pull --rebase
+    Created autostash: 413dce8f4
+    Applied autostash.
+    Successfully rebased and updated refs/heads/mybranch.
+    ```
+
+    To make this all come together, you can set up your `~/.gitconfig` like so, and all you have to do is run `git pull`
+    and enjoy automatic fast forwarding, rebasing and autostashing:
+
+    ```bash
+    [pull]
+	    ff = only
+	    rebase = true
+    [rebase]
+	    autostash = true
+    ```
+
 !!! note "My full git config"
 
     My `.gitconfig` is available in my dotfiles repo, [here](https://github.com/fredrikaverpil/dotfiles/blob/main/gitconfig).
+
 
 
 ## Undoing, reverting
