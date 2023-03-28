@@ -39,17 +39,6 @@ This will cause `git pull` to only do a fast-forward merge, which is what I want
     Successfully rebased and updated refs/heads/mybranch.
     ```
 
-    To make this all come together, you can set up your `~/.gitconfig` like so, and all you have to do is run `git pull`
-    and enjoy automatic fast forwarding, rebasing and autostashing:
-
-    ```bash
-    [pull]
-	    ff = only
-	    rebase = true
-    [rebase]
-	    autostash = true
-    ```
-
 !!! note "My full git config"
 
     My `.gitconfig` is available in my dotfiles repo, [here](https://github.com/fredrikaverpil/dotfiles/blob/main/gitconfig).
