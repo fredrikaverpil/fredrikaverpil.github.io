@@ -44,7 +44,7 @@ So I'm fortunate to work at a company who owns a GitHub organization, and right 
 
 Let's write a little script!
 
-!!! example "`merge-dependabot.sh`"
+!!! example "`dependabot-merge.sh`"
 
     ```bash
     #!/bin/bash -e
@@ -65,10 +65,10 @@ The script will take arguments and forward to `gh`. This can be useful to filter
 
     ```bash
     # Merge PRs that successfully passed CI
-    ./merge-dependabot.sh --search "status:success"
+    ./dependabot-merge.sh --search "status:success"
 
     # Merge PRs that successfully passed CI and are categorized as developer dependencies
-    ./merge-dependabot.sh --search "status:success chore(deps-dev) in:title " 
+    ./dependabot-merge.sh --search "status:success chore(deps-dev) in:title " 
     ```
 
     See `gh pr list --help` for more examples and help on `--search`.
