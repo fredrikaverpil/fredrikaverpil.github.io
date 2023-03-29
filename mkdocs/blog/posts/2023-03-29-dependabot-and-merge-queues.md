@@ -27,7 +27,7 @@ $ gh pr list
 
 <!-- more -->
 
-## Automating :simple-dependabot: dependabot PR merging
+## Automating dependabot :simple-dependabot: PR merging
 
 !!! warning "Don't try this at home, kids"
 
