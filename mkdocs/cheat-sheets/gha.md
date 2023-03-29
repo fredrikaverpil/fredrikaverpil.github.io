@@ -32,6 +32,25 @@ There are lots of gotchas here, and [this](https://github.com/actions/runner/iss
       PR_NUMBER_OR_MASTER: ${{ github.event.number == 0 && 'master' ||  format('pr-{0}', github.event.number)  }}
     ```
 
+## Expressions
+
+Expressions official docs [here](https://docs.github.com/en/actions/learn-github-actions/expressions).
+
+### Functions
+
+This stores a value in an environment variable. Using the `contains` function, the if-condition evaluates whether
+to run the step or not. 
+
+```yml
+- run: echo "POETRY_VERSION=$(poetry --version)" >> $GITHUB_ENV
+  shell: bash
+
+- run: poetry config installer.modern-installation false
+  # workaround for bug: https://github.com/microsoft/debugpy/issues/1246
+  if: ${{ contains(env.POETRY_VERSION, '1.4.1') }}
+  shell: bash
+```
+
 ## Python specific
 
 ### Pipx via actions/setup-python
