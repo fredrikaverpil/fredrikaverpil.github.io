@@ -62,7 +62,7 @@ Let's write a little script!
 
 The script will take arguments and forward to `gh`. This can be useful to filter out certain PRs you want to merge.
 
-!!! example "Excecution examples"
+!!! example "Execution examples"
 
     ```bash
     # Merge PRs that successfully passed CI
