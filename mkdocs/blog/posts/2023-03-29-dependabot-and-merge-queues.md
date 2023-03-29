@@ -35,7 +35,7 @@ $ gh pr list
 
     But once you've done that, maybe let's see if we can ease the pain a bit here...
 
-I'm fortunate to work at a company who owns a GitHub organization, and right now [merge queues](https://github.blog/changelog/2023-02-08-pull-request-merge-queue-public-beta/) is in beta for GitHub organizations. By enabling this (in the repo settings[^1]) I can queue up all these dependabot PRs for merging in one go!
+I'm fortunate to work at a company who owns a GitHub organization, and right now [merge queues](https://github.blog/changelog/2023-02-08-pull-request-merge-queue-public-beta/) is in beta for GitHub organizations. By enabling this (in the repo settings[^1]) I can queue up all these dependabot PRs for merging in one go.
 
 [^1]:
     By the way, you can set up merge queues to employ a "rebase and merge" method :material-star-face:.
