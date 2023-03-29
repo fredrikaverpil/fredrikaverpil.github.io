@@ -42,13 +42,14 @@ This stores a value in an environment variable. Using the `contains` function, t
 to run the step or not. 
 
 ```yml
-- run: echo "POETRY_VERSION=$(poetry --version)" >> $GITHUB_ENV
-  shell: bash
+steps:
+  - run: echo "POETRY_VERSION=$(poetry --version)" >> $GITHUB_ENV
+    shell: bash
 
-- run: poetry config installer.modern-installation false
-  # workaround for bug: https://github.com/microsoft/debugpy/issues/1246
-  if: ${{ contains(env.POETRY_VERSION, '1.4.1') }}
-  shell: bash
+  - run: poetry config installer.modern-installation false
+    # workaround for bug: https://github.com/microsoft/debugpy/issues/1246
+    if: ${{ contains(env.POETRY_VERSION, '1.4.1') }}
+    shell: bash
 ```
 
 ## Python specific
