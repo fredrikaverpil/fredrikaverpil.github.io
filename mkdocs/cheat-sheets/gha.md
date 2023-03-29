@@ -41,7 +41,7 @@ Expressions official docs [here](https://docs.github.com/en/actions/learn-github
 This stores a value in an environment variable. Using the `contains` function, the if-condition evaluates whether
 to run the step or not. 
 
-```yml
+```yaml
 steps:
   - run: echo "POETRY_VERSION=$(poetry --version)" >> $GITHUB_ENV
     shell: bash
