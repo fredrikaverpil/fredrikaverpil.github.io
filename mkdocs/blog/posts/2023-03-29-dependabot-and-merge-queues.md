@@ -57,7 +57,7 @@ Let's write a little script!
     done
     ```
 
-    You'll need to install the [GitHub CLI](https://cli.github.com/) to make the `gh` command accessible.
+    You'll need to install and authenticate the [GitHub CLI](https://cli.github.com/) to make the `gh` command accessible, which is invoked by this script.
 
 
 The script will take arguments and forward to `gh`. This can be useful to filter out certain PRs you want to merge.
