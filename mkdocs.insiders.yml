@@ -27,6 +27,7 @@ plugins:
       categories:
         - categories
         - tags
+      image: https://github.com/fredrikaverpil.png
 
 theme:
   palette:
