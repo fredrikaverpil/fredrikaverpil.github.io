@@ -2,7 +2,7 @@
 date: 2023-04-02
 draft: true
 tags:
-- google
+- google-calendar
 title: Google Calendar
 icon: simple/googlecalendar
 ---
