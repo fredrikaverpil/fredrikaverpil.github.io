@@ -67,4 +67,5 @@ nav:
   - Cheat sheets:
       - cheat-sheets/gha.md
       - cheat-sheets/git.md
+      - cheat-sheets/gcal.md
   - About me: about/index.md
