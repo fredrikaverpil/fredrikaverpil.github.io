@@ -65,14 +65,14 @@ The script will take arguments and forward to `gh`. This can be useful to filter
 !!! example "Execution examples"
 
     ```bash
-    # Merge PRs that successfully passed CI
-    ./dependabot-merge.sh --search "status:success"
+    # Merge open PRs that successfully passed CI
+    ./dependabot-merge.sh --search "is:open status:pending"
 
-    # Merge PRs that successfully passed CI and are categorized as developer dependencies
-    ./dependabot-merge.sh --search "status:success chore(deps-dev) in:title " 
+    # Merge open PRs that successfully passed CI and are categorized as developer dependencies
+    ./dependabot-merge.sh --search "is:open status:pending chore(deps-dev) in:title" 
     ```
 
-    See `gh pr list --help` for more examples and help on `--search`.
+    See `gh pr list --help` for more examples and help on `--search`, and see the [official docs here on `status:pending`](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests#search-by-commit-status).
 
 !!! note "My dependabot setup"
 
