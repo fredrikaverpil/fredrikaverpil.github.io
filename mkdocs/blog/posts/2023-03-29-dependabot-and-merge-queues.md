@@ -74,7 +74,7 @@ The script will take arguments and forward to `gh`. This can be useful to filter
 
     See `gh pr list --help` for more examples and help on `--search`, and see the [official docs here on `status:pending`](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests#search-by-commit-status).
 
-!!! note "My dependabot setup"
+!!! note "Filtering on `deps-dev` vs `deps`"
 
     To be able to search for `chore(deps-dev)`, you might have to add something like this to your dependabot settings:
 
