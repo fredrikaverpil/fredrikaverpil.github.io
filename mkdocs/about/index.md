@@ -13,4 +13,4 @@ This my personal blog, where I scribble down notes on software development (most
 Get in touch: [:material-github:](https://github.com/fredrikaverpil)
 [:material-mastodon:](https://fosstodon.org/@fredrikaverpil)
 [:material-twitter:](https://twitter.com/fredrikaverpil)
-[:material-linkedin:](https://www.linkedin.com/in/fredrik/)
+[:material-linkedin:](https://www.linkedin.com/in/fredrik/) or via fredrik dot averpil at gmail dot com.
