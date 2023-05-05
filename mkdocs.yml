@@ -57,6 +57,8 @@ extra:
       link: https://linkedin.com/in/fredrik
     - icon: fontawesome/solid/square-rss
       link: /sitemap.xml
+    - icon: simple/feedly
+      link: https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Ffredrikaverpil.github.io%2Ffeed_rss_created.xml
     - icon: octicons/graph-24
       link: https://analytics.umami.is/share/tJcIgDO3dznRmeGX/fredrikaverpil.github.io
   analytics:
