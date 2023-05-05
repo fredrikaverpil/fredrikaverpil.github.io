@@ -2,7 +2,7 @@
 date: 2023-03-29
 draft: false
 tags:
-  - github-actions
+- github-actions
 ---
 
 # Using GitHub merge queue to ease the Dependabot churn
@@ -47,31 +47,32 @@ Let's write a little script!
     ```bash
     #!/bin/bash -e
 
-    # Set search arguments
-    search_args="is:open draft:false status:pending status:success"
-
     # Get the list of numbers
-    pr_numbers=$(gh pr list "$@" --app dependabot --json number --jq '.[].number' --search "$search_args")
+    pr_numbers=$(gh pr list "$@" --app dependabot --json number --jq '.[].number')
 
     # Iterate over each number and approve and merge the corresponding PR
     for pr_number in $pr_numbers; do
-      gh pr review --approve "$pr_number"
-      gh pr merge "$pr_number" --auto
+        gh pr review --approve $pr_number
+        gh pr merge $pr_number
     done
     ```
 
     You'll need to install and authenticate the [GitHub CLI](https://cli.github.com/) to make the `gh` command accessible, which is invoked by this script.
 
-!!! example "Execution examples"
 
-    The script will default to look for PRs which are open, not in draft and doesn't have failing CI checks. But you can add additional searches.
+The script will take arguments and forward to `gh`. This can be useful to filter out certain PRs you want to merge.
+
+!!! example "Execution examples"
 
     ```bash
     # Merge open PRs that successfully passed CI (both unapproved and approved)
-    ./dependabot-merge.sh --search "chore(deps-dev) in:title"
+    ./dependabot-merge.sh --search "is:open status:pending status:success"
+
+    # Merge open PRs that successfully passed CI and are categorized as developer dependencies
+    ./dependabot-merge.sh --search "is:open status:pending status:success chore(deps-dev) in:title" 
     ```
 
-    See `gh pr list --help` for more examples and help on `--search`, and see the [official docs here on e.g. `status:pending`](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests#search-by-commit-status).
+    See `gh pr list --help` for more examples and help on `--search`, and see the [official docs here on `status:pending`](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests#search-by-commit-status).
 
 !!! note "Filtering on `deps-dev` vs `deps`"
 
