@@ -122,6 +122,23 @@ Use `git grep` to perform free text search in current source code:
 git --no-pager grep --ignore-case <regexp>
 ```
 
+## Restore
+
+Git restore is great for restoring a file to a previous state. Example:
+
+```bash
+# 1. Run newly added tests, which passes.
+
+# 2. Restore the production code from main branch
+git restore -s main <path to production file>
+
+# 3. Re-run tests
+# 4. Verify all new tests fail
+
+# 5. Restore files back to current PR branch's state
+git restore <path to production file>
+```
+
 ## Rebasing
 
 ### Auto-stash
