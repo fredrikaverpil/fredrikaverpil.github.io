@@ -94,8 +94,8 @@ In order to build the wheel with this hook, we'll need to tell hatchling about t
     packages = ["myproj"]
     only-include = ["myproj"]
 
-    [tool.hatch.build.hooks.custom]
-    path = "tools/custom_build_hook.py"
+    [tool.hatch.metadata.hooks.custom]
+    path = "tools/custom_metadata_hook.py"
     ```
 
 My project now looks something like this:
