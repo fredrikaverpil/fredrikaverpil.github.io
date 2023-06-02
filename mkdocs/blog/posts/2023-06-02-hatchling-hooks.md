@@ -15,9 +15,9 @@ Let's say you want to distribute some generated contents, which is intended to b
 
 I can then publish them all onto PyPi under the same project name and project version. When running `pip install ...`, pip would then pick the wheel that was built and intended for the Python interpreter version I'm using, guaranteeing that the version generated the wheel contents will be used to also consume the contents.
 
-## Constraining the required Python version
+## Constraining the required Python version and naming the wheel
 
-In `pyproject.toml`, you can specify metadata such as for example the version string. Hatchling offers the ability to write custom hooks so to edit this metadata when e.g. building the wheel. As a side-note, it's worth mentioning hatchling also provides hooks to explain _how_ the wheel should be built, so called build hooks. What we want to do here is edit the `requires` metadata to only the Python version(s) we want to allow.
+In `pyproject.toml`, you can specify metadata such as for example the version string. Hatchling offers the ability to write custom hooks so to edit this metadata when e.g. building the wheel. Hatchling also provides hooks to explain _how_ the wheel should be built, so called build hooks. What we want to do here is edit the `requires` metadata to only the Python version(s) we want to allow (using a metadata hook) and then name the wheels accordingly (using a build hook).
 
 ### Create a metadata hook
 
@@ -51,9 +51,40 @@ Let's start with editing the metadata of the wheel, so we can constrain the requ
             metadata["requires-python"] = requires_python
     ```
 
+### Create a build hook
+
+The metadata hook above only updates the wheel metadata, but not the filename of the wheel. By default, the filename of the wheel be something like `myproj-0.1.0-py3-none-any.whl` and so we need to customize this naming, so that we instead get `myproj-0.1.0-py39-none-any.whl` ,`myproj-0.1.0-py310-none-any.whl` ,`myproj-0.1.0-py311-none-any.whl` and so on, so that each wheel gets a unique filename.
+
+Let's create `custom_build_hook.py`:
+
+!!! example "`custom_build_hook.py`"
+
+    ```python
+    import sys
+    from typing import Any
+
+    from hatchling.builders.hooks.plugin.interface import BuildHookInterface
+
+
+    class CustomBuildHook(BuildHookInterface):
+        """A custom build hook for building ."""
+
+        def _python_tag(self) -> str:
+            major = sys.version_info.major
+            minor = sys.version_info.minor
+            return f"py{major}{minor}"
+
+        def initialize(self, version: str, build_data: dict[str, Any]) -> None:
+            """Initialize the hook, update the build data."""
+            if self.target_name not in ["wheel", "sdist"]:
+                return
+
+            build_data["tag"] = f"{self._python_tag()}-none-any"
+    ```
+
 ### Edit `pyproject.toml`
 
-In order to build the wheel with this hook, we'll need to tell hatchling about this new hook file, in `pyproject.toml`, under the `tool.hatch.build.hooks.custom` section.
+In order to build the wheel with these hooks, we'll need to tell hatchling about these new hooks, in `pyproject.toml`:
 
 !!! example "`pyproject.toml`"
 
@@ -96,8 +127,11 @@ In order to build the wheel with this hook, we'll need to tell hatchling about t
     packages = ["myproj"]
     only-include = ["myproj"]
 
+    [tool.hatch.build.hooks.custom]
+    path = "tools/custom_build_hook.py"
+
     [tool.hatch.metadata.hooks.custom]
-    path = "tools/custom_metadata_hook.py"
+    path = "tools/custom_metadata_hook.py
     ```
 
 My project now looks something like this:
@@ -111,6 +145,7 @@ My project now looks something like this:
 │   └── myproj
 │       └── __init__.py
 └── tools
+    ├── custom_build_hook.py
     └── custom_metadata_hook.py
 ```
 
