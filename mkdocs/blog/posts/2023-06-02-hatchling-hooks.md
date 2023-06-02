@@ -121,7 +121,7 @@ python -m build --wheel
 
 !!! tip "Pro tip!"
 
-You can add `print(metadata)` in the `update` function and run `python -m build --wheel` to see a printout of all the data that you can modify here.
+    You can add `print(metadata)` in the `update` function and run `python -m build --wheel` to see a printout of all the data that you can modify here.
 
 If you try to pip-install this wheel using a different Python version, it should fail:
 
