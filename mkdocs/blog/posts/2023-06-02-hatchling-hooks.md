@@ -70,9 +70,7 @@ In order to build the wheel with this hook, we'll need to tell hatchling about t
     requires-python = ">=3.9"
     license = "MIT"
     keywords = []
-    authors = [
-      { name = "Fredrik Averpil", email = "fredrik.averpil@gmail.se" },
-    ]
+    authors = []
     classifiers = [
       # https://pypi.org/classifiers/
       "License :: OSI Approved :: MIT License",
