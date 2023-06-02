@@ -121,8 +121,16 @@ My project now looks something like this:
 You should now be able to build the wheel and constrain it to the same Python version you used to build the wheel. I'm using [pypa/build](https://github.com/pypa/build) to build the wheel and therefore I need to first make sure I have that installed before building:
 
 ```bash
-pip install build
-python -m build --wheel
+$ pip install build
+
+...
+
+$ python -m build --wheel
+* Creating venv isolated environment...
+* Installing packages in isolated environment... (hatchling)
+* Getting build dependencies for wheel...
+* Building wheel...
+Successfully built myproj-0.1.0-py310-none-any.whl
 ```
 
 !!! tip "Pro tip!"
