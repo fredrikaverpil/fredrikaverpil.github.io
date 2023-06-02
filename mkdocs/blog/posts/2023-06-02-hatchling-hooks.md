@@ -123,11 +123,10 @@ python -m build --wheel
 
     You can add `print(metadata)` in the `update` function and run `python -m build --wheel` to see a printout of all the data that you can modify here.
 
-If you try to pip-install this wheel using a different Python version, it should fail:
+If you try to pip-install this wheel using a different Python version, it should fail. This is using `pip` from Python 3.11 trying to install a wheel built with Python 3.10:
 
 ```bash
-# using python 3.11
-pip install dist/myproj-0.1.0-py310-none-any.whl
+$ pip install dist/myproj-0.1.0-py310-none-any.whl
 Processing ./dist/myproj-0.1.0-py310-none-any.whl
 INFO: pip is looking at multiple versions of myproj to determine which version is compatible with other requirements. This could take a while.
 ERROR: Package 'myproj' requires a different Python: 3.11.3 not in '<3.11.0,>=3.10.0'
