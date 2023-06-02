@@ -53,7 +53,7 @@ Let's start with editing the metadata of the wheel, so we can constrain the requ
 
 ### Create a build hook
 
-The metadata hook above only updates the wheel metadata, but not the filename of the wheel. By default, the filename of the wheel be something like `myproj-0.1.0-py3-none-any.whl` and so we need to customize this naming, so that we instead get `myproj-0.1.0-py39-none-any.whl` ,`myproj-0.1.0-py310-none-any.whl` ,`myproj-0.1.0-py311-none-any.whl` and so on, so that each wheel gets a unique filename.
+The metadata hook above only updates the wheel metadata, but not the filename of the wheel. By default, the filename of the wheel be something like `myproj-0.1.0-py3-none-any.whl` and so we need to customize this naming, so that we instead get `myproj-0.1.0-py39-none-any.whl`, `myproj-0.1.0-py310-none-any.whl`, `myproj-0.1.0-py311-none-any.whl` and so on, so that each wheel gets a unique filename.
 
 Let's create `custom_build_hook.py`:
 
