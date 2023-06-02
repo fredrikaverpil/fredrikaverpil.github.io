@@ -15,9 +15,11 @@ Let's say you want to distribute some generated contents, which is intended to b
 
 I can then publish them all onto PyPi under the same project name and project version. When running `pip install ...`, pip would then pick the wheel that was built and intended for the Python interpreter version I'm using, guaranteeing that the version generated the wheel contents will be used to also consume the contents.
 
-In `pyproject.toml`, you can specify metadata such as for example the version string. Hatchling offers the ability to write custom hooks so to edit this metadata when e.g. building the wheel. It also provides hooks to explain _how_ the wheel should be built. What we want to do here is edit the `requires` metadata to only the Python version(s) we want to allow.
-
 ## Constraining the required Python version
+
+In `pyproject.toml`, you can specify metadata such as for example the version string. Hatchling offers the ability to write custom hooks so to edit this metadata when e.g. building the wheel. As a side-note, it's worth mentioning hatchling also provides hooks to explain _how_ the wheel should be built, so called build hooks. What we want to do here is edit the `requires` metadata to only the Python version(s) we want to allow.
+
+### Create a metadata hook
 
 Let's start with editing the metadata of the wheel, so we can constrain the required Python version. Let's add `custom_metadata_hook.py`:
 
@@ -48,6 +50,8 @@ Let's start with editing the metadata of the wheel, so we can constrain the requ
             )
             metadata["requires-python"] = requires_python
     ```
+
+### Edit `pyproject.toml`
 
 In order to build the wheel with this hook, we'll need to tell hatchling about this new hook file, in `pyproject.toml`, under the `tool.hatch.build.hooks.custom` section.
 
@@ -112,6 +116,8 @@ My project now looks something like this:
     └── custom_metadata_hook.py
 ```
 
+### Build the wheel
+
 You should now be able to build the wheel and constrain it to the same Python version you used to build the wheel. I'm using [pypa/build](https://github.com/pypa/build) to build the wheel and therefore I need to first make sure I have that installed before building:
 
 ```bash
@@ -131,6 +137,8 @@ Processing ./dist/myproj-0.1.0-py310-none-any.whl
 INFO: pip is looking at multiple versions of myproj to determine which version is compatible with other requirements. This could take a while.
 ERROR: Package 'myproj' requires a different Python: 3.11.3 not in '<3.11.0,>=3.10.0'
 ```
+
+### Tying it all together
 
 You can setup your CI so that it uses a matrix of Python versions. For each Python version you generate the wheel contents, build a wheel and store the wheel as CI build artifact. As a final step you can have a CI step that fetches all the built CI wheel artifacts and uploads them to PyPi. Great success! 🎯
 
