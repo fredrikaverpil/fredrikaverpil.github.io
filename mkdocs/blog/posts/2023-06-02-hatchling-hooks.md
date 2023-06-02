@@ -183,4 +183,4 @@ ERROR: Package 'myproj' requires a different Python: 3.11.3 not in '<3.11.0,>=3.
 
 You can setup your CI so that it uses a matrix of Python versions. For each Python version you generate the wheel contents, build a wheel and store the wheel as CI build artifact. As a final step you can have a CI step that fetches all the built CI wheel artifacts and uploads them to PyPi. Great success! 🎯
 
-You can read more about hatchling's metadata hooks [here](https://hatch.pypa.io/latest/plugins/metadata-hook/custom/).
+You can read more about hatchling's metadata hook and build hook [here](https://hatch.pypa.io/latest/plugins/metadata-hook/custom/) and [here](https://hatch.pypa.io/latest/plugins/build-hook/custom/).
