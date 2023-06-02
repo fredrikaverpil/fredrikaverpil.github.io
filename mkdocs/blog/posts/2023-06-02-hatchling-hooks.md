@@ -131,7 +131,7 @@ In order to build the wheel with these hooks, we'll need to tell hatchling about
     path = "tools/custom_build_hook.py"
 
     [tool.hatch.metadata.hooks.custom]
-    path = "tools/custom_metadata_hook.py
+    path = "tools/custom_metadata_hook.py"
     ```
 
 My project now looks something like this:
