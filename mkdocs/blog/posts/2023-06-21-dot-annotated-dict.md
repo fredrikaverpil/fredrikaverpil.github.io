@@ -7,7 +7,7 @@ tags:
 
 # Access Python dict using dot annotation
 
-Recently, an addition to Python 3.12 which seems like it'll be reverted in [cpython#105948](https://github.com/python/cpython/pull/105948), where an `AttrDict` hook could enable accessing a dict using dot annotation.
+Recently, an addition to Python 3.12 might be reverted in [cpython#105948](https://github.com/python/cpython/pull/105948), where an `AttrDict` hook could enable accessing a dict using dot annotation.
 
 ```python
 with open('kepler.json') as f:
@@ -15,7 +15,7 @@ with open('kepler.json') as f:
 print(kepler.orbital_period.neptune)
 ```
 
-However, as pointed out in a related [issue thread](https://github.com/python/cpython/issues/96145#issuecomment-1599508607), this is already possible using [`SimpleNamespace`](https://docs.python.org/3/library/types.html#types.SimpleNamespace):
+But as pointed out in a related [issue thread](https://github.com/python/cpython/issues/96145#issuecomment-1599508607), this is already possible using the standard library's [`SimpleNamespace`](https://docs.python.org/3/library/types.html#types.SimpleNamespace).
 
 ```python
 >>> import json
@@ -46,3 +46,5 @@ Alternative libraries that might be worth checking out if you want more advanced
 
 - https://github.com/cdgriffith/Box
 - https://github.com/pawelzny/dotty_dict (no dependencies)
+- https://github.com/makinacorpus/easydict
+- https://pypi.org/project/attrdict/ (deprecated/archvied, don't use this)
