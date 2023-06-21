@@ -5,9 +5,9 @@ tags:
   - python
 ---
 
-# Access Python dict using dot annotation
+# Access Python dict using dot notation
 
-Recently, an addition to Python 3.12 might be reverted in [cpython#105948](https://github.com/python/cpython/pull/105948), where an `AttrDict` hook could enable accessing a dict using dot annotation.
+Recently, an addition to Python 3.12 might be reverted in [cpython#105948](https://github.com/python/cpython/pull/105948), where an `AttrDict` hook could enable accessing a dict using dot notation.
 
 ```python
 with open('kepler.json') as f:
