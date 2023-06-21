@@ -47,4 +47,4 @@ Alternative libraries that might be worth checking out if you want more advanced
 - https://github.com/cdgriffith/Box
 - https://github.com/pawelzny/dotty_dict (no dependencies)
 - https://github.com/makinacorpus/easydict
-- https://pypi.org/project/attrdict/ (deprecated/archvied, don't use this)
+- https://pypi.org/project/attrdict/ (deprecated/archived, don't use this)
