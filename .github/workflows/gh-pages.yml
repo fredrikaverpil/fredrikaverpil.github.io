@@ -46,6 +46,8 @@ jobs:
           mkdocs-redirects \
           pillow cairosvg # for social cards
 
+      - run: pip freeze
+
       - run: mkdocs build --config-file mkdocs.insiders.yml
 
       - name: Setup Pages
