@@ -1,4 +1,4 @@
-mkdocs-material-insiders @ git+https://${MKDOCS_MATERIAL_INSIDERS}@github.com/squidfunk/mkdocs-material-insiders.git
+mkdocs-material @ git+https://${MKDOCS_MATERIAL_INSIDERS}@github.com/squidfunk/mkdocs-material-insiders.git
 mkdocs-rss-plugin
 mkdocs-redirects
 pillow
