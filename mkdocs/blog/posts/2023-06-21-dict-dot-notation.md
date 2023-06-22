@@ -13,7 +13,7 @@ But as pointed out in a related [issue thread](https://github.com/python/cpython
 
 <!-- more -->
 
-This was the proposed use case from the [original PR](https://github.com/python/cpython/issues/96145):
+This was the proposed use case from the [original PR](https://github.com/python/cpython/pull/96146):
 
 ```python
 with open('kepler.json') as f:
