@@ -50,9 +50,11 @@ And this is how you can already achieve it:
     namespace(foo=namespace(bar='val'))
     ```
 
-Alternative libraries that might be worth checking out if you want more advanced behavior:
+!!! tip "Alternative solutions"
 
-- https://github.com/cdgriffith/Box
-- https://github.com/pawelzny/dotty_dict (no dependencies)
-- https://github.com/makinacorpus/easydict
-- https://pypi.org/project/attrdict/ (deprecated/archived, don't use this)
+    Alternative libraries that might be worth checking out if you want more advanced behavior:
+
+    - https://github.com/cdgriffith/Box
+    - https://github.com/pawelzny/dotty_dict (no dependencies)
+    - https://github.com/makinacorpus/easydict
+    - https://pypi.org/project/attrdict/ (deprecated/archived, don't use this)
