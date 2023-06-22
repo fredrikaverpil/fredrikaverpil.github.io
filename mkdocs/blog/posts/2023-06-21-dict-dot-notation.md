@@ -7,7 +7,7 @@ tags:
 
 # Access Python dict using dot notation
 
-Recently, an addition to Python 3.12 might be reverted in [cpython#105948](https://github.com/python/cpython/pull/105948), where an `AttrDict` hook could enable accessing a dict using dot notation.
+Recently, an addition to Python 3.12 might be reverted in [cpython#105948](https://github.com/python/cpython/pull/105948), where a new `json.AttrDict` class could enable accessing a dict using dot notation using a `json.load` hook.
 
 But as pointed out in a related [issue thread](https://github.com/python/cpython/issues/96145#issuecomment-1599508607), this is already possible using the standard library's [`SimpleNamespace`](https://docs.python.org/3/library/types.html#types.SimpleNamespace).
 
