@@ -54,7 +54,7 @@ And this is how you can already achieve it:
 
     Alternative libraries that might be worth checking out if you want more advanced behavior:
 
-    - [https://github.com/cdgriffith/Box](cdgriffith/Box)
-    - [https://github.com/pawelzny/dotty_dict](pawelzny/dotty_dict) (no dependencies)
-    - [https://github.com/makinacorpus/easydict](makinacorpus/easydict)
-    - [https://pypi.org/project/attrdict/](attrdict) (deprecated/archived, don't use this)
+    - https://github.com/cdgriffith/Box
+    - https://github.com/pawelzny/dotty_dict (no dependencies)
+    - https://github.com/makinacorpus/easydict
+    - https://pypi.org/project/attrdict/ (deprecated/archived, don't use this)
