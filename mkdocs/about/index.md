@@ -4,7 +4,7 @@
 
 :wave: Hey there!
 
-I am a passionate, enthusiastic and professional software developer, continuously striving to evolve with Python as the primary language of choice — and preferably building scalable and reliable solutions in public cloud environments.
+I am a passionate, enthusiastic and professional software developer with 15+ years of professional Python engineering experience, continuously striving to evolve, preferably building scalable and reliable backend systems in public cloud environments.
 
 I advocate continuous development, automated testing and to maintain as high code quality as possible. I am deeply invested in the open source community and love collaborating and contributing.
 
