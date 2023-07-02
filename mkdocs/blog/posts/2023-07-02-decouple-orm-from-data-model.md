@@ -240,3 +240,19 @@ The above code snippets exhibits "Dependency injection" by allowing the reposito
 
     You might have noticed how I've instantiated the classes in the signatures. You might want to consider using static methods in your repository classes instead, so you don't have to do this.
 
+    ```python
+    class UserRepository(UserRepositoryABC):
+
+        @staticmethod
+        def add_user(name: str, email: str, hashed_password: str):
+            ...
+
+        @staticmethod
+        def get_all_users():
+            ...
+
+
+    user = UserRepository.add_user(...)
+    users = UserRepository.get_all_users()
+    ```
+
