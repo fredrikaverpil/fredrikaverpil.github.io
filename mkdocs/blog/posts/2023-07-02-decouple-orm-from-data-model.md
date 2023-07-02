@@ -15,7 +15,7 @@ This blog post outlines an example of how this can be done with [Pydantic](https
 
 ## Prerequisites
 
-You'll need to install SQLAlchemy and Pydantic:
+This post was written with Python 3.11 in mind. You'll need to install SQLAlchemy and Pydantic:
 
 ```python
 pip install sqlalchemy==2.* pydantic==2.*
@@ -47,7 +47,7 @@ Let's start with defining ORM models and related functions in `orm.py`:
 
 ## Defining the entity models
 
-Let's now implement the internal entity we'll use when passing around a user object in our business logic, in `entities.py`. Even if we replace the ORM or the database, this object likely won't change as it should still carry the same attributes, and should not require refactorings to our business logic.
+Let's now implement the internal entity we'll use when passing around a user object in our business logic, in `entities.py`. Even if we replace the ORM or the database, this object likely won't change as it should still carry the same attributes and should not require refactorings to our business logic.
 
 !!! example "entities.py"
 
