@@ -7,7 +7,7 @@ tags:
 
 # Decoupling the ORM class from the data model class
 
-I'm working on a project where we want to replace a [WSGI](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface) ORM with an [ASGI](https://en.wikipedia.org/wiki/Asynchronous_Server_Gateway_Interface) ORM, but it's tangled into everything and called from all over the business logic. If the ORM would've been decoupled from the objects tossed around in the business logic, it would've been much easier to replace the ORM.
+I'm working on a rather large project where we would want to replace a [WSGI](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface) ORM with an [ASGI](https://en.wikipedia.org/wiki/Asynchronous_Server_Gateway_Interface) ORM, but it's tangled up into everything and called from all over the business logic. If the ORM would've been decoupled from the objects tossed around in the business logic, it would've been much easier to replace the ORM.
 
 This blog post outlines an example of how this can be done with [Pydantic](https://github.com/pydantic/pydantic). I'm also including a bonus section on decoupling the data store communication from the business logic with the help of the "Repository pattern".
 
@@ -28,10 +28,8 @@ Let's start with defining ORM models and related functions in `orm.py`:
 !!! example "orm.py"
 
     ```python
-
-    from pydantic import BaseModel, ConfigDict, Field
     from sqlalchemy import Column, Engine, Integer, String, create_engine
-    from sqlalchemy.orm import Session, declarative_base
+    from sqlalchemy.orm import declarative_base
 
     Base = declarative_base()
 
@@ -47,7 +45,9 @@ Let's start with defining ORM models and related functions in `orm.py`:
 
 ## Defining the entity models
 
-Let's now implement the internal entity we'll use when passing around a user object in our business logic, in `entities.py`. Even if we replace the ORM or the database, this object likely won't change as it should still carry the same attributes and should not require refactorings to our business logic.
+Let's now implement the internal "entity" model we'll use when passing around a user object in our business logic, in `entities.py`. Even if we replace the ORM or the database, this object likely won't change as it should still carry the same attributes and should not require refactorings to our business logic.
+
+What's nice about using Pydantic models for such entities is we'll get the awesome validation Pydantic is known for, for "free".
 
 !!! example "entities.py"
 
@@ -74,9 +74,11 @@ Let's now implement the internal entity we'll use when passing around a user obj
 
 ## Defining the repositories
 
-In the "Repository pattern", you want to isolate all code related to communicating with e.g. a persistent data store such as a database. The goal with this is to define a tight scope around which code owns the responsibility of talking to the data store, and how.
+With the "Repository pattern", you want to define a tight scope around which code is responsible for communicating with e.g. a persistent data store, such as a database. Your business logic is not supposed to have this ownership. Instead, your business logic can actually run, regardless of which kind of repository you throw at it.
 
-Let's define a couple of classes in `repositories.py`. First off, we define the abstract class `UserRepositoryABC` that explains which required methods all repositories must include. Then we implement the `UserSqlAlchemyRepository` class, which implements logic on how to communicate with our SQLite database using SQLAlchemy.
+For example, you might want to use SQLAlchemy with Postgres in prod, but for tests maybe you want to use SQLAlchemy with an in-memory SQLite database for faster execution and less setup. Or maybe you want your app to gradually move over onto a different database, database driver, ORM or similar.
+
+Let's define a couple of classes in `repositories.py`. First off, we define the abstract class `UserRepositoryABC` that explains which required methods all user repositories must include. In this case it's the `add_user` and `get_all_users` methods. Then we implement the `UserSqlAlchemyRepository` class, which implements logic on how to communicate with our SQLite database using SQLAlchemy.
 
 Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisRepository` or `UserFakeRepository` which could be used by your business logic and/or tests.
 
@@ -89,7 +91,7 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
     from sqlalchemy.orm import Session
 
     from entities import UserEntity
-    from orm import UserOrm
+    from orm import Base, UserOrm
 
 
     class UserRepositoryABC(abc.ABC):
@@ -127,6 +129,12 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
 
             return users
     ```
+
+!!! note "A note on the table creation"
+
+    As you can see, I also added a method `create_tables`. This doesn't really belong on a users repository, and you might want to implement this on some general SQLAlchemy repository class. But to avoid making this blog post too long and complicated, I just slapped it on there.
+
+    When inheriting from the `Base` object in `orm.py`, and executing `Base.metadata.create_all(engine)`, all those tables will be created.
 
 ## Let's run some commands!
 
@@ -176,20 +184,48 @@ FROM users
 WHERE users.id = ?
 2023-07-02 15:59:16,708 INFO sqlalchemy.engine.Engine [generated in 0.00015s] (1,)
 2023-07-02 15:59:16,709 INFO sqlalchemy.engine.Engine ROLLBACK
-
 >>> print(user)
 id=1 name='John Doe' email='johndoe@gmail.com'
 ```
 
 ```python
 >>> from repositories import UserSqlAlchemyRepository
->>> users = UserSqlAlchemyRepository().get_all_users()
-2023-07-02 16:01:06,250 INFO sqlalchemy.engine.Engine BEGIN (implicit)
-2023-07-02 16:01:06,251 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.name AS users_name, users.password AS users_password, u
-sers.email AS users_email
+>>> users =  UserSqlAlchemyRepository().get_all_users()
+users =  UserSqlAlchemyRepository().get_all_users()
+2023-07-02 21:11:27,858 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2023-07-02 21:11:27,859 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.name AS users_name, users.password AS users_password
+, users.email AS users_email 
 FROM users
-2023-07-02 16:01:06,251 INFO sqlalchemy.engine.Engine [generated in 0.00032s] ()
-2023-07-02 16:01:06,253 INFO sqlalchemy.engine.Engine ROLLBACK
+2023-07-02 21:11:27,859 INFO sqlalchemy.engine.Engine [generated in 0.00013s] ()
+2023-07-02 21:11:27,860 INFO sqlalchemy.engine.Engine ROLLBACK
 >>> print(users)
 [UserEntity(id=1, name='John Doe', email='johndoe@gmail.com')]
 ```
+
+## A final note on switching out the repositories
+
+In the above commands, I called the repository directly, just to show what the output would be like, and how it returns the `UserEntity` object rather than the ORM object.
+
+But a more desirable pattern is to allow business logic to be supplied with the desired repository. Something like this:
+
+```python
+def add_user(
+    name: str,
+    email: str,
+    hashed_password: str,
+    repository: UserRepositoryABC = UserSqlAlchemyRepository(),
+) -> UserEntity:
+    return repository.add_user(
+        name=name,
+        email=email,
+        hashed_password=hashed_password,
+    )
+
+
+def get_all_users(repository: UserRepositoryABC = UserSqlAlchemyRepository()) -> list[UserEntity]:
+    return repository.get_all_users()
+
+```
+
+The above code snippets exhibits "Dependency injection" by allowing the repository to be provided externally, which promotes loose coupling and flexibility. It also aligns with the "Dependency inversion principle", where high-level modules (business logic) should not depend on low-level modules (repositories) directly but should instead depend on abstractions.
+
