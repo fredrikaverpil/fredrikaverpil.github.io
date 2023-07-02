@@ -136,6 +136,11 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
 
     When inheriting from the `Base` object in `orm.py`, and executing `Base.metadata.create_all(engine)`, all those tables will be created.
 
+!!! note "A note on intput/output"
+
+    Repository methods can take entities as input, or it can take strings, ints, booleans etc - or no arguments. It is likely desirable that it returns entities but that is no strict rule about this. Just have them return what makes the most sense. Just don't return the ORM objects!
+
+
 ## Let's run some commands!
 
 ### Create the db tables
@@ -228,4 +233,5 @@ def get_all_users(repository: UserRepositoryABC = UserSqlAlchemyRepository()) ->
 ```
 
 The above code snippets exhibits "Dependency injection" by allowing the repository to be provided externally, which promotes loose coupling and flexibility. It also aligns with the "Dependency inversion principle", where high-level modules (business logic) should not depend on low-level modules (repositories) directly but should instead depend on abstractions.
+
 
