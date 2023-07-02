@@ -55,7 +55,7 @@ Let's now implement the internal entity we'll use when passing around a user obj
     from pydantic import BaseModel, ConfigDict, Field
 
 
-    class UserModel(BaseModel):
+    class UserEntity(BaseModel):
         model_config = ConfigDict(from_attributes=True)
 
         id: int
@@ -69,7 +69,7 @@ Let's now implement the internal entity we'll use when passing around a user obj
 
     ```python
     user_orm = UserOrm(name="John", email="johndoe@gmail.com", hashed_password="hashed_password")
-    user = UserModel(user_orm)
+    user = UserEntity(user_orm)
     ```
 
 ## Defining the reporitories
@@ -88,17 +88,17 @@ Imagine that you could here add in a `MongoDbRepository`, `RedisRepository` or `
 
     from sqlalchemy.orm import Session, declarative_base
 
-    from entities import UserModel
+    from entities import UserEntity
     from orm import UserOrm
 
 
     class RepositoryABC(abc.ABC):
         @abc.abstractmethod
-        def add_user(self, name: str, email: str, hashed_password: str) -> UserModel:
+        def add_user(self, name: str, email: str, hashed_password: str) -> UserEntity:
             raise NotImplementedError
 
         @abc.abstractmethod
-        def get_all_users(self) -> list[UserModel]:
+        def get_all_users(self) -> list[UserEntity]:
             raise NotImplementedError
 
 
@@ -110,19 +110,19 @@ Imagine that you could here add in a `MongoDbRepository`, `RedisRepository` or `
         def create_tables(self: Self, base) -> None:
             base.metadata.create_all(self.engine)
 
-        def add_user(self: Self, name: str, email: str, hashed_password: str) -> UserModel:
+        def add_user(self: Self, name: str, email: str, hashed_password: str) -> UserEntity:
             with Session(self.engine) as session:
                 user = UserOrm(name=name, email=email, password=hashed_password)
                 session.add(user)
                 session.commit()
-                user_model = UserModel.model_validate(user)
+                user_model = UserEntity.model_validate(user)
             return user_model
 
-        def get_all_users(self: Self) -> list[UserModel]:
+        def get_all_users(self: Self) -> list[UserEntity]:
             with Session(self.engine) as session:
                 users_orm: list[UserOrm] = session.query(UserOrm).all()
-                users: list[UserModel] = [
-                    UserModel.model_validate(user) for user in users_orm
+                users: list[UserEntity] = [
+                    UserEntity.model_validate(user) for user in users_orm
                 ]
 
             return users
@@ -191,5 +191,5 @@ FROM users
 2023-07-02 16:01:06,251 INFO sqlalchemy.engine.Engine [generated in 0.00032s] ()
 2023-07-02 16:01:06,253 INFO sqlalchemy.engine.Engine ROLLBACK
 >>> print(users)
-[UserModel(id=1, name='John Doe', email='johndoe@gmail.com')]
+[UserEntity(id=1, name='John Doe', email='johndoe@gmail.com')]
 ```
