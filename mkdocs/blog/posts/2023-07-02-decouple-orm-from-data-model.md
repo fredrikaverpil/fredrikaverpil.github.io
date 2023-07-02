@@ -76,7 +76,7 @@ Let's now implement the internal entity we'll use when passing around a user obj
 
 In the "Repository pattern", you want to isolate all code related to communicating with e.g. a persistent data store such as a database. The goal with this is to define a tight scope around which code owns the responsibility of talking to the data store, and how.
 
-Let's define a couple of classes in `repositories.py`. First off, we define the abstract class `RepositoryABC` that explains which required methods all repositories must include. Then we implement the `SqlAlchemyRepository` class, which implements logic on how to communicate with our SQLite database using SQLAlchemy.
+Let's define a couple of classes in `repositories.py`. First off, we define the abstract class `RepositoryABC` that explains which required methods all repositories must include. Then we implement the `UserSqlAlchemyRepository` class, which implements logic on how to communicate with our SQLite database using SQLAlchemy.
 
 Imagine that you could here add in a `MongoDbRepository`, `RedisRepository` or `FakeRepository` which could be used by your business logic and/or tests.
 
@@ -102,7 +102,7 @@ Imagine that you could here add in a `MongoDbRepository`, `RedisRepository` or `
             raise NotImplementedError
 
 
-    class SqlAlchemyRepository(RepositoryABC):
+    class UserSqlAlchemyRepository(RepositoryABC):
         @property
         def engine(self: Self) -> Engine:
             return create_engine("sqlite:///mydatabase.db", echo=True)
@@ -136,8 +136,8 @@ Let's begin by creating the db tables:
 
 ```python
 >>> from orm import Base
->>> from repositories import SqlAlchemyRepository
->>> SqlAlchemyRepository().create_tables(base=Base)
+>>> from repositories import UserSqlAlchemyRepository
+>>> UserSqlAlchemyRepository().create_tables(base=Base)
 2023-07-02 15:53:47,602 INFO sqlalchemy.engine.Engine BEGIN (implicit)
 2023-07-02 15:53:47,602 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("users")
 2023-07-02 15:53:47,602 INFO sqlalchemy.engine.Engine [raw sql] ()
@@ -163,8 +163,8 @@ CREATE TABLE users (
 Finally, we can now communicate with our database using the ORM but always return our entity objects rather than returning ORM objects directly. This is what our business logic would do, rather than call the ORM objects directly.
 
 ```python
->>> from repositories import SqlAlchemyRepository
->>> user = SqlAlchemyRepository().add_user(name="John Doe", email="johndoe@gmail.com", hashed_password="hashed_password")
+>>> from repositories import UserSqlAlchemyRepository
+>>> user = UserSqlAlchemyRepository().add_user(name="John Doe", email="johndoe@gmail.com", hashed_password="hashed_password")
 2023-07-02 15:59:16,700 INFO sqlalchemy.engine.Engine BEGIN (implicit)
 2023-07-02 15:59:16,702 INFO sqlalchemy.engine.Engine INSERT INTO users (name, password, email) VALUES (?, ?, ?)
 2023-07-02 15:59:16,702 INFO sqlalchemy.engine.Engine [generated in 0.00024s] ('John Doe', 'hashed_password', 'johndoe@gmail.com')
@@ -182,8 +182,8 @@ id=1 name='John Doe' email='johndoe@gmail.com'
 ```
 
 ```python
->>> from repositories import SqlAlchemyRepository
->>> users = SqlAlchemyRepository().get_all_users()
+>>> from repositories import UserSqlAlchemyRepository
+>>> users = UserSqlAlchemyRepository().get_all_users()
 2023-07-02 16:01:06,250 INFO sqlalchemy.engine.Engine BEGIN (implicit)
 2023-07-02 16:01:06,251 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.name AS users_name, users.password AS users_password, u
 sers.email AS users_email
