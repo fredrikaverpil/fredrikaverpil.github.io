@@ -86,7 +86,7 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
     import abc
     from typing import Self
 
-    from sqlalchemy.orm import Session, declarative_base
+    from sqlalchemy.orm import Session
 
     from entities import UserEntity
     from orm import UserOrm
