@@ -78,7 +78,7 @@ With the "Repository pattern", you want to define a tight scope around which cod
 
 For example, you might want to use SQLAlchemy with Postgres in prod, but for tests maybe you want to use SQLAlchemy with an in-memory SQLite database for faster execution and less setup. Or maybe you want your app to gradually move over onto a different database, database driver, ORM or similar.
 
-Let's define a couple of classes in `repositories.py`. First off, we define the abstract class `UserRepositoryABC` that explains which required methods all user repositories must include. In this case it's the `add_user` and `get_all_users` methods. Then we implement the `UserSqlAlchemyRepository` class, which implements logic on how to communicate with our SQLite database using SQLAlchemy.
+Let's define a couple of classes in `repositories.py`. First off, we define the abstract class `UserRepositoryABC` that explains which required methods all user repositories must include. In this case it's the `create_user` and `get_all_users` methods. Then we implement the `UserSqlAlchemyRepository` class, which implements logic on how to communicate with our SQLite database using SQLAlchemy.
 
 Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisRepository` or `UserFakeRepository` which could be used by your business logic and/or tests.
 
@@ -96,7 +96,7 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
 
     class UserRepositoryABC(abc.ABC):
         @abc.abstractmethod
-        def add_user(self, name: str, email: str, hashed_password: str) -> UserEntity:
+        def create_user(self, name: str, email: str, hashed_password: str) -> UserEntity:
             raise NotImplementedError
 
         @abc.abstractmethod
@@ -112,7 +112,7 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
         def create_tables(self: Self, base) -> None:
             base.metadata.create_all(self.engine)
 
-        def add_user(self: Self, name: str, email: str, hashed_password: str) -> UserEntity:
+        def create_user(self: Self, name: str, email: str, hashed_password: str) -> UserEntity:
             with Session(self.engine) as session:
                 user = UserOrm(name=name, email=email, password=hashed_password)
                 session.add(user)
@@ -139,7 +139,6 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
 !!! note "A note on intput/output"
 
     Repository methods can take entities as input, or it can take strings, ints, booleans etc - or no arguments. It is likely desirable that it returns entities but that is no strict rule about this. Just have them return what makes the most sense. Just don't return the ORM objects!
-
 
 ## Let's run some commands!
 
@@ -177,7 +176,7 @@ Finally, we can now communicate with our database using the ORM but always retur
 
 ```python
 >>> from repositories import UserSqlAlchemyRepository
->>> user = UserSqlAlchemyRepository().add_user(name="John Doe", email="johndoe@gmail.com", hashed_password="hashed_password")
+>>> user = UserSqlAlchemyRepository().create_user(name="John Doe", email="johndoe@gmail.com", hashed_password="hashed_password")
 2023-07-02 15:59:16,700 INFO sqlalchemy.engine.Engine BEGIN (implicit)
 2023-07-02 15:59:16,702 INFO sqlalchemy.engine.Engine INSERT INTO users (name, password, email) VALUES (?, ?, ?)
 2023-07-02 15:59:16,702 INFO sqlalchemy.engine.Engine [generated in 0.00024s] ('John Doe', 'hashed_password', 'johndoe@gmail.com')
@@ -199,7 +198,7 @@ id=1 name='John Doe' email='johndoe@gmail.com'
 users =  UserSqlAlchemyRepository().get_all_users()
 2023-07-02 21:11:27,858 INFO sqlalchemy.engine.Engine BEGIN (implicit)
 2023-07-02 21:11:27,859 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.name AS users_name, users.password AS users_password
-, users.email AS users_email 
+, users.email AS users_email
 FROM users
 2023-07-02 21:11:27,859 INFO sqlalchemy.engine.Engine [generated in 0.00013s] ()
 2023-07-02 21:11:27,860 INFO sqlalchemy.engine.Engine ROLLBACK
@@ -214,13 +213,13 @@ In the above commands, I called the repository directly, just to show what the o
 But a more desirable pattern is to allow injection of the desired repository into the business logic. Imagine having business logic like below:
 
 ```python
-def add_user(
+def create_user(
     name: str,
     email: str,
     hashed_password: str,
     repository: UserRepositoryABC = UserSqlAlchemyRepository(),
 ) -> UserEntity:
-    return repository.add_user(
+    return repository.create_user(
         name=name,
         email=email,
         hashed_password=hashed_password,
@@ -244,7 +243,7 @@ The above code snippets exhibits "Dependency injection" by allowing the reposito
     class UserRepository(UserRepositoryABC):
 
         @staticmethod
-        def add_user(name: str, email: str, hashed_password: str):
+        def create_user(name: str, email: str, hashed_password: str):
             ...
 
         @staticmethod
@@ -252,7 +251,6 @@ The above code snippets exhibits "Dependency injection" by allowing the reposito
             ...
 
 
-    user = UserRepository.add_user(...)
+    user = UserRepository.create_user(...)
     users = UserRepository.get_all_users()
     ```
-
