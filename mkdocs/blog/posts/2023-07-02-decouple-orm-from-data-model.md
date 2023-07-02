@@ -211,7 +211,7 @@ FROM users
 
 In the above commands, I called the repository directly, just to show what the output would be like, and how it returns the `UserEntity` object rather than the ORM object.
 
-But a more desirable pattern is to allow business logic to be supplied with the desired repository. Something like this:
+But a more desirable pattern is to allow injection of the desired repository into the business logic. Imagine having business logic like below:
 
 ```python
 def add_user(
@@ -232,6 +232,11 @@ def get_all_users(repository: UserRepositoryABC = UserSqlAlchemyRepository()) ->
 
 ```
 
+Here you can see how the functions default to using our `UserSqlAlchemyRepository`, but but they can technically accept any other repository that abides by the abstract class of `UserRepositoryABC`.
+
 The above code snippets exhibits "Dependency injection" by allowing the repository to be provided externally, which promotes loose coupling and flexibility. It also aligns with the "Dependency inversion principle", where high-level modules (business logic) should not depend on low-level modules (repositories) directly but should instead depend on abstractions.
 
+!!! note "To instantiate or not instantiate"
+
+    You might have noticed how I've instantiated the classes in the signatures. You might want to consider using static methods in your repository classes instead, so you don't have to do this.
 
