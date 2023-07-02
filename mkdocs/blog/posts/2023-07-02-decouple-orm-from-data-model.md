@@ -13,6 +13,14 @@ This blog post outlines an example of how this can be done with [Pydantic](https
 
 <!-- more -->
 
+## Prerequisites
+
+You'll need to install SQLAlchemy and Pydantic:
+
+```python
+pip install sqlalchemy==2.* pydantic==2.*
+```
+
 ## Defining the ORM models
 
 Let's start with defining ORM models and related functions in `orm.py`:
