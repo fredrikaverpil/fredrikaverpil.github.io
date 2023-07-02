@@ -78,7 +78,7 @@ In the "Repository pattern", you want to isolate all code related to communicati
 
 Let's define a couple of classes in `repositories.py`. First off, we define the abstract class `RepositoryABC` that explains which required methods all repositories must include. Then we implement the `UserSqlAlchemyRepository` class, which implements logic on how to communicate with our SQLite database using SQLAlchemy.
 
-Imagine that you could here add in a `MongoDbRepository`, `RedisRepository` or `FakeRepository` which could be used by your business logic and/or tests.
+Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisRepository` or `UserFakeRepository` which could be used by your business logic and/or tests.
 
 !!! example "repositories.py"
 
