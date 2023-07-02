@@ -76,7 +76,7 @@ Let's now implement the internal entity we'll use when passing around a user obj
 
 In the "Repository pattern", you want to isolate all code related to communicating with e.g. a persistent data store such as a database. The goal with this is to define a tight scope around which code owns the responsibility of talking to the data store, and how.
 
-Let's define a couple of classes in `repositories.py`. First off, we define the abstract class `RepositoryABC` that explains which required methods all repositories must include. Then we implement the `UserSqlAlchemyRepository` class, which implements logic on how to communicate with our SQLite database using SQLAlchemy.
+Let's define a couple of classes in `repositories.py`. First off, we define the abstract class `UserRepositoryABC` that explains which required methods all repositories must include. Then we implement the `UserSqlAlchemyRepository` class, which implements logic on how to communicate with our SQLite database using SQLAlchemy.
 
 Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisRepository` or `UserFakeRepository` which could be used by your business logic and/or tests.
 
@@ -92,7 +92,7 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
     from orm import UserOrm
 
 
-    class RepositoryABC(abc.ABC):
+    class UserRepositoryABC(abc.ABC):
         @abc.abstractmethod
         def add_user(self, name: str, email: str, hashed_password: str) -> UserEntity:
             raise NotImplementedError
@@ -102,7 +102,7 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
             raise NotImplementedError
 
 
-    class UserSqlAlchemyRepository(RepositoryABC):
+    class UserSqlAlchemyRepository(UserRepositoryABC):
         @property
         def engine(self: Self) -> Engine:
             return create_engine("sqlite:///mydatabase.db", echo=True)
