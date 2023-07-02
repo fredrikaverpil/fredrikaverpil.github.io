@@ -134,7 +134,7 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
 
     As you can see, I also added a method `create_tables`. This doesn't really belong on a users repository, and you might want to implement this on some general SQLAlchemy repository class. But to avoid making this blog post too long and complicated, I just slapped it on there.
 
-    When inheriting from the `Base` object in `orm.py`, and executing `Base.metadata.create_all(engine)`, all those tables will be created.
+    All ORM models inherting from `Base` in `orm.py` will have all their respective tables created when executing `Base.metadata.create_all(engine)`.
 
 !!! note "A note on intput/output"
 
@@ -182,75 +182,5 @@ Finally, we can now communicate with our database using the ORM but always retur
 2023-07-02 15:59:16,702 INFO sqlalchemy.engine.Engine [generated in 0.00024s] ('John Doe', 'hashed_password', 'johndoe@gmail.com')
 2023-07-02 15:59:16,703 INFO sqlalchemy.engine.Engine COMMIT
 2023-07-02 15:59:16,706 INFO sqlalchemy.engine.Engine BEGIN (implicit)
-2023-07-02 15:59:16,708 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.name AS users_name, users.password AS users_password, u
-sers.email AS users_email
-FROM users
-WHERE users.id = ?
-2023-07-02 15:59:16,708 INFO sqlalchemy.engine.Engine [generated in 0.00015s] (1,)
-2023-07-02 15:59:16,709 INFO sqlalchemy.engine.Engine ROLLBACK
->>> print(user)
-id=1 name='John Doe' email='johndoe@gmail.com'
+2023-07-02
 ```
-
-```python
->>> from repositories import UserSqlAlchemyRepository
->>> users =  UserSqlAlchemyRepository().get_all_users()
-users =  UserSqlAlchemyRepository().get_all_users()
-2023-07-02 21:11:27,858 INFO sqlalchemy.engine.Engine BEGIN (implicit)
-2023-07-02 21:11:27,859 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.name AS users_name, users.password AS users_password
-, users.email AS users_email
-FROM users
-2023-07-02 21:11:27,859 INFO sqlalchemy.engine.Engine [generated in 0.00013s] ()
-2023-07-02 21:11:27,860 INFO sqlalchemy.engine.Engine ROLLBACK
->>> print(users)
-[UserEntity(id=1, name='John Doe', email='johndoe@gmail.com')]
-```
-
-## A final note on switching out the repositories
-
-In the above commands, I called the repository directly, just to show what the output would be like, and how it returns the `UserEntity` object rather than the ORM object.
-
-But a more desirable pattern is to allow injection of the desired repository into the business logic. Imagine having business logic like below:
-
-```python
-def create_user(
-    name: str,
-    email: str,
-    hashed_password: str,
-    repository: UserRepositoryABC = UserSqlAlchemyRepository(),
-) -> UserEntity:
-    return repository.create_user(
-        name=name,
-        email=email,
-        hashed_password=hashed_password,
-    )
-
-
-def get_all_users(repository: UserRepositoryABC = UserSqlAlchemyRepository()) -> list[UserEntity]:
-    return repository.get_all_users()
-
-```
-
-Here you can see how the functions default to using our `UserSqlAlchemyRepository`, but but they can technically accept any other repository that abides by the abstract class of `UserRepositoryABC`.
-
-The above code snippets exhibits "Dependency injection" by allowing the repository to be provided externally, which promotes loose coupling and flexibility. It also aligns with the "Dependency inversion principle", where high-level modules (business logic) should not depend on low-level modules (repositories) directly but should instead depend on abstractions.
-
-!!! note "To instantiate or not instantiate"
-
-    You might have noticed how I've instantiated the classes in the signatures. You might want to consider using static methods in your repository classes instead, so you don't have to do this.
-
-    ```python
-    class UserRepository(UserRepositoryABC):
-
-        @staticmethod
-        def create_user(name: str, email: str, hashed_password: str):
-            ...
-
-        @staticmethod
-        def get_all_users():
-            ...
-
-
-    user = UserRepository.create_user(...)
-    users = UserRepository.get_all_users()
-    ```
