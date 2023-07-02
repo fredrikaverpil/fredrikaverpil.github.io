@@ -72,7 +72,7 @@ Let's now implement the internal entity we'll use when passing around a user obj
     user = UserEntity(user_orm)
     ```
 
-## Defining the reporitories
+## Defining the repositories
 
 In the "Repository pattern", you want to isolate all code related to communicating with e.g. a persistent data store such as a database. The goal with this is to define a tight scope around which code owns the responsibility of talking to the data store, and how.
 
