@@ -130,11 +130,11 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
             return users
     ```
 
-!!! note "A note on the table creation"
+!!! note "A note on the table creation and inclusion of engine"
 
-    As you can see, I also added a method `create_tables`. This doesn't really belong on a users repository, and you might want to implement this on some general SQLAlchemy repository class. But to avoid making this blog post too long and complicated, I just slapped it on there.
+    As you can see, I also added a methods `create_tables` and `engine`. These doesn't really belong on a users repository, and you might want to implement this on some general SQLAlchemy repository class or abstract the choice of database away from the ORM. But to avoid making this blog post too long and complicated, I just slapped them on there.
 
-    All ORM models inherting from `Base` in `orm.py` will have all their respective tables created when executing `Base.metadata.create_all(engine)`.
+    Note that all ORM models inherting from `Base` in `orm.py` will have all their respective tables created when executing `Base.metadata.create_all(engine)`.
 
 !!! note "A note on "
 
