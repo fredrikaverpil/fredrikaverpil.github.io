@@ -79,9 +79,9 @@ What's nice about using Pydantic models for such entities is we'll get the aweso
 
 ## Defining the repositories
 
-With the "Repository pattern", you want to define a tight scope around which code is responsible for communicating with e.g. a persistent data store, such as a database. Your business logic is not supposed to have this ownership. Instead, your business logic can actually run, regardless of which kind of repository you throw at it.
+With the "Repository pattern", you want to define a tight responsibility scope for the code which communicates with an external data store, such as a database. This code would be known as a "repository" and lives outside of your (likely domain-driven) business logic. The idea is to have your business logic call into this repository whenever it needs to interact with the external data source and allow the repository to be switched for another repository.
 
-For example, you might want to use SQLAlchemy with Postgres in prod, but for tests maybe you want to use SQLAlchemy with an in-memory SQLite database for faster execution and less setup. Or maybe you want your app to gradually move over onto a different database, database driver, ORM or similar.
+For example, you might want to use SQLAlchemy with Postgres in prod, but for tests maybe you want to use SQLAlchemy with an in-memory SQLite database for faster execution and less setup. Or maybe you want your app to gradually move over onto a different database, database driver, ORM or similar but without refactoring your business logic.
 
 Let's define a couple of classes in `repositories.py`. First off, we define the abstract class `UserRepositoryAbc` that explains which required methods all user repositories must include. In this case it's the `create_user` and `get_all_users` methods. Then we implement the `UserRepository` class, which implements logic on how to communicate with our SQLite database using SQLAlchemy.
 
@@ -177,9 +177,9 @@ CREATE TABLE users (
 2023-07-02 15:53:47,604 INFO sqlalchemy.engine.Engine COMMIT
 ```
 
-### Communicate with db but return entities
+### Communicate with the db
 
-Finally, we can now communicate with our database using the ORM but always return our entity objects rather than returning ORM objects directly. This is what our business logic would do, rather than call the ORM objects directly.
+Finally, we can now communicate with our database using the ORM but always return our entity objects rather than returning ORM objects directly. This is what we'd also want our business logic to do, rather than manage the ORM directly.
 
 ```python
 >>> from repositories import UserRepository
