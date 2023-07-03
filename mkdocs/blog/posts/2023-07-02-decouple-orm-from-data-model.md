@@ -43,7 +43,7 @@ Let's start with defining ORM models and related functions in `orm.py`:
         email = Column(String(50), nullable=False, unique=True)
     ```
 
-## Defining the entity models
+## Defining the business logic entity models
 
 Let's now implement the internal "entity" model we'll use when passing around a user object in our business logic, in `entities.py`. Even if we replace the ORM or the database, this object likely won't change as it should still carry the same attributes and should not require refactorings to our business logic.
 
