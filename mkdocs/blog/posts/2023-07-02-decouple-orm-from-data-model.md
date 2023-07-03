@@ -68,7 +68,7 @@ What's nice about using Pydantic models for such entities is we'll get the aweso
     Please note the `from_attributes` configuration. This is where the magic happens, as this enables creating the entity from the ORM object:
 
     ```python
-    user_orm = UserOrm(name="John", email="johndoe@gmail.com", hashed_password="hashed_password")
+    user_orm = UserOrm(name="John", email="johndoe@gmail.com", password="hashed_password")
     user = UserEntity.model_validate(user_orm)
     ```
 
@@ -114,11 +114,11 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
 
         def create_user(self: Self, name: str, email: str, hashed_password: str) -> UserEntity:
             with Session(self.engine) as session:
-                user = UserOrm(name=name, email=email, password=hashed_password)
-                session.add(user)
+                user_orm = UserOrm(name=name, email=email, password=hashed_password)
+                session.add(user_orm)
                 session.commit()
-                user_model = UserEntity.model_validate(user)
-            return user_model
+                user = UserEntity.model_validate(user_orm)
+            return user
 
         def get_all_users(self: Self) -> list[UserEntity]:
             with Session(self.engine) as session:
