@@ -244,7 +244,9 @@ The above code snippets exhibits "Dependency injection" by allowing the reposito
 
 !!! note "To instantiate or not instantiate"
 
-    You might have noticed how I've instantiated the classes in the signatures. You might want to consider using static methods in your repository classes instead, so you don't have to do this.
+    You might have noticed how I've instantiated the classes in the signatures. This is yet another example of just trying to avoid this blog post from becoming ginormous. Instantiating like this is not desirable but depending on what your needs are like, there are several solutions to this.
+
+    For example, you might want to consider using static methods in your repository classes instead, so you don't have to instantiate:
 
     ```python
     class UserRepository(UserRepositoryAbc):
