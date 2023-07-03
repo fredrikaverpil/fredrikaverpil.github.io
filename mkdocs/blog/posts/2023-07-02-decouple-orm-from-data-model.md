@@ -55,7 +55,7 @@ What's nice about using Pydantic models for such entities is we'll get the aweso
     from pydantic import BaseModel, ConfigDict, Field
 
 
-    class UserEntity(BaseModel):
+    class User(BaseModel):
         model_config = ConfigDict(from_attributes=True)
 
         id: int
@@ -69,7 +69,7 @@ What's nice about using Pydantic models for such entities is we'll get the aweso
 
     ```python
     user_orm = UserOrm(name="John", email="johndoe@gmail.com", password="hashed_password")
-    user = UserEntity.model_validate(user_orm)
+    user = User.model_validate(user_orm)
     ```
 
 ## Defining the repositories
@@ -90,17 +90,17 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
 
     from sqlalchemy.orm import Session
 
-    from entities import UserEntity
+    from entities import User
     from orm import Base, UserOrm
 
 
     class UserRepositoryABC(abc.ABC):
         @abc.abstractmethod
-        def create_user(self, name: str, email: str, hashed_password: str) -> UserEntity:
+        def create_user(self, name: str, email: str, hashed_password: str) -> User:
             raise NotImplementedError
 
         @abc.abstractmethod
-        def get_all_users(self) -> list[UserEntity]:
+        def get_all_users(self) -> list[User]:
             raise NotImplementedError
 
 
@@ -112,19 +112,19 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
         def create_tables(self: Self, base) -> None:
             base.metadata.create_all(self.engine)
 
-        def create_user(self: Self, name: str, email: str, hashed_password: str) -> UserEntity:
+        def create_user(self: Self, name: str, email: str, hashed_password: str) -> User:
             with Session(self.engine) as session:
                 user_orm = UserOrm(name=name, email=email, password=hashed_password)
                 session.add(user_orm)
                 session.commit()
-                user = UserEntity.model_validate(user_orm)
+                user = User.model_validate(user_orm)
             return user
 
-        def get_all_users(self: Self) -> list[UserEntity]:
+        def get_all_users(self: Self) -> list[User]:
             with Session(self.engine) as session:
                 users_orm: list[UserOrm] = session.query(UserOrm).all()
-                users: list[UserEntity] = [
-                    UserEntity.model_validate(user) for user in users_orm
+                users: list[User] = [
+                    User.model_validate(user) for user in users_orm
                 ]
 
             return users
@@ -203,12 +203,12 @@ FROM users
 2023-07-02 21:11:27,859 INFO sqlalchemy.engine.Engine [generated in 0.00013s] ()
 2023-07-02 21:11:27,860 INFO sqlalchemy.engine.Engine ROLLBACK
 >>> print(users)
-[UserEntity(id=1, name='John Doe', email='johndoe@gmail.com')]
+[User(id=1, name='John Doe', email='johndoe@gmail.com')]
 ```
 
 ## A final note on switching out the repositories
 
-In the above commands, I called the repository directly, just to show what the output would be like, and how it returns the `UserEntity` object rather than the ORM object.
+In the above commands, I called the repository directly, just to show what the output would be like, and how it returns the `User` object rather than the ORM object.
 
 But a more desirable pattern is to allow injection of the desired repository into the business logic. Imagine having business logic like below:
 
@@ -218,7 +218,7 @@ def create_user(
     email: str,
     hashed_password: str,
     repository: UserRepositoryABC = UserSqlAlchemyRepository(),
-) -> UserEntity:
+) -> User:
     return repository.create_user(
         name=name,
         email=email,
@@ -226,7 +226,7 @@ def create_user(
     )
 
 
-def get_all_users(repository: UserRepositoryABC = UserSqlAlchemyRepository()) -> list[UserEntity]:
+def get_all_users(repository: UserRepositoryABC = UserSqlAlchemyRepository()) -> list[User]:
     return repository.get_all_users()
 
 ```
