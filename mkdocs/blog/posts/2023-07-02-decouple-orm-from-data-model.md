@@ -69,7 +69,7 @@ What's nice about using Pydantic models for such entities is we'll get the aweso
 
     ```python
     user_orm = UserOrm(name="John", email="johndoe@gmail.com", hashed_password="hashed_password")
-    user = UserEntity(user_orm)
+    user = UserEntity.model_validate(user_orm)
     ```
 
 ## Defining the repositories
