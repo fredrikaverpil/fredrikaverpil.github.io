@@ -78,9 +78,9 @@ With the "Repository pattern", you want to define a tight scope around which cod
 
 For example, you might want to use SQLAlchemy with Postgres in prod, but for tests maybe you want to use SQLAlchemy with an in-memory SQLite database for faster execution and less setup. Or maybe you want your app to gradually move over onto a different database, database driver, ORM or similar.
 
-Let's define a couple of classes in `repositories.py`. First off, we define the abstract class `UserRepositoryABC` that explains which required methods all user repositories must include. In this case it's the `create_user` and `get_all_users` methods. Then we implement the `UserSqlAlchemyRepository` class, which implements logic on how to communicate with our SQLite database using SQLAlchemy.
+Let's define a couple of classes in `repositories.py`. First off, we define the abstract class `UserRepositoryABC` that explains which required methods all user repositories must include. In this case it's the `create_user` and `get_all_users` methods. Then we implement the `UserRepository` class, which implements logic on how to communicate with our SQLite database using SQLAlchemy.
 
-Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisRepository` or `UserFakeRepository` which could be used by your business logic and/or tests.
+I'm just going to call this repository `UserRepository` for now, but imagine we could've had `UserSqlAlchemyRepository`, `UserMongoDbRepository`, `UserRedisRepository` or `UserFakeRepository`, all inheriting from `UserRepositoryABC`. That last one, `UserFakeRepository`, could be used in tests and not even communicate with a real database.
 
 !!! example "repositories.py"
 
@@ -104,7 +104,7 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
             raise NotImplementedError
 
 
-    class UserSqlAlchemyRepository(UserRepositoryABC):
+    class UserRepository(UserRepositoryABC):
         @property
         def engine(self: Self) -> Engine:
             return create_engine("sqlite:///mydatabase.db", echo=True)
@@ -150,8 +150,8 @@ Let's begin by creating the db tables:
 
 ```python
 >>> from orm import Base
->>> from repositories import UserSqlAlchemyRepository
->>> UserSqlAlchemyRepository().create_tables(base=Base)
+>>> from repositories import UserRepository
+>>> UserRepository().create_tables(base=Base)
 2023-07-02 15:53:47,602 INFO sqlalchemy.engine.Engine BEGIN (implicit)
 2023-07-02 15:53:47,602 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("users")
 2023-07-02 15:53:47,602 INFO sqlalchemy.engine.Engine [raw sql] ()
@@ -177,8 +177,8 @@ CREATE TABLE users (
 Finally, we can now communicate with our database using the ORM but always return our entity objects rather than returning ORM objects directly. This is what our business logic would do, rather than call the ORM objects directly.
 
 ```python
->>> from repositories import UserSqlAlchemyRepository
->>> user = UserSqlAlchemyRepository().create_user(name="John Doe", email="johndoe@gmail.com", hashed_password="hashed_password")
+>>> from repositories import UserRepository
+>>> user = UserRepository().create_user(name="John Doe", email="johndoe@gmail.com", hashed_password="hashed_password")
 2023-07-02 15:59:16,700 INFO sqlalchemy.engine.Engine BEGIN (implicit)
 2023-07-02 15:59:16,702 INFO sqlalchemy.engine.Engine INSERT INTO users (name, password, email) VALUES (?, ?, ?)
 2023-07-02 15:59:16,702 INFO sqlalchemy.engine.Engine [generated in 0.00024s] ('John Doe', 'hashed_password', 'johndoe@gmail.com')
@@ -195,9 +195,9 @@ id=1 name='John Doe' email='johndoe@gmail.com'
 ```
 
 ```python
->>> from repositories import UserSqlAlchemyRepository
->>> users =  UserSqlAlchemyRepository().get_all_users()
-users =  UserSqlAlchemyRepository().get_all_users()
+>>> from repositories import UserRepository
+>>> users =  UserRepository().get_all_users()
+users =  UserRepository().get_all_users()
 2023-07-02 21:11:27,858 INFO sqlalchemy.engine.Engine BEGIN (implicit)
 2023-07-02 21:11:27,859 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.name AS users_name, users.password AS users_password
 , users.email AS users_email
@@ -219,7 +219,7 @@ def create_user(
     name: str,
     email: str,
     hashed_password: str,
-    repository: UserRepositoryABC = UserSqlAlchemyRepository(),
+    repository: UserRepositoryABC = UserRepository(),
 ) -> User:
     return repository.create_user(
         name=name,
@@ -228,12 +228,12 @@ def create_user(
     )
 
 
-def get_all_users(repository: UserRepositoryABC = UserSqlAlchemyRepository()) -> list[User]:
+def get_all_users(repository: UserRepositoryABC = UserRepository()) -> list[User]:
     return repository.get_all_users()
 
 ```
 
-Here you can see how the functions default to using our `UserSqlAlchemyRepository`, but but they can technically accept any other repository that abides by the abstract class of `UserRepositoryABC`.
+Here you can see how the functions default to using our `UserRepository`, but but they can technically accept any other repository that abides by the abstract class of `UserRepositoryABC`.
 
 The above code snippets exhibits "Dependency injection" by allowing the repository to be provided externally, which promotes loose coupling and flexibility. It also aligns with the "Dependency inversion principle", where high-level modules (business logic) should not depend on low-level modules (repositories) directly but should instead depend on abstractions.
 
