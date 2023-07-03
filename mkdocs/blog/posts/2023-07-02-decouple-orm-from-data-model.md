@@ -7,9 +7,9 @@ tags:
 
 # Decoupling the ORM class from the data model class
 
-I'm working on a rather large project where we would want to replace a [WSGI](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface) ORM with an [ASGI](https://en.wikipedia.org/wiki/Asynchronous_Server_Gateway_Interface) ORM, but it's tangled up into everything and called from all over the business logic. If the ORM would've been decoupled from the objects tossed around in the business logic, it would've been much easier to replace the ORM.
+I'm working on a rather large project where we would want to replace a [WSGI](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface) ORM with an [ASGI](https://en.wikipedia.org/wiki/Asynchronous_Server_Gateway_Interface) ORM, but it's tangled up into everything and ORM queries are executed from all over the business logic. If the ORM would've been decoupled from the objects tossed around in the business logic, it would've been much easier to replace the ORM.
 
-This blog post outlines an example of how this can be done with [Pydantic](https://github.com/pydantic/pydantic). I'm also including a bonus section on decoupling the data store communication from the business logic with the help of the "Repository pattern".
+This blog post outlines an example of how this can be done with [Pydantic](https://github.com/pydantic/pydantic). I'm also including a "bonus section" on decoupling the data store communication from the business logic with some inspiration of the "Repository pattern".
 
 <!-- more -->
 
@@ -71,6 +71,11 @@ What's nice about using Pydantic models for such entities is we'll get the aweso
     user_orm = UserOrm(name="John", email="johndoe@gmail.com", password="hashed_password")
     user = User.model_validate(user_orm)
     ```
+
+!!! tip
+
+    Note how the ORM model contains a `password` attribute, mapping to the database column of the same name. But in our business logic, I don't want this to be available. Therefore my entity model doesn't have it. 
+
 
 ## Defining the repositories
 
@@ -136,9 +141,9 @@ I'm just going to call this repository `UserRepository` for now, but imagine we 
 
     Note that all ORM models inherting from `Base` in `orm.py` will have all their respective tables created when executing `Base.metadata.create_all(engine)`.
 
-!!! note "A note on "
+!!! tip "Limit ORM queries to the repository"
 
-    The repository methods can take business logic entities (such as `User`) as input, or it can take strings, integers, booleans etc - or no arguments at all. It is likely desirable that it returns entities but that is no strict rule about this. Just have them return what makes the most sense. Just don't return the ORM objects!
+    The repository methods can take business logic entities (such as `User`) as input, or it can take strings, integers, booleans etc - or no arguments at all. It is likely desirable that it returns business logic entities but that is no strict rule about this. Just have them return what makes the most sense. Just don't return the ORM objects!
 
     The idea is to limit all occurrences of ORM queries to the repositories and not implementing them in the business logic.
 
