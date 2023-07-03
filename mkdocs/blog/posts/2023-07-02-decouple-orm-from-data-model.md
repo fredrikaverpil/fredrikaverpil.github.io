@@ -136,9 +136,11 @@ Imagine that you could here add in a `UserMongoDbRepository`, `UserRedisReposito
 
     All ORM models inherting from `Base` in `orm.py` will have all their respective tables created when executing `Base.metadata.create_all(engine)`.
 
-!!! note "A note on intput/output"
+!!! note "A note on "
 
-    Repository methods can take entities as input, or it can take strings, ints, booleans etc - or no arguments. It is likely desirable that it returns entities but that is no strict rule about this. Just have them return what makes the most sense. Just don't return the ORM objects!
+    The repository methods can take business logic entities (such as `User`) as input, or it can take strings, integers, booleans etc - or no arguments at all. It is likely desirable that it returns entities but that is no strict rule about this. Just have them return what makes the most sense. Just don't return the ORM objects!
+
+    The idea is to limit all occurrences of ORM queries to the repositories and not implementing them in the business logic.
 
 ## Let's run some commands!
 
