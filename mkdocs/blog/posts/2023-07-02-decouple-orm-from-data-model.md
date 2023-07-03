@@ -256,3 +256,6 @@ The above code snippets exhibits "Dependency injection" by allowing the reposito
     user = UserRepository.create_user(...)
     users = UserRepository.get_all_users()
     ```
+
+    Or you can use other mechanisms to determine which repository to be used and instantiate the repositories only once.
+
