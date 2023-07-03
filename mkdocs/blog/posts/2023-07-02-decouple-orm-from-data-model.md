@@ -266,3 +266,19 @@ The above code snippets exhibits "Dependency injection" by allowing the reposito
 
     Or you can use other mechanisms to determine which repository to be used and instantiate the repositories only once.
 
+
+!!! warning "Caching of instance methods"
+
+    If you want to implement caching of instance methods, you need to be careful as Python is known for leaking memory when using the `@functools.cache`. Especially for long-running processes. It all boils down to that the garbage collection doesn't happen.
+
+    This is a rabbit hole of itself and I won't dive into it in this blog post 😄.
+
+## Over-engineering
+
+I would like to end on a note about over-engineering and the tradeoffs of "clean code".
+
+Depending on what you're building, the solutions outlined in this blog post might resonate with you or it might make no sense to you what so ever. Perhaps you prefer functional programming and are put off by the object oriented approach here. Perhaps you see the abstraction overhead and loss of performance as a problem.
+
+Regardless, having designed the particular project I'm dealing with this way would've substantially helped replacing the ORM with another one. So I figured I'd share this here. Would be super happy for any input or comments on if you see any other ways of dealing with this problem!
+
+Thanks for reading.
