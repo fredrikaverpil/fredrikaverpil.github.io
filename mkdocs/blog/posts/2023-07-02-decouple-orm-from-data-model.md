@@ -78,9 +78,9 @@ With the "Repository pattern", you want to define a tight scope around which cod
 
 For example, you might want to use SQLAlchemy with Postgres in prod, but for tests maybe you want to use SQLAlchemy with an in-memory SQLite database for faster execution and less setup. Or maybe you want your app to gradually move over onto a different database, database driver, ORM or similar.
 
-Let's define a couple of classes in `repositories.py`. First off, we define the abstract class `UserRepositoryABC` that explains which required methods all user repositories must include. In this case it's the `create_user` and `get_all_users` methods. Then we implement the `UserRepository` class, which implements logic on how to communicate with our SQLite database using SQLAlchemy.
+Let's define a couple of classes in `repositories.py`. First off, we define the abstract class `UserRepositoryAbc` that explains which required methods all user repositories must include. In this case it's the `create_user` and `get_all_users` methods. Then we implement the `UserRepository` class, which implements logic on how to communicate with our SQLite database using SQLAlchemy.
 
-I'm just going to call this repository `UserRepository` for now, but imagine we could've had `UserSqlAlchemyRepository`, `UserMongoDbRepository`, `UserRedisRepository` or `UserFakeRepository`, all inheriting from `UserRepositoryABC`. That last one, `UserFakeRepository`, could be used in tests and not even communicate with a real database.
+I'm just going to call this repository `UserRepository` for now, but imagine we could've had `UserSqlAlchemyRepository`, `UserMongoDbRepository`, `UserRedisRepository` or `UserFakeRepository`, all inheriting from `UserRepositoryAbc`. That last one, `UserFakeRepository`, could be used in tests and not even communicate with a real database.
 
 !!! example "repositories.py"
 
@@ -94,7 +94,7 @@ I'm just going to call this repository `UserRepository` for now, but imagine we 
     from orm import Base, UserOrm
 
 
-    class UserRepositoryABC(abc.ABC):
+    class UserRepositoryAbc(abc.ABC):
         @abc.abstractmethod
         def create_user(self, name: str, email: str, hashed_password: str) -> User:
             raise NotImplementedError
@@ -104,7 +104,7 @@ I'm just going to call this repository `UserRepository` for now, but imagine we 
             raise NotImplementedError
 
 
-    class UserRepository(UserRepositoryABC):
+    class UserRepository(UserRepositoryAbc):
         @property
         def engine(self: Self) -> Engine:
             return create_engine("sqlite:///mydatabase.db", echo=True)
@@ -219,7 +219,7 @@ def create_user(
     name: str,
     email: str,
     hashed_password: str,
-    repository: UserRepositoryABC = UserRepository(),
+    repository: UserRepositoryAbc = UserRepository(),
 ) -> User:
     return repository.create_user(
         name=name,
@@ -228,12 +228,12 @@ def create_user(
     )
 
 
-def get_all_users(repository: UserRepositoryABC = UserRepository()) -> list[User]:
+def get_all_users(repository: UserRepositoryAbc = UserRepository()) -> list[User]:
     return repository.get_all_users()
 
 ```
 
-Here you can see how the functions default to using our `UserRepository`, but but they can technically accept any other repository that abides by the abstract class of `UserRepositoryABC`.
+Here you can see how the functions default to using our `UserRepository`, but but they can technically accept any other repository that abides by the abstract class of `UserRepositoryAbc`.
 
 The above code snippets exhibits "Dependency injection" by allowing the repository to be provided externally, which promotes loose coupling and flexibility. It also aligns with the "Dependency inversion principle", where high-level modules (business logic) should not depend on low-level modules (repositories) directly but should instead depend on abstractions.
 
@@ -242,7 +242,7 @@ The above code snippets exhibits "Dependency injection" by allowing the reposito
     You might have noticed how I've instantiated the classes in the signatures. You might want to consider using static methods in your repository classes instead, so you don't have to do this.
 
     ```python
-    class UserRepository(UserRepositoryABC):
+    class UserRepository(UserRepositoryAbc):
 
         @staticmethod
         def create_user(name: str, email: str, hashed_password: str):
