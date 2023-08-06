@@ -106,3 +106,5 @@ And this is how you can already achieve it:
     - https://github.com/pawelzny/dotty_dict (no dependencies)
     - https://github.com/makinacorpus/easydict
     - https://pypi.org/project/attrdict/ (deprecated/archived, don't use this)
+
+    Here's also a Hacker News thread on this topic: https://news.ycombinator.com/item?id=36977606
