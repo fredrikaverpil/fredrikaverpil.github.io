@@ -1,7 +1,7 @@
 ---
 date: 2013-06-16
 tags:
-- photography
+  - photography
 ---
 
 # Fujifilm X100S camera profiles and presets
@@ -28,16 +28,15 @@ I placed a request in the Adobe forums to address this bad rendition of X100S co
 
 Feel free to try it out, but keep in mind this profile was made for my camera and that custom profiles may differ a bit from camera to camera. I’ve also included a bunch of presets I use frequently together with the X100S.
 
-
 ### Downloads
 
 Please note, bookmark this page, put it on [change detection](http://www.changedetection.com) or follow me [on GitHub](https://github.com/fredrikaverpil/photography) as I am bound to update this page with additional profiles and perhaps presets now that I own a color checker!
 
 #### Camera profiles
 
-* [Fujifilm X100S (Sun only)](https://github.com/fredrikaverpil/photography/raw/master/Lightroom/CameraProfiles/Fujifilm%20X100S%20(Sun%20only).dcp) - (D55)
-* [Fujifilm X100S (Sun and Fluorescent)](https://github.com/fredrikaverpil/photography/raw/master/Lightroom/CameraProfiles/Fujifilm%20X100S%20(Sun%20and%20Fluorescent).dcp) – Dual illuminant (D55/A)
-* [Fujifilm X100S (Sun and Tungsten)](https://github.com/fredrikaverpil/photography/raw/master/Lightroom/CameraProfiles/Fujifilm%20X100S%20(Sun%20and%20Tungsten).dcp) – Dual illuminant (D55/A)
+- [Fujifilm X100S (Sun only)](<https://github.com/fredrikaverpil/photography/raw/master/Lightroom/CameraProfiles/Fujifilm%20X100S%20(Sun%20only).dcp>) - (D55)
+- [Fujifilm X100S (Sun and Fluorescent)](<https://github.com/fredrikaverpil/photography/raw/master/Lightroom/CameraProfiles/Fujifilm%20X100S%20(Sun%20and%20Fluorescent).dcp>) – Dual illuminant (D55/A)
+- [Fujifilm X100S (Sun and Tungsten)](<https://github.com/fredrikaverpil/photography/raw/master/Lightroom/CameraProfiles/Fujifilm%20X100S%20(Sun%20and%20Tungsten).dcp>) – Dual illuminant (D55/A)
 
 The dual illuminant camera profiles were made from two photos (shot in sunlight & low light in either fluorescent or tungsten light) of the color checker chart and processed in X-Rite’s ColorChecker Passport 1.0.2. I did not find Adobe DNG Profile Editor 1.0.0.46 beta to produce as pleasing color tones when comparing the resulting camera profiles from each application, so that’s the reason behind using the X-Rite approach.
 
@@ -47,33 +46,29 @@ The fluorescent shot and the tungsten shot were both taken in a dark room with e
 
 ### Presets
 
+![](/static/x100s/presets.jpg)
+_Presets comparison. Click image for larger version._
 
-[[](fredrikaverpil.github.io/obsidian/static/x100s/presets.jpg)](https://www.flickr.com/photos/fredrik/9051954579/)  
-*Presets comparison. Click image for larger version.*
-
-
-* [X100S Fredrik – Film](https://github.com/fredrikaverpil/photography/raw/master/Lightroom/Presets/Legacy/X100S%20Fredrik%20-%20Film.lrtemplate) – cool film look
-* [X100S Fredrik – Film (vivid)](https://github.com/fredrikaverpil/photography/raw/master/Lightroom/Presets/Legacy/X100S%20Fredrik%20-%20Film%20(vivid).lrtemplate) – warm and vivid film look
-* [X100S Fredrik – Neutral](https://github.com/fredrikaverpil/photography/raw/master/Lightroom/Presets/Legacy/X100S%20Fredrik%20-%20Neutral.lrtemplate) – a good starting point
-* [X100S Fredrik – Neutral (faded)](https://github.com/fredrikaverpil/photography/raw/master/Lightroom/Presets/Legacy/X100S%20Fredrik%20-%20Neutral%20(faded).lrtemplate) – trying to mimic Astia
-* [X100S Fredrik – Neutral (punchy)](https://github.com/fredrikaverpil/photography/raw/master/Lightroom/Presets/Legacy/X100S%20Fredrik%20-%20Neutral%20(punchy).lrtemplate) – a bit more contrasty
+- [X100S Fredrik – Film](https://github.com/fredrikaverpil/photography/raw/master/Lightroom/Presets/Legacy/X100S%20Fredrik%20-%20Film.lrtemplate) – cool film look
+- [X100S Fredrik – Film (vivid)](<https://github.com/fredrikaverpil/photography/raw/master/Lightroom/Presets/Legacy/X100S%20Fredrik%20-%20Film%20(vivid).lrtemplate>) – warm and vivid film look
+- [X100S Fredrik – Neutral](https://github.com/fredrikaverpil/photography/raw/master/Lightroom/Presets/Legacy/X100S%20Fredrik%20-%20Neutral.lrtemplate) – a good starting point
+- [X100S Fredrik – Neutral (faded)](<https://github.com/fredrikaverpil/photography/raw/master/Lightroom/Presets/Legacy/X100S%20Fredrik%20-%20Neutral%20(faded).lrtemplate>) – trying to mimic Astia
+- [X100S Fredrik – Neutral (punchy)](<https://github.com/fredrikaverpil/photography/raw/master/Lightroom/Presets/Legacy/X100S%20Fredrik%20-%20Neutral%20(punchy).lrtemplate>) – a bit more contrasty
 
 **Update:** Newer, more up to date presets are found [here](https://github.com/fredrikaverpil/photography/tree/master/Lightroom/Presets).
 
 Please note, you may want to download the presets by right-clicking the links and choosing the “save as...” option. All presets use the camera profile “Fujifilm X100S (Sun only)” and were made with Lightroom 5.
 
-
-
 ### Installation instructions
 
 #### Mac OS X
 
-* Copy the camera profiles into `/Users/[your_username]/Library/Application Support/Adobe/CameraRaw/CameraProfiles`
-* Copy the presets into `/Users/[your_username]/Library/Application Support/Adobe/Lightroom/Develop Presets/User Presets`
+- Copy the camera profiles into `/Users/[your_username]/Library/Application Support/Adobe/CameraRaw/CameraProfiles`
+- Copy the presets into `/Users/[your_username]/Library/Application Support/Adobe/Lightroom/Develop Presets/User Presets`
 
 #### Windows
 
-* Copy the camera profiles into `C:\Users\[your_username] \AppData\Roaming\Adobe\CameraRaw\CameraProfiles`
+- Copy the camera profiles into `C:\Users\[your_username] \AppData\Roaming\Adobe\CameraRaw\CameraProfiles`
 
 If anyone knows where to put the presets on a Windows machine, let me know (I believe you can drag and drop them into Lightroom?)
 
