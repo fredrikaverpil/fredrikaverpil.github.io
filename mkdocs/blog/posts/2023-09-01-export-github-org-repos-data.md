@@ -23,86 +23,86 @@ gh api \
 
     At the time of writing this post, this is the kind of data which will be exported from the organization's repo(s):
 
-    - id
-    - node_id
-    - name
-    - full_name
-    - private
-    - owner
-    - html_url
-    - description
-    - fork
-    - url
-    - forks_url
-    - keys_url
-    - collaborators_url
-    - teams_url
-    - hooks_url
-    - issue_events_url
-    - events_url
+    - allow_forking
+    - archive_url
+    - archived
     - assignees_url
-    - branches_url
-    - tags_url
     - blobs_url
-    - git_tags_url
-    - git_refs_url
-    - trees_url
-    - statuses_url
-    - languages_url
-    - stargazers_url
+    - branches_url
+    - clone_url
+    - collaborators_url
+    - comments_url
+    - commits_url
+    - compare_url
+    - contents_url
     - contributors_url
+    - created_at
+    - default_branch
+    - deployments_url
+    - description
+    - disabled
+    - downloads_url
+    - events_url
+    - fork
+    - forks
+    - forks_count
+    - forks_url
+    - full_name
+    - git_commits_url
+    - git_refs_url
+    - git_tags_url
+    - git_url
+    - has_discussions
+    - has_downloads
+    - has_issues
+    - has_pages
+    - has_projects
+    - has_wiki
+    - homepage
+    - hooks_url
+    - html_url
+    - id
+    - is_template
+    - issue_comment_url
+    - issue_events_url
+    - issues_url
+    - keys_url
+    - labels_url
+    - language
+    - languages_url
+    - license
+    - merges_url
+    - milestones_url
+    - mirror_url
+    - name
+    - node_id
+    - notifications_url
+    - open_issues
+    - open_issues_count
+    - owner
+    - permissions
+    - private
+    - pulls_url
+    - pushed_at
+    - releases_url
+    - size
+    - ssh_url
+    - stargazers_count
+    - stargazers_url
+    - statuses_url
     - subscribers_url
     - subscription_url
-    - commits_url
-    - git_commits_url
-    - comments_url
-    - issue_comment_url
-    - contents_url
-    - compare_url
-    - merges_url
-    - archive_url
-    - downloads_url
-    - issues_url
-    - pulls_url
-    - milestones_url
-    - notifications_url
-    - labels_url
-    - releases_url
-    - deployments_url
-    - created_at
-    - updated_at
-    - pushed_at
-    - git_url
-    - ssh_url
-    - clone_url
     - svn_url
-    - homepage
-    - size
-    - stargazers_count
-    - watchers_count
-    - language
-    - has_issues
-    - has_projects
-    - has_downloads
-    - has_wiki
-    - has_pages
-    - has_discussions
-    - forks_count
-    - mirror_url
-    - archived
-    - disabled
-    - open_issues_count
-    - license
-    - allow_forking
-    - is_template
-    - web_commit_signoff_required
+    - tags_url
+    - teams_url
     - topics
+    - trees_url
+    - updated_at
+    - url
     - visibility
-    - forks
-    - open_issues
     - watchers
-    - default_branch
-    - permissions
+    - watchers_count
+    - web_commit_signoff_required
 
 <!-- more -->
 
