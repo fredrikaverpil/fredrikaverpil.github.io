@@ -19,6 +19,8 @@ gh api \
         --paginate > repos.json
 ```
 
+<!-- more -->
+
 !!! info "Exported data"
 
     At the time of writing this post, this is the kind of data which will be exported from the organization's repo(s):
@@ -103,8 +105,6 @@ gh api \
     - watchers
     - watchers_count
     - web_commit_signoff_required
-
-<!-- more -->
 
 You can now import this into e.g. Excel ([which by the way now have Python support](https://techcommunity.microsoft.com/t5/excel-blog/announcing-python-in-excel-combining-the-power-of-python-and-the/ba-p/3893439)), or optionally convert it to csv first:
 
