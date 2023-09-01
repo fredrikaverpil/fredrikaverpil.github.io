@@ -21,7 +21,7 @@ gh api \
 
 <!-- more -->
 
-!!! info "Exported data"
+??? info "Expand to see what data is exported"
 
     At the time of writing this post, this is the kind of data which will be exported from the organization's repo(s):
 
