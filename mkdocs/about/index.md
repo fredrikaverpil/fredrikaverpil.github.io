@@ -4,9 +4,7 @@
 
 :wave: Hey there!
 
-I am a passionate, enthusiastic and professional software developer with 15+ years of professional Python engineering experience but soon venturing into working full time with Go.
-
-I advocate continuous development, automated testing and to maintain as high code quality as possible. I am deeply invested in the open source community and love collaborating and contributing.
+I am a passionate, enthusiastic and professional software developer with 15+ years of professional Python engineering experience but now venturing into working full time with Go.
 
 This my personal blog, where I scribble down notes on software development (mostly :material-language-python: and :material-language-go:), open source, and other stuff I love tinkering with! :smiling_face_with_3_hearts:
 
