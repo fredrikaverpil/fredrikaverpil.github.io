@@ -7,11 +7,21 @@ tags:
 
 # Export repo data from GitHub organization
 
-This is a quickie, using the [GitHub CLI](https://cli.github.com/) and some Python.
+This is a quickie, using the [GitHub CLI](https://cli.github.com/) and optionally some Python.
 
-!!! info "Data to extract"
+Replace `YOUR_ORG` with your organization and export all your organization's repo data to `repos.json`:
 
-    At the time of writing this post, you can extract the following data from an organization's repo(s) this way:
+```bash
+gh api \
+        -H "Accept: application/vnd.github+json" \
+        -H "X-GitHub-Api-Version: 2022-11-28" \
+        /orgs/YOUR_ORG/repos \
+        --paginate > repos.json
+```
+
+!!! info "Exported data"
+
+    At the time of writing this post, this is the kind of data which will be exported from the organization's repo(s):
 
     - id
     - node_id
@@ -94,15 +104,7 @@ This is a quickie, using the [GitHub CLI](https://cli.github.com/) and some Pyth
     - default_branch
     - permissions
 
-Replace `YOUR_ORG` with your organization and export all your organization's repo data to `repos.json`:
-
-```bash
-gh api \
-        -H "Accept: application/vnd.github+json" \
-        -H "X-GitHub-Api-Version: 2022-11-28" \
-        /orgs/YOUR_ORG/repos \
-        --paginate > repos.json
-```
+<!-- more -->
 
 You can now import this into e.g. Excel ([which by the way now have Python support](https://techcommunity.microsoft.com/t5/excel-blog/announcing-python-in-excel-combining-the-power-of-python-and-the/ba-p/3893439)), or optionally convert it to csv first:
 
