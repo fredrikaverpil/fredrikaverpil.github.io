@@ -1,8 +1,5 @@
 INHERIT: mkdocs.yml
 
-plugins:
-  - meta # must be defined before the "blog" plugin
-
 theme:
   palette:
     # Palette toggle for automatic mode
