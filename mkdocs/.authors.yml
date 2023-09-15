@@ -1,4 +1,5 @@
-fredrikaverpil:
-  name: Fredrik Averpil
-  description: Author
-  avatar: https://github.com/fredrikaverpil.png
+authors:
+  fredrikaverpil:
+    name: Fredrik Averpil
+    description: Author
+    avatar: https://github.com/fredrikaverpil.png
