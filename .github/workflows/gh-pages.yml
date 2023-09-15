@@ -40,16 +40,17 @@ jobs:
             ~/.cache/pip
             .cache
 
-      # install insiders version of mkdocs-material
-      - run: pip install --upgrade \
+      - name: Install Mkdocs-Material-Insiders
+        run: pip install --upgrade \
           git+https://${{ secrets.MKDOCS_MATERIAL_INSIDERS }}@github.com/squidfunk/mkdocs-material-insiders.git \
           mkdocs-rss-plugin \
           mkdocs-redirects \
           pillow cairosvg # for social cards
-        if: ${{ false }} # disables this step
+        # if: ${{ false }} # disables this step
 
-      # install standard version of mkdocs-material
-      - run: pip install --upgrade mkdocs-material mkdocs-rss-plugin mkdocs-redirects pillow cairosvg
+      - name: Install Mkdocs-Material
+        run: pip install --upgrade mkdocs-material mkdocs-rss-plugin mkdocs-redirects pillow cairosvg
+        if: ${{ false }} # disables this step
 
       - run: pip freeze
 
