@@ -65,6 +65,7 @@ extra:
     provider: umami
 
 plugins:
+  # NOTE: all plugins must be defined in one and the same yml file
   - redirects:
       redirect_maps:
         "index.md": "blog/index.md"
@@ -73,8 +74,8 @@ plugins:
       tags_file: tags.md
   - social:
       cards: true
+  - meta # must be defined before the "blog" plugin
   - blog:
-      # requires mkdocs-material-insiders
       blog_toc: true
       post_date_format: long
       post_readtime: true
@@ -83,7 +84,6 @@ plugins:
       authors: true
       authors_file: .authors.yml
   - rss:
-      # requires mkdocs-material-insiders
       match_path: blog/posts/.*
       date_from_meta:
         as_creation: date
