@@ -1,38 +1,10 @@
 INHERIT: mkdocs.yml
 
 plugins:
-  - redirects:
-      redirect_maps:
-        "index.md": "blog/index.md"
-  - search # must be re-added when plugins are specified
   - meta # must be defined before the "blog" plugin
-  - tags: # must be defined before the "blog" plugin
-      tags_file: tags.md
-  - social:
-      cards: true
-  - blog:
-      # requires mkdocs-material-insiders
-      blog_toc: true
-      post_date_format: long
-      post_readtime: true
-      archive: true
-      categories: false
-      authors: true
-      authors_file: .authors.yml
-  - rss:
-      # requires mkdocs-material-insiders
-      match_path: blog/posts/.*
-      date_from_meta:
-        as_creation: date
-      categories:
-        - categories
-        - tags
-      image: https://github.com/fredrikaverpil.png
 
 theme:
   palette:
-    # requires mkdocs-material-insiders
-
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
