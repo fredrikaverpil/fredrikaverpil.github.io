@@ -61,6 +61,7 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to system preference
+
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
