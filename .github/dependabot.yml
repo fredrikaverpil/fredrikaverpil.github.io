@@ -8,7 +8,7 @@ updates:
     registries:
       - mkdocs-material-insiders
     schedule:
-      interval: "weekly"
+      interval: "monthly"
 
 registries:
   mkdocs-material-insiders:
