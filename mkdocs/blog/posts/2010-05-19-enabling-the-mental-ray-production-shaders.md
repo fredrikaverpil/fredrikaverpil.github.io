@@ -1,5 +1,8 @@
 ---
 date: 2010-05-19
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - maya
 - mentalray

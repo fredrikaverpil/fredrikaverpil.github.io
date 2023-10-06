@@ -1,5 +1,8 @@
 ---
 date: 2018-04-18
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - python
 ---

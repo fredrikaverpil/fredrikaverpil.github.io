@@ -1,5 +1,8 @@
 ---
 date: 2021-12-17
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - macos
 ---

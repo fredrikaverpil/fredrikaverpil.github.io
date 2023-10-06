@@ -1,5 +1,8 @@
 ---
 date: 2017-02-02
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - python
 - macos

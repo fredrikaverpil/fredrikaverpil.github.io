@@ -1,5 +1,8 @@
 ---
 date: 2012-12-12
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - vray
 - maya

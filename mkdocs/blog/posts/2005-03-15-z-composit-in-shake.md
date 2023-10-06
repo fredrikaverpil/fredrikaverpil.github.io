@@ -1,5 +1,8 @@
 ---
 date: 2005-03-15
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - compositing
 ---

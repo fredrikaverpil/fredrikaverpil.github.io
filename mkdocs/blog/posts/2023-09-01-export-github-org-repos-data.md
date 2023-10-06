@@ -1,6 +1,9 @@
 ---
 date: 2023-09-01
 draft: false
+authors:
+  - fredrikaverpil
+comments: true
 tags:
   - github
 ---

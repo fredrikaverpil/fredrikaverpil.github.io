@@ -1,5 +1,8 @@
 ---
 date: 2015-09-10
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - linux
 - maya

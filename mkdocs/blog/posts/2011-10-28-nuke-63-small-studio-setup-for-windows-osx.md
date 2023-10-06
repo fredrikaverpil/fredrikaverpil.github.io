@@ -1,5 +1,8 @@
 ---
 date: 2011-10-28
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - nuke
 - python

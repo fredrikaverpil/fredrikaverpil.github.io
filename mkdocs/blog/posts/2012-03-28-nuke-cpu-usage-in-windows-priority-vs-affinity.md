@@ -1,5 +1,8 @@
 ---
 date: 2012-03-28
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - nuke
 - windows

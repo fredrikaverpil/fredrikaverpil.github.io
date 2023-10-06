@@ -1,5 +1,8 @@
 ---
 date: 2018-03-15
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - docker
 - windows

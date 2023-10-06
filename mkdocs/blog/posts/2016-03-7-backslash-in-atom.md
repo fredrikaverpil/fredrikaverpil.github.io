@@ -1,5 +1,8 @@
 ---
 date: 2016-03-07
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - windows
 ---

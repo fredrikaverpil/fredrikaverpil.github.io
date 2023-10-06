@@ -1,5 +1,8 @@
 ---
 date: 2017-05-04
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - python
 - qt.py

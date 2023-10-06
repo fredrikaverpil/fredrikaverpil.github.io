@@ -1,6 +1,9 @@
 ---
 date: 2023-06-02
 draft: false
+authors:
+  - fredrikaverpil
+comments: true
 tags:
   - python
 ---

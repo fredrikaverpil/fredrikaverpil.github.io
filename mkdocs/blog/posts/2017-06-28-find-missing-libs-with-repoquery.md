@@ -1,5 +1,8 @@
 ---
 date: 2017-06-28
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - linux
 ---

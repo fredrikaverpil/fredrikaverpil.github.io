@@ -1,5 +1,8 @@
 ---
 date: 2005-05-09
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - maya
 - mel

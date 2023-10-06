@@ -1,5 +1,8 @@
 ---
 date: 2017-08-28
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - python
 - pyside

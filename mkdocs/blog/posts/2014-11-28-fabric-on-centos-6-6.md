@@ -1,5 +1,8 @@
 ---
 date: 2014-11-28
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - python
 - linux

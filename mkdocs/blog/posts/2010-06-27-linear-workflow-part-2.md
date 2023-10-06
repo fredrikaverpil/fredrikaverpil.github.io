@@ -1,5 +1,8 @@
 ---
 date: 2010-06-27
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - workflow
 - maya

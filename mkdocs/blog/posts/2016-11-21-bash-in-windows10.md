@@ -1,5 +1,8 @@
 ---
 date: 2016-11-21
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - windows
 - linux

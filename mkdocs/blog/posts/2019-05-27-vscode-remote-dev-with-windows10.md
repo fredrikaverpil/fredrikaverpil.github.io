@@ -1,5 +1,8 @@
 ---
 date: 2019-05-27
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - windows
 ---

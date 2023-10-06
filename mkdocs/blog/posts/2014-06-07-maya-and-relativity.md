@@ -1,5 +1,8 @@
 ---
 date: 2014-06-07
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - maya
 ---

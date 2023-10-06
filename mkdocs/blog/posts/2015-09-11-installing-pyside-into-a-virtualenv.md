@@ -1,5 +1,8 @@
 ---
 date: 2015-09-11
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - linux
 - bash

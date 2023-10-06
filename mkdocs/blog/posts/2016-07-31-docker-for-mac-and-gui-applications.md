@@ -1,5 +1,8 @@
 ---
 date: 2016-07-31
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - docker
 ---
