@@ -50,14 +50,8 @@ theme:
     #     icon: material/brightness-auto
     #     name: Switch to light mode
 
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: pink
-      accent: light blue
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to dark mode
+    # NOTE: the order of the palettes below matter.
+    # The first one in the list will become the default for the user.
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
@@ -67,6 +61,15 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to system preference
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: pink
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
 extra_css:
   - stylesheets/extra.css
 
