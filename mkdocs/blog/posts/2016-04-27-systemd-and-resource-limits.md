@@ -1,5 +1,8 @@
 ---
 date: 2016-04-27
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - linux
 - vray

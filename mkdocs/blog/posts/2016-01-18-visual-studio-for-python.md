@@ -1,5 +1,8 @@
 ---
 date: 2016-01-18
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - python
 - windows

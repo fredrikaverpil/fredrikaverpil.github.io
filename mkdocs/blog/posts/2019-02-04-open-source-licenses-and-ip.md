@@ -1,5 +1,8 @@
 ---
 date: 2019-02-04
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - docker
 ---

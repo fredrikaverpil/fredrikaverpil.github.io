@@ -1,6 +1,9 @@
 ---
 date: 2022-12-18
 draft: false
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - bash
 ---

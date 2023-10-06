@@ -1,5 +1,8 @@
 ---
 date: 2015-10-07
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - chromeos
 ---

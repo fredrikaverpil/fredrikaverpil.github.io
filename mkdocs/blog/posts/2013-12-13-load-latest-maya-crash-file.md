@@ -1,5 +1,8 @@
 ---
 date: 2013-12-13
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - maya
 - python

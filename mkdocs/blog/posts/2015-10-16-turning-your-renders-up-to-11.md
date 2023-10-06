@@ -1,5 +1,8 @@
 ---
 date: 2010-10-16
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - google-cloud
 - python

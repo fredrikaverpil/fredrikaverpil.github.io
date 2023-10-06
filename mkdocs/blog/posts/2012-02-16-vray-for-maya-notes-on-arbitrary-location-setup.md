@@ -1,5 +1,8 @@
 ---
 date: 2012-02-16
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - vray
 - python

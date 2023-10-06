@@ -1,5 +1,8 @@
 ---
 date: 2013-03-08
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - photography
 ---

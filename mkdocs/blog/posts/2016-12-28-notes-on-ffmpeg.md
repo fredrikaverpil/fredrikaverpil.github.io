@@ -1,5 +1,8 @@
 ---
 date: 2016-12-28
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - macos
 - video

@@ -1,5 +1,8 @@
 ---
 date: 2012-10-29
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - portfolio
 ---

@@ -1,6 +1,9 @@
 ---
 date: 2011-05-15
 draft: false
+authors:
+  - fredrikaverpil
+comments: true
 tags:
 - pstools
 - windows
