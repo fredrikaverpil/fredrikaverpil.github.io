@@ -2,7 +2,6 @@
 
 ## 🚀 Quick start
 
-
 ### 📦 Install dependencies
 
 ```bash
@@ -19,10 +18,11 @@ pip install -r requirements.txt
 ### 🍽️ Serve locally
 
 ```bash
-mkdocs serve --config-file mkdocs.insiders.yml --dirtyreload
+mkdocs serve --dirtyreload
 ```
 
 ### ✨ Useful stuff
 
 - https://squidfunk.github.io/mkdocs-material/reference/
 - https://facelessuser.github.io/pymdown-extensions/
+
