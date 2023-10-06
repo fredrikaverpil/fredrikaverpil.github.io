@@ -42,6 +42,31 @@ theme:
     - navigation.sections
   custom_dir: mkdocs/overrides
 
+  palette:
+    # WARNING: 'automatic mode' is an insiders feature only
+    # Palette toggle for automatic mode
+    # - media: "(prefers-color-scheme)"
+    #   toggle:
+    #     icon: material/brightness-auto
+    #     name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: pink
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: pink
+      toggle:
+        icon: material/weather-night
+        name: Switch to system preference
 extra_css:
   - stylesheets/extra.css
 
@@ -74,7 +99,8 @@ plugins:
       tags_file: tags.md
   - social:
       cards: true
-  - meta # must be defined before the "blog" plugin
+  # WARNING: the 'meta' plugin is an insiders-only feature
+  # - meta # must be defined before the "blog" plugin
   - blog:
       blog_toc: true
       post_date_format: long
