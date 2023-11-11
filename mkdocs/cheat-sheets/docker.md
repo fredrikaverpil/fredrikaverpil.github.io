@@ -1,9 +1,10 @@
 ---
 date: 2022-12-18
-draft: true
+draft: false
 tags:
-- docker
+  - docker
 title: Docker
+icon: simple/docker
 ---
 
 # Docker
@@ -51,3 +52,4 @@ services:
 
   ...
 ```
+
