@@ -11,7 +11,6 @@ brew install cairo freetype libffi libjpeg libpng zlib
 ```
 
 ```bash
-# requires access to private repo
 pip install -r requirements.txt
 ```
 
