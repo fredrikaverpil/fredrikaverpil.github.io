@@ -52,7 +52,7 @@ jobs:
         if: ${{ env.USE_MKDOCS_MATERIAL_INSIDERS == 'true' }}
 
       - name: Install Mkdocs-Material
-        run: pip install --upgrade mkdocs-material mkdocs-rss-plugin mkdocs-redirects pillow cairosvg
+        run: pip install -r requirements.txt
         if: ${{ env.USE_MKDOCS_MATERIAL_INSIDERS == 'false' }}
 
       - run: pip freeze
