@@ -85,9 +85,9 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/fredrik
     - icon: fontawesome/solid/square-rss
-      link: /feed
+      link: /feed_rss_created.xml
     - icon: simple/feedly
-      link: https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Ffredrikaverpil.github.io%2Ffeed
+      link: https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Ffredrikaverpil.github.io%2Ffeed_rss_created.xml
     - icon: octicons/graph-24
       link: https://analytics.umami.is/share/tJcIgDO3dznRmeGX/fredrikaverpil.github.io
   analytics:
@@ -98,7 +98,6 @@ plugins:
   - redirects:
       redirect_maps:
         "index.md": "blog/index.md"
-        # "feed/index.html": "https://fredrikaverpil.github.io/feed_rss_created.xml"
   - search # must be re-added when plugins are specified
   - tags: # must be defined before the "blog" plugin
       tags_file: tags.md
