@@ -98,6 +98,7 @@ plugins:
   - redirects:
       redirect_maps:
         "index.md": "blog/index.md"
+        "/feed": "feed_rss_created.xml"
   - search # must be re-added when plugins are specified
   - tags: # must be defined before the "blog" plugin
       tags_file: tags.md
