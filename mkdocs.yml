@@ -98,12 +98,12 @@ plugins:
   - redirects:
       redirect_maps:
         "index.md": "blog/index.md"
-        "/feed": "feed_rss_created.xml"
+        "feed/index.html": "https://fredrikaverpil.github.io/feed_rss_created.xml"
   - search # must be re-added when plugins are specified
   - tags: # must be defined before the "blog" plugin
       tags_file: tags.md
-  # - social:
-  #     cards: true
+  - social:
+      cards: true
   # WARNING: the 'meta' plugin is an insiders-only feature
   # - meta # must be defined before the "blog" plugin
   - blog:
@@ -122,6 +122,7 @@ plugins:
         - categories
         - tags
       image: https://github.com/fredrikaverpil.png
+
 nav:
   - Blog:
       - blog/index.md
