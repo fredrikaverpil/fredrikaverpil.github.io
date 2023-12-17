@@ -59,6 +59,9 @@ jobs:
 
       - run: mkdocs build
 
+      # maintain backwards compatibility from previous RSS feed
+      - run: cp site/feed_rss_created.xml site/atom.xml
+
       - name: Setup Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v3
