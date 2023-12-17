@@ -95,9 +95,10 @@ extra:
 
 plugins:
   # NOTE: all plugins must be defined in one and the same yml file
-  - redirects:
-      redirect_maps:
-        "index.md": "blog/index.md"
+
+  # - redirects:
+  #     redirect_maps:
+  #       "index.md": "blog/index.md"
   - search # must be re-added when plugins are specified
   - tags: # must be defined before the "blog" plugin
       tags_file: tags.md
@@ -131,4 +132,4 @@ nav:
       - cheat-sheets/gha.md
       - cheat-sheets/git.md
       - cheat-sheets/gcal.md
-  - About me: about/index.md
+  - About me: index.md
