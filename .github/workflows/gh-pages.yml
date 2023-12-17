@@ -60,7 +60,7 @@ jobs:
       - run: mkdocs build
 
       # maintain backwards compatibility from previous RSS feed
-      - run: cp site/feed_rss_created.xml site/atom.xml
+      - run: cp site/static/rss_redirect.xml site/atom.xml
 
       - name: Setup Pages
         if: github.event_name != 'pull_request'
