@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block meta %}
+    {{ super() }}
+    {% if page.meta.custom_meta %}
+    <meta name="custom" content="{{ page.meta.custom_meta }}" />
+    {% endif %}
+{% endblock %}
