@@ -1,8 +1,3 @@
----
-# Google Search Console ownership verification
-custom_meta: 'gXcJysapgO5NIymnJqWVQXMp3KtnsJ6_A3zJHLdDuXo'
----
-
 # About me
 
 ![Image title](https://github.com/fredrikaverpil.png){ loading=lazy }

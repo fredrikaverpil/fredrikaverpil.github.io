@@ -1,7 +1,5 @@
 {% extends "base.html" %}
-{% block meta %}
+{% block extrahead %}
     {{ super() }}
-    {% if page.meta.custom_meta %}
-    <meta name="custom" content="{{ page.meta.custom_meta }}" />
-    {% endif %}
+    <meta name="google-site-verification" content="{{ config.extra.google_site_verification }}" />
 {% endblock %}

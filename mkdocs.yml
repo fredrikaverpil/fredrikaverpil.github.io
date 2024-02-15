@@ -92,6 +92,8 @@ extra:
       link: https://analytics.umami.is/share/tJcIgDO3dznRmeGX/fredrikaverpil.github.io
   analytics:
     provider: umami
+  # google search console verification, see overrides
+  google_site_verification: 'gXcJysapgO5NIymnJqWVQXMp3KtnsJ6_A3zJHLdDuXo'
 
 plugins:
   # NOTE: all plugins must be defined in one and the same yml file
