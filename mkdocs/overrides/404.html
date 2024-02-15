@@ -13,11 +13,18 @@
 <script>
     var currentUrl = window.location.href;
     var redirected = new URL(currentUrl).searchParams.get('redirected');
-    if (!currentUrl.includes("/blog/") && !redirected) {
+    if (currentUrl.endsWith("/about") && !redirected) {
+        var urlObj = new URL(currentUrl);
+        var newUrl = urlObj.protocol + "//" + urlObj.hostname + (urlObj.port ? ':' + urlObj.port : '');
+        newUrl += newUrl.includes('?') ? '&redirected=true' : '?redirected=true';
+        window.location.href = newUrl;
+    }
+    else if (!currentUrl.includes("/blog/") && !redirected) {
         var urlObj = new URL(currentUrl);
         var newUrl = urlObj.protocol + "//" + urlObj.hostname + (urlObj.port ? ':' + urlObj.port : '') + "/blog" + urlObj.pathname + urlObj.search;
         newUrl += newUrl.includes('?') ? '&redirected=true' : '?redirected=true';
         window.location.href = newUrl;
     }
+
 </script>
 {% endblock %}
