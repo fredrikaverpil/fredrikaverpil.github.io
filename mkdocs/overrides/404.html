@@ -8,3 +8,16 @@
     I recently restructured the blog, so old post URLs are broken, unfortunately.
   </div>
 {% endblock %}
+<!-- Scripts -->
+{% block scripts %}
+<script>
+    var currentUrl = window.location.href;
+    var redirected = new URL(currentUrl).searchParams.get('redirected');
+    if (!currentUrl.includes("/blog/") && !redirected) {
+        var urlObj = new URL(currentUrl);
+        var newUrl = urlObj.protocol + "//" + urlObj.hostname + (urlObj.port ? ':' + urlObj.port : '') + "/blog" + urlObj.pathname + urlObj.search;
+        newUrl += newUrl.includes('?') ? '&redirected=true' : '?redirected=true';
+        window.location.href = newUrl;
+    }
+</script>
+{% endblock %}
