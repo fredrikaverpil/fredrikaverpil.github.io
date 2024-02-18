@@ -1,15 +1,7 @@
 {% extends "main.html" %}
 
-<!-- Content -->
-{% block content %}
-  <h1>404 - Not found</h1>
-  <div>
-    Try searching for what you were looking for.
-    I recently restructured the blog, so old post URLs are broken, unfortunately.
-  </div>
-{% endblock %}
-<!-- Scripts -->
-{% block scripts %}
+<!-- Head -->
+{% block extrahead %}
 <script>
     var currentUrl = window.location.href;
     var redirected = new URL(currentUrl).searchParams.get('redirected');
@@ -25,6 +17,15 @@
         newUrl += newUrl.includes('?') ? '&redirected=true' : '?redirected=true';
         window.location.href = newUrl;
     }
-
 </script>
 {% endblock %}
+
+<!-- Content -->
+{% block content %}
+  <h1>404 - Not found</h1>
+  <div>
+    Try searching for what you were looking for.
+    I recently restructured the blog, so old post URLs are broken, unfortunately.
+  </div>
+{% endblock %}
+
