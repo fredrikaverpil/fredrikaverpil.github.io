@@ -1,5 +1,5 @@
 # mkdocs-material @ git+https://${MKDOCS_MATERIAL_INSIDERS}@github.com/squidfunk/mkdocs-material-insiders.git
-mkdocs-material==9.5.9
+mkdocs-material==9.5.16
 mkdocs-rss-plugin==1.12.1
 mkdocs-redirects==1.2.1
 pillow==10.2.0
