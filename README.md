@@ -10,6 +10,10 @@
 brew install cairo freetype libffi libjpeg libpng zlib
 ```
 
+> [!Note] The
+> [troubleshooting docs](https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/?h=brew#cairo-graphics)
+> outlines solutions to issues.
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -24,4 +28,3 @@ mkdocs serve --dirtyreload
 
 - https://squidfunk.github.io/mkdocs-material/reference/
 - https://facelessuser.github.io/pymdown-extensions/
-
