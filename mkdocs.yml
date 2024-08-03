@@ -5,8 +5,6 @@ site_url: https://fredrikaverpil.github.io
 # repo_url: https://github.com/fredrikaverpil/fredrikaverpil.github.io
 repo_name: fredrikaverpil.github.io
 
-# see mkdocs.insiders.yml for plugins setup
-
 markdown_extensions:
   - admonition
   - footnotes
@@ -43,12 +41,11 @@ theme:
   custom_dir: mkdocs/overrides
 
   palette:
-    # WARNING: 'automatic mode' is an insiders feature only
     # Palette toggle for automatic mode
-    # - media: "(prefers-color-scheme)"
-    #   toggle:
-    #     icon: material/brightness-auto
-    #     name: Switch to light mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
 
     # NOTE: the order of the palettes below matter.
     # The first one in the list will become the default for the user.
