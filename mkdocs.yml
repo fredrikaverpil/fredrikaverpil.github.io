@@ -77,8 +77,8 @@ extra:
       link: https://github.com/fredrikaverpil
     - icon: fontawesome/brands/mastodon
       link: https://fosstodon.org/@fredrikaverpil
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/fredrikaverpil
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/fredrikaverpil
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/fredrik
     - icon: fontawesome/solid/square-rss
