@@ -24,3 +24,6 @@ Perhaps the reason for this is there are a LOT of pages under the `github.io`
 domain, so Google doesn't automatically index it all, or times out. Or perhaps
 it's because GitHub has some restriction in place which avoids attracting too
 much traffic to their free hosting solution. 🤷
+
+[Here's](https://github.com/squidfunk/mkdocs-material/discussions/7478#discussioncomment-10451113)
+a more detailed discussion thread which expands more on this topic.
