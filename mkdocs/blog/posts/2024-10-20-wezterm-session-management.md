@@ -78,7 +78,7 @@ following config to `wezterm.lua`, which is heavily inspired by
 So, when hitting `Cmd+T`, a new tab shows and is prefixed by a number. Tabs can
 then be selected by hitting `Cmd+[number]`.
 
-!!! tip "wezterm.lua"
+!!! example "wezterm.lua"
 
     ```lua
     config.hide_tab_bar_if_only_one_tab = false
