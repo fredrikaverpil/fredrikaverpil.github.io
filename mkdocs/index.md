@@ -1,7 +1,6 @@
 # About me
 
-![Gravatar](https://gravatar.com/userimage/312137/7bfb2e6aadb93ec761f74c89e32c47b4.jpeg?size=512){
-loading=lazy }
+![Gravatar](https://gravatar.com/userimage/312137/7bfb2e6aadb93ec761f74c89e32c47b4.jpeg?size=512)
 
 <!--
 ![LinkedIn photo](https://media.licdn.com/dms/image/v2/D4D03AQGt1R7gsUR8Cw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1700822289629?e=1735171200&v=beta&t=GKqs7RPXMK2gAodPuzC46DA-AQwAdsgcpDnxUAV-eFA){ loading=lazy }
