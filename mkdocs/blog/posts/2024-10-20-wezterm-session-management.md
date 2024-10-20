@@ -12,6 +12,8 @@ tags:
 
 # Session management in Wezterm (without tmux)
 
+![Wezterm workspaces](/static/wezterm/wezterm_workspaces.png)
+
 I've been using [Neovim](https://github.com/neovim/neovim) as my daily
 IDE/editor for a bit more than a year now. I've also been using
 [tmux](https://github.com/tmux/tmux) to manage sessions, first using
@@ -69,6 +71,8 @@ the fly from the Internet like this. I might vendor the
 term.
 
 ## Bonus: tabs
+
+![Wezterm tabs](/static/wezterm/wezterm_tabs.png)
 
 I primarily use workspaces with Wezterm now, but it's also convenient to have
 tabs around. I've created my own workflow here which entails adding the
