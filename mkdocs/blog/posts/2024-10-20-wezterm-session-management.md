@@ -13,7 +13,7 @@ tags:
 # Session management in Wezterm (without tmux)
 
 I've been using [Neovim](https://github.com/neovim/neovim) as my daily
-IDE/editor for a couple of years now. I've also been using
+IDE/editor for a bit more than a year now. I've also been using
 [tmux](https://github.com/tmux/tmux) to manage sessions, first using
 [t-smart-tmux-session-manager](https://github.com/joshmedeski/t-smart-tmux-session-manager)
 and later [sesh](https://github.com/joshmedeski/sesh), which supersedes the
