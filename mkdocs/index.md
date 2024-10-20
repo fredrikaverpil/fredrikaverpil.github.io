@@ -9,8 +9,8 @@ years of professional Python engineering experience but now venturing into
 working full time with Go.
 
 This my personal blog, where I scribble down notes on software development
-(mostly :material-language-python: :material-language-go:
-:material-language-lua:), open source, and other stuff I love tinkering with!
+(mostly :material-language-python: :material-language-lua:
+:material-language-go:), open source, and other stuff I love tinkering with!
 :smiling_face_with_3_hearts:
 
 Get in touch: [:simple-github:](https://github.com/fredrikaverpil)
