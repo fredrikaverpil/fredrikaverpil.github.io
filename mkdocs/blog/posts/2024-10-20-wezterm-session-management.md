@@ -39,7 +39,7 @@ I can get pretty much the same behavior as I am used to with sesh. They both
 leverage [zoxide](https://github.com/ajeetdsouza/zoxide) for fuzzy-searching
 recently visited folders.
 
-!!! example "wezterm.lua"
+!!! example "Workspaces setup and management"
 
     ```lua
     -- print the workspace name at the upper right
@@ -74,7 +74,7 @@ I've also set up a custom workspace which is loaded on Wezterm startup, which
 goes into my dotfiles repository and starts up Neovim. Using a hotkey
 `Ctrl+Shift+d` I can also always jump directly to this workspace.
 
-!!! example "wezterm.lua"
+!!! example "Custom workspace on startup"
 
     ```lua
     -- set up workspace to be loaded on startup of wezterm
@@ -107,7 +107,7 @@ by
 So, when hitting `Cmd+T`, a new tab shows and is prefixed by a number. Tabs can
 then be selected by hitting `Cmd+[number]`.
 
-!!! example "wezterm.lua"
+!!! example "Custom tabs"
 
     ```lua
     config.hide_tab_bar_if_only_one_tab = false
