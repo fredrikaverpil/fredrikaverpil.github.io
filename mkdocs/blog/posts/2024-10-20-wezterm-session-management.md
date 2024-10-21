@@ -22,8 +22,8 @@ and later [sesh](https://github.com/joshmedeski/sesh), which supersedes the
 former project. What's great about this is that it doesn't matter which terminal
 emulator you use, you can still fall back to this kind of session management.
 
-But the latency (and complexity) of tmux is annoying and I finally took some
-time to evaluate the session management capabilities of
+But the draw screen latency (and complexity) of tmux is annoying and I finally
+took some time to evaluate the session management capabilities of
 [Wezterm](https://github.com/wez/wezterm) (my currently favorite terminal
 emulator, which you configure with Lua!) called
 "[workspaces](https://wezfurlong.org/wezterm/recipes/workspaces.html)", to see
