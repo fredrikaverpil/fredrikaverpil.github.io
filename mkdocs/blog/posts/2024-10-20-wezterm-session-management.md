@@ -100,8 +100,9 @@ term.
 ![Wezterm tabs](/static/wezterm/wezterm_tabs.png)
 
 I primarily use workspaces with Wezterm now, but it's also convenient to have
-tabs around. I've created my own workflow here which entails adding the
-following config to `wezterm.lua`, which is heavily inspired by
+tabs around (can be used without workspaces). I have a custom setup which
+entails adding the following config to `wezterm.lua`, which is heavily inspired
+by
 [aaronlifton's wezterm.lua config](https://github.com/aaronlifton/.config/blob/main/.config/wezterm/wezterm.lua).
 
 So, when hitting `Cmd+T`, a new tab shows and is prefixed by a number. Tabs can
