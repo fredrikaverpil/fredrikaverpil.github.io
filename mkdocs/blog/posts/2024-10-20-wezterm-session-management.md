@@ -157,3 +157,31 @@ then be selected by hitting `Cmd+[number]`.
     ```
 
     Full `wezterm.lua` source [here](https://github.com/fredrikaverpil/dotfiles/blob/main/wezterm.lua).
+
+## Conclusion
+
+The benefit of having sessions management built into the terminal emulator
+itself provides quicker feedback and less complexity overall. But this approach
+is a lot more dependent on which terminal emulator you're using and what
+capabilities are available. Tmux with sesh is a great solution to fall back on,
+if e.g. trying out another terminal emulator.
+
+There are also other ways to jump between projects from _within_ Neovim, such as
+with
+[telescope-project.nvim](https://github.com/nvim-telescope/telescope-project.nvim),
+but these kinds of tools rarely solve the problem of supporting e.g.
+[direnv](https://direnv.net/) or
+[pkgx](https://pkgx.sh/)/[asdf](https://asdf-vm.com/), which are tools that use
+shell integration, and executes when you enter a folder (i.e. switching
+sessions). To make such tooling work well, you need to keep track of what your
+Neovim plugins are doing and which ones need special treatment to play well with
+this kind of behavior. I tried this setup out
+[in this PR](https://github.com/fredrikaverpil/dotfiles/pull/160) at one point,
+but I didn't like the added complexity which I have to maintain.
+
+I'm delighted to have a terminal emulator which is configurable with the same
+language as Neovim itself, as this makes configuring a lot more approachable
+than e.g. a yaml-configured terminal. But I'm also very curious on
+[Ghostty](https://mitchellh.com/ghostty), which seems to be around the corner
+from being publicly released, and what sessions management capabilities it may
+bring.
