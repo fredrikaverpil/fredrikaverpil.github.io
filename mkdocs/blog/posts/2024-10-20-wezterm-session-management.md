@@ -94,6 +94,10 @@ goes into my dotfiles repository and starts up Neovim. Using a hotkey
 
     Full `wezterm.lua` source [here](https://github.com/fredrikaverpil/dotfiles/blob/main/wezterm.lua).
 
+Be sure to visit the
+[Workspaces/sessions](https://wezfurlong.org/wezterm/recipes/workspaces.html)
+docs for further reading on the different commands at your disposal and recipes.
+
 ## Bonus: tabs
 
 ![Wezterm tabs](/static/wezterm/wezterm_tabs.png)
