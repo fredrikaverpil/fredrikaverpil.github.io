@@ -65,6 +65,11 @@ to jump between workspaces, or I can use `Ctrl+Shift+[` or `Ctrl+Shift+]` to
 jump between them more quickly. If I want to view only the currently opened
 workspaces, I can use `Ctrl+Shift+t`.
 
+The only thing I'm a little wary about is how wezterm plugins are just read on
+the fly from the Internet like this. I might vendor the
+`smart_workspace_switcher.wezterm` project into my own dotfiles in the long
+term.
+
 I've also set up a custom workspace which is loaded on Wezterm startup, which
 goes into my dotfiles repository and starts up Neovim. Using a hotkey
 `Ctrl+Shift+d` I can also always jump directly to this workspace.
@@ -88,16 +93,6 @@ goes into my dotfiles repository and starts up Neovim. Using a hotkey
     ```
 
     Full `wezterm.lua` source [here](https://github.com/fredrikaverpil/dotfiles/blob/main/wezterm.lua).
-
-This is such a breath of fresh air, not having to use tmux for session
-management. Wezterm also comes out of the box with ability to split the terminal
-horizontally or vertically and most of the features you would miss from leaving
-tmux. Hit `Ctrl+Shift+P` to bring up the command palette and explore.
-
-The only thing I'm a little wary about is how wezterm plugins are just read on
-the fly from the Internet like this. I might vendor the
-`smart_workspace_switcher.wezterm` project into my own dotfiles in the long
-term.
 
 ## Bonus: tabs
 
@@ -179,9 +174,15 @@ this kind of behavior. I tried this setup out
 [in this PR](https://github.com/fredrikaverpil/dotfiles/pull/160) at one point,
 but I didn't like the added complexity which I have to maintain.
 
-I'm delighted to have a terminal emulator which is configurable with the same
-language as Neovim itself, as this makes configuring a lot more approachable
-than e.g. a yaml-configured terminal. But I'm also very curious on
-[Ghostty](https://mitchellh.com/ghostty), which seems to be around the corner
-from being publicly released, and what sessions management capabilities it may
-bring.
+On leaving tmux behind, Wezterm comes out of the box with the notion of windows
+and panes, the ability to split horizontally or vertically and most of the
+features I would've missed from leaving tmux (although I do most of these things
+inside Neovim instead). Hit `Ctrl+Shift+P` to bring up the command palette and
+explore.
+
+I'm delighted to have a terminal emulator which is configurable with lua, the
+same language as Neovim itself, as this makes configuring a lot more
+customizable than e.g. a json/yaml-configured terminal. But I'm also very
+curious on [Ghostty](https://mitchellh.com/ghostty), which seems to be around
+the corner from being publicly released, and what sessions management
+capabilities it may bring.
