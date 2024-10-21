@@ -62,7 +62,8 @@ recently visited folders.
 I use `Ctrl+Shift+s` to bring up the workspace manager. Then I start typing out
 the path I want to open a new session in. Then I can hit that same command again
 to jump between workspaces, or I can use `Ctrl+Shift+[` or `Ctrl+Shift+]` to
-jump between them more quickly.
+jump between them more quickly. If I want to view only the currently opened
+workspaces, I can use `Ctrl+Shift+t`.
 
 I've also set up a custom workspace which is loaded on Wezterm startup, which
 goes into my dotfiles repository and starts up Neovim. Using a hotkey
