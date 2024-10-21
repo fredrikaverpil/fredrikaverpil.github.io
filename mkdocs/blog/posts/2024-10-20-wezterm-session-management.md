@@ -59,11 +59,36 @@ recently visited folders.
 
     Full `wezterm.lua` source [here](https://github.com/fredrikaverpil/dotfiles/blob/main/wezterm.lua).
 
-This is such a breath of fresh air, to not have to use tmux which adds
-percievable latency, especially when drawing the screen. Wezterm also comes out
-of the box with ability to split the terminal horizontally or vertically and
-most of the features you would miss from leaving tmux. Hit `Ctrl+Shift+P` to
-bring up the command palette and explore.
+I use `Ctrl+Shift+s` to bring up the workspace manager. Then I start typing out
+the path I want to open a new session in. Then I can hit that same command again
+to jump between workspaces, or I can use `Ctrl+Shift+[` or `Ctrl+Shift+]` to
+jump between them more quickly.
+
+I've also set up a custom workspace which is loaded on Wezterm startup, which
+goes into my dotfiles repository and starts up Neovim. Using a hotkey
+`Ctrl+Shift+d` I can also always jump directly to this workspace.
+
+!!! example "wezterm.lua"
+
+    ```lua
+    wezterm.on("gui-startup", function(cmd)
+      local dotfiles_path = wezterm.home_dir .. "/.dotfiles"
+      local tab, build_pane, window = mux.spawn_window({
+        workspace = "dotfiles",
+        cwd = dotfiles_path,
+        args = args,
+      })
+      build_pane:send_text("nvim\n")
+      mux.set_active_workspace("dotfiles")
+    end)
+    ```
+
+    Full `wezterm.lua` source [here](https://github.com/fredrikaverpil/dotfiles/blob/main/wezterm.lua).
+
+This is such a breath of fresh air, not having to use tmux for session
+management. Wezterm also comes out of the box with ability to split the terminal
+horizontally or vertically and most of the features you would miss from leaving
+tmux. Hit `Ctrl+Shift+P` to bring up the command palette and explore.
 
 The only thing I'm a little wary about is how wezterm plugins are just read on
 the fly from the Internet like this. I might vendor the
