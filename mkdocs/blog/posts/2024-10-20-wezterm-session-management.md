@@ -71,6 +71,7 @@ goes into my dotfiles repository and starts up Neovim. Using a hotkey
 !!! example "wezterm.lua"
 
     ```lua
+    -- set up workspace to be loaded on startup of wezterm
     wezterm.on("gui-startup", function(cmd)
       local dotfiles_path = wezterm.home_dir .. "/.dotfiles"
       local tab, build_pane, window = mux.spawn_window({
@@ -81,6 +82,8 @@ goes into my dotfiles repository and starts up Neovim. Using a hotkey
       build_pane:send_text("nvim\n")
       mux.set_active_workspace("dotfiles")
     end)
+    -- set up keymap for quickly jumping to this workspace
+    table.insert(keys, { key = "d", mods = "CTRL|SHIFT", action = act.SwitchToWorkspace({ name = "dotfiles" }) })
     ```
 
     Full `wezterm.lua` source [here](https://github.com/fredrikaverpil/dotfiles/blob/main/wezterm.lua).
