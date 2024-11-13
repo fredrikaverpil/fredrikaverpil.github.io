@@ -114,6 +114,7 @@ plugins:
       authors_file: .authors.yml
   - rss:
       match_path: blog/posts/.*
+      abstract_chars_count: -1  # include entire post in rss, for rss readers
       date_from_meta:
         as_creation: date
       categories:
