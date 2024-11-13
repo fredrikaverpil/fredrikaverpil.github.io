@@ -99,6 +99,7 @@ plugins:
   - search # must be re-added when plugins are specified
   - tags: # must be defined before the "blog" plugin
       tags_file: tags.md
+  # WARNING: comment out social cards before running 'mkdocs build' locally, to avoid cairo issues...
   - social:
       cards: true
   # WARNING: the 'meta' plugin is an insiders-only feature
