@@ -90,6 +90,9 @@ extra:
   # google search console verification, see overrides
   google_site_verification: 'gXcJysapgO5NIymnJqWVQXMp3KtnsJ6_A3zJHLdDuXo'
 
+exclude_docs: |
+  !.well-known
+
 plugins:
   # NOTE: all plugins must be defined in one and the same yml file
 
@@ -100,8 +103,8 @@ plugins:
   - tags: # must be defined before the "blog" plugin
       tags_file: tags.md
   # WARNING: comment out social cards before running 'mkdocs build' locally, to avoid cairo issues...
-  - social:
-      cards: true
+  # - social:
+  #     cards: true
   # WARNING: the 'meta' plugin is an insiders-only feature
   # - meta # must be defined before the "blog" plugin
   - blog:
