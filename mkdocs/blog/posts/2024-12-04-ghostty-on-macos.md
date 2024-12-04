@@ -26,8 +26,9 @@ Therefore, the terminal is my workhorse and I'm a little picky about what I
 need/want.
 
 Ghostty is really snappy. However, I can't really tell a difference in
-snappiness from Kitty or Wezterm (when Wezterm is set to `max_fps = 120`) during
-daily work.
+snappiness from [Kitty](https://github.com/kovidgoyal/kitty) or
+[Wezterm](https://github.com/wez/wezterm) (when Wezterm is set to
+`max_fps = 120`) during daily work.
 
 It's very easy to configure the editor and enable e.g. opacity, background blur
 and make that look really flashy (hint, hint for all nerdy YouTubers out there).
@@ -37,11 +38,12 @@ Right now, it will just update whenever there are new commits in the main branch
 but in the future, I hope there will be some sort of release notes directly in
 this notification.
 
-It's got native macOS title bars that you can customize, but hiding the title
-bar comes at a cost; it will disable the ability to use tabs which is really the
+It's got a native macOS title bar that you can customize. Hiding the title bar
+comes at a cost; it will disable the ability to use tabs which is really the
 only way to efficiently jump between multiple projects (other than using e.g.
 [tmux](https://github.com/tmux/tmux) or
-[zellij](https://github.com/zellij-org/zellij)).
+[zellij](https://github.com/zellij-org/zellij)). However, you can integrate the
+tabs into the title bar. Slightly difficult to illustrate in text form.
 
 I'm not sure exactly what causes it, but fonts render thicker for me in Kitty. I
 can't figure out why this is happening, but they look just right in Ghostty (and
