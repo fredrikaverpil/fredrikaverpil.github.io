@@ -6,7 +6,6 @@ authors:
 comments: true
 tags:
   - terminal
-  - ghostty
 ---
 
 # Ghostty on macOS
@@ -39,7 +38,7 @@ this notification.
 
 It's got native macOS title bars that you can customize, but hiding the title
 bar comes at a cost; it will disable the ability to use tabs which is really the
-only way to manage sessions (other than using e.g.
+only way to efficiently jump between multiple projects (other than using e.g.
 [tmux](https://github.com/tmux/tmux) or
 [zellij](https://github.com/zellij-org/zellij).
 
@@ -102,32 +101,42 @@ end
 
 I wrote a blog post on
 [Wezterm's session management](https://fredrikaverpil.github.io/blog/2024/10/20/session-management-in-wezterm-without-tmux/)
-and why I prefer to not use tmux as session manager. But in short, I get
-slightly annoyed by the apparent screen drawing latency of tmux and I also feel
-keyboard input can sometimes be affected. With Kitty I use a custom tab setup,
-which is kind of nice too. But ideally, I would like to achieve some sort of
-hybrid between these two approaches:
+and why I prefer to not use tmux as session manager. In short, I get slightly
+annoyed by the apparent screen drawing latency of tmux and I also feel keyboard
+input can sometimes be affected. With Kitty I use a custom tab setup, which is
+kind of nice too. All of this stems from me having used tmux in the past and I
+really like having sessions and windows/tabs as a way to navigate projects.
+
+But ideally, I would like to achieve some sort of hybrid between what I have
+today in Wezterm and Kitty (but in Ghostty):
 
 - Show the different sessions at the top of my terminal window, where each
   session is the `$cwd`, which is in my case representative of a git project
   name.
-- Quickly move between the projects using hotkeys such as `<C-S-[>` and
-  `<C-S-]>` and `Cmd-1..0`.
+- Within a session, have the ability to branch out into tabs, so I can have
+  multiple tabs when I'm in a certain project context.
+- Quickly move between the sessions using hotkeys such as `Ctrl + Shift + [` and
+  `Ctrl + Shift + ]`. Move between tabs with `Cmd + 1..0`.
 - Natively hit a keymap which will bring up a
   [zoxide](https://github.com/ajeetdsouza/zoxide)-powered folder/project
   selector, which will upon selection execute Neovim in a new tab.
 
-With Ghostty, I get all of this except the last part with a zoxide-powered
-project selector. Instead I have to hit `<Cmd-t` to create a new tab and then
-type in `z someproj` or `zi someproj` to select a project. Then I have to hit
-enter and finally execute `nvim`.
+With Wezterm, I've got this all working except the first point on showing all
+active sessions at the top of the terminal window.
 
-### Smear cursor / cursor trail
+With Ghostty, I get most of this working, except being able to branch out into
+tabs, as I already use tabs instead of sessions. What I really miss though, is
+the last part with a zoxide-powered project selector. Instead I have to hit
+`Cmd + t` to create a new tab and then type in `z someproj` or `zi someproj` to
+select a project. Then I have to hit enter and finally execute `nvim`. It's
+okay, but this is something I might want to look into.
 
-Although a gimmick, I kind of like Kitty's and Neovide's built in cursor smear
-(called `cursor_trail` in Kitty) which adds a neat effect when the cursor darts
-around in the editor. I actually miss it in Ghostty. Of course, I forget I don't
-have it after about 10 seconds...
+### Cursor trail
+
+Although a gimmick, I kind of like Kitty's and Neovide's built in cursor
+trail/smear (called `cursor_trail` in Kitty) which adds a neat effect when the
+cursor darts around in the editor. I actually miss it in Ghostty. Of course, I
+forget I don't have it after about 10 seconds...
 
 ## Issues
 
