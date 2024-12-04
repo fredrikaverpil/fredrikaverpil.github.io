@@ -9,7 +9,7 @@ tags:
   - ghostty
 ---
 
-# Ghostty on macOS 👻 ❤️ 
+# Ghostty on macOS
 
 ![Ghostty](/static/ghostty/ghostty-beta.png)
 
