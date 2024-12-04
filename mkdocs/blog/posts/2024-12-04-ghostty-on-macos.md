@@ -124,6 +124,8 @@ today in Wezterm and Kitty (but in Ghostty):
 With Wezterm, I've got this all working except the first point on showing all
 active sessions at the top of the terminal window.
 
+With Kitty, I have only achieved having tabs with the mentioned keymaps.
+
 With Ghostty, I get most of this working, except being able to branch out into
 tabs, as I already use tabs instead of sessions. What I really miss though, is
 the last part with a zoxide-powered project selector. Instead I have to hit
