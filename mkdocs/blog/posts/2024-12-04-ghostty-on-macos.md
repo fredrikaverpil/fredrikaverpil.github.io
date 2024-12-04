@@ -119,7 +119,7 @@ today in Wezterm and Kitty (but in Ghostty):
   `Ctrl + Shift + ]`. Move between tabs with `Cmd + 1..0`.
 - Natively hit a keymap which will bring up a
   [zoxide](https://github.com/ajeetdsouza/zoxide)-powered folder/project
-  selector, which will upon selection execute Neovim in a new tab.
+  selector, which will upon selection execute Neovim in a new session.
 
 With Wezterm, I've got this all working except the first point on showing all
 active sessions at the top of the terminal window.
