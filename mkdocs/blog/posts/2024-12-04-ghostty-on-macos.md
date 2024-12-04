@@ -125,8 +125,12 @@ today in Wezterm and Kitty (but in Ghostty):
 With Wezterm, I've got this all working except the first point on showing all
 active sessions at the top of the terminal window.
 
-With Kitty, I have only achieved having tabs with the mentioned keymaps. It does
-not seem to provide sessions management out of the box.
+With Kitty, I have only achieved having tabs with the mentioned keymaps, but
+also haven't spent a great time digging into this. It does not seem to provide
+sessions management out of the box.
+[Kittens](https://sw.kovidgoyal.net/kitty/kittens_intro/) are implied to perhaps
+enable some sort of sessions management
+[here](https://github.com/kovidgoyal/kitty/discussions/3190).
 
 With Ghostty, I get most of this working, except being able to branch out into
 tabs, as I already use tabs instead of sessions. What I really miss though, is
