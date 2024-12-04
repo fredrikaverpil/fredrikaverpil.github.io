@@ -13,20 +13,21 @@ tags:
 ![Ghostty](/static/ghostty/ghostty-beta.png)
 
 I got private beta access (quite late), and
-[Ghostty](https://mitchellh.com/ghostty) is probably going to be out in the
-public as v1.0 any day now. Here are my initial impressions, having used it for
-a couple of weeks on macOS.
+[Ghostty](https://mitchellh.com/ghostty) is probably going to be out in its
+first public release any day now. Here are my initial impressions, having used
+it for a couple of weeks on macOS.
 
 <!-- more -->
 
 ## What I like about Ghostty
 
-I spend most of my day in the terminal and in Neovim specifically. Therefore,
-the terminal is my workhorse and I'm a little picky on what I need/want.
+I spend most of my workday in the terminal and in Neovim specifically.
+Therefore, the terminal is my workhorse and I'm a little picky about what I
+need/want.
 
-Ghostty is really snappy. However, I can't really tell a difference in snapniess
-from Kitty or Wezterm (when Wezterm is set to `max_fps = 120`) during daily
-work.
+Ghostty is really snappy. However, I can't really tell a difference in
+snappiness from Kitty or Wezterm (when Wezterm is set to `max_fps = 120`) during
+daily work.
 
 It's very easy to configure the editor and enable e.g. opacity, background blur
 and make that look really flashy (hint, hint for all nerdy YouTubers out there).
@@ -40,26 +41,26 @@ It's got native macOS title bars that you can customize, but hiding the title
 bar comes at a cost; it will disable the ability to use tabs which is really the
 only way to efficiently jump between multiple projects (other than using e.g.
 [tmux](https://github.com/tmux/tmux) or
-[zellij](https://github.com/zellij-org/zellij).
+[zellij](https://github.com/zellij-org/zellij)).
 
 I'm not sure exactly what causes it, but fonts render thicker for me in Kitty. I
 can't figure out why this is happening, but they look just right in Ghostty (and
 Wezterm for that matter).
 
-Most common colorschemes just work out of the box too (I think there's 300+
+Most common colorschemes just work out of the box too (I think there are 300+
 bundled ones), so if you're a `tokyonight` or `catppuccin` fan, you're of course
 golden. Ghostty uses
 [iTerm2 themes](https://github.com/mbadolato/iTerm2-Color-Schemes).
 
 Ghostty also sports a number of features which I haven't used yet or had time to
-look into yet, like custom shaders and ability to render images in the terminal.
-But I would like to look into if I can get inline images in Obsidian markdown
-files to render when I open them up in Neovim (using
+look into yet, like custom shaders and the ability to render images in the
+terminal. But I would like to look into if I can get inline images in Obsidian
+markdown files to render when I open them up in Neovim (using
 [obsidian.nvim](https://github.com/epwalsh/obsidian.nvim) and
-[render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
-). I also want to make [presenterm](https://github.com/mfontanini/presenterm)
-show high-resolution images, just like how Kitty does it. I'm sure it just comes
-down to a configuration setting, as both Ghostty and Kitty uses the
+[render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)).
+I also want to make [presenterm](https://github.com/mfontanini/presenterm) show
+high-resolution images, just like how Kitty does it. I'm sure it just comes down
+to a configuration setting, as both Ghostty and Kitty use the
 [Kitty graphics protocol](https://sw.kovidgoyal.net/kitty/graphics-protocol/).
 And finally, Ghostty is supposed to be able to switch color themes based on OS
 dark/light settings. Something I have until summer to figure out. 😉
@@ -101,7 +102,7 @@ end
 
 I wrote a blog post on
 [Wezterm's session management](https://fredrikaverpil.github.io/blog/2024/10/20/session-management-in-wezterm-without-tmux/)
-and why I prefer to not use tmux as session manager. In short, I get slightly
+and why I prefer to not use tmux as a session manager. In short, I get slightly
 annoyed by the apparent screen drawing latency of tmux and I also feel keyboard
 input can sometimes be affected. With Kitty I use a custom tab setup, which is
 kind of nice too. All of this stems from me having used tmux in the past and I
@@ -127,21 +128,21 @@ active sessions at the top of the terminal window.
 
 With Kitty, I have only achieved having tabs with the mentioned keymaps, but
 also haven't spent a great time digging into this. It does not seem to provide
-sessions management out of the box.
+session management out of the box.
 [Kittens](https://sw.kovidgoyal.net/kitty/kittens_intro/) are implied to perhaps
-enable some sort of sessions management
+enable some sort of session management
 [here](https://github.com/kovidgoyal/kitty/discussions/3190).
 
 With Ghostty, I get most of this working, except being able to branch out into
 tabs, as I already use tabs instead of sessions. What I really miss though, is
-the last part with a zoxide-powered project selector. Instead I have to hit
+the last part with a zoxide-powered project selector. Instead, I have to hit
 `Cmd + t` to create a new tab and then type in `z someproj` or `zi someproj` to
 select a project. Then I have to hit enter and finally execute `nvim`. It's
 okay, but this is something I might want to look into.
 
 ### Cursor trail
 
-Although a gimmick, I kind of like Kitty's and Neovide's built in cursor
+Although a gimmick, I kind of like Kitty's and Neovide's built-in cursor
 trail/smear (called `cursor_trail` in Kitty) which adds a neat effect when the
 cursor darts around in the editor. I actually miss it in Ghostty. Of course, I
 forget I don't have it after about 10 seconds...
@@ -149,35 +150,35 @@ forget I don't have it after about 10 seconds...
 ## Issues
 
 It's early days (it's not even out in the public yet), and I'm sure any issues
-will be ironed out over time by [@michellh](https://github.com/mitchellh), the
+will be ironed out over time by [@mitchellh](https://github.com/mitchellh), the
 community and other projects used in tandem with Ghostty.
 
 ### Tabs and Aerospace
 
 Since I'm on macOS and using the
 [Aerospace](https://github.com/nikitabobko/AeroSpace) tiling window manager,
-I've noticed that Ghostty's tabs doesn't work well, as they are treated as
-windows and offsets the whole window when adding new tabs:
-[nikitabobk/Aoerospace#68](https://github.com/nikitabobko/AeroSpace/issues/68).
+I've noticed that Ghostty's tabs don't work well, as they are treated as windows
+and offset the whole window when adding new tabs:
+[nikitabobko/Aerospace#68](https://github.com/nikitabobko/AeroSpace/issues/68).
 
 However, I've found a workaround, and that is to make Ghostty into a floating
 window (like
 [this](https://github.com/fredrikaverpil/dotfiles/blob/72f92cc92a98d19227c161e64a2843966ce99254/aerospace.toml#L213-L224)).
 It works for me, but this means I can't use the tiling behaviors of Aerospace
-with the workspace the Ghostty window resides in, which I'd ideally would like
-to do in the long term.
+with the workspace the Ghostty window resides in, which I'd ideally like to do
+in the long term.
 
 ### Lualine jumping around
 
-Neovim is grid based and depending on how you scale the Ghostty window, you
+Neovim is grid-based and depending on how you scale the Ghostty window, you
 might see padding around the window as there is not room for a full character to
 be rendered. This becomes more apparent with
 [lualine](https://github.com/nvim-lualine/lualine.nvim), which ideally would be
 tightly snapped to the bottom of the terminal window.
 
-I'm not sure how Kitty does it, but manages much better when you change font
-size or resize the terminal window, with avoiding rendering empty
-spacing/padding below the lualine.
+I'm not sure how Kitty does it, but it manages much better when you change font
+size or resize the terminal window, avoiding rendering empty spacing/padding
+below the lualine.
 
 This is an extremely minor annoyance and only affects the aesthetics.
 
