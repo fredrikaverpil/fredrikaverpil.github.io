@@ -122,12 +122,12 @@ project selector. Instead I have to hit `<Cmd-t` to create a new tab and then
 type in `z someproj` or `zi someproj` to select a project. Then I have to hit
 enter and finally execute `nvim`.
 
-### Smear cursor
+### Smear cursor / cursor trail
 
 Although a gimmick, I kind of like Kitty's and Neovide's built in cursor smear
-which adds a neat effect when the cursor darts around in the editor. I actually
-miss it in Ghostty. Of course, I forget I don't have it after about 10
-seconds...
+(called `cursor_trail` in Kitty) which adds a neat effect when the cursor darts
+around in the editor. I actually miss it in Ghostty. Of course, I forget I don't
+have it after about 10 seconds...
 
 ## Issues
 
