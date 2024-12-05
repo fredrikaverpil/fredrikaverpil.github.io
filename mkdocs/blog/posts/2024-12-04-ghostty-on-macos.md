@@ -88,14 +88,14 @@ My configuration is available
 
 I've also made Ghostty show the current working directory of tab titles, when I
 have Neovim running in the tab. I've achieved this by adding the following to my
-Neovim Lua configuration:
+Neovim Lua configuration (but unfortunately I don't know how to permanently set
+the tab title to the `$cwd`:
 
 ```lua
 if vim.fn.getenv("TERM_PROGRAM") == "ghostty" then
   vim.opt.title = true
   vim.opt.titlestring = "%{fnamemodify(getcwd(), ':t')}"
 end
-
 ```
 
 ## What I miss from other terminal emulators
