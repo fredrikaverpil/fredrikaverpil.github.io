@@ -8,6 +8,12 @@
 # for social cards, see
 # https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards
 brew install cairo freetype libffi libjpeg libpng zlib
+
+# install uv
+brew install uv
+
+# install dependencies into virtual environment
+uv sync
 ```
 
 > [!Note]
@@ -15,11 +21,6 @@ brew install cairo freetype libffi libjpeg libpng zlib
 > The
 > [troubleshooting docs](https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/?h=brew#cairo-graphics)
 > outlines solutions to issues.
-
-```bash
-brew install uv
-uv sync
-```
 
 ### 🍽️ Serve locally
 
