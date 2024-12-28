@@ -1,0 +1,13 @@
+[project]
+name = "fredrikaverpil-github-com"
+version = "0.1.0"
+description = "Personal website"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "mkdocs-material==9.5.47",
+  "mkdocs-rss-plugin==1.15.0",
+  "mkdocs-redirects==1.2.2",
+  "pillow==10.4.0",
+  "cairosvg==2.7.1",
+]
