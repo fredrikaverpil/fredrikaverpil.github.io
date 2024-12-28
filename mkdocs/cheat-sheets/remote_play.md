@@ -26,6 +26,10 @@ complexity and overhead by using a more basic communication method, which helps
 minimize packet loss and network latency between the TV and the console. This
 does come at a cost, which is higher energy consumption.
 
+Huge thanks to [u/NBL-83](https://www.reddit.com/user/NPL-83/) who originally
+posted about all this over at
+[r/remoteplay](https://www.reddit.com/r/remoteplay/comments/te9ut1/playstation_remoteplay_stops_hangs_every_30/).
+
 ### Apple device network pings
 
 iOS has a tendency to exhibit an intermittent increase in ping on 5 GHz networks
