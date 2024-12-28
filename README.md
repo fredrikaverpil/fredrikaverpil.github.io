@@ -15,13 +15,14 @@ brew install cairo freetype libffi libjpeg libpng zlib
 > outlines solutions to issues.
 
 ```bash
-pip install -r requirements.txt
+brew install uv
+uv sync
 ```
 
 ### 🍽️ Serve locally
 
 ```bash
-mkdocs serve --dirtyreload
+uv run mkdocs serve --dirtyreload
 ```
 
 ### ✨ Useful stuff

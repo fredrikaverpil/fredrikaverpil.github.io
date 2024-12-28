@@ -33,32 +33,28 @@ jobs:
       # for social cards
       - run: sudo apt-get install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev
 
-      - uses: actions/setup-python@v5
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
         with:
-          python-version-file: .python-version
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
 
-      - uses: actions/cache@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          key: ${{ github.ref }}
-          path: |
-            ~/.cache/pip
-            .cache
-
-      - name: Install Mkdocs-Material-Insiders
-        run: pip install --upgrade \
-          git+https://${{ secrets.MKDOCS_MATERIAL_INSIDERS }}@github.com/squidfunk/mkdocs-material-insiders.git \
-          mkdocs-rss-plugin \
-          mkdocs-redirects \
-          pillow cairosvg # for social cards
-        if: ${{ env.USE_MKDOCS_MATERIAL_INSIDERS == 'true' }}
+          python-version-file: ".python-version"
 
       - name: Install Mkdocs-Material
-        run: pip install -r requirements.txt
-        if: ${{ env.USE_MKDOCS_MATERIAL_INSIDERS == 'false' }}
+        run: uv sync
 
-      - run: pip freeze
+      - name: Install Mkdocs-Material-Insiders
+        run: |
+          uv pip uninstall mkdocs-material
+          uv pip install --upgrade git+https://${{ secrets.MKDOCS_MATERIAL_INSIDERS }}@github.com/squidfunk/mkdocs-material-insiders.git
+        if: ${{ env.USE_MKDOCS_MATERIAL_INSIDERS == 'true' }}
 
-      - run: mkdocs build
+      - name: Build
+        run: uv run mkdocs build
 
       # maintain backwards compatibility from previous RSS feed
       - run: cp site/static/rss_redirect.xml site/atom.xml
