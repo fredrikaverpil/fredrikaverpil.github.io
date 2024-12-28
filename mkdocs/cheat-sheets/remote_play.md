@@ -16,25 +16,31 @@ icon: simple/playstation
 There are situations where the TV loses a packet every 20-30 pings. On each
 packet loss, Remote Play hangs for a second.
 
-Disconnecting the HDMI cable between TV and PS5 or just disconnecting the TV
-from the network is a workaround for the problem.
+Disconnecting the HDMI cable between the TV and the PS5 is a workaround for the
+problem. This prevents any potential interference between the TV's HDMI-CEC
+control signals and the PS5's network communication.
 
-To permanently fix this issue, activate the "Simple IP Control" in the TV's
-network settings. This will cause the TV's networking to be always-on instead of
-hibernating and pinging for activity, which will also consume more energy.
+On Sony BRAVIA TVs, you can permanently fix this issue by enabling the "Simple
+IP Protocol" under network settings. The Simple IP Protocol reduces network
+complexity and overhead by using a more basic communication method, which helps
+minimize packet loss and network latency between the TV and the console. This
+does come at a cost, which is higher energy consumption.
 
 ### Apple device network pings
 
-iOS has a tendency to exhibit an intermittent increase in ping on 5ghz networks
-if AirDrop is on and other ios devices are nearby. This negatively affects all
-zero framebuffer applications including xbox remote play and the ps remote play
-app. Therefore, disable AirDrop on your iOS device you are using for Remote
-Play.
+iOS has a tendency to exhibit an intermittent increase in ping on 5 GHz networks
+if AirDrop is enabled and other ios devices are nearby. This negatively affects
+all zero-framebuffer applications including the Xbox Remote Play and PS Remote
+Play apps. Therefore, disable AirDrop on your iOS device during Remote Play
+sessions.
 
-## PS button via 3rd party app
+## Mapping the PS5 touchpad
 
-- https://streamingdv.com/shop-list-ns.html
-- iOS download:
-  https://apps.apple.com/my/app/mirrorplay-remote-streaming/id1638586503
-- Android download:
-  https://play.google.com/store/apps/details?id=psplay.grill.com
+[Florian Grill](https://grill2010.github.io) has developed an excellent
+alternative to the official Sony Remote Play app, in which you can map the
+touchpad to a gamepad button:
+
+- [MirrorPlay](https://apps.apple.com/my/app/mirrorplay-remote-streaming/id1638586503)
+  (iOS, iPadOS)
+- [PXPlay](https://play.google.com/store/apps/details?id=psplay.grill.com)
+  (Android)
