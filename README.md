@@ -10,7 +10,9 @@
 brew install cairo freetype libffi libjpeg libpng zlib
 ```
 
-> [!Note] The
+> [!Note]
+>
+> The
 > [troubleshooting docs](https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/?h=brew#cairo-graphics)
 > outlines solutions to issues.
 
