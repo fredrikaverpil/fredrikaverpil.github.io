@@ -34,7 +34,7 @@ uv sync --upgrade
 uv run mkdocs serve --dirtyreload
 ```
 
-### ✨ Useful stuff
+## ✨ Useful stuff
 
 - https://squidfunk.github.io/mkdocs-material/reference/
 - https://facelessuser.github.io/pymdown-extensions/
