@@ -22,6 +22,12 @@ uv sync
 > [troubleshooting docs](https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/?h=brew#cairo-graphics)
 > outlines solutions to issues.
 
+### 💄 Update dependencies
+
+```bash
+uv sync --upgrade
+```
+
 ### 🍽️ Serve locally
 
 ```bash
