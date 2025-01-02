@@ -120,13 +120,8 @@ Wezterm for that matter).
 Most common colorschemes just work out of the box too (I think there are 300+
 bundled ones), so if you're a `tokyonight` or `catppuccin` fan, you're of course
 golden. Ghostty uses
-[iTerm2 themes](https://github.com/mbadolato/iTerm2-Color-Schemes).
-
-!!! tip "List all bundled themes"
-
-    ```bash
-    ghostty +list-themes
-    ```
+[iTerm2 themes](https://github.com/mbadolato/iTerm2-Color-Schemes). There's a
+pretty fancy theme viewer you can launch with `ghostty +list-themes`.
 
 Ghostty also sports a number of features which I haven't used yet or had time to
 look into yet, like custom shaders and the ability to render images in the
@@ -136,7 +131,7 @@ markdown files to render when I open them up in Neovim (using
 [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)).
 I also want to make [presenterm](https://github.com/mfontanini/presenterm) show
 high-resolution images, just like how Kitty does it (update: enabled in
-[commit 5e651f6 ](https://github.com/mfontanini/presenterm/commit/5e651f636037c658e21c3cea8b7cf6b7b6ccae25)).
+[commit 5e651f6](https://github.com/mfontanini/presenterm/commit/5e651f636037c658e21c3cea8b7cf6b7b6ccae25)).
 Both Ghostty and Kitty use the
 [Kitty graphics protocol](https://sw.kovidgoyal.net/kitty/graphics-protocol/),
 which makes this possible. And finally, Ghostty is supposed to be able to switch
@@ -145,11 +140,16 @@ figure out. 😉
 
 !!! example "Theme follows system"
 
+    Update: this is how you can make Ghostty follow the macOS system theme.
+
     ```ini
     theme = light:rose-pine-dawn,dark:rose-pine
     ```
 
     For more details, see the [`theme` docs](https://ghostty.org/docs/config/reference#theme).
+
+    For Neovim to also switch themes, you may want to look into
+    [f-person/auto-dark-mode.nvim](https://github.com/f-person/auto-dark-mode.nvim).
 
 ## What I miss from other terminal emulators
 
