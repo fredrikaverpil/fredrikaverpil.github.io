@@ -33,8 +33,9 @@ are my initial impressions, having used it for a couple of weeks on macOS.
 ## Configuration
 
 Ghostty is configured with an ini-like file, kind of like how you configure
-Kitty. Throughout this blog post, I'll add example configuration snippets. This
-is how I like to browse through the available configuration options:
+[Kitty](https://github.com/kovidgoyal/kitty) . Throughout this blog post, I'll
+add example configuration snippets. This is how I like to browse through the
+available configuration options:
 
 ```bash
 ghostty +show-config --default --docs | nvim
@@ -42,8 +43,8 @@ ghostty +show-config --default --docs | nvim
 
 I've placed my configuration file in `~/.config/ghostty/config` and to enable
 syntax highlighting, you can grab the files in
-`/Applications/Ghostty.app/Contents/Resources/vim/vimfiles` and place these in
-your Neovim installation. You can see how I've placed them
+`/Applications/Ghostty.app/Contents/Resources/nvim/site` and place these in your
+Neovim installation. You can see how I've placed them
 [here](https://github.com/fredrikaverpil/dotfiles/tree/main/nvim-fredrik) for
 reference.
 
@@ -69,9 +70,8 @@ Therefore, the terminal is my workhorse and I'm a little picky about what I
 need/want.
 
 Ghostty is really snappy. However, I can't really tell a difference in
-snappiness from [Kitty](https://github.com/kovidgoyal/kitty) or
-[Wezterm](https://github.com/wez/wezterm) (when Wezterm is set to
-`max_fps = 120`) during daily work.
+snappiness from Kitty or [Wezterm](https://github.com/wez/wezterm) (when Wezterm
+is set to `max_fps = 120`) during daily work.
 
 It's very easy to configure the editor and enable e.g. opacity, background blur
 and make that look really flashy (hint, hint for all nerdy YouTubers out there
