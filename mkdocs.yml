@@ -62,7 +62,7 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue gray
+      primary: blue grey
       accent: deep orange
       toggle:
         icon: material/weather-sunny
