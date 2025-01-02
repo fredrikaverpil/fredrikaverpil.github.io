@@ -62,8 +62,8 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: black
-      accent: teal
+      primary: teal
+      accent: deep orange
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
