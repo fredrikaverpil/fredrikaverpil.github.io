@@ -22,6 +22,7 @@ are my initial impressions, having used it for a couple of weeks on macOS.
     This post has been amended with the following details since it was
     originally posted:
 
+    - Updated path to Ghostty.app's vim files.
     - Release tracks; stable vs tip.
     - Example config for tabs integration into title bar.
     - Example command to list themes.
