@@ -146,7 +146,8 @@ figure out. 🌧️☔
     theme = light:rose-pine-dawn,dark:rose-pine
     ```
 
-    For more details, see the [`theme` docs](https://ghostty.org/docs/config/reference#theme).
+    You can also provide absolute paths to local theme files. For more details,
+    see the [`theme` docs](https://ghostty.org/docs/config/reference#theme).
 
     For Neovim to also switch themes, you may want to look into
     [f-person/auto-dark-mode.nvim](https://github.com/f-person/auto-dark-mode.nvim).
