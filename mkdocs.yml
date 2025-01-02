@@ -54,7 +54,7 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
-      accent: pink
+      accent: deep orange
       toggle:
         icon: material/weather-night
         name: Switch to system preference
