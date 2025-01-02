@@ -49,7 +49,7 @@ Neovim installation. You can see how I've placed them
 [here](https://github.com/fredrikaverpil/dotfiles/tree/main/nvim-fredrik) for
 reference.
 
-My configuration is available
+My Ghostty configuration is available
 [here](https://github.com/fredrikaverpil/dotfiles/blob/main/ghostty.conf).
 
 I've also made Ghostty show the current working directory of tab titles, when I
