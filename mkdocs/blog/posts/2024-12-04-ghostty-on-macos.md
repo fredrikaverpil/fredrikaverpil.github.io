@@ -136,7 +136,7 @@ Both Ghostty and Kitty use the
 [Kitty graphics protocol](https://sw.kovidgoyal.net/kitty/graphics-protocol/),
 which makes this possible. And finally, Ghostty is supposed to be able to switch
 color themes based on OS dark/light settings. Something I have until summer to
-figure out. 😉
+figure out. 🌧️☔
 
 !!! example "Theme follows system"
 
