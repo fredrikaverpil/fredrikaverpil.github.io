@@ -28,6 +28,7 @@ are my initial impressions, having used it for a couple of weeks on macOS.
     - Example command to list themes.
     - Example command for setting light vs dark theme which will follow system.
     - Link to [tmux control mode](https://github.com/ghostty-org/ghostty/issues/1935) issue.
+    - Workaround to Aerospace tabs bug.
 
 <!-- more -->
 
@@ -225,9 +226,9 @@ and offset the whole window when adding new tabs:
 However, I've found a workaround, and that is to make Ghostty into a floating
 window (like
 [this](https://github.com/fredrikaverpil/dotfiles/blob/72f92cc92a98d19227c161e64a2843966ce99254/aerospace.toml#L213-L224)).
-It works for me, but this means I can't use the tiling behaviors of Aerospace
-with the workspace the Ghostty window resides in, which I'd ideally like to do
-in the long term.
+Then, just after launching Ghostty, hit `Alt+Shift-;` to enter config mode
+followed by `f`. This will now "unfloat" the Ghostty window. Somehow, adding
+tabs now won't mess with the window manager.
 
 ### Lualine jumping around
 
