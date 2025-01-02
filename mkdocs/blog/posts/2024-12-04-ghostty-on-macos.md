@@ -14,10 +14,10 @@ tags:
 
 I got private beta access (quite late), and
 [Ghostty](https://mitchellh.com/ghostty) is probably going to be out in its
-first public release any day now. Here are my initial impressions, having used
-it for a couple of weeks on macOS.
+first public release any day now (update: it was released on 2024-12-26). Here
+are my initial impressions, having used it for a couple of weeks on macOS.
 
-!!! note "Amendments 2024-01-02"
+!!! note "Amendments 2025-01-02"
 
     This post has been amended with the following details since it was
     originally posted:
