@@ -17,60 +17,24 @@ I got private beta access (quite late), and
 first public release any day now. Here are my initial impressions, having used
 it for a couple of weeks on macOS.
 
+!!! note "Amendments 2024-01-02"
+
+    This post has been amended with the following details since it was
+    originally posted:
+
+    - Release tracks; stable vs tip.
+    - Example config for tabs integration into title bar.
+    - Example command to list themes.
+    - Example command for setting light vs dark theme which will follow system.
+    - Link to [tmux control mode](https://github.com/ghostty-org/ghostty/issues/1935) issue.
+
 <!-- more -->
-
-## What I like about Ghostty
-
-I spend most of my workday in the terminal and in Neovim specifically.
-Therefore, the terminal is my workhorse and I'm a little picky about what I
-need/want.
-
-Ghostty is really snappy. However, I can't really tell a difference in
-snappiness from [Kitty](https://github.com/kovidgoyal/kitty) or
-[Wezterm](https://github.com/wez/wezterm) (when Wezterm is set to
-`max_fps = 120`) during daily work.
-
-It's very easy to configure the editor and enable e.g. opacity, background blur
-and make that look really flashy (hint, hint for all nerdy YouTubers out there).
-
-I also like that you get a native notification about new versions of Ghostty.
-Right now, it will just update whenever there are new commits in the main branch
-but in the future, I hope there will be some sort of release notes directly in
-this notification.
-
-It's got a native macOS title bar that you can customize. Hiding the title bar
-comes at a cost; it will disable the ability to use tabs which is really the
-only way to efficiently jump between multiple projects (other than using e.g.
-[tmux](https://github.com/tmux/tmux) or
-[zellij](https://github.com/zellij-org/zellij)). However, you can integrate the
-tabs into the title bar. Slightly difficult to illustrate in text form.
-
-I'm not sure exactly what causes it, but fonts render thicker for me in Kitty. I
-can't figure out why this is happening, but they look just right in Ghostty (and
-Wezterm for that matter).
-
-Most common colorschemes just work out of the box too (I think there are 300+
-bundled ones), so if you're a `tokyonight` or `catppuccin` fan, you're of course
-golden. Ghostty uses
-[iTerm2 themes](https://github.com/mbadolato/iTerm2-Color-Schemes).
-
-Ghostty also sports a number of features which I haven't used yet or had time to
-look into yet, like custom shaders and the ability to render images in the
-terminal. But I would like to look into if I can get inline images in Obsidian
-markdown files to render when I open them up in Neovim (using
-[obsidian.nvim](https://github.com/epwalsh/obsidian.nvim) and
-[render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)).
-I also want to make [presenterm](https://github.com/mfontanini/presenterm) show
-high-resolution images, just like how Kitty does it. I'm sure it just comes down
-to a configuration setting, as both Ghostty and Kitty use the
-[Kitty graphics protocol](https://sw.kovidgoyal.net/kitty/graphics-protocol/).
-And finally, Ghostty is supposed to be able to switch color themes based on OS
-dark/light settings. Something I have until summer to figure out. 😉
 
 ## Configuration
 
 Ghostty is configured with an ini-like file, kind of like how you configure
-Kitty. This is how I like to browse through the available configuration options:
+Kitty. Throughout this blog post, I'll add example configuration snippets. This
+is how I like to browse through the available configuration options:
 
 ```bash
 ghostty +show-config --default --docs | nvim
@@ -97,6 +61,94 @@ if vim.fn.getenv("TERM_PROGRAM") == "ghostty" then
   vim.opt.titlestring = "%{fnamemodify(getcwd(), ':t')}"
 end
 ```
+
+## What I like about Ghostty
+
+I spend most of my workday in the terminal and in Neovim specifically.
+Therefore, the terminal is my workhorse and I'm a little picky about what I
+need/want.
+
+Ghostty is really snappy. However, I can't really tell a difference in
+snappiness from [Kitty](https://github.com/kovidgoyal/kitty) or
+[Wezterm](https://github.com/wez/wezterm) (when Wezterm is set to
+`max_fps = 120`) during daily work.
+
+It's very easy to configure the editor and enable e.g. opacity, background blur
+and make that look really flashy (hint, hint for all nerdy YouTubers out there
+😉).
+
+I also like that you get a native notification about new versions of Ghostty.
+Right now, it will just update whenever there are new commits in the main branch
+but in the future, I hope there will be some sort of release notes directly in
+this notification.
+
+!!! tip "Stable vs tip"
+
+    There are two release tracks. One stable and one "tip" (updates to latest
+    commit). You can download them respectively with Homebrew:
+
+    ```bash
+    # update formulae
+    brew update
+
+    # stable
+    brew install --cask ghostty
+
+    # tip
+    brew install --cask ghostty@tip
+    ```
+
+It's got a native macOS title bar that you can customize. Hiding the title bar
+comes at a cost; it will disable the ability to use tabs which is really the
+only way to efficiently jump between multiple projects (other than using e.g.
+[tmux](https://github.com/tmux/tmux) or
+[zellij](https://github.com/zellij-org/zellij)). However, you can integrate the
+tabs into the title bar, which makes the window more minimalistic.
+
+!!! example "Integrate tabs into title bar"
+
+    ```ini
+    macos-titlebar-style = tabs
+    ```
+    For more details, see the [`macos-titlebar-style` docs](https://ghostty.org/docs/config/reference#macos-titlebar-style).
+
+I'm not sure exactly what causes it, but fonts render thicker for me in Kitty. I
+can't figure out why this is happening, but they look just right in Ghostty (and
+Wezterm for that matter).
+
+Most common colorschemes just work out of the box too (I think there are 300+
+bundled ones), so if you're a `tokyonight` or `catppuccin` fan, you're of course
+golden. Ghostty uses
+[iTerm2 themes](https://github.com/mbadolato/iTerm2-Color-Schemes).
+
+!!! tip "List all bundled themes"
+
+    ```bash
+    ghostty +list-themes
+    ```
+
+Ghostty also sports a number of features which I haven't used yet or had time to
+look into yet, like custom shaders and the ability to render images in the
+terminal. But I would like to look into if I can get inline images in Obsidian
+markdown files to render when I open them up in Neovim (using
+[obsidian.nvim](https://github.com/epwalsh/obsidian.nvim) and
+[render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)).
+I also want to make [presenterm](https://github.com/mfontanini/presenterm) show
+high-resolution images, just like how Kitty does it (update: enabled in
+[commit 5e651f6 ](https://github.com/mfontanini/presenterm/commit/5e651f636037c658e21c3cea8b7cf6b7b6ccae25)).
+Both Ghostty and Kitty use the
+[Kitty graphics protocol](https://sw.kovidgoyal.net/kitty/graphics-protocol/),
+which makes this possible. And finally, Ghostty is supposed to be able to switch
+color themes based on OS dark/light settings. Something I have until summer to
+figure out. 😉
+
+!!! example "Theme follows system"
+
+    ```ini
+    theme = light:rose-pine-dawn,dark:rose-pine
+    ```
+
+    For more details, see the [`theme` docs](https://ghostty.org/docs/config/reference#theme).
 
 ## What I miss from other terminal emulators
 
@@ -135,12 +187,16 @@ session management out of the box.
 enable some sort of session management
 [here](https://github.com/kovidgoyal/kitty/discussions/3190).
 
-With Ghostty, I get most of this working, except being able to branch out into
-tabs, as I already use tabs instead of sessions. What I really miss though, is
-the last part with a zoxide-powered project selector. Instead, I have to hit
-`Cmd + t` to create a new tab and then type in `z someproj` or `zi someproj` to
-select a project. Then I have to hit enter and finally execute `nvim`. It's
-okay, but this is something I might want to look into.
+With Ghostty, I have to use tabs instead of sessions. What I really miss though,
+is having a `zoxide`-powered project selector. Instead, I have to hit `Cmd + t`
+to create a new tab and then type in `z someproj` or `zi someproj` to select a
+project. Then I have to hit enter and finally execute `nvim`. It's okay, but
+this is something I might want to look into. Or, better, the
+[tmux control mode](https://github.com/ghostty-org/ghostty/issues/1935) will
+hopefully solve this.
+
+With all this said and despite not being "perfect" for me, Ghostty still feels
+and works great.
 
 ### Cursor trail
 
