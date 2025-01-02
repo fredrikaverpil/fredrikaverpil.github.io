@@ -202,10 +202,11 @@ and works great.
 
 ### Cursor trail
 
-Although a gimmick, I kind of like Kitty's and Neovide's built-in cursor
-trail/smear (called `cursor_trail` in Kitty) which adds a neat effect when the
-cursor darts around in the editor. I actually miss it in Ghostty. Of course, I
-forget I don't have it after about 10 seconds...
+Although a gimmick, I kind of like Kitty's and
+[Neovide](https://github.com/neovide/neovide)'s built-in cursor trail/smear
+(called `cursor_trail` in Kitty) which adds a neat effect when the cursor darts
+around in the editor. I actually miss it in Ghostty. Of course, I forget I don't
+have it after about 10 seconds...
 
 ## Issues
 
