@@ -85,7 +85,7 @@ this notification.
 
 !!! tip "Stable vs tip"
 
-    There are two release tracks. One stable and one "tip" (updates to latest
+    Update: There are two release tracks. One stable and one "tip" (updates to latest
     commit). You can download them respectively with Homebrew:
 
     ```bash
