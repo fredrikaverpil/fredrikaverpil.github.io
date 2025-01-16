@@ -91,15 +91,15 @@ JsonDict: TypeAlias = dict[str, "JsonType"]
 
 ### Using uv to manage dependencies
 
-There are many tools for defining a Python project and manage dependencies and
-in Python; [setuptools](https://github.com/pypa/setuptools),
+There are many tools for defining a Python project and manage dependencies in
+Python; [setuptools](https://github.com/pypa/setuptools),
 [pip-tools](https://github.com/jazzband/pip-tools),
 [poetry](https://github.com/python-poetry/poetry),
 [pdm](https://github.com/pdm-project/pdm),
 [rye](https://github.com/astral-sh/rye)... but not until 2024, was there finally
 a tool that supplied all the necessary tooling under one umbrella for managing
 both applications and libraries, prod vs dev dependency lockfile, optional
-extras etc: [astral's uv](https://docs.astral.sh/uv/).
+extras etc: [uv](https://docs.astral.sh/uv/).
 
 ## Dates and times
 
