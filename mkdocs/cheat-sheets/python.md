@@ -137,6 +137,8 @@ TZ=UTC pytest
 
 ## Pattern matching gotchas
 
+Structural pattern matching was introduced in Python 3.10.
+
 Like with ifs and switches, you only match against one case. "Optional
 remainders" can also be used:
 
