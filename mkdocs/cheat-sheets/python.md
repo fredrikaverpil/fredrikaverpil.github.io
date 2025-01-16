@@ -91,8 +91,8 @@ JsonDict: TypeAlias = dict[str, "JsonType"]
 
 ### Using uv to manage dependencies
 
-There are many tools for managing dependencies in Python;
-[setuptools](https://github.com/pypa/setuptools),
+There are many tools for defining a Python project and manage dependencies and
+in Python; [setuptools](https://github.com/pypa/setuptools),
 [pip-tools](https://github.com/jazzband/pip-tools),
 [poetry](https://github.com/python-poetry/poetry),
 [pdm](https://github.com/pdm-project/pdm),
