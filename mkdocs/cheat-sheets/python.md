@@ -96,6 +96,7 @@ Python; [setuptools](https://github.com/pypa/setuptools),
 [pip-tools](https://github.com/jazzband/pip-tools),
 [poetry](https://github.com/python-poetry/poetry),
 [pdm](https://github.com/pdm-project/pdm),
+[hatch](https://github.com/pypa/hatch),
 [rye](https://github.com/astral-sh/rye)... but not until 2024, was there finally
 a tool that supplied all the necessary tooling under one umbrella for managing
 both applications and libraries, prod vs dev dependency lockfile, optional
