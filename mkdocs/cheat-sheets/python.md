@@ -2,7 +2,7 @@
 date: 2022-12-17
 draft: false
 tags:
-- python
+  - python
 title: Python
 icon: simple/python
 ---
@@ -20,7 +20,6 @@ class MyError(Exception):
         super().__init__(self.message)
 ```
 
-
 ### Was something raised?
 
 ```python
@@ -30,7 +29,10 @@ def exception_was_raised():
 
 ### Exception hooks
 
-You can register [custom exception hooks](https://docs.python.org/3/library/sys.html#sys.excepthook), which can run code whenever an exception is raised, and just before the script will exit.
+You can register
+[custom exception hooks](https://docs.python.org/3/library/sys.html#sys.excepthook),
+which can run code whenever an exception is raised, and just before the script
+will exit.
 
 ```python
 import sys
@@ -66,7 +68,6 @@ my_func(ttl_hash=get_ttl_hash())  # cached result, using ttl
 
 https://dev.to/chadrik/the-missing-guide-to-python-static-typing-532i
 
-
 ### Traceback type aliases
 
 ```python
@@ -88,9 +89,17 @@ JsonDict: TypeAlias = dict[str, "JsonType"]
 
 ## Pyproject.toml
 
-### Using hatchling + pip-tools to pin production dependencies
+### Using uv to manage dependencies
 
-https://github.com/fredrikaverpil/hatch-playground
+There are many tools for managing dependencies in Python;
+[setuptools](https://github.com/pypa/setuptools),
+[pip-tools](https://github.com/jazzband/pip-tools),
+[poetry](https://github.com/python-poetry/poetry),
+[pdm](https://github.com/pdm-project/pdm),
+[rye](https://github.com/astral-sh/rye)... but not until 2024, was there finally
+a tool that supplied all the necessary tooling under one umbrella for managing
+both applications and libraries, prod vs dev dependency lockfile, optional
+extras etc: [astral's uv](https://docs.astral.sh/uv/).
 
 ## Dates and times
 
@@ -128,7 +137,8 @@ TZ=UTC pytest
 
 ## Pattern matching gotchas
 
-Like with ifs and switches, you only match against one case. "Optional remainders" can also be used:
+Like with ifs and switches, you only match against one case. "Optional
+remainders" can also be used:
 
 ```python
 my_dict = {"fruit": "apple", "digit": 1}
@@ -147,10 +157,12 @@ match my_dict:
 
 ```
 
-
 ### Don't pattern-match on iterables
 
-Ordering matters when pattern matching on iterables, so it's probably not a great idea to do this, generally. You also cannot specify the "optional remainders" both before AND after an item in the list, so there is no way to identify one single item in a list reliably using pattern matching:
+Ordering matters when pattern matching on iterables, so it's probably not a
+great idea to do this, generally. You also cannot specify the "optional
+remainders" both before AND after an item in the list, so there is no way to
+identify one single item in a list reliably using pattern matching:
 
 ```python
 my_list = ["apple", "orange"]
@@ -168,7 +180,7 @@ match my_list:
         print("Found the apple with non-optionals") # will NOT find the apple
     case [x, "orange", *y]:
         print("Found the orange with multiple optionals") # will find the orange
-        
+
 ```
 
 ```python
@@ -176,3 +188,4 @@ match my_list:
     case [*x, "orange", *y]:  # syntax error
         print("Found the orange with multiple optionals before AND after")
 ```
+
