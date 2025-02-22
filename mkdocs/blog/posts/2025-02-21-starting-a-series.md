@@ -6,6 +6,8 @@ authors:
 comments: true
 tags:
   - personal update
+categories:
+  - Joy and Curiosity
 ---
 
 # Starting a blog series

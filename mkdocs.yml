@@ -114,7 +114,8 @@ plugins:
       post_date_format: long
       post_readtime: true
       archive: true
-      categories: false
+      categories: true
+      categories_toc: true
       authors: true
       authors_file: .authors.yml
   - rss:
