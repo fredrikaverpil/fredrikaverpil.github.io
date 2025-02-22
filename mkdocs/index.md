@@ -20,7 +20,7 @@ This my personal blog, where I scribble down notes on software development, open
 source, and other stuff I love tinkering with! :smiling_face_with_3_hearts:
 
 Get in touch: [:simple-github:](https://github.com/fredrikaverpil)
-[:simple-mastodon:](https://fosstodon.org/@fredrikaverpil)
+[:material-mastodon:](https://fosstodon.org/@fredrikaverpil)
 [:simple-bluesky:](https://bsky.app/profile/fredrikaverpil.github.io)
-[:simple-linkedin:](https://www.linkedin.com/in/fredrik/) or via fredrik dot
+[:material-linkedin:](https://www.linkedin.com/in/fredrik/) or via fredrik dot
 averpil at gmail dot com.
