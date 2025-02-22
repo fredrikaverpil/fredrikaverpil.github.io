@@ -133,10 +133,11 @@ nav:
       - index.md
       - blog/index.md
       - tags.md
-  - Cheat sheets:
-      - cheat-sheets/docker.md
-      - cheat-sheets/gha.md
-      - cheat-sheets/git.md
-      - cheat-sheets/gcal.md
-      - cheat-sheets/python.md
-      - cheat-sheets/remote_play.md
+# FIXME: move these into blog posts
+# - Cheat sheets:
+#     - cheat-sheets/docker.md
+#     - cheat-sheets/gha.md
+#     - cheat-sheets/git.md
+#     - cheat-sheets/gcal.md
+#     - cheat-sheets/python.md
+#     - cheat-sheets/remote_play.md
