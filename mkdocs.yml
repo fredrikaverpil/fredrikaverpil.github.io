@@ -129,6 +129,7 @@ plugins:
 
 nav:
   - Blog:
+      - index.md
       - blog/index.md
       - tags.md
   - Cheat sheets:
@@ -138,4 +139,3 @@ nav:
       - cheat-sheets/gcal.md
       - cheat-sheets/python.md
       - cheat-sheets/remote_play.md
-  - About me: index.md
