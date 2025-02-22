@@ -13,9 +13,9 @@ categories:
 # Starting a blog series
 
 Thorsten Ball has a great blog series called "Joy and Curiosity" over at
-[registerspill.thorstenball.com](https://registerspill.thorstenball.com) which
-celebrates the interesting and joyful parts of the week that passed by. I
-initially heard about this on the
+[Register Spill](https://registerspill.thorstenball.com) which celebrates the
+interesting and joyful parts of the week that passed by. I initially heard about
+this on the
 [Cup o' Go podcast](https://cupogo.dev/episodes/supply-chain-attacks-ghetto-logs-and-rust-ai-cold-takes-with-thorsten-ball)
 and his ideas resonates incredibly well on how I have come to view life as a
 software engineer.
