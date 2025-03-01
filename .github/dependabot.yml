@@ -1,20 +1,21 @@
 version: 2
-
+enable-beta-ecosystems: true
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "monthly"
-
-  # NOTE: uv is not supported: https://github.com/dependabot/dependabot-core/issues/10478#issuecomment-2463205668
-
-  - package-ecosystem: "pip"
+  - package-ecosystem: "uv"
     directory: "/"
-    # registries:
-    #   - mkdocs-material-insiders
     schedule:
       interval: "monthly"
-
+#   - package-ecosystem: "pip"
+#     directory: "/"
+#     # registries:
+#     #   - mkdocs-material-insiders
+#     schedule:
+#       interval: "monthly"
+#
 # registries:
 #   mkdocs-material-insiders:
 #     type: git
