@@ -1,0 +1,72 @@
+[project]
+site_name = "Fredrik Averpil"
+site_url = "https://fredrikaverpil.github.io"
+docs_dir = "mkdocs"
+site_dir = "site"
+
+# Navigation
+nav = [
+  { "Blog" = [
+    { "Home" = "index.md" },
+    { "Posts" = "blog/index.md" },
+    { "Tags" = "tags.md" },
+  ]},
+]
+
+extra_css = ["stylesheets/extra.css"]
+
+[project.theme]
+language = "en"
+favicon = "static/favicon.ico"
+
+features = [
+  "content.code.annotate",
+  "content.code.copy",
+  "navigation.sections",
+  "navigation.tabs",
+  "search.highlight",
+  "toc.follow",
+]
+
+[project.theme.icon]
+logo = "material/console"
+
+# Dark/light mode toggle
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "material/brightness-auto"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "black"
+accent = "deep orange"
+toggle.icon = "material/weather-night"
+toggle.name = "Switch to system preference"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "blue grey"
+accent = "deep orange"
+toggle.icon = "material/weather-sunny"
+toggle.name = "Switch to dark mode"
+
+[project.extra]
+# Social links
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/fredrikaverpil"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/mastodon"
+link = "https://fosstodon.org/@fredrikaverpil"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/bluesky"
+link = "https://bsky.app/profile/fredrikaverpil.github.io"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/linkedin"
+link = "https://linkedin.com/in/fredrik"
