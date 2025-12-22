@@ -1,0 +1,54 @@
+baseURL = 'https://fredrikaverpil.github.io/'
+languageCode = 'en-us'
+title = 'Fredrik Averpil'
+author = 'Fredrik Averpil'
+copyright = '© Fredrik Averpil'
+
+[pagination]
+  pagerSize = 10
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = 'monokai' # Dark theme by default for terminal look
+    noClasses = false  # Use inline styles for simplicity (zero-JS)
+
+[params]
+  description = "Minimalist technical blog."
+  
+  # Social links (displayed in footer/header depending on layout)
+  [[params.social]]
+    name = "GitHub"
+    url = "https://github.com/fredrikaverpil"
+  [[params.social]]
+    name = "Mastodon"
+    url = "https://fosstodon.org/@fredrikaverpil"
+  [[params.social]]
+    name = "Bluesky"
+    url = "https://bsky.app/profile/fredrikaverpil.github.io"
+  [[params.social]]
+    name = "LinkedIn"
+    url = "https://linkedin.com/in/fredrik"
+  [[params.social]]
+    name = "RSS"
+    url = "index.xml"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Blog"
+    url = "/post/"
+    weight = 2
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
