@@ -13,4 +13,3 @@ Postgres and Terraform.
 
 This is my personal blog, where I scribble down notes on software development,
 open source, and other stuff I love tinkering with! 🥰
-
