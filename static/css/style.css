@@ -1,8 +1,49 @@
+@font-face {
+  font-family: 'Commit Mono';
+  src: url('/fonts/CommitMono-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Maple Mono';
+  src: url('/fonts/MapleMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Maple Mono';
+  src: url('/fonts/MapleMono-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Maple Mono';
+  src: url('/fonts/MapleMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
+  font-family: 'Commit Mono', monospace;
+  font-weight: 400;
   max-width: 800px;
   margin: auto;
   padding: 1em;
   line-height: 1.5;
+}
+
+code, pre {
+  font-family: 'Commit Mono', monospace;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
 }
 
 /* header and footer areas */
@@ -62,7 +103,15 @@ thead, tfoot, tr:nth-child(even) { background: #eee; }
   text-transform: uppercase;
   font-size: 0.85em;
   margin-bottom: 0.5em;
-  font-family: monospace; /* Keep the terminal vibe */
+  font-family: 'Maple Mono', monospace; /* Handwritten feel */
+}
+.callout-content {
+  font-family: 'Maple Mono', monospace;
+  font-style: italic;
+}
+.callout-content code, .callout-content pre {
+  font-family: 'Commit Mono', monospace;
+  font-style: normal;
 }
 .callout-note { border-left-color: #3498db; background: #eef6fb; }
 .callout-warning { border-left-color: #f39c12; background: #fdf6e7; }
