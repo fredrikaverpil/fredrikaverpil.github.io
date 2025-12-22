@@ -2,7 +2,6 @@
 title: "Install CentOS 7 remotely using Kickstart and GRUB"
 date: 2015-12-30
 tags: ["linux"]
-categories: ["archive"]
 ---
 
 This guide assumes the target host is already running CentOS (a derivate of

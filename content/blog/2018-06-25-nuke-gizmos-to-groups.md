@@ -2,7 +2,6 @@
 title: "Nuke gizmos to groups"
 date: 2018-06-25
 tags: ["nuke", "python"]
-categories: ["archive"]
 ---
 
 Recursively replace all gizmos in Nuke script with a group. The only exception is the `Cryptomatte` nodes, which will be maintained as gizmos.

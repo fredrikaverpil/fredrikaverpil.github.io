@@ -2,7 +2,6 @@
 title: "Installing Visual Studio for Python 2.7"
 date: 2016-01-18
 tags: ["python", "windows"]
-categories: ["archive"]
 ---
 
 ### Install using Microsoft installer

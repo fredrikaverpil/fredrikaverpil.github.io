@@ -2,7 +2,6 @@
 title: "Distributing Python script(s) as zip file"
 date: 2018-06-07
 tags: ["python", "maya", "nuke"]
-categories: ["archive"]
 ---
 
 A recent discussion on [3DPRO](https://3dpro.org/) sparked me to scribble down some ideas on how to somewhat painlessly distribute a Python package to be run in DCC applications such as Maya or Nuke as simply as possible. So this is an alternative to building a wheel and mucking around with virtual environments.

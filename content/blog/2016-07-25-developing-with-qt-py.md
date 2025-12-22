@@ -2,7 +2,6 @@
 title: "Developing with Qt.py"
 date: 2016-07-25
 tags: ["python", "maya", "nuke", "qt.py", "pyside", "pyqt"]
-categories: ["archive"]
 ---
 
 This post aims to give an introduction to the [Qt.py](https://github.com/mottosso/Qt.py) project and how to get set up with it for PySide/PyQt4 and PySide2/PyQt5 development.

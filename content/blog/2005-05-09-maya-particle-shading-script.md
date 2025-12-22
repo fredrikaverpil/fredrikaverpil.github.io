@@ -2,7 +2,6 @@
 title: "Maya particle shading script"
 date: 2005-05-09
 tags: ["maya", "mel"]
-categories: ["archive"]
 ---
 
 A MEL script that hooks your particle system up with a camera automatically, resulting in a z-depth/focus depth/height/age/etc shader, that can be used to render images meant to serve as an aid during compositing. This way you can e.g. render out hardware particles’ depth channel with motion blur.

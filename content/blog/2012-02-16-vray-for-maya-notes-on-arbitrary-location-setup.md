@@ -3,7 +3,6 @@
 title: "V-Ray for Maya"
 date: 2012-02-16
 tags: ["vray", "python", "windows", "macos"]
-categories: ["archive"]
 ---
 
 Running V-Ray for Maya in a production environment has its quirks. I have collected some bits and pieces off the [Chaos Group forum](https://www.chaosgroup.com/forums/vbulletin/showthread.php?51035-maintaining-Vray-builds-with-workstations-and-the-render-frarm/) and assembled it all here.

@@ -2,7 +2,6 @@
 title: "Control Docker containers from within container"
 date: 2018-12-14
 tags: ["docker"]
-categories: ["archive"]
 ---
 
 This is a short note on how to make a container access and control another container on the same host. The trick is to have the "controller" container map the host's `docker.sock` into the container.

@@ -2,7 +2,6 @@
 title: "Getting V-Ray to render Nuke-style Z-depth"
 date: 2012-02-21
 tags: ["vray", "nuke", "maya"]
-categories: ["archive"]
 ---
 
 If you have come this far you might be interested in a couple of small tips and tricks on how to get that 32-bit floating point depth channel to render out of V-Ray and into Nuke, similar to what you might be used to from Mental Ray and the IFF file format.

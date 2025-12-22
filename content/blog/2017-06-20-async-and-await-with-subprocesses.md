@@ -2,7 +2,6 @@
 title: "Async and await with subprocesses"
 date: 2017-06-20
 tags: ["python"]
-categories: ["archive"]
 ---
 
 A boilerplate which can be used on Windows and Linux/macOS in order to asynchronously run subprocesses. This requres Python 3.6.

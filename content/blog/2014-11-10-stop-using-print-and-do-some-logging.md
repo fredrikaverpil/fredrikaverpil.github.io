@@ -2,7 +2,6 @@
 title: "Stop using print and do some logging"
 date: 2014-11-10
 tags: ["python"]
-categories: ["archive"]
 ---
 
 This will print to stdout, similar to a regular print, but it will also log to file.

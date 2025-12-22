@@ -2,7 +2,6 @@
 title: "Happy holidays!"
 date: 2012-12-21
 tags: ["portfolio"]
-categories: ["archive"]
 ---
 
 <p>

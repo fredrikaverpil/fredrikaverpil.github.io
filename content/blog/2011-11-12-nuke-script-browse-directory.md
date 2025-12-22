@@ -2,7 +2,6 @@
 title: "Nuke script"
 date: 2011-11-12
 tags: ["nuke", "python"]
-categories: ["archive"]
 ---
 
 Launch the source directory of the selected Read or Write node.

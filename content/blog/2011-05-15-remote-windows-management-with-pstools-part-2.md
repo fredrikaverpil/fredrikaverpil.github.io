@@ -2,7 +2,6 @@
 title: "Remote Windows management with PsTools, part 2"
 date: 2011-05-15
 tags: ["pstools", "windows"]
-categories: ["archive"]
 ---
 
 In this second part of managing Windows machines using the PsTools suite, we will look at how to automate processes involving interacting with a server.

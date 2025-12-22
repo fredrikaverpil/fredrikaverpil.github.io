@@ -2,7 +2,6 @@
 title: "Generating a spherical HDR image with V-Ray for Maya"
 date: 2012-12-12
 tags: ["vray", "maya"]
-categories: ["archive"]
 featured_image: "/blog/vray/vray_spherical_hdr_01.png"
 ---
 

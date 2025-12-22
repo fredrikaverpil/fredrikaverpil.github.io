@@ -2,7 +2,6 @@
 title: "Read node from Write node"
 date: 2016-05-23
 tags: ["nuke", "python"]
-categories: ["archive"]
 ---
 
 Originally posted in 2011; A Python script for [Nuke](https://www.thefoundry.co.uk/products/nuke/) which takes any selected Write (or Read) node and creates a Read node from it. Now updated to fix some bugs and support for a wider range of scenarios.

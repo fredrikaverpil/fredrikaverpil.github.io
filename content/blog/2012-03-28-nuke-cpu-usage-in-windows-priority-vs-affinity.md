@@ -2,7 +2,6 @@
 title: "Nuke and CPU usage in Windows"
 date: 2012-03-28
 tags: ["nuke", "windows"]
-categories: ["archive"]
 ---
 
 On Windows, sometimes Nuke and Maya fights over resources, especially the CPU. This can become apparent when background rendering with Maya.

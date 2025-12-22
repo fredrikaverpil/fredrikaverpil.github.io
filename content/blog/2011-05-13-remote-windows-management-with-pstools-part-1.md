@@ -2,7 +2,6 @@
 title: "Remote Windows management with PsTools, part 1"
 date: 2011-05-13
 tags: ["pstools", "windows"]
-categories: ["archive"]
 ---
 
 One of the advantages of running Linux on render farm machines is the possibility to remotely manage them using the command line. However if you are running the farm on Windows, this is a whole different kind of story.

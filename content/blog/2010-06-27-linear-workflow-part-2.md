@@ -2,7 +2,6 @@
 title: "Linear workflow, part 2"
 date: 2010-06-27
 tags: ["workflow", "maya", "nuke"]
-categories: ["archive"]
 ---
 
 This is how I would deal with the linear workflow (including non-linear preview) between Maya 2010 and Nuke 6.0v6.

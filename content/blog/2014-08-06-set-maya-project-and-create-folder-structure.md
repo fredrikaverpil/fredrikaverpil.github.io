@@ -2,7 +2,6 @@
 title: "Set Maya project and create folder structure"
 date: 2014-08-06
 tags: ["maya"]
-categories: ["archive"]
 ---
 
 After having done a quick Google search, it seems nobody has yet posted a quick Python snippet that does this.

@@ -2,7 +2,6 @@
 title: "64-bit Python package building with VS2008"
 date: 2014-06-05
 tags: ["python"]
-categories: ["archive"]
 ---
 
 This was a real PITA to get working. After having installed Visual C++ 2008 Express, I tried to build both [psutil](https://code.google.com/archive/p/psutil/) and [MySQLdb](https://sourceforge.net/projects/mysql-python/) using setuptools and/or pip. Both resulted in various errors…

@@ -2,7 +2,6 @@
 title: "Read node from Write node"
 date: 2011-11-11
 tags: ["nuke", "python"]
-categories: ["archive"]
 ---
 
 Written in Python, with Nuke 6.9 in mind, generate a Read node from the selected Write node.

@@ -2,7 +2,6 @@
 title: "Installing PyQt4 in Nuke 6.3 on Windows"
 date: 2012-11-26
 tags: ["nuke", "python", "windows"]
-categories: ["archive"]
 ---
 
 A few steps to get PyQt working inside of Nuke 6.3 (Windows only for now).

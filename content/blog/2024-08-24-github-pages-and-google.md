@@ -2,7 +2,6 @@
 title: "GitHub Pages and Google"
 date: 2024-08-24
 tags: ["github"]
-categories: ["archive"]
 ---
 
 Turns out that if you publish a blog (like I do) on

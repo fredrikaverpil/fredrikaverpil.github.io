@@ -2,7 +2,6 @@
 title: "Chocolatey on Windows 10"
 date: 2016-01-03
 tags: ["windows"]
-categories: ["archive"]
 ---
 
 I've recently started taking a look at [Chocolatey](https://chocolatey.org) –

@@ -2,7 +2,6 @@
 title: "Fixing \"read-only\" files in Maya"
 date: 2013-02-01
 tags: ["maya", "python"]
-categories: ["archive"]
 ---
 
 Recently we ended up with a Maya scene with locked, read-only, nodes which prohibited us from deleting them from the scene. This usually happens to nodes having been part of a locked reference which has been imported into the scene. In our case, we had no access to the original referenced file, so we had to unlock these nodes from being read-only.

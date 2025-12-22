@@ -2,7 +2,6 @@
 title: "Dates and databases with Python"
 date: 2017-11-30
 tags: ["python"]
-categories: ["archive"]
 ---
 
 It's a bit tricky to deal with dates, timezones and daylight savings when you need to store dates in e.g. a database for later reading.

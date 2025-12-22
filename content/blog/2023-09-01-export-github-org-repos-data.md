@@ -2,7 +2,6 @@
 title: "Export repo data from GitHub organization"
 date: 2023-09-01
 tags: ["github"]
-categories: ["archive"]
 ---
 
 This is a quickie, using the [GitHub CLI](https://cli.github.com/) and optionally some Python.

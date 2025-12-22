@@ -2,7 +2,6 @@
 title: "Cartesian product in Python"
 date: 2018-04-18
 tags: ["python"]
-categories: ["archive"]
 ---
 
 A [cartesian product](https://en.wikipedia.org/wiki/Cartesian_product) operation can return a set of "combinations" based on given values.

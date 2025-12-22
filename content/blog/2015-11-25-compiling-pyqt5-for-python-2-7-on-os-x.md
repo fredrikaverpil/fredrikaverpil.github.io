@@ -2,7 +2,6 @@
 title: "Compiling PyQt5 for Python 2.7 on OS X"
 date: 2015-11-25
 tags: ["macos", "python", "pyqt"]
-categories: ["archive"]
 ---
 
 > [!NOTE]

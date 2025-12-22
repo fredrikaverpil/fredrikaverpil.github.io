@@ -2,7 +2,6 @@
 title: "Querying the FPS preference in Maya"
 date: 2017-11-17
 tags: ["maya", "python"]
-categories: ["archive"]
 ---
 
 This tickles the funny bone.

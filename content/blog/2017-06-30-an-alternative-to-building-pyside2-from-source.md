@@ -2,7 +2,6 @@
 title: "An alternative to building PySide2 from source"
 date: 2017-06-30
 tags: ["python", "pyside", "pyqt", "qt.py"]
-categories: ["archive"]
 ---
 
 I've received questions lately on the issues that people are having while attempting to build PySide2 on Windows, macOS and Linux. Instead of building PySide2, there's actually a workaround which works just as well for some people...

@@ -2,7 +2,6 @@
 title: "Fujifilm Finepix X100 – LCD/EVF observations"
 date: 2012-08-09
 tags: ["photography"]
-categories: ["archive"]
 featured_image: "/blog/x100/x100_observations_01.jpg"
 ---
 

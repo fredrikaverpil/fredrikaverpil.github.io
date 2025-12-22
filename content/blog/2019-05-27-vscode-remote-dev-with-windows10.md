@@ -2,7 +2,6 @@
 title: "Visual Studio Code remote development with Windows 10"
 date: 2019-05-27
 tags: ["windows"]
-categories: ["archive"]
 ---
 
 Basically, how to set this up.

@@ -2,7 +2,6 @@
 title: "Using GitHub merge queue to ease the Dependabot churn"
 date: 2023-03-29
 tags: ["github-actions"]
-categories: ["archive"]
 ---
 
 Good morning, project!

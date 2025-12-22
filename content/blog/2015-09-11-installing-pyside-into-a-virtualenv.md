@@ -2,7 +2,6 @@
 title: "Installing PySide into a virtualenv"
 date: 2015-09-11
 tags: ["linux", "bash", "pyside"]
-categories: ["archive"]
 ---
 
 I’ve been struggling to install a portable/relocatable virtualenv with PySide 1.2.2 for Python 2.7. On Windows, this works out of the box but it’s more difficult on Linux and OS X, although I came up with [a patch for OS X](https://github.com/PySide/PySide/issues/129#issuecomment-145138706). This guide will not go into detail on portability/relocatability and will merely touch upon how to get started with PySide in a virtualenv. It looks like PySide 1.2.3 will have substantial changes which will allow for easier portability/relocatability and I will make a post on that as soon as it is generally available.

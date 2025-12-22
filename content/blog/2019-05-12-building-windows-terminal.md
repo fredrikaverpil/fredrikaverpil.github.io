@@ -2,7 +2,6 @@
 title: "Building Windows Terminal"
 date: 2019-05-12
 tags: ["windows"]
-categories: ["archive"]
 featured_image: "/blog/terminal/terminal.png"
 ---
 

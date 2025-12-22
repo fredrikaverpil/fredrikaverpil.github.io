@@ -2,7 +2,6 @@
 title: "Island of Lost Souls"
 date: 2007-02-10
 tags: ["portfolio"]
-categories: ["archive"]
 featured_image: "/blog/gallery/2007-lostsouls.jpg"
 ---
 

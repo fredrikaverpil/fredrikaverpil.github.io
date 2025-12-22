@@ -2,7 +2,6 @@
 title: "Managing Maya scenes on multiple platforms"
 date: 2010-11-24
 tags: ["maya"]
-categories: ["archive"]
 ---
 
 Ever found yourself trying to open a complex Maya scene with nested references on a Windows/Linux network using your Macbook (or any of the other OS combos)?

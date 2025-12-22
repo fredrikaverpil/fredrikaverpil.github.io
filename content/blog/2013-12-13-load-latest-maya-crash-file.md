@@ -2,7 +2,6 @@
 title: "Load latest Maya crash file"
 date: 2013-12-13
 tags: ["maya", "python"]
-categories: ["archive"]
 ---
 
 This simple python script looks for the latest file with .ma file extension in the path given and prompts the user whether to load it or not. Just verify that the searchDir variable is pointing to your temp dir.

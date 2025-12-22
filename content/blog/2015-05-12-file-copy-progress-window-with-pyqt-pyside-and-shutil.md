@@ -2,7 +2,6 @@
 title: "File copy progress window with PyQt/PySide and shutil"
 date: 2015-05-12
 tags: ["python", "pyside", "pyqt"]
-categories: ["archive"]
 ---
 
 I recently wanted to show the progress of a file copy made from a python script (or actually, from a python script running inside of Maya and Nuke). First I looked to piggyback on the OS native ways of copying a file, but oddly enough it turned out there was no way of showing a progress bar when doing this.

@@ -2,7 +2,6 @@
 title: "Open source licenses"
 date: 2019-02-04
 tags: ["docker"]
-categories: ["archive"]
 ---
 
 In [episode 196 of the (Python) Podcast.__init__](https://www.pythonpodcast.com/software-licenses-for-developers-episode-196/) a very commonly discussed topic among open source programmers is covered, which I wanted to share here.

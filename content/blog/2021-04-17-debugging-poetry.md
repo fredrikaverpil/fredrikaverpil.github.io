@@ -2,7 +2,6 @@
 title: "Debugging Poetry with Visual Studio Code"
 date: 2021-04-17
 tags: ["python"]
-categories: ["archive"]
 featured_image: "/blog/poetry_debug/debug.png"
 ---
 

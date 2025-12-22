@@ -2,7 +2,6 @@
 title: "Identifying Chrome extensions on Chrome OS eating up too much disk space"
 date: 2015-10-07
 tags: ["chromeos"]
-categories: ["archive"]
 ---
 
 I just recently realized I had only 300 MB of free disk space on my Chromebook, when I should have about 8 GB of free disk space. After some investigation, I found that one of my extensions where not deleting its previous versions when it got updated. Here’s how you can detect and fix such an issue.

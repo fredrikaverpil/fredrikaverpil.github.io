@@ -2,7 +2,6 @@
 title: "Systemd services and resource limits"
 date: 2016-04-27
 tags: ["linux", "vray"]
-categories: ["archive"]
 ---
 
 We made the move to CentOS 7 and I switched out all init.d scripts with

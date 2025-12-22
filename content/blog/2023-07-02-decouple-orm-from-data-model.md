@@ -2,7 +2,6 @@
 title: "Decoupling the ORM class from the data model class"
 date: 2023-07-02
 tags: ["python"]
-categories: ["archive"]
 ---
 
 I'm working on a rather large project where we would want to replace a [WSGI](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface) ORM with an [ASGI](https://en.wikipedia.org/wiki/Asynchronous_Server_Gateway_Interface) ORM, but it's tangled up into everything and ORM queries are executed from all over the business logic. If the ORM would've been decoupled from the objects tossed around in the business logic, it would've been much easier to replace the ORM.

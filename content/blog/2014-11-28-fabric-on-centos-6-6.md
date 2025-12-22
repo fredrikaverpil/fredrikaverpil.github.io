@@ -2,7 +2,6 @@
 title: "Fabric on CentOS 6.6"
 date: 2014-11-28
 tags: ["python", "linux"]
-categories: ["archive"]
 ---
 
 When installing [Fabric](https://www.fabfile.org) on CentOS 6.6 using [pip](https://pypi.python.org/pypi/pip), it seems [a bug](https://github.com/fabric/fabric/issues/1105) is being hit.

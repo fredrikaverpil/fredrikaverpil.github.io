@@ -2,7 +2,6 @@
 title: "How to install PySide into OS X El Capitan"
 date: 2016-04-20
 tags: ["python"]
-categories: ["archive"]
 ---
 
 ## OS X El Capitan
