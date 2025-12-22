@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-/* header and footer areas */
+/* Header and Navigation */
 .menu { padding: 0; }
 .menu li { display: inline-block; }
 .article-meta, .menu a {
@@ -160,7 +160,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 .menu, .article-meta, footer { text-align: center; }
 .title { font-size: 1.1em; }
-footer a { text-decoration: none; }
+
+/* Footer */
+footer {
+  margin-top: 4em;
+  text-align: center;
+  font-size: 0.9em;
+  color: var(--fg-dim);
+}
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+.footer-icons {
+  display: flex;
+  align-items: center;
+}
+.footer-icons a {
+  margin: 0 0.5em;
+  text-decoration: none !important; /* Force no underline */
+  border-bottom: none !important; /* Just in case */
+  display: flex;
+  align-items: center;
+}
+.footer-icons a:hover {
+  opacity: 0.7;
+}
+.footer-text {
+  color: var(--fg-dim);
+}
 hr {
   border-style: dashed;
   color: var(--border);
