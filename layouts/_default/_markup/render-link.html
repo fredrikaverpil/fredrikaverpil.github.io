@@ -1,0 +1,40 @@
+{{/* 
+  layouts/_default/_markup/render-link.html
+  This template overrides how Hugo renders Markdown links.
+  If the link is a GitHub link, it formats it with an icon.
+  Otherwise, it renders a standard link.
+*/}}
+{{ $url := .Destination | safeURL }}
+{{ $isGitHub := findRE `^https?://github\.com` $url }}
+
+{{ if $isGitHub }}
+  {{/* GITHUB LINK LOGIC */}}
+  {{ $path := urls.Parse $url }}
+  {{ $segments := split (strings.TrimPrefix "/" $path.Path) "/" }}
+  
+  {{ $repoPath := "" }}
+  {{ $issueNum := "" }}
+  {{ $isPR := false }}
+  {{ $isIssue := false }}
+
+  {{ if ge (len $segments) 2 }}
+    {{ $repoPath = printf "%s/%s" (index $segments 0) (index $segments 1) }}
+    {{ if and (gt (len $segments) 3) (in "pull issues" (index $segments 2)) }}
+      {{ $issueNum = printf "#%s" (index $segments 3) }}
+      {{ if eq (index $segments 2) "pull" }}{{ $isPR = true }}{{ end }}
+      {{ if eq (index $segments 2) "issues" }}{{ $isIssue = true }}{{ end }}
+    {{ end }}
+  {{ end }}
+
+  <a href="{{ $url }}" target="_blank" rel="noopener" class="github-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+    </svg>
+    {{ $repoPath }}{{ $issueNum }}
+  </a>
+{{ else }}
+  {{/* DEFAULT LINK RENDER */}}
+  <a href="{{ $url }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix $url "http" }} target="_blank" rel="noopener"{{ end }}>
+    {{ .Text | safeHTML }}
+  </a>
+{{ end }}
