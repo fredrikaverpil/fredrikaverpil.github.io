@@ -15,6 +15,41 @@
       {{ range .Site.Menus.main }}
       <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
       {{ end }}
+      <li><button id="theme-toggle" style="background:none; border:none; cursor:pointer; font-size:1em; padding:5px; color:inherit;">◑</button></li>
     </ul>
     <hr/>
     </nav>
+    
+    <script>
+      (function() {
+        const toggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        // Load preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          body.classList.add(savedTheme);
+        }
+
+        toggle.addEventListener('click', () => {
+          if (body.classList.contains('dark')) {
+            body.classList.remove('dark');
+            body.classList.add('light');
+            localStorage.setItem('theme', 'light');
+          } else if (body.classList.contains('light')) {
+            body.classList.remove('light');
+            body.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+          } else {
+            // No class yet, check system preference
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+              body.classList.add('light'); // System is dark, so toggle to light
+              localStorage.setItem('theme', 'light');
+            } else {
+              body.classList.add('dark'); // System is light, so toggle to dark
+              localStorage.setItem('theme', 'dark');
+            }
+          }
+        });
+      })();
+    </script>

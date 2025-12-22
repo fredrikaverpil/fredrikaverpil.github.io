@@ -12,8 +12,8 @@ copyright = '© Fredrik Averpil'
     codeFences = true
     guessSyntax = true
     lineNos = false
-    style = 'monokai' # Dark theme by default for terminal look
-    noClasses = false  # Use inline styles for simplicity (zero-JS)
+    style = 'tango' # Default style (will be overridden by CSS)
+    noClasses = false  # Use classes so we can swap themes via CSS
 
 [params]
   description = "Minimalist technical blog."
