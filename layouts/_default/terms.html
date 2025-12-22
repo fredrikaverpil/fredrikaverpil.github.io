@@ -1,5 +1,6 @@
 {{ partial "header.html" . }}
 
+<main>
 <h1>Categories</h1>
 <ul class="taxonomy-cloud">
   {{ if eq .Type "categories" }}
@@ -41,5 +42,6 @@
     {{ end }}
   {{ end }}
 </ul>
+</main>
 
 {{ partial "footer.html" . }}
