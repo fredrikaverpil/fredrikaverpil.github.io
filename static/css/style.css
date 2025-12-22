@@ -508,8 +508,26 @@ pre {
   background-color: var(--button-bg) !important;
 }
 
-code { background: transparent; }
-pre code { background: none; }
+code {
+  background-color: var(--meta-bg);
+  padding: 0 0.2em;
+  font-family: 'Commit Mono', monospace;
+  font-weight: 600;
+  font-variation-settings: 'wght' 600;
+}
+
+/* Compounding contrast for inline code inside callouts */
+.callout code, .markdown-alert code {
+  background-color: var(--button-bg);
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  font-weight: var(--font-weight-body);
+  font-variation-settings: 'wght' var(--font-weight-body);
+}
 
 /* Featured Image */
 .featured-image {
