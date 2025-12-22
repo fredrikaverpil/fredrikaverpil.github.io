@@ -5,77 +5,77 @@ author = 'Fredrik Averpil'
 copyright = '© Fredrik Averpil'
 
 [pagination]
-  pagerSize = 10
+pagerSize = 10
 
 [permalinks]
-  blog = '/blog/:year/:month/:day/:slug/'
+blog = '/blog/:year/:month/:day/:slug/'
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      # Allow raw HTML (e.g. <details>, <summary>) in markdown files
-      unsafe = true
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    lineNos = false
-    style = 'tango' # Default style (will be overridden by CSS)
-    noClasses = false  # Use classes so we can swap themes via CSS
+[markup.goldmark]
+[markup.goldmark.renderer]
+# Allow raw HTML (e.g. <details>, <summary>) in markdown files
+unsafe = true
+[markup.highlight]
+codeFences = true
+guessSyntax = true
+lineNos = false
+style = 'tango'    # Default style (will be overridden by CSS)
+noClasses = false  # Use classes so we can swap themes via CSS
 
 [params]
-  description = "Minimalist technical blog."
-  
-  # Featured Projects for Homepage
-  [[params.projects]]
-    name = "neotest-golang"
-    url = "https://github.com/fredrikaverpil/neotest-golang"
-    description = "Neovim plugin for Go testing."
-  [[params.projects]]
-    name = "godoc.nvim"
-    url = "https://github.com/fredrikaverpil/godoc.nvim"
-    description = "Neovim plugin to view Go documentation."
-  [[params.projects]]
-    name = "dotfiles"
-    url = "https://github.com/fredrikaverpil/dotfiles"
-    description = "My configuration files for Neovim, Wezterm, Ghostty, etc."
+description = "Minimalist technical blog."
 
-  # Social links (displayed in footer/header depending on layout)
-  [[params.social]]
-    name = "GitHub"
-    url = "https://github.com/fredrikaverpil"
-  [[params.social]]
-    name = "Mastodon"
-    url = "https://fosstodon.org/@fredrikaverpil"
-  [[params.social]]
-    name = "Bluesky"
-    url = "https://bsky.app/profile/fredrikaverpil.github.io"
-  [[params.social]]
-    name = "LinkedIn"
-    url = "https://linkedin.com/in/fredrik"
-  [[params.social]]
-    name = "RSS"
-    url = "/index.xml"
-  [[params.social]]
-    name = "Feedly"
-    url = "https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Ffredrikaverpil.github.io%2Ffeed_rss_created.xml"
-  [[params.social]]
-    name = "Umami"
-    url = "https://cloud.umami.is/share/tJcIgDO3dznRmeGX"
+# Featured Projects for Homepage
+[[params.projects]]
+name = "neotest-golang"
+url = "https://github.com/fredrikaverpil/neotest-golang"
+description = "Neovim plugin for Go testing."
+[[params.projects]]
+name = "godoc.nvim"
+url = "https://github.com/fredrikaverpil/godoc.nvim"
+description = "Neovim plugin to view Go documentation."
+[[params.projects]]
+name = "dotfiles"
+url = "https://github.com/fredrikaverpil/dotfiles"
+description = "My configuration files for Neovim, the terminal, etc."
+
+# Social links (displayed in footer/header depending on layout)
+[[params.social]]
+name = "GitHub"
+url = "https://github.com/fredrikaverpil"
+[[params.social]]
+name = "Mastodon"
+url = "https://fosstodon.org/@fredrikaverpil"
+[[params.social]]
+name = "Bluesky"
+url = "https://bsky.app/profile/fredrikaverpil.github.io"
+[[params.social]]
+name = "LinkedIn"
+url = "https://linkedin.com/in/fredrik"
+[[params.social]]
+name = "RSS"
+url = "/index.xml"
+[[params.social]]
+name = "Feedly"
+url = "https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Ffredrikaverpil.github.io%2Ffeed_rss_created.xml"
+[[params.social]]
+name = "Umami"
+url = "https://cloud.umami.is/share/tJcIgDO3dznRmeGX"
 
 [menu]
-  [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    name = "Blog"
-    url = "/blog/"
-    weight = 2
-  [[menu.main]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 3
-  [[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 4
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+[[menu.main]]
+name = "Blog"
+url = "/blog/"
+weight = 2
+[[menu.main]]
+name = "Tags"
+url = "/tags/"
+weight = 3
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 4
