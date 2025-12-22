@@ -344,3 +344,8 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   color: var(--fg) !important;
   font-weight: bold;
 }
+
+/* Prevent FOUC transitions */
+body.preload {
+  transition: none !important;
+}
