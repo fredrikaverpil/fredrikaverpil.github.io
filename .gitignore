@@ -1,3 +1,10 @@
 # Custom domain, managed by Github
 CNAME
 
+# Hugo build output
+public/
+resources/
+.hugo_build.lock
+
+# OS generated files
+.DS_Store

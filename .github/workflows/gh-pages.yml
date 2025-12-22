@@ -3,7 +3,7 @@ name: github pages
 on:
   push:
     branches:
-      - main # Set a branch to deploy
+      - main  # Set a branch to deploy
   workflow_dispatch:
   pull_request:
 
@@ -28,36 +28,16 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          fetch-depth: 0 # for rss
+          fetch-depth: 0  # for rss
 
-      # for social cards
-      - run: sudo apt-get install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
-          enable-cache: true
-          cache-dependency-glob: "uv.lock"
-
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version-file: ".python-version"
-
-      - name: Install Mkdocs-Material
-        run: uv sync
-
-      - name: Install Mkdocs-Material-Insiders
-        run: |
-          uv pip uninstall mkdocs-material
-          uv pip install --upgrade git+https://${{ secrets.MKDOCS_MATERIAL_INSIDERS }}@github.com/squidfunk/mkdocs-material-insiders.git
-        if: ${{ env.USE_MKDOCS_MATERIAL_INSIDERS == 'true' }}
+          hugo-version: 'latest'
+          extended: true
 
       - name: Build
-        run: uv run mkdocs build
-
-      # maintain backwards compatibility from previous RSS feed
-      - run: cp site/static/rss_redirect.xml site/atom.xml
+        run: hugo --minify
 
       - name: Setup Pages
         if: github.event_name != 'pull_request'
@@ -67,7 +47,7 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
         with:
-          path: "./site"
+          path: "./public"
 
       - name: Deploy to GitHub Pages
         if: github.event_name != 'pull_request'
