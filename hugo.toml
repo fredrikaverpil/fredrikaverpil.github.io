@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = 'Fredrik Averpil'
 author = 'Fredrik Averpil'
 copyright = '© Fredrik Averpil'
+enableRobotsTXT = true
+
+[outputFormats]
+  [outputFormats.RSS]
+    baseName = 'feed_rss_created'
 
 [pagination]
 pagerSize = 10
