@@ -2,15 +2,23 @@
   layouts/partials/giscus.html
   Dynamically loads Giscus comments and handles theme synchronization.
 */}}
-<div id="giscus-container" class="giscus-comments"></div>
+<div id="giscus-container" class="giscus-comments">
+  <div class="load-comments-wrapper">
+    <button id="load-comments-btn" class="load-comments-btn">Load Comments</button>
+  </div>
+</div>
 
 <script>
   (function() {
+    const container = document.getElementById('giscus-container');
+    const loadBtn = document.getElementById('load-comments-btn');
+
     // Function to dynamically load the Giscus script
     function loadGiscus() {
-      const container = document.getElementById('giscus-container');
       if (!container) return;
-      container.innerHTML = ''; // Clean container
+      
+      // Clear the button and placeholder content
+      container.innerHTML = ''; 
 
       const theme = document.body.classList.contains('dark') ? 'dark' : 'light';
       
@@ -33,6 +41,11 @@
       container.appendChild(giscusScript);
     }
 
+    // Bind click event
+    if (loadBtn) {
+      loadBtn.addEventListener('click', loadGiscus);
+    }
+
     // Function to update an already-loaded Giscus theme
     function setGiscusTheme(theme) {
       const giscusFrame = document.querySelector('iframe.giscus-frame');
@@ -43,9 +56,6 @@
         );
       }
     }
-
-    // Load Giscus on initial page load, after the DOM is ready
-    document.addEventListener('DOMContentLoaded', loadGiscus);
 
     // Update Giscus theme when the site's theme toggle is clicked
     const themeToggle = document.getElementById('theme-toggle');
