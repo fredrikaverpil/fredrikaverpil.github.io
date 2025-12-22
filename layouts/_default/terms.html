@@ -1,12 +1,36 @@
 {{ partial "header.html" . }}
 
-<h1>{{ .Title }}</h1>
-
+<h1>Categories</h1>
 <ul class="terms">
-  {{ range .Pages }}
-  <li>
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ len .Pages }})
-  </li>
+  {{ if eq .Type "categories" }}
+    {{ range .Pages }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ len .Pages }})
+    </li>
+    {{ end }}
+  {{ else }}
+    {{ range .Site.Taxonomies.categories }}
+    <li>
+      <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})
+    </li>
+    {{ end }}
+  {{ end }}
+</ul>
+
+<h1>Tags</h1>
+<ul class="terms">
+  {{ if eq .Type "tags" }}
+    {{ range .Pages }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ len .Pages }})
+    </li>
+    {{ end }}
+  {{ else }}
+    {{ range .Site.Taxonomies.tags }}
+    <li>
+      <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})
+    </li>
+    {{ end }}
   {{ end }}
 </ul>
 
