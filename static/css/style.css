@@ -191,18 +191,20 @@ code, pre {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Maple Mono', monospace;
+  font-family: 'Commit Mono', monospace;
   font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1em;
+  font-variation-settings: 'wght' 700;
   color: var(--fg); /* primary color */
   margin-top: var(--heading-margin-top);
   margin-bottom: var(--heading-margin-bottom);
 }
 
-h1 {
-  font-size: 1.2em;
-}
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.3em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: 1.1em; }
+h6 { font-size: 1.05em; }
 
 /* Header and Navigation */
 nav {
@@ -284,7 +286,7 @@ section {
   background: var(--bg);
 }
 .project-header strong {
-  font-family: 'Maple Mono', monospace;
+  font-family: 'Commit Mono', monospace;
   font-size: 1.1em;
   color: var(--link);
   display: block;
@@ -367,8 +369,36 @@ hr::after {
   word-break: break-all;
 }
 
-/* code */
-.code-block-wrapper {
+/* Table of Contents */
+.table-of-contents {
+  background: var(--meta-bg);
+  padding: var(--space-md);
+  margin-bottom: var(--section-gap);
+  border-left: 3px solid var(--link);
+}
+.table-of-contents .toc-title {
+  font-family: 'Commit Mono', monospace;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: var(--link);
+}
+.table-of-contents nav ul {
+  list-style: none;
+  padding-left: 1em;
+  margin: 0;
+}
+.table-of-contents nav ul li {
+  margin-bottom: 0.2em;
+}
+.table-of-contents a {
+  text-decoration: none;
+  font-size: 0.95em;
+}
+.table-of-contents a:hover {
+  text-decoration: underline;
+}
   position: relative;
   margin-bottom: var(--space-lg);
   isolation: isolate; /* Create a new stacking context */
@@ -434,9 +464,28 @@ pre {
 code { background: var(--bg); }
 pre code { background: none; }
 
+/* Featured Image */
+.featured-image {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+.featured-image img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+}
+
+/* code */
+
 /* misc elements */
 img, iframe, video { max-width: 100%; }
 main { hyphens: auto; }
+
+main em, main i {
+  font-family: 'Maple Mono', monospace;
+  font-style: italic;
+}
 
 /* List Page and Taxonomy Styling */
 .post-list {
@@ -517,13 +566,17 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   background: var(--callout-bg);
 }
 .callout-title {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 0.85em;
+  font-weight: 700;
+  font-variation-settings: 'wght' 700;
+  font-size: 1.1em;
   margin-bottom: 0.5em;
-  font-family: 'Maple Mono', monospace;
+  font-family: 'Commit Mono', monospace;
 }
 .callout-content {
+  font-family: 'Commit Mono', monospace;
+  font-style: normal;
+}
+.callout-content em, .callout-content i {
   font-family: 'Maple Mono', monospace;
   font-style: italic;
 }
@@ -558,11 +611,11 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
 }
 
 .markdown-alert-title {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 0.85em;
+  font-weight: 700;
+  font-variation-settings: 'wght' 700;
+  font-size: 1.1em;
   margin-bottom: 0.5em;
-  font-family: 'Maple Mono', monospace;
+  font-family: 'Commit Mono', monospace;
 }
 
 .markdown-alert-note { border-left-color: var(--note-border); background: var(--note-bg); }
@@ -575,8 +628,8 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
 
 /* --- Syntax Highlighting Variables --- */
 .chroma .k, .chroma .kd, .chroma .kn, .chroma .kp, .chroma .kr, .chroma .kt { font-weight: bold; color: var(--syntax-k); }
-.chroma .c, .chroma .cm, .chroma .c1, .chroma .cs { font-style: italic; color: var(--syntax-c); }
-.chroma .s, .chroma .s1, .chroma .s2 { font-style: italic; color: var(--syntax-s); }
+.chroma .c, .chroma .cm, .chroma .c1, .chroma .cs { font-style: italic; color: var(--syntax-c); font-family: 'Maple Mono', monospace; }
+.chroma .s, .chroma .s1, .chroma .s2 { font-style: normal; color: var(--syntax-s); }
 .chroma .n, .chroma .na, .chroma .nb, .chroma .nc, .chroma .nf { color: var(--syntax-n); }
 .chroma .o, .chroma .ow { font-weight: bold; color: var(--syntax-n); }
 .bg { color: var(--fg); background-color: var(--bg); }
