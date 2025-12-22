@@ -3,9 +3,9 @@ title: "Docker for Mac and GUI applications"
 date: 2016-07-31
 tags: ["docker"]
 categories: ["archive"]
+featured_image: "/blog/docker/firefox.png"
 ---
 
-![](/blog/docker/firefox.png)
 
 A quick guide on how to run containers requiring a GUI with Docker for Mac and XQuartz.
 

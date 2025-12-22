@@ -3,9 +3,9 @@ title: "The Fujifilm X100 – a year in retrospect"
 date: 2012-06-12
 tags: ["photography"]
 categories: ["archive"]
+featured_image: "/blog/x100/x100_review_01.jpg"
 ---
 
-![](/blog/x100/x100_review_01.jpg)
 
 Simply put: the best camera I’ve ever owned.
 

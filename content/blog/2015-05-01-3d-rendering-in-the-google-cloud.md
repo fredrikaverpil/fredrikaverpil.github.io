@@ -3,9 +3,9 @@ title: "3D rendering in the Google Cloud"
 date: 2015-05-01
 tags: ["google-cloud", "python", "bash", "linux", "maya", "vray"]
 categories: ["archive"]
+featured_image: "/blog/gce/gce01.png"
 ---
 
-![](/blog/gce/gce01.png)
 
 [Guest blogging](https://cloudplatform.googleblog.com/2015/05/3D-imagery-rendering-in-the-cloud-with-Industriromantik-and-Compute-Engine.html) for Google!
 

@@ -3,9 +3,9 @@ title: "Building Windows Terminal"
 date: 2019-05-12
 tags: ["windows"]
 categories: ["archive"]
+featured_image: "/blog/terminal/terminal.png"
 ---
 
-![](/blog/terminal/terminal.png)
 
 The new Windows Terminal (codenamed "Cascadia") was [revealed](https://www.youtube.com/watch?v=8gw0rXPMMPE) at this year's [Microsoft Build conference](https://www.microsoft.com/en-us/build) and quickly received a lot of attention, as it addresses the decades-old terminal experience in Windows.
 

@@ -3,9 +3,9 @@ title: "Fujifilm Finepix X100 – LCD/EVF observations"
 date: 2012-08-09
 tags: ["photography"]
 categories: ["archive"]
+featured_image: "/blog/x100/x100_observations_01.jpg"
 ---
 
-![](/blog/x100/x100_observations_01.jpg)
 
 Some people have asked whether the “Preview Depth of Field” function is different from the regular LCD/EVF view or not (which it is), why the histogram is acting up (which it sometimes can do) and I’ve also seen questions regarding why exposure lock (AE-L) mapped to the AFL/AEL-button does not seem to be happening when pressing the AFL/AEL-button. Here’s an attempt to try and explain why this is so.
 

@@ -3,9 +3,9 @@ title: "Compiling PySide2 from source"
 date: 2016-08-17
 tags: ["pyside", "python"]
 categories: ["archive"]
+featured_image: "/blog/pyside2/pyside2_compile.png"
 ---
 
-![](/blog/pyside2/pyside2_compile.png)
 
 Here's how to compile PySide2 on Linux, Mac OS X and Windows.
 

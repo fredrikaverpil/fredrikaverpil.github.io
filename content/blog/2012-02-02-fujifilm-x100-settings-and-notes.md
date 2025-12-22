@@ -3,9 +3,9 @@ title: "Fujifilm X100 settings & notes"
 date: 2012-02-02
 tags: ["photography"]
 categories: ["archive"]
+featured_image: "/blog/x100/fujifilm_x100.jpg"
 ---
 
-![](/blog/x100/fujifilm_x100.jpg)
 
 Some facts about the camera which are easy to forget as well some notes to self.
 

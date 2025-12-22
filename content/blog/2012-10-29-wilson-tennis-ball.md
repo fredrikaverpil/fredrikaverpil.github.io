@@ -3,9 +3,9 @@ title: "Wilson tennis ball"
 date: 2012-10-29
 tags: ["portfolio"]
 categories: ["archive"]
+featured_image: "/blog/wilson/wilson.jpg"
 ---
 
-![](/blog/wilson/wilson.jpg)
 
 A personal weekend project. Everything created from scratch in 3D and completed within the same day (that rarely happens these days...). It feels good to be back! :)
 

@@ -3,9 +3,9 @@ title: "Generating a spherical HDR image with V-Ray for Maya"
 date: 2012-12-12
 tags: ["vray", "maya"]
 categories: ["archive"]
+featured_image: "/blog/vray/vray_spherical_hdr_01.png"
 ---
 
-![](/blog/vray/vray_spherical_hdr_01.png)
 
 1. Create a camera and place it where your objects resides which the HDR dome should affect.
 2. Add the V-Ray attribute “Camera Settings” to the camera and scroll down to “Extra Attributes” in the Attribute Editor. Here, set Type to “Spherical”. Override the FOV and set it to 360 degrees.

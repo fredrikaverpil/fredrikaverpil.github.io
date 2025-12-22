@@ -3,9 +3,9 @@ title: "Island of Lost Souls"
 date: 2007-02-10
 tags: ["portfolio"]
 categories: ["archive"]
+featured_image: "/blog/gallery/2007-lostsouls.jpg"
 ---
 
-![](/blog/gallery/2007-lostsouls.jpg)
 
 [Filmgate](https://www.filmgate.se) were offered the opportunity by Ghost A/S to work, as sub-contractors, on this exciting Zentropa production which at the time was the largest visual effects movie to be made in Scandinavia.
 
