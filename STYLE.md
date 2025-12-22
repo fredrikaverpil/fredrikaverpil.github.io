@@ -111,9 +111,21 @@ We use GitHub-style Markdown alerts. These are rendered via a custom Hugo render
 *   **Background:**
     *   **Default:** Uses `--meta-bg` when placed directly in the body.
     *   **Nested:** Uses `--button-bg` when inside a callout to ensure compounding contrast.
+*   **Style:** Minimalist container with a "dithered" shadow effect (CSS `radial-gradient` pattern).
 *   **Font:** `Commit Mono` for code, `Maple Mono` for comments (italicized).
 *   **Copy Code Button:** Uses the **Flat Button** style (see below).
     *   **Position:** Top-right corner of the code block.
+
+### Inline Code
+Backticked code within body text.
+
+*   **Background:**
+    *   **Default:** Uses `--meta-bg` (same as callouts) when in the body.
+    *   **Nested:** Uses `--button-bg` when inside a callout to maintain compounding contrast.
+*   **Typography:** Uses a **higher font weight** than the surrounding text to ensure distinction.
+*   **Padding:** Small horizontal padding (`0.2em`) to separate it from text.
+*   **Border:** None.
+*   **Radius:** 0.
 
 ### Flat Buttons
 Used for subtle actions where a boxy "layer" is not desired (e.g., the Copy Code button).
