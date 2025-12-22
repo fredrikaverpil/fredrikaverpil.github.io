@@ -3,9 +3,9 @@ title: "My Sublime Text 3 setup"
 date: 2016-05-20
 tags: ["python", "macos", "windows", "linux"]
 categories: ["archive"]
+featured_image: "/blog/editor/sublime_material.png"
 ---
 
-![](/blog/editor/sublime_material.png)
 
 This is my [Sublime Text 3](https://www.sublimetext.com) setup, with ambitions to create a custom Python IDE.
 

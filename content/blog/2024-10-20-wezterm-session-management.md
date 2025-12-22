@@ -3,9 +3,9 @@ title: "Session management in Wezterm (without tmux)"
 date: 2024-10-20
 tags: ["neovim", "terminal", "lua"]
 categories: ["archive"]
+featured_image: "/blog/wezterm/wezterm_workspaces.png"
 ---
 
-![Wezterm workspaces](/blog/wezterm/wezterm_workspaces.png)
 
 I've been using [Neovim](https://github.com/neovim/neovim) as my daily
 IDE/editor for a bit more than a year now. I've also been using

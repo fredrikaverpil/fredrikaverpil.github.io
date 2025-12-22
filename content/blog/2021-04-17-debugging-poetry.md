@@ -3,9 +3,9 @@ title: "Debugging Poetry with Visual Studio Code"
 date: 2021-04-17
 tags: ["python"]
 categories: ["archive"]
+featured_image: "/blog/poetry_debug/debug.png"
 ---
 
-![](/blog/poetry_debug/debug.png)
 
 A guide on how to set up debugging of [Poetry](https://python-poetry.org/) in [Visual Studio Code](https://code.visualstudio.com/), using [Pipx](https://github.com/pipxproject/pipx) and [Pyenv](https://github.com/pyenv/pyenv).
 

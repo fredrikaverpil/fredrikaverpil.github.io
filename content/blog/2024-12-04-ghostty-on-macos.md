@@ -3,9 +3,8 @@ title: "Ghostty on macOS"
 date: 2024-12-04
 tags: ["terminal"]
 categories: ["archive"]
+featured_image: "/blog/ghostty/ghostty-beta.png"
 ---
-
-![Ghostty](/blog/ghostty/ghostty-beta.png)
 
 I got private beta access (quite late), and
 [Ghostty](https://mitchellh.com/ghostty) is probably going to be out in its

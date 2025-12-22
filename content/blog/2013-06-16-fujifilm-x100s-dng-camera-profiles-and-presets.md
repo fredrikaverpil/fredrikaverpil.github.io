@@ -3,9 +3,9 @@ title: "Fujifilm X100S camera profiles and presets"
 date: 2013-06-16
 tags: ["photography"]
 categories: ["archive"]
+featured_image: "/blog/x100s/xrite_passport.jpg"
 ---
 
-![](/blog/x100s/xrite_passport.jpg)
 
 ### Background
 
