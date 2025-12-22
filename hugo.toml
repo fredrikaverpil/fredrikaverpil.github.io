@@ -7,6 +7,9 @@ copyright = '© Fredrik Averpil'
 [pagination]
   pagerSize = 10
 
+[permalinks]
+  blog = '/blog/:year/:month/:day/:slug/'
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -46,7 +49,7 @@ copyright = '© Fredrik Averpil'
     weight = 1
   [[menu.main]]
     name = "Blog"
-    url = "/post/"
+    url = "/blog/"
     weight = 2
   [[menu.main]]
     name = "Tags"
