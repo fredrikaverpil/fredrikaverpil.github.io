@@ -487,6 +487,32 @@ main em, main i {
   font-style: italic;
 }
 
+/* Giscus Load Button */
+.load-comments-wrapper {
+  background-color: var(--meta-bg);
+  padding: var(--space-sm);
+  text-align: center;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+.load-comments-btn {
+  display: inline-block;
+  padding: 5px 10px;
+  font-family: 'Commit Mono', monospace;
+  font-size: 1em;
+  background-color: var(--bg);
+  color: var(--fg);
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.load-comments-btn:hover {
+  background-color: var(--link);
+  color: var(--bg);
+}
+
 /* List Page and Taxonomy Styling */
 .post-list {
   list-style: none;
