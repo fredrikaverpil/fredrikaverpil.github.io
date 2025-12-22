@@ -8,10 +8,10 @@ choices for the **Fredrik Averpil** blog/portfolio.
 - **Aesthetic:** Minimalist, "Terminal/Code Editor" vibe. heavily inspired by
   the utilitarian beauty of **Plan 9 from Bell Labs**, **Acme**, and classic
   UNIX environments.
-- **Focus:** Content-first, high readability, low distraction. Form follows
-  function.
-- **System:** Uses the **Golden Ratio (φ ≈ 1.618)** for spacing and vertical
-  rhythm, bringing natural harmony to the stark, mechanical aesthetic.
+*   **Focus:** Content-first, high readability, low distraction. Form follows function.
+*   **System:** Uses the **Golden Ratio (φ ≈ 1.618)** for spacing and vertical rhythm, bringing natural harmony to the stark, mechanical aesthetic.
+*   **No Borders:** We generally avoid borders on content blocks (code, cards). Instead, we rely on background color layers and shadows to define structure.
+*   **Blocky Aesthetic:** All UI elements must have `border-radius: 0`. No rounded corners.
 
 ## 2. Typography
 
@@ -86,24 +86,25 @@ Spacing follows a strict Golden Ratio scale.
 ## 5. Components
 
 ### Callouts / Alerts
+We use GitHub-style Markdown alerts. These are rendered via a custom Hugo render hook (`layouts/_default/_markup/render-blockquote.html`).
 
-We use GitHub-style Markdown alerts. These are rendered via a custom Hugo render
-hook (`layouts/_default/_markup/render-blockquote.html`).
+**Styling Rules:**
+*   **Background:** Neutral background (`--meta-bg`).
+*   **Border:** Only the **left vertical line** is colored based on the callout type.
 
 **Syntax:**
-
 ```markdown
-> [!NOTE] Useful information.
+> [!NOTE]
+> Useful information.
 ```
 
 **Supported Types:**
-
-- `[!NOTE]` / `[!INFO]` (Blue)
-- `[!TIP]` (Green)
-- `[!WARNING]` (Orange/Brown)
-- `[!IMPORTANT]` / `[!CAUTION]` (Red)
-- `[!EXAMPLE]` (Gray)
-- `[!QUOTE]` (Gray/Italic)
+*   `[!NOTE]` / `[!INFO]`
+*   `[!TIP]`
+*   `[!WARNING]`
+*   `[!IMPORTANT]` / `[!CAUTION]`
+*   `[!EXAMPLE]`
+*   `[!QUOTE]` (Italic text)
 
 ### Code Blocks
 *   **Rendering:** Hugo `chroma` syntax highlighting.
@@ -111,7 +112,7 @@ hook (`layouts/_default/_markup/render-blockquote.html`).
 *   **Font:** `Commit Mono` for code, `Maple Mono` for comments (italicized).
 *   **Copy Code Button:**
     *   **Position:** Top-right corner of the code block.
-    *   **Style:** Minimalist button using `--button-bg` and `--border`.
+    *   **Style:** Flat (transparent background), using `--fg-dim` for the icon.
     *   **Interaction:**
         *   **Hover:** Turns **blue** (`--link`) with `--bg` text/icon color, matching other UI elements.
         *   **Action:** Copies code to clipboard and briefly toggles the icon to a "check" mark.
@@ -119,6 +120,15 @@ hook (`layouts/_default/_markup/render-blockquote.html`).
 ### Navigation
 *   Simple top navigation bar.
 *   Links defined in `hugo.toml` under `[menu.main]`.
+
+### Table of Contents (TOC)
+Used on single post pages to aid navigation.
+
+*   **Background:** Neutral background (`--meta-bg`).
+*   **Padding:** Matches callouts (`var(--space-lg)`).
+*   **Border:** The left vertical line must match the **info callout** (4px solid `--info-border`).
+*   **Vertical Rhythm:** Spacing between items must remain consistent regardless of indentation. This is achieved by matching nested `ul` top margins with `li` bottom margins.
+*   **Typography:** The title uses `Commit Mono` bold and matches callout header sizing. Links follow global link styling.
 
 ### Tags (Two-Colored Buttons)
 Tags are specialized "two-colored" interactive buttons used for taxonomies.
@@ -140,6 +150,14 @@ Interactive cards displayed in a grid on the homepage (typically for projects).
 *   **Hover State:**
     *   Entire card turns **blue** (`--link`).
     *   **All text** (Title and Description) switches to the background color (`--bg`) to ensure high contrast.
+
+### Dithered Shadows
+Used for "Cards" and "Code Blocks" to provide retro-style depth.
+
+*   **Technique:** Simulated dither pattern using `radial-gradient` (to avoid text-rendering issues with actual ASCII characters).
+*   **Color Rules:**
+    *   **Light Mode:** Uses a soft gray to create a traditional shadow.
+    *   **Dark Mode:** Must use a **very dark or black** color to ensure the dithered area looks like a shadow rather than a "glow" against the deep background.
 
 ## 6. Interactions
 
