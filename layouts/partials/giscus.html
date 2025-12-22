@@ -1,0 +1,72 @@
+{{/*
+  layouts/partials/giscus.html
+  Dynamically loads Giscus comments and handles theme synchronization.
+*/}}
+<div id="giscus-container" class="giscus-comments"></div>
+
+<script>
+  (function() {
+    // Function to dynamically load the Giscus script
+    function loadGiscus() {
+      const container = document.getElementById('giscus-container');
+      if (!container) return;
+      container.innerHTML = ''; // Clean container
+
+      const theme = document.body.classList.contains('dark') ? 'dark' : 'light';
+      
+      const giscusScript = document.createElement('script');
+      giscusScript.src = 'https://giscus.app/client.js';
+      giscusScript.setAttribute('data-repo', 'fredrikaverpil/fredrikaverpil.github.io');
+      giscusScript.setAttribute('data-repo-id', 'MDEwOlJlcG9zaXRvcnkxMzEwNDU4Njc=');
+      giscusScript.setAttribute('data-category', 'General');
+      giscusScript.setAttribute('data-category-id', 'DIC_kwDOB8-Z684CU9zc');
+      giscusScript.setAttribute('data-mapping', 'title');
+      giscusScript.setAttribute('data-strict', '0');
+      giscusScript.setAttribute('data-reactions-enabled', '1');
+      giscusScript.setAttribute('data-emit-metadata', '0');
+      giscusScript.setAttribute('data-input-position', 'bottom');
+      giscusScript.setAttribute('data-theme', theme);
+      giscusScript.setAttribute('data-lang', 'en');
+      giscusScript.setAttribute('crossorigin', 'anonymous');
+      giscusScript.async = true;
+
+      container.appendChild(giscusScript);
+    }
+
+    // Function to update an already-loaded Giscus theme
+    function setGiscusTheme(theme) {
+      const giscusFrame = document.querySelector('iframe.giscus-frame');
+      if (giscusFrame && giscusFrame.contentWindow) {
+        giscusFrame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          'https://giscus.app'
+        );
+      }
+    }
+
+    // Load Giscus on initial page load, after the DOM is ready
+    document.addEventListener('DOMContentLoaded', loadGiscus);
+
+    // Update Giscus theme when the site's theme toggle is clicked
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        // Use a minimal timeout to allow the body class to update before we check it
+        setTimeout(() => {
+          const currentTheme = document.body.classList.contains('dark') ? 'dark' : 'light';
+          setGiscusTheme(currentTheme);
+        }, 10); 
+      });
+    }
+
+    // Optional: Update Giscus if the system theme changes and no manual override is set
+    if (window.matchMedia) {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        if (!localStorage.getItem('theme')) { // Only act if no manual override
+          const newTheme = event.matches ? "dark" : "light";
+          setGiscusTheme(newTheme);
+        }
+      });
+    }
+  })();
+</script>
