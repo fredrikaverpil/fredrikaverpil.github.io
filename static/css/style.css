@@ -389,6 +389,36 @@ hr::after {
   border: 1px solid var(--border);
 }
 
+.copy-code-button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  z-index: 2;
+  padding: 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fg-dim);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.copy-code-button svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+.copy-code-button:hover {
+  background-color: var(--meta-bg);
+}
+
+/* Removed colored feedback classes */
+
+
 pre {
   border: 1px solid var(--border);
   position: relative;
@@ -508,6 +538,38 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
 .callout-example { border-left-color: var(--example-border); background: var(--example-bg); }
 .callout-info { border-left-color: var(--info-border); background: var(--info-bg); }
 .callout-quote { border-left-color: var(--quote-border); background: var(--quote-bg); }
+
+/* Fallback styling for blockquotes that Hugo might not have parsed into .callout classes */
+blockquote.callout-note, blockquote[class*="note"] { border-left-color: var(--note-border) !important; background: var(--note-bg) !important; }
+blockquote.callout-warning, blockquote[class*="warning"] { border-left-color: var(--warn-border) !important; background: var(--warn-bg) !important; }
+blockquote.callout-tip, blockquote[class*="tip"] { border-left-color: var(--tip-border) !important; background: var(--tip-bg) !important; }
+blockquote.callout-important, blockquote[class*="important"] { border-left-color: var(--imp-border) !important; background: var(--imp-bg) !important; }
+blockquote.callout-example, blockquote[class*="example"] { border-left-color: var(--example-border) !important; background: var(--example-bg) !important; }
+blockquote.callout-info, blockquote[class*="info"] { border-left-color: var(--info-border) !important; background: var(--info-bg) !important; }
+blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--quote-border) !important; background: var(--quote-bg) !important; }
+
+/* Hugo Native Markdown Alerts */
+.markdown-alert {
+  border-left: 4px solid var(--fg-dim);
+  padding: var(--space-lg);
+  margin: var(--space-lg) 0;
+  background: var(--callout-bg);
+}
+
+.markdown-alert-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  margin-bottom: 0.5em;
+  font-family: 'Maple Mono', monospace;
+}
+
+.markdown-alert-note { border-left-color: var(--note-border); background: var(--note-bg); }
+.markdown-alert-tip { border-left-color: var(--tip-border); background: var(--tip-bg); }
+.markdown-alert-warning { border-left-color: var(--warn-border); background: var(--warn-bg); }
+.markdown-alert-important { border-left-color: var(--imp-border); background: var(--imp-bg); }
+.markdown-alert-caution { border-left-color: var(--imp-border); background: var(--imp-bg); }
+
 
 
 /* --- Syntax Highlighting Variables --- */
