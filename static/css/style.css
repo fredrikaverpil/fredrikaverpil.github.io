@@ -368,13 +368,39 @@ hr::after {
 }
 
 /* code */
+.code-block-wrapper {
+  position: relative;
+  margin-bottom: var(--space-lg);
+  isolation: isolate; /* Create a new stacking context */
+}
+
+.code-block-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: transparent;
+  /* Simulating ░ character with a dither pattern */
+  background-image: radial-gradient(var(--fg-dim) 1px, transparent 0);
+  background-size: 3px 3px;
+  border: 1px solid var(--border);
+}
+
 pre {
   border: 1px solid var(--border);
-  box-shadow: 5px 5px 5px var(--meta-bg);
+  position: relative;
+  box-shadow: none;
   padding: 1em;
   overflow-x: auto;
   background-color: var(--bg) !important;
+  margin: 0; /* Reset margin as wrapper handles it */
+  z-index: 1; /* Ensure code sits above shadow */
 }
+
+
 code { background: var(--bg); }
 pre code { background: none; }
 
