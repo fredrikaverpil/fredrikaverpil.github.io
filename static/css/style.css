@@ -402,7 +402,7 @@ section {
   align-items: center;
   gap: 1.5em;
   flex-wrap: wrap;
-  margin-top: 1em;
+  margin-top: 0;
 }
 .footer-icons {
   display: flex;
@@ -420,14 +420,20 @@ section {
 }
 footer {
   margin-top: var(--section-gap);
+  background-color: var(--meta-bg);
+  padding: var(--space-md);
   text-align: center;
   font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 hr {
   border: none;
   background: none;
   text-align: center;
-  margin: var(--space-lg) 0;
+  margin: var(--section-gap) 0 var(--space-lg) 0;
   padding: 0;
   height: auto;
   color: var(--warn-border);
@@ -568,7 +574,10 @@ pre code {
 
 /* misc elements */
 img, iframe, video { max-width: 100%; }
-main { hyphens: auto; }
+main { 
+  hyphens: auto;
+  margin-bottom: var(--section-gap);
+}
 
 main em, main i {
   font-family: 'Maple Mono', monospace;
@@ -580,8 +589,8 @@ main em, main i {
   background-color: var(--meta-bg);
   padding: var(--space-sm);
   text-align: center;
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-lg);
+  margin-top: var(--section-gap);
+  margin-bottom: var(--section-gap);
 }
 .load-comments-btn {
   display: inline-block;
