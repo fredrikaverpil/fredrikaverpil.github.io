@@ -17,13 +17,16 @@
 <!-- Projects Section -->
 <section id="projects">
   <h2>Projects</h2>
-  <ul class="project-list">
+  <div class="project-grid">
     {{ range .Site.Params.projects }}
-    <li>
-      <a href="{{ .url }}"><strong>{{ .name }}</strong></a>: {{ .description }}
-    </li>
+    <a href="{{ .url }}" class="project-card" target="_blank" rel="noopener">
+      <div class="project-header">
+        <strong>{{ .name }}</strong>
+      </div>
+      <p class="project-desc">{{ .description }}</p>
+    </a>
     {{ end }}
-  </ul>
+  </div>
 </section>
 
 <!-- About Section -->
