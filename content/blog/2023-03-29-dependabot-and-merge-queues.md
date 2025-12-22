@@ -22,7 +22,7 @@ $ gh pr list
 
 -Spits out coffee-
 
-## Automating dependabot :simple-dependabot: PR merging
+## Automating dependabot PR merging
 
 > [!WARNING] Don't try this at home, kids
 > 

@@ -4,7 +4,7 @@ date: 2022-12-17
 tags: ["monitoring", "python"]
 ---
 
-When using [:simple-datadog: Datadog](https://datadog.com) for monitoring, Datadog will only record a trace if there is an incoming request.
+When using [Datadog](https://datadog.com) for monitoring, Datadog will only record a trace if there is an incoming request.
 
 If there is no incoming request, such as if a cronjob is running, then Datadog will not record a trace and you might not be alerted by an error.
 
