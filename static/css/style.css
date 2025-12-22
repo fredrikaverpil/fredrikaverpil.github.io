@@ -535,6 +535,7 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
 .callout-warning { border-left-color: var(--warn-border); background: var(--warn-bg); }
 .callout-tip { border-left-color: var(--tip-border); background: var(--tip-bg); }
 .callout-important { border-left-color: var(--imp-border); background: var(--imp-bg); }
+.callout-caution { border-left-color: var(--imp-border); background: var(--imp-bg); }
 .callout-example { border-left-color: var(--example-border); background: var(--example-bg); }
 .callout-info { border-left-color: var(--info-border); background: var(--info-bg); }
 .callout-quote { border-left-color: var(--quote-border); background: var(--quote-bg); }
