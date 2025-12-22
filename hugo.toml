@@ -54,7 +54,10 @@ copyright = '© Fredrik Averpil'
     url = "https://linkedin.com/in/fredrik"
   [[params.social]]
     name = "RSS"
-    url = "index.xml"
+    url = "/index.xml"
+  [[params.social]]
+    name = "Feedly"
+    url = "https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Ffredrikaverpil.github.io%2Ffeed_rss_created.xml"
 
 [menu]
   [[menu.main]]
