@@ -6,7 +6,7 @@ serve:
 	hugo server -D
 
 build:
-	hugo --minify
+	hugo --minify --environment production
 	npx pagefind --site public
 
 clean:

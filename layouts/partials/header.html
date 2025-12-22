@@ -3,7 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    
+    <!-- SEO & Meta -->
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    {{ with .Description }}<meta name="description" content="{{ . }}">{{ else }}{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}{{ end }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    
+    <!-- Social Media (Open Graph & Twitter) -->
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    
+    <!-- JSON-LD Structured Data -->
+    {{ partial "seo_schema.html" . }}
+
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/github-link.css" | relURL }}" />
