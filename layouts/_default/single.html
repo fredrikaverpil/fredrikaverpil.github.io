@@ -12,13 +12,15 @@
 {{ end }}
 
 <main data-pagefind-body>
-{{ if or .Params.toc (and (ne .Params.toc false) (gt .WordCount 400)) }}
+{{ $toc := .TableOfContents }}
+{{ $lis := findRE "<li>" $toc }}
+{{ if and (or .Params.toc (and (ne .Params.toc false) (gt .WordCount 400))) (ge (len $lis) 2) }}
   <aside class="table-of-contents">
     <div class="toc-title">
       <svg class="callout-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M3 9h14V7H3v2zm0 4h14v-2H3v2zm0 4h14v-2H3v2zm16 0h2v-2h-2v2zm0-10v2h2V7h-2zm0 6h2v-2h-2v2z"></path></svg>
       Table of Contents
     </div>
-    {{ .TableOfContents }}
+    {{ $toc }}
   </aside>
 {{ end }}
 
