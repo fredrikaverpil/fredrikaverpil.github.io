@@ -2,7 +2,6 @@
 title: "Official PySide2 wheels!"
 date: 2018-03-09
 tags: ["python", "pyside"]
-categories: ["archive"]
 ---
 
 The Qt Company has released official and pip-installable PySide2 wheel snapshots!

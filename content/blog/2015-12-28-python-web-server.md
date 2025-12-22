@@ -2,7 +2,6 @@
 title: "Python simple web server"
 date: 2015-12-28
 tags: ["python"]
-categories: ["archive"]
 ---
 
 The absolutely fastest way to get a simple web server up and running using

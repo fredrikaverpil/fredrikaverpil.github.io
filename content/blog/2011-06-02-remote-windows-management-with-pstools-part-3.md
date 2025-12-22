@@ -2,7 +2,6 @@
 title: "Remote Windows management with PsTools, part 3"
 date: 2011-06-02
 tags: ["pstools", "windows"]
-categories: ["archive"]
 ---
 
 In this third article on PsTools I talk about how to control V-Ray DR slaves remotely with the PsTools suite.

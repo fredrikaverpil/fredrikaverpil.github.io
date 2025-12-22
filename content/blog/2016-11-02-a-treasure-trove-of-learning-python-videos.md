@@ -2,7 +2,6 @@
 title: "A treasure trove of learning Python videos"
 date: 2016-11-02
 tags: ["python"]
-categories: ["archive"]
 ---
 
 Here's a fantastic resource for anyone who wish they could learn from a Python

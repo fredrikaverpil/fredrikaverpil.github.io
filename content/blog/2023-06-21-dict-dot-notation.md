@@ -2,7 +2,6 @@
 title: "Access Python dict using dot notation"
 date: 2023-06-21
 tags: ["python"]
-categories: ["archive"]
 ---
 
 Recently, an addition to Python 3.12 might be reverted in [cpython#105948](https://github.com/python/cpython/pull/105948), where a new `json.AttrDict` class could enable accessing a dict using dot notation using a `json.load` hook.

@@ -2,7 +2,6 @@
 title: "Flickr dumpr"
 date: 2015-09-24
 tags: ["python"]
-categories: ["archive"]
 ---
 
 Downloads all of your flickr albums (original photo/video files). Requires Python 2.7 with the flickrapi module.

@@ -2,7 +2,6 @@
 title: "Fixing Python's insecure platform warning"
 date: 2015-09-15
 tags: ["python", "linux"]
-categories: ["archive"]
 ---
 
 Here’s how to fix that nagging InsecurePlatformWarning warning in Python.

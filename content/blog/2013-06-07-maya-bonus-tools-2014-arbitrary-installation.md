@@ -2,7 +2,6 @@
 title: "Maya Bonus Tools 2014 – arbitrary installation"
 date: 2013-06-07
 tags: ["maya"]
-categories: ["archive"]
 ---
 
 Here’s how to install Maya Bonus Tools 2014 in an arbitrary location. I’ve covered two different methods (which can actually be mixed, if you will). The simple method (#1) is probably the best bet for most people while the “thorough” method (#2) could be interesting for some other folks. Take your pick.

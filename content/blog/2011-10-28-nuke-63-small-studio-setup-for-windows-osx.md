@@ -2,7 +2,6 @@
 title: "Nuke 6.3 small studio setup for Windows/OS X"
 date: 2011-10-28
 tags: ["nuke", "python"]
-categories: ["archive"]
 ---
 
 This is a quick guide to setting Nuke 6.3 up with a custom menu and make it work more seamlessly across operating systems.

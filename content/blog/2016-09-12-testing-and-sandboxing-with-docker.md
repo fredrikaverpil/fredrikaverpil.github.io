@@ -2,7 +2,6 @@
 title: "Testing and sandboxing with Docker"
 date: 2016-09-12
 tags: ["docker"]
-categories: ["archive"]
 ---
 
 A quick way to enter an interactive docker container:

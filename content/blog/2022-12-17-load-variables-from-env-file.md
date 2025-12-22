@@ -2,7 +2,6 @@
 title: "Load variables from .env file into current environment"
 date: 2022-12-18
 tags: ["bash"]
-categories: ["archive"]
 ---
 
 Load an .env file into the environment prior to running something which requires the environment variables:

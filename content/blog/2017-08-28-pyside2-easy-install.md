@@ -2,7 +2,6 @@
 title: "PySide2 easy install!"
 date: 2017-08-28
 tags: ["python", "pyside", "pyqt", "qt.py"]
-categories: ["archive"]
 ---
 
 Yesterday, [@jschueller](https://github.com/jschueller) added [`pyside2-feedstock`](https://github.com/conda-forge/pyside2-feedstock) to [conda-forge](https://conda-forge.org). This means we can now *finally* install PySide2 **easily** in Python 2.7, 3.5 and 3.6 on Windows, Linux and macOS using conda.

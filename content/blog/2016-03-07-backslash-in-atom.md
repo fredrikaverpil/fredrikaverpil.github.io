@@ -2,7 +2,6 @@
 title: "Backslash in Atom"
 date: 2016-03-07
 tags: ["windows"]
-categories: ["archive"]
 ---
 
 On Windows 10, Swedish keyboard. When I hit `AltGr` (right `Alt` button) and `+` (which is supposed to give me `\`), I get nothing in [Atom](https://atom.io).

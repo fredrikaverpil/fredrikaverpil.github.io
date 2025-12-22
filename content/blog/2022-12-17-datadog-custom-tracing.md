@@ -2,7 +2,6 @@
 title: "Datadog and custom tracing"
 date: 2022-12-17
 tags: ["monitoring", "python"]
-categories: ["archive"]
 ---
 
 When using [:simple-datadog: Datadog](https://datadog.com) for monitoring, Datadog will only record a trace if there is an incoming request.

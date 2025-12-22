@@ -2,7 +2,6 @@
 title: "Create .app to launch Python script in Mac OS X"
 date: 2012-06-04
 tags: ["python", "macos"]
-categories: ["archive"]
 ---
 
 Quick step-by-step to create clickable .app to launch your python scripts.

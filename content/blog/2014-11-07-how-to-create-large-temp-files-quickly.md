@@ -2,7 +2,6 @@
 title: "How to create large temp files quickly (for testing purposes)"
 date: 2014-11-07
 tags: ["bash"]
-categories: ["archive"]
 ---
 
 Quick and dirty way to just create a 10GB temp file for testing e.g. network transfer speeds.

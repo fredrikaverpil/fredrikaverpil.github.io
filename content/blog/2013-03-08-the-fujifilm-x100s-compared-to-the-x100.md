@@ -2,7 +2,6 @@
 title: "The Fujifilm X100S – compared to the X100"
 date: 2013-03-08
 tags: ["photography"]
-categories: ["archive"]
 featured_image: "/blog/x100s/fredrik_x100s.jpg"
 ---
 

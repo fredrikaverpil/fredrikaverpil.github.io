@@ -2,7 +2,6 @@
 title: "Installing Poetry system-wide"
 date: 2021-11-13
 tags: ["python"]
-categories: ["archive"]
 ---
 
 I recently got some feedback (thank you [@simmel](https://github.com/simmel), much appreciated!) on a previous post on [debugging Poetry](../2021-04-17-debugging-poetry/). I then realized it was a bit hard to follow if all you wanted to do was to install Poetry globally, with some added control from the [default installation method](https://python-poetry.org/docs/#installation).

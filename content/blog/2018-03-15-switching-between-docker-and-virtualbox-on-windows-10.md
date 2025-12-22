@@ -2,7 +2,6 @@
 title: "Switching between Docker and VirtualBox on Windows 10"
 date: 2018-03-15
 tags: ["docker", "windows"]
-categories: ["archive"]
 ---
 
 As outlined [here](https://stackoverflow.com/a/40261418/2448495), Docker for Windows requires Hyper-V. This needs to be disabled before you can run VirtualBox.

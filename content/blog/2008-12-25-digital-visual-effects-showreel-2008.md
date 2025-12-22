@@ -2,7 +2,6 @@
 title: "Digital visual effects showreel 2008"
 date: 2008-12-25
 tags: ["portfolio"]
-categories: ["archive"]
 ---
 
 <p>

@@ -2,7 +2,6 @@
 title: "Copying Maya to network share"
 date: 2015-04-15
 tags: ["maya", "bash"]
-categories: ["archive"]
 ---
 
 If you would like to run a thin client installation of Maya, which means you run it off a network share rather from a local installation, you need to make sure to copy symlinks on Linux.

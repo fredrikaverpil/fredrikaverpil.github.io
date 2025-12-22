@@ -2,7 +2,6 @@
 title: "Kenny Begins"
 date: 2009-12-10
 tags: ["portfolio"]
-categories: ["archive"]
 ---
 
 <p>

@@ -2,7 +2,6 @@
 title: "Developing with Apple Silicon"
 date: 2021-12-17
 tags: ["macos"]
-categories: ["archive"]
 ---
 
 In software development, certain software were not designed to run on the ARM-based Apple Silicon. Thankfully, there are workarounds to install and run the Intel version of these applications. Like for the rest of this blog, this post aims to serve as a personal notebook and also for sharing this knowledge.

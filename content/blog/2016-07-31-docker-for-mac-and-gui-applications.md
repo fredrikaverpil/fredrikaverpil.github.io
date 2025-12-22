@@ -2,7 +2,6 @@
 title: "Docker for Mac and GUI applications"
 date: 2016-07-31
 tags: ["docker"]
-categories: ["archive"]
 featured_image: "/blog/docker/firefox.png"
 ---
 

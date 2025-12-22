@@ -2,7 +2,6 @@
 title: "Session management in Wezterm (without tmux)"
 date: 2024-10-20
 tags: ["neovim", "terminal", "lua"]
-categories: ["archive"]
 featured_image: "/blog/wezterm/wezterm_workspaces.png"
 ---
 

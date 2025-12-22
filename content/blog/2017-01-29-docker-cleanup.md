@@ -2,7 +2,6 @@
 title: "Docker cleanup"
 date: 2017-01-29
 tags: ["docker"]
-categories: ["archive"]
 ---
 
 Quick and easy way to remove all containers (and their volumes) as well as all images:

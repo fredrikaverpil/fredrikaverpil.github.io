@@ -2,7 +2,6 @@
 title: "CentOS 6 yum errors (and fixes)"
 date: 2015-11-18
 tags: ["linux"]
-categories: ["archive"]
 ---
 
 ### Issues

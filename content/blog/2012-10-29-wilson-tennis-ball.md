@@ -2,7 +2,6 @@
 title: "Wilson tennis ball"
 date: 2012-10-29
 tags: ["portfolio"]
-categories: ["archive"]
 featured_image: "/blog/wilson/wilson.jpg"
 ---
 

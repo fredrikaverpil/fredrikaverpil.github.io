@@ -2,7 +2,6 @@
 title: "Metadata and EXIF in Nuke"
 date: 2012-08-18
 tags: ["nuke", "python"]
-categories: ["archive"]
 ---
 
 In [The Foundry’s Nuke](https://www.thefoundry.co.uk/products/nuke/), accessing the metadata of an image sequence’s Read node can be done via the ViewMetaData node. But if you wish to extract values out of the metadata and e.g. burn the timestamp for each frame into a render, it is actually easier to just do some python scripting.

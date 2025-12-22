@@ -2,7 +2,6 @@
 title: "Google Hangouts Chat incoming webhook using Python standard library only"
 date: 2018-06-06
 tags: ["python"]
-categories: ["archive"]
 ---
 
 The [official docs on setting up an incoming webhook](https://developers.google.com/hangouts/chat/quickstart/incoming-bot-python) uses the third-party [httplib2](https://github.com/httplib2/httplib2), which is not part of the Python 3.6 standard library. Here's a quick snippet using only the standard library instead:

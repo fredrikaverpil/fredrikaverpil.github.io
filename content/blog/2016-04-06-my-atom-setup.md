@@ -2,7 +2,6 @@
 title: "My Atom setup"
 date: 2016-04-06
 tags: ["python"]
-categories: ["archive"]
 ---
 
 I'm in love with [Atom](https://atom.io). Despite it being slow on large

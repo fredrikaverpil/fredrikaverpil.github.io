@@ -2,7 +2,6 @@
 title: "Installing Maya 2016 on Ubuntu 14.04 (trusty)"
 date: 2015-09-10
 tags: ["linux", "maya"]
-categories: ["archive"]
 featured_image: "/blog/maya_install/maya_ubuntu.png"
 ---
 

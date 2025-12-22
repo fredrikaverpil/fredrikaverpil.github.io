@@ -2,7 +2,6 @@
 title: "Search and replace"
 date: 2014-02-16
 tags: ["python"]
-categories: ["archive"]
 ---
 
 A very simple and quite rudimental search and replace script with a UI. It will only search and replace _contents_ of files and not the filenames.

@@ -2,7 +2,6 @@
 title: "Maya and relativity"
 date: 2014-06-07
 tags: ["maya"]
-categories: ["archive"]
 ---
 
 A short note on how to work with relative paths in Autodesk’s Maya.

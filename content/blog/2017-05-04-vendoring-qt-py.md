@@ -2,7 +2,6 @@
 title: "Vendoring Qt.py"
 date: 2017-05-04
 tags: ["python", "qt.py", "pyside", "pyqt"]
-categories: ["archive"]
 ---
 
 How do you know a user doesn't have the wrong version of [Qt.py](https://github.com/mottosso/Qt.py) when running your application?  

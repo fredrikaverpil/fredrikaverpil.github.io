@@ -2,7 +2,6 @@
 title: "Enabling Iray in Maya 2011"
 date: 2010-05-27
 tags: ["maya", "mentalray"]
-categories: ["archive"]
 ---
 
 Mental images and/or Autodesk has intentionally not made Iray available in the latest release of Autodesk Maya; version 2011. But there is a workaround...

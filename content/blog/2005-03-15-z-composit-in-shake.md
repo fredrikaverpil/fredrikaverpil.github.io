@@ -2,7 +2,6 @@
 title: "Z composit with IFF in Shake"
 date: 2005-03-15
 tags: ["compositing"]
-categories: ["archive"]
 ---
 
 Utilizing the Z channel (depth information) of Maya’s IFF files in Shake is a bit tricky because of the way Maya stores depth information… here’s a quick tutorial to get you started.

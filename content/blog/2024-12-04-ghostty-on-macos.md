@@ -2,7 +2,6 @@
 title: "Ghostty on macOS"
 date: 2024-12-04
 tags: ["terminal"]
-categories: ["archive"]
 featured_image: "/blog/ghostty/ghostty-beta.png"
 ---
 

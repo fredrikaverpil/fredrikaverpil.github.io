@@ -2,7 +2,6 @@
 title: "Contributing to PySide2"
 date: 2017-09-30
 tags: ["python", "pyside"]
-categories: ["archive"]
 ---
 
 This is reminder-to-self about how to get set up and contribute to PySide2 using Gerrit. It could also be a fun read "on the bus" before actually setting this up yourself, to get an overview on what's required to get up and running with Gerrit.

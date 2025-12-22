@@ -2,7 +2,6 @@
 title: "Catching string from stdout with Python"
 date: 2013-10-11
 tags: ["python"]
-categories: ["archive"]
 ---
 
 Using a Python “wrapper” script you can catch the output of an executing application, which is very useful when you want to perform certain tasks depending on what is being printed to stdout by the application.

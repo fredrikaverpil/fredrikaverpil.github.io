@@ -2,7 +2,6 @@
 title: "PyQt4 in Maya 2014 on OS X"
 date: 2013-06-06
 tags: ["maya", "python"]
-categories: ["archive"]
 ---
 
 There are some official Autodesk [instructions](https://around-the-corner.typepad.com/adn/2013/04/building-sip-and-pyqt-for-maya-2014.html) floating around on how to get PyQt4 support in of Maya 2014, but I found them a bit unclear and hard to follow. I also found an error (although minor)… so I’ve typed down my own little step-by-step reminder below, based off that.

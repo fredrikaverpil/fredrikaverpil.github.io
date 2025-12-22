@@ -2,7 +2,6 @@
 title: "Fujifilm Finepix X100 – RAW and film simulation"
 date: 2012-08-04
 tags: ["photography"]
-categories: ["archive"]
 featured_image: "/blog/x100/x100_filmsim_01.jpg"
 ---
 

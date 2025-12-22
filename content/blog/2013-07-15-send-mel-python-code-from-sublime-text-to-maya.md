@@ -2,7 +2,6 @@
 title: "Send MEL/Python commands from Sublime Text to Maya"
 date: 2013-07-15
 tags: ["python", "pyside", "maya"]
-categories: ["archive"]
 ---
 
 This is a step by step to set you up with sending selected MEL/Python code snippets or whole scripts from [Sublime Text](https://www.sublimetext.com) to Maya using Justin Israel’s [MayaSublime](https://github.com/justinfx/MayaSublime) package.

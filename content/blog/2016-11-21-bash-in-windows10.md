@@ -2,7 +2,6 @@
 title: "Bash on Ubuntu on Windows"
 date: 2016-11-21
 tags: ["windows", "linux", "bash"]
-categories: ["archive"]
 ---
 
 This is a quick intro to – and some personal notes on working with – Bash in Windows 10 (Anniversary Update or Insider build requred). This will be updated on a sporadic basis.

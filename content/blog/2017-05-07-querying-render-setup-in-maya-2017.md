@@ -2,7 +2,6 @@
 title: "Querying Render Setup in Maya 2017"
 date: 2017-05-07
 tags: ["python", "maya"]
-categories: ["archive"]
 ---
 
 It seems Autodesk did not create a Render Setup documentation. This is me collecting code snippets and exploring Python functions.

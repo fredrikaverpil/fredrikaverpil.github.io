@@ -2,7 +2,6 @@
 title: "Notes on ffmpeg"
 date: 2016-12-28
 tags: ["macos", "video"]
-categories: ["archive"]
 ---
 
 Quick note on how to install ffmpeg (using Homebrew) and various mp4 conversion commands on Unix.

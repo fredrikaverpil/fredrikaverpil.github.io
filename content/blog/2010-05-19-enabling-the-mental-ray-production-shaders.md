@@ -2,7 +2,6 @@
 title: "Enabling the mental ray production shaders"
 date: 2010-05-19
 tags: ["maya", "mentalray"]
-categories: ["archive"]
 ---
 
 The production shader library contains a set of shaders aimed at production

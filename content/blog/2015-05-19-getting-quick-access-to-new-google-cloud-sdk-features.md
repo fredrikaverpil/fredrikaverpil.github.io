@@ -2,7 +2,6 @@
 title: "Getting quick access to new Google Cloud SDK features"
 date: 2015-05-19
 tags: ["linux", "bash"]
-categories: ["archive"]
 ---
 
 There is a two-week delay before gsutil gets updated with the latest and greatest. If you want to try the new stuff out, pip install the SDK!

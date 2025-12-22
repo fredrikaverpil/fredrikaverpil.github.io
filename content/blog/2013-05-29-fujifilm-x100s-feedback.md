@@ -2,7 +2,6 @@
 title: "Fujifilm X100S feedback"
 date: 2013-05-29
 tags: ["photography"]
-categories: ["archive"]
 ---
 
 The information in this blog post was [originally sent to @fujiguys](https://twitter.com/fujiguys/status/339794906274988034), who in turn would forward it to Tokyo.

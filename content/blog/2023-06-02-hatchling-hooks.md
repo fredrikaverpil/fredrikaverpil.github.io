@@ -2,7 +2,6 @@
 title: "Building Python wheels targeting different interpreter versions"
 date: 2023-06-02
 tags: ["python"]
-categories: ["archive"]
 ---
 
 This is a short post on how you can publish wheels onto [PyPi](https://pypi.org), using [hatchling's](https://hatch.pypa.io/latest/) custom metadata hook, that seamlessly targets different Python interpreter versions.

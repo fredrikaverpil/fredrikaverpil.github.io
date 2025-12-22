@@ -2,7 +2,6 @@
 title: "Run gsutil from crontab"
 date: 2014-12-15
 tags: ["bash"]
-categories: ["archive"]
 ---
 
 Setting up gsutil to sync files over to Google Cloud Storage (on CentOS 6) requires some environment variables to be set, which seems oddly undocumented at the moment. Turning to [Stackoverflow](https://stackoverflow.com/questions/27439326/how-to-properly-run-gsutil-from-crontab/27480249) was the solution, and here’s a summary from that.
