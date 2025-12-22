@@ -1,18 +1,15 @@
-
 /* GitHub Link Styling */
 .github-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35em; /* Space between icon and text */
-  text-decoration: none;
-  border-bottom: 1px dotted var(--link);
+  /* Inherit standard link styling (underline, color) */
   font-family: 'Commit Mono', monospace;
 }
-.github-link:hover {
-  text-decoration: none;
-  border-bottom: 1px solid var(--link);
-}
+
+/* Ensure the icon sits nicely inline */
 .github-link svg {
-  vertical-align: middle;
-  stroke: var(--link);
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em; /* Slight adjustment to align with baseline */
+  stroke: currentColor;
+  margin-right: 0.35em;
+  display: inline-block;
 }

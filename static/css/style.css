@@ -182,7 +182,10 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth toggle */
 }
 
-a { color: var(--link); }
+a { 
+  color: var(--link); 
+  text-underline-offset: 0.2em;
+}
 
 code, pre {
   font-family: 'Commit Mono', monospace;
