@@ -1,24 +1,14 @@
 version: 2
-enable-beta-ecosystems: true
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "monthly"
-  - package-ecosystem: "uv"
+  - package-ecosystem: "gomod"
     directory: "/"
     schedule:
       interval: "monthly"
-#   - package-ecosystem: "pip"
-#     directory: "/"
-#     # registries:
-#     #   - mkdocs-material-insiders
-#     schedule:
-#       interval: "monthly"
-#
-# registries:
-#   mkdocs-material-insiders:
-#     type: git
-#     url: https://github.com
-#     username: x-access-token
-#     password: ${{ secrets.MKDOCS_MATERIAL_INSIDERS }}
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"

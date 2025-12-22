@@ -18,9 +18,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-env:
-  USE_MKDOCS_MATERIAL_INSIDERS: false
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -38,6 +35,11 @@ jobs:
 
       - name: Build
         run: hugo --minify
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
       - name: Pagefind
         run: npx pagefind --site public
