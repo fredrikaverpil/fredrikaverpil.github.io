@@ -13,10 +13,8 @@
 - **Search:** [Pagefind](https://pagefind.app/) (Static, low-bandwidth, runs on
   client).
 - **Philosophy:**
-  - **Zero-JS (Mostly):** JavaScript is only used for progressive enhancement
-    (Search, Dark Mode Toggle). The site is fully functional without it.
-  - **Self-Contained:** No external font CDNs, no tracking scripts, no
-    submodules.
+    *   **Zero-JS (Mostly):** JavaScript is only used for progressive enhancement (Search, Dark Mode Toggle). The site is fully functional without it.
+    *   **Self-Contained:** No external font CDNs, no tracking scripts, no submodules. Social icons are handled via inline SVGs in `layouts/partials/social_icon.html` (sourced from [Simple Icons](https://simpleicons.org/)).
 
 ## Features
 

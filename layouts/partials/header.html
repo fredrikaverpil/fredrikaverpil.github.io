@@ -6,6 +6,7 @@
     <title>{{ .Title }} | {{ .Site.Title }}</title>
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
+    <link rel="alternate" type="application/rss+xml" href="{{ "/index.xml" | relURL }}" title="{{ .Site.Title }}">
     {{ partial "head_custom.html" . }}
   </head>
 
@@ -16,35 +17,34 @@
         if (savedTheme) {
           document.body.classList.add(savedTheme);
         } else {
-          // Check system preference
           if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.body.classList.add('dark');
           }
         }
-        // Remove preload class after a tick to enable transitions
         setTimeout(() => {
           document.body.classList.remove('preload');
         }, 100);
       })();
     </script>
-    <nav>
+
     <nav style="display: flex; align-items: center; gap: 1em; flex-wrap: wrap;">
-    <ul class="menu" style="margin: 0; padding: 0; flex-shrink: 0;">
-      {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-      {{ end }}
-      <li><button id="theme-toggle" style="background:none; border:none; cursor:pointer; font-size:1em; padding:5px; color:inherit;">◑</button></li>
-    </ul>
-    
-    <!-- Pagefind Search Integration -->
-    <div id="search" style="flex-grow: 1; min-width: 200px;"></div>
+      <ul class="menu" style="margin: 0; padding: 0; flex-shrink: 0;">
+        {{ $url := .RelPermalink }}
+        {{ range .Site.Menus.main }}
+        <li><a {{ if eq $url .URL }}class="active"{{ end }} href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+        {{ end }}
+        <li><button id="theme-toggle" style="background:none; border:none; cursor:pointer; font-size:1em; padding:5px; color:inherit;">◑</button></li>
+      </ul>
+      
+      <!-- Pagefind Search Integration -->
+      <div id="search" style="flex-grow: 1; min-width: 200px;"></div>
     </nav>
     
     <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
     <script src="/pagefind/pagefind-ui.js"></script>
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
-            const pagefind = new PagefindUI({ 
+            new PagefindUI({ 
               element: "#search", 
               showSubResults: true,
               showImages: false,
@@ -58,35 +58,27 @@
             document.addEventListener('click', (e) => {
                 const searchContainer = document.querySelector('#search');
                 if (searchContainer && !searchContainer.contains(e.target)) {
-                    // Try to find and click the clear button if results are visible
                     const clearButton = searchContainer.querySelector('.pagefind-ui__search-clear');
                     if (clearButton) {
                         clearButton.click();
                     }
                 }
             });
-        });
-    </script>
 
-    <hr/>
-    </nav>
-    
-    <script>
-      (function() {
-        const toggle = document.getElementById('theme-toggle');
-        const body = document.body;
+            // Theme Toggle Logic
+            const toggle = document.getElementById('theme-toggle');
+            const body = document.body;
 
-        toggle.addEventListener('click', () => {
-          if (body.classList.contains('dark')) {
-            body.classList.remove('dark');
-            body.classList.add('light');
-            localStorage.setItem('theme', 'light');
-          } else {
-            // If it has 'light' or nothing (system default light), switch to dark
-            body.classList.remove('light');
-            body.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-          }
+            toggle.addEventListener('click', () => {
+              if (body.classList.contains('dark')) {
+                body.classList.remove('dark');
+                body.classList.add('light');
+                localStorage.setItem('theme', 'light');
+              } else {
+                body.classList.remove('light');
+                body.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+              }
+            });
         });
-      })();
     </script>

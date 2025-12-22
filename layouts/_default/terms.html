@@ -1,34 +1,42 @@
 {{ partial "header.html" . }}
 
 <h1>Categories</h1>
-<ul class="terms">
+<ul class="taxonomy-cloud">
   {{ if eq .Type "categories" }}
     {{ range .Pages }}
     <li>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ len .Pages }})
+      <a href="{{ .RelPermalink }}">
+        <span class="term-name">{{ .Title }}</span><span class="term-count">{{ len .Pages }}</span>
+      </a>
     </li>
     {{ end }}
   {{ else }}
     {{ range .Site.Taxonomies.categories }}
     <li>
-      <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})
+      <a href="{{ .Page.RelPermalink }}">
+        <span class="term-name">{{ .Page.Title }}</span><span class="term-count">{{ .Count }}</span>
+      </a>
     </li>
     {{ end }}
   {{ end }}
 </ul>
 
 <h1>Tags</h1>
-<ul class="terms">
+<ul class="taxonomy-cloud">
   {{ if eq .Type "tags" }}
     {{ range .Pages }}
     <li>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ len .Pages }})
+      <a href="{{ .RelPermalink }}">
+        <span class="term-name">{{ .Title }}</span><span class="term-count">{{ len .Pages }}</span>
+      </a>
     </li>
     {{ end }}
   {{ else }}
     {{ range .Site.Taxonomies.tags }}
     <li>
-      <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})
+      <a href="{{ .Page.RelPermalink }}">
+        <span class="term-name">{{ .Page.Title }}</span><span class="term-count">{{ .Count }}</span>
+      </a>
     </li>
     {{ end }}
   {{ end }}
