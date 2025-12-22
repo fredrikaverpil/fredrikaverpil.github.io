@@ -130,6 +130,9 @@ body.dark {
   --warn-border: #B77E64; --warn-bg: #29221E;
   --tip-border: #819B69; --tip-bg: #21251E;
   --imp-border: #DE6E7C; --imp-bg: #291E1F;
+  --example-border: #8E969B; --example-bg: #22201F; /* Using fg-dim for border, and a darker version of bg for background */
+  --info-border: var(--note-border); --info-bg: var(--note-bg); /* Reusing note colors for info */
+  --quote-border: var(--fg-dim); --quote-bg: var(--meta-bg);
 
   --syntax-k: #B4BDC3;
   --syntax-c: #6C7377;
@@ -157,6 +160,9 @@ body.light {
   --warn-border: #944927; --warn-bg: #F2E7E2;
   --tip-border: #4F894C; --tip-bg: #E4EFE3;
   --imp-border: #A8334C; --imp-bg: #F0E0E3;
+  --example-border: #6F777B; --example-bg: #E9E9E9; /* Using fg-dim for border, and a lighter version of bg for background */
+  --info-border: var(--note-border); --info-bg: var(--note-bg); /* Reusing note colors for info */
+  --quote-border: var(--fg-dim); --quote-bg: var(--meta-bg);
 
   --syntax-k: #2C363C;
   --syntax-c: #859289;
