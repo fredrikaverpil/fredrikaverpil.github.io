@@ -49,3 +49,44 @@ table {
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee; }
+
+/* Callouts */
+.callout {
+  border-left: 4px solid #777;
+  padding: 1em;
+  margin: 1.5em 0;
+  background: #f9f9f9;
+}
+.callout-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  margin-bottom: 0.5em;
+  font-family: monospace; /* Keep the terminal vibe */
+}
+.callout-note { border-left-color: #3498db; background: #eef6fb; }
+.callout-warning { border-left-color: #f39c12; background: #fdf6e7; }
+.callout-tip { border-left-color: #27ae60; background: #eafaf1; }
+.callout-important { border-left-color: #c0392b; background: #f9ebeb; }
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  body { background: #222; color: #eee; }
+  a { color: #8cc2dd; }
+  .article-meta, .menu a { background: #444; color: #eee; }
+  hr { color: #444; }
+  pre { border-color: #444; box-shadow: 5px 5px 5px #111; }
+  code { background: #333; }
+  pre code { background: none; }
+  blockquote { background: #333; border-left-color: #555; }
+  thead, tfoot, tr:nth-child(even) { background: #333; }
+  table { border-color: #555; }
+  table thead th { border-bottom-color: #444; }
+
+  /* Callouts Dark Mode */
+  .callout { background: #2a2a2a; border-left-color: #555; }
+  .callout-note { border-left-color: #3498db; background: #1e2a33; }
+  .callout-warning { border-left-color: #f39c12; background: #332b1e; }
+  .callout-tip { border-left-color: #27ae60; background: #1e3325; }
+  .callout-important { border-left-color: #c0392b; background: #331e1e; }
+}

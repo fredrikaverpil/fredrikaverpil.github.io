@@ -1,0 +1,18 @@
+{{- $content := .Text -}}
+{{- $type := "" -}}
+{{- /* Check for the pattern [!TYPE] inside the text. 
+       Note: .Text is HTML. It likely starts with <p>. */ -}}
+{{- $match := findRE `\[!([a-zA-Z]+)\]` .Text 1 -}} 
+{{- if gt (len $match) 0 -}}
+  {{- $matchStr := index $match 0 -}}
+  {{- $type = lower (replace (replace $matchStr "[!" "") "]" "") -}}
+  {{- /* Remove the [!TYPE] tag from the content. */ -}}
+  {{- $content = replace .Text $matchStr "" -}}
+{{- end -}}
+
+<blockquote class="callout {{ with $type }}callout-{{ . }}{{ end }}">
+  {{- if $type -}}
+  <div class="callout-title">{{ $type | humanize }}</div>
+  {{- end -}}
+  <div class="callout-content">{{ $content | safeHTML }}</div>
+</blockquote>

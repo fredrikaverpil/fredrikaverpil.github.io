@@ -8,13 +8,11 @@ categories: ["meta"]
 
 # Hello Hugo
 
-This is a **short ingress** to test the new Hugo setup. We are migrating from
-MkDocs to Hugo to have more control and a minimalist "terminal" aesthetic.
+This is a **short ingress** to test the new Hugo setup. We are migrating from MkDocs to Hugo to have more control and a minimalist "terminal" aesthetic.
 
 ## The Body
 
-Here is some regular text body. We are testing various markdown features to
-ensure the theme handles them correctly.
+Here is some regular text body. We are testing various markdown features to ensure the theme handles them correctly.
 
 ### Code Block
 
@@ -33,17 +31,22 @@ if __name__ == "__main__":
 We are implementing GitHub-style callouts using a custom render hook.
 
 > [!NOTE]
->
 > This is a note callout! It should have a specific style.
 
 > [!WARNING]
->
 > This is a warning. Be careful!
+
+### Nested Code Block in Callout
+
+> [!TIP]
+> You can even put code inside a callout!
+> ```bash
+> echo "This is inside a tip"
+> ```
 
 ### GoAT Diagram
 
-Here is an ASCII diagram using GoAT (which we might need to enable or render
-somehow, but for now just as a code block or pre-formatted text):
+Here is an ASCII diagram using GoAT (which we might need to enable or render somehow, but for now just as a code block or pre-formatted text):
 
 ```goat
 .---.       .---.
