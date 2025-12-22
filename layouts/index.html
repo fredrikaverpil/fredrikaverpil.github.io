@@ -1,0 +1,44 @@
+{{ partial "header.html" . }}
+
+<!-- Latest Posts -->
+<section id="latest">
+  <h2>Latest</h2>
+  <ul class="post-list">
+    {{ range first 5 (where .Site.RegularPages "Type" "blog") }}
+    <li>
+      <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+  <p><a href="/blog/">All posts →</a></p>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  <ul class="project-list">
+    {{ range .Site.Params.projects }}
+    <li>
+      <a href="{{ .url }}"><strong>{{ .name }}</strong></a>: {{ .description }}
+    </li>
+    {{ end }}
+  </ul>
+</section>
+
+<!-- About Section -->
+<section id="home-about">
+  <h2>About</h2>
+  <div class="about-flex">
+    <img src="https://gravatar.com/userimage/312137/7bfb2e6aadb93ec761f74c89e32c47b4.jpeg?size=160" alt="Fredrik Averpil" class="about-photo">
+    <div class="about-content">
+      <p>
+        I'm <strong>Fredrik Averpil</strong>, a Senior Software Engineer at <a href="https://github.com/einride">Einride</a>. 
+        I build backend systems in Go and have a passion for developer tooling, Neovim, and minimalism.
+      </p>
+      <p><a href="/about/">Read more →</a></p>
+    </div>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
