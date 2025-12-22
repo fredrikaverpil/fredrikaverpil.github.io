@@ -10,27 +10,39 @@
 {{ if $isGitHub }}
   {{/* GITHUB LINK LOGIC */}}
   {{ $path := urls.Parse $url }}
-  {{ $segments := split (strings.TrimPrefix "/" $path.Path) "/" }}
+  {{ $pathStr := strings.Trim $path.Path "/" }}
+  {{ $segments := split $pathStr "/" }}
   
-  {{ $repoPath := "" }}
-  {{ $issueNum := "" }}
-  {{ $isPR := false }}
-  {{ $isIssue := false }}
+  {{ $displayText := "" }}
 
-  {{ if ge (len $segments) 2 }}
-    {{ $repoPath = printf "%s/%s" (index $segments 0) (index $segments 1) }}
+  {{ if eq (len $segments) 1 }}
+    {{/* User or Org profile */}}
+    {{ if ne (index $segments 0) "" }}
+      {{ $displayText = printf "@%s" (index $segments 0) }}
+    {{ end }}
+  {{ else if ge (len $segments) 2 }}
+    {{/* Repository, Issue, or PR */}}
+    {{ $displayText = printf "%s/%s" (index $segments 0) (index $segments 1) }}
     {{ if and (gt (len $segments) 3) (in "pull issues" (index $segments 2)) }}
-      {{ $issueNum = printf "#%s" (index $segments 3) }}
-      {{ if eq (index $segments 2) "pull" }}{{ $isPR = true }}{{ end }}
-      {{ if eq (index $segments 2) "issues" }}{{ $isIssue = true }}{{ end }}
+      {{ $displayText = printf "%s#%s" $displayText (index $segments 3) }}
     {{ end }}
   {{ end }}
 
+  {{/* If the user provided specific text in Markdown [like this](url), use it instead of auto-generated text */}}
+  {{/* Note: Hugo sets .Text to the URL if no text is provided in Markdown */}}
+  {{ if and (ne .Text $url) (ne .Text "") }}
+    {{ $displayText = .Text | safeHTML }}
+  {{ end }}
+
+  {{/* Final fallback to original text if we couldn't generate anything */}}
+  {{ if not $displayText }}
+    {{ $displayText = .Text | safeHTML }}
+  {{ end }}
+
   <a href="{{ $url }}" target="_blank" rel="noopener" class="github-link">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
-      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-    </svg>
-    {{ $repoPath }}{{ $issueNum }}
+    {{- /* SVG Icon */ -}}
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+    {{- $displayText -}}
   </a>
 {{- else -}}
   {{- /* DEFAULT LINK RENDER */ -}}
