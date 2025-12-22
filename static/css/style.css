@@ -216,7 +216,7 @@ nav {
 }
 .article-meta {
   text-decoration: none;
-  background: var(--menu-link-bg);
+  background: var(--meta-bg);
   color: var(--fg);
   padding: 5px 10px;
   border-radius: 0;
@@ -349,7 +349,7 @@ hr {
   margin: var(--space-lg) 0;
   padding: 0;
   height: auto;
-  color: var(--border);
+  color: var(--warn-border);
   font-size: 1em;
   line-height: 1;
 }
@@ -434,22 +434,22 @@ main { hyphens: auto; }
 }
 blockquote {
   background: var(--meta-bg);
-  border-left: 5px solid #944927; /* Wood default */
+  border-left: 5px solid var(--warn-border);
   padding: 3px 1em 3px;
 }
 
 table {
   margin: auto;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
-table thead th { border-bottom: 1px solid #ddd; }
+table thead th { border-bottom: 1px solid var(--border); }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
 
 /* Callouts */
 .callout {
-  border-left: 4px solid #777;
+  border-left: 4px solid var(--fg-dim);
   padding: var(--space-lg);
   margin: var(--space-lg) 0;
   background: var(--callout-bg);
@@ -560,7 +560,7 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   position: absolute !important;
   bottom: calc(var(--space-sm) * -1) !important;
   left: var(--space-sm) !important;
-  color: var(--border) !important;
+  color: var(--warn-border) !important;
   opacity: 0.5 !important;
   font-size: 1em !important;
   line-height: 1 !important;
