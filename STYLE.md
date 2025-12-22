@@ -106,11 +106,15 @@ hook (`layouts/_default/_markup/render-blockquote.html`).
 - `[!QUOTE]` (Gray/Italic)
 
 ### Code Blocks
-
-- **Rendering:** Hugo `chroma` syntax highlighting.
-- **Style:** Minimalist container with a "dithered" shadow effect (CSS
-  `radial-gradient` pattern).
-- **Font:** `Commit Mono` for code, `Maple Mono` for comments (italicized).
+*   **Rendering:** Hugo `chroma` syntax highlighting.
+*   **Style:** Minimalist container with a "dithered" shadow effect (CSS `radial-gradient` pattern).
+*   **Font:** `Commit Mono` for code, `Maple Mono` for comments (italicized).
+*   **Copy Code Button:**
+    *   **Position:** Top-right corner of the code block.
+    *   **Style:** Minimalist button using `--button-bg` and `--border`.
+    *   **Interaction:**
+        *   **Hover:** Turns **blue** (`--link`) with `--bg` text/icon color, matching other UI elements.
+        *   **Action:** Copies code to clipboard and briefly toggles the icon to a "check" mark.
 
 ### Navigation
 *   Simple top navigation bar.
