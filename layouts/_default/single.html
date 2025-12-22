@@ -2,29 +2,44 @@
 <div class="article-meta">
 <h1><span class="title">{{ .Title | markdownify }}</span></h1>
 {{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
-{{ if (gt .Params.date 0) }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}
+<div class="article-meta-info">
+  {{ if (gt .Params.date 0) }}<span class="date">{{ .Date.Format "2006-01-02" }}</span>{{ end }}
+  <span class="article-tags">
+    {{ range .Params.categories }}
+    <a href="{{ "categories/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
+    {{ end }}
+    {{ range .Params.tags }}
+    <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
+    {{ end }}
+  </span>
+</div>
 </div>
 
 {{ with .Params.featured_image }}
 <div class="featured-image">
-  <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+	<img src="{{ . | relURL }}" alt="{{ $.Title }}">
 </div>
 {{ end }}
 
 <main data-pagefind-body>
-{{ $toc := .TableOfContents }}
-{{ $lis := findRE "<li>" $toc }}
-{{ if and (or .Params.toc (and (ne .Params.toc false) (gt .WordCount 400))) (ge (len $lis) 2) }}
-  <aside class="table-of-contents">
-    <div class="toc-title">
-      <svg class="callout-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M3 9h14V7H3v2zm0 4h14v-2H3v2zm0 4h14v-2H3v2zm16 0h2v-2h-2v2zm0-10v2h2V7h-2zm0 6h2v-2h-2v2z"></path></svg>
-      Table of Contents
-    </div>
-    {{ $toc }}
-  </aside>
-{{ end }}
+	{{ $toc := .TableOfContents }}
+	{{ $lis := findRE "<li>" $toc }}
+		{{ if and (or .Params.toc (and (ne .Params.toc false) (gt .WordCount 400))) (ge (len $lis) 2) }}
+		<aside class="table-of-contents">
+			<div class="toc-title">
+				<svg class="callout-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"
+					fill="currentColor">
+					<path
+						d="M3 9h14V7H3v2zm0 4h14v-2H3v2zm0 4h14v-2H3v2zm16 0h2v-2h-2v2zm0-10v2h2V7h-2zm0 6h2v-2h-2v2z">
+					</path>
+				</svg>
+				Table of Contents
+			</div>
+			{{ $toc }}
+		</aside>
+		{{ end }}
 
-{{ .Content }}
+		{{ .Content }}
 </main>
 
 {{ partial "giscus.html" . }}

@@ -31,7 +31,10 @@ We use a dual-monospace font stack to reinforce the engineering aesthetic.
 - **Light Mode:** 350 (slightly thicker to ensure legibility on light
   backgrounds).
 - **Dark Mode:** 200 (thinner, allows light to bleed through slightly less).
-- **Headings/Bold:** 700.
+*   **Headings/Bold:** 700.
+
+### Date Format
+Dates should always be formatted as **YYYY-MM-DD** (ISO 8601) to maintain the technical/terminal aesthetic.
 
 ## 3. Color System
 
