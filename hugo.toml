@@ -27,13 +27,13 @@ copyright = '© Fredrik Averpil'
   
   # Featured Projects for Homepage
   [[params.projects]]
+    name = "neotest-golang"
+    url = "https://github.com/fredrikaverpil/neotest-golang"
+    description = "Neovim plugin for Go testing."
+  [[params.projects]]
     name = "godoc.nvim"
     url = "https://github.com/fredrikaverpil/godoc.nvim"
     description = "Neovim plugin to view Go documentation."
-  [[params.projects]]
-    name = "multipr"
-    url = "https://github.com/fredrikaverpil/multipr"
-    description = "CLI tool to open multiple pull requests."
   [[params.projects]]
     name = "dotfiles"
     url = "https://github.com/fredrikaverpil/dotfiles"

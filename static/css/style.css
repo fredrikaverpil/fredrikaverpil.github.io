@@ -633,7 +633,7 @@ body.preload {
 .profile-photo {
   width: calc(var(--space-xxl) * 1.765);
   height: calc(var(--space-xxl) * 1.765);
-  border-radius: 0; /* Sharp */
+  border-radius: 50%; /* Make circular */
   object-fit: cover;
 }
 .profile-info h1 {
