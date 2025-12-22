@@ -8,6 +8,10 @@ copyright = '© Fredrik Averpil'
   pagerSize = 10
 
 [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Allow raw HTML (e.g. <details>, <summary>) in markdown files
+      unsafe = true
   [markup.highlight]
     codeFences = true
     guessSyntax = true
