@@ -1,4 +1,6 @@
-.PHONY: serve build clean
+.PHONY: serve build clean all
+
+all: clean build serve
 
 serve:
 	hugo server -D

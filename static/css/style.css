@@ -214,9 +214,16 @@ nav {
   display: inline-block;
   margin: 0; 
 }
-.article-meta, .menu a {
+.article-meta {
   text-decoration: none;
-  background: var(--menu-link-bg); /* Adaptive background */
+  background: var(--menu-link-bg);
+  color: var(--fg);
+  padding: 5px 10px;
+  border-radius: 0;
+}
+.menu a {
+  text-decoration: none;
+  background: var(--bg);
   color: var(--fg);
   padding: 5px 10px;
   border-radius: 0;
@@ -501,7 +508,7 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   display: none !important;
 }
 .pagefind-ui .pagefind-ui__search-input {
-  background-color: var(--meta-bg) !important;
+  background-color: var(--bg) !important;
   color: var(--fg);
   border: none !important;
   border-radius: 0 !important;
@@ -510,42 +517,55 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   font-weight: 400 !important;
   outline: none !important;
   height: 2em !important;
-  padding: 0 2em 0 0.5em !important;
+  padding: 0 var(--space-lg) 0 var(--space-sm) !important;
 }
 .pagefind-ui .pagefind-ui__search-clear {
-  background-color: transparent !important;
-  color: var(--fg) !important;
-  border: none !important;
-  font-size: 1.2em !important;
-  width: auto !important;
-  height: 100% !important;
-  padding: 0 0.5em !important;
-  position: absolute !important;
-  right: 0 !important;
-  top: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transform: none !important;
-  cursor: pointer !important;
+  display: none !important;
 }
 .pagefind-ui .pagefind-ui__drawer {
-  background: var(--bg) !important;
-  border-bottom: 1px solid var(--border) !important;
+  background-color: var(--meta-bg) !important;
+  border: none !important;
   border-radius: 0 !important;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
-  position: absolute !important;
-  left: 0 !important;
-  right: 0 !important;
-  width: 100% !important;
+  box-shadow: none !important;
+  position: fixed !important;
+  right: calc((100vw - 800px) / 2) !important;
+  width: calc(800px * 0.6) !important;
   z-index: 1000 !important;
-  padding: 0 1em !important;
+  padding: var(--space-lg) !important;
   max-height: 80vh !important;
   overflow-y: auto !important;
+  margin-top: 0 !important;
+  top: calc(var(--space-lg) + var(--space-sm) + 2em + var(--space-sm)) !important;
+}
+
+.pagefind-ui .pagefind-ui__drawer::before {
+  content: "" !important;
+  position: absolute !important;
+  top: calc(var(--space-sm) * -1) !important;
+  left: calc(var(--space-lg) * -1) !important;
+  right: calc(var(--space-lg) * -1) !important;
+  height: var(--space-sm) !important;
+  background: var(--bg) !important;
 }
 .pagefind-ui .pagefind-ui__result {
-  border-bottom: 1px dashed var(--border) !important;
-  padding: 1em 0 !important;
+  border: none !important;
+  padding: var(--space-lg) !important;
+  margin-bottom: var(--space-lg) !important;
+  background: var(--bg) !important;
+  position: relative !important;
+}
+
+.pagefind-ui .pagefind-ui__result::after {
+  content: "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░" !important;
+  position: absolute !important;
+  bottom: calc(var(--space-sm) * -1) !important;
+  left: var(--space-sm) !important;
+  color: var(--border) !important;
+  opacity: 0.5 !important;
+  font-size: 1em !important;
+  line-height: 1 !important;
+  z-index: -1 !important;
+  display: block !important;
 }
 .pagefind-ui .pagefind-ui__result-thumb {
   display: none !important;
@@ -570,7 +590,7 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   color: var(--fg) !important; /* primary color */
   font-family: 'Maple Mono', monospace !important;
   font-style: italic;
-  padding: 1em 0 !important;
+  padding: var(--space-lg) 0 !important;
 }
 .pagefind-ui .pagefind-ui__button {
   background-color: transparent !important;
@@ -578,9 +598,9 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   color: var(--link) !important;
   font-family: 'Maple Mono', monospace !important;
   font-weight: 700 !important;
-  padding: 1em 0 !important;
+  padding: var(--space-lg) 0 !important;
   width: auto !important;
-  margin: 1em auto !important;
+  margin: var(--space-lg) auto !important;
   display: block !important;
   cursor: pointer;
   text-decoration: underline !important;
