@@ -39,6 +39,9 @@ jobs:
       - name: Build
         run: hugo --minify
 
+      - name: Pagefind
+        run: npx pagefind --site public
+
       - name: Setup Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
