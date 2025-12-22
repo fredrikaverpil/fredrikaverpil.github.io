@@ -57,7 +57,9 @@
   --fg-dim: #6F777B; /* Strings */
   --fg-muted: #859289; /* Comments */
   --link: #286486; /* Water */
-  --meta-bg: #EAE6E4;
+  --meta-bg: #EAE6E4; /* Darker than bg */
+  --button-bg: #DCD8D6; /* Darker than meta-bg */
+  --button-hover-bg: #CFCBC9; /* Darker than button-bg */
   --border: #C0BCBA;
 
   /* Callouts */
@@ -92,6 +94,8 @@
     --fg-muted: #6C7377;
     --link: #6099C0;
     --meta-bg: #252220;
+    --button-bg: #2F2C2A; /* Lighter than meta-bg */
+    --button-hover-bg: #3A3735; /* Lighter than button-bg */
     --border: #353230;
     
     --callout-bg: #252220;
@@ -123,6 +127,8 @@ body.dark {
   --fg-muted: #6C7377;
   --link: #6099C0;
   --meta-bg: #252220;
+  --button-bg: #2F2C2A;
+  --button-hover-bg: #3A3735;
   --border: #353230;
   
   --callout-bg: #252220;
@@ -153,6 +159,8 @@ body.light {
   --fg-muted: #859289;
   --link: #286486;
   --meta-bg: #EAE6E4;
+  --button-bg: #DCD8D6;
+  --button-hover-bg: #CFCBC9;
   --border: #C0BCBA;
   
   --callout-bg: #EAE6E4;
@@ -240,14 +248,14 @@ nav {
 }
 .menu a {
   text-decoration: none;
-  background: var(--bg);
+  background: var(--button-bg);
   color: var(--fg);
   padding: 5px 10px;
   border-radius: 0;
 }
 .menu a.active, .menu a:hover {
-  background-color: var(--link);
-  color: var(--bg);
+  background-color: var(--button-hover-bg);
+  color: var(--fg);
 }
 .menu, .article-meta, footer { text-align: center; }
 .title { font-size: 1.1em; }
