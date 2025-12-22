@@ -571,6 +571,12 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   font-size: 1.1em;
   margin-bottom: 0.5em;
   font-family: 'Commit Mono', monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.callout-icon {
+  flex-shrink: 0;
 }
 .callout-content {
   font-family: 'Commit Mono', monospace;
@@ -617,6 +623,9 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
   font-size: 1.1em;
   margin-bottom: 0.5em;
   font-family: 'Commit Mono', monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 
 .markdown-alert-note { border-left-color: var(--note-border); background: var(--note-bg); }
