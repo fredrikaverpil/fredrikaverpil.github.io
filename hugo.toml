@@ -58,6 +58,9 @@ copyright = '© Fredrik Averpil'
   [[params.social]]
     name = "Feedly"
     url = "https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Ffredrikaverpil.github.io%2Ffeed_rss_created.xml"
+  [[params.social]]
+    name = "Umami"
+    url = "https://cloud.umami.is/share/tJcIgDO3dznRmeGX"
 
 [menu]
   [[menu.main]]
