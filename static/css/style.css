@@ -307,7 +307,7 @@ section {
 .about-photo {
   width: calc(var(--space-xxl) * 1.176);
   height: calc(var(--space-xxl) * 1.176);
-  border-radius: 0;
+  border-radius: 50%; /* Make circular */
   flex-shrink: 0;
 }
 .about-content {
