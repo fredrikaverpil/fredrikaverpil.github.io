@@ -78,7 +78,8 @@ hooks (`layouts/_default/_markup/render-blockquote.html`).
 
 - **Engine:** Hugo `chroma` syntax highlighting (Adaptive Tango Light / Monokai
   Dark).
-- **Style:** Minimalist container with a "dithered" shadow effect.
+- **Style:** Minimalist container without shadows, utilizing background colors
+  for contrast.
 - **Copy Button:** Custom JS-based button in the top-right corner.
 
 ### Navigation & UI
