@@ -61,7 +61,6 @@
   --meta-bg: #EAE6E4; /* Darker than bg */
   --button-bg: #DCD8D6; /* Darker than meta-bg */
   --button-hover-bg: #CFCBC9; /* Darker than button-bg */
-  --shadow-dots: #C0BCBA;
   --border: #C0BCBA;
 
   /* Callouts */
@@ -99,7 +98,6 @@
     --meta-bg: #252220;
     --button-bg: #2F2C2A; /* Lighter than meta-bg */
     --button-hover-bg: #3A3735; /* Lighter than button-bg */
-    --shadow-dots: #000000;
     --border: #353230;
     
     --callout-bg: #252220;
@@ -134,7 +132,6 @@ body.dark {
   --meta-bg: #252220;
   --button-bg: #2F2C2A;
   --button-hover-bg: #3A3735;
-  --shadow-dots: #000000;
   --border: #353230;
   
   --callout-bg: #252220;
@@ -168,7 +165,6 @@ body.light {
   --meta-bg: #EAE6E4;
   --button-bg: #DCD8D6;
   --button-hover-bg: #CFCBC9;
-  --shadow-dots: #C0BCBA;
   --border: #C0BCBA;
   
   --callout-bg: #EAE6E4;
@@ -462,21 +458,6 @@ hr::after {
   isolation: isolate; /* Create a new stacking context */
 }
 
-.code-block-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: transparent;
-  /* Simulating ░ character with a dither pattern */
-  background-image: radial-gradient(var(--shadow-dots) 1px, transparent 0);
-  background-size: 3px 3px;
-  /* border: 1px solid var(--border); removed per style guide */
-}
-
 .copy-code-button {
   position: absolute;
   top: 0.5em;
@@ -517,13 +498,17 @@ pre {
   box-shadow: none;
   padding: 1em;
   overflow-x: auto;
-  background-color: var(--bg) !important;
+  background-color: var(--meta-bg) !important;
   margin: 0; /* Reset margin as wrapper handles it */
   z-index: 1; /* Ensure code sits above shadow */
 }
 
+/* Compounding contrast for code blocks inside callouts */
+.callout pre, .markdown-alert pre {
+  background-color: var(--button-bg) !important;
+}
 
-code { background: var(--bg); }
+code { background: transparent; }
 pre code { background: none; }
 
 /* Featured Image */
@@ -733,8 +718,8 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
 .chroma .s, .chroma .s1, .chroma .s2 { font-style: normal; color: var(--syntax-s); }
 .chroma .n, .chroma .na, .chroma .nb, .chroma .nc, .chroma .nf { color: var(--syntax-n); }
 .chroma .o, .chroma .ow { font-weight: bold; color: var(--syntax-n); }
-.bg { color: var(--fg); background-color: var(--bg); }
-.chroma { color: var(--fg); background-color: var(--bg); }
+.bg { color: var(--fg); background-color: transparent; }
+.chroma { color: var(--fg); background-color: transparent; }
 
 /* Pagefind Theme Overrides */
 :root {
@@ -822,18 +807,6 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
   position: relative !important;
 }
 
-.pagefind-ui .pagefind-ui__result::after {
-  content: "▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒" !important;
-  position: absolute !important;
-  bottom: calc(var(--space-sm) * -1) !important;
-  left: var(--space-sm) !important;
-  color: var(--shadow-dots) !important;
-  opacity: 0.5 !important;
-  font-size: 1.2em !important;
-  line-height: 1 !important;
-  z-index: -1 !important;
-  display: block !important;
-}
 .pagefind-ui .pagefind-ui__result-thumb {
   display: none !important;
 }

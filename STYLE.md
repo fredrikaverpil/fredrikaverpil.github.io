@@ -108,7 +108,9 @@ We use GitHub-style Markdown alerts. These are rendered via a custom Hugo render
 
 ### Code Blocks
 *   **Rendering:** Hugo `chroma` syntax highlighting.
-*   **Style:** Minimalist container with a "dithered" shadow effect (CSS `radial-gradient` pattern).
+*   **Background:**
+    *   **Default:** Uses `--meta-bg` when placed directly in the body.
+    *   **Nested:** Uses `--button-bg` when inside a callout to ensure compounding contrast.
 *   **Font:** `Commit Mono` for code, `Maple Mono` for comments (italicized).
 *   **Copy Code Button:** Uses the **Flat Button** style (see below).
     *   **Position:** Top-right corner of the code block.
@@ -153,14 +155,6 @@ Interactive cards displayed in a grid on the homepage (typically for projects).
 *   **Hover State:**
     *   Entire card turns **blue** (`--link`).
     *   **All text** (Title and Description) switches to the background color (`--bg`) to ensure high contrast.
-
-### Dithered Shadows
-Used for "Cards" and "Code Blocks" to provide retro-style depth.
-
-*   **Technique:** Simulated dither pattern using `radial-gradient` (to avoid text-rendering issues with actual ASCII characters).
-*   **Color Rules:**
-    *   **Light Mode:** Uses a soft gray to create a traditional shadow.
-    *   **Dark Mode:** Must use a **very dark or black** color to ensure the dithered area looks like a shadow rather than a "glow" against the deep background.
 
 ## 6. Interactions
 
