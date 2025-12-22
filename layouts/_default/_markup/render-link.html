@@ -32,9 +32,9 @@
     </svg>
     {{ $repoPath }}{{ $issueNum }}
   </a>
-{{ else }}
-  {{/* DEFAULT LINK RENDER */}}
+{{- else -}}
+  {{- /* DEFAULT LINK RENDER */ -}}
   <a href="{{ $url }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix $url "http" }} target="_blank" rel="noopener"{{ end }}>
-    {{ .Text | safeHTML }}
+    {{- .Text | safeHTML -}}
   </a>
-{{ end }}
+{{- end -}}
