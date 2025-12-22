@@ -676,6 +676,17 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
 .callout-info { border-left-color: var(--info-border); }
 .callout-quote { border-left-color: var(--quote-border); }
 
+.callout-quote .callout-title {
+  float: left !important;
+  display: inline-block !important;
+  margin-right: 0.5em;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.callout-quote .callout-content > p:first-child {
+  margin-top: 0;
+}
+
 /* Fallback styling for blockquotes that Hugo might not have parsed into .callout classes */
 blockquote.callout-note, blockquote[class*="note"] { border-left-color: var(--note-border) !important; background: var(--meta-bg) !important; }
 blockquote.callout-warning, blockquote[class*="warning"] { border-left-color: var(--warn-border) !important; background: var(--meta-bg) !important; }
