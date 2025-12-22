@@ -5,7 +5,20 @@
 {{ if (gt .Params.date 0) }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}
 </div>
 
+{{ with .Params.featured_image }}
+<div class="featured-image">
+  <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+</div>
+{{ end }}
+
 <main data-pagefind-body>
+{{ if or .Params.toc (and (ne .Params.toc false) (gt .WordCount 400)) }}
+  <aside class="table-of-contents">
+    <div class="toc-title">Table of Contents</div>
+    {{ .TableOfContents }}
+  </aside>
+{{ end }}
+
 {{ .Content }}
 </main>
 
