@@ -583,6 +583,7 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
 .callout-content code, .callout-content pre {
   font-family: 'Commit Mono', monospace;
   font-style: normal;
+  background-color: transparent;
 }
 .callout-note { border-left-color: var(--note-border); background: var(--note-bg); }
 .callout-warning { border-left-color: var(--warn-border); background: var(--warn-bg); }
