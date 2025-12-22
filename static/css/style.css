@@ -449,6 +449,8 @@ hr::after {
 .table-of-contents a:hover {
   text-decoration: underline;
 }
+
+.code-block-wrapper {
   position: relative;
   margin-bottom: var(--space-lg);
   isolation: isolate; /* Create a new stacking context */
@@ -479,11 +481,12 @@ hr::after {
   align-items: center;
   justify-content: center;
   color: var(--fg-dim);
-  background-color: var(--bg);
+  background-color: var(--button-bg);
   border: 1px solid var(--border);
   border-radius: 0;
   cursor: pointer;
   opacity: 0.5;
+  transition: all 0.2s ease;
 }
 
 .copy-code-button svg {
@@ -493,7 +496,10 @@ hr::after {
 }
 
 .copy-code-button:hover {
-  background-color: var(--meta-bg);
+  background-color: var(--link);
+  color: var(--bg);
+  opacity: 1;
+  filter: none;
 }
 
 /* Removed colored feedback classes */
