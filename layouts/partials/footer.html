@@ -1,9 +1,18 @@
   <footer>
-  {{ partial "foot_custom.html" . }}
-  {{ with .Site.Params.footer }}
   <hr/>
-  {{ replace . "{Year}" now.Year | markdownify }}
-  {{ end }}
+  <div class="footer-content">
+    <span class="footer-icons">
+      {{ range .Site.Params.social }}
+      <a href="{{ .url | relURL }}" target="_blank" rel="noopener" title="{{ .name }}">
+        {{ partial "social_icon.html" .name }}
+      </a>
+      {{ end }}
+    </span>
+    <span class="footer-text">
+      {{ .Site.Copyright | markdownify }} {{ now.Year }}
+    </span>
+  </div>
+  {{ partial "foot_custom.html" . }}
   </footer>
   </body>
 </html>
