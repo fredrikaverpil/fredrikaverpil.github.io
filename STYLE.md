@@ -110,12 +110,15 @@ We use GitHub-style Markdown alerts. These are rendered via a custom Hugo render
 *   **Rendering:** Hugo `chroma` syntax highlighting.
 *   **Style:** Minimalist container with a "dithered" shadow effect (CSS `radial-gradient` pattern).
 *   **Font:** `Commit Mono` for code, `Maple Mono` for comments (italicized).
-*   **Copy Code Button:**
+*   **Copy Code Button:** Uses the **Flat Button** style (see below).
     *   **Position:** Top-right corner of the code block.
-    *   **Style:** Flat (transparent background), using `--fg-dim` for the icon.
-    *   **Interaction:**
-        *   **Hover:** Turns **blue** (`--link`) with `--bg` text/icon color, matching other UI elements.
-        *   **Action:** Copies code to clipboard and briefly toggles the icon to a "check" mark.
+
+### Flat Buttons
+Used for subtle actions where a boxy "layer" is not desired (e.g., the Copy Code button).
+
+*   **Style:** Transparent background by default. No border.
+*   **Typography/Icons:** Uses `--fg-dim` to remain unobtrusive.
+*   **Hover State:** Follows the global UI element rule (turns **blue** `--link` with `--bg` text/icon).
 
 ### Navigation
 *   Simple top navigation bar.

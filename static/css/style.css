@@ -488,7 +488,7 @@ hr::after {
   justify-content: center;
   color: var(--fg-dim);
   background-color: transparent;
-  /* border: 1px solid var(--border); removed per style guide */
+  border: none; /* Ensure no default border */
   border-radius: 0;
   cursor: pointer;
   opacity: 1;
