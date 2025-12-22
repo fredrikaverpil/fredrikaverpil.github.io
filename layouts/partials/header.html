@@ -9,7 +9,24 @@
     {{ partial "head_custom.html" . }}
   </head>
 
-  <body>
+  <body class="preload">
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          document.body.classList.add(savedTheme);
+        } else {
+          // Check system preference
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark');
+          }
+        }
+        // Remove preload class after a tick to enable transitions
+        setTimeout(() => {
+          document.body.classList.remove('preload');
+        }, 100);
+      })();
+    </script>
     <nav>
     <nav style="display: flex; align-items: center; gap: 1em; flex-wrap: wrap;">
     <ul class="menu" style="margin: 0; padding: 0; flex-shrink: 0;">
@@ -58,31 +75,17 @@
       (function() {
         const toggle = document.getElementById('theme-toggle');
         const body = document.body;
-        
-        // Load preference
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-          body.classList.add(savedTheme);
-        }
 
         toggle.addEventListener('click', () => {
           if (body.classList.contains('dark')) {
             body.classList.remove('dark');
             body.classList.add('light');
             localStorage.setItem('theme', 'light');
-          } else if (body.classList.contains('light')) {
+          } else {
+            // If it has 'light' or nothing (system default light), switch to dark
             body.classList.remove('light');
             body.classList.add('dark');
             localStorage.setItem('theme', 'dark');
-          } else {
-            // No class yet, check system preference
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-              body.classList.add('light'); // System is dark, so toggle to light
-              localStorage.setItem('theme', 'light');
-            } else {
-              body.classList.add('dark'); // System is light, so toggle to dark
-              localStorage.setItem('theme', 'dark');
-            }
           }
         });
       })();
