@@ -161,13 +161,71 @@ h1, h2, h3, h4, h5, h6 {
 .menu, .article-meta, footer { text-align: center; }
 .title { font-size: 1.1em; }
 
-/* Footer */
-footer {
-  margin-top: 4em;
-  text-align: center;
-  font-size: 0.9em;
+/* Homepage Styles */
+section {
+  margin-bottom: 3em;
+}
+section h2 {
+  font-family: 'Maple Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: 0.5em;
   color: var(--fg-dim);
 }
+
+/* Post List */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.post-list li {
+  margin-bottom: 0.5em;
+  display: flex;
+  gap: 1em;
+  align-items: baseline;
+}
+.post-list .date {
+  font-family: 'Commit Mono', monospace;
+  color: var(--fg-dim);
+  font-size: 0.9em;
+  flex-shrink: 0;
+}
+
+/* Project List */
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.project-list li {
+  margin-bottom: 0.8em;
+}
+
+/* Home About Section */
+.about-flex {
+  display: flex;
+  gap: 1.5em;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.about-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px; /* Keep the Zenbones rounded corner style */
+  flex-shrink: 0;
+}
+.about-content {
+  flex: 1;
+  min-width: 250px;
+}
+.about-content p {
+  margin-top: 0;
+}
+
 .footer-content {
   display: flex;
   justify-content: center;

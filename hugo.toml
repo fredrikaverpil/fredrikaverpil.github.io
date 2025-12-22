@@ -25,6 +25,20 @@ copyright = '© Fredrik Averpil'
 [params]
   description = "Minimalist technical blog."
   
+  # Featured Projects for Homepage
+  [[params.projects]]
+    name = "godoc.nvim"
+    url = "https://github.com/fredrikaverpil/godoc.nvim"
+    description = "Neovim plugin to view Go documentation."
+  [[params.projects]]
+    name = "multipr"
+    url = "https://github.com/fredrikaverpil/multipr"
+    description = "CLI tool to open multiple pull requests."
+  [[params.projects]]
+    name = "dotfiles"
+    url = "https://github.com/fredrikaverpil/dotfiles"
+    description = "My configuration files for Neovim, Wezterm, Ghostty, etc."
+
   # Social links (displayed in footer/header depending on layout)
   [[params.social]]
     name = "GitHub"
