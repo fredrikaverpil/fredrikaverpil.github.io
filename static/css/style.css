@@ -61,6 +61,7 @@
   --meta-bg: #EAE6E4; /* Darker than bg */
   --button-bg: #DCD8D6; /* Darker than meta-bg */
   --button-hover-bg: #CFCBC9; /* Darker than button-bg */
+  --shadow-dots: #C0BCBA;
   --border: #C0BCBA;
 
   /* Callouts */
@@ -98,6 +99,7 @@
     --meta-bg: #252220;
     --button-bg: #2F2C2A; /* Lighter than meta-bg */
     --button-hover-bg: #3A3735; /* Lighter than button-bg */
+    --shadow-dots: #000000;
     --border: #353230;
     
     --callout-bg: #252220;
@@ -132,6 +134,7 @@ body.dark {
   --meta-bg: #252220;
   --button-bg: #2F2C2A;
   --button-hover-bg: #3A3735;
+  --shadow-dots: #000000;
   --border: #353230;
   
   --callout-bg: #252220;
@@ -165,6 +168,7 @@ body.light {
   --meta-bg: #EAE6E4;
   --button-bg: #DCD8D6;
   --button-hover-bg: #CFCBC9;
+  --shadow-dots: #C0BCBA;
   --border: #C0BCBA;
   
   --callout-bg: #EAE6E4;
@@ -325,11 +329,11 @@ section {
   padding: 1em;
   text-decoration: none !important;
   color: var(--fg);
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; removed per style guide */
   display: block;
 }
 .project-card:hover {
-  border-color: var(--link);
+  /* border-color: var(--link); removed per style guide */
   background: var(--link);
   color: var(--bg);
   filter: none;
@@ -422,32 +426,34 @@ hr::after {
 /* Table of Contents */
 .table-of-contents {
   background: var(--meta-bg);
-  padding: var(--space-md);
+  padding: var(--space-lg);
   margin-bottom: var(--section-gap);
-  border-left: 3px solid var(--link);
+  border-left: 4px solid var(--info-border);
 }
 .table-of-contents .toc-title {
   font-family: 'Commit Mono', monospace;
   font-weight: 700;
+  font-variation-settings: 'wght' 700;
+  font-size: 1.1em;
   margin-bottom: 0.5em;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  color: var(--link);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--fg);
 }
 .table-of-contents nav ul {
   list-style: none;
   padding-left: 1em;
   margin: 0;
 }
+.table-of-contents nav ul ul {
+  margin-top: 0.4em;
+}
 .table-of-contents nav ul li {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.4em;
 }
 .table-of-contents a {
-  text-decoration: none;
-  font-size: 0.95em;
-}
-.table-of-contents a:hover {
-  text-decoration: underline;
+  /* font-size: 0.95em; removed to match body text */
 }
 
 .code-block-wrapper {
@@ -466,9 +472,9 @@ hr::after {
   z-index: -1;
   background-color: transparent;
   /* Simulating ░ character with a dither pattern */
-  background-image: radial-gradient(var(--fg-dim) 1px, transparent 0);
+  background-image: radial-gradient(var(--shadow-dots) 1px, transparent 0);
   background-size: 3px 3px;
-  border: 1px solid var(--border);
+  /* border: 1px solid var(--border); removed per style guide */
 }
 
 .copy-code-button {
@@ -481,11 +487,11 @@ hr::after {
   align-items: center;
   justify-content: center;
   color: var(--fg-dim);
-  background-color: var(--button-bg);
-  border: 1px solid var(--border);
+  background-color: transparent;
+  /* border: 1px solid var(--border); removed per style guide */
   border-radius: 0;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 1;
   transition: all 0.2s ease;
 }
 
@@ -506,7 +512,7 @@ hr::after {
 
 
 pre {
-  border: 1px solid var(--border);
+  /* border: 1px solid var(--border); removed per style guide */
   position: relative;
   box-shadow: none;
   padding: 1em;
@@ -529,7 +535,7 @@ pre code { background: none; }
 .featured-image img {
   max-width: 100%;
   height: auto;
-  border: 1px solid var(--border);
+  /* border: 1px solid var(--border); removed per style guide */
 }
 
 /* code */
@@ -648,7 +654,7 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   border-left: 4px solid var(--fg-dim);
   padding: var(--space-lg);
   margin: var(--space-lg) 0;
-  background: var(--callout-bg);
+  background: var(--meta-bg);
 }
 .callout-title {
   font-weight: 700;
@@ -676,30 +682,30 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   font-style: normal;
   background-color: transparent;
 }
-.callout-note { border-left-color: var(--note-border); background: var(--note-bg); }
-.callout-warning { border-left-color: var(--warn-border); background: var(--warn-bg); }
-.callout-tip { border-left-color: var(--tip-border); background: var(--tip-bg); }
-.callout-important { border-left-color: var(--imp-border); background: var(--imp-bg); }
-.callout-caution { border-left-color: var(--imp-border); background: var(--imp-bg); }
-.callout-example { border-left-color: var(--example-border); background: var(--example-bg); }
-.callout-info { border-left-color: var(--info-border); background: var(--info-bg); }
-.callout-quote { border-left-color: var(--quote-border); background: var(--quote-bg); }
+.callout-note { border-left-color: var(--note-border); }
+.callout-warning { border-left-color: var(--warn-border); }
+.callout-tip { border-left-color: var(--tip-border); }
+.callout-important { border-left-color: var(--imp-border); }
+.callout-caution { border-left-color: var(--imp-border); }
+.callout-example { border-left-color: var(--example-border); }
+.callout-info { border-left-color: var(--info-border); }
+.callout-quote { border-left-color: var(--quote-border); }
 
 /* Fallback styling for blockquotes that Hugo might not have parsed into .callout classes */
-blockquote.callout-note, blockquote[class*="note"] { border-left-color: var(--note-border) !important; background: var(--note-bg) !important; }
-blockquote.callout-warning, blockquote[class*="warning"] { border-left-color: var(--warn-border) !important; background: var(--warn-bg) !important; }
-blockquote.callout-tip, blockquote[class*="tip"] { border-left-color: var(--tip-border) !important; background: var(--tip-bg) !important; }
-blockquote.callout-important, blockquote[class*="important"] { border-left-color: var(--imp-border) !important; background: var(--imp-bg) !important; }
-blockquote.callout-example, blockquote[class*="example"] { border-left-color: var(--example-border) !important; background: var(--example-bg) !important; }
-blockquote.callout-info, blockquote[class*="info"] { border-left-color: var(--info-border) !important; background: var(--info-bg) !important; }
-blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--quote-border) !important; background: var(--quote-bg) !important; }
+blockquote.callout-note, blockquote[class*="note"] { border-left-color: var(--note-border) !important; background: var(--meta-bg) !important; }
+blockquote.callout-warning, blockquote[class*="warning"] { border-left-color: var(--warn-border) !important; background: var(--meta-bg) !important; }
+blockquote.callout-tip, blockquote[class*="tip"] { border-left-color: var(--tip-border) !important; background: var(--meta-bg) !important; }
+blockquote.callout-important, blockquote[class*="important"] { border-left-color: var(--imp-border) !important; background: var(--meta-bg) !important; }
+blockquote.callout-example, blockquote[class*="example"] { border-left-color: var(--example-border) !important; background: var(--meta-bg) !important; }
+blockquote.callout-info, blockquote[class*="info"] { border-left-color: var(--info-border) !important; background: var(--meta-bg) !important; }
+blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--quote-border) !important; background: var(--meta-bg) !important; }
 
 /* Hugo Native Markdown Alerts */
 .markdown-alert {
   border-left: 4px solid var(--fg-dim);
   padding: var(--space-lg);
   margin: var(--space-lg) 0;
-  background: var(--callout-bg);
+  background: var(--meta-bg);
 }
 
 .markdown-alert-title {
@@ -713,11 +719,11 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
   gap: 0.5em;
 }
 
-.markdown-alert-note { border-left-color: var(--note-border); background: var(--note-bg); }
-.markdown-alert-tip { border-left-color: var(--tip-border); background: var(--tip-bg); }
-.markdown-alert-warning { border-left-color: var(--warn-border); background: var(--warn-bg); }
-.markdown-alert-important { border-left-color: var(--imp-border); background: var(--imp-bg); }
-.markdown-alert-caution { border-left-color: var(--imp-border); background: var(--imp-bg); }
+.markdown-alert-note { border-left-color: var(--note-border); }
+.markdown-alert-tip { border-left-color: var(--tip-border); }
+.markdown-alert-warning { border-left-color: var(--warn-border); }
+.markdown-alert-important { border-left-color: var(--imp-border); }
+.markdown-alert-caution { border-left-color: var(--imp-border); }
 
 
 
@@ -817,13 +823,13 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
 }
 
 .pagefind-ui .pagefind-ui__result::after {
-  content: "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░" !important;
+  content: "▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒" !important;
   position: absolute !important;
   bottom: calc(var(--space-sm) * -1) !important;
   left: var(--space-sm) !important;
-  color: var(--warn-border) !important;
+  color: var(--shadow-dots) !important;
   opacity: 0.5 !important;
-  font-size: 1em !important;
+  font-size: 1.2em !important;
   line-height: 1 !important;
   z-index: -1 !important;
   display: block !important;
