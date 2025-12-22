@@ -264,13 +264,6 @@ nav {
   display: inline-block;
   margin: 0; 
 }
-.article-meta {
-  text-decoration: none;
-  background: var(--meta-bg);
-  color: var(--fg);
-  padding: 5px 10px;
-  border-radius: 0;
-}
 .menu a {
   text-decoration: none;
   background: var(--button-bg);
@@ -284,6 +277,36 @@ nav {
   filter: none;
 }
 .menu, .article-meta, footer { text-align: center; }
+
+.article-meta {
+  text-decoration: none;
+  background: transparent;
+  color: var(--fg);
+  padding: 0;
+  border-radius: 0;
+  margin-bottom: var(--content-spacing);
+}
+.article-meta h1 {
+  margin: 0.2em 0 0.2em 0;
+}
+.article-meta-info {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1em;
+  font-family: 'Commit Mono', monospace;
+  font-size: 0.9em;
+  color: var(--fg-dim);
+  flex-wrap: wrap;
+}
+.article-tags {
+  margin-top: 0;
+  font-size: 1em;
+  font-family: 'Commit Mono', monospace;
+}
+.article-tags a {
+  margin-right: 0.5em;
+}
 footer {
   background-color: var(--meta-bg);
   padding: var(--space-lg);
