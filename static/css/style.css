@@ -57,6 +57,7 @@
   --fg-dim: #6F777B; /* Strings */
   --fg-muted: #859289; /* Comments */
   --link: #286486; /* Water */
+  --link-visited: #5F879E; /* Dimmer Water */
   --meta-bg: #EAE6E4; /* Darker than bg */
   --button-bg: #DCD8D6; /* Darker than meta-bg */
   --button-hover-bg: #CFCBC9; /* Darker than button-bg */
@@ -93,6 +94,7 @@
     --fg-dim: #8E969B;
     --fg-muted: #6C7377;
     --link: #6099C0;
+    --link-visited: #4A7691;
     --meta-bg: #252220;
     --button-bg: #2F2C2A; /* Lighter than meta-bg */
     --button-hover-bg: #3A3735; /* Lighter than button-bg */
@@ -126,6 +128,7 @@ body.dark {
   --fg-dim: #8E969B;
   --fg-muted: #6C7377;
   --link: #6099C0;
+  --link-visited: #4A7691;
   --meta-bg: #252220;
   --button-bg: #2F2C2A;
   --button-hover-bg: #3A3735;
@@ -158,6 +161,7 @@ body.light {
   --fg-dim: #6F777B;
   --fg-muted: #859289;
   --link: #286486;
+  --link-visited: #5F879E;
   --meta-bg: #EAE6E4;
   --button-bg: #DCD8D6;
   --button-hover-bg: #CFCBC9;
@@ -199,6 +203,27 @@ body {
 a { 
   color: var(--link); 
   text-underline-offset: 0.2em;
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+/* Exclude icons and UI elements from visited styling */
+.menu a:visited,
+.project-card:visited,
+.taxonomy-cloud li a:visited,
+.load-comments-btn:visited {
+  color: inherit;
+}
+
+.footer-icons a:visited,
+.pagefind-ui .pagefind-ui__result-link:visited {
+  color: var(--link);
+}
+
+a:hover {
+  filter: brightness(1.2);
 }
 
 code, pre {
@@ -254,10 +279,15 @@ nav {
   border-radius: 0;
 }
 .menu a.active, .menu a:hover {
-  background-color: var(--button-hover-bg);
-  color: var(--fg);
+  background-color: var(--link);
+  color: var(--bg);
+  filter: none;
 }
 .menu, .article-meta, footer { text-align: center; }
+footer {
+  background-color: var(--meta-bg);
+  padding: var(--space-lg);
+}
 .title { font-size: 1.1em; }
 
 /* Homepage Styles */
@@ -291,7 +321,7 @@ section {
   gap: 1em;
 }
 .project-card {
-  background: var(--meta-bg);
+  background: var(--button-bg);
   padding: 1em;
   text-decoration: none !important;
   color: var(--fg);
@@ -300,7 +330,13 @@ section {
 }
 .project-card:hover {
   border-color: var(--link);
-  background: var(--bg);
+  background: var(--link);
+  color: var(--bg);
+  filter: none;
+}
+.project-card:hover .project-header strong,
+.project-card:hover .project-desc {
+  color: var(--bg);
 }
 .project-header strong {
   font-family: 'Commit Mono', monospace;
@@ -355,9 +391,6 @@ section {
   border-bottom: none !important;
   display: flex;
   align-items: center;
-}
-.footer-icons a:hover {
-  opacity: 0.7;
 }
 .footer-text {
   color: var(--fg); /* primary color */
@@ -517,7 +550,7 @@ main em, main i {
   padding: 5px 10px;
   font-family: 'Commit Mono', monospace;
   font-size: 1em;
-  background-color: var(--bg);
+  background-color: var(--button-bg);
   color: var(--fg);
   border: none;
   cursor: pointer;
@@ -528,6 +561,7 @@ main em, main i {
 .load-comments-btn:hover {
   background-color: var(--link);
   color: var(--bg);
+  filter: none;
 }
 
 /* List Page and Taxonomy Styling */
@@ -580,11 +614,13 @@ main em, main i {
 .taxonomy-cloud li a:hover {
   background-color: var(--link);
   color: var(--bg);
+  filter: none;
 }
 .taxonomy-cloud li a:hover .term-count {
   background-color: var(--fg);
   color: var(--bg);
   border-left: 1px solid var(--link);
+  filter: none;
 }
 blockquote {
   background: var(--meta-bg);
@@ -712,7 +748,7 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
   display: none !important;
 }
 .pagefind-ui .pagefind-ui__search-input {
-  background-color: var(--bg) !important;
+  background-color: var(--button-bg) !important;
   color: var(--fg);
   border: none !important;
   border-radius: 0 !important;
@@ -742,6 +778,21 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
   top: calc(var(--space-lg) + var(--space-sm) + 2em + var(--space-sm)) !important;
 }
 
+.pagefind-ui .pagefind-ui__result:hover {
+  background-color: var(--link) !important;
+  color: var(--bg) !important;
+  filter: none !important;
+}
+.pagefind-ui .pagefind-ui__result:hover .pagefind-ui__result-link,
+.pagefind-ui .pagefind-ui__result:hover .pagefind-ui__result-excerpt,
+.pagefind-ui .pagefind-ui__result:hover .pagefind-ui__result-title {
+  color: var(--bg) !important;
+}
+.pagefind-ui .pagefind-ui__button:hover {
+  background-color: var(--link) !important;
+  color: var(--bg) !important;
+  filter: none !important;
+}
 .pagefind-ui .pagefind-ui__drawer::before {
   content: "" !important;
   position: absolute !important;
@@ -755,7 +806,7 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
   border: none !important;
   padding: var(--space-lg) !important;
   margin-bottom: var(--space-lg) !important;
-  background: var(--bg) !important;
+  background: var(--button-bg) !important;
   position: relative !important;
 }
 

@@ -10,7 +10,8 @@
   - [Zenbones](https://github.com/zenbones-theme/zenbones.nvim) color palette
     (Light/Dark mode).
   - **Body/Code:** [Commit Mono](https://commitmono.com/).
-  - **Headings/Callouts:** [Maple Mono](https://github.com/subframe7536/maple-font).
+  - **Headings/Callouts:**
+    [Maple Mono](https://github.com/subframe7536/maple-font).
 - **Search:** [Pagefind](https://pagefind.app/) (Static, low-bandwidth, runs on
   client).
 - **Comments:** [Giscus](https://giscus.app/) (Powered by GitHub Discussions).
@@ -19,8 +20,11 @@
   - **Makefile:** Standardizes build, serve, and clean tasks.
   - **direnv:** Manages environment variables via `.envrc`.
 - **Philosophy:**
-    *   **Zero-JS (Mostly):** JavaScript is only used for progressive enhancement (Search, Dark Mode Toggle, Copy-to-Clipboard). The site remains fully functional without it.
-    *   **Self-Contained:** No external font CDNs, no tracking scripts, no submodules. All assets are self-hosted.
+  - **Zero-JS (Mostly):** JavaScript is only used for progressive enhancement
+    (Search, Dark Mode Toggle, Copy-to-Clipboard). The site remains fully
+    functional without it.
+  - **Self-Contained:** No external font CDNs, no tracking scripts, no
+    submodules. All assets are self-hosted.
 
 ## Features
 
@@ -51,21 +55,24 @@
 ### Build Workflow
 
 For development with incremental changes:
+
 ```bash
 make serve
 ```
 
 For a clean production build (recommended before deploying):
+
 ```bash
 make clean && make build
 ```
 
 **Note:** Always run `make clean` before `make build` to ensure:
+
 - No stale files from previous builds remain in `public/`
 - The Pagefind search index is regenerated from scratch
-- Duplicate search results are avoided (especially important after renaming files or changing permalinks)
+- Duplicate search results are avoided (especially important after renaming
+  files or changing permalinks)
 
 ### Deployment
 
 Deploys automatically to GitHub Pages via GitHub Actions on push to `main`.
-
