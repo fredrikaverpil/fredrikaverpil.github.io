@@ -2,19 +2,25 @@
 
 ## Tech Stack & Philosophy
 
-- **Static Site Generator:** [Hugo](https://gohugo.io/) (Fast, Go-based)
+- **Static Site Generator:** [Hugo](https://gohugo.io/) (Fast, Go-based).
+- **Go Tooling:** Managed via `go.mod` (Go 1.25+), utilizing Hugo as a Go tool.
 - **Theme:** Custom theme, initially based on
-  [`hugo-xmin`](https://github.com/yihui/hugo-xmin)
-- **Aesthetic:**"Terminal" vibe with
+  [`hugo-xmin`](https://github.com/yihui/hugo-xmin).
+- **Aesthetic:** "Terminal" vibe with
   - [Zenbones](https://github.com/zenbones-theme/zenbones.nvim) color palette
-    (Light/Dark mode)
-  - **Body/Code:** [Commit Mono](https://commitmono.com/)
-  - **Callouts:** [Maple Mono](https://github.com/subframe7536/maple-font)
+    (Light/Dark mode).
+  - **Body/Code:** [Commit Mono](https://commitmono.com/).
+  - **Headings/Callouts:** [Maple Mono](https://github.com/subframe7536/maple-font).
 - **Search:** [Pagefind](https://pagefind.app/) (Static, low-bandwidth, runs on
   client).
+- **Comments:** [Giscus](https://giscus.app/) (Powered by GitHub Discussions).
+- **Icons:** [Simple Icons](https://simpleicons.org/) (Inlined SVGs).
+- **Automation & Environment:**
+  - **Makefile:** Standardizes build, serve, and clean tasks.
+  - **direnv:** Manages environment variables via `.envrc`.
 - **Philosophy:**
-    *   **Zero-JS (Mostly):** JavaScript is only used for progressive enhancement (Search, Dark Mode Toggle). The site is fully functional without it.
-    *   **Self-Contained:** No external font CDNs, no tracking scripts, no submodules. Social icons are handled via inline SVGs in `layouts/partials/social_icon.html` (sourced from [Simple Icons](https://simpleicons.org/)).
+    *   **Zero-JS (Mostly):** JavaScript is only used for progressive enhancement (Search, Dark Mode Toggle, Copy-to-Clipboard). The site remains fully functional without it.
+    *   **Self-Contained:** No external font CDNs, no tracking scripts, no submodules. All assets are self-hosted.
 
 ## Features
 
