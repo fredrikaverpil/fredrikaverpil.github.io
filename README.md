@@ -1,50 +1,17 @@
 # fredrikaverpil.github.io
 
-## Tech Stack & Philosophy
-
-- **Static Site Generator:** [Hugo](https://gohugo.io/) (Fast, Go-based).
-- **Go Tooling:** Managed via `go.mod` (Go 1.25+), utilizing Hugo as a Go tool.
-- **Theme:** Custom theme, initially based on
-  [`hugo-xmin`](https://github.com/yihui/hugo-xmin).
-- **Aesthetic:** "Terminal" vibe with
-  - [Zenbones](https://github.com/zenbones-theme/zenbones.nvim) color palette
-    (Light/Dark mode).
-  - **Body/Code:** [Commit Mono](https://commitmono.com/).
-  - **Headings/Callouts:**
-    [Maple Mono](https://github.com/subframe7536/maple-font).
-- **Search:** [Pagefind](https://pagefind.app/) (Static, low-bandwidth, runs on
-  client).
-- **Comments:** [Giscus](https://giscus.app/) (Powered by GitHub Discussions).
-- **Icons:** [Simple Icons](https://simpleicons.org/) (Inlined SVGs).
-- **Automation & Environment:**
-  - **Makefile:** Standardizes build, serve, and clean tasks.
-  - **direnv:** Manages environment variables via `.envrc`.
-- **Philosophy:**
-  - **Zero-JS (Mostly):** JavaScript is only used for progressive enhancement
-    (Search, Dark Mode Toggle, Copy-to-Clipboard). The site remains fully
-    functional without it.
-  - **Self-Contained:** No external font CDNs, no tracking scripts, no
-    submodules. All assets are self-hosted.
-
-## Features
-
-- **Dark Mode:** Automatic system detection + Manual toggle (persisted).
-- **Syntax Highlighting:** Adaptive
-  [Chroma](https://github.com/alecthomas/chroma) themes (Tango Light / Monokai
-  Dark) styled to match Zenbones.
-- **Callouts:** GitHub-style alerts (`> [!NOTE]`) rendered via Hugo Render
-  Hooks.
-- **RSS:** Native Hugo RSS feeds.
+My personal blog and portfolio.
 
 ## Development
 
+This project uses [Hugo](https://gohugo.io/) and standard UNIX tools.
+
 ### Prerequisites
 
-- **Hugo:** `brew install hugo` (or
-  `go install -tags extended github.com/gohugoio/hugo@latest`)
-- **Node/NPM:** For `npx` (Pagefind).
+- **Hugo:** `brew install hugo` (or via `go install`).
+- **Node/NPM:** Required for `npx` to run [Pagefind](https://pagefind.app/).
 
-### Commands
+### Quickstart
 
 | Command      | Description                          |
 | :----------- | :----------------------------------- |
@@ -54,25 +21,18 @@
 
 ### Build Workflow
 
-For development with incremental changes:
-
+For local development:
 ```bash
 make serve
 ```
 
-For a clean production build (recommended before deploying):
-
+For a clean production build:
 ```bash
 make clean && make build
 ```
 
-**Note:** Always run `make clean` before `make build` to ensure:
+**Note:** Always run `make clean` before `make build` to ensure the Pagefind search index is regenerated correctly and to remove stale artifacts.
 
-- No stale files from previous builds remain in `public/`
-- The Pagefind search index is regenerated from scratch
-- Duplicate search results are avoided (especially important after renaming
-  files or changing permalinks)
+## Documentation
 
-### Deployment
-
-Deploys automatically to GitHub Pages via GitHub Actions on push to `main`.
+See [HUGO.md](HUGO.md) for the complete design system, style guide, and technical details.
