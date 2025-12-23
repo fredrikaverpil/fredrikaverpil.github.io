@@ -593,7 +593,7 @@ main {
 }
 
 main em, main i {
-  font-family: 'Commit Mono', monospace;
+  font-family: 'Maple Mono', monospace;
   font-style: italic;
 }
 
@@ -724,7 +724,7 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   font-style: normal;
 }
 .callout-content em, .callout-content i {
-  font-family: 'Commit Mono', monospace;
+  font-family: 'Maple Mono', monospace;
   font-style: italic;
 }
 .callout-content code, .callout-content pre {
