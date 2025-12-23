@@ -972,3 +972,16 @@ body.preload {
   height: 100%;
   border: 0;
 }
+
+/* Mobile Responsive - Profile Header */
+@media screen and (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .profile-photo {
+    width: calc(var(--space-xxl) * 1.2);
+    height: calc(var(--space-xxl) * 1.2);
+  }
+}
