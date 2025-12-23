@@ -898,7 +898,8 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
 .pagefind-ui .pagefind-ui__result-title {
   font-weight: 700 !important;
   font-family: 'Commit Mono', monospace !important;
-  text-decoration: underline !important;
+  text-decoration: none !important; /* Removed underline */
+  color: var(--fg) !important; /* Reverted to foreground color */
 }
 .pagefind-ui .pagefind-ui__result-link {
   color: var(--link) !important;
@@ -911,7 +912,7 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
 .pagefind-ui .pagefind-ui__message {
   color: var(--fg) !important; /* primary color */
   font-family: 'Commit Mono', monospace !important;
-  padding: var(--space-sm) 0 !important;
+  padding: var(--space-xs) 0 !important;
 }
 .pagefind-ui .pagefind-ui__button {
   background-color: transparent !important;
@@ -925,6 +926,8 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
   display: block !important;
   cursor: pointer;
   text-decoration: underline !important;
+  text-decoration-thickness: 0.1em !important;
+  text-underline-offset: 0.2em !important;
 }
 .pagefind-ui mark {
   background-color: var(--warn-bg) !important;
