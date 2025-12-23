@@ -588,7 +588,7 @@ main {
 }
 
 main em, main i {
-  font-family: 'Maple Mono', monospace;
+  font-family: 'Commit Mono', monospace;
   font-style: italic;
 }
 
@@ -719,7 +719,7 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   font-style: normal;
 }
 .callout-content em, .callout-content i {
-  font-family: 'Maple Mono', monospace;
+  font-family: 'Commit Mono', monospace;
   font-style: italic;
 }
 .callout-content code, .callout-content pre {
@@ -785,7 +785,7 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
 
 /* --- Syntax Highlighting Variables --- */
 .chroma .k, .chroma .kd, .chroma .kn, .chroma .kp, .chroma .kr, .chroma .kt { font-weight: bold; color: var(--syntax-k); }
-.chroma .c, .chroma .cm, .chroma .c1, .chroma .cs { font-style: italic; color: var(--syntax-c); font-family: 'Maple Mono', monospace; }
+.chroma .c, .chroma .cm, .chroma .c1, .chroma .cs { font-style: italic; color: var(--syntax-c); font-family: 'Commit Mono', monospace; }
 .chroma .s, .chroma .s1, .chroma .s2 { font-style: normal; color: var(--syntax-s); }
 .chroma .n, .chroma .na, .chroma .nb, .chroma .nc, .chroma .nf { color: var(--syntax-n); }
 .chroma .o, .chroma .ow { font-weight: bold; color: var(--syntax-n); }
@@ -892,7 +892,7 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
 }
 .pagefind-ui .pagefind-ui__result-title {
   font-weight: 700 !important;
-  font-family: 'Maple Mono', monospace !important;
+  font-family: 'Commit Mono', monospace !important;
   text-decoration: underline !important;
 }
 .pagefind-ui .pagefind-ui__result-link {
@@ -905,7 +905,7 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
 }
 .pagefind-ui .pagefind-ui__message {
   color: var(--fg) !important; /* primary color */
-  font-family: 'Maple Mono', monospace !important;
+  font-family: 'Commit Mono', monospace !important;
   font-style: italic;
   padding: var(--space-lg) 0 !important;
 }
@@ -913,7 +913,7 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
   background-color: transparent !important;
   border: none !important;
   color: var(--link) !important;
-  font-family: 'Maple Mono', monospace !important;
+  font-family: 'Commit Mono', monospace !important;
   font-weight: 700 !important;
   padding: var(--space-lg) 0 !important;
   width: auto !important;

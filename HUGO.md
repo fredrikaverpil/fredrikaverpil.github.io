@@ -38,7 +38,7 @@ We use a dual-monospace font stack to reinforce the engineering aesthetic.
 | Role          | Font Family   | Usage                                                |
 | :------------ | :------------ | :--------------------------------------------------- |
 | **Primary**   | `Commit Mono` | Body text, headings, code, UI elements.              |
-| **Secondary** | `Maple Mono`  | Italics, comments in code, quotes, special emphasis. |
+| **Secondary** | `Commit Mono` | Italics, comments in code, quotes, special emphasis. |
 
 - **Font Weights:**
   - Light Mode: 350 (legibility)
