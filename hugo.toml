@@ -53,7 +53,7 @@ name = "Mastodon"
 url = "https://fosstodon.org/@fredrikaverpil"
 [[params.social]]
 name = "Bluesky"
-url = "https://bsky.app/profile/fredrikaverpil.github.io"
+url = "https://bsky.app/profile/fredrikaverpil.bsky.social"
 [[params.social]]
 name = "LinkedIn"
 url = "https://linkedin.com/in/fredrik"
