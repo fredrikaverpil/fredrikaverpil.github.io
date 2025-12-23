@@ -1,49 +1,52 @@
 {{ partial "header.html" . }}
 
 <main>
-<!-- Latest Posts -->
-<section id="latest">
-  <h2>Latest</h2>
-  <ul class="post-list">
-    {{ range first 5 (where .Site.RegularPages "Type" "blog") }}
-    <li>
-      <span class="date">{{ .Date.Format "2006-01-02" }}</span>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </li>
-    {{ end }}
-  </ul>
-  <p><a href="/blog/">All posts →</a></p>
-</section>
+	<!-- Latest Posts -->
+	<section id="latest">
+		<h2>Latest</h2>
+		<ul class="post-list">
+			{{ range first 5 (where .Site.RegularPages "Type" "blog") }}
+			<li>
+				<span class="date">{{ .Date.Format "2006-01-02" }}</span>
+				<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+			</li>
+			{{ end }}
+		</ul>
+		<p><a href="/blog/">All posts →</a></p>
+	</section>
 
-<!-- Projects Section -->
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="project-grid">
-    {{ range .Site.Params.projects }}
-    <a href="{{ .url }}" class="project-card" target="_blank" rel="noopener">
-      <div class="project-header">
-        <strong>{{ .name }}</strong>
-      </div>
-      <p class="project-desc">{{ .description }}</p>
-    </a>
-    {{ end }}
-  </div>
-</section>
+	<!-- Projects Section -->
+	<section id="projects">
+		<h2>Projects</h2>
+		<div class="project-grid">
+			{{ range .Site.Params.projects }}
+			<a href="{{ .url }}" class="project-card" target="_blank" rel="noopener">
+				<div class="project-header">
+					<strong>{{ .name }}</strong>
+				</div>
+				<p class="project-desc">{{ .description }}</p>
+			</a>
+			{{ end }}
+		</div>
+		<p><a href="https://github.com/fredrikaverpil?tab=repositories&sort=stargazers&type=source">More projects at
+			GitHub →</a></p>
+	</section>
 
-<!-- About Section -->
-<section id="home-about">
-  <h2>About</h2>
-  <div class="about-flex">
-    <img src="/img/profile.jpg" alt="Fredrik Averpil" class="about-photo">
-    <div class="about-content">
-      <p>
-        I'm <strong>Fredrik Averpil</strong>, a Senior Software Engineer at <a href="https://github.com/einride">Einride</a>. 
-        I build backend systems in Go and have a passion for developer tooling, Neovim, and minimalism.
-      </p>
-      <p><a href="/about/">Read more →</a></p>
-    </div>
-  </div>
-</section>
+	<!-- About Section -->
+	<section id="home-about">
+		<h2>About</h2>
+		<div class="about-flex">
+			<img src="/img/profile.jpg" alt="Fredrik Averpil" class="about-photo">
+			<div class="about-content">
+				<p>
+					I'm <strong>Fredrik Averpil</strong>, a Senior Software Engineer at <a href="https://github.com/einride">Einride</a>.
+					I build backend systems in Go and have a passion for developer tooling, Neovim, and minimalism.
+				</p>
+				<p><a href="/about/">Read more →</a></p>
+			</div>
+		</div>
+	</section>
 </main>
 
 {{ partial "footer.html" . }}
+
