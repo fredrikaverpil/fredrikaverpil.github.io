@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Commit Mono';
-  src: url('/fonts/CommitMono-Variable.woff2') format('woff2');
+  src: url('../fonts/CommitMono-Variable.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -8,21 +8,21 @@
 
 @font-face {
   font-family: 'Maple Mono';
-  src: url('/fonts/MapleMono-Regular.woff2') format('woff2');
+  src: url('../fonts/MapleMono-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Maple Mono';
-  src: url('/fonts/MapleMono-Italic.woff2') format('woff2');
+  src: url('../fonts/MapleMono-Italic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Maple Mono';
-  src: url('/fonts/MapleMono-Bold.woff2') format('woff2');
+  src: url('../fonts/MapleMono-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -348,11 +348,9 @@ section {
   padding: 1em;
   text-decoration: none !important;
   color: var(--fg);
-  /* border: 1px solid transparent; removed per style guide */
   display: block;
 }
 .project-card:hover {
-  /* border-color: var(--link); removed per style guide */
   background: var(--link);
   color: var(--bg);
   filter: none;
@@ -478,7 +476,6 @@ hr::after {
   margin-bottom: 0.4em;
 }
 .table-of-contents a {
-  /* font-size: 0.95em; removed to match body text */
 }
 
 .code-block-wrapper {
@@ -518,11 +515,7 @@ hr::after {
   filter: none;
 }
 
-/* Removed colored feedback classes */
-
-
 pre {
-  /* border: 1px solid var(--border); removed per style guide */
   position: relative;
   box-shadow: none;
   padding: 1em;
@@ -567,7 +560,6 @@ pre code {
 .featured-image img {
   max-width: 100%;
   height: auto;
-  /* border: 1px solid var(--border); removed per style guide */
 }
 
 /* code */
