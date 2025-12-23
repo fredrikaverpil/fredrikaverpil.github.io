@@ -74,6 +74,15 @@ hooks (`layouts/_default/_markup/render-blockquote.html`).
 - **Types:** `NOTE`, `TIP`, `WARNING`, `IMPORTANT`, `EXAMPLE`, `QUOTE`.
 - **Style:** Colored left border based on type; neutral background.
 
+### Footnotes
+
+Footnotes are supported using the standard Goldmark syntax: `[^1]`.
+
+- **Usage:** Place the marker `[^1]` in the text and define it at the bottom of
+  the file using `[^1]: My footnote content`.
+- **Style:** Rendered as small superscript numbers that link to a dedicated
+  footnotes section at the end of the post.
+
 ### Code Blocks
 
 - **Engine:** Hugo `chroma` syntax highlighting (Adaptive Tango Light / Monokai
