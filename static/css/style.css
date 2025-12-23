@@ -276,6 +276,10 @@ nav {
   color: var(--bg);
   filter: none;
 }
+
+#theme-toggle {
+  color: var(--fg) !important;
+}
 .menu, .article-meta, footer { text-align: center; }
 
 .article-meta {
@@ -800,8 +804,9 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
   display: none !important;
 }
 .pagefind-ui .pagefind-ui__search-input {
+  -webkit-appearance: none !important;
   background-color: var(--button-bg) !important;
-  color: var(--fg);
+  color: var(--fg) !important;
   border: none !important;
   border-radius: 0 !important;
   font-family: 'Commit Mono', monospace !important;
@@ -810,6 +815,11 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
   outline: none !important;
   height: 2em !important;
   padding: 0 var(--space-lg) 0 var(--space-sm) !important;
+}
+
+.pagefind-ui .pagefind-ui__search-input::placeholder {
+  color: var(--fg-dim) !important;
+  opacity: 1 !important;
 }
 .pagefind-ui .pagefind-ui__search-clear {
   display: none !important;
