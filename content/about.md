@@ -6,9 +6,9 @@ layout: "profile"
 type: "page"
 ---
 
-I'm a passionate, enthusiastic and professional software developer with 15+
-years of professional software engineering experience. I'm part of a
-backend-focused team, developing our Google Cloud-hosted and event-based SaaS
+I'm a passionate and enthusiastic software developer with 15+ years of
+professional software engineering experience. I'm part of a backend-focused
+engineering team, developing our Google Cloud-hosted and event-based SaaS
 platform using technologies such as Go, Protobuf, gRPC, Pub/Sub, Spanner,
 Postgres and Terraform.
 
