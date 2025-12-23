@@ -270,6 +270,12 @@ nav {
   color: var(--fg);
   padding: 5px 10px;
   border-radius: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .menu a.active, .menu a:hover {
   background-color: var(--link);
@@ -279,6 +285,12 @@ nav {
 
 #theme-toggle {
   color: var(--fg) !important;
+  transition: color 0.3s ease;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .menu, .article-meta, footer { text-align: center; }
 
