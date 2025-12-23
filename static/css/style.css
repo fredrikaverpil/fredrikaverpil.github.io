@@ -1091,7 +1091,7 @@ body.preload {
   }
 
   footer {
-    padding: var(--space-xs);
+    padding: var(--space-sm) var(--space-xs);
   }
 
   /* Profile Header */
