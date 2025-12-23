@@ -4,14 +4,20 @@
 {{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
 <div class="article-meta-info">
   {{ if (gt .Params.date 0) }}<span class="date">{{ .Date.Format "2006-01-02" }}</span>{{ end }}
+  {{ if or .Params.categories .Params.tags }}
   <span class="article-tags">
     {{ range .Params.categories }}
+    {{ if ne . "" }}
     <a href="{{ "categories/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
     {{ end }}
+    {{ end }}
     {{ range .Params.tags }}
+    {{ if ne . "" }}
     <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
     {{ end }}
+    {{ end }}
   </span>
+  {{ end }}
 </div>
 </div>
 
