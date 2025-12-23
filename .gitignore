@@ -1,6 +1,3 @@
-# Custom domain, managed by Github
-CNAME
-
 # Hugo build output
 public/
 resources/
