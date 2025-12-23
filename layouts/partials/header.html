@@ -17,7 +17,7 @@
     {{ partial "seo_schema.html" . }}
 
     <link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon" />
-    <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/github-link.css" | relURL }}" />
     {{ with .OutputFormats.Get "RSS" }}
     <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Site.Title }}">

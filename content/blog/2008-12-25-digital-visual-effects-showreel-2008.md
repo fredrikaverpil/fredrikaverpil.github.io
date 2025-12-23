@@ -4,9 +4,7 @@ date: 2008-12-25
 tags: ["portfolio"]
 ---
 
-<p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qoUwYdO2emY" frameborder="0" allowfullscreen></iframe>
-</p>
+{{< youtube qoUwYdO2emY >}}
 
 
 This is a showcase of some assorted hands-on work done by me at

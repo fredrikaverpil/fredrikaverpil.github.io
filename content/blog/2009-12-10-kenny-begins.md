@@ -4,9 +4,7 @@ date: 2009-12-10
 tags: ["portfolio"]
 ---
 
-<p>
-<iframe src="https://player.vimeo.com/video/9684926" width="500" height="222" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</p>
+{{< vimeo 9684926 >}}
 
 Eleven years after the successful TV series “Kenny Starfighter”, galaxy hero Kenny returns in “Kenny Begins”. The ambitions of the film, shot with the Red One camera, was to become the biggest feature film of the action comedy genre ever made in Sweden, sporting more than 600 visual effects shots.
 

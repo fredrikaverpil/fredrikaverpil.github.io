@@ -1,20 +1,15 @@
   <footer>
   <div class="footer-content">
     <span class="footer-icons">
-      {{ range .Site.Params.social }}
+      {{ range site.Params.social }}
       {{ $url := .url }}
-      {{ if eq .name "RSS" }}
-        {{ with $.Site.OutputFormats.Get "RSS" }}
-          {{ $url = .RelPermalink }}
-        {{ end }}
-      {{ end }}
       <a href="{{ $url | relURL }}" target="_blank" rel="noopener" title="{{ .name }}">
         {{ partial "social_icon.html" .name }}
       </a>
       {{ end }}
     </span>
     <span class="footer-text">
-      {{ .Site.Copyright | markdownify }} {{ now.Year }}
+      {{ site.Copyright | markdownify }} 2005-{{ now.Year }}
     </span>
   </div>
   {{ partial "foot_custom.html" . }}
