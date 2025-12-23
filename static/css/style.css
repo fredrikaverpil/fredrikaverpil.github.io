@@ -410,6 +410,11 @@ section {
   margin-top: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .about-flex {
+    gap: var(--space-lg);
+  }
+}
 .footer-content {
   display: flex;
   justify-content: center;
