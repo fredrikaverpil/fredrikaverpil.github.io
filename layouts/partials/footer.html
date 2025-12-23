@@ -2,7 +2,13 @@
   <div class="footer-content">
     <span class="footer-icons">
       {{ range .Site.Params.social }}
-      <a href="{{ .url | relURL }}" target="_blank" rel="noopener" title="{{ .name }}">
+      {{ $url := .url }}
+      {{ if eq .name "RSS" }}
+        {{ with $.Site.OutputFormats.Get "RSS" }}
+          {{ $url = .RelPermalink }}
+        {{ end }}
+      {{ end }}
+      <a href="{{ $url | relURL }}" target="_blank" rel="noopener" title="{{ .name }}">
         {{ partial "social_icon.html" .name }}
       </a>
       {{ end }}
