@@ -983,8 +983,29 @@ body.preload {
   border: 0;
 }
 
-/* Mobile Responsive - Profile Header */
+/* Mobile Responsive */
 @media screen and (max-width: 600px) {
+  body {
+    font-size: 0.9em;
+    padding: var(--space-sm);
+  }
+
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.3em; }
+  h3 { font-size: 1.1em; }
+  h4 { font-size: 1em; }
+  h5 { font-size: 0.95em; }
+  h6 { font-size: 0.9em; }
+
+  nav {
+    padding: var(--space-xs);
+  }
+
+  footer {
+    padding: var(--space-sm);
+  }
+
+  /* Profile Header */
   .profile-header {
     flex-direction: column;
     align-items: center;

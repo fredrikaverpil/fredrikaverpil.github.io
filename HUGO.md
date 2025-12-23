@@ -64,6 +64,30 @@ Spacing follows a strict Golden Ratio scale (Base Unit: `1rem` / 16px).
   darker (Light Mode) or lighter (Dark Mode) than the layer below.
 - **Borders:** No rounded corners (`border-radius: 0`).
 
+### Responsive Design & Media Queries
+
+The site is mobile-first and adapts gracefully to different screen sizes.
+
+**Mobile Breakpoint (`max-width: 600px`):**
+- **Body font size:** Reduced to `0.9em` (~14.4px) for better word density on narrow screens.
+- **Body padding:** Reduced from `var(--space-lg)` (~26px) to `var(--space-sm)` (~10px).
+- **Headings:** Scaled down proportionally to maintain visual hierarchy.
+  - h1: 1.8em → 1.6em
+  - h2: 1.5em → 1.3em
+  - h3: 1.3em → 1.1em
+  - h4: 1.2em → 1em
+  - h5: 1.1em → 0.95em
+  - h6: 1.05em → 0.9em
+- **Navigation:** Padding reduced from `var(--space-sm)` to `var(--space-xs)`.
+- **Footer:** Padding reduced to `var(--space-sm)`.
+- **Profile Header:** Switches from horizontal to vertical layout with centered text.
+
+**Design Principles:**
+- Use `max-width` constraints for readability on large screens, but ensure they don't limit mobile width.
+- Always reduce padding on mobile devices to maximize content area.
+- Scale typography proportionally; avoid drastic changes that break hierarchy.
+- Test on actual devices; use browser DevTools to simulate different viewport sizes.
+
 ## 4. Components
 
 ### Callouts / Alerts
