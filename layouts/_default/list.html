@@ -7,6 +7,8 @@
 
 {{ .Content }}
 
+{{ partial "taxonomy_cloud.html" . }}
+
 {{ $pages := .Pages }}
 {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
 

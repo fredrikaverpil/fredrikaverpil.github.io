@@ -1,0 +1,29 @@
+{{ if .Site.Taxonomies.categories }}
+<div class="category-cloud-section">
+  <h2>Categories</h2>
+  <ul class="taxonomy-cloud">
+    {{ range .Site.Taxonomies.categories }}
+    <li>
+      <a href="{{ .Page.RelPermalink }}">
+        <span class="term-name">{{ .Page.Title }}</span><span class="term-count">{{ .Count }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
+
+{{ if .Site.Taxonomies.tags }}
+<div class="tag-cloud-section">
+  <h2>Tags</h2>
+  <ul class="taxonomy-cloud">
+    {{ range .Site.Taxonomies.tags }}
+    <li>
+      <a href="{{ .Page.RelPermalink }}">
+        <span class="term-name">{{ .Page.Title }}</span><span class="term-count">{{ .Count }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
