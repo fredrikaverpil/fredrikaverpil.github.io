@@ -3,6 +3,7 @@ title: "About me"
 date: 2025-12-22
 draft: false
 layout: "profile"
+type: "page"
 ---
 
 I'm a passionate, enthusiastic and professional software developer with 15+
