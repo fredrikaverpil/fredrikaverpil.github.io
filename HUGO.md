@@ -95,7 +95,11 @@ Footnotes are supported using the standard Goldmark syntax: `[^1]`.
 
 - **Nav Bar:** Simple top navigation defined in `hugo.toml`.
 - **Buttons:** Flat style, transparent by default, blue on hover.
-- **Tags:** Two-colored interactive buttons (Name + Count).
+- **Taxonomy Clouds:**
+  - Displays **Categories** and **Tags** at the top of list pages.
+  - **Style:** Two-colored interactive buttons (Name + Count).
+  - **Active State:** The current term is highlighted (matching the hover style)
+    when viewing its specific list page.
 - **TOC:** Automatically generated on single post pages.
 
 ## 5. Hugo Configuration

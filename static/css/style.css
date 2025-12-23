@@ -650,12 +650,14 @@ main em, main i {
   color: var(--fg);
   border-left: 1px solid var(--meta-bg);
 }
-.taxonomy-cloud li a:hover {
+.taxonomy-cloud li a:hover,
+.taxonomy-cloud li a.active {
   background-color: var(--link);
   color: var(--bg);
   filter: none;
 }
-.taxonomy-cloud li a:hover .term-count {
+.taxonomy-cloud li a:hover .term-count,
+.taxonomy-cloud li a.active .term-count {
   background-color: var(--fg);
   color: var(--bg);
   border-left: 1px solid var(--link);

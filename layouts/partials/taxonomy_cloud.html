@@ -2,9 +2,10 @@
 <div class="category-cloud-section">
   <h2>Categories</h2>
   <ul class="taxonomy-cloud">
+    {{ $current := . }}
     {{ range .Site.Taxonomies.categories }}
     <li>
-      <a href="{{ .Page.RelPermalink }}">
+      <a href="{{ .Page.RelPermalink }}"{{ if eq $current.RelPermalink .Page.RelPermalink }} class="active"{{ end }}>
         <span class="term-name">{{ .Page.Title }}</span><span class="term-count">{{ .Count }}</span>
       </a>
     </li>
@@ -17,9 +18,10 @@
 <div class="tag-cloud-section">
   <h2>Tags</h2>
   <ul class="taxonomy-cloud">
+    {{ $current := . }}
     {{ range .Site.Taxonomies.tags }}
     <li>
-      <a href="{{ .Page.RelPermalink }}">
+      <a href="{{ .Page.RelPermalink }}"{{ if eq $current.RelPermalink .Page.RelPermalink }} class="active"{{ end }}>
         <span class="term-name">{{ .Page.Title }}</span><span class="term-count">{{ .Count }}</span>
       </a>
     </li>
