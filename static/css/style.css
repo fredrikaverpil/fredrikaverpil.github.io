@@ -728,7 +728,6 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   font-style: italic;
 }
 .callout-content code, .callout-content pre {
-  font-family: 'Commit Mono', monospace;
   font-style: normal;
   background-color: transparent;
 }
@@ -790,7 +789,7 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
 
 /* --- Syntax Highlighting Variables --- */
 .chroma .k, .chroma .kd, .chroma .kn, .chroma .kp, .chroma .kr, .chroma .kt { font-weight: bold; color: var(--syntax-k); }
-.chroma .c, .chroma .cm, .chroma .c1, .chroma .cs { font-style: italic; color: var(--syntax-c); font-family: 'Commit Mono', monospace; }
+.chroma .c, .chroma .cm, .chroma .c1, .chroma .cs { font-style: italic; color: var(--syntax-c); font-family: 'Maple Mono', monospace; }
 .chroma .s, .chroma .s1, .chroma .s2 { font-style: normal; color: var(--syntax-s); }
 .chroma .n, .chroma .na, .chroma .nb, .chroma .nc, .chroma .nf { color: var(--syntax-n); }
 .chroma .o, .chroma .ow { font-weight: bold; color: var(--syntax-n); }
