@@ -66,25 +66,53 @@ Spacing follows a strict Golden Ratio scale (Base Unit: `1rem` / 16px).
 
 ### Responsive Design & Media Queries
 
-The site is mobile-first and adapts gracefully to different screen sizes.
+The site uses three standard breakpoints to adapt gracefully across device sizes, following web design conventions.
 
-**Mobile Breakpoint (`max-width: 600px`):**
-- **Body font size:** Reduced to `0.9em` (~14.4px) for better word density on narrow screens.
+**Tablet Breakpoint (`max-width: 768px`):**
+Applies to iPad (portrait), tablets, and large devices.
+- **Body font size:** `0.95em` (~15.2px)
 - **Body padding:** Reduced from `var(--space-lg)` (~26px) to `var(--space-sm)` (~10px).
-- **Headings:** Scaled down proportionally to maintain visual hierarchy.
+- **Headings:** Moderately scaled down.
+  - h1: 1.8em → 1.7em
+  - h2: 1.5em → 1.4em
+  - h3: 1.3em → 1.2em
+  - h4: 1.2em → 1.05em
+  - h5: 1.1em → 1em
+  - h6: 1.05em → 0.95em
+- **Navigation & Footer:** Padding reduced to `var(--space-xs)`.
+- **Profile Header:** Switches from horizontal to vertical layout with centered text.
+
+**Medium Phone Breakpoint (`max-width: 600px`):**
+Applies to larger phones and devices between tablet and small phone sizes.
+- **Body font size:** `0.90em` (~14.4px)
+- **Body padding:** Reduced to `var(--space-xs)` (~6px).
+- **Headings:** Moderately scaled down.
   - h1: 1.8em → 1.6em
   - h2: 1.5em → 1.3em
   - h3: 1.3em → 1.1em
   - h4: 1.2em → 1em
   - h5: 1.1em → 0.95em
   - h6: 1.05em → 0.9em
-- **Navigation:** Padding reduced from `var(--space-sm)` to `var(--space-xs)`.
-- **Footer:** Padding reduced to `var(--space-sm)`.
-- **Profile Header:** Switches from horizontal to vertical layout with centered text.
+- **Navigation & Footer:** Padding reduced to `var(--space-xs)`.
+- **Profile Header:** Maintains vertical layout.
+
+**Small Phone Breakpoint (`max-width: 480px`):**
+Applies to iPhone 13, iPhone 14/15, and other compact phones.
+- **Body font size:** `0.85em` (~13.6px) for optimal word density (~10-12 words per line).
+- **Body padding:** Reduced to `var(--space-xs)` (~6px) to maximize content width.
+- **Headings:** More aggressively scaled down.
+  - h1: 1.8em → 1.5em
+  - h2: 1.5em → 1.2em
+  - h3: 1.3em → 1em
+  - h4: 1.2em → 0.95em
+  - h5: 1.1em → 0.9em
+  - h6: 1.05em → 0.85em
+- **Navigation & Footer:** Padding reduced to `var(--space-xs)`.
 
 **Design Principles:**
-- Use `max-width` constraints for readability on large screens, but ensure they don't limit mobile width.
-- Always reduce padding on mobile devices to maximize content area.
+- Use standard breakpoints (768px, 600px, 480px) for consistency and maintainability.
+- Font sizes cascade and override from larger to smaller breakpoints.
+- Always reduce padding on smaller devices to maximize content area.
 - Scale typography proportionally; avoid drastic changes that break hierarchy.
 - Test on actual devices; use browser DevTools to simulate different viewport sizes.
 
