@@ -3,10 +3,10 @@
 all: clean build serve
 
 serve:
-	hugo server -D
+	go tool hugo server -D
 
 build:
-	hugo --minify --environment production
+	go tool hugo --minify --environment production
 	npx pagefind --site public
 
 clean:
