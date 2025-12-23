@@ -821,7 +821,7 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
 }
 .pagefind-ui .pagefind-ui__search-input {
   -webkit-appearance: none !important;
-  background-color: var(--button-bg) !important;
+  background-color: var(--bg) !important;
   color: var(--fg) !important;
   border: none !important;
   border-radius: 0 !important;
@@ -911,8 +911,7 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
 .pagefind-ui .pagefind-ui__message {
   color: var(--fg) !important; /* primary color */
   font-family: 'Commit Mono', monospace !important;
-  font-style: italic;
-  padding: var(--space-lg) 0 !important;
+  padding: var(--space-sm) 0 !important;
 }
 .pagefind-ui .pagefind-ui__button {
   background-color: transparent !important;
