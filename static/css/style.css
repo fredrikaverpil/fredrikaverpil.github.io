@@ -1069,166 +1069,166 @@ blockquote[class*="quote"] {
 
 /* ========================================
    Search (Pagefind)
+   Note: !important is required to override Pagefind's inline styles
    ======================================== */
 
 #search {
   position: relative;
 }
 
-.pagefind-ui {
-  & .pagefind-ui__form {
-    position: relative !important;
-    margin: 0 !important;
+/* Reset Pagefind form styling */
+.pagefind-ui .pagefind-ui__form {
+  position: relative !important;
+  margin: 0 !important;
 
-    &::before {
-      display: none !important;
-      content: none !important;
-    }
-
-    & svg {
-      display: none !important;
-    }
+  &::before,
+  & svg {
+    display: none !important;
+    content: none !important;
   }
+}
 
-  & .pagefind-ui__search-input {
-    -webkit-appearance: none !important;
-    background-color: var(--bg) !important;
-    color: var(--fg) !important;
-    border: none !important;
-    border-radius: 0 !important;
-    font-family: 'Commit Mono', monospace !important;
-    font-size: 1em !important;
-    font-weight: 400 !important;
-    outline: none !important;
-    height: 2em !important;
-    padding: 0 var(--space-lg) 0 var(--space-sm) !important;
+/* Search input field */
+.pagefind-ui .pagefind-ui__search-input {
+  -webkit-appearance: none !important;
+  background-color: var(--bg) !important;
+  color: var(--fg) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  font-family: 'Commit Mono', monospace !important;
+  font-size: 1em !important;
+  font-weight: 400 !important;
+  outline: none !important;
+  height: 2em !important;
+  padding: 0 var(--space-lg) 0 var(--space-sm) !important;
 
-    &::before {
-      display: none !important;
-      content: none !important;
-    }
-
-    &::placeholder {
-      color: var(--fg-dim) !important;
-      opacity: 1 !important;
-    }
-  }
-
-  & .pagefind-ui__input-wrapper::before,
-  & div[class*="search-input"]::before {
+  &::before {
     display: none !important;
     content: none !important;
   }
 
-  & .pagefind-ui__search-clear {
-    display: none !important;
+  &::placeholder {
+    color: var(--fg-dim) !important;
+    opacity: 1 !important;
   }
+}
 
-  & .pagefind-ui__drawer {
-    background-color: var(--meta-bg) !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
+/* Hide default icons and clear button */
+.pagefind-ui .pagefind-ui__input-wrapper::before,
+.pagefind-ui div[class*="search-input"]::before,
+.pagefind-ui .pagefind-ui__search-clear {
+  display: none !important;
+  content: none !important;
+}
+
+/* Results dropdown */
+.pagefind-ui .pagefind-ui__drawer {
+  background-color: var(--meta-bg) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: auto !important;
+  z-index: 1000 !important;
+  padding: var(--space-lg) !important;
+  max-height: 60vh !important;
+  overflow-y: auto !important;
+  margin-top: var(--space-sm) !important;
+  top: 100% !important;
+
+  &::before {
+    content: "" !important;
     position: absolute !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: auto !important;
-    z-index: 1000 !important;
-    padding: var(--space-lg) !important;
-    max-height: 60vh !important;
-    overflow-y: auto !important;
-    margin-top: var(--space-sm) !important;
-    top: 100% !important;
-
-    &::before {
-      content: "" !important;
-      position: absolute !important;
-      top: calc(var(--space-sm) * -1) !important;
-      left: calc(var(--space-lg) * -1) !important;
-      right: calc(var(--space-lg) * -1) !important;
-      height: var(--space-sm) !important;
-      background: var(--bg) !important;
-    }
+    top: calc(var(--space-sm) * -1) !important;
+    left: calc(var(--space-lg) * -1) !important;
+    right: calc(var(--space-lg) * -1) !important;
+    height: var(--space-sm) !important;
+    background: var(--bg) !important;
   }
+}
 
-  & .pagefind-ui__result {
-    border: none !important;
-    padding: var(--space-lg) !important;
-    margin-bottom: var(--space-lg) !important;
-    background: var(--button-bg) !important;
-    position: relative !important;
+/* Individual search result items */
+.pagefind-ui .pagefind-ui__result {
+  border: none !important;
+  padding: var(--space-lg) !important;
+  margin-bottom: var(--space-lg) !important;
+  background: var(--button-bg) !important;
+  position: relative !important;
 
-    &:hover {
-      background-color: var(--link) !important;
+  &:hover {
+    background-color: var(--link) !important;
+    color: var(--bg) !important;
+    filter: none !important;
+
+    & .pagefind-ui__result-link,
+    & .pagefind-ui__result-excerpt,
+    & .pagefind-ui__result-title {
       color: var(--bg) !important;
-      filter: none !important;
-
-      & .pagefind-ui__result-link,
-      & .pagefind-ui__result-excerpt,
-      & .pagefind-ui__result-title {
-        color: var(--bg) !important;
-      }
     }
   }
+}
 
-  & .pagefind-ui__result-thumb {
-    display: none !important;
+/* Result item typography */
+.pagefind-ui .pagefind-ui__result-thumb {
+  display: none !important;
+}
+
+.pagefind-ui .pagefind-ui__result-inner {
+  margin-top: 0 !important;
+}
+
+.pagefind-ui .pagefind-ui__result-title {
+  font-weight: 700 !important;
+  font-family: 'Commit Mono', monospace !important;
+  text-decoration: none !important;
+  color: var(--fg) !important;
+}
+
+.pagefind-ui .pagefind-ui__result-link {
+  color: var(--link) !important;
+  text-decoration: none !important;
+}
+
+.pagefind-ui .pagefind-ui__result-excerpt {
+  color: var(--fg) !important;
+  font-family: 'Commit Mono', monospace !important;
+}
+
+/* Search UI messages and buttons */
+.pagefind-ui .pagefind-ui__message {
+  color: var(--fg) !important;
+  font-family: 'Commit Mono', monospace !important;
+  padding: var(--space-xs) 0 !important;
+}
+
+.pagefind-ui .pagefind-ui__button {
+  background-color: transparent !important;
+  border: none !important;
+  color: var(--link) !important;
+  font-family: 'Commit Mono', monospace !important;
+  font-weight: 700 !important;
+  padding: var(--space-lg) 0 !important;
+  width: auto !important;
+  margin: var(--space-lg) auto !important;
+  display: block !important;
+  cursor: pointer;
+  text-decoration: underline !important;
+  text-decoration-thickness: 0.1em !important;
+  text-underline-offset: 0.2em !important;
+
+  &:hover {
+    background-color: var(--link) !important;
+    color: var(--bg) !important;
+    filter: none !important;
   }
+}
 
-  & .pagefind-ui__result-inner {
-    margin-top: 0 !important;
-  }
-
-  & .pagefind-ui__result-title {
-    font-weight: 700 !important;
-    font-family: 'Commit Mono', monospace !important;
-    text-decoration: none !important;
-    color: var(--fg) !important;
-  }
-
-  & .pagefind-ui__result-link {
-    color: var(--link) !important;
-    text-decoration: none !important;
-  }
-
-  & .pagefind-ui__result-excerpt {
-    color: var(--fg) !important;
-    font-family: 'Commit Mono', monospace !important;
-  }
-
-  & .pagefind-ui__message {
-    color: var(--fg) !important;
-    font-family: 'Commit Mono', monospace !important;
-    padding: var(--space-xs) 0 !important;
-  }
-
-  & .pagefind-ui__button {
-    background-color: transparent !important;
-    border: none !important;
-    color: var(--link) !important;
-    font-family: 'Commit Mono', monospace !important;
-    font-weight: 700 !important;
-    padding: var(--space-lg) 0 !important;
-    width: auto !important;
-    margin: var(--space-lg) auto !important;
-    display: block !important;
-    cursor: pointer;
-    text-decoration: underline !important;
-    text-decoration-thickness: 0.1em !important;
-    text-underline-offset: 0.2em !important;
-
-    &:hover {
-      background-color: var(--link) !important;
-      color: var(--bg) !important;
-      filter: none !important;
-    }
-  }
-
-  & mark {
-    background-color: var(--warn-bg) !important;
-    color: var(--fg) !important;
-    font-weight: bold;
-  }
+.pagefind-ui mark {
+  background-color: var(--warn-bg) !important;
+  color: var(--fg) !important;
+  font-weight: bold;
 }
 
 /* ========================================
