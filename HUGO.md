@@ -80,6 +80,36 @@ Chroma syntax highlighting with copy button (top-right, visual feedback).
 **Implementation:** `layouts/_default/_markup/render-codeblock.html`,
 `static/js/main.js`.
 
+### Interactive Code Blocks (Codapi)
+
+Optional interactive code execution using [Codapi](https://github.com/nalgeon/codapi-js). Code runs entirely in the browser via WebAssembly (WASI) or native JavaScript.
+
+**Supported Languages:**
+- **JavaScript/Fetch** - Native browser execution (lightweight, ~0 KB)
+- **Python** - WASI runtime (~26 MB)
+- **Ruby** - WASI runtime (~24.5 MB)
+- **Lua** - WASI runtime (~330 KB)
+- **PHP** - WASI runtime (~13.2 MB)
+- **SQLite** - WASI runtime (~2.1 MB)
+
+**Usage:** Explicit per-snippet control via shortcode:
+```markdown
+{{</* codapi sandbox="python" */>}}
+print("Hello, World!")
+{{</* /codapi */>}}
+```
+
+**Features:**
+- Scripts only load when shortcode is used
+- Automatic engine detection based on language
+- Copy button maintained for all code blocks
+- Edit mode for modifying and re-running code
+- Styled to match site design system (compounding contrast, buttons)
+- Dark mode compatible
+
+**Implementation:** `layouts/shortcodes/codapi.html`,
+`layouts/partials/head_custom.html`, `static/css/style.css`.
+
 ### GitHub Link Formatting
 
 Auto-formats GitHub URLs with icons: `github.com/user` → `@user`,

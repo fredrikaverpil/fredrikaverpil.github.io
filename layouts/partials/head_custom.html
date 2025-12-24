@@ -1,1 +1,16 @@
 <script defer src="https://cloud.umami.is/script.js" data-website-id="c9c97df3-bc05-4b29-8caa-fcf03a05710f"></script>
+
+{{- /* Codapi support - only loads if .Scratch.Get "codapi" is set by shortcode */ -}}
+{{- if .Scratch.Get "codapi" }}
+
+{{- if .Scratch.Get "codapi_wasi" }}
+<!-- WASI-based languages: lua, php, python, ruby, sqlite -->
+<script src="https://unpkg.com/@antonz/runno@0.6.1/dist/runno.js"></script>
+<script src="https://unpkg.com/@antonz/codapi@0.20.0/dist/engine/wasi.js"></script>
+{{- end }}
+
+<!-- Main Codapi script - must load AFTER engines -->
+<script defer src="https://unpkg.com/@antonz/codapi@0.20.0/dist/snippet.js"></script>
+{{- /* Removed the default snippet.css to prevent styling conflicts */ -}}
+
+{{- end }}

@@ -19,7 +19,7 @@ ensure the theme handles them correctly.
 
 ### Code Block
 
-Here is a Python code snippet:
+Here is a static Python code snippet:
 
 ```python
 def hello_world():
@@ -28,6 +28,52 @@ def hello_world():
 if __name__ == "__main__":
     hello_world()
 ```
+
+### Interactive Code Block
+
+Now here's an **interactive** Python code snippet using Codapi. Click "Run" to execute it in your browser!
+
+{{< codapi sandbox="python" >}}def greet(name):
+    print(f"Hello, {name}!")
+
+greet("Hugo")
+greet("World")
+{{< /codapi >}}
+
+Try modifying the code above and running it again. Here's another example with a simple calculation:
+
+{{< codapi sandbox="python" >}}# Calculate factorial
+def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)
+
+for i in range(1, 6):
+    print(f"{i}! = {factorial(i)}")
+{{< /codapi >}}
+
+### Interactive JavaScript
+
+Here's an interactive JavaScript example that runs directly in the browser (no WASI needed):
+
+{{< codapi sandbox="javascript" >}}const numbers = [1, 2, 3, 4, 5];
+const squared = numbers.map(n => n * n);
+console.log("Original:", numbers);
+console.log("Squared:", squared);
+
+// Try adding your own code!
+const sum = squared.reduce((a, b) => a + b, 0);
+console.log("Sum of squares:", sum);
+{{< /codapi >}}
+
+### Interactive SQLite
+
+And here's a SQLite example using WASI (runs entirely in your browser):
+
+{{< codapi sandbox="sqlite" >}}SELECT 'Hello, SQLite!' as message, 42 as answer
+UNION ALL
+SELECT 'It works!', 100;
+{{< /codapi >}}
 
 ### Callouts
 
@@ -60,6 +106,24 @@ We are implementing GitHub-style callouts using a custom render hook.
 > ```bash
 > echo "This is inside a tip"
 > ```
+
+### Interactive Code in Callout
+
+You can also use interactive Codapi snippets inside callouts, and they follow the compounding contrast rules:
+
+> [!EXAMPLE] Try this interactive Python example inside a callout
+>
+> {{< codapi sandbox="python" >}}# Calculate Fibonacci sequence
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+for i in range(10):
+    print(f"F({i}) = {fibonacci(i)}")
+{{< /codapi >}}
+>
+> Text underneath it!
 
 ### GoAT Diagram
 

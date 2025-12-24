@@ -1321,3 +1321,171 @@ blockquote[class*="quote"] {
     border: 0;
   }
 }
+
+/* ========================================
+   Codapi Interactive Code Snippets
+   ======================================== */
+
+/* Codapi container */
+codapi-snippet {
+  display: block;
+  margin-top: 0;
+  font-family: var(--font-primary);
+}
+
+/* Codapi toolbar - same level as code block */
+codapi-toolbar {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+  padding: var(--space-sm);
+  background-color: var(--meta-bg);
+  border-top: var(--border-width-thin) solid var(--bg);
+}
+
+/* Compounding contrast: darker toolbar inside callouts */
+.callout codapi-toolbar,
+.markdown-alert codapi-toolbar {
+  background-color: var(--button-bg);
+  border-top-color: var(--meta-bg);
+}
+
+/* Codapi buttons - one level darker than toolbar */
+codapi-toolbar button,
+codapi-toolbar a {
+  text-decoration: none;
+  background: var(--button-bg);
+  color: var(--fg);
+  padding: var(--button-padding-vertical) var(--button-padding-horizontal);
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-primary);
+  font-size: 1em;
+}
+
+/* Compounding contrast: buttons one level darker in callouts */
+.callout codapi-toolbar button,
+.callout codapi-toolbar a,
+.markdown-alert codapi-toolbar button,
+.markdown-alert codapi-toolbar a {
+  background: var(--button-hover-bg);
+}
+
+/* Button hover state - matches navigation */
+codapi-toolbar button:hover,
+codapi-toolbar a:hover {
+  background-color: var(--link);
+  color: var(--bg);
+  filter: none;
+}
+
+/* Status indicator - hidden */
+codapi-status {
+  display: none;
+}
+
+/* Output container - same level as code block and toolbar */
+codapi-output {
+  display: block;
+  background-color: var(--meta-bg);
+  border-top: var(--border-width-thin) solid var(--bg);
+  min-height: var(--space-lg);
+  position: relative;
+}
+
+/* Show placeholder text when output is empty */
+codapi-output:has(pre > code:empty)::before {
+  content: "Click 'Run' to see output";
+  color: var(--fg-dim);
+  font-style: italic;
+  padding: var(--space-sm);
+  display: inline-block;
+}
+
+/* Hide the empty pre/code when showing placeholder */
+codapi-output:has(pre > code:empty) pre {
+  display: none;
+}
+
+/* Add padding when output has content */
+codapi-output:not(:empty) {
+  padding: var(--space-sm);
+}
+
+/* Compounding contrast: darker output inside callouts */
+.callout codapi-output,
+.markdown-alert codapi-output {
+  background-color: var(--button-bg);
+  border-top-color: var(--meta-bg);
+}
+
+/* Output pre/code styling */
+codapi-output pre {
+  margin: 0;
+  padding: var(--base-unit);
+  background-color: transparent !important;
+  border: none;
+}
+
+codapi-output code {
+  background-color: transparent;
+  padding: 0;
+  font-weight: 400;
+}
+
+/* Hide the close button */
+codapi-output a[href="#close"] {
+  display: none !important;
+}
+
+/* Table output mode */
+codapi-output table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+
+  & th,
+  & td {
+    padding: var(--space-sm);
+    text-align: left;
+    border: 1px solid var(--border);
+  }
+
+  & th {
+    background-color: var(--button-bg);
+    font-weight: 600;
+  }
+
+  & tr:nth-child(even) {
+    background-color: var(--meta-bg);
+  }
+}
+
+/* Editable code area styling (when clicking "Edit") */
+codapi-snippet pre[contenteditable="true"],
+codapi-snippet textarea,
+codapi-snippet pre[contenteditable="true"] *,
+codapi-snippet textarea * {
+  /* Reset text rendering */
+  -webkit-text-fill-color: currentColor !important;
+  -webkit-text-stroke: none !important;
+  text-shadow: none !important;
+  text-decoration: none !important;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  
+  /* Set proper styling */
+  color: var(--fg) !important;
+  caret-color: var(--fg) !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-family: var(--font-primary) !important;
+}
