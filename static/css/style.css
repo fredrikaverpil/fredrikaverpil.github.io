@@ -56,6 +56,26 @@
   --font-primary: 'Commit Mono', monospace;
   --font-italic: 'Maple Mono', monospace;
 
+  /* Responsive Typography (default: desktop) */
+  --body-font-size: 1em;
+  --h1-size: 1.8em;
+  --h2-size: 1.5em;
+  --h3-size: 1.3em;
+  --h4-size: 1.2em;
+  --h5-size: 1.1em;
+  --h6-size: 1.05em;
+
+  /* Responsive Layout (default: desktop) */
+  --body-padding: var(--space-lg);
+  --nav-padding: var(--space-sm);
+  --footer-padding: var(--space-md);
+  --profile-header-direction: row;
+  --profile-header-align: center;
+  --profile-header-text-align: left;
+  --profile-header-gap: var(--space-xl);
+  --profile-photo-size: calc(var(--space-xxl) * 1.765);
+  --about-gap: var(--space-xl);
+
   /* ========================================
      Zenbones Color Palette
      https://github.com/zenbones-theme/zenbones.nvim
@@ -158,6 +178,67 @@
   --pagefind-ui-border: var(--border);
   --pagefind-ui-tag: var(--meta-bg);
   --pagefind-ui-font: var(--font-primary);
+
+  /* Responsive Breakpoints - Tablet (max-width: 768px) */
+  @media screen and (max-width: 768px) {
+    --body-font-size: 0.95em;
+    --body-padding: var(--space-sm) var(--space-lg);
+    --nav-padding: var(--space-sm);
+    --footer-padding: var(--space-sm);
+    --h1-size: 1.7em;
+    --h2-size: 1.4em;
+    --h3-size: 1.2em;
+    --h4-size: 1.05em;
+    --h5-size: 1em;
+    --h6-size: 0.95em;
+    --profile-header-direction: column;
+    --profile-header-text-align: center;
+    --profile-header-gap: var(--space-lg);
+    --profile-photo-size: calc(var(--space-xxl) * 1.2);
+    --about-gap: var(--space-lg);
+  }
+
+  /* Responsive Breakpoints - Medium Phone (max-width: 600px) */
+  @media screen and (max-width: 600px) {
+    --body-font-size: 0.90em;
+    --body-padding: var(--space-xs) var(--space-md);
+    --footer-padding: var(--space-xs);
+    --h1-size: 1.6em;
+    --h2-size: 1.3em;
+    --h3-size: 1.1em;
+    --h4-size: 1em;
+    --h5-size: 0.95em;
+    --h6-size: 0.9em;
+    --profile-header-gap: var(--space-md);
+  }
+
+  /* Responsive Breakpoints - Small Phone (max-width: 480px) */
+  @media screen and (max-width: 480px) {
+    --body-font-size: 0.85em;
+    --body-padding: var(--space-xs) var(--space-md);
+    --footer-padding: var(--space-sm) var(--space-xs);
+    --h1-size: 1.5em;
+    --h2-size: 1.2em;
+    --h3-size: 1em;
+    --h4-size: 0.95em;
+    --h5-size: 0.9em;
+    --h6-size: 0.85em;
+    --profile-header-gap: var(--space-sm);
+  }
+
+  /* Responsive Breakpoints - Landscape Phone */
+  @media screen and (max-height: 430px) and (orientation: landscape) {
+    --body-font-size: 0.90em;
+    --body-padding: var(--space-xs) var(--space-md);
+    --nav-padding: var(--space-xs);
+    --footer-padding: var(--space-xs);
+    --h1-size: 1.6em;
+    --h2-size: 1.3em;
+    --h3-size: 1.1em;
+    --h4-size: 1em;
+    --h5-size: 0.95em;
+    --h6-size: 0.9em;
+  }
 }
 
 /* Dark Mode (System Preference) */
@@ -273,9 +354,10 @@ body {
   font-family: var(--font-primary);
   font-weight: var(--font-weight-body);
   font-variation-settings: 'wght' var(--font-weight-body);
+  font-size: var(--body-font-size);
   max-width: 800px;
   margin: auto;
-  padding: var(--space-lg);
+  padding: var(--body-padding);
   line-height: 1.5;
   background-color: var(--bg);
   color: var(--fg);
@@ -325,49 +407,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--heading-margin-bottom);
 }
 
-h1 { font-size: 1.8em; }
-h2 { font-size: 1.5em; }
-h3 { font-size: 1.3em; }
-h4 { font-size: 1.2em; }
-h5 { font-size: 1.1em; }
-h6 { font-size: 1.05em; }
-
-/* Responsive Typography */
-@media screen and (max-width: 768px) {
-  h1 { font-size: 1.7em; }
-  h2 { font-size: 1.4em; }
-  h3 { font-size: 1.2em; }
-  h4 { font-size: 1.05em; }
-  h5 { font-size: 1em; }
-  h6 { font-size: 0.95em; }
-}
-
-@media screen and (max-width: 600px) {
-  h1 { font-size: 1.6em; }
-  h2 { font-size: 1.3em; }
-  h3 { font-size: 1.1em; }
-  h4 { font-size: 1em; }
-  h5 { font-size: 0.95em; }
-  h6 { font-size: 0.9em; }
-}
-
-@media screen and (max-width: 480px) {
-  h1 { font-size: 1.5em; }
-  h2 { font-size: 1.2em; }
-  h3 { font-size: 1em; }
-  h4 { font-size: 0.95em; }
-  h5 { font-size: 0.9em; }
-  h6 { font-size: 0.85em; }
-}
-
-@media screen and (max-height: 430px) and (orientation: landscape) {
-  h1 { font-size: 1.6em; }
-  h2 { font-size: 1.3em; }
-  h3 { font-size: 1.1em; }
-  h4 { font-size: 1em; }
-  h5 { font-size: 0.95em; }
-  h6 { font-size: 0.9em; }
-}
+h1 { font-size: var(--h1-size); }
+h2 { font-size: var(--h2-size); }
+h3 { font-size: var(--h3-size); }
+h4 { font-size: var(--h4-size); }
+h5 { font-size: var(--h5-size); }
+h6 { font-size: var(--h6-size); }
 
 /* ========================================
    Navigation
@@ -375,7 +420,7 @@ h6 { font-size: 1.05em; }
 
 nav {
   background-color: var(--meta-bg);
-  padding: var(--space-sm);
+  padding: var(--nav-padding);
   margin-bottom: var(--content-spacing);
   /* Prevent layout shifts during font loading (Firefox fix) */
   contain: layout;
@@ -471,7 +516,7 @@ nav {
 footer {
   margin-top: var(--section-gap);
   background-color: var(--meta-bg);
-  padding: var(--space-md);
+  padding: var(--footer-padding);
   text-align: center;
   font-size: 1em;
   display: flex;
@@ -581,7 +626,7 @@ section {
 /* About Section */
 .about-flex {
   display: flex;
-  gap: var(--space-xl);
+  gap: var(--about-gap);
   align-items: flex-start;
   flex-wrap: wrap;
 }
@@ -608,8 +653,10 @@ section {
 
 .profile-header {
   display: flex;
-  gap: var(--space-xl);
-  align-items: center;
+  flex-direction: var(--profile-header-direction);
+  gap: var(--profile-header-gap);
+  align-items: var(--profile-header-align);
+  text-align: var(--profile-header-text-align);
   margin-top: var(--content-spacing);
   margin-bottom: var(--section-gap);
   padding: var(--space-lg);
@@ -618,8 +665,8 @@ section {
 }
 
 .profile-photo {
-  width: calc(var(--space-xxl) * 1.765);
-  height: calc(var(--space-xxl) * 1.765);
+  width: var(--profile-photo-size);
+  height: var(--profile-photo-size);
   border-radius: 50%;
   object-fit: cover;
 }
@@ -1255,82 +1302,5 @@ blockquote[class*="quote"] {
     width: 100%;
     height: 100%;
     border: 0;
-  }
-}
-
-/* ========================================
-   Responsive Design - Consolidated
-   ======================================== */
-
-/* Tablet breakpoint (max-width: 768px) */
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 0.95em;
-    padding: var(--space-sm) var(--space-lg);
-  }
-
-  nav,
-  footer {
-    padding: var(--space-sm);
-  }
-
-  .profile-header {
-    flex-direction: column;
-    text-align: center;
-    gap: var(--space-lg);
-  }
-
-  .profile-photo {
-    width: calc(var(--space-xxl) * 1.2);
-    height: calc(var(--space-xxl) * 1.2);
-  }
-
-  .about-flex {
-    gap: var(--space-lg);
-  }
-}
-
-/* Medium phone breakpoint (max-width: 600px) */
-@media screen and (max-width: 600px) {
-  body {
-    font-size: 0.90em;
-    padding: var(--space-xs) var(--space-md);
-  }
-
-  footer {
-    padding: var(--space-xs);
-  }
-
-  .profile-header {
-    gap: var(--space-md);
-  }
-}
-
-/* Small phone breakpoint (max-width: 480px) */
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 0.85em;
-    padding: var(--space-xs) var(--space-md);
-  }
-
-  footer {
-    padding: var(--space-sm) var(--space-xs);
-  }
-
-  .profile-header {
-    gap: var(--space-sm);
-  }
-}
-
-/* Landscape phone breakpoint */
-@media screen and (max-height: 430px) and (orientation: landscape) {
-  body {
-    font-size: 0.90em;
-    padding: var(--space-xs) var(--space-md);
-  }
-
-  nav,
-  footer {
-    padding: var(--space-xs);
   }
 }
