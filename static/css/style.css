@@ -52,6 +52,10 @@
   --border-width-thin: 4px;
   --border-width-thick: 5px;
 
+  /* Typography */
+  --font-primary: 'Commit Mono', monospace;
+  --font-italic: 'Maple Mono', monospace;
+
   /* ========================================
      Zenbones Color Palette
      https://github.com/zenbones-theme/zenbones.nvim
@@ -153,7 +157,7 @@
   --pagefind-ui-background: var(--bg);
   --pagefind-ui-border: var(--border);
   --pagefind-ui-tag: var(--meta-bg);
-  --pagefind-ui-font: 'Commit Mono', monospace;
+  --pagefind-ui-font: var(--font-primary);
 }
 
 /* Dark Mode (System Preference) */
@@ -266,7 +270,7 @@ body.preload * {
    ======================================== */
 
 body {
-  font-family: 'Commit Mono', monospace;
+  font-family: var(--font-primary);
   font-weight: var(--font-weight-body);
   font-variation-settings: 'wght' var(--font-weight-body);
   max-width: 800px;
@@ -307,13 +311,13 @@ a {
 }
 
 code, pre {
-  font-family: 'Commit Mono', monospace;
+  font-family: var(--font-primary);
   font-weight: var(--font-weight-body);
   font-variation-settings: 'wght' var(--font-weight-body);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Commit Mono', monospace;
+  font-family: var(--font-primary);
   font-weight: 700;
   font-variation-settings: 'wght' 700;
   color: var(--fg);
@@ -444,7 +448,7 @@ nav {
   justify-content: center;
   align-items: baseline;
   gap: 1em;
-  font-family: 'Commit Mono', monospace;
+  font-family: var(--font-primary);
   font-size: 0.9em;
   color: var(--fg-dim);
   flex-wrap: wrap;
@@ -453,7 +457,7 @@ nav {
 .article-tags {
   margin-top: 0;
   font-size: 1em;
-  font-family: 'Commit Mono', monospace;
+  font-family: var(--font-primary);
 
   & a {
     margin-right: 0.5em;
@@ -526,7 +530,7 @@ section {
   }
 
   & .date {
-    font-family: 'Commit Mono', monospace;
+    font-family: var(--font-primary);
     color: var(--fg);
     font-size: 0.9em;
     flex-shrink: 0;
@@ -560,7 +564,7 @@ section {
 }
 
 .project-header strong {
-  font-family: 'Commit Mono', monospace;
+  font-family: var(--font-primary);
   font-size: 1.1em;
   color: var(--link);
   display: block;
@@ -636,13 +640,13 @@ section {
   & .location {
     color: var(--fg);
     margin: 0.2em 0 0 0;
-    font-family: 'Commit Mono', monospace;
+    font-family: var(--font-primary);
     font-size: 0.9em;
   }
 
   & .email {
     margin: 0.2em 0 0 0;
-    font-family: 'Commit Mono', monospace;
+    font-family: var(--font-primary);
     font-size: 0.9em;
   }
 }
@@ -662,7 +666,7 @@ main {
   margin-bottom: var(--section-gap);
 
   & em, & i {
-    font-family: 'Maple Mono', monospace;
+    font-family: var(--font-italic);
     font-style: italic;
   }
 }
@@ -699,7 +703,7 @@ hr {
   border-left: var(--border-width-thin) solid var(--info-border);
 
   & .toc-title {
-    font-family: 'Commit Mono', monospace;
+    font-family: var(--font-primary);
     font-weight: 700;
     font-variation-settings: 'wght' 700;
     font-size: 1.1em;
@@ -784,7 +788,7 @@ pre {
 code {
   background-color: var(--meta-bg);
   padding: 0 0.2em;
-  font-family: 'Commit Mono', monospace;
+  font-family: var(--font-primary);
   font-weight: 600;
   font-variation-settings: 'wght' 600;
 }
@@ -832,7 +836,7 @@ pre code {
 .load-comments-btn {
   display: inline-block;
   padding: var(--button-padding-vertical) var(--button-padding-horizontal);
-  font-family: 'Commit Mono', monospace;
+  font-family: var(--font-primary);
   font-size: 1em;
   background-color: var(--button-bg);
   color: var(--fg);
@@ -866,7 +870,7 @@ pre code {
     border-radius: 0;
     text-decoration: none;
     color: var(--fg);
-    font-family: 'Commit Mono', monospace;
+    font-family: var(--font-primary);
     font-size: 0.9em;
     display: inline-flex;
     overflow: hidden;
@@ -936,7 +940,7 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   font-variation-settings: 'wght' 700;
   font-size: 1.1em;
   margin-bottom: 0.5em;
-  font-family: 'Commit Mono', monospace;
+  font-family: var(--font-primary);
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -947,11 +951,11 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
 }
 
 .callout-content {
-  font-family: 'Commit Mono', monospace;
+  font-family: var(--font-primary);
   font-style: normal;
 
   & em, & i {
-    font-family: 'Maple Mono', monospace;
+    font-family: var(--font-italic);
     font-style: italic;
   }
 
@@ -1060,7 +1064,7 @@ blockquote[class*="quote"] {
   background-color: transparent;
 
   & .k, & .kd, & .kn, & .kp, & .kr, & .kt { font-weight: bold; color: var(--syntax-k); }
-  & .c, & .cm, & .c1, & .cs { font-style: italic; color: var(--syntax-c); font-family: 'Maple Mono', monospace; }
+  & .c, & .cm, & .c1, & .cs { font-style: italic; color: var(--syntax-c); font-family: var(--font-italic); }
   & .s, & .s1, & .s2 { font-style: normal; color: var(--syntax-s); }
   & .n, & .na, & .nb, & .nc, & .nf { color: var(--syntax-n); }
   & .o, & .ow { font-weight: bold; color: var(--syntax-n); }
@@ -1096,7 +1100,7 @@ blockquote[class*="quote"] {
   color: var(--fg) !important;
   border: none !important;
   border-radius: 0 !important;
-  font-family: 'Commit Mono', monospace !important;
+  font-family: var(--font-primary) !important;
   font-size: 1em !important;
   font-weight: 400 !important;
   outline: none !important;
@@ -1182,7 +1186,7 @@ blockquote[class*="quote"] {
 
 .pagefind-ui .pagefind-ui__result-title {
   font-weight: 700 !important;
-  font-family: 'Commit Mono', monospace !important;
+  font-family: var(--font-primary) !important;
   text-decoration: none !important;
   color: var(--fg) !important;
 }
@@ -1194,13 +1198,13 @@ blockquote[class*="quote"] {
 
 .pagefind-ui .pagefind-ui__result-excerpt {
   color: var(--fg) !important;
-  font-family: 'Commit Mono', monospace !important;
+  font-family: var(--font-primary) !important;
 }
 
 /* Search UI messages and buttons */
 .pagefind-ui .pagefind-ui__message {
   color: var(--fg) !important;
-  font-family: 'Commit Mono', monospace !important;
+  font-family: var(--font-primary) !important;
   padding: var(--space-xs) 0 !important;
 }
 
@@ -1208,7 +1212,7 @@ blockquote[class*="quote"] {
   background-color: transparent !important;
   border: none !important;
   color: var(--link) !important;
-  font-family: 'Commit Mono', monospace !important;
+  font-family: var(--font-primary) !important;
   font-weight: 700 !important;
   padding: var(--space-lg) 0 !important;
   width: auto !important;
