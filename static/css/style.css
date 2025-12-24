@@ -1010,7 +1010,7 @@ body.preload {
 @media screen and (max-width: 768px) {
   body {
     font-size: 0.95em;
-    padding: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg);
   }
 
   h1 { font-size: 1.7em; }
@@ -1045,7 +1045,7 @@ body.preload {
 @media screen and (max-width: 600px) {
   body {
     font-size: 0.90em;
-    padding: var(--space-xs);
+    padding: var(--space-xs) var(--space-md);
   }
 
   h1 { font-size: 1.6em; }
@@ -1080,7 +1080,7 @@ body.preload {
 @media screen and (max-width: 480px) {
   body {
     font-size: 0.85em;
-    padding: var(--space-xs);
+    padding: var(--space-xs) var(--space-md);
   }
 
   h1 { font-size: 1.5em; }
