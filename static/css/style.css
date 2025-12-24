@@ -918,56 +918,82 @@ table {
 thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
 
 /* ========================================
-   Callouts
+   Callouts & Alerts (Shared Styles)
    ======================================== */
 
-.callout {
+.callout,
+.markdown-alert {
   border-left: 4px solid var(--fg-dim);
   padding: var(--space-lg);
   margin: var(--space-lg) 0;
   background: var(--meta-bg);
+}
 
-  &-title {
-    font-weight: 700;
-    font-variation-settings: 'wght' 700;
-    font-size: 1.1em;
-    margin-bottom: 0.5em;
-    font-family: 'Commit Mono', monospace;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
+.callout-title,
+.markdown-alert-title {
+  font-weight: 700;
+  font-variation-settings: 'wght' 700;
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+  font-family: 'Commit Mono', monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.callout-icon {
+  flex-shrink: 0;
+}
+
+.callout-content {
+  font-family: 'Commit Mono', monospace;
+  font-style: normal;
+
+  & em, & i {
+    font-family: 'Maple Mono', monospace;
+    font-style: italic;
   }
 
-  &-icon {
-    flex-shrink: 0;
-  }
-
-  &-content {
-    font-family: 'Commit Mono', monospace;
+  & code, & pre {
     font-style: normal;
-
-    & em, & i {
-      font-family: 'Maple Mono', monospace;
-      font-style: italic;
-    }
-
-    & code, & pre {
-      font-style: normal;
-      background-color: transparent;
-    }
+    background-color: transparent;
   }
+}
 
-  &-note { border-left-color: var(--note-border); }
-  &-warning { border-left-color: var(--warn-border); }
-  &-tip { border-left-color: var(--tip-border); }
-  &-important { border-left-color: var(--imp-border); }
-  &-caution { border-left-color: var(--imp-border); }
-  &-example { border-left-color: var(--example-border); }
-  &-info { border-left-color: var(--info-border); }
-  &-quote { border-left-color: var(--quote-border); }
+/* Callout type colors */
+.callout-note,
+.markdown-alert-note {
+  border-left-color: var(--note-border);
+}
+
+.callout-warning,
+.markdown-alert-warning {
+  border-left-color: var(--warn-border);
+}
+
+.callout-tip,
+.markdown-alert-tip {
+  border-left-color: var(--tip-border);
+}
+
+.callout-important,
+.markdown-alert-important,
+.callout-caution,
+.markdown-alert-caution {
+  border-left-color: var(--imp-border);
+}
+
+.callout-example {
+  border-left-color: var(--example-border);
+}
+
+.callout-info {
+  border-left-color: var(--info-border);
 }
 
 .callout-quote {
+  border-left-color: var(--quote-border);
+
   & .callout-title {
     float: left !important;
     display: inline-block !important;
@@ -981,41 +1007,47 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   }
 }
 
-/* Fallback styling for blockquotes that Hugo might not have parsed into .callout classes */
-blockquote.callout-note, blockquote[class*="note"] { border-left-color: var(--note-border) !important; background: var(--meta-bg) !important; }
-blockquote.callout-warning, blockquote[class*="warning"] { border-left-color: var(--warn-border) !important; background: var(--meta-bg) !important; }
-blockquote.callout-tip, blockquote[class*="tip"] { border-left-color: var(--tip-border) !important; background: var(--meta-bg) !important; }
-blockquote.callout-important, blockquote[class*="important"] { border-left-color: var(--imp-border) !important; background: var(--meta-bg) !important; }
-blockquote.callout-example, blockquote[class*="example"] { border-left-color: var(--example-border) !important; background: var(--meta-bg) !important; }
-blockquote.callout-info, blockquote[class*="info"] { border-left-color: var(--info-border) !important; background: var(--meta-bg) !important; }
-blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--quote-border) !important; background: var(--meta-bg) !important; }
+/* Fallback for blockquotes that Hugo might not parse */
+blockquote.callout-note,
+blockquote[class*="note"] {
+  border-left-color: var(--note-border) !important;
+  background: var(--meta-bg) !important;
+}
 
-/* ========================================
-   Hugo Native Markdown Alerts
-   ======================================== */
+blockquote.callout-warning,
+blockquote[class*="warning"] {
+  border-left-color: var(--warn-border) !important;
+  background: var(--meta-bg) !important;
+}
 
-.markdown-alert {
-  border-left: 4px solid var(--fg-dim);
-  padding: var(--space-lg);
-  margin: var(--space-lg) 0;
-  background: var(--meta-bg);
+blockquote.callout-tip,
+blockquote[class*="tip"] {
+  border-left-color: var(--tip-border) !important;
+  background: var(--meta-bg) !important;
+}
 
-  &-title {
-    font-weight: 700;
-    font-variation-settings: 'wght' 700;
-    font-size: 1.1em;
-    margin-bottom: 0.5em;
-    font-family: 'Commit Mono', monospace;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-  }
+blockquote.callout-important,
+blockquote[class*="important"] {
+  border-left-color: var(--imp-border) !important;
+  background: var(--meta-bg) !important;
+}
 
-  &-note { border-left-color: var(--note-border); }
-  &-tip { border-left-color: var(--tip-border); }
-  &-warning { border-left-color: var(--warn-border); }
-  &-important { border-left-color: var(--imp-border); }
-  &-caution { border-left-color: var(--imp-border); }
+blockquote.callout-example,
+blockquote[class*="example"] {
+  border-left-color: var(--example-border) !important;
+  background: var(--meta-bg) !important;
+}
+
+blockquote.callout-info,
+blockquote[class*="info"] {
+  border-left-color: var(--info-border) !important;
+  background: var(--meta-bg) !important;
+}
+
+blockquote.callout-quote,
+blockquote[class*="quote"] {
+  border-left-color: var(--quote-border) !important;
+  background: var(--meta-bg) !important;
 }
 
 /* ========================================
