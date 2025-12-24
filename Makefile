@@ -7,7 +7,7 @@ serve:
 
 build:
 	go tool hugo --minify --environment production
-	npx pagefind --site public
+	bunx pagefind --site public
 
 clean:
 	rm -rf public resources

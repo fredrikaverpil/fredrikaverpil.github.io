@@ -8,8 +8,8 @@ This project uses [Hugo](https://gohugo.io/) and standard UNIX tools.
 
 ### Prerequisites
 
-- **Hugo:** `brew install hugo` (or via `go install`).
-- **Node/NPM:** Required for `npx` to run [Pagefind](https://pagefind.app/).
+- **Hugo:** `hugo` (via `go tool hugo`) to run build or serve commands.
+- **Bun:** `bunx` to run [Pagefind](https://pagefind.app/).
 
 ### Quickstart
 
@@ -18,21 +18,20 @@ This project uses [Hugo](https://gohugo.io/) and standard UNIX tools.
 | `make serve` | Start local dev server (LiveReload). |
 | `make build` | Build production site to `public/`.  |
 | `make clean` | Remove build artifacts.              |
+| `make`       | Run all of the above.                |
 
 ### Build Workflow
 
 For local development:
+
 ```bash
-make serve
+make
 ```
 
-For a clean production build:
-```bash
-make clean && make build
-```
-
-**Note:** Always run `make clean` before `make build` to ensure the Pagefind search index is regenerated correctly and to remove stale artifacts.
+ean`before`make build` to ensure the Pagefind orrectly and to remove stale
+artifacts.
 
 ## Documentation
 
-See [HUGO.md](HUGO.md) for the complete design system, style guide, and technical details.
+See [HUGO.md](HUGO.md) for the complete design system, style guide, and
+technical details.
