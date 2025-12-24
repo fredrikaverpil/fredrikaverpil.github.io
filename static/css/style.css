@@ -845,6 +845,11 @@ code {
   background-color: var(--button-bg);
 }
 
+/* Compounding contrast for inline code inside search results */
+#search .pagefind-ui__result code {
+  background-color: var(--button-hover-bg);
+}
+
 pre code {
   background-color: transparent;
   padding: 0;
@@ -1240,7 +1245,8 @@ blockquote[class*="quote"] {
 
     & .pagefind-ui__result-link {
       color: var(--link);
-      text-decoration: none;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
     }
 
     & .pagefind-ui__result-excerpt {
@@ -1278,7 +1284,7 @@ blockquote[class*="quote"] {
     }
 
     & mark {
-      background-color: var(--warn-bg);
+      background-color: var(--button-hover-bg);
       color: var(--fg);
       font-weight: bold;
     }
