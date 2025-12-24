@@ -63,6 +63,7 @@ Spacing follows a strict Golden Ratio scale (Base Unit: `1rem` / 16px).
 - **Layers:** "Compounding Contrast" strategy—elements layered on top are either
   darker (Light Mode) or lighter (Dark Mode) than the layer below.
 - **Borders:** No rounded corners (`border-radius: 0`).
+- **Links:** No underline by default; underline appears on hover for visual feedback.
 
 ### Responsive Design & Media Queries
 

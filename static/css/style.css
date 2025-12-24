@@ -368,6 +368,7 @@ body {
 
 a {
   color: var(--link);
+  text-decoration: none;
   text-underline-offset: 0.2em;
 
   &:visited {
@@ -375,6 +376,7 @@ a {
   }
 
   &:hover {
+    text-decoration: underline;
     filter: brightness(1.2);
   }
 }
@@ -1230,6 +1232,10 @@ blockquote[class*="quote"] {
         & .pagefind-ui__result-title {
           color: var(--bg);
         }
+
+        & .pagefind-ui__result-link {
+          text-decoration: underline;
+        }
       }
     }
 
@@ -1250,7 +1256,7 @@ blockquote[class*="quote"] {
 
     & .pagefind-ui__result-link {
       color: var(--link);
-      text-decoration: underline;
+      text-decoration: none;
       text-underline-offset: 0.2em;
     }
 
