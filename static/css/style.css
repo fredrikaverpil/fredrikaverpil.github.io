@@ -1236,6 +1236,12 @@ blockquote[class*="quote"] {
         & .pagefind-ui__result-link {
           text-decoration: underline;
         }
+
+        & mark {
+          background-color: var(--link);
+          filter: brightness(1.3);
+          color: var(--bg);
+        }
       }
     }
 
