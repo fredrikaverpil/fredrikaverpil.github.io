@@ -9,6 +9,9 @@
   {{- .Page.Scratch.Set "codapi_wasi" true -}}
 {{- end -}}
 
+{{- /* Apply syntax highlighting */ -}}
+{{- $highlighted := transform.Highlight .Inner $sandbox "" -}}
+
 <div class="code-block-wrapper">
   <button class="copy-code-button" aria-label="Copy code to clipboard">
     <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -19,7 +22,7 @@
       <polyline points="20 6 9 17 4 12"></polyline>
     </svg>
   </button>
-  <pre><code>{{- .Inner -}}</code></pre>
+  {{- $highlighted | safeHTML -}}
   {{- if ne $outputMode "" -}}
   <codapi-snippet engine="{{ $engine }}" sandbox="{{ $sandbox }}" editor="basic" output-mode="{{ $outputMode }}"></codapi-snippet>
   {{- else -}}
