@@ -3,7 +3,7 @@
   src: url('../fonts/CommitMono-Variable.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
-  font-display: swap;
+  font-display: block; /* Changed from swap to block to prevent FOUT */
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   src: url('../fonts/MapleMono-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block; /* Changed from swap to block to prevent FOUT */
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   src: url('../fonts/MapleMono-Italic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
-  font-display: swap;
+  font-display: block; /* Changed from swap to block to prevent FOUT */
 }
 
 :root {
@@ -255,8 +255,10 @@ body.light {
 }
 
 /* Prevent FOUC transitions */
-body.preload {
+body.preload,
+body.preload * {
   transition: none !important;
+  animation: none !important;
 }
 
 /* ========================================
@@ -274,6 +276,8 @@ body {
   background-color: var(--bg);
   color: var(--fg);
   transition: background-color 0.3s ease, color 0.3s ease;
+  /* Force stable layout during font loading */
+  text-rendering: optimizeSpeed;
 }
 
 a {
@@ -369,6 +373,9 @@ nav {
   background-color: var(--meta-bg);
   padding: var(--space-sm);
   margin-bottom: var(--content-spacing);
+  /* Prevent layout shifts during font loading (Firefox fix) */
+  contain: layout;
+  will-change: auto;
 }
 
 .menu {

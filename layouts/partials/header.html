@@ -17,6 +17,11 @@
     {{ partial "seo_schema.html" . }}
 
     <link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon" />
+    
+    <!-- Preload critical fonts to reduce FOUT -->
+    <link rel="preload" href="{{ "fonts/CommitMono-Variable.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ "fonts/MapleMono-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+    
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/github-link.css" | relURL }}" />
     {{ with .OutputFormats.Get "RSS" }}
@@ -28,6 +33,7 @@
   <body class="preload">
     <script>
       (function() {
+        // Apply theme IMMEDIATELY before any rendering
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
           document.body.classList.add(savedTheme);
@@ -36,9 +42,22 @@
             document.body.classList.add('dark');
           }
         }
-        setTimeout(() => {
-          document.body.classList.remove('preload');
-        }, 100);
+        
+        // Wait for fonts to load before removing preload (Firefox fix)
+        if ('fonts' in document) {
+          // Use Font Loading API if available
+          Promise.race([
+            document.fonts.ready,
+            new Promise(resolve => setTimeout(resolve, 100)) // Fallback timeout
+          ]).then(() => {
+            document.body.classList.remove('preload');
+          });
+        } else {
+          // Fallback for browsers without Font Loading API
+          setTimeout(() => {
+            document.body.classList.remove('preload');
+          }, 50);
+        }
       })();
     </script>
 
