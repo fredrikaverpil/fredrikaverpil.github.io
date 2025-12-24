@@ -425,6 +425,9 @@ nav {
   /* Prevent layout shifts during font loading (Firefox fix) */
   contain: layout;
   will-change: auto;
+  /* Ensure search dropdown appears above main content */
+  position: relative;
+  z-index: 100;
 }
 
 .menu {
@@ -748,6 +751,8 @@ hr {
   padding: var(--space-lg);
   margin-bottom: var(--section-gap);
   border-left: var(--border-width-thin) solid var(--info-border);
+  position: relative;
+  z-index: 1;
 
   & .toc-title {
     font-family: var(--font-primary);
