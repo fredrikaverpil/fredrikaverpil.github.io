@@ -13,18 +13,12 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Maple Mono';
   src: url('../fonts/MapleMono-Italic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Maple Mono';
-  src: url('../fonts/MapleMono-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
   font-display: swap;
 }
 
@@ -393,7 +387,7 @@ nav {
     text-decoration: none;
     background: var(--button-bg);
     color: var(--fg);
-    padding: 5px 10px;
+    padding: var(--button-padding-vertical) var(--button-padding-horizontal);
     border-radius: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
     -webkit-appearance: none;
@@ -609,7 +603,7 @@ section {
   margin-bottom: var(--section-gap);
   padding: var(--space-lg);
   background: var(--meta-bg);
-  border-left: 5px solid var(--warn-border);
+  border-left: var(--border-width-thick) solid var(--warn-border);
 }
 
 .profile-photo {
@@ -695,7 +689,7 @@ hr {
   background: var(--meta-bg);
   padding: var(--space-lg);
   margin-bottom: var(--section-gap);
-  border-left: 4px solid var(--info-border);
+  border-left: var(--border-width-thin) solid var(--info-border);
 
   & .toc-title {
     font-family: 'Commit Mono', monospace;
@@ -830,7 +824,7 @@ pre code {
 
 .load-comments-btn {
   display: inline-block;
-  padding: 5px 10px;
+  padding: var(--button-padding-vertical) var(--button-padding-horizontal);
   font-family: 'Commit Mono', monospace;
   font-size: 1em;
   background-color: var(--button-bg);
@@ -902,7 +896,7 @@ pre code {
 
 blockquote {
   background: var(--meta-bg);
-  border-left: 5px solid var(--border);
+  border-left: var(--border-width-thick) solid var(--border);
   padding: 3px 1em 3px;
 }
 
@@ -923,7 +917,7 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
 
 .callout,
 .markdown-alert {
-  border-left: 4px solid var(--fg-dim);
+  border-left: var(--border-width-thin) solid var(--fg-dim);
   padding: var(--space-lg);
   margin: var(--space-lg) 0;
   background: var(--meta-bg);
