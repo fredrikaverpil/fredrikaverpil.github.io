@@ -71,7 +71,7 @@ The site uses three standard breakpoints to adapt gracefully across device sizes
 **Tablet Breakpoint (`max-width: 768px`):**
 Applies to iPad (portrait), tablets, and large devices.
 - **Body font size:** `0.95em` (~15.2px)
-- **Body padding:** Reduced from `var(--space-lg)` (~26px) to `var(--space-sm)` (~10px).
+- **Body padding:** `var(--space-sm) var(--space-lg)` (~10px top/bottom, ~26px left/right).
 - **Headings:** Moderately scaled down.
   - h1: 1.8em → 1.7em
   - h2: 1.5em → 1.4em
@@ -85,7 +85,7 @@ Applies to iPad (portrait), tablets, and large devices.
 **Medium Phone Breakpoint (`max-width: 600px`):**
 Applies to larger phones and devices between tablet and small phone sizes.
 - **Body font size:** `0.90em` (~14.4px)
-- **Body padding:** Reduced to `var(--space-xs)` (~6px).
+- **Body padding:** `var(--space-xs) var(--space-md)` (~6px top/bottom, ~16px left/right).
 - **Headings:** Moderately scaled down.
   - h1: 1.8em → 1.6em
   - h2: 1.5em → 1.3em
@@ -99,7 +99,7 @@ Applies to larger phones and devices between tablet and small phone sizes.
 **Small Phone Breakpoint (`max-width: 480px`):**
 Applies to iPhone 13, iPhone 14/15, and other compact phones.
 - **Body font size:** `0.85em` (~13.6px) for optimal word density (~10-12 words per line).
-- **Body padding:** Reduced to `var(--space-xs)` (~6px) to maximize content width.
+- **Body padding:** `var(--space-xs) var(--space-md)` (~6px top/bottom, ~16px left/right).
 - **Headings:** More aggressively scaled down.
   - h1: 1.8em → 1.5em
   - h2: 1.5em → 1.2em
@@ -109,10 +109,20 @@ Applies to iPhone 13, iPhone 14/15, and other compact phones.
   - h6: 1.05em → 0.85em
 - **Navigation & Footer:** Padding reduced to `var(--space-xs)`.
 
+**Phone Landscape Breakpoint (`max-height: 430px` + `orientation: landscape`):**
+Applies to phones in landscape orientation (e.g., iPhone 13 landscape has ~390px height).
+- **Body font size:** `0.90em` (~14.4px)
+- **Body padding:** `var(--space-xs) var(--space-md)` (~6px top/bottom, ~16px left/right).
+- **Headings:** Same as medium phone breakpoint.
+  - h1: 1.6em, h2: 1.3em, h3: 1.1em, h4: 1em, h5: 0.95em, h6: 0.9em
+- **Navigation & Footer:** Padding reduced to `var(--space-xs)`.
+- **Note:** This breakpoint uses `max-height` instead of `max-width` because landscape phones have wide screens (e.g., 844px on iPhone 13) but limited vertical space.
+
 **Design Principles:**
-- Use standard breakpoints (768px, 600px, 480px) for consistency and maintainability.
+- Use standard breakpoints (768px, 600px, 480px) for width-based responsiveness.
+- Use height-based breakpoints for landscape orientation on phones.
 - Font sizes cascade and override from larger to smaller breakpoints.
-- Always reduce padding on smaller devices to maximize content area.
+- Horizontal padding follows industry standards: 16px on phones, 24-26px on tablets.
 - Scale typography proportionally; avoid drastic changes that break hierarchy.
 - Test on actual devices; use browser DevTools to simulate different viewport sizes.
 

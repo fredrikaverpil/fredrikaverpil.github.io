@@ -1110,3 +1110,26 @@ body.preload {
     height: calc(var(--space-xxl) * 1.2);
   }
 }
+
+/* Phone Landscape Responsive */
+@media screen and (max-height: 430px) and (orientation: landscape) {
+  body {
+    font-size: 0.90em;
+    padding: var(--space-xs) var(--space-md);
+  }
+
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.3em; }
+  h3 { font-size: 1.1em; }
+  h4 { font-size: 1em; }
+  h5 { font-size: 0.95em; }
+  h6 { font-size: 0.9em; }
+
+  nav {
+    padding: var(--space-xs);
+  }
+
+  footer {
+    padding: var(--space-xs);
+  }
+}
