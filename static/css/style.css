@@ -50,40 +50,108 @@
   --section-gap: var(--space-xl);          /* Space between major sections */
   --heading-margin-top: var(--space-xl);   /* Space above headings */
   --heading-margin-bottom: var(--space-lg);/* Space below headings */
+  
+  /* Component spacing */
+  --button-padding-vertical: 5px;
+  --button-padding-horizontal: 10px;
+  --video-aspect-ratio: 56.25%; /* 16:9 */
+  --border-width-thin: 4px;
+  --border-width-thick: 5px;
 
-  /* Zenbones Light Palette (Default) */
-  --bg: #F0EDEC;
-  --fg: #2C363C;
-  --fg-dim: #6F777B; /* Strings */
-  --fg-muted: #859289; /* Comments */
-  --link: #286486; /* Water */
-  --link-visited: #5F879E; /* Dimmer Water */
-  --meta-bg: #EAE6E4; /* Darker than bg */
-  --button-bg: #DCD8D6; /* Darker than meta-bg */
-  --button-hover-bg: #CFCBC9; /* Darker than button-bg */
-  --border: #C0BCBA;
+  /* ========================================
+     Zenbones Color Palette
+     https://github.com/zenbones-theme/zenbones.nvim
+     ======================================== */
 
-  /* Callouts */
-  --callout-bg: #EAE6E4;
-  --note-border: #286486; --note-bg: #DFEBF1;
-  --warn-border: #944927; --warn-bg: #F2E7E2;
-  --tip-border: #4F894C; --tip-bg: #E4EFE3;
-  --imp-border: #A8334C; --imp-bg: #F0E0E3;
-  --example-border: #88507D; --example-bg: #E9E9E9; /* Purple for example */
-  --info-border: var(--note-border); --info-bg: var(--note-bg); /* Reusing note colors for info */
-  --quote-border: var(--fg-dim); --quote-bg: var(--meta-bg);
+  /* Light Theme Colors (Zenbones Light) */
+  --light-bg: #F0EDEC;
+  --light-fg: #2C363C;
+  --light-fg-dim: #6F777B; /* Strings */
+  --light-fg-muted: #859289; /* Comments */
+  --light-link: #286486; /* Water */
+  --light-link-visited: #5F879E; /* Dimmer Water */
+  --light-meta-bg: #EAE6E4; /* Darker than bg */
+  --light-button-bg: #DCD8D6; /* Darker than meta-bg */
+  --light-button-hover-bg: #CFCBC9; /* Darker than button-bg */
+  --light-border: #C0BCBA;
+  --light-note-border: #286486;
+  --light-note-bg: #DFEBF1;
+  --light-warn-border: #944927;
+  --light-warn-bg: #F2E7E2;
+  --light-tip-border: #4F894C;
+  --light-tip-bg: #E4EFE3;
+  --light-imp-border: #A8334C;
+  --light-imp-bg: #F0E0E3;
+  --light-example-border: #88507D;
+  --light-example-bg: #E9E9E9;
+  --light-syntax-k: #2C363C;
+  --light-syntax-c: #859289;
+  --light-syntax-s: #6F777B;
+  --light-syntax-n: #2C363C;
+  --light-font-weight: 350;
+  --light-menu-link-bg: rgba(0, 0, 0, 0.05);
 
-  /* Syntax Highlighting */
-  --syntax-k: #2C363C;
-  --syntax-c: #859289;
-  --syntax-s: #6F777B;
-  --syntax-bg: #F0EDEC;
+  /* Dark Theme Colors (Zenbones Dark) */
+  --dark-bg: #1C1917;
+  --dark-fg: #B4BDC3;
+  --dark-fg-dim: #8E969B;
+  --dark-fg-muted: #6C7377;
+  --dark-link: #6099C0;
+  --dark-link-visited: #4A7691;
+  --dark-meta-bg: #252220;
+  --dark-button-bg: #2F2C2A; /* Lighter than meta-bg */
+  --dark-button-hover-bg: #3A3735; /* Lighter than button-bg */
+  --dark-border: #353230;
+  --dark-note-border: #6099C0;
+  --dark-note-bg: #1E2529;
+  --dark-warn-border: #B77E64;
+  --dark-warn-bg: #29221E;
+  --dark-tip-border: #819B69;
+  --dark-tip-bg: #21251E;
+  --dark-imp-border: #DE6E7C;
+  --dark-imp-bg: #291E1F;
+  --dark-example-border: #C791C3;
+  --dark-example-bg: #22201F;
+  --dark-syntax-k: #B4BDC3;
+  --dark-syntax-c: #6C7377;
+  --dark-syntax-s: #8E969B;
+  --dark-syntax-n: #B4BDC3;
+  --dark-font-weight: 200;
+  --dark-menu-link-bg: rgba(255, 255, 255, 0.05);
 
-  /* Typography */
-  --font-weight-body: 350; /* Thicker for Light Mode */
-
-  /* Menu */
-  --menu-link-bg: rgba(0, 0, 0, 0.05); /* Darken slightly for light mode */
+  /* Active Theme (Default: Light) */
+  --bg: var(--light-bg);
+  --fg: var(--light-fg);
+  --fg-dim: var(--light-fg-dim);
+  --fg-muted: var(--light-fg-muted);
+  --link: var(--light-link);
+  --link-visited: var(--light-link-visited);
+  --meta-bg: var(--light-meta-bg);
+  --button-bg: var(--light-button-bg);
+  --button-hover-bg: var(--light-button-hover-bg);
+  --border: var(--light-border);
+  --callout-bg: var(--light-meta-bg);
+  --note-border: var(--light-note-border);
+  --note-bg: var(--light-note-bg);
+  --warn-border: var(--light-warn-border);
+  --warn-bg: var(--light-warn-bg);
+  --tip-border: var(--light-tip-border);
+  --tip-bg: var(--light-tip-bg);
+  --imp-border: var(--light-imp-border);
+  --imp-bg: var(--light-imp-bg);
+  --example-border: var(--light-example-border);
+  --example-bg: var(--light-example-bg);
+  --info-border: var(--note-border);
+  --info-bg: var(--note-bg);
+  --quote-border: var(--fg-dim);
+  --quote-bg: var(--meta-bg);
+  --syntax-k: var(--light-syntax-k);
+  --syntax-c: var(--light-syntax-c);
+  --syntax-s: var(--light-syntax-s);
+  --syntax-n: var(--light-syntax-n);
+  --syntax-bg: var(--light-bg);
+  --font-weight-body: var(--light-font-weight);
+  --menu-link-bg: var(--light-menu-link-bg);
 
   /* Pagefind Theme */
   --pagefind-ui-primary: var(--link);
@@ -94,105 +162,102 @@
   --pagefind-ui-font: 'Commit Mono', monospace;
 }
 
-/* Dark Mode Overrides (System Preference) */
+/* Dark Mode (System Preference) */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #1C1917;
-    --fg: #B4BDC3;
-    --fg-dim: #8E969B;
-    --fg-muted: #6C7377;
-    --link: #6099C0;
-    --link-visited: #4A7691;
-    --meta-bg: #252220;
-    --button-bg: #2F2C2A; /* Lighter than meta-bg */
-    --button-hover-bg: #3A3735; /* Lighter than button-bg */
-    --border: #353230;
-
-    --callout-bg: #252220;
-    --note-border: #6099C0; --note-bg: #1E2529;
-    --warn-border: #B77E64; --warn-bg: #29221E;
-    --tip-border: #819B69; --tip-bg: #21251E;
-    --imp-border: #DE6E7C; --imp-bg: #291E1F;
-    --example-border: #C791C3; --example-bg: #22201F; /* Purple for example */
-    --info-border: var(--note-border); --info-bg: var(--note-bg); /* Reusing note colors for info */
-    --quote-border: var(--fg-dim); --quote-bg: var(--meta-bg);
-
-    --syntax-k: #B4BDC3;
-    --syntax-c: #6C7377;
-    --syntax-s: #8E969B;
-    --syntax-n: #B4BDC3;
-    --syntax-bg: #1C1917;
-
-    --font-weight-body: 200; /* Thinner for Dark Mode */
-
-    --menu-link-bg: rgba(255, 255, 255, 0.05); /* Lighten slightly for dark mode */
+    --bg: var(--dark-bg);
+    --fg: var(--dark-fg);
+    --fg-dim: var(--dark-fg-dim);
+    --fg-muted: var(--dark-fg-muted);
+    --link: var(--dark-link);
+    --link-visited: var(--dark-link-visited);
+    --meta-bg: var(--dark-meta-bg);
+    --button-bg: var(--dark-button-bg);
+    --button-hover-bg: var(--dark-button-hover-bg);
+    --border: var(--dark-border);
+    --callout-bg: var(--dark-meta-bg);
+    --note-border: var(--dark-note-border);
+    --note-bg: var(--dark-note-bg);
+    --warn-border: var(--dark-warn-border);
+    --warn-bg: var(--dark-warn-bg);
+    --tip-border: var(--dark-tip-border);
+    --tip-bg: var(--dark-tip-bg);
+    --imp-border: var(--dark-imp-border);
+    --imp-bg: var(--dark-imp-bg);
+    --example-border: var(--dark-example-border);
+    --example-bg: var(--dark-example-bg);
+    --syntax-k: var(--dark-syntax-k);
+    --syntax-c: var(--dark-syntax-c);
+    --syntax-s: var(--dark-syntax-s);
+    --syntax-n: var(--dark-syntax-n);
+    --syntax-bg: var(--dark-bg);
+    --font-weight-body: var(--dark-font-weight);
+    --menu-link-bg: var(--dark-menu-link-bg);
   }
 }
 
-/* Dark Mode Overrides (Manual Toggle - overrides system light) */
+/* Manual Dark Mode Toggle */
 body.dark {
-  --bg: #1C1917;
-  --fg: #B4BDC3;
-  --fg-dim: #8E969B;
-  --fg-muted: #6C7377;
-  --link: #6099C0;
-  --link-visited: #4A7691;
-  --meta-bg: #252220;
-  --button-bg: #2F2C2A;
-  --button-hover-bg: #3A3735;
-  --border: #353230;
-
-  --callout-bg: #252220;
-  --note-border: #6099C0; --note-bg: #1E2529;
-  --warn-border: #B77E64; --warn-bg: #29221E;
-  --tip-border: #819B69; --tip-bg: #21251E;
-  --imp-border: #DE6E7C; --imp-bg: #291E1F;
-  --example-border: #C791C3; --example-bg: #22201F; /* Purple for example */
-  --info-border: var(--note-border); --info-bg: var(--note-bg); /* Reusing note colors for info */
-  --quote-border: var(--fg-dim); --quote-bg: var(--meta-bg);
-
-  --syntax-k: #B4BDC3;
-  --syntax-c: #6C7377;
-  --syntax-s: #8E969B;
-  --syntax-n: #B4BDC3;
-  --syntax-bg: #1C1917;
-
-  --font-weight-body: 200;
-
-  --menu-link-bg: rgba(255, 255, 255, 0.05);
+  --bg: var(--dark-bg);
+  --fg: var(--dark-fg);
+  --fg-dim: var(--dark-fg-dim);
+  --fg-muted: var(--dark-fg-muted);
+  --link: var(--dark-link);
+  --link-visited: var(--dark-link-visited);
+  --meta-bg: var(--dark-meta-bg);
+  --button-bg: var(--dark-button-bg);
+  --button-hover-bg: var(--dark-button-hover-bg);
+  --border: var(--dark-border);
+  --callout-bg: var(--dark-meta-bg);
+  --note-border: var(--dark-note-border);
+  --note-bg: var(--dark-note-bg);
+  --warn-border: var(--dark-warn-border);
+  --warn-bg: var(--dark-warn-bg);
+  --tip-border: var(--dark-tip-border);
+  --tip-bg: var(--dark-tip-bg);
+  --imp-border: var(--dark-imp-border);
+  --imp-bg: var(--dark-imp-bg);
+  --example-border: var(--dark-example-border);
+  --example-bg: var(--dark-example-bg);
+  --syntax-k: var(--dark-syntax-k);
+  --syntax-c: var(--dark-syntax-c);
+  --syntax-s: var(--dark-syntax-s);
+  --syntax-n: var(--dark-syntax-n);
+  --syntax-bg: var(--dark-bg);
+  --font-weight-body: var(--dark-font-weight);
+  --menu-link-bg: var(--dark-menu-link-bg);
 }
 
-/* Light Mode Overrides (Manual Toggle - overrides system dark) */
+/* Manual Light Mode Toggle */
 body.light {
-  --bg: #F0EDEC;
-  --fg: #2C363C;
-  --fg-dim: #6F777B;
-  --fg-muted: #859289;
-  --link: #286486;
-  --link-visited: #5F879E;
-  --meta-bg: #EAE6E4;
-  --button-bg: #DCD8D6;
-  --button-hover-bg: #CFCBC9;
-  --border: #C0BCBA;
-
-  --callout-bg: #EAE6E4;
-  --note-border: #286486; --note-bg: #DFEBF1;
-  --warn-border: #944927; --warn-bg: #F2E7E2;
-  --tip-border: #4F894C; --tip-bg: #E4EFE3;
-  --imp-border: #A8334C; --imp-bg: #F0E0E3;
-  --example-border: #88507D; --example-bg: #E9E9E9; /* Purple for example */
-  --info-border: var(--note-border); --info-bg: var(--note-bg); /* Reusing note colors for info */
-  --quote-border: var(--fg-dim); --quote-bg: var(--meta-bg);
-
-  --syntax-k: #2C363C;
-  --syntax-c: #859289;
-  --syntax-s: #6F777B;
-  --syntax-n: #2C363C;
-  --syntax-bg: #F0EDEC;
-
-  --font-weight-body: 350;
-
-  --menu-link-bg: rgba(0, 0, 0, 0.05);
+  --bg: var(--light-bg);
+  --fg: var(--light-fg);
+  --fg-dim: var(--light-fg-dim);
+  --fg-muted: var(--light-fg-muted);
+  --link: var(--light-link);
+  --link-visited: var(--light-link-visited);
+  --meta-bg: var(--light-meta-bg);
+  --button-bg: var(--light-button-bg);
+  --button-hover-bg: var(--light-button-hover-bg);
+  --border: var(--light-border);
+  --callout-bg: var(--light-meta-bg);
+  --note-border: var(--light-note-border);
+  --note-bg: var(--light-note-bg);
+  --warn-border: var(--light-warn-border);
+  --warn-bg: var(--light-warn-bg);
+  --tip-border: var(--light-tip-border);
+  --tip-bg: var(--light-tip-bg);
+  --imp-border: var(--light-imp-border);
+  --imp-bg: var(--light-imp-bg);
+  --example-border: var(--light-example-border);
+  --example-bg: var(--light-example-bg);
+  --syntax-k: var(--light-syntax-k);
+  --syntax-c: var(--light-syntax-c);
+  --syntax-s: var(--light-syntax-s);
+  --syntax-n: var(--light-syntax-n);
+  --syntax-bg: var(--light-bg);
+  --font-weight-body: var(--light-font-weight);
+  --menu-link-bg: var(--light-menu-link-bg);
 }
 
 /* Prevent FOUC transitions */
