@@ -280,26 +280,6 @@ body {
   background-color: var(--bg);
   color: var(--fg);
   transition: background-color 0.3s ease, color 0.3s ease;
-
-  @media screen and (max-width: 768px) {
-    font-size: 0.95em;
-    padding: var(--space-sm) var(--space-lg);
-  }
-
-  @media screen and (max-width: 600px) {
-    font-size: 0.90em;
-    padding: var(--space-xs) var(--space-md);
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 0.85em;
-    padding: var(--space-xs) var(--space-md);
-  }
-
-  @media screen and (max-height: 430px) and (orientation: landscape) {
-    font-size: 0.90em;
-    padding: var(--space-xs) var(--space-md);
-  }
 }
 
 a {
@@ -343,52 +323,48 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--heading-margin-bottom);
 }
 
-h1 {
-  font-size: 1.8em;
-  @media screen and (max-width: 768px) { font-size: 1.7em; }
-  @media screen and (max-width: 600px) { font-size: 1.6em; }
-  @media screen and (max-width: 480px) { font-size: 1.5em; }
-  @media screen and (max-height: 430px) and (orientation: landscape) { font-size: 1.6em; }
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.3em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: 1.1em; }
+h6 { font-size: 1.05em; }
+
+/* Responsive Typography */
+@media screen and (max-width: 768px) {
+  h1 { font-size: 1.7em; }
+  h2 { font-size: 1.4em; }
+  h3 { font-size: 1.2em; }
+  h4 { font-size: 1.05em; }
+  h5 { font-size: 1em; }
+  h6 { font-size: 0.95em; }
 }
 
-h2 {
-  font-size: 1.5em;
-  @media screen and (max-width: 768px) { font-size: 1.4em; }
-  @media screen and (max-width: 600px) { font-size: 1.3em; }
-  @media screen and (max-width: 480px) { font-size: 1.2em; }
-  @media screen and (max-height: 430px) and (orientation: landscape) { font-size: 1.3em; }
+@media screen and (max-width: 600px) {
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.3em; }
+  h3 { font-size: 1.1em; }
+  h4 { font-size: 1em; }
+  h5 { font-size: 0.95em; }
+  h6 { font-size: 0.9em; }
 }
 
-h3 {
-  font-size: 1.3em;
-  @media screen and (max-width: 768px) { font-size: 1.2em; }
-  @media screen and (max-width: 600px) { font-size: 1.1em; }
-  @media screen and (max-width: 480px) { font-size: 1em; }
-  @media screen and (max-height: 430px) and (orientation: landscape) { font-size: 1.1em; }
+@media screen and (max-width: 480px) {
+  h1 { font-size: 1.5em; }
+  h2 { font-size: 1.2em; }
+  h3 { font-size: 1em; }
+  h4 { font-size: 0.95em; }
+  h5 { font-size: 0.9em; }
+  h6 { font-size: 0.85em; }
 }
 
-h4 {
-  font-size: 1.2em;
-  @media screen and (max-width: 768px) { font-size: 1.05em; }
-  @media screen and (max-width: 600px) { font-size: 1em; }
-  @media screen and (max-width: 480px) { font-size: 0.95em; }
-  @media screen and (max-height: 430px) and (orientation: landscape) { font-size: 1em; }
-}
-
-h5 {
-  font-size: 1.1em;
-  @media screen and (max-width: 768px) { font-size: 1em; }
-  @media screen and (max-width: 600px) { font-size: 0.95em; }
-  @media screen and (max-width: 480px) { font-size: 0.9em; }
-  @media screen and (max-height: 430px) and (orientation: landscape) { font-size: 0.95em; }
-}
-
-h6 {
-  font-size: 1.05em;
-  @media screen and (max-width: 768px) { font-size: 0.95em; }
-  @media screen and (max-width: 600px) { font-size: 0.9em; }
-  @media screen and (max-width: 480px) { font-size: 0.85em; }
-  @media screen and (max-height: 430px) and (orientation: landscape) { font-size: 0.9em; }
+@media screen and (max-height: 430px) and (orientation: landscape) {
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.3em; }
+  h3 { font-size: 1.1em; }
+  h4 { font-size: 1em; }
+  h5 { font-size: 0.95em; }
+  h6 { font-size: 0.9em; }
 }
 
 /* ========================================
@@ -399,11 +375,6 @@ nav {
   background-color: var(--meta-bg);
   padding: var(--space-sm);
   margin-bottom: var(--content-spacing);
-
-  /* All mobile breakpoints use same padding */
-  @media screen and (max-width: 768px), screen and (max-height: 430px) and (orientation: landscape) {
-    padding: var(--space-xs);
-  }
 }
 
 .menu {
@@ -502,11 +473,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @media screen and (max-width: 768px) { padding: var(--space-sm); }
-  @media screen and (max-width: 600px) { padding: var(--space-xs); }
-  @media screen and (max-width: 480px) { padding: var(--space-sm) var(--space-xs); }
-  @media screen and (max-height: 430px) and (orientation: landscape) { padding: var(--space-xs); }
 }
 
 .footer-content {
@@ -613,10 +579,6 @@ section {
   gap: var(--space-xl);
   align-items: flex-start;
   flex-wrap: wrap;
-
-  @media screen and (max-width: 768px) {
-    gap: var(--space-lg);
-  }
 }
 
 .about-photo {
@@ -648,17 +610,6 @@ section {
   padding: var(--space-lg);
   background: var(--meta-bg);
   border-left: 5px solid var(--warn-border);
-
-  /* Mobile: stack vertically */
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
-    gap: var(--space-lg);
-  }
-
-  /* Tighter gap on smaller phones */
-  @media screen and (max-width: 600px) { gap: var(--space-md); }
-  @media screen and (max-width: 480px) { gap: var(--space-sm); }
 }
 
 .profile-photo {
@@ -666,12 +617,6 @@ section {
   height: calc(var(--space-xxl) * 1.765);
   border-radius: 50%;
   object-fit: cover;
-
-  /* Smaller on all mobile breakpoints */
-  @media screen and (max-width: 768px) {
-    width: calc(var(--space-xxl) * 1.2);
-    height: calc(var(--space-xxl) * 1.2);
-  }
 }
 
 .profile-info {
@@ -1260,7 +1205,7 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: var(--video-aspect-ratio);
   height: 0;
   overflow: hidden;
   margin-bottom: var(--space-lg);
@@ -1273,5 +1218,82 @@ blockquote.callout-quote, blockquote[class*="quote"] { border-left-color: var(--
     width: 100%;
     height: 100%;
     border: 0;
+  }
+}
+
+/* ========================================
+   Responsive Design - Consolidated
+   ======================================== */
+
+/* Tablet breakpoint (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.95em;
+    padding: var(--space-sm) var(--space-lg);
+  }
+
+  nav,
+  footer {
+    padding: var(--space-sm);
+  }
+
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-lg);
+  }
+
+  .profile-photo {
+    width: calc(var(--space-xxl) * 1.2);
+    height: calc(var(--space-xxl) * 1.2);
+  }
+
+  .about-flex {
+    gap: var(--space-lg);
+  }
+}
+
+/* Medium phone breakpoint (max-width: 600px) */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.90em;
+    padding: var(--space-xs) var(--space-md);
+  }
+
+  footer {
+    padding: var(--space-xs);
+  }
+
+  .profile-header {
+    gap: var(--space-md);
+  }
+}
+
+/* Small phone breakpoint (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 0.85em;
+    padding: var(--space-xs) var(--space-md);
+  }
+
+  footer {
+    padding: var(--space-sm) var(--space-xs);
+  }
+
+  .profile-header {
+    gap: var(--space-sm);
+  }
+}
+
+/* Landscape phone breakpoint */
+@media screen and (max-height: 430px) and (orientation: landscape) {
+  body {
+    font-size: 0.90em;
+    padding: var(--space-xs) var(--space-md);
+  }
+
+  nav,
+  footer {
+    padding: var(--space-xs);
   }
 }
