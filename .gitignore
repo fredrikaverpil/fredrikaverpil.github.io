@@ -3,5 +3,8 @@ public/
 resources/
 .hugo_build.lock
 
+# Testing
+.playwright-mcp
+
 # OS generated files
 .DS_Store
