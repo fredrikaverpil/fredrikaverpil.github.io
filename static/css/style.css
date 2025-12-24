@@ -335,10 +335,10 @@ nav {
   padding: var(--space-sm);
   margin-bottom: var(--content-spacing);
 
-  @media screen and (max-width: 768px) { padding: var(--space-xs); }
-  @media screen and (max-width: 600px) { padding: var(--space-xs); }
-  @media screen and (max-width: 480px) { padding: var(--space-xs); }
-  @media screen and (max-height: 430px) and (orientation: landscape) { padding: var(--space-xs); }
+  /* All mobile breakpoints use same padding */
+  @media screen and (max-width: 768px), screen and (max-height: 430px) and (orientation: landscape) {
+    padding: var(--space-xs);
+  }
 }
 
 .menu {
@@ -584,26 +584,16 @@ section {
   background: var(--meta-bg);
   border-left: 5px solid var(--warn-border);
 
+  /* Mobile: stack vertically */
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    align-items: center;
     text-align: center;
     gap: var(--space-lg);
   }
 
-  @media screen and (max-width: 600px) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: var(--space-md);
-  }
-
-  @media screen and (max-width: 480px) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: var(--space-sm);
-  }
+  /* Tighter gap on smaller phones */
+  @media screen and (max-width: 600px) { gap: var(--space-md); }
+  @media screen and (max-width: 480px) { gap: var(--space-sm); }
 }
 
 .profile-photo {
@@ -612,17 +602,8 @@ section {
   border-radius: 50%;
   object-fit: cover;
 
+  /* Smaller on all mobile breakpoints */
   @media screen and (max-width: 768px) {
-    width: calc(var(--space-xxl) * 1.2);
-    height: calc(var(--space-xxl) * 1.2);
-  }
-
-  @media screen and (max-width: 600px) {
-    width: calc(var(--space-xxl) * 1.2);
-    height: calc(var(--space-xxl) * 1.2);
-  }
-
-  @media screen and (max-width: 480px) {
     width: calc(var(--space-xxl) * 1.2);
     height: calc(var(--space-xxl) * 1.2);
   }
