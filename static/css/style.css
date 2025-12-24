@@ -1271,19 +1271,19 @@ blockquote[class*="quote"] {
     }
 
     & .pagefind-ui__button {
-      background-color: transparent;
+      background-color: var(--button-bg);
       border: none;
-      color: var(--link);
+      color: var(--fg);
       font-family: var(--font-primary);
-      font-weight: 700;
-      padding: var(--space-lg) 0;
+      font-weight: 400;
+      padding: var(--button-padding-vertical) var(--button-padding-horizontal);
       width: auto;
       margin: var(--space-lg) auto;
       display: block;
       cursor: pointer;
-      text-decoration: underline;
-      text-decoration-thickness: 0.1em;
-      text-underline-offset: 0.2em;
+      text-decoration: none;
+      border-radius: 0;
+      transition: all 0.2s ease;
 
       &:hover {
         background-color: var(--link);
