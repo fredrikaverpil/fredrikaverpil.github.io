@@ -5,10 +5,6 @@ author = 'Fredrik Averpil'
 copyright = '© Fredrik Averpil'
 enableRobotsTXT = true
 
-[outputFormats]
-[outputFormats.RSS]
-baseName = 'feed_rss_created'
-
 [pagination]
 pagerSize = 10
 
@@ -59,10 +55,7 @@ name = "LinkedIn"
 url = "https://linkedin.com/in/fredrik"
 [[params.social]]
 name = "RSS"
-url = "/feed_rss_created.xml"
-[[params.social]]
-name = "Feedly"
-url = "https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Ffredrikaverpil.github.io%2Ffeed_rss_created.xml"
+url = "/blog/index.xml"
 [[params.social]]
 name = "Umami"
 url = "https://cloud.umami.is/share/tJcIgDO3dznRmeGX"

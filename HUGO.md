@@ -144,14 +144,12 @@ Static search in nav bar with dropdown results. Click-outside-to-close.
 ## 5. Hugo Configuration
 
 Key settings in `hugo.toml`: HTML unsafe enabled, CSS-based syntax highlighting,
-tags/categories taxonomies, custom RSS basename (`feed_rss_created.xml`),
-date-based permalinks, 10 posts per page.
+tags/categories taxonomies, date-based permalinks, 10 posts per page.
 
 ## 6. SEO & Meta
 
 Dynamic meta tags, Open Graph, Twitter Cards, JSON-LD structured data
-(`layouts/partials/seo_schema.html`), robots.txt, RSS feed at
-`/feed_rss_created.xml`.
+(`layouts/partials/seo_schema.html`), robots.txt, RSS feeds generated for each section.
 
 ## 7. JavaScript
 
