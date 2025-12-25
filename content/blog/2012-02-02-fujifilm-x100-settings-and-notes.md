@@ -119,6 +119,6 @@ In Motion Panorama mode, banding appears sometimes. This could be the result of 
 
 Make sure to check out some of my other X100 articles:
 
-- [Fujifilm Finepix X100 – a year in retrospect](../2012-06-12-the-fujifilm-x100-a-year-in-retrospect/)
-- [Fujifilm Finepix X100 – RAW and film simulation](../2012-08-04-fujifilm-finepix-x100-raw-and-film-simulation/)
-- [Fujifilm Finepix X100 – LCD/EVF observations](../2012-08-09-fujifilm-finepix-x100-lcd-evf-observations/)
+- [Fujifilm Finepix X100 – a year in retrospect](../2012/06/12/the-fujifilm-x100-a-year-in-retrospect/)
+- [Fujifilm Finepix X100 – RAW and film simulation](../2012/08/04/fujifilm-finepix-x100-raw-and-film-simulation/)
+- [Fujifilm Finepix X100 – LCD/EVF observations](../2012/08/09/fujifilm-finepix-x100-lcd-evf-observations/)
