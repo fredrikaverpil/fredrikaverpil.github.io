@@ -99,6 +99,22 @@ We are implementing GitHub-style callouts using a custom render hook.
 
 > [!INFO] This is an info callout (alias for Note).
 
+### Collapsible Callouts
+
+You can make callouts collapsible by adding `+` (open by default) or `-` (minimized by default) after the type.
+
+> [!NOTE-] This is a **minimized** note.
+>
+> You have to click to see this content! Hidden by default.
+
+> [!TIP+] This is an **expanded** tip.
+>
+> It starts open, but you can click the header to collapse it.
+
+> [!EXAMPLE-] Interactive code in a minimized callout
+>
+> {{< codapi sandbox="python" >}}print("Peek-a-boo!"){{< /codapi >}}
+
 ### Nested Code Block in Callout
 
 > [!TIP] You can even put code inside a callout!

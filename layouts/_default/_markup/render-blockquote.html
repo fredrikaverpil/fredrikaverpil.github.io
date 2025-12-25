@@ -1,21 +1,39 @@
 {{- $content := .Text -}}
 {{- $type := "" -}}
 {{- $title := "" -}}
+{{- $fold := "" -}}
+{{- $isCollapsible := false -}}
 
 {{- if eq .Type "alert" -}}
   {{- $type = .AlertType -}}
   {{- $title = .AlertTitle -}}
 {{- else -}}
-  {{- /* Legacy/Custom Callout parsing (Regex) */ -}}
-  {{- $match := findRE `\[!([a-zA-Z]+)\]\s*` .Text 1 -}} 
+  {{- /* Legacy/Custom Callout parsing (Regex) with optional Fold support (+/-) */ -}}
+  {{- $match := findRE `\[!([a-zA-Z]+)([-+]?)\]\s*` .Text 1 -}} 
   {{- if gt (len $match) 0 -}}
     {{- $matchStr := index $match 0 -}}
-    {{- $type = lower (replace (replace (replace $matchStr "[!" "") "]" "") " " "") -}}
-    {{- /* Clean up type string by removing whitespace that might have been captured */ -}}
-    {{- $type = replace $type "\n" "" -}}
-    {{- $type = replace $type "\r" "" -}}
-    {{- $type = trim $type " " -}}
+    
+    {{- /* Clean up the match string to extract type and suffix */ -}}
+    {{- $clean := replace (replace $matchStr "[!" "") "]" "" -}}
+    {{- $clean = trim $clean " " -}}
+    
+    {{- /* Check for suffix */ -}}
+    {{- $suffix := substr $clean -1 -}}
+    {{- if or (eq $suffix "+") (eq $suffix "-") -}}
+      {{- $type = substr $clean 0 -1 -}}
+      {{- $isCollapsible = true -}}
+      {{- if eq $suffix "+" -}}
+        {{- $fold = "open" -}}
+      {{- else -}}
+        {{- $fold = "closed" -}}
+      {{- end -}}
+    {{- else -}}
+      {{- $type = $clean -}}
+    {{- end -}}
+    
+    {{- $type = lower $type -}}
     {{- $title = $type | humanize -}}
+    
     {{- /* Remove the [!TYPE] tag from the content. */ -}}
     {{- $content = replace .Text $matchStr "" -}}
   {{- end -}}
@@ -42,6 +60,17 @@
   {{- $iconPath = "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" -}}
 {{- end -}}
 
+{{- if $isCollapsible -}}
+<details class="callout markdown-alert {{ with $type }}callout-{{ . }} markdown-alert-{{ . }}{{ end }}" {{ if eq $fold "open" }}open{{ end }}>
+  <summary class="callout-title markdown-alert-title">
+    <div style="display: flex; align-items: center; gap: 0.5em;">
+      <svg class="callout-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="{{ $iconPath }}"></path></svg>
+      {{ $title }}
+    </div>
+  </summary>
+  <div class="callout-content">{{ $content | safeHTML }}</div>
+</details>
+{{- else -}}
 <blockquote class="callout markdown-alert {{ with $type }}callout-{{ . }} markdown-alert-{{ . }}{{ end }}">
   {{- if $type -}}
   <div class="callout-title markdown-alert-title">
@@ -51,3 +80,4 @@
   {{- end -}}
   <div class="callout-content">{{ $content | safeHTML }}</div>
 </blockquote>
+{{- end -}}
