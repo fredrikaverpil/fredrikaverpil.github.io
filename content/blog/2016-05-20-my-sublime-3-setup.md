@@ -2,7 +2,7 @@
 title: "My Sublime Text 3 setup"
 date: 2016-05-20
 tags: ["python", "macos", "windows", "linux"]
-featured_image: "/blog/editor/sublime_material.png"
+featured_image: "/blog/assets/editor/sublime_material.png"
 ---
 
 

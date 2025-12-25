@@ -25,7 +25,7 @@ A Kickstart file is generated in `/root` after a successful
 installation of CentOS. You can use this as a start to create your custom
 Kickstart file.
 
-As an example, [here's](/blog/kickstart/anaconda-ks.cfg)
+As an example, [here's](/blog/assets/kickstart/anaconda-ks.cfg)
 a Kickstart file which was created automatically when
 installing CentOS 7. However, we'll need to make some changes to it so that it
 will work when remotely installing CentOS 7 via SSH.

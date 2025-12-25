@@ -24,7 +24,7 @@ More reading on gamma and linearism:
 - [Gamma correction at Wikipedia](https://en.wikipedia.org/wiki/Gamma_correction)
 - [My mental ray on gamma](https://mymentalray.com/wiki/index.php/Gamma)
 - [Master Zap’s linear workflow website](https://www.lysator.liu.se/~zap/lwf/)
-- [Linear workflow by David Johnson](https://www.djx.com.au/blog/2008/09/13/linear-workflow-and-gamma/)
+- [Linear workflow by David Johnson](https://www.djx.com.au/blog/assets/2008/09/13/linear-workflow-and-gamma/)
 
 So, how do I preserve a linear workflow using Maya and Nuke?
 

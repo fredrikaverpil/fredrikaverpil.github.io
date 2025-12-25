@@ -17,8 +17,8 @@ People’s faces being smoothened out like my hand (below) totally ruins the sho
 A forum thread discussing the issue can be found [here](https://www.fujix-forum.com/threads/whats-your-jpeg-settings-for-iso-6400-avoiding-smoothening.9278/) and example below with JPEG as well as corresponding RAF.
 
 
-![](/blog/x100s/skin_smoothening/DSCF4008.JPG)
-*X100S, ISO 6400, NR -2. [JPEG download](/blog/x100s/skin_smoothening/DSCF4008.JPG) & [RAF download](/blog/x100s/skin_smoothening/DSCF4008.RAF).*
+![](/blog/assets/x100s/skin_smoothening/DSCF4008.JPG)
+*X100S, ISO 6400, NR -2. [JPEG download](/blog/assets/x100s/skin_smoothening/DSCF4008.JPG) & [RAF download](/blog/assets/x100s/skin_smoothening/DSCF4008.RAF).*
 
-![](/blog/x100s/skin_smoothening/DSCF4009.JPG)
-*X100S, ISO 1600, NR -2. [JPEG download](/blog/x100s/skin_smoothening/DSCF4009.JPG) & [RAF download](/blog/x100s/skin_smoothening/DSCF4009.RAF).*
+![](/blog/assets/x100s/skin_smoothening/DSCF4009.JPG)
+*X100S, ISO 1600, NR -2. [JPEG download](/blog/assets/x100s/skin_smoothening/DSCF4009.JPG) & [RAF download](/blog/assets/x100s/skin_smoothening/DSCF4009.RAF).*

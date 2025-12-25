@@ -2,7 +2,7 @@
 title: "Turning your renders up to 11"
 date: 2015-10-16
 tags: ["google-cloud", "python", "bash", "linux", "maya", "vray"]
-featured_image: "/blog/gce/cgsociety01.png"
+featured_image: "/blog/assets/gce/cgsociety01.png"
 ---
 
 

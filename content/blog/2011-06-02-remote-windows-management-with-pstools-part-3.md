@@ -12,7 +12,7 @@ So now, make up your mind, whether to run the render slave as a service or not. 
 
 Place the PsTools suite of executables somewhere on your machine or preferably on a server that all machines on your network can access (so that it can be run from anywhere).
 
-The scripts below can be downloaded [here](/blog/pstools/pstools_scripts_vray_slaves.zip).
+The scripts below can be downloaded [here](/blog/assets/pstools/pstools_scripts_vray_slaves.zip).
 
 ## Standalone command line window management: Starting the V-Ray slaves
 

@@ -2,7 +2,7 @@
 title: "Docker for Mac and GUI applications"
 date: 2016-07-31
 tags: ["docker"]
-featured_image: "/blog/docker/firefox.png"
+featured_image: "/blog/assets/docker/firefox.png"
 ---
 
 
@@ -44,7 +44,7 @@ open -a XQuartz
 
 In the XQuartz preferences, go to the "Security" tab and make sure you've got "Allow connections from network clients" ticked:
 
-![](/blog/docker/xquartz_preferences.png)
+![](/blog/assets/docker/xquartz_preferences.png)
 
 Again, in e.g. bash, run `xhost` and allow connections from your local machine:
 

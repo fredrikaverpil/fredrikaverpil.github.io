@@ -19,11 +19,11 @@ Open up the render settings, go to the `V-Ray` tab and make sure that `Image for
 
 Now go to the `Render Elements` tab, enable `V-Ray Render Elements` and `Multi-channel EXR`. Add the `ZDepth` render element. The default settings should be fine.
 
-![](/blog/vray/vray_render_settings.png)
+![](/blog/assets/vray/vray_render_settings.png)
 
 ### Z-depth in Nuke
 
-![](/blog/vray/nuke_zdepth.png)
+![](/blog/assets/vray/nuke_zdepth.png)
 
 Load the EXR file (containing the Z-depth pass) into Nuke using the `Read` node. Now, view the `Z` channel in the viewer. You will see an entirely black image!
 

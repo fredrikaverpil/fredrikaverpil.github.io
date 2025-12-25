@@ -12,7 +12,7 @@ Examples of task scripts for installing Nuke, Maya and V-Ray can be found furthe
 
 This is the main concept; from a local managing machine (such as a laptop), have workstations and farm machines run a remote script to carry out a task. Have a look at the diagram below:
 
-![](/blog/pstools/ps01_pstools_illustration.png)
+![](/blog/assets/pstools/ps01_pstools_illustration.png)
 
 ## The .bat launcher script
 
@@ -39,7 +39,7 @@ Explanation of the code: the `net` command mounts the share job onto the drive l
 
 So let us have a look at that diagram again...
 
-![](/blog/pstools/ps02_pstools_illustration_step1.png)
+![](/blog/assets/pstools/ps02_pstools_illustration_step1.png)
 
 The .bat launcher script has been placed on our Windows based machines we wish to remotely manage and we also have PsTools placed on the server. Great!
 
@@ -84,7 +84,7 @@ Let us place these two files in the same folder on the server, so that the manag
 
 This is where we are at now:
 
-![](/blog/pstools/ps3_pstools_illustration_step2.png)
+![](/blog/assets/pstools/ps3_pstools_illustration_step2.png)
 
 Okay, so now we have set up both the share mounting script as well as the distribution script. Next up, a bat file to carry out an actual task.
 
@@ -110,7 +110,7 @@ If everything worked so far, you should also find log files in `j:\include\psToo
 
 Once again, let us have a look at the diagram, where we are now full circle!
 
-![](/blog/pstools/ps4_pstools_illustration_step3.png)
+![](/blog/assets/pstools/ps4_pstools_illustration_step3.png)
 
 The `hello.bat` is being launched on all remote machines defined in manage_farm.bat and log files are being created on the server’s `\include\psTools\logs` folder.
 

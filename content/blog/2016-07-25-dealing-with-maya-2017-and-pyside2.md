@@ -2,7 +2,7 @@
 title: "Dealing with Maya 2017 and PySide2"
 date: 2016-07-25
 tags: ["python", "maya", "qt.py", "pyside", "pyqt"]
-featured_image: "/blog/maya2017/no_pyside.png"
+featured_image: "/blog/assets/maya2017/no_pyside.png"
 ---
 
 

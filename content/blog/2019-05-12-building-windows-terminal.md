@@ -2,7 +2,7 @@
 title: "Building Windows Terminal"
 date: 2019-05-12
 tags: ["windows"]
-featured_image: "/blog/terminal/terminal.png"
+featured_image: "/blog/assets/terminal/terminal.png"
 ---
 
 
@@ -74,15 +74,15 @@ Launch VS2019 and open the `OpenConsole.sln` solution inside the cloned git "Ter
 
 You will be prompted to upgrade the environment. In this dialog, choose to use Windows 10 SDK 10.0.18362.0, do _not_ upgrade the Platform Toolset to v142 (meaning; keep using v141) and click "OK", leaving all the remaining boxes ticked.
 
-![](/blog/terminal/retarget.png)
+![](/blog/assets/terminal/retarget.png)
 
 When the solution has been fully loaded, choose the following configuration dropdown menu values "Release", "x64", "CascadiaPackage" and click the "Local Machine" button. This will build, deploy and launch the terminal.
 
-![](/blog/terminal/configuration.png)
+![](/blog/assets/terminal/configuration.png)
 
 You will now find the "Windows Terminal (Dev Build)" in the Windows Start menu and you don't have to launch this from within VS2019 again.
 
-![](/blog/terminal/start-menu.png)
+![](/blog/assets/terminal/start-menu.png)
 
 ### Build on command line
 
@@ -103,7 +103,7 @@ For more details on these commands, see the [tools/README.md](https://github.com
 
 This will produce `CascadiaPackage_0.0.1.0_x64.msix` inside of `src\cascadia\CascadiaPackage\AppPackages\ ...`.
 
-![](/blog/terminal/msix-location.png)
+![](/blog/assets/terminal/msix-location.png)
 
 However, you cannot install it, as it does not contain a valid certificate.
 
@@ -143,7 +143,7 @@ Here is how you can add WSL to the menu:
 - [Windows Terminal reveal video](https://www.youtube.com/watch?v=8gw0rXPMMPE)
 - [Windows Terminal: Building a better commandline experience...](https://www.youtube.com/watch?v=KMudkRcwjCw)
 - [What's new with the Windows command line](https://www.youtube.com/watch?v=veqs2WVou9M)
-- [A new Console for Windows - It's the open source Windows Terminal](https://www.hanselman.com/blog/ANewConsoleForWindowsItsTheOpenSourceWindowsTerminal.aspx)
+- [A new Console for Windows - It's the open source Windows Terminal](https://www.hanselman.com/blog/assets/ANewConsoleForWindowsItsTheOpenSourceWindowsTerminal.aspx)
 - [GitHub repository](https://github.com/microsoft/Terminal)
 - [Extensions for Terminal](https://twitter.com/richturn_ms/status/1126515079518703616)
 - [Reveal video easter egg](https://twitter.com/PengwinLinux/status/1126929652382093318)

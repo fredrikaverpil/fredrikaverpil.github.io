@@ -26,4 +26,4 @@ you’re new to the production shaders. When browsing through the release notes
 of [mental ray 3.8.1.26](https://download.autodesk.com/us/maya/2011help/mr/relnotes/relnotes.html),
 bundled with Maya 2011, it seems some of the shaders
 have been updated and bugfixed. PixelCG has done a nice job recording video
-[tutorials](https://www.pixelcg.com/blog/index.php?s=production+library) on each shader.
+[tutorials](https://www.pixelcg.com/blog/assets/index.php?s=production+library) on each shader.

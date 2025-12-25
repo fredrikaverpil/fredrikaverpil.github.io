@@ -2,7 +2,7 @@
 title: "Fujifilm X100S camera profiles and presets"
 date: 2013-06-16
 tags: ["photography"]
-featured_image: "/blog/x100s/xrite_passport.jpg"
+featured_image: "/blog/assets/x100s/xrite_passport.jpg"
 ---
 
 
@@ -42,7 +42,7 @@ The fluorescent shot and the tungsten shot were both taken in a dark room with e
 
 ### Presets
 
-![](/blog/x100s/presets.jpg)
+![](/blog/assets/x100s/presets.jpg)
 _Presets comparison. Click image for larger version._
 
 - [X100S Fredrik – Film](https://github.com/fredrikaverpil/photography/raw/master/Lightroom/Presets/Legacy/X100S%20Fredrik%20-%20Film.lrtemplate) – cool film look

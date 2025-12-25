@@ -16,7 +16,7 @@ Bash on Ubuntu on Windows is part of the "Windows Subsystem for Linux" (WSL). Re
 ### WSL developments and news
 
 - [Windows Subsystem for Linux blog](https://blogs.msdn.microsoft.com/wsl/)
-- [Posts in Windows Insider Program](https://blogs.windows.com/blog/tag/windows-insider-program/)
+- [Posts in Windows Insider Program](https://blogs.windows.com/blog/assets/tag/windows-insider-program/)
 - [Release notes](https://docs.microsoft.com/en-us/windows/wsl/release_notes)
 
 Recent (October, 2016) noteworthy news:

@@ -2,7 +2,7 @@
 title: "Fujifilm X100 settings & notes"
 date: 2012-02-02
 tags: ["photography"]
-featured_image: "/blog/x100/fujifilm_x100.jpg"
+featured_image: "/blog/assets/x100/fujifilm_x100.jpg"
 ---
 
 
@@ -92,7 +92,7 @@ And last but not least I set the focus area size for AF-S to the smallest possib
 
 - [User Manual (PDF)](https://www.fujifilm.com/support/digital_cameras/manuals/pdf/index/x/finepix_x100_manual_01.pdf)
 - [Firmware download](https://www.fujifilm.com/support/digital_cameras/software/firmware/x/finepix_x100/index.html)
-- [Lightroom JPEG Lens Profile (save as...)](/blog/x100/Fujifilm_FinePix_X100_JPEG.lcp)
+- [Lightroom JPEG Lens Profile (save as...)](/blog/assets/x100/Fujifilm_FinePix_X100_JPEG.lcp)
 
 ## Reviews
 
@@ -103,7 +103,7 @@ Please note, most of the reviews below were written before the release of firmwa
 - [DxOMark’s X100 review](https://www.dxomark.com/index.php/Publications/DxOMark-Reviews/Fujifilm-X100-DxOMark-Review)
 - [Image Resource’s X100 review](https://www.imaging-resource.com/PRODS/X100/X100A.HTM)
 - [Zack Arias’ X100 review](https://zackarias.com/for-photographers/gear-gadgets/fuji-x100-review/)
-- [Linhbergh’s X100 impressions](https://linhbergh.com/blog/2011/08/fuji-x100-impressions/)
+- [Linhbergh’s X100 impressions](https://linhbergh.com/blog/assets/2011/08/fuji-x100-impressions/)
 - [DigitalRev’s Fujifilm Finepix X100 hands-on review (YouTube)](https://www.youtube.com/watch?v=L-VoXxwGWYc)
 - My own review, written having used the X100 for one year: Fujifilm Finepix X100 – a year in retrospect
 

@@ -100,7 +100,7 @@ Set up two different conda environments:
 
 Then you just make sure your application uses the proper environment ([`site`](https://docs.python.org/3/library/site.html) module) depending on whether it is running inside of Maya, Nuke or as a standalone application. Instead of importing PySide, PySide2 or PyQt5 - you import Qt, which will cleverly work out which one of the bindings is available and use that.
 
-I have [a couple of articles](https://fredrikaverpil.github.io/blog/tag/qtpy/) written up on the subject.
+I have [a couple of articles](https://fredrikaverpil.github.io/blog/assets/tag/qtpy/) written up on the subject.
 
 
 ### Stuck on Python 2.7?

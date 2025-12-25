@@ -2,7 +2,7 @@
 title: "Ghostty on macOS"
 date: 2024-12-04
 tags: ["terminal"]
-featured_image: "/blog/ghostty/ghostty-beta.png"
+featured_image: "/blog/assets/ghostty/ghostty-beta.png"
 ---
 
 I got private beta access (quite late), and
@@ -149,7 +149,7 @@ figure out. 🌧️☔
 ### Session management
 
 I wrote a blog post on
-[Wezterm's session management](https://fredrikaverpil.github.io/blog/2024/10/20/session-management-in-wezterm-without-tmux/)
+[Wezterm's session management](https://fredrikaverpil.github.io/blog/assets/2024/10/20/session-management-in-wezterm-without-tmux/)
 and why I prefer to not use tmux as a session manager. In short, I get slightly
 annoyed by the apparent screen drawing latency of tmux and I also feel keyboard
 input can sometimes be affected. With Kitty I use a custom tab setup, which is

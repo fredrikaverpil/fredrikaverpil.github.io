@@ -2,7 +2,7 @@
 title: "Session management in Wezterm (without tmux)"
 date: 2024-10-20
 tags: ["neovim", "terminal", "lua"]
-featured_image: "/blog/wezterm/wezterm_workspaces.png"
+featured_image: "/blog/assets/wezterm/wezterm_workspaces.png"
 ---
 
 
@@ -90,7 +90,7 @@ docs for further reading on the different commands at your disposal and recipes.
 
 ## Bonus: tabs
 
-![Wezterm tabs](/blog/wezterm/wezterm_tabs.png)
+![Wezterm tabs](/blog/assets/wezterm/wezterm_tabs.png)
 
 I primarily use workspaces with Wezterm now, but it's also convenient to have
 tabs around (can be used without workspaces). I have a custom setup which

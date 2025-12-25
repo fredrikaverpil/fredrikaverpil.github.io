@@ -2,7 +2,7 @@
 title: "3D rendering in the Google Cloud"
 date: 2015-05-01
 tags: ["google-cloud", "python", "bash", "linux", "maya", "vray"]
-featured_image: "/blog/gce/gce01.png"
+featured_image: "/blog/assets/gce/gce01.png"
 ---
 
 
