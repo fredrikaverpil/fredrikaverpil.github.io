@@ -7,7 +7,8 @@ tags: ["github-actions", "python"]
 ## No double quotes
 
 > [!WARNING]
-> Never use double quotes inside `${{ ... }` as it is simply not supported.
+>
+> Never use double quotes inside `${{ ... }}` as it is simply not supported.
 
 ## Tertiary
 
