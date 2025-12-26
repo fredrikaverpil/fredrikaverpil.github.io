@@ -24,7 +24,7 @@ style = 'tango'    # Default style (will be overridden by CSS)
 noClasses = false  # Use classes so we can swap themes via CSS
 
 [params]
-description = "Minimalist technical blog."
+description = "Notes from a curiosity-driven engineer."
 
 # Featured Projects for Homepage
 [[params.projects]]
