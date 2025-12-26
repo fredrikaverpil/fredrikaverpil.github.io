@@ -1174,11 +1174,11 @@ details.callout:not([open]) .callout-title {
   color: var(--fg);
   background-color: transparent;
 
-  & .k, & .kd, & .kn, & .kp, & .kr, & .kt { font-weight: bold; color: var(--syntax-k); }
+  & .k, & .kd, & .kn, & .kp, & .kr, & .kt, & .kc, & .nb, & .nc, & .nf { font-weight: bold; font-variation-settings: 'wght' 700; color: var(--syntax-k); }
   & .c, & .cm, & .c1, & .cs { font-style: italic; color: var(--syntax-c); font-family: var(--font-italic); }
   & .s, & .s1, & .s2 { font-style: normal; color: var(--syntax-s); }
-  & .n, & .na, & .nb, & .nc, & .nf { color: var(--syntax-n); }
-  & .o, & .ow { font-weight: bold; color: var(--syntax-n); }
+  & .n, & .na { color: var(--syntax-n); }
+  & .o, & .ow { font-weight: bold; font-variation-settings: 'wght' 700; color: var(--syntax-n); }
 }
 
 .bg { color: var(--fg); background-color: transparent; }
