@@ -34,9 +34,12 @@ configuration.
 
 ### Typography
 
-Dual-monospace font stack: **Commit Mono** (primary), **Maple Mono** (italics).
+Monospace font stack: **Berkeley Mono** (primary), **Commit Mono** (fallback),
+**Maple Mono** (italics). Berkeley Mono is a licensed font not committed to git;
+it's downloaded in CI from a private URL stored as a GitHub secret.
 
-**Implementation:** `static/css/style.css`, `layouts/partials/header.html`.
+**Implementation:** `static/css/style.css`, `layouts/partials/header.html`,
+`.github/workflows/gh-pages.yml`.
 
 ### Color System (Zenbones)
 
