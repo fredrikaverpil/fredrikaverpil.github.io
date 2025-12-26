@@ -30,7 +30,7 @@ description = "Notes from a curiosity-driven engineer."
 [[params.projects]]
 name = "neotest-golang"
 url = "https://github.com/fredrikaverpil/neotest-golang"
-description = "Neovim plugin for Go testing."
+description = "Neotest adapter for running Go tests in Neovim."
 [[params.projects]]
 name = "godoc.nvim"
 url = "https://github.com/fredrikaverpil/godoc.nvim"
