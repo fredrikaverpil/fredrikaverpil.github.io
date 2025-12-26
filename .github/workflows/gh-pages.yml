@@ -49,7 +49,11 @@ jobs:
         env:
           BERKELEY_MONO_URL: ${{ secrets.BERKELEY_MONO_URL }}
         run: |
-          curl -L -o static/fonts/BerkeleyMono-Variable.woff2 "$BERKELEY_MONO_URL"
+          if [ -n "$BERKELEY_MONO_URL" ]; then
+            curl -fL -o static/fonts/BerkeleyMono-Variable.woff2 "$BERKELEY_MONO_URL"
+          else
+            echo "::warning::BERKELEY_MONO_URL secret not set, skipping font download"
+          fi
 
       - name: Build
         run: make build
