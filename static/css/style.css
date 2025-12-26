@@ -1059,13 +1059,13 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
 .callout-quote {
   border-left-color: var(--quote-border);
 
-  & .callout-title {
+  /* & .callout-title {
     float: left !important;
     display: inline-block !important;
     margin-right: 0.5em;
     margin-bottom: 0;
     vertical-align: middle;
-  }
+  } */
 
   & .callout-content > p:first-child {
     margin-top: 0;
