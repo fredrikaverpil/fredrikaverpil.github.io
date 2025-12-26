@@ -878,12 +878,13 @@ pre {
   background-color: var(--meta-bg) !important;
   margin: 0;
   z-index: 1;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 /* Compounding contrast for code blocks inside callouts */
-.callout pre, .markdown-alert pre {
+blockquote pre, .callout pre, .markdown-alert pre {
   background-color: var(--button-bg) !important;
+  font-size: 0.8em;
 }
 
 code {
