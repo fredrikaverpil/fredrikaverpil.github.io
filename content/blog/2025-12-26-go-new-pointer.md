@@ -1,7 +1,7 @@
 ---
 title: 'The "new" function changes in Go 1.26'
 date: 2025-12-26
-draft: true
+draft: false
 tags: ["golang"]
 categories: []
 ---
