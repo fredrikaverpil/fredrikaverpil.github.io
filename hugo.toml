@@ -36,6 +36,18 @@ name = "godoc.nvim"
 url = "https://github.com/fredrikaverpil/godoc.nvim"
 description = "Neovim plugin to view Go documentation."
 [[params.projects]]
+name = "multipr"
+url = "https://github.com/fredrikaverpil/multipr"
+description = "Create (and update) pull requests en masse."
+[[params.projects]]
+name = "pr.nvim"
+url = "https://github.com/fredrikaverpil/pr.nvim"
+description = "View PR, related to line under cursor in Neovim, in web browser."
+[[params.projects]]
+name = "creosote"
+url = "https://github.com/fredrikaverpil/creosote"
+description = "Identify unused dependencies and avoid a bloated virtual environment."
+[[params.projects]]
 name = "dotfiles"
 url = "https://github.com/fredrikaverpil/dotfiles"
 description = "My configuration files for Neovim, the terminal, etc."
