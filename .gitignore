@@ -3,6 +3,9 @@ public/
 resources/
 .hugo_build.lock
 
+# Licensed fonts (not for redistribution)
+static/fonts/BerkeleyMono-Variable.woff2
+
 # Testing
 .playwright-mcp
 

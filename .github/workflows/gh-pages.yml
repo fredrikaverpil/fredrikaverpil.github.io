@@ -37,6 +37,20 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
 
+      - name: Cache Berkeley Mono font
+        id: cache-font
+        uses: actions/cache@v4
+        with:
+          path: static/fonts/BerkeleyMono-Variable.woff2
+          key: berkeley-mono-font
+
+      - name: Download Berkeley Mono font
+        if: steps.cache-font.outputs.cache-hit != 'true'
+        env:
+          BERKELEY_MONO_URL: ${{ secrets.BERKELEY_MONO_URL }}
+        run: |
+          curl -L -o static/fonts/BerkeleyMono-Variable.woff2 "$BERKELEY_MONO_URL"
+
       - name: Build
         run: make build
 

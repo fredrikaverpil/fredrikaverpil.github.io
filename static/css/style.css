@@ -1,4 +1,12 @@
 @font-face {
+  font-family: 'Berkeley Mono';
+  src: url('../fonts/BerkeleyMono-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
   font-family: 'Commit Mono';
   src: url('../fonts/CommitMono-Variable.woff2') format('woff2');
   font-weight: 100 900;
@@ -45,7 +53,7 @@
   --border-width-thick: 5px;
 
   /* Typography */
-  --font-primary: 'Commit Mono', monospace;
+  --font-primary: 'Berkeley Mono', 'Commit Mono', monospace;
   --font-italic: 'Maple Mono', monospace;
 
   /* Responsive Typography (default: desktop) */
