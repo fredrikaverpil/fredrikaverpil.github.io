@@ -82,58 +82,92 @@
      ======================================== */
 
   /* Light Theme Colors (Zenbones Light) */
-  --light-bg: #F0EDEC;
-  --light-fg: #2C363C;
-  --light-fg-dim: #6F777B; /* Strings */
-  --light-fg-muted: #859289; /* Comments */
-  --light-link: #286486; /* Water */
-  --light-link-visited: #5F879E; /* Dimmer Water */
-  --light-meta-bg: #EAE6E4; /* Darker than bg */
-  --light-button-bg: #DCD8D6; /* Darker than meta-bg */
-  --light-button-hover-bg: #CFCBC9; /* Darker than button-bg */
+  --light-bg: #F0EDEC;      /* sand */
+  --light-fg: #2C363C;      /* stone */
+  --light-fg-dim: #6F777B;  /* stone (dimmed) */
+  --light-fg-muted: #859289;/* stone (muted) */
+  
+  /* Palette */
+  --light-wood: #A86638;
+  --light-rose: #A8334C;
+  --light-leaf: #4F894C;
+  --light-water: #286486;
+  --light-blossom: #88507D;
+  --light-sky: #2679A8;
+
+  /* UI Elements */
+  --light-link: var(--light-water);
+  --light-link-visited: #5F879E;
+  --light-meta-bg: #EAE6E4;
+  --light-button-bg: #DCD8D6;
+  --light-button-hover-bg: #CFCBC9;
   --light-border: #C0BCBA;
-  --light-note-border: #286486;
+  
+  /* Callouts & Semantics */
+  --light-note-border: var(--light-water);
   --light-note-bg: #DFEBF1;
-  --light-warn-border: #944927;
+  --light-warn-border: var(--light-wood);
   --light-warn-bg: #F2E7E2;
-  --light-tip-border: #4F894C;
+  --light-tip-border: var(--light-leaf);
   --light-tip-bg: #E4EFE3;
-  --light-imp-border: #A8334C;
+  --light-imp-border: var(--light-rose);
   --light-imp-bg: #F0E0E3;
-  --light-example-border: #88507D;
+  --light-example-border: var(--light-blossom);
   --light-example-bg: #E9E9E9;
-  --light-syntax-k: #2C363C;
-  --light-syntax-c: #859289;
-  --light-syntax-s: #6F777B;
-  --light-syntax-n: #2C363C;
+
+  /* Syntax Highlighting (Monochrome/Modest) */
+  --light-syntax-k: var(--light-fg);
+  --light-syntax-c: var(--light-fg-muted);
+  --light-syntax-s: var(--light-fg-dim);
+  --light-syntax-n: var(--light-fg);
+  --light-syntax-const: var(--light-fg);
+  --light-syntax-fn: var(--light-fg);
+  --light-syntax-bg: var(--light-bg);
   --light-font-weight: 350;
   --light-menu-link-bg: rgba(0, 0, 0, 0.05);
 
   /* Dark Theme Colors (Zenbones Dark) */
-  --dark-bg: #1C1917;
-  --dark-fg: #B4BDC3;
-  --dark-fg-dim: #8E969B;
-  --dark-fg-muted: #6C7377;
-  --dark-link: #6099C0;
+  --dark-bg: #1C1917;       /* sand */
+  --dark-fg: #B4BDC3;       /* stone */
+  --dark-fg-dim: #8E969B;   /* stone (dimmed) */
+  --dark-fg-muted: #6C7377; /* stone (muted) */
+
+  /* Palette */
+  --dark-wood: #B77E64;
+  --dark-rose: #DE6E7C;
+  --dark-leaf: #819B69;
+  --dark-water: #6099C0;
+  --dark-blossom: #C791C3;
+  --dark-sky: #709CB8;
+
+  /* UI Elements */
+  --dark-link: var(--dark-water);
   --dark-link-visited: #4A7691;
   --dark-meta-bg: #252220;
-  --dark-button-bg: #2F2C2A; /* Lighter than meta-bg */
-  --dark-button-hover-bg: #3A3735; /* Lighter than button-bg */
+  --dark-button-bg: #2F2C2A;
+  --dark-button-hover-bg: #3A3735;
   --dark-border: #353230;
-  --dark-note-border: #6099C0;
+
+  /* Callouts & Semantics */
+  --dark-note-border: var(--dark-water);
   --dark-note-bg: #1E2529;
-  --dark-warn-border: #B77E64;
+  --dark-warn-border: var(--dark-wood);
   --dark-warn-bg: #29221E;
-  --dark-tip-border: #819B69;
+  --dark-tip-border: var(--dark-leaf);
   --dark-tip-bg: #21251E;
-  --dark-imp-border: #DE6E7C;
+  --dark-imp-border: var(--dark-rose);
   --dark-imp-bg: #291E1F;
-  --dark-example-border: #C791C3;
+  --dark-example-border: var(--dark-blossom);
   --dark-example-bg: #22201F;
-  --dark-syntax-k: #B4BDC3;
-  --dark-syntax-c: #6C7377;
-  --dark-syntax-s: #8E969B;
-  --dark-syntax-n: #B4BDC3;
+
+  /* Syntax Highlighting (Monochrome/Modest) */
+  --dark-syntax-k: var(--dark-fg);
+  --dark-syntax-c: var(--dark-fg-muted);
+  --dark-syntax-s: var(--dark-fg-dim);
+  --dark-syntax-n: var(--dark-fg);
+  --dark-syntax-const: var(--dark-fg);
+  --dark-syntax-fn: var(--dark-fg);
+  --dark-syntax-bg: var(--dark-bg);
   --dark-font-weight: 200;
   --dark-menu-link-bg: rgba(255, 255, 255, 0.05);
 
@@ -167,6 +201,8 @@
   --syntax-c: var(--light-syntax-c);
   --syntax-s: var(--light-syntax-s);
   --syntax-n: var(--light-syntax-n);
+  --syntax-const: var(--light-syntax-const);
+  --syntax-fn: var(--light-syntax-fn);
   --syntax-bg: var(--light-bg);
   --font-weight-body: var(--light-font-weight);
   --menu-link-bg: var(--light-menu-link-bg);
@@ -269,6 +305,8 @@
     --syntax-c: var(--dark-syntax-c);
     --syntax-s: var(--dark-syntax-s);
     --syntax-n: var(--dark-syntax-n);
+    --syntax-const: var(--dark-syntax-const);
+    --syntax-fn: var(--dark-syntax-fn);
     --syntax-bg: var(--dark-bg);
     --font-weight-body: var(--dark-font-weight);
     --menu-link-bg: var(--dark-menu-link-bg);
@@ -302,6 +340,8 @@ body.dark {
   --syntax-c: var(--dark-syntax-c);
   --syntax-s: var(--dark-syntax-s);
   --syntax-n: var(--dark-syntax-n);
+  --syntax-const: var(--dark-syntax-const);
+  --syntax-fn: var(--dark-syntax-fn);
   --syntax-bg: var(--dark-bg);
   --font-weight-body: var(--dark-font-weight);
   --menu-link-bg: var(--dark-menu-link-bg);
@@ -334,6 +374,8 @@ body.light {
   --syntax-c: var(--light-syntax-c);
   --syntax-s: var(--light-syntax-s);
   --syntax-n: var(--light-syntax-n);
+  --syntax-const: var(--light-syntax-const);
+  --syntax-fn: var(--light-syntax-fn);
   --syntax-bg: var(--light-bg);
   --font-weight-body: var(--light-font-weight);
   --menu-link-bg: var(--light-menu-link-bg);
@@ -1174,10 +1216,28 @@ details.callout:not([open]) .callout-title {
   color: var(--fg);
   background-color: transparent;
 
-  & .k, & .kd, & .kn, & .kp, & .kr, & .kt, & .kc, & .nb, & .nc, & .nf { font-weight: bold; font-variation-settings: 'wght' 700; color: var(--syntax-k); }
-  & .c, & .cm, & .c1, & .cs { font-style: italic; color: var(--syntax-c); font-family: var(--font-italic); }
-  & .s, & .s1, & .s2 { font-style: normal; color: var(--syntax-s); }
-  & .n, & .na { color: var(--syntax-n); }
+  /* Keywords & Statements */
+  & .k, & .kd, & .kn, & .kp, & .kr, & .kt { font-weight: bold; font-variation-settings: 'wght' 700; color: var(--syntax-k); }
+  
+  /* Constants, Booleans & Pseudo (Rose) */
+  & .kc, & .bp, & .ni, & .kp { font-weight: bold; font-variation-settings: 'wght' 700; color: var(--syntax-const); }
+  
+  /* Built-ins, Special Functions & PreProc (Water) */
+  & .nb, & .fm, & .cp { font-weight: bold; font-variation-settings: 'wght' 700; color: var(--syntax-fn); }
+  
+  /* Types, Classes & Functions (Bold Stone) */
+  & .nc, & .nf { font-weight: bold; font-variation-settings: 'wght' 700; color: var(--syntax-n); }
+
+  /* Comments & Multiline Strings (Italics) */
+  & .c, & .cm, & .c1, & .cs, & .sd, & .sh { font-style: italic; color: var(--syntax-c); font-family: var(--font-italic); }
+
+  /* Strings (Normal) */
+  & .s, & .s1, & .s2, & .sc { color: var(--syntax-s); }
+
+  /* Names, Attributes & Numbers (Normal) */
+  & .n, & .na, & .m, & .mi, & .mf, & .mh, & .mo, & .mb, & .il { color: var(--syntax-n); }
+  
+  /* Operators (Bold) */
   & .o, & .ow { font-weight: bold; font-variation-settings: 'wght' 700; color: var(--syntax-n); }
 }
 
