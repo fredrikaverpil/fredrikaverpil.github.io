@@ -897,6 +897,7 @@ pre code {
   padding: var(--button-padding-vertical) var(--button-padding-horizontal);
   font-family: var(--font-primary);
   font-size: 1em;
+  font-weight: var(--font-weight-body);
   background-color: var(--button-bg);
   color: var(--fg);
   border: none;
