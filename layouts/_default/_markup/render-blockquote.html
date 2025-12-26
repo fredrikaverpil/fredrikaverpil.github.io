@@ -7,6 +7,9 @@
 {{- if eq .Type "alert" -}}
   {{- $type = .AlertType -}}
   {{- $title = .AlertTitle -}}
+  {{- if not $title -}}
+    {{- $title = $type | humanize -}}
+  {{- end -}}
 {{- else -}}
   {{- /* Legacy/Custom Callout parsing (Regex) with optional Fold support (+/-) */ -}}
   {{- $match := findRE `\[!([a-zA-Z]+)([-+]?)\]\s*` .Text 1 -}} 
