@@ -53,7 +53,8 @@
   --border-width-thick: 5px;
 
   /* Typography */
-  --font-primary: 'Berkeley Mono', 'Commit Mono', monospace;
+  --font-primary: 'Berkeley Mono', monospace;
+  --font-code: 'Berkeley Mono', monospace;
   --font-italic: 'Maple Mono', monospace;
 
   /* Responsive Typography (default: desktop) */
@@ -437,7 +438,7 @@ a {
 }
 
 code, pre {
-  font-family: var(--font-primary);
+  font-family: var(--font-code);
   font-weight: var(--font-weight-body);
   font-variation-settings: 'wght' var(--font-weight-body);
 }
@@ -495,9 +496,10 @@ nav {
     transition: background-color 0.3s ease, color 0.3s ease;
     -webkit-appearance: none;
     -webkit-user-select: none;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-weight: var(--font-weight-body);
+    font-variation-settings: 'wght' var(--font-weight-body);
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
 
     &.active, &:hover {
       background-color: var(--link);
@@ -512,9 +514,10 @@ nav {
   transition: color 0.3s ease;
   -webkit-appearance: none;
   -webkit-user-select: none;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-weight: var(--font-weight-body);
+  font-variation-settings: 'wght' var(--font-weight-body);
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
 }
 
 /* ========================================
@@ -874,6 +877,7 @@ pre {
   background-color: var(--meta-bg) !important;
   margin: 0;
   z-index: 1;
+  font-size: 0.8em;
 }
 
 /* Compounding contrast for code blocks inside callouts */
@@ -884,7 +888,7 @@ pre {
 code {
   background-color: var(--meta-bg);
   padding: 0 0.2em;
-  font-family: var(--font-primary);
+  font-family: var(--font-code);
   font-weight: 600;
   font-variation-settings: 'wght' 600;
 }
@@ -1483,9 +1487,10 @@ codapi-toolbar a {
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-appearance: none;
   -webkit-user-select: none;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-weight: var(--font-weight-body);
+  font-variation-settings: 'wght' var(--font-weight-body);
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
   font-family: var(--font-primary);
   font-size: 1em;
 }

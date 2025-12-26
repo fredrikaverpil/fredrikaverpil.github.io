@@ -1,18 +1,19 @@
-  <footer>
-  <div class="footer-content">
-    <span class="footer-icons">
-      {{ range site.Params.social }}
-      {{ $url := .url }}
-      <a href="{{ $url | relURL }}" target="_blank" rel="noopener" title="{{ .name }}">
-        {{ partial "social_icon.html" .name }}
-      </a>
-      {{ end }}
-    </span>
-    <span class="footer-text">
-      {{ site.Copyright | markdownify }} 2005-{{ now.Year }}
-    </span>
-  </div>
-  {{ partial "foot_custom.html" . }}
-  </footer>
-  </body>
+<footer>
+	<div class="footer-content">
+		<span class="footer-icons">
+			{{ range site.Params.social }}
+			{{ $url := .url }}
+			<a href="{{ $url | relURL }}" target="_blank" rel="noopener" title="{{ .name }}">
+				{{ partial "social_icon.html" .name }}
+			</a>
+			{{ end }}
+		</span>
+		<span class="footer-text">
+			{{ site.Copyright | markdownify }} 2005-{{ now.Year }}
+		</span>
+	</div>
+	{{ partial "foot_custom.html" . }}
+</footer>
+</body>
+
 </html>
