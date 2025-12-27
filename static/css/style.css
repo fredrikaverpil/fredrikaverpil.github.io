@@ -1074,7 +1074,6 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
 
   & code, & pre {
     font-style: normal;
-    background-color: transparent;
   }
 }
 
