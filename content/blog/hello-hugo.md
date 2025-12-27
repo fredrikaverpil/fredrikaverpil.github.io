@@ -31,49 +31,39 @@ if __name__ == "__main__":
 
 ### Interactive Code Block
 
-Now here's an **interactive** Python code snippet using Codapi. Click "Run" to execute it in your browser!
+Now here's an **interactive** Python code snippet using Codapi. Click "Run" to
+execute it in your browser!
 
-{{< codapi sandbox="python" >}}def greet(name):
-    print(f"Hello, {name}!")
+{{< codapi sandbox="python" >}}def greet(name): print(f"Hello, {name}!")
 
-greet("Hugo")
-greet("World")
-{{< /codapi >}}
+greet("Hugo") greet("World") {{< /codapi >}}
 
-Try modifying the code above and running it again. Here's another example with a simple calculation:
+Try modifying the code above and running it again. Here's another example with a
+simple calculation:
 
-{{< codapi sandbox="python" >}}# Calculate factorial
-def factorial(n):
-    if n <= 1:
-        return 1
-    return n * factorial(n - 1)
+{{< codapi sandbox="python" >}}# Calculate factorial def factorial(n): if n <=
+1: return 1 return n \* factorial(n - 1)
 
-for i in range(1, 6):
-    print(f"{i}! = {factorial(i)}")
-{{< /codapi >}}
+for i in range(1, 6): print(f"{i}! = {factorial(i)}") {{< /codapi >}}
 
 ### Interactive JavaScript
 
-Here's an interactive JavaScript example that runs directly in the browser (no WASI needed):
+Here's an interactive JavaScript example that runs directly in the browser (no
+WASI needed):
 
-{{< codapi sandbox="javascript" >}}const numbers = [1, 2, 3, 4, 5];
-const squared = numbers.map(n => n * n);
-console.log("Original:", numbers);
+{{< codapi sandbox="javascript" >}}const numbers = [1, 2, 3, 4, 5]; const
+squared = numbers.map(n => n \* n); console.log("Original:", numbers);
 console.log("Squared:", squared);
 
-// Try adding your own code!
-const sum = squared.reduce((a, b) => a + b, 0);
-console.log("Sum of squares:", sum);
-{{< /codapi >}}
+// Try adding your own code! const sum = squared.reduce((a, b) => a + b, 0);
+console.log("Sum of squares:", sum); {{< /codapi >}}
 
 ### Interactive SQLite
 
 And here's a SQLite example using WASI (runs entirely in your browser):
 
 {{< codapi sandbox="sqlite" >}}SELECT 'Hello, SQLite!' as message, 42 as answer
-UNION ALL
-SELECT 'It works!', 100;
-{{< /codapi >}}
+UNION ALL SELECT 'It works!', 100; {{< /codapi >}}
 
 ### Callouts
 
@@ -93,21 +83,23 @@ We are implementing GitHub-style callouts using a custom render hook.
 
 > [!EXAMPLE] This is an example callout.
 
-> [!QUOTE] Quoting [ConradIrwin](https://github.com/ConradIrwin)
+> [!QUOTE] Quoting someone...
 >
-> This is a quote callout, useful for highlighting text or citations. It supports the special "inline title" styling we added.
+> This is a quote callout, useful for highlighting text or citations. It
+> supports the special "inline title" styling we added.
 
 > [!INFO] This is an info callout (alias for Note).
 
 ### Collapsible Callouts
 
-You can make callouts collapsible by adding `+` (open by default) or `-` (minimized by default) after the type.
+You can make callouts collapsible by adding `+` (open by default) or `-`
+(minimized by default) after the type.
 
 > [!NOTE-] This is a **minimized** note.
 >
 > You have to click to see this content! Hidden by default.
 
-> [!TIP+] This is an **expanded** tip.
+> [!TIP+] This is an expanded tip.
 >
 > It starts open, but you can click the header to collapse it.
 
@@ -125,20 +117,20 @@ You can make callouts collapsible by adding `+` (open by default) or `-` (minimi
 
 ### Interactive Code in Callout
 
-You can also use interactive Codapi snippets inside callouts, and they follow the compounding contrast rules:
+You can also use interactive Codapi snippets inside callouts, and they follow
+the compounding contrast rules:
 
 > [!EXAMPLE] Try this interactive Python example inside a callout
 >
-> {{< codapi sandbox="python" >}}# Calculate Fibonacci sequence
-def fibonacci(n):
+> {{< codapi sandbox="python" >}}# Calculate Fibonacci sequence def
+> fibonacci(n):
+
     if n <= 1:
         return n
     return fibonacci(n-1) + fibonacci(n-2)
 
-for i in range(10):
-    print(f"F({i}) = {fibonacci(i)}")
-{{< /codapi >}}
->
+for i in range(10): print(f"F({i}) = {fibonacci(i)}") {{< /codapi >}}
+
 > Text underneath it!
 
 ### GoAT Diagram
@@ -156,4 +148,3 @@ somehow, but for now just as a code block or pre-formatted text):
   '---------| C |
             '---'
 ```
-

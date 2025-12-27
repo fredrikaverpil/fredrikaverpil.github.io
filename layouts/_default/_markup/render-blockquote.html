@@ -1,9 +1,10 @@
 {{- $content := .Text -}}
 {{- $type := "" -}}
 {{- $title := "" -}}
-{{- $fold := "" -}}
 {{- $isCollapsible := false -}}
+{{- $fold := "" -}}
 
+{{- /* First, check if Hugo recognized this as a native alert */ -}}
 {{- if eq .Type "alert" -}}
   {{- $type = .AlertType -}}
   {{- $title = .AlertTitle -}}
@@ -11,38 +12,41 @@
     {{- $title = $type | humanize -}}
   {{- end -}}
 {{- else -}}
-  {{- /* Legacy/Custom Callout parsing (Regex) with optional Fold support (+/-) */ -}}
-  {{- $match := findRE `\[!([a-zA-Z]+)([-+]?)\]\s*` .Text 1 -}} 
+  {{- /* Custom parsing for [!TYPE+] or [!TYPE-] collapsible syntax */ -}}
+  {{- $match := findRE `\[!([a-zA-Z]+)([-+])\]` .Text 1 -}}
   {{- if gt (len $match) 0 -}}
     {{- $matchStr := index $match 0 -}}
-    
-    {{- /* Clean up the match string to extract type and suffix */ -}}
     {{- $clean := replace (replace $matchStr "[!" "") "]" "" -}}
-    {{- $clean = trim $clean " " -}}
-    
-    {{- /* Check for suffix */ -}}
+
+    {{- /* Extract suffix and type */ -}}
     {{- $suffix := substr $clean -1 -}}
-    {{- if or (eq $suffix "+") (eq $suffix "-") -}}
-      {{- $type = substr $clean 0 -1 -}}
-      {{- $isCollapsible = true -}}
-      {{- if eq $suffix "+" -}}
-        {{- $fold = "open" -}}
-      {{- else -}}
-        {{- $fold = "closed" -}}
-      {{- end -}}
+    {{- $type = substr $clean 0 -1 | lower -}}
+    {{- $isCollapsible = true -}}
+    {{- if eq $suffix "+" -}}
+      {{- $fold = "open" -}}
     {{- else -}}
-      {{- $type = $clean -}}
+      {{- $fold = "closed" -}}
     {{- end -}}
-    
-    {{- $type = lower $type -}}
-    {{- $title = $type | humanize -}}
-    
-    {{- /* Remove the [!TYPE] tag from the content. */ -}}
-    {{- $content = replace .Text $matchStr "" -}}
+
+    {{- /* Extract optional title - everything between tag and first </p> */ -}}
+    {{- $titleMatch := findRE `\[![a-zA-Z]+[-+]\].*?</p>` .Text 1 -}}
+    {{- if gt (len $titleMatch) 0 -}}
+      {{- $titleLine := index $titleMatch 0 -}}
+      {{- /* Remove the tag prefix and </p> suffix */ -}}
+      {{- $title = replaceRE `\[![a-zA-Z]+[-+]\]\s*` "" $titleLine -}}
+      {{- $title = replaceRE `</p>$` "" $title | strings.TrimSpace -}}
+    {{- end -}}
+
+    {{- if not $title -}}
+      {{- $title = $type | humanize -}}
+    {{- end -}}
+
+    {{- /* Remove the first paragraph containing the tag from content */ -}}
+    {{- $content = replaceRE `<p>\[![a-zA-Z]+[-+]\].*?</p>\s*` "" .Text 1 -}}
   {{- end -}}
 {{- end -}}
 
-{{- /* Icon Mapping (Material Design) */ -}}
+{{- /* Icon Mapping */ -}}
 {{- $iconPath := "" -}}
 {{- if eq $type "note" -}}
   {{- $iconPath = "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" -}}
@@ -59,7 +63,6 @@
 {{- else if eq $type "quote" -}}
   {{- $iconPath = "M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" -}}
 {{- else -}}
-  {{- /* Default Icon (Info) */ -}}
   {{- $iconPath = "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" -}}
 {{- end -}}
 
@@ -68,7 +71,7 @@
   <summary class="callout-title markdown-alert-title">
     <div style="display: flex; align-items: center; gap: 0.5em;">
       <svg class="callout-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="{{ $iconPath }}"></path></svg>
-      {{ $title }}
+      {{ $title | safeHTML }}
     </div>
   </summary>
   <div class="callout-content">{{ $content | safeHTML }}</div>
