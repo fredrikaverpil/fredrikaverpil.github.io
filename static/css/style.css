@@ -1083,6 +1083,7 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
 .callout .markdown-alert,
 .markdown-alert .callout {
   background-color: var(--button-bg) !important;
+  font-size: 0.9em;
 }
 
 /* Compounding contrast for code blocks inside nested callouts */
