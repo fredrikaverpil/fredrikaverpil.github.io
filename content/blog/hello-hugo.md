@@ -75,6 +75,10 @@ We are implementing GitHub-style callouts using a custom render hook.
 >
 > The trick!
 
+> [!HINT] This is a hint. Lightbulb moment!
+>
+> Did you know this?
+
 > [!IMPORTANT] This is important. Don't miss this information!
 
 > [!WARNING] This is a warning. Be careful!

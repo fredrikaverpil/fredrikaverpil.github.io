@@ -1121,6 +1121,10 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   border-left-color: var(--example-border);
 }
 
+.callout-hint {
+  border-left-color: var(--tip-border);
+}
+
 .callout-info {
   border-left-color: var(--info-border);
 }
@@ -1169,6 +1173,12 @@ blockquote[class*="important"] {
 blockquote.callout-example,
 blockquote[class*="example"] {
   border-left-color: var(--example-border) !important;
+  background: var(--meta-bg) !important;
+}
+
+blockquote.callout-hint,
+blockquote[class*="hint"] {
+  border-left-color: var(--tip-border) !important;
   background: var(--meta-bg) !important;
 }
 
