@@ -55,8 +55,8 @@ jobs:
             echo "::warning::BERKELEY_MONO_URL secret not set, skipping font download"
           fi
 
-      - name: Build
-        run: make build
+      - name: Test and Build
+        run: make ci
 
       - name: Setup Pages
         if: github.event_name != 'pull_request'
