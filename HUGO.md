@@ -80,8 +80,10 @@ Standard Goldmark syntax: `[^1]`.
 
 Chroma syntax highlighting with copy button (top-right, visual feedback).
 
+**Language Identifiers:** See [Hugo Syntax Highlighting Languages](https://gohugo.io/content-management/syntax-highlighting/#languages) for the full list. Note: For Go code, use `golang` instead of `go` to avoid misdetection as GDScript.
+
 **Implementation:** `layouts/_default/_markup/render-codeblock.html`,
-`static/js/main.js`.
+`static/js/main.js`, `layouts/shortcodes/code.html`.
 
 ### Interactive Code Blocks (Codapi)
 
