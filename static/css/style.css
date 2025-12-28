@@ -1077,6 +1077,22 @@ thead, tfoot, tr:nth-child(even) { background: var(--meta-bg); }
   }
 }
 
+/* Compounding contrast for nested callouts */
+.callout .callout,
+.markdown-alert .markdown-alert,
+.callout .markdown-alert,
+.markdown-alert .callout {
+  background-color: var(--button-bg) !important;
+}
+
+/* Compounding contrast for code blocks inside nested callouts */
+.callout .callout pre,
+.markdown-alert .markdown-alert pre,
+.callout .markdown-alert pre,
+.markdown-alert .callout pre {
+  background-color: var(--button-hover-bg) !important;
+}
+
 /* Callout type colors */
 .callout-note,
 .markdown-alert-note {
