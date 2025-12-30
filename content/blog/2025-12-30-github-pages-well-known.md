@@ -8,9 +8,9 @@ categories: []
 
 If you're using GitHub Pages with the official
 [`actions/upload-pages-artifact`](https://github.com/actions/upload-pages-artifact)
-action and need to serve files from a `.well-known` directory (e.g., for a
-custom Bluesky handle), you'll hit a problem: **v4 of the action excludes all
-dotfiles by default**.
+action and need to serve files from a file/folder prefixed with a period (`.`)
+sign, like the `.well-known` directory (e.g., for a custom Bluesky handle),
+you'll hit a problem: **v4 of the action excludes all dotfiles by default**.
 
 This is a
 [breaking change introduced in v4.0.0](https://github.com/actions/upload-pages-artifact/releases/tag/v4.0.0)
