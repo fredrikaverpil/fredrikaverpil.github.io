@@ -1,5 +1,5 @@
 ---
-title: "GitHub Pages and the .well-known directory"
+title: "Deploying hidden dotfiles to GitHub Pages"
 date: 2025-12-30
 draft: false
 tags: ["github-actions", "github-pages"]
