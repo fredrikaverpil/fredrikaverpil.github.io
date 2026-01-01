@@ -39,7 +39,7 @@ jobs:
 
       - name: Cache Berkeley Mono font
         id: cache-font
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: static/fonts/BerkeleyMono-Variable.woff2
           key: berkeley-mono-font
