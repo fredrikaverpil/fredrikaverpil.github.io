@@ -70,7 +70,7 @@ jobs:
         run: |
           tar --dereference --hard-dereference -cvf "$RUNNER_TEMP/artifact.tar" -C ./public .
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         if: github.event_name != 'pull_request'
         with:
           name: github-pages
