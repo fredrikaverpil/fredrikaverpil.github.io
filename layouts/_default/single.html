@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 <div class="article-meta">
 <h1><span class="title">{{ .Title | markdownify }}</span></h1>
 {{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
@@ -49,5 +49,4 @@
 </main>
 
 {{ partial "giscus.html" . }}
-
-{{ partial "footer.html" . }}
+{{ end }}

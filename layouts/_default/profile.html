@@ -1,5 +1,4 @@
-{{ partial "header.html" . }}
-
+{{ define "main" }}
 <div class="profile-container">
   <div class="profile-header">
     <img src="/img/profile.jpg" alt="Fredrik Averpil" class="profile-photo">
@@ -15,5 +14,4 @@
     {{ .Content }}
   </div>
 </div>
-
-{{ partial "footer.html" . }}
+{{ end }}
