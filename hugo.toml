@@ -44,6 +44,10 @@ name = "pr.nvim"
 url = "https://github.com/fredrikaverpil/pr.nvim"
 description = "View PR, related to line under cursor in Neovim, in web browser."
 [[params.projects]]
+name = "dependabot-generate"
+url = "https://github.com/fredrikaverpil/dependabot-generate"
+description = "Opinionated dependabot.yml generator."
+[[params.projects]]
 name = "creosote"
 url = "https://github.com/fredrikaverpil/creosote"
 description = "Identify unused dependencies and avoid a bloated virtual environment."
