@@ -28,6 +28,14 @@ description = "Notes from a curiosity-driven engineer."
 
 # Featured Projects for Homepage
 [[params.projects]]
+name = "pocket"
+url = "https://github.com/fredrikaverpil/pocket"
+description = "Composable task runner framework"
+[[params.projects]]
+name = "claudeline"
+url = "https://github.com/fredrikaverpil/claudeline"
+description = "Minimalistic Claude Code status line"
+[[params.projects]]
 name = "neotest-golang"
 url = "https://github.com/fredrikaverpil/neotest-golang"
 description = "Neotest adapter for running Go tests in Neovim."
@@ -43,10 +51,6 @@ description = "Create (and update) pull requests en masse."
 name = "pr.nvim"
 url = "https://github.com/fredrikaverpil/pr.nvim"
 description = "View PR, related to line under cursor in Neovim, in web browser."
-[[params.projects]]
-name = "dependabot-generate"
-url = "https://github.com/fredrikaverpil/dependabot-generate"
-description = "Opinionated dependabot.yml generator."
 [[params.projects]]
 name = "creosote"
 url = "https://github.com/fredrikaverpil/creosote"
