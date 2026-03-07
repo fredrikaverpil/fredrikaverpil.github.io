@@ -1,7 +1,6 @@
 baseURL = 'https://fredrikaverpil.github.io/'
 languageCode = 'en-us'
 title = 'Fredrik Averpil'
-author = 'Fredrik Averpil'
 copyright = '© Fredrik Averpil'
 enableRobotsTXT = true
 
@@ -24,6 +23,7 @@ style = 'tango'    # Default style (will be overridden by CSS)
 noClasses = false  # Use classes so we can swap themes via CSS
 
 [params]
+author = "Fredrik Averpil"
 description = "Notes from a curiosity-driven engineer."
 
 # Featured Projects for Homepage

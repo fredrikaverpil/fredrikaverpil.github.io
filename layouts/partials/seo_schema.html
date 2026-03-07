@@ -8,7 +8,7 @@
   "description": "{{ .Site.Params.description }}",
   "author": {
     "@type": "Person",
-    "name": "{{ .Site.Author }}"
+    "name": "{{ .Site.Params.author }}"
   }
 }
 </script>
@@ -26,7 +26,7 @@
   },
   "author": {
     "@type": "Person",
-    "name": "{{ .Params.author | default .Site.Author }}"
+    "name": "{{ .Params.author | default .Site.Params.author }}"
   },
   "description": "{{ .Description | default .Summary | plainify }}"
 }
