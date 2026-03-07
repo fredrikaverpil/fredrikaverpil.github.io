@@ -28,8 +28,8 @@ For local development:
 make
 ```
 
-ean`before`make build` to ensure the Pagefind orrectly and to remove stale
-artifacts.
+Run `make clean` before `make build` to ensure the Pagefind index builds
+correctly and to remove stale artifacts.
 
 ## Documentation
 
