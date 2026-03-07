@@ -1,7 +1,7 @@
 ---
 title: "Teaching Claude Code to run commands in Neovim"
 date: 2026-03-07
-draft: true
+draft: false
 tags: ["neovim"]
 categories: []
 ---
@@ -12,9 +12,9 @@ check LSP diagnostics, and even send commands — all through Neovim's
 [msgpack-RPC API](https://neovim.io/doc/user/api.html).
 
 What's quite neat here is that since I run Claude Code inside a Neovim terminal
-window, I can make Claude use this API to query and hook into the
-running Neovim session and much more easily debug issues with my Neovim config,
-develop plugins, or help with something _inside_ Neovim.
+window, I can make Claude use this API to query and hook into the running Neovim
+session and much more easily debug issues with my Neovim config, develop
+plugins, or help with something _inside_ Neovim.
 
 I wrote a [Claude Code](https://docs.anthropic.com/en/docs/claude-code)
 [skill](https://docs.anthropic.com/en/docs/claude-code/skills) that teaches
