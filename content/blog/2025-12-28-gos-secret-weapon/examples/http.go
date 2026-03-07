@@ -41,7 +41,7 @@ func StreamEvents(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "text/event-stream")
-	for i := 0; i < 5; i++ {
+	for i := range 5 {
 		fmt.Fprintf(w, "data: Event %d\n\n", i)
 		flusher.Flush()
 		time.Sleep(time.Second)
