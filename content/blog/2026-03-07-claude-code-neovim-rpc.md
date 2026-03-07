@@ -11,8 +11,8 @@ Neovim's Unix socket. This means you can query editor state, inspect buffers,
 check LSP diagnostics, and even send commands — all through Neovim's
 [msgpack-RPC API](https://neovim.io/doc/user/api.html).
 
-What's quite neat here is that if you run Claude Code inside a Neovim terminal
-window, I can actually make Claude use this API to query and hook into the
+What's quite neat here is that since I run Claude Code inside a Neovim terminal
+window, I can make Claude use this API to query and hook into the
 running Neovim session and much more easily debug issues with my Neovim config,
 develop plugins, or help with something _inside_ Neovim.
 
@@ -68,7 +68,7 @@ The skill explicitly instructs Claude to:
 
 - **Never** send `:q`, `:qa`, or other destructive commands without confirmation
 - **Never** modify buffer contents via RPC without asking first
-- **Prefer** `--remote-expr` over `--remote-send` (which simulates typing)
+- **Prefer** `--remote-expr` over `--remote-send`, which simulates typing
 
 ## Setting it up
 
@@ -79,6 +79,6 @@ from this directory and loads them based on the skill's description field.
 I run Claude Code inside Neovim using
 [sidekick.nvim](https://github.com/folke/sidekick.nvim), which embeds it in a
 split alongside my editor. Combined with this skill, it creates a fully
-integrated experience. Claude can see what I see and interact with my session
-directly. You can find my sidekick config
+integrated experience — Claude can query the same editor state I see and
+interact with my session directly. You can find my sidekick config
 [here](https://github.com/fredrikaverpil/dotfiles/blob/main/nvim-fredrik/lua/fredrik/plugins/sidekick.lua).
