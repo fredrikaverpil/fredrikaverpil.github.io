@@ -765,7 +765,7 @@ section {
    ======================================== */
 
 main {
-  hyphens: auto;
+  hyphens: none;
   margin-bottom: var(--section-gap);
 
   & em, & i {
