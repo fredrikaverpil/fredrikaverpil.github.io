@@ -30,12 +30,8 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v6
         with:
-          go-version-file: 'go.mod'
+          go-version-file: go.mod
           cache: true
-          cache-dependency-path: go.sum
-
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
 
       - name: Cache Berkeley Mono font
         id: cache-font
@@ -55,8 +51,8 @@ jobs:
             echo "::warning::BERKELEY_MONO_URL secret not set, skipping font download"
           fi
 
-      - name: Test and Build
-        run: make ci
+      - name: Build
+        run: ./pok build
 
       - name: Setup Pages
         if: github.event_name != 'pull_request'
