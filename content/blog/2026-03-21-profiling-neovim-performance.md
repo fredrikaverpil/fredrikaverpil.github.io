@@ -94,12 +94,10 @@ There are two modes of operation:
 2. Press `<F1>` to begin recording
 3. Reproduce the slow behavior (e.g. type rapidly in insert mode)
 4. Press `<F1>` again to stop recording and save the `profile.json` file
-5. Open the JSON file in [Perfetto](https://ui.perfetto.dev/) — it processes
-   everything client-side so no data leaves your machine. It also supports SQL
-   queries on traces and handles large files well. Note: `chrome://tracing` also
-   works but is
-   [deprecated](https://chromium.googlesource.com/catapult/+/refs/heads/main/tracing/docs/perfetto.md)
-   in favor of Perfetto.
+5. Open the JSON file in [Perfetto](https://ui.perfetto.dev/) (successor of the
+   [deprecated `chrome://tracing`](https://chromium.googlesource.com/catapult/+/refs/heads/main/tracing/docs/perfetto.md)).
+   It processes everything client-side so no data leaves your machine. It also
+   supports SQL queries on traces and handles large files well.
 
 The trace viewer gives you a flame chart where you can zoom in on exactly which
 functions are taking the most time. In my case, it was immediately obvious — the
