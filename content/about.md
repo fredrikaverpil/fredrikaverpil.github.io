@@ -7,9 +7,9 @@ type: "page"
 ---
 
 I'm a passionate and enthusiastic software developer with 15+ years of
-professional software engineering experience. I'm part of a backend-focused
-engineering team, developing our Google Cloud-hosted and event-based SaaS
-platform using technologies such as Go, Protobuf, gRPC, Pub/Sub, Spanner,
+professional software engineering experience. I'm part of a platform engineering
+team, developing a Google Cloud-hosted and event-based SaaS platform using
+technologies such as Go, Protobuf, gRPC, Pub/Sub, Spanner, BigQuery, Vertex AI,
 Postgres and Terraform.
 
 This is my personal blog, where I scribble down notes on software development,
