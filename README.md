@@ -4,34 +4,35 @@ My personal blog and portfolio.
 
 ## Development
 
-This project uses [Hugo](https://gohugo.io/) and standard UNIX tools.
+This project uses [Hugo](https://gohugo.io/) and
+[Pocket](https://github.com/fredrikaverpil/pocket), a Makefile-like task runner.
+Run `./pok` to execute linting, formatting, and tests.
 
 ### Prerequisites
 
-- **Hugo:** `hugo` (via `go tool hugo`) to run build or serve commands.
-- **Bun:** `bunx` to run [Pagefind](https://pagefind.app/).
+- **Go:** Required for Hugo (`go tool hugo`) and Pocket.
 
 ### Quickstart
 
-| Command      | Description                          |
-| :----------- | :----------------------------------- |
-| `make serve` | Start local dev server (LiveReload). |
-| `make build` | Build production site to `public/`.  |
-| `make clean` | Remove build artifacts.              |
-| `make`       | Run all of the above.                |
+| Command       | Description                          |
+| :------------ | :----------------------------------- |
+| `./pok serve` | Start local dev server (LiveReload). |
+| `./pok build` | Build production site to `public/`.  |
+| `./pok clean` | Remove build artifacts.              |
+| `./pok`       | Run linting, formatting, and tests.  |
 
 ### Build Workflow
 
 For local development:
 
 ```bash
-make
+./pok clean && ./pok build && ./pok serve
 ```
 
-Run `make clean` before `make build` to ensure the Pagefind index builds
+Run `./pok clean` before `./pok build` to ensure the Pagefind index builds
 correctly and to remove stale artifacts.
 
 ## Documentation
 
-See [HUGO.md](HUGO.md) for the complete design system, style guide, and
-technical details.
+See [.claude/CLAUDE.md](.claude/CLAUDE.md) for the complete design system, style
+guide, and technical details.
