@@ -45,6 +45,19 @@ var Build = &pk.Task{
 	),
 }
 
+// CheckLinks builds the site and checks for broken internal links.
+var CheckLinks = &pk.Task{
+	Name:  "check-links",
+	Usage: "build site and check for broken links",
+	Body: pk.Serial(
+		InstallHTMLTest,
+		Build,
+		pk.Do(func(ctx context.Context) error {
+			return run.Exec(ctx, repopath.FromBinDir(htmltestName), "-c", repopath.FromGitRoot(".htmltest.yml"))
+		}),
+	),
+}
+
 // Clean removes build artifacts.
 var Clean = &pk.Task{
 	Name:  "clean",

@@ -1,0 +1,10 @@
+DirectoryPath: public
+CheckExternal: false
+CheckInternal: true
+CheckMailto: false
+CheckTel: false
+CheckFavicons: false
+EnforceHTTPS: false
+CheckInternalEmptyHash: true
+IgnoreDirectoryMissingTrailingSlash: true
+IgnoreAltMissing: true

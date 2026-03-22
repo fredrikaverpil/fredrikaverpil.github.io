@@ -37,5 +37,6 @@ var Config = &pk.Config{
 		Serve,
 		Build,
 		Clean,
+		CheckLinks,
 	},
 }
