@@ -17,8 +17,7 @@ stuttering. Instead of characters appearing one by one, entire partial words
 would appear at once. I suspected
 [blink.cmp](https://github.com/saghen/blink.cmp) to be at fault, since it was
 the auto-completion which was stuttering. But a proper profiling revealed the
-real bottleneck: SQLite operations from a completely different plugin
-([cmp-go-deep](https://github.com/samiulsami/cmp-go-deep)).
+real bottleneck: SQLite operations from a completely different plugin.
 
 ## Debugging setup
 
@@ -101,4 +100,4 @@ There are two modes of operation:
 
 The trace viewer gives you a flame chart where you can zoom in on exactly which
 functions are taking the most time. In my case, it was immediately obvious — the
-SQLite operations from cmp-go-deep were dominating the trace during typing.
+SQLite operations from one plugin was dominating the trace during typing.
