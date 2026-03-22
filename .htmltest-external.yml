@@ -1,0 +1,25 @@
+DirectoryPath: public
+CheckExternal: true
+CheckInternal: false
+CheckMailto: false
+CheckTel: false
+CheckFavicons: false
+EnforceHTTPS: false
+CheckInternalEmptyHash: true
+IgnoreDirectoryMissingTrailingSlash: true
+IgnoreAltMissing: true
+IgnoreURLs:
+  - linkedin\.com
+  - player\.vimeo\.com
+  - imdb\.com
+  - dpreview\.com
+  - microsoft\.com
+  - downloads\.mysql\.com
+  - translate\.google\.com
+  - itunes\.apple\.com
+  - fujix-forum\.com
+  - x100forum\.com
+  - forums\.autodesk\.com
+  - forums\.chaosgroup\.com
+  - codereview\.qt-project\.org
+  - riverbankcomputing\.com

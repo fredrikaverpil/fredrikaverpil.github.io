@@ -8,8 +8,14 @@ import (
 	"github.com/fredrikaverpil/pocket/pk"
 	"github.com/fredrikaverpil/pocket/pk/repopath"
 	"github.com/fredrikaverpil/pocket/pk/run"
+	pkrun "github.com/fredrikaverpil/pocket/pk/run"
 	"github.com/fredrikaverpil/pocket/tools/pagefind"
 )
+
+type checkLinksFlags struct {
+	External bool `flag:"external" usage:"also check external links"`
+	Fix      bool `flag:"fix" usage:"fix broken internal relative links"`
+}
 
 // Serve starts the Hugo development server with drafts enabled.
 var Serve = &pk.Task{
@@ -45,15 +51,24 @@ var Build = &pk.Task{
 	),
 }
 
-// CheckLinks builds the site and checks for broken internal links.
+// CheckLinks builds the site and checks for broken links.
 var CheckLinks = &pk.Task{
 	Name:  "check-links",
 	Usage: "build site and check for broken links",
+	Flags: checkLinksFlags{},
 	Body: pk.Serial(
 		InstallHTMLTest,
 		Build,
 		pk.Do(func(ctx context.Context) error {
-			return run.Exec(ctx, repopath.FromBinDir(htmltestName), "-c", repopath.FromGitRoot(".htmltest.yml"))
+			flags := pkrun.GetFlags[checkLinksFlags](ctx)
+			if flags.Fix {
+				return fixBrokenLinks()
+			}
+			cfg := ".htmltest.yml"
+			if flags.External {
+				cfg = ".htmltest-external.yml"
+			}
+			return run.Exec(ctx, repopath.FromBinDir(htmltestName), "-c", repopath.FromGitRoot(cfg))
 		}),
 	),
 }
