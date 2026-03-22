@@ -8,7 +8,8 @@ If you're experiencing sluggishness or stuttering in Neovim, there's a
 straightforward way to measure exactly what's going on using
 [profile.nvim](https://github.com/stevearc/profile.nvim). This plugin
 instruments your Lua code and autocommands, and exports a JSON trace you can
-visualize in [Perfetto](https://ui.perfetto.dev/).
+visualize in [Perfetto](https://ui.perfetto.dev/) (successor of the
+[deprecated `chrome://tracing`](https://chromium.googlesource.com/catapult/+/refs/heads/main/tracing/docs/perfetto.md)).
 
 ## The story
 
@@ -93,10 +94,9 @@ There are two modes of operation:
 2. Press `<F1>` to begin recording
 3. Reproduce the slow behavior (e.g. type rapidly in insert mode)
 4. Press `<F1>` again to stop recording and save the `profile.json` file
-5. Open the JSON file in [Perfetto](https://ui.perfetto.dev/) (successor of the
-   [deprecated `chrome://tracing`](https://chromium.googlesource.com/catapult/+/refs/heads/main/tracing/docs/perfetto.md)).
-   It processes everything client-side so no data leaves your machine. It also
-   supports SQL queries on traces and handles large files well.
+5. Open the JSON file in [Perfetto](https://ui.perfetto.dev/). It processes
+   everything client-side so no data leaves your machine. It also supports SQL
+   queries on traces and handles large files well.
 
 The trace viewer gives you a flame chart where you can zoom in on exactly which
 functions are taking the most time. In my case, it was immediately obvious — the
