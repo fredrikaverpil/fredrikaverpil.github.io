@@ -17,7 +17,7 @@ free CI services (thanks [Travis](https://travis-ci.org/) and
 > [!NOTE] Update 2018-03-09
 >
 > The Qt Company now offers official and standalone wheels, read more
-> [here](../2018-03-09-official-pyside2-wheels/).
+> [here](/blog/2018/03/09/official-pyside2-wheels/).
 
 > [!NOTE] Update 2018-07-17
 >

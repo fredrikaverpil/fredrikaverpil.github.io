@@ -99,7 +99,7 @@ Please note: ksvalidator will not attempt to validate the `%pre`, `%post` and `%
 ## Make the Kickstart file available on a web server
 
 During the installation phase, Anaconda will attempt to read the Kickstart file
-from somewhere. I'm serving it using [a basic web server](../2015-12-28-python-web-server/).
+from somewhere. I'm serving it using [a basic web server](/blog/2015/12/28/python-simple-web-server/).
 
 
 ## Download vmlinuz and initrd.img

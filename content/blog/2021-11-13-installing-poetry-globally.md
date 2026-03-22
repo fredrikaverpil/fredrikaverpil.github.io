@@ -4,7 +4,7 @@ date: 2021-11-13
 tags: ["python"]
 ---
 
-I recently got some feedback (thank you [@simmel](https://github.com/simmel), much appreciated!) on a previous post on [debugging Poetry](../2021-04-17-debugging-poetry/). I then realized it was a bit hard to follow if all you wanted to do was to install Poetry globally, with some added control from the [default installation method](https://python-poetry.org/docs/#installation).
+I recently got some feedback (thank you [@simmel](https://github.com/simmel), much appreciated!) on a previous post on [debugging Poetry](/blog/2021/04/17/debugging-poetry-with-visual-studio-code/). I then realized it was a bit hard to follow if all you wanted to do was to install Poetry globally, with some added control from the [default installation method](https://python-poetry.org/docs/#installation).
 
 This post aims to focus on this and cover the different system-wide installation alternatives that I am aware of.
 

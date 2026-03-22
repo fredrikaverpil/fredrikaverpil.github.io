@@ -17,7 +17,7 @@ I've received questions lately on the issues that people are having while attemp
 
 > [!NOTE] Update 2018-03-09
 > 
-> The Qt Company now offers official and standalone wheels, read more [here](../2018-02-20-standalone-pyside2-wheels/).
+> The Qt Company now offers official and standalone wheels, read more [here](/blog/2018/02/20/standalone-pyside2-wheels/).
 
 ### A formal request to provide official PySide2 wheels
 

@@ -79,7 +79,7 @@ else:
 
 For more information on how to make your old PySide/PyQt4 scripts work with
 Qt.py, please have a look at one of my
-[previous posts](../2016-07-25-dealing-with-maya-2017-and-pyside2/).
+[previous posts](/blog/2016/07/25/dealing-with-maya-2017-and-pyside2/).
 
 Qt.py was created and is maintained by Marcus Ottosson and myself. At the time
 of writing this, Qt.py is being used at
@@ -123,7 +123,7 @@ steps:
 
 I've also outlined a few advanced (and often better) approaches on how to get
 Qt.py installed based on different needs in
-[this post](../2016-07-25-installing-qt-py-advanced-methods/).
+[this post](/blog/2016/07/25/installing-qt.py-advanced-methods/).
 
 ## Caveats
 

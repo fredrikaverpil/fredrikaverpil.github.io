@@ -107,7 +107,7 @@ If you wish to go even further and let users download your package from [PyPi](h
 
 ## Notes
 
-I previously covered vendoring in my [Installing Qt.py (advanced methods)](../2016-07-25-installing-qt-py-advanced-methods/) blog post. Check it out for additional info.
+I previously covered vendoring in my [Installing Qt.py (advanced methods)](/blog/2016/07/25/installing-qt.py-advanced-methods/) blog post. Check it out for additional info.
 
 
 ## How are you distributing Qt.py?

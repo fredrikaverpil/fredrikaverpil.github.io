@@ -6,7 +6,7 @@ tags: ["nuke", "python", "windows"]
 
 A few steps to get PyQt working inside of Nuke 6.3 (Windows only for now).
 
-Please note that you need your own menu.py in place for this to work. In case you need this set up first, check out one of my previous articles, [Nuke 6.3 Small studio setup for Win/Mac](../2011-10-28-nuke-63-small-studio-setup-for-windows-osx/).
+Please note that you need your own menu.py in place for this to work. In case you need this set up first, check out one of my previous articles, [Nuke 6.3 Small studio setup for Win/Mac](/blog/2011/10/28/nuke-6.3-small-studio-setup-for-windows/os-x/).
 
 1. Install 64-bit Python 2.6 from [https://www.python.org/download/releases/2.6/](https://www.python.org/download/releases/2.6/) into C:\python26.
 2. Install the PyQt 4.6 snapshot from [https://code.google.com/p/pyqt4-win64-binaries/downloads/detail?name=PyQt-Py2.6-gpl-4.6-snapshot-20090810-1.exe&can=2&q=](https://code.google.com/p/pyqt4-win64-binaries/downloads/detail?name=PyQt-Py2.6-gpl-4.6-snapshot-20090810-1.exe&can=2&q=) into C:\python26_64 and make sure to untick the “Qt runtime” checkbox.

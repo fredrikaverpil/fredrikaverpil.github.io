@@ -16,7 +16,7 @@ The scripts below can be downloaded [here](/blog/assets/pstools/pstools_scripts_
 
 ## Standalone command line window management: Starting the V-Ray slaves
 
-Just like in the [second part](../2011-05-15-remote-windows-management-with-pstools-part-2/) of my PsTools article series, we will need the `batlauncher.bat` script, the `hosts.txt` text file as well as create two additional files:
+Just like in the [second part](/blog/2011/05/15/remote-windows-management-with-pstools-part-2/) of my PsTools article series, we will need the `batlauncher.bat` script, the `hosts.txt` text file as well as create two additional files:
 
 Contents of `trigger_vray_slaves_start.bat`:
 
@@ -135,4 +135,4 @@ In order to stop the service, a very similar command can be used:
 PsService.exe \\10.0.1.101 -u roger -p rabbit stop "VRayMayaSpawner 2012"
 ```
 
-I have not bothered with explaining how to perform the tasks above on multiple machines in one go. Instead, read about this in [part 1](../2011-05-13-remote-windows-management-with-pstools-part-1/) of this article series on PsTools.
+I have not bothered with explaining how to perform the tasks above on multiple machines in one go. Instead, read about this in [part 1](/blog/2011/05/13/remote-windows-management-with-pstools-part-1/) of this article series on PsTools.

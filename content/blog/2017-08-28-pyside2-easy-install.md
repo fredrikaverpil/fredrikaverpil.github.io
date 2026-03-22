@@ -18,7 +18,7 @@ And. It. Frickin'. Just. Works.
 
 > [!NOTE] Update 2018-03-09
 > 
-> The Qt Company now offers official and standalone wheels, read more [here](../2018-03-09-official-pyside2-wheels/).  
+> The Qt Company now offers official and standalone wheels, read more [here](/blog/2018/03/09/official-pyside2-wheels/).  
 > [!NOTE] Update 2018-07-17
 > 
 > PySide2 can now be installed from pypi.org: `pip install PySide2`!
