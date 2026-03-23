@@ -4,31 +4,25 @@ date: 2012-02-21
 tags: ["vray", "nuke", "maya"]
 ---
 
-If you have come this far you might be interested in a couple of small tips and tricks on how to get that 32-bit floating point depth channel to render out of V-Ray and into Nuke, similar to what you might be used to from Mental Ray and the IFF file format.
+Out of the box, V-Ray for Maya does not render Z-depth the same way Nuke does. Here's a quick fix for that (not applicable for most DOF plugins).
 
-## Table of contents
+## Problem
 
-1. Creating a V-Ray Z-depth pass in Maya
-2. Bringing the V-Ray Z-depth pass into Nuke
+When "3D-comping" something into an already 3D rendered image using a V-Ray generated Z-depth AOV to describe the depth, Nuke's ZSlice will not work very well. The reason behind this is that Nuke internally computes Z depth from the camera plane and V-Ray computes Z depth from the camera point.
 
-## Creating a V-Ray Z-depth pass in Maya
+## Please note
 
-### Render settings
+For Nuke DOF plugins, such as [Bokeh](http://www.peregrinelabs.com/) or [Frischluft Lenscare](http://www.frischluft.com/lenscare/) (or Nuke's Zblur), the standard V-Ray Z depth image is required and there is no need to tweak the depth output of V-Ray for Maya.
 
-Open up the render settings, go to the `V-Ray` tab and make sure that `Image format` is set to `OpenEXR` (multichannel) and that `OpenEXR data type` is set to `32-bit float`.
+## Solution
 
-Now go to the `Render Elements` tab, enable `V-Ray Render Elements` and `Multi-channel EXR`. Add the `ZDepth` render element. The default settings should be fine.
+Use the VRayExtraTex texture coupled with the "camera point" output of a samplerInfo texture to get the Nuke-style Z coordinate, which you can then transform in Nuke as needed.
 
-![](/blog/assets/vray/vray_render_settings.png)
+## Explanation (from [The Foundry](http://www.thefoundry.co.uk/))
 
-### Z-depth in Nuke
-
-![](/blog/assets/vray/nuke_zdepth.png)
-
-Load the EXR file (containing the Z-depth pass) into Nuke using the `Read` node. Now, view the `Z` channel in the viewer. You will see an entirely black image!
-
-This is because V-Ray stores its Z-depth in a different manner from Mental Ray. In Nuke, create a `ZDepth` node and connect its `Input` to your `Read` node. The result should look like the image above.
-
-Now you should be able to see a grayscale Z-depth pass! You can then adjust the black and white point of the Z-depth pass.
-
-This is a quick and dirty way to work with Z-depth in Nuke. For a more robust workflow, you can use the `VrayZDepth` node from `rv-nodes` (which is a collection of various Nuke nodes written by different artists and can be found on Nukepedia).
+> Nuke's scanline render works as OpenGL and for a flat polygon respects the point of view when calculating depth. One way to go about it would be to make V-Ray change the Z-depth generation. Another possibility could be to generate at shading time the Z-buffer compatible with Nuke, in an AOV channel.
+>
+> The following formula should do the job:
+>
+> aov.z = 1 / P.z
+> Where P is the sample point in the camera coordinate.
