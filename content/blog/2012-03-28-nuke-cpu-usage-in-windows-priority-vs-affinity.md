@@ -44,5 +44,3 @@ C:\Windows\System32\cmd.exe /C start /affinity F C:\"Program Files"\Nuke6.3v7\Nu
 Based on the above formula, you can run the following command. Replace h with the value in the Affinity column. This will result in using all the CPU’s listed above the specified value including the current.
 
 If you want to use specific CPUs, you will need to SUM the associated values and use the corresponding Hex value.
-
-```

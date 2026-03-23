@@ -19,4 +19,4 @@ cd my_web_root
 python -m SimpleHTTPServer 8000
 ```
 
-Then just access `https://your-ip:8000` to access the web server contents. Hit ctrl+c to exit.
+Then just access `http://your-ip:8000` to access the web server contents. Hit ctrl+c to exit.

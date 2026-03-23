@@ -414,5 +414,3 @@ Here, the markdown generated for the collection:
 ### What tricks are you using?
 
 Please use the comments below to share any findings! :)
-
-```

@@ -6,7 +6,7 @@ tags: ["macos"]
 
 In software development, certain software were not designed to run on the ARM-based Apple Silicon. Thankfully, there are workarounds to install and run the Intel version of these applications. Like for the rest of this blog, this post aims to serve as a personal notebook and also for sharing this knowledge.
 
-When I started looking into solutions to my Macbook Pro M1 challenges, a huge chunk was solved when I had read [Ekaterina Nikonova](https://twitter.com/EVNikonova)'s excellent blog post on [Python virtual environments with pyenv on Apple Silicon](http://sixty-north.com/blog/assets/pyenv-apple-silicon.html).
+When I started looking into solutions to my Macbook Pro M1 challenges, a huge chunk was solved when I had read [Ekaterina Nikonova](https://twitter.com/EVNikonova)'s excellent blog post on [Python virtual environments with pyenv on Apple Silicon](http://sixty-north.com/blog/pyenv-apple-silicon.html).
 
 This blog post is heavily influenced by her approach of setting up the `app` and `app86` versions for apps which might need both native and emulated treatment.
 
@@ -38,7 +38,7 @@ Note: all commands in this guide has been executed in the default and native Ter
 
 ## Installing two variants of certain software
 
-This describes how to install the native `app` and the Intel `app86` counterpart of certain software. As an example, I have `brew` and `brew86` set up, just like described in [Ekaterina](https://twitter.com/EVNikonova)'s [post](http://sixty-north.com/blog/assets/pyenv-apple-silicon.html).
+This describes how to install the native `app` and the Intel `app86` counterpart of certain software. As an example, I have `brew` and `brew86` set up, just like described in [Ekaterina](https://twitter.com/EVNikonova)'s [post](http://sixty-north.com/blog/pyenv-apple-silicon.html).
 
 This can be achieved by creating shell aliases but also small shell "shim" scripts for the Intel variants. I prefer the shell script shim approach, and I have mine publicly available in the [shell/bin](https://github.com/fredrikaverpil/dotfiles/blob/main/shell/bin/) location of my dotfiles.
 

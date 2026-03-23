@@ -6,8 +6,7 @@ tags: ["python", "pyside", "pyqt"]
 
 I recently wanted to show the progress of a file copy made from a python script (or actually, from a python script running inside of Maya and Nuke). First I looked to piggyback on the OS native ways of copying a file, but oddly enough it turned out there was no way of showing a progress bar when doing this.
 
-So I turned to Python
-’s [shutil](https://docs.python.org/2/library/shutil.html) and [PySide](https://wiki.qt.io/Category:LanguageBindings::PySide) (but [PyQt](https://www.riverbankcomputing.co.uk/software/pyqt/intro) would work just as well for this). Shutil cannot show progress by itself, but when asking around about this, I [learned](https://stackoverflow.com/questions/29967487/get-progress-back-from-shutil-file-copy-thread) that you can implement your own copy function in Python using its built-in `copyfileobj`.
+So I turned to Python's [shutil](https://docs.python.org/2/library/shutil.html) and [PySide](https://wiki.qt.io/Category:LanguageBindings::PySide) (but [PyQt](https://www.riverbankcomputing.co.uk/software/pyqt/intro) would work just as well for this). Shutil cannot show progress by itself, but when asking around about this, I [learned](https://stackoverflow.com/questions/29967487/get-progress-back-from-shutil-file-copy-thread) that you can implement your own copy function in Python using its built-in `copyfileobj`.
 
 Below is a simple python script I came up with, to illustrate how to implement your own file copy with progress in Python.
 
@@ -16,18 +15,15 @@ Below is a simple python script I came up with, to illustrate how to implement y
 #
 #
 #
-#	   ___      ___                                                                                                        
+#	   ___      ___
 #	 /'___\ __ /\_ \
-#	/\ \__//\_\\//\ \	__    ___    ___   _____   __  __      _____   _ __   ___      __   _ __    __    ____    ____  
-#	\ \ ,__\/\ \ \ \ \	/'__`\ /'___\ / __`\/\ '__`\/\ \/\ \	    /\ \__`\/\`'__\/ __`\  /'_ `\/\`'__\/'__`\ /',__\  /',__\
-#	 \ \ \_//\ \ \_\ \_/
-	 \ \ \_/
-	  \ \_\  \ \_\/\____\ \____\ \____\ \____/\ \ ,__/
-	   \ \_\   \ \_\/\____\/\____\/____\/____/\ \ ,__/
-	    \ \_\/\____\/____\/____\/____/\ \ ,__/
-	     \ \/  \/___/  \/___/  \/___/  \ \ ,__/
-	      \ \_/
-	       \ \_
+#	/\ \__//\_\\//\ \      __    ___    ___   _____   __  __      _____   _ __   ___      __   _ __    __    ____    ____
+#	\ \ ,__\/\ \ \ \ \   /'__`\ /'___\ / __`\/\ '__`\/\ \/\ \    /\ '__`\/\`'__\/ __`\  /'_ `\/\`'__\/'__`\ /',__\  /',__\
+#	 \ \ \_/\ \ \ \_\ \_/\  __//\ \__//\ \L\ \ \ \L\ \ \ \_\ \   \ \ \L\ \ \ \//\ \L\ \/\ \L\ \ \ \//\  __//\__, `\/\__, `\
+#	  \ \_\  \ \_\/\____\ \____\ \____\ \____/\ \ ,__/\/`____ \   \ \ ,__/\ \_\\ \____/\ \____ \ \_\\ \____\/\____/\/\____/
+#	   \/_/   \/_/\/____/\/____/\/____/\/___/  \ \ \/  `/___/> \   \ \ \/  \/_/ \/___/  \/___L\ \/_/ \/____/\/___/  \/___/
+#	                                            \ \_\     /\___/    \ \_\                 /\____/
+#	                                             \/_/     \/__/      \/_/                 \_/__/
 #
 #
 # by Fredrik Averpil, https://fredrik.averpil.com, fredrik.averpil [at] gmail.com
@@ -134,7 +130,7 @@ if __name__ == '__main__':
 	parser.add_option("-s", "--src", dest="src",
 					  help="source FILE", metavar="FILE")
 	parser.add_option("-d", "--dest", dest="dest",
-						 help="destination FILE", metavar="FILE")
+					  help="destination FILE", metavar="FILE")
 	(options, args) = parser.parse_args()
 
 	if os.path.isfile( options.src ):
