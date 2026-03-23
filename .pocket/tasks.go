@@ -17,13 +17,14 @@ import (
 
 type checkLinksFlags struct {
 	External bool `flag:"external" usage:"also check external links"`
-	Fix      bool `flag:"fix" usage:"fix broken internal relative links"`
+	Fix      bool `flag:"fix"      usage:"fix broken internal relative links"`
 }
 
 // Serve starts the Hugo development server with drafts enabled.
 var Serve = &pk.Task{
-	Name:  "serve",
-	Usage: "start local dev server with drafts (LiveReload)",
+	Name:    "serve",
+	Usage:   "start local dev server with drafts (LiveReload)",
+	Verbose: true,
 	Do: func(ctx context.Context) error {
 		return run.Exec(ctx, "go", "tool", "hugo", "server", "-D")
 	},
@@ -31,8 +32,9 @@ var Serve = &pk.Task{
 
 // Build runs the production build: Hugo + legacy RSS copy + Pagefind indexing.
 var Build = &pk.Task{
-	Name:  "build",
-	Usage: "production build (Hugo + Pagefind indexing)",
+	Name:    "build",
+	Usage:   "production build (Hugo + Pagefind indexing)",
+	Verbose: true,
 	Body: pk.Serial(
 		pagefind.Install,
 		pk.Do(func(ctx context.Context) error {
@@ -56,9 +58,10 @@ var Build = &pk.Task{
 
 // CheckLinks builds the site and checks for broken links.
 var CheckLinks = &pk.Task{
-	Name:  "check-links",
-	Usage: "build site and check for broken links",
-	Flags: checkLinksFlags{},
+	Name:    "check-links",
+	Usage:   "build site and check for broken links",
+	Verbose: true,
+	Flags:   checkLinksFlags{},
 	Body: pk.Serial(
 		InstallHTMLTest,
 		Build,
@@ -77,7 +80,7 @@ var CheckLinks = &pk.Task{
 }
 
 type newPostFlags struct {
-	Title   string `flag:"title" usage:"title of the new blog post"`
+	Title   string `flag:"title"    usage:"title of the new blog post"`
 	NoDraft bool   `flag:"no-draft" usage:"create post with draft: false"`
 }
 
@@ -101,10 +104,7 @@ var New = &pk.Task{
 			return fmt.Errorf("file already exists: %s", filename)
 		}
 
-		draft := true
-		if flags.NoDraft {
-			draft = false
-		}
+		draft := !flags.NoDraft
 
 		content := fmt.Sprintf(`---
 title: %q
@@ -124,8 +124,10 @@ categories: []
 	},
 }
 
-var nonAlphanumeric = regexp.MustCompile(`[^a-z0-9-]+`)
-var multipleHyphens = regexp.MustCompile(`-{2,}`)
+var (
+	nonAlphanumeric = regexp.MustCompile(`[^a-z0-9-]+`)
+	multipleHyphens = regexp.MustCompile(`-{2,}`)
+)
 
 // slugify converts a title into a URL-friendly slug.
 func slugify(title string) string {
@@ -139,8 +141,9 @@ func slugify(title string) string {
 
 // Clean removes build artifacts.
 var Clean = &pk.Task{
-	Name:  "clean",
-	Usage: "remove public/ and resources/",
+	Name:    "clean",
+	Usage:   "remove public/ and resources/",
+	Verbose: true,
 	Do: func(ctx context.Context) error {
 		for _, dir := range []string{"public", "resources"} {
 			if err := os.RemoveAll(repopath.FromGitRoot(dir)); err != nil {
