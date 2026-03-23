@@ -13,7 +13,7 @@ featured_image: "/blog/assets/vray/vray_spherical_hdr_01.png"
 
 ## Sample scene
 
-Example Maya scene provided [here](/blog/assets/vray/spherical_hdr_gen_maya.ma) (save as); a simple cube environment, an area light and a camera.
+Example Maya scene provided [here](/blog/assets/vray/spherical_hdr_gen.ma) (save as); a simple cube environment, an area light and a camera.
 
 ![](/blog/assets/vray/vray_spherical_hdr_02.png)
 *Sample Maya scene.
