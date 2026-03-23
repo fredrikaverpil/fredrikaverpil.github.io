@@ -38,5 +38,6 @@ var Config = &pk.Config{
 		Build,
 		Clean,
 		CheckLinks,
+		New,
 	},
 }

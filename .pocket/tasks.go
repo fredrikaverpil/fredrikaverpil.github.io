@@ -4,6 +4,9 @@ import (
 	"context"
 	"fmt"
 	"os"
+	"regexp"
+	"strings"
+	"time"
 
 	"github.com/fredrikaverpil/pocket/pk"
 	"github.com/fredrikaverpil/pocket/pk/repopath"
@@ -71,6 +74,67 @@ var CheckLinks = &pk.Task{
 			return run.Exec(ctx, repopath.FromBinDir(htmltestName), "-c", repopath.FromGitRoot(cfg))
 		}),
 	),
+}
+
+type newPostFlags struct {
+	Title   string `flag:"title" usage:"title of the new blog post"`
+	NoDraft bool   `flag:"no-draft" usage:"create post with draft: false"`
+}
+
+// New creates a new blog post markdown file.
+var New = &pk.Task{
+	Name:  "new",
+	Usage: "create a new blog post",
+	Flags: newPostFlags{},
+	Do: func(ctx context.Context) error {
+		flags := pkrun.GetFlags[newPostFlags](ctx)
+		if flags.Title == "" {
+			return fmt.Errorf("--title is required")
+		}
+
+		date := time.Now().Format("2006-01-02")
+		slug := slugify(flags.Title)
+		filename := fmt.Sprintf("%s-%s.md", date, slug)
+		filepath := repopath.FromGitRoot("content", "blog", filename)
+
+		if _, err := os.Stat(filepath); err == nil {
+			return fmt.Errorf("file already exists: %s", filename)
+		}
+
+		draft := true
+		if flags.NoDraft {
+			draft = false
+		}
+
+		content := fmt.Sprintf(`---
+title: %q
+date: %s
+draft: %t
+tags: []
+categories: []
+---
+`, flags.Title, date, draft)
+
+		if err := os.WriteFile(filepath, []byte(content), 0o644); err != nil {
+			return fmt.Errorf("write blog post: %w", err)
+		}
+
+		fmt.Println(filepath)
+		return nil
+	},
+}
+
+var nonAlphanumeric = regexp.MustCompile(`[^a-z0-9-]+`)
+var multipleHyphens = regexp.MustCompile(`-{2,}`)
+
+// slugify converts a title into a URL-friendly slug.
+func slugify(title string) string {
+	s := strings.ToLower(title)
+	s = strings.ReplaceAll(s, " ", "-")
+	s = nonAlphanumeric.ReplaceAllString(s, "")
+	s = multipleHyphens.ReplaceAllString(s, "-")
+	s = strings.Trim(s, "-")
+	return s
 }
 
 // Clean removes build artifacts.
