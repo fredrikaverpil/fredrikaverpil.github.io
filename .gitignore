@@ -8,6 +8,7 @@ static/fonts/BerkeleyMono-Variable.woff2
 
 # Testing
 .playwright-mcp
+tmp
 
 # OS generated files
 .DS_Store
