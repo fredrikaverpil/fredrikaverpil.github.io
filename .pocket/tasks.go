@@ -12,7 +12,6 @@ import (
 	"github.com/fredrikaverpil/pocket/pk/repopath"
 	"github.com/fredrikaverpil/pocket/pk/run"
 	pkrun "github.com/fredrikaverpil/pocket/pk/run"
-	"github.com/fredrikaverpil/pocket/tools/pagefind"
 )
 
 type checkLinksFlags struct {
@@ -36,7 +35,7 @@ var Build = &pk.Task{
 	Usage:   "production build (Hugo + Pagefind indexing)",
 	Verbose: true,
 	Body: pk.Serial(
-		pagefind.Install,
+		pagefindInstall,
 		pk.Do(func(ctx context.Context) error {
 			if err := run.Exec(ctx, "go", "tool", "hugo", "--minify", "--environment", "production"); err != nil {
 				return err
@@ -51,7 +50,7 @@ var Build = &pk.Task{
 			if err := os.WriteFile(rssDst, src, 0o644); err != nil {
 				return fmt.Errorf("write legacy RSS feed: %w", err)
 			}
-			return run.Exec(ctx, repopath.FromBinDir(pagefind.Name), "--site", "public")
+			return run.Exec(ctx, repopath.FromBinDir(pagefindName), "--site", "public")
 		}),
 	),
 }
