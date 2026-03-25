@@ -12,7 +12,7 @@ import (
 
 const (
 	pagefindName = "pagefind"
-	// renovate: datasource=github-releases depName=CloudCannon/pagefind
+	// renovate: datasource=github-releases depName=Pagefind/pagefind
 	pagefindVersion = "1.4.0"
 )
 
