@@ -302,16 +302,14 @@ return {
 
 > [!WARNING]
 >
-> I would actually go as far as to say this has been an anti-pattern and against
-> the Neovim idioms, at least historically. The first time I stumbled upon this
-> kind of "collection" of opts from other plugins was with
-> [LazyVim](https://github.com/LazyVim/LazyVim) and lazy.nvim. I suppose it's a
-> pattern which was designed with a distro in mind.
+> Cross-plugin opts merging via a dependency graph is arguably an anti-pattern
+> in traditional Neovim idioms. It originated with
+> [LazyVim](https://github.com/LazyVim/LazyVim) and was designed with a distro
+> in mind. Neovim's own `vim.lsp.config()` uses a similar layered merge, but
+> scoped to a single subsystem — not one plugin reaching into another's config.
 >
-> But it's also quite appealing with this decentralized approach rather than
-> tangling your plugin configurations up in each other. I'm having a real hard
-> time adjusting to the `plugin`, `ftplugin`, `after` folders, eventhough I used
-> those pre-LazyVim.
+> That said, the decentralized approach is appealing compared to tangling plugin
+> configurations up in each other.
 
 With `vim.pack`, there is no dependency graph and no automatic opts merging.
 Every `plugin/` file is self-contained and loads in alphabetical order. So how
