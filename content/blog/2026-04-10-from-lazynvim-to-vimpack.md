@@ -650,15 +650,15 @@ liked about lazy.nvim and depended on.
 My Vim journey started with a single `.vimrc` before moving onto Neovim, where I
 adopted LazyVim early on. I moved off LazyVim, wrote my own config but with
 lazy.nvim as package manager. I borrowed a lot of ideas and code from LazyVim. I
-felt I was on a "modern" stack, a modern take on a Neovim config. But now, that
-I've moved off lazy.nvim, I had to read up on how Neovim actually works, how I'm
-expected to follow certain idioms, dictated by Neovim itself. I really feel the
-change. The config became lighter, much more tidy, less complexity. And my
-Neovim config actually starts up faster than with lazy.nvim, in 40ms (at 72
+felt I was on a "modern" stack, a modern take on a Neovim config. But when now
+looking into adopting `vim.pack`, I had to read up on how Neovim actually works,
+how I'm expected to follow certain idioms, dictated by Neovim itself. I really
+feel the change. The config became lighter, much more tidy, less complexity. And
+my Neovim config actually starts up faster than with lazy.nvim, in 40ms (at 72
 plugins). It feels like I cheated the system, but I'm actually just following
 the native idioms now. Well, except for the fact that I load almost everything
 on `VimEnter`, which I'm sure will make some people frown. But who cares; it
-works.
+works for me.
 
 Before looking into all this, I couldn't imagine dropping lazy.nvim's notion of
 isolating plugins' concerns from each other. Like, passing opts between plugins,
@@ -674,9 +674,9 @@ But migrating from `lazy.nvim` to `vim.pack` honestly took more effort than I
 initially expected, for getting my Neovim config into what I would consider an
 acceptable state. I wouldn't recommend most users do this, unless maybe you just
 want to adopt something like my approach, or if you like diving into the rabbit
-hole and spend hours on making things work, only because of the choice of
-package manager. Maybe wait and see how `vim.pack` evolves and how others
-integrate it into their configs before digging in.
+hole and spend hours on making things work. Maybe wait and see how `vim.pack`
+evolves and how others integrate it into their configs before digging in. It's
+still early days.
 
 You can inspect my full Neovim configuration over at my
 [dotfiles](https://github.com/fredrikaverpil/dotfiles/blob/main/nvim-fredrik).
