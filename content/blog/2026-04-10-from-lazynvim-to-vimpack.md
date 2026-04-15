@@ -674,11 +674,11 @@ between plugins even if the mechanism is there, if I ever need it.
 
 But migrating from `lazy.nvim` to `vim.pack` honestly took more effort than I
 initially expected, for getting my Neovim config into what I would consider an
-acceptable state. I wouldn't recommend most users do this, unless maybe you just
-want to adopt something like my approach, or if you like diving into the rabbit
-hole and spend hours on making things work. Maybe wait and see how `vim.pack`
-evolves and how others integrate it into their configs before digging in. It's
-still early days.
+acceptable state. I wouldn't recommend most users do this _who wants an
+**optimized** lazy-loaded setup_, unless maybe you just want to adopt something
+like my approach, or if you like diving into the rabbit hole and spend hours on
+making things work. Maybe wait and see how `vim.pack` evolves and how others
+integrate it into their configs before digging in. It's still early days.
 
 You can inspect my full Neovim configuration over at my
 [dotfiles](https://github.com/fredrikaverpil/dotfiles/blob/main/nvim-fredrik).
