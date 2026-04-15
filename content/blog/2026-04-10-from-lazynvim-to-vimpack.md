@@ -179,7 +179,7 @@ on this:
 > - For per-project overrides, collect them "`exrc`-style", but execute them
 >   after all plugins have loaded.
 
-This reduces much of the `vim.pack` loading complexity down to a simple mental
+This reduces much of the `vim.pack` loading complexity down to a "simple" mental
 model.
 
 ### Lazy-loading
