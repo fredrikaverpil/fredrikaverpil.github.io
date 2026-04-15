@@ -116,7 +116,7 @@ That said, not all plugins are born equal and `vim.pack` offers no easy-to-use
 lazy-loading machinery of its own. So if you want to control startup timing with
 `vim.pack`, you have to wire it up yourself.
 
-### Built in lazy capabilities in `vim.pack`...?
+### What can `vim.pack` do out of the box?
 
 `vim.pack.add()` accepts a `load` option that controls _whether and how_ plugin
 scripts are sourced after installation:
