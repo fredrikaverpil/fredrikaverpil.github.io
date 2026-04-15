@@ -681,3 +681,5 @@ still early days.
 
 You can inspect my full Neovim configuration over at my
 [dotfiles](https://github.com/fredrikaverpil/dotfiles/blob/main/nvim-fredrik).
+
+Oh, and also, did you know lazy.nvim weighs in at almost 3 MB?
