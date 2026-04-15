@@ -293,7 +293,7 @@ file regardless of load order.
 
 > [!NOTE]
 >
-> Things like colorschemes and a startup dashboard would _not_ be lazy-loaded
+> Things like colorschemes and a startup dashboard should _not_ be lazy-loaded
 > via `on_vim_enter`.
 
 ### Passing opts from one plugin to another
