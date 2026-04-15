@@ -170,7 +170,8 @@ on this:
 >   instructed otherwise. This is what the plugin author intended.
 > - All plugins reside under the Neovim config's `plugin/` folder.
 > - For lazy-loading, wrap `vim.pack.add` along with _all_ other configuration
->   in a `VimEnter` autocmd.
+>   for a given plugin in a `VimEnter` autocmd, unless it needs to load eagerly
+>   (colorscheme, dashboard etc).
 > - Write to a `_G.Config` "registry" before `VimEnter` which can store global
 >   states, plugin opts etc. Once plugins have loaded after `VimEnter`, they can
 >   read from the shared states in the registry, thus enabling cross-plugin opts
