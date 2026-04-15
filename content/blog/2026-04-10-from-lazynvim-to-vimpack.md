@@ -92,7 +92,7 @@ immediately after the `add()` call returns.
 > `vim.pack.update({ 'plugin' }, { offline = true, target = 'lockfile' })` to
 > roll back to the previous revision.
 
-## Lazy-loading with `vim.pack`
+## Lazy-loading capabilities of `vim.pack`
 
 In essence, what we are talking about here is we want to defer e.g. expensive
 `require()` calls or heavy work carried out by the plugin, for later, when
