@@ -537,6 +537,7 @@ Here's how I set custom markdown formatting and gopls overrides for a certain
 project, by wrapping it all into `on_override`:
 
 ```lua
+-- ~/code/work/.nvim.lua
 require("lazyload").on_override(function()
     -- Override markdown formatter
     require("conform").formatters_by_ft.markdown = { "mdformat" }
