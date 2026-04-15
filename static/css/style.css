@@ -62,9 +62,9 @@
   --h1-size: 1.8em;
   --h2-size: 1.5em;
   --h3-size: 1.3em;
-  --h4-size: 1.2em;
-  --h5-size: 1.1em;
-  --h6-size: 1.05em;
+  --h4-size: 1.1em;
+  --h5-size: 1.05em;
+  --h6-size: 1em;
 
   /* Responsive Layout (default: desktop) */
   --body-padding: var(--space-lg);
@@ -225,9 +225,9 @@
     --h1-size: 1.7em;
     --h2-size: 1.4em;
     --h3-size: 1.2em;
-    --h4-size: 1.05em;
-    --h5-size: 1em;
-    --h6-size: 0.95em;
+    --h4-size: 1em;
+    --h5-size: 0.95em;
+    --h6-size: 0.9em;
     --profile-header-direction: column;
     --profile-header-text-align: center;
     --profile-header-gap: var(--space-lg);
@@ -243,9 +243,9 @@
     --h1-size: 1.6em;
     --h2-size: 1.3em;
     --h3-size: 1.1em;
-    --h4-size: 1em;
-    --h5-size: 0.95em;
-    --h6-size: 0.9em;
+    --h4-size: 0.95em;
+    --h5-size: 0.9em;
+    --h6-size: 0.85em;
     --profile-header-gap: var(--space-md);
   }
 
@@ -256,10 +256,10 @@
     --footer-padding: var(--space-sm) var(--space-xs);
     --h1-size: 1.5em;
     --h2-size: 1.2em;
-    --h3-size: 1em;
-    --h4-size: 0.95em;
-    --h5-size: 0.9em;
-    --h6-size: 0.85em;
+    --h3-size: 1.05em;
+    --h4-size: 0.9em;
+    --h5-size: 0.85em;
+    --h6-size: 0.8em;
     --profile-header-gap: var(--space-sm);
   }
 
@@ -272,9 +272,9 @@
     --h1-size: 1.6em;
     --h2-size: 1.3em;
     --h3-size: 1.1em;
-    --h4-size: 1em;
-    --h5-size: 0.95em;
-    --h6-size: 0.9em;
+    --h4-size: 0.95em;
+    --h5-size: 0.9em;
+    --h6-size: 0.85em;
   }
 }
 

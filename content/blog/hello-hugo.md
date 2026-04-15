@@ -152,3 +152,13 @@ somehow, but for now just as a code block or pre-formatted text):
   '---------| C |
             '---'
 ```
+
+## Header level 2
+
+Text
+
+### Header level 3
+
+Text
+
+#### Header level 4

@@ -11,6 +11,9 @@ pagerSize = 10
 blog = '/blog/:year/:month/:day/:slug/'
 
 [markup]
+[markup.tableOfContents]
+endLevel = 4
+
 [markup.goldmark]
 [markup.goldmark.renderer]
 # Allow raw HTML (e.g. <details>, <summary>) in markdown files
