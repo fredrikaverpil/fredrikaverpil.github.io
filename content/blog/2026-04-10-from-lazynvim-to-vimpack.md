@@ -323,10 +323,10 @@ return {
 > [!WARNING]
 >
 > Systematic cross-plugin opts merging is arguably an anti-pattern in
-> traditional Neovim idioms. From what I know, it originated with
+> traditional Neovim idioms. From what I know, it originated with lazy.nvim +
 > [LazyVim](https://github.com/LazyVim/LazyVim) and was designed with a distro
-> in mind, where plugins could be cherry-picked by the user. Neovim's own
-> `vim.lsp.config()` uses a similar layered merge, but scoped to a single
+> in mind, where plugins could be cherry-picked by the user. Neovim's
+> own`vim.lsp.config()` uses a similar layered merge, but scoped to a single
 > subsystem — not one plugin reaching into another's config.
 >
 > That said, the decentralized approach is appealing to me, compared to tangling
