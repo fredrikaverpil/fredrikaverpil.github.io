@@ -1,7 +1,6 @@
 ---
 title: "From lazy.nvim to vim.pack"
-date: 2026-04-10
-draft: true
+date: 2026-04-15
 tags: ["neovim", "lua"]
 categories: []
 featured_image: "/blog/assets/neovim/nvim-v0.12-vimpack.png"
@@ -18,8 +17,8 @@ dependencies required, implemented by
 [neovim/neovim#34009](https://github.com/neovim/neovim/pull/34009)), known for
 his work on [mini.nvim](https://github.com/nvim-mini/mini.nvim/). This piqued my
 interest, as I've found myself creating abstractions and isolations with
-lazy.nvim that don't harmonize with my [grug brain](https://grugbrain.dev). So
-I figured I wanted to see if I could simplify by moving onto `vim.pack`.
+lazy.nvim that don't harmonize with my [grug brain](https://grugbrain.dev). So I
+figured I wanted to see if I could simplify by moving onto `vim.pack`.
 
 If you, like me, have a good deal of plugins installed, you might miss
 out-of-the-box features from lazy.nvim such as lazy-loading, defining load order
@@ -159,8 +158,8 @@ It was somewhere around this point I was wondering if it was really worth my
 time to try and port my config from lazy.nvim into `vim.pack` yet, or maybe wait
 until a future release which would bring a more user-friendly API. However, I'm
 blessed with the deadly combo of curiosity and stubbornness, so I pressed on
-with the perhaps naive viewpoint that plugins _should_ follow best practices.
-If not, we could open issues or PRs to fix it.
+with the perhaps naive viewpoint that plugins _should_ follow best practices. If
+not, we could open issues or PRs to fix it.
 
 It took some time back and forth of fiddling and trying things out, but I landed
 on this:
