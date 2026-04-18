@@ -3,12 +3,16 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "monthly"
-  - package-ecosystem: "gomod"
-    directory: "/"
+      interval: monthly
+    cooldown:
+      default-days: 7
+  - package-ecosystem: gomod
+    directories: ["."]
     schedule:
-      interval: "monthly"
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "monthly"
+      interval: monthly
+    cooldown:
+      default-days: 7
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3
+
