@@ -1,3 +1,6 @@
+// Fixlinks rewrites relative ../ links in content/blog/ markdown files to
+// absolute /blog/... paths, using the built public/ directory as the source of
+// truth for valid URLs. Run from the repository root after building the site.
 package main
 
 import (
@@ -6,9 +9,14 @@ import (
 	"path/filepath"
 	"regexp"
 	"strings"
-
-	"github.com/fredrikaverpil/pocket/pk/repopath"
 )
+
+func main() {
+	if err := fixBrokenLinks(); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
+	}
+}
 
 // linkPattern matches markdown links with ../ relative paths.
 var linkPattern = regexp.MustCompile(`\]\(\.\./([^)]+)\)`)
@@ -22,7 +30,7 @@ func fixBrokenLinks() error {
 		return fmt.Errorf("build URL map: %w", err)
 	}
 
-	contentDir := repopath.FromGitRoot("content", "blog")
+	contentDir := filepath.Join("content", "blog")
 	entries, err := os.ReadDir(contentDir)
 	if err != nil {
 		return fmt.Errorf("read content dir: %w", err)
@@ -117,8 +125,8 @@ func resolveLink(relPath string, urlMap map[string]string) (string, bool) {
 // generated absolute URLs by cross-referencing content/blog/ files
 // with public/blog/ output.
 func buildURLMap() (map[string]string, error) {
-	publicDir := repopath.FromGitRoot("public", "blog")
-	contentDir := repopath.FromGitRoot("content", "blog")
+	publicDir := filepath.Join("public", "blog")
+	contentDir := filepath.Join("content", "blog")
 
 	// Collect all content file stems grouped by date.
 	// e.g. "2016-07-25" -> ["2016-07-25-developing-with-qt-py", "2016-07-25-dealing-with-maya-2017-and-pyside2"]
@@ -150,7 +158,7 @@ func buildURLMap() (map[string]string, error) {
 		}
 
 		// Extract URL from path: public/blog/YYYY/MM/DD/slug/index.html -> /blog/YYYY/MM/DD/slug/
-		rel, err := filepath.Rel(repopath.FromGitRoot(), path)
+		rel, err := filepath.Rel(".", path)
 		if err != nil {
 			return nil
 		}
