@@ -4,32 +4,33 @@ My personal blog and portfolio.
 
 ## Development
 
-This project uses [Hugo](https://gohugo.io/) and
-[Pocket](https://github.com/fredrikaverpil/pocket), a Makefile-like task runner.
-Run `./pok` to execute linting, formatting, and tests.
+This project uses [Hugo](https://gohugo.io/) and [mise](https://mise.jdx.dev) to
+install tools and run tasks. Run `mise tasks` to list them.
 
 ### Prerequisites
 
-- **Go:** Required for Hugo (`go tool hugo`) and Pocket.
+- **mise:** Installs Go (for `go tool hugo`), Pagefind and htmltest.
 
 ### Quickstart
 
-| Command       | Description                          |
-| :------------ | :----------------------------------- |
-| `./pok serve` | Start local dev server (LiveReload). |
-| `./pok build` | Build production site to `public/`.  |
-| `./pok clean` | Remove build artifacts.              |
-| `./pok`       | Run linting, formatting, and tests.  |
+| Command                          | Description                            |
+| :------------------------------- | :------------------------------------- |
+| `mise run serve`                 | Start local dev server (LiveReload).   |
+| `mise run build`                 | Build production site to `public/`.    |
+| `mise run clean`                 | Remove build artifacts.                |
+| `mise run new --title "<title>"` | Create a new blog post.                |
+| `mise run check-links`           | Build site and check for broken links. |
+| `mise run all`                   | Run all checks.                        |
 
 ### Build Workflow
 
 For local development:
 
 ```bash
-./pok clean && ./pok build && ./pok serve
+mise run clean && mise run build && mise run serve
 ```
 
-Run `./pok clean` before `./pok build` to ensure the Pagefind index builds
+Run `mise run clean` before `mise run build` to ensure the Pagefind index builds
 correctly and to remove stale artifacts.
 
 ## Documentation

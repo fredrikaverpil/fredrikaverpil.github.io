@@ -1,0 +1,89 @@
+[settings]
+lockfile = true
+minimum_release_age = "3d"
+
+[tools]
+go = "1.27.2"
+"github:Pagefind/pagefind" = "1.4.0"
+"github:wjdp/htmltest" = "0.17.0"
+"go:golang.org/x/vuln/cmd/govulncheck" = "1.8.0"
+
+[vars]
+go_modules = "content/blog/2025-12-28-gos-secret-weapon/examples"
+
+[tasks.serve]
+description = "Start local dev server with drafts (LiveReload)"
+run = "go tool hugo server -D"
+
+[tasks.build]
+description = "Production build (Hugo + Pagefind indexing)"
+run = [
+  "go tool hugo --minify --environment production",
+  # Legacy mkdocs-created RSS feed.
+  "cp public/blog/index.xml public/feed_rss_created.xml",
+  "pagefind --site public",
+]
+
+[tasks.clean]
+description = "Remove public/ and resources/"
+run = "rm -rf public resources"
+
+[tasks.check-links]
+description = "Build site and check for broken links"
+depends = ["build"]
+usage = '''
+flag "--external" help="Also check external links"
+flag "--fix" help="Fix broken internal relative links"
+'''
+run = '''
+if [ "${usage_fix:-}" = "true" ]; then
+  go run ./scripts/fixlinks
+elif [ "${usage_external:-}" = "true" ]; then
+  htmltest -c .htmltest-external.yml
+else
+  htmltest -c .htmltest.yml
+fi
+'''
+
+[tasks.new]
+description = "Create a new blog post"
+usage = '''
+flag "--title <title>" help="Title of the new blog post" required=#true
+flag "--no-draft" help="Create post with draft: false"
+'''
+run = '''
+slug=$(printf '%s' "$usage_title" | LC_ALL=C tr '[:upper:]' '[:lower:]' | LC_ALL=C tr ' ' '-' | LC_ALL=C sed -E 's/[^a-z0-9-]+//g; s/-{2,}/-/g; s/^-+//; s/-+$//')
+date=$(date +%Y-%m-%d)
+file="content/blog/$date-$slug.md"
+if [ -e "$file" ]; then
+  echo "file already exists: $file" >&2
+  exit 1
+fi
+draft=true
+[ "${usage_no_draft:-}" = "true" ] && draft=false
+title=$(printf '%s' "$usage_title" | sed 's/\\/\\\\/g; s/"/\\"/g')
+cat > "$file" <<EOF
+---
+title: "$title"
+date: $date
+draft: $draft
+tags: []
+categories: []
+---
+EOF
+echo "$file"
+'''
+
+[tasks.test]
+description = "Run Go tests of blog post examples"
+run = 'for d in {{vars.go_modules}}; do (cd "$d" && go test -race ./...); done'
+
+[tasks.vulncheck]
+description = "Check Go blog post examples for known vulnerabilities"
+run = 'for d in {{vars.go_modules}}; do (cd "$d" && govulncheck ./...); done'
+
+[tasks.all]
+description = "Run all checks"
+run = [
+  { tasks = ["test", "vulncheck"] },
+]
