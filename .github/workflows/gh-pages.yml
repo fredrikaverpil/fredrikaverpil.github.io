@@ -27,11 +27,17 @@ jobs:
         with:
           fetch-depth: 0  # for rss
 
-      - name: Setup Go
-        uses: actions/setup-go@v6
+      - uses: jdx/mise-action@v5
+
+      - name: Cache Go
+        uses: actions/cache@v5
         with:
-          go-version-file: go.mod
-          cache: true
+          path: |
+            ~/.cache/go-build
+            ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
 
       - name: Cache Berkeley Mono font
         id: cache-font
@@ -52,7 +58,7 @@ jobs:
           fi
 
       - name: Build
-        run: ./pok build
+        run: mise run build
 
       - name: Setup Pages
         if: github.event_name != 'pull_request'
