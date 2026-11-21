@@ -32,8 +32,3 @@ mise run hugo:clean && mise run hugo:build && mise run hugo:serve
 
 Run `mise run hugo:clean` before `mise run hugo:build` to ensure the Pagefind
 index builds correctly and to remove stale artifacts.
-
-## Documentation
-
-See [.claude/CLAUDE.md](.claude/CLAUDE.md) for the complete design system, style
-guide, and technical details.
