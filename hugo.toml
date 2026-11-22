@@ -31,10 +31,6 @@ description = "Notes from a curiosity-driven engineer."
 
 # Featured Projects for Homepage
 [[params.projects]]
-name = "pocket"
-url = "https://github.com/fredrikaverpil/pocket"
-description = "Composable task runner framework"
-[[params.projects]]
 name = "claudeline"
 url = "https://github.com/fredrikaverpil/claudeline"
 description = "Minimalistic Claude Code status line"
