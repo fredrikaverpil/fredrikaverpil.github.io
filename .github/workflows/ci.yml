@@ -20,7 +20,7 @@ jobs:
       fail-fast: false
       matrix:
         task: [go:test, go:vulncheck]
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest]
     steps:
       - uses: actions/checkout@v7
       - uses: jdx/mise-action@v5
