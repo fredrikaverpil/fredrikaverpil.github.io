@@ -23,16 +23,16 @@ jobs:
     runs-on: ubuntu-latest
     environment: github-pages
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0  # for rss
 
-      - uses: jdx/mise-action@v5
+      - uses: jdx/mise-action@v5.2.10
         with:
           version: 2026.11.10
 
       - name: Cache Go
-        uses: actions/cache@v5
+        uses: actions/cache@v5.1.0
         with:
           path: |
             ~/.cache/go-build
@@ -43,7 +43,7 @@ jobs:
 
       - name: Cache Berkeley Mono font
         id: cache-font
-        uses: actions/cache@v5
+        uses: actions/cache@v5.1.0
         with:
           path: static/fonts/BerkeleyMono-Variable.woff2
           key: berkeley-mono-font
@@ -64,7 +64,7 @@ jobs:
 
       - name: Setup Pages
         if: github.event_name != 'pull_request'
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v5.0.0
 
       # Create artifact manually to include hidden files (e.g. .well-known).
       # upload-pages-artifact@v4 excludes dotfiles by default.
@@ -74,7 +74,7 @@ jobs:
         run: |
           tar --dereference --hard-dereference -cvf "$RUNNER_TEMP/artifact.tar" -C ./public .
 
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@v7.0.2
         if: github.event_name != 'pull_request'
         with:
           name: github-pages
@@ -83,4 +83,4 @@ jobs:
       - name: Deploy to GitHub Pages
         if: github.event_name != 'pull_request'
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.5
