@@ -19,10 +19,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        task: [go:test, go:vulncheck]
+        task: [go:test, go:vulncheck, actions:lint]
         os: [ubuntu-latest]
     steps:
       - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
       - uses: jdx/mise-action@v5.2.10
         with:
           version: 2026.11.10

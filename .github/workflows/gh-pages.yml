@@ -7,11 +7,8 @@ on:
   workflow_dispatch:
   pull_request:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # Allow one concurrent deployment
 concurrency:
@@ -22,10 +19,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment: github-pages
+    # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
       - uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0  # for rss
+          persist-credentials: false
 
       - uses: jdx/mise-action@v5.2.10
         with:
