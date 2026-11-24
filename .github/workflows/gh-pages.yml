@@ -28,6 +28,8 @@ jobs:
           fetch-depth: 0  # for rss
 
       - uses: jdx/mise-action@v5
+        with:
+          version: 2026.11.10
 
       - name: Cache Go
         uses: actions/cache@v5
