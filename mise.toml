@@ -7,6 +7,7 @@ go = "1.27.4"
 "github:Pagefind/pagefind" = "1.4.0"
 "github:wjdp/htmltest" = "0.17.0"
 "go:golang.org/x/vuln/cmd/govulncheck" = "1.8.0"
+"aqua:zizmorcore/zizmor" = "1.32.0"
 
 [tasks."hugo:serve"]
 description = "Start local dev server with drafts (LiveReload)"
@@ -84,6 +85,12 @@ description = "Check Go blog post examples for known vulnerabilities"
 dir = "{{config_root}}/content/blog/2025-12-28-gos-secret-weapon/examples"
 run = "govulncheck ./..."
 
+# GitHub Actions
+
+[tasks."actions:lint"]
+description = "Audit GitHub Actions workflows"
+run = "zizmor --offline ."
+
 # Renovate
 
 # validate: check renovate.json. dry-run: list the updates Renovate would
@@ -119,5 +126,5 @@ esac
 [tasks.default]
 description = "Run all checks"
 run = [
-  { tasks = ["go:test", "go:vulncheck"] },
+  { tasks = ["go:test", "go:vulncheck", "actions:lint"] },
 ]
